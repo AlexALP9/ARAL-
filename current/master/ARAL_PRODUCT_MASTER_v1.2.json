@@ -1,0 +1,1000 @@
+{
+  "schema_version": "ARAL_PRODUCT_MASTER/1.2",
+  "created_at": "2026-10-11",
+  "status_authority": "ARAL_PRODUCT_MASTER_v1.1 unchanged for ARAL-001—014 and ARAL-017 technical statuses; explicit user confirmation and accepted DE PDS for ARAL-015—016; CONTENT_LAYER_v1.2 for content completeness",
+  "import_contract": {
+    "public_import_path": "products[*].public_product_data",
+    "internal_only_path": "products[*].internal_source_data",
+    "rule": "Never merge internal_source_data into public payload. Do not fallback to internal fields when public fields are absent.",
+    "null_meaning": "unknown / not supplied / not applicable; see context",
+    "empty_array_meaning": "no confirmed publishable entry; not proof of incompatibility",
+    "technical_publication_scope": "performance only; completeness of separate CONTENT_LAYER is not automatic permission to publish historical prose or conflicting technical claims",
+    "PDS_SDS_missing_definition": "no document assigned with confirmed identity; candidates excluded",
+    "content_contract": "content is a versioned reference to ARAL_CONTENT_LAYER_v1.2, not an inline replacement of current Performance. Resolve original/translated text by internal_id and document_id. Never promote specifications embedded in older content to current technical fields."
+  },
+  "source_manifest": [
+    {
+      "file": "ARAL_remaining_13_report_v3.md",
+      "sha256": "f72923793c146b072d80315fc00853974117447296de1c73682c1bf6405abd07"
+    },
+    {
+      "file": "ARAL_remaining_13_report_v2.md",
+      "sha256": "e24d3507d898a091a5a4d167d7aaa1f3eeedf26ac8b91f75ba627723b6393f85"
+    },
+    {
+      "file": "ARAL_remaining_13_report.md",
+      "sha256": "793c99da59cccf78283f737f8030fa12fcdedf51c8dc7ca048350d587b7b0d1d"
+    },
+    {
+      "file": "ARAL_remaining_13.json",
+      "sha256": "0544de33234f6ce44a1d750fb7eaebc43f8a97c2645235d660358ba823b20653"
+    },
+    {
+      "file": "ARAL_test_3_report.md",
+      "sha256": "b1d08f45067e48facf23be7d2536d9bd7afe5bbcaa6f9dd2802388b4272de0f9"
+    },
+    {
+      "file": "ARAL_test_3.json",
+      "sha256": "b4110451e7ac9583b86e1ec5e258fbfe8d8f94edd2c43f30522bc9130a5eb998"
+    },
+    {
+      "file": "ARAL_Turboral_identity_research.md",
+      "sha256": "1bf8e5307b3098f5bbae89dbfa4bbbc9430f2d50ebedc2ef5d727bff6c738e47"
+    },
+    {
+      "file": "ARAL_Turboral_identity_research.json",
+      "sha256": "7a8f978c85a5f0315be581b5ae3aa0c935423ffb0b1e2e56154b74c2a056ea5f"
+    },
+    {
+      "file": "ARAL_PRODUCT_MASTER_v1.1.json",
+      "sha256": "9bb7a9ed84ba4f5ff343dcfb9f50e0fad0f0fa4079aabbb31031276c48d603f8"
+    },
+    {
+      "file": "ARAL_PRODUCT_MASTER_v1.1.md",
+      "sha256": "d0451c620be7c9d43fd9e55629a63ad5edd51ae3e958aca0f578204f388a6e7d"
+    },
+    {
+      "file": "ARAL_CONTENT_LAYER_v1.2.json",
+      "sha256": "d6cea271243b68f9db286afaf5a3c83672c657c953e5c57621e6c5ed8353e25a"
+    },
+    {
+      "file": "ARAL_CONTENT_LAYER_v1.2.md",
+      "sha256": "fb2e499584cd1d901073c987e74a7bc228f42821484ccc493c484afb4de4de90"
+    },
+    {
+      "file": "ARAL_PDS_ACCEPTANCE_MAP_v1.md",
+      "sha256": "9eb40533dc3369ad3da767482042fd02921f645f1e1e8df9b51c7cce78e7aa89"
+    },
+    {
+      "file": "C:/Users/Shevc/.codex/attachments/ccbdc843-9049-4e46-8249-e3c2a84738a1/Pasted text.txt",
+      "sha256": "12bdfb640fc680182845bcacdfdc31175f40e69c545cae6c157c99a76edff266",
+      "role": "explicit_user_authorization"
+    }
+  ],
+  "journal_policy": "reference_only_unverified is not a verified journal row",
+  "products": [
+    {
+      "internal_id": "ARAL-001",
+      "public_product_data": {
+        "internal_id": "ARAL-001",
+        "commercial_name": "Aral BlueTronic II 10W-40",
+        "category": "PKW",
+        "commercial": {
+          "our_skus": [
+            "15F073",
+            "15F076",
+            "15F078",
+            "15F471"
+          ],
+          "package_sizes": [
+            {
+              "volume": 208,
+              "unit": "L"
+            },
+            {
+              "volume": 1,
+              "unit": "L"
+            },
+            {
+              "volume": 4,
+              "unit": "L"
+            },
+            {
+              "volume": 5,
+              "unit": "L"
+            }
+          ],
+          "sku_package_mapping": [
+            {
+              "sku": "15F073",
+              "volume": 208,
+              "unit": "L",
+              "source": "user_assortment"
+            },
+            {
+              "sku": "15F076",
+              "volume": 1,
+              "unit": "L",
+              "source": "user_assortment"
+            },
+            {
+              "sku": "15F078",
+              "volume": 4,
+              "unit": "L",
+              "source": "user_assortment"
+            },
+            {
+              "sku": "15F471",
+              "volume": 5,
+              "unit": "L",
+              "source": "user_assortment"
+            }
+          ]
+        },
+        "official_name": "Aral BlueTronic II 10W-40",
+        "SAE": "10W-40",
+        "product_family": "BlueTronic II",
+        "performance": {
+          "api": [
+            "SP"
+          ],
+          "acea": [
+            "A3/B4"
+          ],
+          "official_approvals": [
+            {
+              "claim_original": "MB-Approval 229.3",
+              "claim_type": "official_approval",
+              "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf",
+              "source_section": "Spezifikationen"
+            }
+          ],
+          "meets": [
+            {
+              "claim_original": "Meets - Fiat 9.55535-D2",
+              "claim_type": "meets",
+              "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf",
+              "source_section": "Spezifikationen"
+            }
+          ],
+          "recommended_for": [],
+          "other": [],
+          "api_claim_original": "API SP",
+          "acea_claim_original": "ACEA A3/B4",
+          "classification_note": "Без явного Approval/Freigabe либо прямого указания об одобрении в PDS OEM-обозначения сохранены как performance_level. Это не утверждение об отсутствии реального допуска.",
+          "application_references": [],
+          "performance_levels": [
+            {
+              "claim_original": "VW 5 01 01 / 505 00",
+              "claim_type": "performance_level",
+              "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf",
+              "source_section": "Spezifikationen"
+            }
+          ]
+        },
+        "pds": {
+          "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf",
+          "date": "2025-11-03",
+          "market": "Germany",
+          "language": "de",
+          "document_key": "aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf",
+          "status": "selected_main",
+          "document_key_code": "470643",
+          "recency_scope": "latest_found_in_previous_project_material_not_global_certification"
+        },
+        "content": {
+          "content_status": "complete",
+          "content_source": "ARAL_CONTENT_LAYER_v1.2.json",
+          "content_source_sha256": "d6cea271243b68f9db286afaf5a3c83672c657c953e5c57621e6c5ed8353e25a",
+          "content_product_id": "ARAL-001",
+          "preferred_content_document_id": "wepp-dcrgw2",
+          "accepted_content_document_ids": [
+            "wepp-dcrgw2"
+          ],
+          "storage_mode": "external_versioned_layer",
+          "technical_fields_source": "internal_source_data.pds; never fallback to text in content edition",
+          "previous_inline_content_reference": {
+            "file": "ARAL_PRODUCT_MASTER_v1.1.json",
+            "internal_id": "ARAL-001",
+            "path": "internal_source_data.content",
+            "role": "superseded_short_summary_not_active_content"
+          }
+        },
+        "typical_characteristics": [
+          {
+            "characteristic": "Плотность при 15 °C",
+            "method": "ASTM D4052",
+            "unit": "g/ml",
+            "value": "0.864",
+            "source": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 100 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "14.3",
+            "source": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf"
+          },
+          {
+            "characteristic": "Динамическая вязкость CCS при −25 °C",
+            "method": "ASTM D5293",
+            "unit": "mPa.s (cP)",
+            "value": "6280",
+            "source": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 40 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "96.6",
+            "source": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf"
+          },
+          {
+            "characteristic": "Индекс вязкости",
+            "method": "ASTM D2270",
+            "unit": null,
+            "value": "151",
+            "source": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf"
+          },
+          {
+            "characteristic": "Температура застывания (Pour Point)",
+            "method": "ASTM D97",
+            "unit": "°C",
+            "value": "-39",
+            "source": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf"
+          },
+          {
+            "characteristic": "Температура вспышки, PMCC",
+            "method": "ASTM D93",
+            "unit": "°C",
+            "value": "200",
+            "source": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf"
+          },
+          {
+            "characteristic": "Сульфатная зольность",
+            "method": "ASTM D874",
+            "unit": "% wt",
+            "value": "1.2",
+            "source": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf"
+          }
+        ],
+        "technical_context": {
+          "pds_date": "2025-11-03",
+          "pds_market": "Germany",
+          "pds_language": "de",
+          "physical_values": "typical_main_pds_only",
+          "claim_types": "OEM labels without explicit approval remain performance_levels; Meets is not Approval",
+          "source_note": "VW 5 01 01 / 505 00: исходное написание PDS; нормализация не выполнена."
+        }
+      },
+      "internal_source_data": {
+        "identification": {
+          "internal_id": "ARAL-001",
+          "commercial_name": "Aral BlueTronic II 10W-40",
+          "official_name": "Aral BlueTronic II 10W-40",
+          "historical_official_name": null,
+          "current_line_name": "Aral BlueTronic II 10W-40",
+          "category": "PKW",
+          "SAE": "10W-40",
+          "product_family": "BlueTronic II"
+        },
+        "commercial": {
+          "our_skus": [
+            "15F073",
+            "15F076",
+            "15F078",
+            "15F471"
+          ],
+          "package_sizes": [
+            {
+              "volume": 208,
+              "unit": "L"
+            },
+            {
+              "volume": 1,
+              "unit": "L"
+            },
+            {
+              "volume": 4,
+              "unit": "L"
+            },
+            {
+              "volume": 5,
+              "unit": "L"
+            }
+          ],
+          "sku_package_mapping": [
+            {
+              "sku": "15F073",
+              "volume": 208,
+              "unit": "L",
+              "source": "user_assortment"
+            },
+            {
+              "sku": "15F076",
+              "volume": 1,
+              "unit": "L",
+              "source": "user_assortment"
+            },
+            {
+              "sku": "15F078",
+              "volume": 4,
+              "unit": "L",
+              "source": "user_assortment"
+            },
+            {
+              "sku": "15F471",
+              "volume": 5,
+              "unit": "L",
+              "source": "user_assortment"
+            }
+          ]
+        },
+        "pds": {
+          "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf",
+          "date": "2025-11-03",
+          "market": "Germany",
+          "language": "de",
+          "document_key": "aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf",
+          "status": "selected_main",
+          "document_key_code": "470643",
+          "recency_scope": "latest_found_in_previous_project_material_not_global_certification"
+        },
+        "sds": {
+          "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=0428f4325b4c17798e477f6ef1362e36&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german-de_sdb_470643.pdf",
+          "date": "2026-01-22",
+          "market": "Germany",
+          "language": "de",
+          "version": "5",
+          "product_code": "470643-DE01",
+          "access_status": "official_pdf_text_read"
+        },
+        "content": {
+          "content_status": "complete",
+          "content_source": "ARAL_CONTENT_LAYER_v1.2.json",
+          "content_source_sha256": "d6cea271243b68f9db286afaf5a3c83672c657c953e5c57621e6c5ed8353e25a",
+          "content_product_id": "ARAL-001",
+          "preferred_content_document_id": "wepp-dcrgw2",
+          "accepted_content_document_ids": [
+            "wepp-dcrgw2"
+          ],
+          "storage_mode": "external_versioned_layer",
+          "technical_fields_source": "internal_source_data.pds; never fallback to text in content edition",
+          "previous_inline_content_reference": {
+            "file": "ARAL_PRODUCT_MASTER_v1.1.json",
+            "internal_id": "ARAL-001",
+            "path": "internal_source_data.content",
+            "role": "superseded_short_summary_not_active_content"
+          }
+        },
+        "performance": {
+          "api": [
+            "SP"
+          ],
+          "acea": [
+            "A3/B4"
+          ],
+          "official_approvals": [
+            {
+              "claim_original": "MB-Approval 229.3",
+              "claim_type": "official_approval",
+              "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf",
+              "source_section": "Spezifikationen"
+            }
+          ],
+          "meets": [
+            {
+              "claim_original": "Meets - Fiat 9.55535-D2",
+              "claim_type": "meets",
+              "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf",
+              "source_section": "Spezifikationen"
+            }
+          ],
+          "recommended_for": [],
+          "other": [],
+          "api_claim_original": "API SP",
+          "acea_claim_original": "ACEA A3/B4",
+          "classification_note": "Без явного Approval/Freigabe либо прямого указания об одобрении в PDS OEM-обозначения сохранены как performance_level. Это не утверждение об отсутствии реального допуска.",
+          "application_references": [],
+          "performance_levels": [
+            {
+              "claim_original": "VW 5 01 01 / 505 00",
+              "claim_type": "performance_level",
+              "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf",
+              "source_section": "Spezifikationen"
+            }
+          ]
+        },
+        "typical_characteristics": [
+          {
+            "characteristic": "Плотность при 15 °C",
+            "method": "ASTM D4052",
+            "unit": "g/ml",
+            "value": "0.864",
+            "source": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 100 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "14.3",
+            "source": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf"
+          },
+          {
+            "characteristic": "Динамическая вязкость CCS при −25 °C",
+            "method": "ASTM D5293",
+            "unit": "mPa.s (cP)",
+            "value": "6280",
+            "source": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 40 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "96.6",
+            "source": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf"
+          },
+          {
+            "characteristic": "Индекс вязкости",
+            "method": "ASTM D2270",
+            "unit": null,
+            "value": "151",
+            "source": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf"
+          },
+          {
+            "characteristic": "Температура застывания (Pour Point)",
+            "method": "ASTM D97",
+            "unit": "°C",
+            "value": "-39",
+            "source": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf"
+          },
+          {
+            "characteristic": "Температура вспышки, PMCC",
+            "method": "ASTM D93",
+            "unit": "°C",
+            "value": "200",
+            "source": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf"
+          },
+          {
+            "characteristic": "Сульфатная зольность",
+            "method": "ASTM D874",
+            "unit": "% wt",
+            "value": "1.2",
+            "source": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf"
+          }
+        ],
+        "validation": {
+          "identity_status": "verified",
+          "technical_performance_status": "review_note",
+          "physical_properties_status": "review_note",
+          "technical_publication_allowed": true,
+          "status_source": "ARAL_remaining_13_report_v3.md",
+          "review_notes": [
+            "SDS пишет Blue Tronic II раздельно; SAE и документный код 470643 совпадают — орфографическое различие.",
+            "PDS/SDS: KV100 14.3 входит в 13.8–16.3 mm²/s; плотность 0.864 g/ml согласуется с <1000 kg/m³. KV40 96.6 против 89.8 mm²/s и Pour Point −39 против −42 °C различаются: не объявлены округлением и не подменены. Типичные PDS-показатели сохранены; причина междокументной разницы не установлена.",
+            "VW 5 01 01 сохранено в исходном написании PDS; нормализация в VW 501 01 не выполнена.",
+            "Performance из PDS; сохранено нетипичное написание VW 5 01 01 без автоматической правки. Физические значения PDS/SDS различаются."
+          ],
+          "unresolved_conflicts": []
+        },
+        "journal_2026": {
+          "journal_status": "unavailable",
+          "journal_source": null,
+          "journal_page": null,
+          "journal_row_text": null,
+          "data_completion": null,
+          "reference_source": null,
+          "reported_origin": null,
+          "reference_comparison_from_v3": null,
+          "independent_verification": false
+        },
+        "alternative_pds": [],
+        "sds_source_record": {
+          "document_type": "SDS",
+          "url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=0428f4325b4c17798e477f6ef1362e36&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german-de_sdb_470643.pdf",
+          "official_name": "Aral Blue Tronic II 10W-40",
+          "product_code": "470643-DE01",
+          "date": "2026-01-22",
+          "version": "5",
+          "market": "Germany",
+          "language": "de",
+          "access_status": "official_pdf_text_read",
+          "checked_at": "2026-10-11",
+          "section_9": {
+            "properties": [
+              {
+                "characteristic": "Агрегатное состояние",
+                "value": "жидкость",
+                "unit": null,
+                "method": null,
+                "scope": "product"
+              },
+              {
+                "characteristic": "Цвет",
+                "value": "янтарный",
+                "unit": null,
+                "method": null,
+                "scope": "product"
+              },
+              {
+                "characteristic": "Кинематическая вязкость, 40 °C",
+                "value": "89.8",
+                "unit": "mm²/s",
+                "method": null,
+                "scope": "product"
+              },
+              {
+                "characteristic": "Кинематическая вязкость, 100 °C",
+                "value": "13.8–16.3",
+                "unit": "mm²/s",
+                "method": null,
+                "scope": "product"
+              },
+              {
+                "characteristic": "Плотность, 15 °C",
+                "value": "<1000",
+                "unit": "kg/m³",
+                "method": null,
+                "scope": "product"
+              },
+              {
+                "characteristic": "Растворимость в воде",
+                "value": "нерастворимо",
+                "unit": null,
+                "method": null,
+                "scope": "product"
+              },
+              {
+                "characteristic": "Pour Point",
+                "value": "-42",
+                "unit": "°C",
+                "method": null,
+                "scope": "product"
+              },
+              {
+                "characteristic": "Температура вспышки, открытый тигель",
+                "value": ">200",
+                "unit": "°C",
+                "method": "ASTM D92",
+                "scope": "product"
+              }
+            ],
+            "extraction_scope": "Доступные свойства смеси. Отдельные свойства ингредиентов не являются свойствами готового масла и не перенесены.",
+            "unavailable_properties": [
+              "запах",
+              "порог запаха",
+              "температура плавления/замерзания",
+              "температура кипения",
+              "воспламеняемость",
+              "пределы взрываемости",
+              "температура разложения",
+              "относительная плотность пара",
+              "скорость испарения",
+              "взрывчатые свойства",
+              "окисляющие свойства"
+            ],
+            "not_applicable": [
+              "pH",
+              "log Kow"
+            ],
+            "ingredient_properties_not_transferred": true
+          },
+          "safety": {
+            "classification": "not_classified",
+            "signal_word": null,
+            "hazard_codes": [],
+            "summary_ru": "По разделу 2 смесь не классифицирована как опасная; дополнительная маркировка предупреждает о возможной аллергической реакции.",
+            "source_section": "2",
+            "full_sds_required": true
+          },
+          "latest_version_scope": "Наиболее новая найденная версия для указанного рынка; глобальная полнота портала не подтверждена."
+        },
+        "source_differences": [],
+        "source_difference_status": "see_v3; not_automatically_a_blocking_conflict",
+        "identity_evidence": {
+          "status": "verified",
+          "confidence": "high",
+          "basis": "Точное название и SAE в официальном PDS.",
+          "sku_match_required": false
+        },
+        "commercial_external_evidence": [
+          {
+            "sku": "15F073",
+            "volume": 208,
+            "unit": "L",
+            "source": "user_assortment",
+            "external_match": "official_page_exact_sku_and_volume",
+            "external_source": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw/",
+            "ean": "4008177179006"
+          },
+          {
+            "sku": "15F076",
+            "volume": 1,
+            "unit": "L",
+            "source": "user_assortment",
+            "external_match": "not_established"
+          },
+          {
+            "sku": "15F078",
+            "volume": 4,
+            "unit": "L",
+            "source": "user_assortment",
+            "external_match": "not_established"
+          },
+          {
+            "sku": "15F471",
+            "volume": 5,
+            "unit": "L",
+            "source": "user_assortment",
+            "external_match": "official_page_exact_sku_and_volume",
+            "external_source": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw/",
+            "ean": "4008177182822"
+          }
+        ],
+        "image_evidence": {
+          "main_packshot_url": null,
+          "image_source": null,
+          "checked_at": "2026-10-11",
+          "image_missing": true,
+          "candidates": []
+        },
+        "source_record": "ARAL_remaining_13.json (facts only; v1 flags excluded)",
+        "publication_exclusions": [
+          "SDS",
+          "alternative_pds",
+          "journal_references",
+          "candidate_documents",
+          "unresolved_conflicts",
+          "unverified_images"
+        ]
+      }
+    },
+    {
+      "internal_id": "ARAL-002",
+      "public_product_data": {
+        "internal_id": "ARAL-002",
+        "commercial_name": "Aral EcoTronic F 5W-20",
+        "category": "PKW",
+        "commercial": {
+          "our_skus": [
+            "25094"
+          ],
+          "package_sizes": [
+            "4 L"
+          ],
+          "sku_package_mapping": [
+            {
+              "sku": "25094",
+              "volume": 4,
+              "unit": "L",
+              "source": "user_assortment"
+            }
+          ]
+        },
+        "official_name": "Aral EcoTronic F 5W-20",
+        "SAE": "5W-20",
+        "product_family": "EcoTronic F",
+        "performance": {
+          "api": [
+            "SN"
+          ],
+          "acea": [],
+          "official_approvals": [],
+          "meets": [
+            {
+              "claim_original": "Meets - Ford WSS-M2C948-B",
+              "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf",
+              "claim_type": "meets"
+            }
+          ],
+          "recommended_for": [],
+          "application_references": [
+            {
+              "claim_original": "Ford WSS-M2C913-B",
+              "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf",
+              "claim_type": "application_reference"
+            },
+            {
+              "claim_original": "Ford WSS-M2C913-C",
+              "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf",
+              "claim_type": "application_reference"
+            },
+            {
+              "claim_original": "Ford WSS-M2C925-B",
+              "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf",
+              "claim_type": "application_reference"
+            }
+          ],
+          "performance_levels": [],
+          "other": [
+            {
+              "claim_original": "ILSAC GF-5",
+              "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf"
+            }
+          ]
+        },
+        "pds": {
+          "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf",
+          "date": "2021-05-20",
+          "market": "Germany",
+          "language": "de",
+          "document_key": "aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf",
+          "status": "selected_main",
+          "document_key_code": null,
+          "recency_scope": "latest_found_in_previous_project_material_not_global_certification"
+        },
+        "content": {
+          "content_status": "complete",
+          "content_source": "ARAL_CONTENT_LAYER_v1.2.json",
+          "content_source_sha256": "d6cea271243b68f9db286afaf5a3c83672c657c953e5c57621e6c5ed8353e25a",
+          "content_product_id": "ARAL-002",
+          "preferred_content_document_id": "bpxe-9ar8eu",
+          "accepted_content_document_ids": [
+            "bpxe-9ar8eu"
+          ],
+          "storage_mode": "external_versioned_layer",
+          "technical_fields_source": "internal_source_data.pds; never fallback to text in content edition",
+          "previous_inline_content_reference": {
+            "file": "ARAL_PRODUCT_MASTER_v1.1.json",
+            "internal_id": "ARAL-002",
+            "path": "internal_source_data.content",
+            "role": "superseded_short_summary_not_active_content"
+          }
+        },
+        "typical_characteristics": [
+          {
+            "characteristic": "Плотность при 15 °C",
+            "method": "ASTM D1298",
+            "unit": "g/ml",
+            "value": "0.847",
+            "source": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 40 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "43.5",
+            "source": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 100 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "8.2",
+            "source": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf"
+          },
+          {
+            "characteristic": "Индекс вязкости",
+            "method": "ASTM D2270",
+            "unit": null,
+            "value": "166",
+            "source": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf"
+          },
+          {
+            "characteristic": "Динамическая вязкость CCS при −30 °C (5W)",
+            "method": "ASTM D5293",
+            "unit": "mPa.s (cP)",
+            "value": "3450",
+            "source": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf"
+          },
+          {
+            "characteristic": "Вязкость HTHS при 150 °C",
+            "method": "ASTM D4683",
+            "unit": "cP",
+            "value": "2.6",
+            "source": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf"
+          },
+          {
+            "characteristic": "Температура застывания",
+            "method": "ASTM D97",
+            "unit": "°C",
+            "value": "-45",
+            "source": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf"
+          },
+          {
+            "characteristic": "Температура вспышки PMCC",
+            "method": "ASTM D93",
+            "unit": "°C",
+            "value": "210",
+            "source": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf"
+          }
+        ],
+        "technical_context": {
+          "pds_date": "2021-05-20",
+          "pds_market": "Germany",
+          "pds_language": "de",
+          "physical_values": "typical_main_pds_only",
+          "claim_types": "OEM labels without explicit approval remain performance_levels; Meets is not Approval"
+        }
+      },
+      "internal_source_data": {
+        "identification": {
+          "internal_id": "ARAL-002",
+          "commercial_name": "Aral EcoTronic F 5W-20",
+          "official_name": "Aral EcoTronic F 5W-20",
+          "historical_official_name": null,
+          "current_line_name": "Aral EcoTronic F 5W-20",
+          "category": "PKW",
+          "SAE": "5W-20",
+          "product_family": "EcoTronic F"
+        },
+        "commercial": {
+          "our_skus": [
+            "25094"
+          ],
+          "package_sizes": [
+            "4 L"
+          ],
+          "sku_package_mapping": [
+            {
+              "sku": "25094",
+              "volume": 4,
+              "unit": "L",
+              "source": "user_assortment"
+            }
+          ]
+        },
+        "pds": {
+          "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf",
+          "date": "2021-05-20",
+          "market": "Germany",
+          "language": "de",
+          "document_key": "aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf",
+          "status": "selected_main",
+          "document_key_code": null,
+          "recency_scope": "latest_found_in_previous_project_material_not_global_certification"
+        },
+        "sds": {
+          "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=3616531cf5304ece397eb239c57a4d89&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german-de_sdb_468246.pdf",
+          "date": "2024-06-04",
+          "market": "Germany",
+          "language": "de",
+          "version": "12",
+          "product_code": "468246-DE04",
+          "access_status": "previously_read"
+        },
+        "content": {
+          "content_status": "complete",
+          "content_source": "ARAL_CONTENT_LAYER_v1.2.json",
+          "content_source_sha256": "d6cea271243b68f9db286afaf5a3c83672c657c953e5c57621e6c5ed8353e25a",
+          "content_product_id": "ARAL-002",
+          "preferred_content_document_id": "bpxe-9ar8eu",
+          "accepted_content_document_ids": [
+            "bpxe-9ar8eu"
+          ],
+          "storage_mode": "external_versioned_layer",
+          "technical_fields_source": "internal_source_data.pds; never fallback to text in content edition",
+          "previous_inline_content_reference": {
+            "file": "ARAL_PRODUCT_MASTER_v1.1.json",
+            "internal_id": "ARAL-002",
+            "path": "internal_source_data.content",
+            "role": "superseded_short_summary_not_active_content"
+          }
+        },
+        "performance": {
+          "api": [
+            "SN"
+          ],
+          "acea": [],
+          "official_approvals": [],
+          "meets": [
+            {
+              "claim_original": "Meets - Ford WSS-M2C948-B",
+              "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf",
+              "claim_type": "meets"
+            }
+          ],
+          "recommended_for": [],
+          "application_references": [
+            {
+              "claim_original": "Ford WSS-M2C913-B",
+              "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf",
+              "claim_type": "application_reference"
+            },
+            {
+              "claim_original": "Ford WSS-M2C913-C",
+              "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf",
+              "claim_type": "application_reference"
+            },
+            {
+              "claim_original": "Ford WSS-M2C925-B",
+              "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf",
+              "claim_type": "application_reference"
+            }
+          ],
+          "performance_levels": [],
+          "other": [
+            {
+              "claim_original": "ILSAC GF-5",
+              "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf"
+            }
+          ]
+        },
+        "typical_characteristics": [
+          {
+            "characteristic": "Плотность при 15 °C",
+            "method": "ASTM D1298",
+            "unit": "g/ml",
+            "value": "0.847",
+            "source": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 40 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "43.5",
+            "source": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 100 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "8.2",
+            "source": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf"
+          },
+          {
+            "characteristic": "Индекс вязкости",
+            "method": "ASTM D2270",
+            "unit": null,
+            "value": "166",
+            "source": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf"
+          },
+          {
+            "characteristic": "Динамическая вязкость CCS при −30 °C (5W)",
+            "method": "ASTM D5293",
+            "unit": "mPa.s (cP)",
+            "value": "3450",
+            "source": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf"
+          },
+          {
+            "characteristic": "Вязкость HTHS при 150 °C",
+            "method": "ASTM D4683",
+            "unit": "cP",
+            "value": "2.6",
+            "source": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf"
+          },
+          {
+            "characteristic": "Температура застывания",
+            "method": "ASTM D97",
+            "unit": "°C",
+            "value": "-45",
+            "source": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf"
+          },
+          {
+            "characteristic": "Температура вспышки PMCC",
+            "method": "ASTM D93",
+            "unit": "°C",
+            "value": "210",
+            "source": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf"
+          }
+        ],
+        "validation": {
+          "identity_status": "verified",
+          "technical_performance_status": "verified",
+          "physical_properties_status": "review_note",
+          "technical_publication_allowed": true,
+          "status_source": "MASTER reassessment of existing Eco PDS/SDS under v3 rules",
+          "review_notes": [
+            "Точное имя и SAE 5W-20 подтверждены; замена на 0W-20 запрещена.",
+            "В 2013 PDS API/ILSAC не указаны; отсутствие записи не отрицает Performance DE 2021. Ford 948-B остаётся Meets.",
+            "KV40: DE 2021 43.5, EN 2013/SDS 43.51 mm²/s. Сохранено различие представления/редакций; причина округления не доказана. Диапазоны SDS для KV100, плотности и вспышки совместимы с PDS.",
+            "Утверждённая номенклатура пользователя: SKU 25094 — 4 L; источник user_assortment."
+          ],
+          "unresolved_conflicts": []
+        },
+        "journal_2026": {
+          "journal_status": "unavailable",
+          "journal_source": null,
+          "journal_page": null,
+          "journal_row_text": null,
+          "data_completion": null,
+          "reference_source": null,
+          "reported_origin": null,
+          "reference_comparison_from_v3": null,
+          "independent_verification": false
+        },
+        "alternative_pds": [
+          {
+            "id": "ECO-PDS-EN-20130819",
+            "document_type": "PDS",
+            "official_product_name": "Aral EcoTronic F 5W-20",
