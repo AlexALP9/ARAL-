@@ -1,0 +1,1818 @@
+{
+  "schema_version": "ARAL_MEDIA_LAYER/1.0",
+  "checked_at": "2026-10-11",
+  "completion_status": "research_complete_visual_verification_blocked",
+  "frozen_sources": [
+    {
+      "file": "ARAL_PRODUCT_MASTER_v1.1.md",
+      "sha256": "d0451c620be7c9d43fd9e55629a63ad5edd51ae3e958aca0f578204f388a6e7d"
+    },
+    {
+      "file": "ARAL_PRODUCT_MASTER_v1.1.json",
+      "sha256": "9bb7a9ed84ba4f5ff343dcfb9f50e0fad0f0fa4079aabbb31031276c48d603f8"
+    },
+    {
+      "file": "ARAL_CONTENT_LAYER_v1.json",
+      "sha256": "da504c3392c7f757c3437312c1e26a036a33b08749527d6a1c4ab4fc743214ec"
+    },
+    {
+      "file": "ARAL_CONTENT_LAYER_v1.md",
+      "sha256": "a9a83d010f90de7f5a1439c4d5f080f83bf5d7aaab099f07e88323bf0f7a81f8"
+    }
+  ],
+  "verification_policy": {
+    "verified_product_image": "Official image with confirmed exact product identity; package need not belong to our assortment.",
+    "verified_package_variant": "Official image with exact product/package and evidenced link to our SKU; same volume or filename alone is insufficient.",
+    "third_party": "candidate only",
+    "visible_fields": "only directly observed label text; null when not visually inspected",
+    "publication": "Only verified images may be assigned. All present candidate images are withheld. Media status never alters technical status."
+  },
+  "audit_definitions": {
+    "verified_product_image": "number of products with at least one verified official product image, including package variants",
+    "verified_package_variant": "number of verified our-SKU/image assignments",
+    "candidate": "number of candidate image records, not products; excludes uninspected catalogue pages",
+    "missing": "number of products still lacking a verified main image; overlaps candidate_products",
+    "package_variants_missing": "our SKUs with no verified package image"
+  },
+  "access_limitations": [
+    "msdspds.aral.com: 403 Forbidden.",
+    "Official product pages readable; three known packshot links returned 404; others returned cache/access errors or image references without viewable pixels.",
+    "Network permission was granted, but direct retrieval failed with TLS/connection errors.",
+    "PDF text was readable; screenshots did not provide inspectable page pixels. No catalogue crop was fabricated.",
+    "Image search supplied URLs and generated descriptions; these are not treated as independent visual verification."
+  ],
+  "products": [
+    {
+      "internal_id": "ARAL-001",
+      "commercial_name": "Aral BlueTronic II 10W-40",
+      "main_image_id": null,
+      "media_status": "candidate",
+      "verified_images": [],
+      "images": [
+        {
+          "image_id": "ARAL-001-IMG-01",
+          "image_url": "https://shopstore-image.pages.dev/upload/4187/product/4187_66f3ce897cdd0.jpg",
+          "source_url": "https://www.carpartgo.com/item/ARALBLUETRONICII10W40",
+          "source_domain": "www.carpartgo.com",
+          "image_domain": "shopstore-image.pages.dev",
+          "source_type": "third_party_image_search",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "image_url_returned_by_search; original_pixels_not_inspected",
+          "source_reported_product_name": "Aral BlueTronic II 10W-40",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Сторонний источник: только candidate по правилу пользователя.",
+            "Название и объём относятся к описанию результата поиска, не к визуально прочитанной этикетке.",
+            "Совпадение объёма само по себе не подтверждает наш SKU."
+          ]
+        }
+      ],
+      "package_variants": [
+        {
+          "our_sku": "15F073",
+          "package_size": {
+            "value": 208,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "15F076",
+          "package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "15F078",
+          "package_size": {
+            "value": 4,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "15F471",
+          "package_size": {
+            "value": 5,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        }
+      ],
+      "catalog_sources_to_review": [
+        {
+          "source_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Services/Bibliothek/pdf/ARAL_Produktkatalog_V1Januar_2024.pdf",
+          "document": "ARAL Produktkatalog Version 1 Januar 2024",
+          "page": 7,
+          "image_presence_confirmed": false,
+          "status": "requires_visual_review",
+          "notes": "Точное название/строка найдены в тексте страницы. Наличие и пригодность packshot на странице не подтверждены; PDF не выдан за изображение."
+        }
+      ],
+      "manual_search_required": true,
+      "manual_search_reasons": [
+        "Не завершена визуальная проверка названия, SAE и объёма на официальном изображении.",
+        "Проверенные изображения дополнительных ракурсов и конкретных наших SKU не получены."
+      ]
+    },
+    {
+      "internal_id": "ARAL-002",
+      "commercial_name": "Aral EcoTronic F 5W-20",
+      "main_image_id": null,
+      "media_status": "candidate",
+      "verified_images": [],
+      "images": [
+        {
+          "image_id": "ARAL-002-IMG-01",
+          "image_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Schmierstoffe/Products/Large/15f455.jpg",
+          "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw/",
+          "source_domain": "www.aral-lubricants.de",
+          "image_domain": "www.aral-lubricants.de",
+          "source_type": "official_product_page",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "tool_inaccessible",
+          "source_reported_product_name": "Aral EcoTronic F 5W-20",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Ссылка расположена в блоке точного продукта на официальной странице.",
+            "Пиксели изображения не удалось прочитать; имя файла и артикул в таблице страницы не считаются видимым SKU.",
+            "Статус не повышен до verified; ошибка инструмента не доказывает окончательное удаление файла."
+          ]
+        },
+        {
+          "image_id": "ARAL-002-IMG-02",
+          "image_url": "https://images2.exist.ua/media/images/products/2024/11/2024-05-11_19-01-02_17387922.jpg",
+          "source_url": "https://exist.ua/aral-brand/motornoe-maslo-aral-ecotronic-f-5w-20-4l-aralecotrf5w204l-57380682/",
+          "source_domain": "exist.ua",
+          "image_domain": "images2.exist.ua",
+          "source_type": "third_party_image_search",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "image_url_returned_by_search; original_pixels_not_inspected",
+          "source_reported_product_name": "Aral EcoTronic F 5W-20",
+          "source_reported_package_size": {
+            "value": 4,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Сторонний источник: только candidate по правилу пользователя.",
+            "Название и объём относятся к описанию результата поиска, не к визуально прочитанной этикетке.",
+            "Совпадение объёма само по себе не подтверждает наш SKU."
+          ]
+        }
+      ],
+      "package_variants": [
+        {
+          "our_sku": "25094",
+          "package_size": {
+            "value": 4,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        }
+      ],
+      "catalog_sources_to_review": [
+        {
+          "source_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Services/Bibliothek/pdf/ARAL_Produktkatalog_V1Januar_2024.pdf",
+          "document": "ARAL Produktkatalog Version 1 Januar 2024",
+          "page": 5,
+          "image_presence_confirmed": false,
+          "status": "requires_visual_review",
+          "notes": "Точное название/строка найдены в тексте страницы. Наличие и пригодность packshot на странице не подтверждены; PDF не выдан за изображение."
+        }
+      ],
+      "manual_search_required": true,
+      "manual_search_reasons": [
+        "Не завершена визуальная проверка названия, SAE и объёма на официальном изображении.",
+        "Проверенные изображения дополнительных ракурсов и конкретных наших SKU не получены.",
+        "Официальная ссылка относится по странице к 1 L, а наш ассортимент EcoTronic — 4 L. Даже при подтверждении это только изображение продукта, не SKU 25094."
+      ]
+    },
+    {
+      "internal_id": "ARAL-003",
+      "commercial_name": "Aral HighTronic 5W-40",
+      "main_image_id": null,
+      "media_status": "candidate",
+      "verified_images": [],
+      "images": [
+        {
+          "image_id": "ARAL-003-IMG-01",
+          "image_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Schmierstoffe/Products/Large/15f47b.jpg",
+          "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw/",
+          "source_domain": "www.aral-lubricants.de",
+          "image_domain": "www.aral-lubricants.de",
+          "source_type": "official_product_page",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "404_via_web_tool",
+          "source_reported_product_name": "Aral HighTronic 5W-40",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Ссылка расположена в блоке точного продукта на официальной странице.",
+            "Пиксели изображения не удалось прочитать; имя файла и артикул в таблице страницы не считаются видимым SKU.",
+            "Статус не повышен до verified; ошибка инструмента не доказывает окончательное удаление файла."
+          ]
+        },
+        {
+          "image_id": "ARAL-003-IMG-02",
+          "image_url": "https://www.exincars.cz/373-thickbox_default/motorovy-olej-aral-hightronic-5w40-1l.jpg",
+          "source_url": "https://www.exincars.cz/motorove-oleje-5w40/173-motorovy-olej-aral-hightronic-5w40-1l.html",
+          "source_domain": "www.exincars.cz",
+          "image_domain": "www.exincars.cz",
+          "source_type": "third_party_image_search",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "image_url_returned_by_search; original_pixels_not_inspected",
+          "source_reported_product_name": "Aral HighTronic 5W-40",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Сторонний источник: только candidate по правилу пользователя.",
+            "Название и объём относятся к описанию результата поиска, не к визуально прочитанной этикетке.",
+            "Совпадение объёма само по себе не подтверждает наш SKU."
+          ]
+        }
+      ],
+      "package_variants": [
+        {
+          "our_sku": "20637",
+          "package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "20632",
+          "package_size": {
+            "value": 208,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "20634",
+          "package_size": {
+            "value": 4,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "20635",
+          "package_size": {
+            "value": 5,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        }
+      ],
+      "catalog_sources_to_review": [
+        {
+          "source_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Services/Bibliothek/pdf/ARAL_Produktkatalog_V1Januar_2024.pdf",
+          "document": "ARAL Produktkatalog Version 1 Januar 2024",
+          "page": 7,
+          "image_presence_confirmed": false,
+          "status": "requires_visual_review",
+          "notes": "Точное название/строка найдены в тексте страницы. Наличие и пригодность packshot на странице не подтверждены; PDF не выдан за изображение."
+        }
+      ],
+      "manual_search_required": true,
+      "manual_search_reasons": [
+        "Не завершена визуальная проверка названия, SAE и объёма на официальном изображении.",
+        "Проверенные изображения дополнительных ракурсов и конкретных наших SKU не получены."
+      ]
+    },
+    {
+      "internal_id": "ARAL-004",
+      "commercial_name": "Aral HighTronic F 5W-30",
+      "main_image_id": null,
+      "media_status": "candidate",
+      "verified_images": [],
+      "images": [
+        {
+          "image_id": "ARAL-004-IMG-01",
+          "image_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Schmierstoffe/Products/Large/15f457.jpg",
+          "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw/",
+          "source_domain": "www.aral-lubricants.de",
+          "image_domain": "www.aral-lubricants.de",
+          "source_type": "official_product_page",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "404_via_web_tool",
+          "source_reported_product_name": "Aral HighTronic F 5W-30",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Ссылка расположена в блоке точного продукта на официальной странице.",
+            "Пиксели изображения не удалось прочитать; имя файла и артикул в таблице страницы не считаются видимым SKU.",
+            "Статус не повышен до verified; ошибка инструмента не доказывает окончательное удаление файла."
+          ]
+        },
+        {
+          "image_id": "ARAL-004-IMG-02",
+          "image_url": "https://www.oel-billiger.com/cdn/shop/files/1552A0_4003116203378_Aral_HighTronic_F_5W-30_A_1024x1024.jpg?v=1682590124",
+          "source_url": "https://www.oel-billiger.com/products/aral-hightronic-f-5w-30",
+          "source_domain": "www.oel-billiger.com",
+          "image_domain": "www.oel-billiger.com",
+          "source_type": "third_party_image_search",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "image_url_returned_by_search; original_pixels_not_inspected",
+          "source_reported_product_name": "Aral HighTronic F 5W-30",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Сторонний источник: только candidate по правилу пользователя.",
+            "Название и объём относятся к описанию результата поиска, не к визуально прочитанной этикетке.",
+            "Совпадение объёма само по себе не подтверждает наш SKU."
+          ]
+        }
+      ],
+      "package_variants": [
+        {
+          "our_sku": "10332",
+          "package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "10333",
+          "package_size": {
+            "value": 208,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "10334",
+          "package_size": {
+            "value": 4,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        }
+      ],
+      "catalog_sources_to_review": [
+        {
+          "source_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Services/Bibliothek/pdf/ARAL_Produktkatalog_V1Januar_2024.pdf",
+          "document": "ARAL Produktkatalog Version 1 Januar 2024",
+          "page": 6,
+          "image_presence_confirmed": false,
+          "status": "requires_visual_review",
+          "notes": "Точное название/строка найдены в тексте страницы. Наличие и пригодность packshot на странице не подтверждены; PDF не выдан за изображение."
+        }
+      ],
+      "manual_search_required": true,
+      "manual_search_reasons": [
+        "Не завершена визуальная проверка названия, SAE и объёма на официальном изображении.",
+        "Проверенные изображения дополнительных ракурсов и конкретных наших SKU не получены."
+      ]
+    },
+    {
+      "internal_id": "ARAL-005",
+      "commercial_name": "Aral HighTronic J 5W-30",
+      "main_image_id": null,
+      "media_status": "candidate",
+      "verified_images": [],
+      "images": [
+        {
+          "image_id": "ARAL-005-IMG-01",
+          "image_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Schmierstoffe/Products/Large/15f4bb.jpg",
+          "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw/",
+          "source_domain": "www.aral-lubricants.de",
+          "image_domain": "www.aral-lubricants.de",
+          "source_type": "official_product_page",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "cache_miss",
+          "source_reported_product_name": "Aral HighTronic J 5W-30",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Ссылка расположена в блоке точного продукта на официальной странице.",
+            "Пиксели изображения не удалось прочитать; имя файла и артикул в таблице страницы не считаются видимым SKU.",
+            "Статус не повышен до verified; ошибка инструмента не доказывает окончательное удаление файла."
+          ]
+        },
+        {
+          "image_id": "ARAL-005-IMG-02",
+          "image_url": "https://img2.itbox.ua/700x700/prod_img/2/U0717102_1721718832.jpg",
+          "source_url": "https://www.itbox.ua/ua/product/Motornoe_maslo_Aral_HighTronic_J_5W-30_1L_151CED-p820555/",
+          "source_domain": "www.itbox.ua",
+          "image_domain": "img2.itbox.ua",
+          "source_type": "third_party_image_search",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "image_url_returned_by_search; original_pixels_not_inspected",
+          "source_reported_product_name": "Aral HighTronic J 5W-30",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Сторонний источник: только candidate по правилу пользователя.",
+            "Название и объём относятся к описанию результата поиска, не к визуально прочитанной этикетке.",
+            "Совпадение объёма само по себе не подтверждает наш SKU."
+          ]
+        }
+      ],
+      "package_variants": [
+        {
+          "our_sku": "20198",
+          "package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "20190",
+          "package_size": {
+            "value": 208,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "20194",
+          "package_size": {
+            "value": 4,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "20191",
+          "package_size": {
+            "value": 60,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        }
+      ],
+      "catalog_sources_to_review": [
+        {
+          "source_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Services/Bibliothek/pdf/ARAL_Produktkatalog_V1Januar_2024.pdf",
+          "document": "ARAL Produktkatalog Version 1 Januar 2024",
+          "page": 6,
+          "image_presence_confirmed": false,
+          "status": "requires_visual_review",
+          "notes": "Точное название/строка найдены в тексте страницы. Наличие и пригодность packshot на странице не подтверждены; PDF не выдан за изображение."
+        }
+      ],
+      "manual_search_required": true,
+      "manual_search_reasons": [
+        "Не завершена визуальная проверка названия, SAE и объёма на официальном изображении.",
+        "Проверенные изображения дополнительных ракурсов и конкретных наших SKU не получены."
+      ]
+    },
+    {
+      "internal_id": "ARAL-006",
+      "commercial_name": "Aral HighTronic M 5W-40",
+      "main_image_id": null,
+      "media_status": "candidate",
+      "verified_images": [],
+      "images": [
+        {
+          "image_id": "ARAL-006-IMG-01",
+          "image_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Schmierstoffe/Products/Large/150b6a.jpg",
+          "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw/",
+          "source_domain": "www.aral-lubricants.de",
+          "image_domain": "www.aral-lubricants.de",
+          "source_type": "official_product_page",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "web_image_reference_returned_pixels_not_available",
+          "source_reported_product_name": "Aral HighTronic M 5W-40",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Ссылка расположена в блоке точного продукта на официальной странице.",
+            "Пиксели изображения не удалось прочитать; имя файла и артикул в таблице страницы не считаются видимым SKU.",
+            "Статус не повышен до verified; ошибка инструмента не доказывает окончательное удаление файла."
+          ]
+        },
+        {
+          "image_id": "ARAL-006-IMG-02",
+          "image_url": "https://www.reifen.com/images/thumbs/062/0625239_Aral-Aral-HighTronic-M-5W-40-1-Liter-15243814-full.jpg.webp",
+          "source_url": "https://www.reifen.com/de-de/aral-aral-hightronic-m-5w-40-1-liter-4003116214077",
+          "source_domain": "www.reifen.com",
+          "image_domain": "www.reifen.com",
+          "source_type": "third_party_image_search",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "image_url_returned_by_search; original_pixels_not_inspected",
+          "source_reported_product_name": "Aral HighTronic M 5W-40",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Сторонний источник: только candidate по правилу пользователя.",
+            "Название и объём относятся к описанию результата поиска, не к визуально прочитанной этикетке.",
+            "Совпадение объёма само по себе не подтверждает наш SKU."
+          ]
+        },
+        {
+          "image_id": "ARAL-006-IMG-03",
+          "image_url": "https://www.motor-oel-guenstig.de/media/image/47/ff/02/4_-1x4-_2_AR-5W40-HTM.jpg",
+          "source_url": "https://www.motor-oel-guenstig.de/en/lubricants/engine-oil-car-transporter/5w-40/42610/aral-hightronic-m-5w-40-engine-oil",
+          "source_domain": "www.motor-oel-guenstig.de",
+          "image_domain": "www.motor-oel-guenstig.de",
+          "source_type": "third_party_image_search",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "image_url_returned_by_search; original_pixels_not_inspected",
+          "source_reported_product_name": "Aral HighTronic M 5W-40",
+          "source_reported_package_size": {
+            "value": 4,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Дополнительная фасовка по описанию поиска; привязки к нашему SKU 21404 нет."
+          ]
+        }
+      ],
+      "package_variants": [
+        {
+          "our_sku": "21407",
+          "package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "156EC2",
+          "package_size": {
+            "value": 208,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "21404",
+          "package_size": {
+            "value": 4,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        }
+      ],
+      "catalog_sources_to_review": [
+        {
+          "source_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Services/Bibliothek/pdf/ARAL_Produktkatalog_V1Januar_2024.pdf",
+          "document": "ARAL Produktkatalog Version 1 Januar 2024",
+          "page": 7,
+          "image_presence_confirmed": false,
+          "status": "requires_visual_review",
+          "notes": "Точное название/строка найдены в тексте страницы. Наличие и пригодность packshot на странице не подтверждены; PDF не выдан за изображение."
+        }
+      ],
+      "manual_search_required": true,
+      "manual_search_reasons": [
+        "Не завершена визуальная проверка названия, SAE и объёма на официальном изображении.",
+        "Проверенные изображения дополнительных ракурсов и конкретных наших SKU не получены."
+      ]
+    },
+    {
+      "internal_id": "ARAL-007",
+      "commercial_name": "Aral HighTronic R 5W-30",
+      "main_image_id": null,
+      "media_status": "candidate",
+      "verified_images": [],
+      "images": [
+        {
+          "image_id": "ARAL-007-IMG-01",
+          "image_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Schmierstoffe/Products/Large/15f459.jpg",
+          "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw/",
+          "source_domain": "www.aral-lubricants.de",
+          "image_domain": "www.aral-lubricants.de",
+          "source_type": "official_product_page",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "cache_miss",
+          "source_reported_product_name": "Aral HighTronic R 5W-30",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Ссылка расположена в блоке точного продукта на официальной странице.",
+            "Пиксели изображения не удалось прочитать; имя файла и артикул в таблице страницы не считаются видимым SKU.",
+            "Статус не повышен до verified; ошибка инструмента не доказывает окончательное удаление файла."
+          ]
+        },
+        {
+          "image_id": "ARAL-007-IMG-02",
+          "image_url": "https://cdn.27.ua/sc--media--prod/default/e2/0f/32/e20f32d5-248c-4d11-b595-7f0612aaf17f.jpg",
+          "source_url": "https://epicentrk.ua/ua/shop/mplc-motorna-oliva-aral-hightronic-r-5w-30-1-l-151cee-1f0d0f84-73e0-6a78-94b1-197d5995edfe.html",
+          "source_domain": "epicentrk.ua",
+          "image_domain": "cdn.27.ua",
+          "source_type": "third_party_image_search",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "image_url_returned_by_search; original_pixels_not_inspected",
+          "source_reported_product_name": "Aral HighTronic R 5W-30",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Сторонний источник: только candidate по правилу пользователя.",
+            "Название и объём относятся к описанию результата поиска, не к визуально прочитанной этикетке.",
+            "Совпадение объёма само по себе не подтверждает наш SKU."
+          ]
+        }
+      ],
+      "package_variants": [
+        {
+          "our_sku": "16008",
+          "package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "16004",
+          "package_size": {
+            "value": 4,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        }
+      ],
+      "catalog_sources_to_review": [
+        {
+          "source_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Services/Bibliothek/pdf/ARAL_Produktkatalog_V1Januar_2024.pdf",
+          "document": "ARAL Produktkatalog Version 1 Januar 2024",
+          "page": 6,
+          "image_presence_confirmed": false,
+          "status": "requires_visual_review",
+          "notes": "Точное название/строка найдены в тексте страницы. Наличие и пригодность packshot на странице не подтверждены; PDF не выдан за изображение."
+        }
+      ],
+      "manual_search_required": true,
+      "manual_search_reasons": [
+        "Не завершена визуальная проверка названия, SAE и объёма на официальном изображении.",
+        "Проверенные изображения дополнительных ракурсов и конкретных наших SKU не получены."
+      ]
+    },
+    {
+      "internal_id": "ARAL-008",
+      "commercial_name": "Aral SuperTronic E 0W-30",
+      "main_image_id": null,
+      "media_status": "candidate",
+      "verified_images": [],
+      "images": [
+        {
+          "image_id": "ARAL-008-IMG-01",
+          "image_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Schmierstoffe/Products/Large/15f481.jpg",
+          "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw/",
+          "source_domain": "www.aral-lubricants.de",
+          "image_domain": "www.aral-lubricants.de",
+          "source_type": "official_product_page",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "tool_inaccessible",
+          "source_reported_product_name": "Aral SuperTronic E 0W-30",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Ссылка расположена в блоке точного продукта на официальной странице.",
+            "Пиксели изображения не удалось прочитать; имя файла и артикул в таблице страницы не считаются видимым SKU.",
+            "Статус не повышен до verified; ошибка инструмента не доказывает окончательное удаление файла."
+          ]
+        },
+        {
+          "image_id": "ARAL-008-IMG-02",
+          "image_url": "https://www.oil-center.de/media/image/product/1165/lg/aral-supertronic-e-0w-30-motoroel-1-liter.jpg",
+          "source_url": "https://www.oil-center.de/Aral-SuperTronic-E-0W-30-Motoroel-1x1-Liter-fuer-Volvo-Honda-Renault-ACEA-A5-B5",
+          "source_domain": "www.oil-center.de",
+          "image_domain": "www.oil-center.de",
+          "source_type": "third_party_image_search",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "image_url_returned_by_search; original_pixels_not_inspected",
+          "source_reported_product_name": "Aral SuperTronic E 0W-30",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Сторонний источник: только candidate по правилу пользователя.",
+            "Название и объём относятся к описанию результата поиска, не к визуально прочитанной этикетке.",
+            "Совпадение объёма само по себе не подтверждает наш SKU."
+          ]
+        }
+      ],
+      "package_variants": [
+        {
+          "our_sku": "10508",
+          "package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "10502",
+          "package_size": {
+            "value": 208,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "10504",
+          "package_size": {
+            "value": 4,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        }
+      ],
+      "catalog_sources_to_review": [
+        {
+          "source_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Services/Bibliothek/pdf/ARAL_Produktkatalog_V1Januar_2024.pdf",
+          "document": "ARAL Produktkatalog Version 1 Januar 2024",
+          "page": 4,
+          "image_presence_confirmed": false,
+          "status": "requires_visual_review",
+          "notes": "Точное название/строка найдены в тексте страницы. Наличие и пригодность packshot на странице не подтверждены; PDF не выдан за изображение."
+        }
+      ],
+      "manual_search_required": true,
+      "manual_search_reasons": [
+        "Не завершена визуальная проверка названия, SAE и объёма на официальном изображении.",
+        "Проверенные изображения дополнительных ракурсов и конкретных наших SKU не получены.",
+        "Изображение допускается проверять независимо от технического конфликта. Текущий candidate обусловлен отсутствием визуальной проверки, а не ACEA."
+      ]
+    },
+    {
+      "internal_id": "ARAL-009",
+      "commercial_name": "Aral SuperTronic G 0W-40",
+      "main_image_id": null,
+      "media_status": "candidate",
+      "verified_images": [],
+      "images": [
+        {
+          "image_id": "ARAL-009-IMG-01",
+          "image_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Schmierstoffe/Products/Large/15f45d.jpg",
+          "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw/",
+          "source_domain": "www.aral-lubricants.de",
+          "image_domain": "www.aral-lubricants.de",
+          "source_type": "official_product_page",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "cache_miss",
+          "source_reported_product_name": "Aral SuperTronic G 0W-40",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Ссылка расположена в блоке точного продукта на официальной странице.",
+            "Пиксели изображения не удалось прочитать; имя файла и артикул в таблице страницы не считаются видимым SKU.",
+            "Статус не повышен до verified; ошибка инструмента не доказывает окончательное удаление файла."
+          ]
+        },
+        {
+          "image_id": "ARAL-009-IMG-02",
+          "image_url": "https://www.atp-autoteile.de/media/h/122289ECC495E08569334080DC0C670C2E436E32/product/2000x2000/2461733.jpg",
+          "source_url": "https://www.atp-autoteile.de/de/product/1148856-aral-1-l-supertronic-g-0w-40",
+          "source_domain": "www.atp-autoteile.de",
+          "image_domain": "www.atp-autoteile.de",
+          "source_type": "third_party_image_search",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "image_url_returned_by_search; original_pixels_not_inspected",
+          "source_reported_product_name": "Aral SuperTronic G 0W-40",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Сторонний источник: только candidate по правилу пользователя.",
+            "Название и объём относятся к описанию результата поиска, не к визуально прочитанной этикетке.",
+            "Совпадение объёма само по себе не подтверждает наш SKU."
+          ]
+        }
+      ],
+      "package_variants": [
+        {
+          "our_sku": "15A8A",
+          "package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "15A8AD",
+          "package_size": {
+            "value": 4,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        }
+      ],
+      "catalog_sources_to_review": [
+        {
+          "source_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Services/Bibliothek/pdf/ARAL_Produktkatalog_V1Januar_2024.pdf",
+          "document": "ARAL Produktkatalog Version 1 Januar 2024",
+          "page": 4,
+          "image_presence_confirmed": false,
+          "status": "requires_visual_review",
+          "notes": "Точное название/строка найдены в тексте страницы. Наличие и пригодность packshot на странице не подтверждены; PDF не выдан за изображение."
+        }
+      ],
+      "manual_search_required": true,
+      "manual_search_reasons": [
+        "Не завершена визуальная проверка названия, SAE и объёма на официальном изображении.",
+        "Проверенные изображения дополнительных ракурсов и конкретных наших SKU не получены."
+      ]
+    },
+    {
+      "internal_id": "ARAL-010",
+      "commercial_name": "Aral SuperTronic K 5W-30",
+      "main_image_id": null,
+      "media_status": "candidate",
+      "verified_images": [],
+      "images": [
+        {
+          "image_id": "ARAL-010-IMG-01",
+          "image_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Schmierstoffe/Products/Large/15F475.jpg",
+          "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw/",
+          "source_domain": "www.aral-lubricants.de",
+          "image_domain": "www.aral-lubricants.de",
+          "source_type": "official_product_page",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "404_via_web_tool",
+          "source_reported_product_name": "Aral SuperTronic K 5W-30",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Ссылка расположена в блоке точного продукта на официальной странице.",
+            "Пиксели изображения не удалось прочитать; имя файла и артикул в таблице страницы не считаются видимым SKU.",
+            "Статус не повышен до verified; ошибка инструмента не доказывает окончательное удаление файла."
+          ]
+        },
+        {
+          "image_id": "ARAL-010-IMG-02",
+          "image_url": "https://autoprotect.ua/pics/prod/big/247050_359720.jpg",
+          "source_url": "https://autoprotect.ua/products/247050-aral-supertronic_k_5w-30_motornoe_maslo",
+          "source_domain": "autoprotect.ua",
+          "image_domain": "autoprotect.ua",
+          "source_type": "third_party_image_search",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "image_url_returned_by_search; original_pixels_not_inspected",
+          "source_reported_product_name": "Aral SuperTronic K 5W-30",
+          "source_reported_package_size": {
+            "value": 5,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Сторонний источник: только candidate по правилу пользователя.",
+            "Название и объём относятся к описанию результата поиска, не к визуально прочитанной этикетке.",
+            "Совпадение объёма само по себе не подтверждает наш SKU."
+          ]
+        }
+      ],
+      "package_variants": [
+        {
+          "our_sku": "15DBCC",
+          "package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "15DBC5",
+          "package_size": {
+            "value": 20,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "15DBCE",
+          "package_size": {
+            "value": 4,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "15F477",
+          "package_size": {
+            "value": 5,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        }
+      ],
+      "catalog_sources_to_review": [
+        {
+          "source_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Services/Bibliothek/pdf/ARAL_Produktkatalog_V1Januar_2024.pdf",
+          "document": "ARAL Produktkatalog Version 1 Januar 2024",
+          "page": 5,
+          "image_presence_confirmed": false,
+          "status": "requires_visual_review",
+          "notes": "Точное название/строка найдены в тексте страницы. Наличие и пригодность packshot на странице не подтверждены; PDF не выдан за изображение."
+        }
+      ],
+      "manual_search_required": true,
+      "manual_search_reasons": [
+        "Не завершена визуальная проверка названия, SAE и объёма на официальном изображении.",
+        "Проверенные изображения дополнительных ракурсов и конкретных наших SKU не получены."
+      ]
+    },
+    {
+      "internal_id": "ARAL-011",
+      "commercial_name": "Aral SuperTronic Longlife III 0W-30",
+      "main_image_id": null,
+      "media_status": "candidate",
+      "verified_images": [],
+      "images": [
+        {
+          "image_id": "ARAL-011-IMG-01",
+          "image_url": "https://www.oil-center.de/media/image/product/8054/md/aral-supertronic-longlife-iii-0w-30-motoroel-1-liter.jpg",
+          "source_url": "https://www.oil-center.de/Aral-SuperTronic-LongLife-III-0W-30-Motoroel-1-Liter",
+          "source_domain": "www.oil-center.de",
+          "image_domain": "www.oil-center.de",
+          "source_type": "third_party_image_search",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "image_url_returned_by_search; original_pixels_not_inspected",
+          "source_reported_product_name": "Aral SuperTronic LongLife III 0W-30",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Сторонний источник: только candidate по правилу пользователя.",
+            "Название и объём относятся к описанию результата поиска, не к визуально прочитанной этикетке.",
+            "Совпадение объёма само по себе не подтверждает наш SKU."
+          ]
+        }
+      ],
+      "package_variants": [
+        {
+          "our_sku": "15F474",
+          "package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "160EC7",
+          "package_size": {
+            "value": 5,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        }
+      ],
+      "catalog_sources_to_review": [
+        {
+          "source_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Services/Bibliothek/pdf/ARAL_Produktkatalog_V1Januar_2024.pdf",
+          "document": "ARAL Produktkatalog Version 1 Januar 2024",
+          "page": 5,
+          "image_presence_confirmed": false,
+          "status": "requires_visual_review",
+          "notes": "Точное название/строка найдены в тексте страницы. Наличие и пригодность packshot на странице не подтверждены; PDF не выдан за изображение."
+        }
+      ],
+      "manual_search_required": true,
+      "manual_search_reasons": [
+        "Не завершена визуальная проверка названия, SAE и объёма на официальном изображении.",
+        "Проверенные изображения дополнительных ракурсов и конкретных наших SKU не получены."
+      ]
+    },
+    {
+      "internal_id": "ARAL-012",
+      "commercial_name": "Aral SuperTronic Longlife IV FE 0W-20",
+      "main_image_id": null,
+      "media_status": "candidate",
+      "verified_images": [],
+      "images": [
+        {
+          "image_id": "ARAL-012-IMG-01",
+          "image_url": "https://www.mein-motoroelshop.de/media/image/e1/c4/38/15F45F_4008177182594_Aral-SuperTronic-LL-IV-FE-0W-20-1-Liter_AhBSdMd4aspBV8.jpg",
+          "source_url": "https://www.mein-motoroelshop.de/motoroel/nach-hersteller/aral/14003/aral-supertronic-ll-iv-fe-0w-20",
+          "source_domain": "www.mein-motoroelshop.de",
+          "image_domain": "www.mein-motoroelshop.de",
+          "source_type": "third_party_image_search",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "image_url_returned_by_search; original_pixels_not_inspected",
+          "source_reported_product_name": "Aral SuperTronic LL IV FE 0W-20",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Сторонний источник: только candidate по правилу пользователя.",
+            "Название и объём относятся к описанию результата поиска, не к визуально прочитанной этикетке.",
+            "Совпадение объёма само по себе не подтверждает наш SKU."
+          ]
+        }
+      ],
+      "package_variants": [
+        {
+          "our_sku": "15F45F",
+          "package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "15F460",
+          "package_size": {
+            "value": 5,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        }
+      ],
+      "catalog_sources_to_review": [
+        {
+          "source_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Services/Bibliothek/pdf/ARAL_Produktkatalog_V1Januar_2024.pdf",
+          "document": "ARAL Produktkatalog Version 1 Januar 2024",
+          "page": 4,
+          "image_presence_confirmed": false,
+          "status": "requires_visual_review",
+          "notes": "Точное название/строка найдены в тексте страницы. Наличие и пригодность packshot на странице не подтверждены; PDF не выдан за изображение."
+        }
+      ],
+      "manual_search_required": true,
+      "manual_search_reasons": [
+        "Не завершена визуальная проверка названия, SAE и объёма на официальном изображении.",
+        "Проверенные изображения дополнительных ракурсов и конкретных наших SKU не получены."
+      ]
+    },
+    {
+      "internal_id": "ARAL-013",
+      "commercial_name": "Aral MegaTurboral 10W-40",
+      "main_image_id": null,
+      "media_status": "candidate",
+      "verified_images": [],
+      "images": [
+        {
+          "image_id": "ARAL-013-IMG-01",
+          "image_url": "https://www.motor-oel-guenstig.de/media/image/5a/8d/41/15BC45-20_front.jpg",
+          "source_url": "https://www.motor-oel-guenstig.de/en/lubricants/engine-oil-truck-tractor/10w-40/42374/aral-megaturboral-10w-40-engine-oil",
+          "source_domain": "www.motor-oel-guenstig.de",
+          "image_domain": "www.motor-oel-guenstig.de",
+          "source_type": "third_party_image_search",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "image_url_returned_by_search; original_pixels_not_inspected",
+          "source_reported_product_name": "Aral MegaTurboral 10W-40",
+          "source_reported_package_size": {
+            "value": 20,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Сторонний источник: только candidate по правилу пользователя.",
+            "Название и объём относятся к описанию результата поиска, не к визуально прочитанной этикетке.",
+            "Совпадение объёма само по себе не подтверждает наш SKU."
+          ]
+        }
+      ],
+      "package_variants": [
+        {
+          "our_sku": "23937",
+          "package_size": {
+            "value": 208,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "13932",
+          "package_size": {
+            "value": 20,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "10625",
+          "package_size": {
+            "value": 5,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        }
+      ],
+      "catalog_sources_to_review": [
+        {
+          "source_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Services/Bibliothek/pdf/ARAL_Produktkatalog_V1Januar_2024.pdf",
+          "document": "ARAL Produktkatalog Version 1 Januar 2024",
+          "page": 10,
+          "image_presence_confirmed": false,
+          "status": "requires_visual_review",
+          "notes": "Точное название/строка найдены в тексте страницы. Наличие и пригодность packshot на странице не подтверждены; PDF не выдан за изображение."
+        }
+      ],
+      "manual_search_required": true,
+      "manual_search_reasons": [
+        "Не завершена визуальная проверка названия, SAE и объёма на официальном изображении.",
+        "Проверенные изображения дополнительных ракурсов и конкретных наших SKU не получены."
+      ]
+    },
+    {
+      "internal_id": "ARAL-014",
+      "commercial_name": "Aral MegaTurboral LA 10W-40",
+      "main_image_id": null,
+      "media_status": "candidate",
+      "verified_images": [],
+      "images": [
+        {
+          "image_id": "ARAL-014-IMG-01",
+          "image_url": "https://www.reifen24.de/media/87/6e/cd/1721208966/8ea47a977b4b57b8059a4b215359ad61.jpg?width=3000",
+          "source_url": "https://www.reifen24.de/zubehoer/motoroel/aral-megaturboral-la-10w-40-20-liter.html",
+          "source_domain": "www.reifen24.de",
+          "image_domain": "www.reifen24.de",
+          "source_type": "third_party_image_search",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "image_url_returned_by_search; original_pixels_not_inspected",
+          "source_reported_product_name": "Aral MegaTurboral LA 10W-40",
+          "source_reported_package_size": {
+            "value": 20,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Сторонний источник: только candidate по правилу пользователя.",
+            "Название и объём относятся к описанию результата поиска, не к визуально прочитанной этикетке.",
+            "Совпадение объёма само по себе не подтверждает наш SKU."
+          ]
+        }
+      ],
+      "package_variants": [
+        {
+          "our_sku": "1620",
+          "package_size": {
+            "value": 20,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "11289",
+          "package_size": {
+            "value": 208,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        }
+      ],
+      "catalog_sources_to_review": [
+        {
+          "source_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Services/Bibliothek/pdf/ARAL_Produktkatalog_V1Januar_2024.pdf",
+          "document": "ARAL Produktkatalog Version 1 Januar 2024",
+          "page": 9,
+          "image_presence_confirmed": false,
+          "status": "requires_visual_review",
+          "notes": "Точное название/строка найдены в тексте страницы. Наличие и пригодность packshot на странице не подтверждены; PDF не выдан за изображение."
+        }
+      ],
+      "manual_search_required": true,
+      "manual_search_reasons": [
+        "Не завершена визуальная проверка названия, SAE и объёма на официальном изображении.",
+        "Проверенные изображения дополнительных ракурсов и конкретных наших SKU не получены."
+      ]
+    },
+    {
+      "internal_id": "ARAL-015",
+      "commercial_name": "Aral Turboral (Extra) 10W-40",
+      "main_image_id": null,
+      "media_status": "candidate",
+      "verified_images": [],
+      "images": [
+        {
+          "image_id": "ARAL-015-IMG-01",
+          "image_url": "https://www.reifen.com/images/thumbs/066/0660250_Aral-Aral-Turboral-10W-40-5-Liter-15325677-full.jpg.webp",
+          "source_url": "https://www.reifen.com/de-de/aral-aral-turboral-10w-40-5-liter-4008177182402",
+          "source_domain": "www.reifen.com",
+          "image_domain": "www.reifen.com",
+          "source_type": "third_party_image_search",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "image_url_returned_by_search; original_pixels_not_inspected",
+          "source_reported_product_name": "Aral Turboral 10W-40",
+          "source_reported_package_size": {
+            "value": 5,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Сторонний источник: только candidate по правилу пользователя.",
+            "Название и объём относятся к описанию результата поиска, не к визуально прочитанной этикетке.",
+            "Совпадение объёма само по себе не подтверждает наш SKU.",
+            "candidate_current_line_only; не присвоен историческому продукту или его SKU."
+          ]
+        }
+      ],
+      "package_variants": [
+        {
+          "our_sku": "11190",
+          "package_size": {
+            "value": 208,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "22003",
+          "package_size": {
+            "value": 20,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "22004",
+          "package_size": {
+            "value": 5,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "2682",
+          "package_size": {
+            "value": 60,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        }
+      ],
+      "catalog_sources_to_review": [
+        {
+          "source_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Services/Bibliothek/pdf/ARAL_Produktkatalog_V1Januar_2024.pdf",
+          "document": "ARAL Produktkatalog Version 1 Januar 2024",
+          "page": 10,
+          "image_presence_confirmed": false,
+          "status": "requires_visual_review",
+          "notes": "Точное название/строка найдены в тексте страницы. Наличие и пригодность packshot на странице не подтверждены; PDF не выдан за изображение."
+        }
+      ],
+      "manual_search_required": true,
+      "manual_search_reasons": [
+        "Не завершена визуальная проверка названия, SAE и объёма на официальном изображении.",
+        "Проверенные изображения дополнительных ракурсов и конкретных наших SKU не получены.",
+        "Современный Turboral — только кандидат. Не назначать историческим SKU без подтверждения идентичности; история названий не пересматривалась."
+      ]
+    },
+    {
+      "internal_id": "ARAL-016",
+      "commercial_name": "Aral Turboral (Plus) 15W-40",
+      "main_image_id": null,
+      "media_status": "candidate",
+      "verified_images": [],
+      "images": [
+        {
+          "image_id": "ARAL-016-IMG-01",
+          "image_url": "https://www.reifen24.de/media/ea/54/b2/1770167522/erp-image-666487.jpg?ts=1770167522",
+          "source_url": "https://www.reifen24.de/zubehoer/motoroel/aral-turboral-15w-40-20-liter.html",
+          "source_domain": "www.reifen24.de",
+          "image_domain": "www.reifen24.de",
+          "source_type": "third_party_image_search",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "image_url_returned_by_search; original_pixels_not_inspected",
+          "source_reported_product_name": "Aral Turboral 15W-40",
+          "source_reported_package_size": {
+            "value": 20,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Сторонний источник: только candidate по правилу пользователя.",
+            "Название и объём относятся к описанию результата поиска, не к визуально прочитанной этикетке.",
+            "Совпадение объёма само по себе не подтверждает наш SKU.",
+            "candidate_current_line_only; не присвоен историческому продукту или его SKU."
+          ]
+        }
+      ],
+      "package_variants": [
+        {
+          "our_sku": "22119",
+          "package_size": {
+            "value": 208,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "11281",
+          "package_size": {
+            "value": 20,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        },
+        {
+          "our_sku": "14047",
+          "package_size": {
+            "value": 60,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        }
+      ],
+      "catalog_sources_to_review": [
+        {
+          "source_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Services/Bibliothek/pdf/ARAL_Produktkatalog_V1Januar_2024.pdf",
+          "document": "ARAL Produktkatalog Version 1 Januar 2024",
+          "page": 11,
+          "image_presence_confirmed": false,
+          "status": "requires_visual_review",
+          "notes": "Точное название/строка найдены в тексте страницы. Наличие и пригодность packshot на странице не подтверждены; PDF не выдан за изображение."
+        }
+      ],
+      "manual_search_required": true,
+      "manual_search_reasons": [
+        "Не завершена визуальная проверка названия, SAE и объёма на официальном изображении.",
+        "Проверенные изображения дополнительных ракурсов и конкретных наших SKU не получены.",
+        "Современный Turboral — только кандидат. Не назначать историческим SKU без подтверждения идентичности; история названий не пересматривалась."
+      ]
+    },
+    {
+      "internal_id": "ARAL-017",
+      "commercial_name": "Aral Silikatfrei G12",
+      "main_image_id": null,
+      "media_status": "candidate",
+      "verified_images": [],
+      "images": [
+        {
+          "image_id": "ARAL-017-IMG-01",
+          "image_url": "https://cdn.autodoc.de/thumb?ccf=94077840&id=8198706&lng=en&m=0&n=0",
+          "source_url": "https://www.autodoc.co.uk/aral/8198706",
+          "source_domain": "www.autodoc.co.uk",
+          "image_domain": "cdn.autodoc.de",
+          "source_type": "third_party_image_search",
+          "product_name_visible": null,
+          "sae_visible": null,
+          "package_size_visible": null,
+          "sku_visible": null,
+          "checked_at": "2026-10-11",
+          "status": "candidate",
+          "visual_check": false,
+          "visibility_status": "not_observed; null does not mean absent",
+          "access_status": "image_url_returned_by_search; original_pixels_not_inspected",
+          "source_reported_product_name": "Aral Antifreeze Silikatfrei",
+          "source_reported_package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "source_reported_data_basis": "page/image-search metadata; not verified label transcription",
+          "assigned_our_skus": [],
+          "publication_allowed": false,
+          "notes": [
+            "Сторонний источник: только candidate по правилу пользователя.",
+            "Название и объём относятся к описанию результата поиска, не к визуально прочитанной этикетке.",
+            "Совпадение объёма само по себе не подтверждает наш SKU.",
+            "Название кандидата отличается от коммерческого; связи с 90837 нет."
+          ]
+        }
+      ],
+      "package_variants": [
+        {
+          "our_sku": "90837",
+          "package_size": {
+            "value": 1,
+            "unit": "L"
+          },
+          "image_ids": [],
+          "status": "missing",
+          "notes": "Проверенное изображение конкретного SKU не назначено."
+        }
+      ],
+      "catalog_sources_to_review": [
+        {
+          "source_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Services/Bibliothek/Library/201008_Aral_Produktkatalog_EN.pdf",
+          "document": "ARAL Produktkatalog EN 2020",
+          "page": null,
+          "image_presence_confirmed": false,
+          "status": "requires_visual_review",
+          "notes": "В каталоге есть строка Antifreeze Silikatfrei; это кандидат другой идентичности, не подтверждение SKU 90837."
+        }
+      ],
+      "manual_search_required": true,
+      "manual_search_reasons": [
+        "Не завершена визуальная проверка названия, SAE и объёма на официальном изображении.",
+        "Проверенные изображения дополнительных ракурсов и конкретных наших SKU не получены.",
+        "Antifreeze Silikatfrei не назначать коммерческому G12 / SKU 90837 без подтверждения идентичности."
+      ]
+    }
+  ],
+  "rejected_assets": [
+    {
+      "image_url": "https://www.aral-lubricants.de/fileadmin/user_upload/Aral_Lubes/Aral-Schmierstoffe/Products/Large/14f736.jpg",
+      "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw/",
+      "source_domain": "www.aral-lubricants.de",
+      "product_name_visible": null,
+      "sae_visible": null,
+      "package_size_visible": null,
+      "sku_visible": null,
+      "source_reported_product_name": "Aral BlueTronic 10W-40",
+      "checked_at": "2026-10-11",
+      "status": "rejected",
+      "visual_check": false,
+      "notes": [
+        "Официальный блок относится к BlueTronic без II. Не заменяет BlueTronic II. Отклонение по контексту источника, не по прочитанной этикетке."
+      ]
+    },
+    {
+      "image_url": "https://www.aral-lubricants.de/_assets/dfc19a46c553bbdd182b2d81379e04f3/img/_xmf-logo.png",
+      "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-lkw",
+      "source_domain": "www.aral-lubricants.de",
+      "product_name_visible": null,
+      "sae_visible": null,
+      "package_size_visible": null,
+      "sku_visible": null,
+      "checked_at": "2026-10-11",
+      "status": "rejected",
+      "visual_check": false,
+      "notes": [
+        "Общий XMF-значок, повторяется у разных продуктов; не packshot. Отклонён по типу ссылки и контексту страницы."
+      ]
+    }
+  ],
+  "audit": {
+    "products_total": 17,
+    "verified_product_image": 0,
+    "verified_package_variant": 0,
+    "candidate": 27,
+    "candidate_products": 17,
+    "missing": 17,
+    "products_without_any_candidate": 0,
+    "package_variants_missing": 47,
+    "rejected": 2,
+    "manual_search_products": 17
+  }
+}
