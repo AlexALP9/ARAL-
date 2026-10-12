@@ -1,0 +1,688 @@
+{
+  "schema_version": "ARAL_CONTENT_LAYER/1.0",
+  "master_reference": "ARAL_PRODUCT_MASTER_v1.1.json",
+  "master_sha256": "9bb7a9ed84ba4f5ff343dcfb9f50e0fad0f0fa4079aabbb31031276c48d603f8",
+  "completion_state": "incomplete; short existing excerpts only",
+  "scope_note": "Не является полным официальным CONTENT LAYER. Сохранены только доступные короткие цитаты и их перевод. Не заменяет и не изменяет MASTER.",
+  "publication_rule": "Не импортировать этот слой публично автоматически. Применимость контента и ограничения публикации определяются неизменённым MASTER. Даже полный текст не отменяет запрет публикации.",
+  "null_and_empty_meaning": "Полный блок не извлечён; это не утверждение об отсутствии раздела в PDS.",
+  "products": [
+    {
+      "internal_id": "ARAL-001",
+      "commercial_name": "Aral BlueTronic II 10W-40",
+      "source_content": {
+        "description_original": null,
+        "application_original": null,
+        "advantages_original": [],
+        "other_sections": [
+          {
+            "section_id": "subtitle_excerpt",
+            "section_type": "subtitle",
+            "original": "Motorenöl mit Aral Synthese-Technologie",
+            "is_full_section": false,
+            "provenance": "ARAL_remaining_13.json: description.original_excerpt"
+          }
+        ],
+        "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf",
+        "source_date": "2025-11-03",
+        "source_market": "Germany",
+        "source_language": "de"
+      },
+      "translated_content": {
+        "description_ru_literal": null,
+        "application_ru_literal": null,
+        "advantages_ru_literal": [],
+        "notes_ru_literal": null,
+        "other_sections_ru": [
+          {
+            "section_id": "subtitle_excerpt",
+            "translation_ru_literal": "Моторное масло с технологией синтеза Aral."
+          }
+        ]
+      },
+      "content_status": "partial",
+      "full_content_available": false,
+      "content_scope": "internal_editorial_layer; not an automatic public import",
+      "retrieval_status": "not_fetched_in_this_stage",
+      "candidate_content": [],
+      "completion_requirement": "Предоставить назначенный Main PDS как файл или его текст: для полного извлечения и перевода всех продуктовых разделов.",
+      "incomplete_reason": "Полный оригинал не предоставлен. Полное воспроизведение разделов внешнего источника не выполнено; пересказ не подставлен вместо оригинала."
+    },
+    {
+      "internal_id": "ARAL-002",
+      "commercial_name": "Aral EcoTronic F 5W-20",
+      "source_content": {
+        "description_original": null,
+        "application_original": null,
+        "advantages_original": [],
+        "other_sections": [],
+        "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf",
+        "source_date": "2021-05-20",
+        "source_market": "Germany",
+        "source_language": "de"
+      },
+      "translated_content": {
+        "description_ru_literal": null,
+        "application_ru_literal": null,
+        "advantages_ru_literal": [],
+        "notes_ru_literal": null,
+        "other_sections_ru": []
+      },
+      "content_status": "unavailable",
+      "full_content_available": false,
+      "content_scope": "internal_editorial_layer; not an automatic public import",
+      "retrieval_status": "not_fetched_in_this_stage",
+      "candidate_content": [],
+      "completion_requirement": "Предоставить назначенный Main PDS как файл или его текст: для полного извлечения и перевода всех продуктовых разделов.",
+      "incomplete_reason": "Полный оригинал не предоставлен. Полное воспроизведение разделов внешнего источника не выполнено; пересказ не подставлен вместо оригинала."
+    },
+    {
+      "internal_id": "ARAL-003",
+      "commercial_name": "Aral HighTronic 5W-40",
+      "source_content": {
+        "description_original": null,
+        "application_original": null,
+        "advantages_original": [],
+        "other_sections": [
+          {
+            "section_id": "subtitle_excerpt",
+            "section_type": "subtitle",
+            "original": "Hochleistungs-PKW-Motorenöl",
+            "is_full_section": false,
+            "provenance": "ARAL_remaining_13.json: description.original_excerpt"
+          }
+        ],
+        "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=0c1278be5813b8bcf8c2522ad7f4d0b6&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_hightronic_5w-40_germany_german_pdb_467316.pdf",
+        "source_date": "2024-11-08",
+        "source_market": "Germany",
+        "source_language": "de"
+      },
+      "translated_content": {
+        "description_ru_literal": null,
+        "application_ru_literal": null,
+        "advantages_ru_literal": [],
+        "notes_ru_literal": null,
+        "other_sections_ru": [
+          {
+            "section_id": "subtitle_excerpt",
+            "translation_ru_literal": "Высокоэффективное моторное масло для легковых автомобилей."
+          }
+        ]
+      },
+      "content_status": "partial",
+      "full_content_available": false,
+      "content_scope": "internal_editorial_layer; not an automatic public import",
+      "retrieval_status": "not_fetched_in_this_stage",
+      "candidate_content": [],
+      "completion_requirement": "Предоставить назначенный Main PDS как файл или его текст: для полного извлечения и перевода всех продуктовых разделов.",
+      "incomplete_reason": "Полный оригинал не предоставлен. Полное воспроизведение разделов внешнего источника не выполнено; пересказ не подставлен вместо оригинала."
+    },
+    {
+      "internal_id": "ARAL-004",
+      "commercial_name": "Aral HighTronic F 5W-30",
+      "source_content": {
+        "description_original": null,
+        "application_original": null,
+        "advantages_original": [],
+        "other_sections": [
+          {
+            "section_id": "subtitle_excerpt",
+            "section_type": "subtitle",
+            "original": "High-Performance-Motorenöl",
+            "is_full_section": false,
+            "provenance": "ARAL_remaining_13.json: description.original_excerpt"
+          }
+        ],
+        "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=458fb9eabcefe541a54a2b5b69ebfc9a&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_hightronic_f_5w-30_germany_german_pdb_456182.pdf",
+        "source_date": "2025-03-06",
+        "source_market": "Germany",
+        "source_language": "de"
+      },
+      "translated_content": {
+        "description_ru_literal": null,
+        "application_ru_literal": null,
+        "advantages_ru_literal": [],
+        "notes_ru_literal": null,
+        "other_sections_ru": [
+          {
+            "section_id": "subtitle_excerpt",
+            "translation_ru_literal": "Высокоэффективное моторное масло."
+          }
+        ]
+      },
+      "content_status": "partial",
+      "full_content_available": false,
+      "content_scope": "internal_editorial_layer; not an automatic public import",
+      "retrieval_status": "not_fetched_in_this_stage",
+      "candidate_content": [],
+      "completion_requirement": "Предоставить назначенный Main PDS как файл или его текст: для полного извлечения и перевода всех продуктовых разделов.",
+      "incomplete_reason": "Полный оригинал не предоставлен. Полное воспроизведение разделов внешнего источника не выполнено; пересказ не подставлен вместо оригинала."
+    },
+    {
+      "internal_id": "ARAL-005",
+      "commercial_name": "Aral HighTronic J 5W-30",
+      "source_content": {
+        "description_original": null,
+        "application_original": null,
+        "advantages_original": [],
+        "other_sections": [
+          {
+            "section_id": "subtitle_excerpt",
+            "section_type": "subtitle",
+            "original": "Modernes aschearmes Leichtlauf-Motorenöl",
+            "is_full_section": false,
+            "provenance": "ARAL_remaining_13.json: description.original_excerpt"
+          }
+        ],
+        "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=fe22a203db6bba42c3a3924948fb7743&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_hightronic_j_5w-30_germany_german_pdb_466947.pdf",
+        "source_date": "2025-02-26",
+        "source_market": "Germany",
+        "source_language": "de"
+      },
+      "translated_content": {
+        "description_ru_literal": null,
+        "application_ru_literal": null,
+        "advantages_ru_literal": [],
+        "notes_ru_literal": null,
+        "other_sections_ru": [
+          {
+            "section_id": "subtitle_excerpt",
+            "translation_ru_literal": "Современное малозольное моторное масло с низким трением."
+          }
+        ]
+      },
+      "content_status": "partial",
+      "full_content_available": false,
+      "content_scope": "internal_editorial_layer; not an automatic public import",
+      "retrieval_status": "not_fetched_in_this_stage",
+      "candidate_content": [],
+      "completion_requirement": "Предоставить назначенный Main PDS как файл или его текст: для полного извлечения и перевода всех продуктовых разделов.",
+      "incomplete_reason": "Полный оригинал не предоставлен. Полное воспроизведение разделов внешнего источника не выполнено; пересказ не подставлен вместо оригинала."
+    },
+    {
+      "internal_id": "ARAL-006",
+      "commercial_name": "Aral HighTronic M 5W-40",
+      "source_content": {
+        "description_original": null,
+        "application_original": null,
+        "advantages_original": [],
+        "other_sections": [
+          {
+            "section_id": "subtitle_excerpt",
+            "section_type": "subtitle",
+            "original": "Hochleistungs-Motorenöl",
+            "is_full_section": false,
+            "provenance": "ARAL_remaining_13.json: description.original_excerpt"
+          }
+        ],
+        "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=6ab80919cceddc7b5d26244d96c8ec9e&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_hightronic_m_5w-40_germany_german_pdb_467457.pdf",
+        "source_date": "2022-08-10",
+        "source_market": "Germany",
+        "source_language": "de"
+      },
+      "translated_content": {
+        "description_ru_literal": null,
+        "application_ru_literal": null,
+        "advantages_ru_literal": [],
+        "notes_ru_literal": null,
+        "other_sections_ru": [
+          {
+            "section_id": "subtitle_excerpt",
+            "translation_ru_literal": "Высокоэффективное моторное масло."
+          }
+        ]
+      },
+      "content_status": "partial",
+      "full_content_available": false,
+      "content_scope": "internal_editorial_layer; not an automatic public import",
+      "retrieval_status": "not_fetched_in_this_stage",
+      "candidate_content": [],
+      "completion_requirement": "Предоставить назначенный Main PDS как файл или его текст: для полного извлечения и перевода всех продуктовых разделов.",
+      "incomplete_reason": "Полный оригинал не предоставлен. Полное воспроизведение разделов внешнего источника не выполнено; пересказ не подставлен вместо оригинала."
+    },
+    {
+      "internal_id": "ARAL-007",
+      "commercial_name": "Aral HighTronic R 5W-30",
+      "source_content": {
+        "description_original": null,
+        "application_original": null,
+        "advantages_original": [],
+        "other_sections": [
+          {
+            "section_id": "subtitle_excerpt",
+            "section_type": "subtitle",
+            "original": "Modernes Motoröl mit niedrigem Aschegehalt",
+            "is_full_section": false,
+            "provenance": "ARAL_remaining_13.json: description.original_excerpt"
+          }
+        ],
+        "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=1fe8cdd97481044e39c25f99584b68e0&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_hightronic_r_5w-30_germany_german_pdb_466927.pdf",
+        "source_date": "2024-06-21",
+        "source_market": "Germany",
+        "source_language": "de"
+      },
+      "translated_content": {
+        "description_ru_literal": null,
+        "application_ru_literal": null,
+        "advantages_ru_literal": [],
+        "notes_ru_literal": null,
+        "other_sections_ru": [
+          {
+            "section_id": "subtitle_excerpt",
+            "translation_ru_literal": "Современное моторное масло с низким содержанием золы."
+          }
+        ]
+      },
+      "content_status": "partial",
+      "full_content_available": false,
+      "content_scope": "internal_editorial_layer; not an automatic public import",
+      "retrieval_status": "not_fetched_in_this_stage",
+      "candidate_content": [],
+      "completion_requirement": "Предоставить назначенный Main PDS как файл или его текст: для полного извлечения и перевода всех продуктовых разделов.",
+      "incomplete_reason": "Полный оригинал не предоставлен. Полное воспроизведение разделов внешнего источника не выполнено; пересказ не подставлен вместо оригинала."
+    },
+    {
+      "internal_id": "ARAL-008",
+      "commercial_name": "Aral SuperTronic E 0W-30",
+      "source_content": {
+        "description_original": null,
+        "application_original": null,
+        "advantages_original": [],
+        "other_sections": [
+          {
+            "section_id": "subtitle_excerpt",
+            "section_type": "subtitle",
+            "original": "Engine oil in Aral Synthetic-Technology",
+            "is_full_section": false,
+            "provenance": "ARAL_remaining_13.json: description.original_excerpt"
+          }
+        ],
+        "source_url": "https://www.aral-lubricants.de/en/datasheets/automotive?cHash=c938cab0747bb2b684b112eabd3d8e16&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_supertronic_e_0w-30_global_english_pdb_463348.pdf",
+        "source_date": "2025-06-02",
+        "source_market": "Global",
+        "source_language": "en"
+      },
+      "translated_content": {
+        "description_ru_literal": null,
+        "application_ru_literal": null,
+        "advantages_ru_literal": [],
+        "notes_ru_literal": null,
+        "other_sections_ru": [
+          {
+            "section_id": "subtitle_excerpt",
+            "translation_ru_literal": "Моторное масло по синтетической технологии Aral."
+          }
+        ]
+      },
+      "content_status": "partial",
+      "full_content_available": false,
+      "content_scope": "internal_editorial_layer; not an automatic public import",
+      "retrieval_status": "not_fetched_in_this_stage",
+      "candidate_content": [],
+      "completion_requirement": "Предоставить назначенный Main PDS как файл или его текст: для полного извлечения и перевода всех продуктовых разделов.",
+      "incomplete_reason": "Полный оригинал не предоставлен. Полное воспроизведение разделов внешнего источника не выполнено; пересказ не подставлен вместо оригинала.",
+      "preserved_source_conflict": {
+        "Performance": "ACEA C2",
+        "Application": "ACEA A5/B5",
+        "provenance": "Frozen MASTER unresolved conflict; factual identifiers, not full section extraction",
+        "resolution": null,
+        "publication_note": "Не публиковать как итоговую спецификацию; запрет технической публикации в MASTER остаётся в силе."
+      }
+    },
+    {
+      "internal_id": "ARAL-009",
+      "commercial_name": "Aral SuperTronic G 0W-40",
+      "source_content": {
+        "description_original": null,
+        "application_original": null,
+        "advantages_original": [],
+        "other_sections": [
+          {
+            "section_id": "subtitle_excerpt",
+            "section_type": "subtitle",
+            "original": "Motorenöl in Synthese-Technologie",
+            "is_full_section": false,
+            "provenance": "ARAL_remaining_13.json: description.original_excerpt"
+          }
+        ],
+        "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=89b904a8c0f9dd2d43f8aae5e3bf8b5e&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_supertronic_g_0w-40_germany_german_pdb_469294.pdf",
+        "source_date": "2025-11-03",
+        "source_market": "Germany",
+        "source_language": "de"
+      },
+      "translated_content": {
+        "description_ru_literal": null,
+        "application_ru_literal": null,
+        "advantages_ru_literal": [],
+        "notes_ru_literal": null,
+        "other_sections_ru": [
+          {
+            "section_id": "subtitle_excerpt",
+            "translation_ru_literal": "Моторное масло по технологии синтеза."
+          }
+        ]
+      },
+      "content_status": "partial",
+      "full_content_available": false,
+      "content_scope": "internal_editorial_layer; not an automatic public import",
+      "retrieval_status": "not_fetched_in_this_stage",
+      "candidate_content": [],
+      "completion_requirement": "Предоставить назначенный Main PDS как файл или его текст: для полного извлечения и перевода всех продуктовых разделов.",
+      "incomplete_reason": "Полный оригинал не предоставлен. Полное воспроизведение разделов внешнего источника не выполнено; пересказ не подставлен вместо оригинала."
+    },
+    {
+      "internal_id": "ARAL-010",
+      "commercial_name": "Aral SuperTronic K 5W-30",
+      "source_content": {
+        "description_original": null,
+        "application_original": null,
+        "advantages_original": [],
+        "other_sections": [
+          {
+            "section_id": "subtitle_excerpt",
+            "section_type": "subtitle",
+            "original": "PKW Hochleistungsmotorenöl",
+            "is_full_section": false,
+            "provenance": "ARAL_remaining_13.json: description.original_excerpt"
+          }
+        ],
+        "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=569d852f1caeb1182d3f68782a3ce8e6&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_supertronic_k_5w-30_germany_german_pdb_470247.pdf",
+        "source_date": "2025-11-03",
+        "source_market": "Germany",
+        "source_language": "de"
+      },
+      "translated_content": {
+        "description_ru_literal": null,
+        "application_ru_literal": null,
+        "advantages_ru_literal": [],
+        "notes_ru_literal": null,
+        "other_sections_ru": [
+          {
+            "section_id": "subtitle_excerpt",
+            "translation_ru_literal": "Высокоэффективное моторное масло для легковых автомобилей."
+          }
+        ]
+      },
+      "content_status": "partial",
+      "full_content_available": false,
+      "content_scope": "internal_editorial_layer; not an automatic public import",
+      "retrieval_status": "not_fetched_in_this_stage",
+      "candidate_content": [],
+      "completion_requirement": "Предоставить назначенный Main PDS как файл или его текст: для полного извлечения и перевода всех продуктовых разделов.",
+      "incomplete_reason": "Полный оригинал не предоставлен. Полное воспроизведение разделов внешнего источника не выполнено; пересказ не подставлен вместо оригинала."
+    },
+    {
+      "internal_id": "ARAL-011",
+      "commercial_name": "Aral SuperTronic Longlife III 0W-30",
+      "source_content": {
+        "description_original": null,
+        "application_original": null,
+        "advantages_original": [],
+        "other_sections": [
+          {
+            "section_id": "subtitle_excerpt",
+            "section_type": "subtitle",
+            "original": "PKW Motorenöl in Aral Synthese-Technologie",
+            "is_full_section": false,
+            "provenance": "ARAL_remaining_13.json: description.original_excerpt"
+          }
+        ],
+        "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=3773cfe73d2537b61a9b1b8e5d31cd59&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_supertronic_longlife_iii_0w-30_germany_german_pdb_470402.pdf",
+        "source_date": "2025-11-03",
+        "source_market": "Germany",
+        "source_language": "de"
+      },
+      "translated_content": {
+        "description_ru_literal": null,
+        "application_ru_literal": null,
+        "advantages_ru_literal": [],
+        "notes_ru_literal": null,
+        "other_sections_ru": [
+          {
+            "section_id": "subtitle_excerpt",
+            "translation_ru_literal": "Моторное масло для легковых автомобилей по технологии синтеза Aral."
+          }
+        ]
+      },
+      "content_status": "partial",
+      "full_content_available": false,
+      "content_scope": "internal_editorial_layer; not an automatic public import",
+      "retrieval_status": "not_fetched_in_this_stage",
+      "candidate_content": [],
+      "completion_requirement": "Предоставить назначенный Main PDS как файл или его текст: для полного извлечения и перевода всех продуктовых разделов.",
+      "incomplete_reason": "Полный оригинал не предоставлен. Полное воспроизведение разделов внешнего источника не выполнено; пересказ не подставлен вместо оригинала."
+    },
+    {
+      "internal_id": "ARAL-012",
+      "commercial_name": "Aral SuperTronic Longlife IV FE 0W-20",
+      "source_content": {
+        "description_original": null,
+        "application_original": null,
+        "advantages_original": [],
+        "other_sections": [
+          {
+            "section_id": "subtitle_excerpt",
+            "section_type": "subtitle",
+            "original": "Hochleistungs-Motorenöl für Benzin- und Dieselmotoren",
+            "is_full_section": false,
+            "provenance": "ARAL_remaining_13.json: description.original_excerpt"
+          }
+        ],
+        "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=a2df89a4f993658074da274967d8c0d4&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_supertronic_ll_iv_fe_0w-20_germany_german_pdb_469571.pdf",
+        "source_date": "2025-05-02",
+        "source_market": "Germany",
+        "source_language": "de"
+      },
+      "translated_content": {
+        "description_ru_literal": null,
+        "application_ru_literal": null,
+        "advantages_ru_literal": [],
+        "notes_ru_literal": null,
+        "other_sections_ru": [
+          {
+            "section_id": "subtitle_excerpt",
+            "translation_ru_literal": "Высокоэффективное моторное масло для бензиновых и дизельных двигателей."
+          }
+        ]
+      },
+      "content_status": "partial",
+      "full_content_available": false,
+      "content_scope": "internal_editorial_layer; not an automatic public import",
+      "retrieval_status": "not_fetched_in_this_stage",
+      "candidate_content": [],
+      "completion_requirement": "Предоставить назначенный Main PDS как файл или его текст: для полного извлечения и перевода всех продуктовых разделов.",
+      "incomplete_reason": "Полный оригинал не предоставлен. Полное воспроизведение разделов внешнего источника не выполнено; пересказ не подставлен вместо оригинала."
+    },
+    {
+      "internal_id": "ARAL-013",
+      "commercial_name": "Aral MegaTurboral 10W-40",
+      "source_content": {
+        "description_original": null,
+        "application_original": null,
+        "advantages_original": [],
+        "other_sections": [
+          {
+            "section_id": "subtitle_excerpt",
+            "section_type": "subtitle",
+            "original": "Hochleistungs-Dieselmotorenöl für verlängerte Wechselintervalle",
+            "is_full_section": false,
+            "provenance": "ARAL_remaining_13.json: description.original_excerpt"
+          }
+        ],
+        "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=b5e0c342bd380e867e04b08bb526bffb&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_megaturboral_10w-40_germany_german_pdb_456130.pdf",
+        "source_date": "2026-02-12",
+        "source_market": "Germany",
+        "source_language": "de"
+      },
+      "translated_content": {
+        "description_ru_literal": null,
+        "application_ru_literal": null,
+        "advantages_ru_literal": [],
+        "notes_ru_literal": null,
+        "other_sections_ru": [
+          {
+            "section_id": "subtitle_excerpt",
+            "translation_ru_literal": "Высокоэффективное дизельное моторное масло для увеличенных интервалов замены."
+          }
+        ]
+      },
+      "content_status": "partial",
+      "full_content_available": false,
+      "content_scope": "internal_editorial_layer; not an automatic public import",
+      "retrieval_status": "not_fetched_in_this_stage",
+      "candidate_content": [],
+      "completion_requirement": "Предоставить назначенный Main PDS как файл или его текст: для полного извлечения и перевода всех продуктовых разделов.",
+      "incomplete_reason": "Полный оригинал не предоставлен. Полное воспроизведение разделов внешнего источника не выполнено; пересказ не подставлен вместо оригинала."
+    },
+    {
+      "internal_id": "ARAL-014",
+      "commercial_name": "Aral MegaTurboral LA 10W-40",
+      "source_content": {
+        "description_original": null,
+        "application_original": null,
+        "advantages_original": [],
+        "other_sections": [
+          {
+            "section_id": "subtitle_excerpt",
+            "section_type": "subtitle",
+            "original": "Low SAPS Motorenöl",
+            "is_full_section": false,
+            "provenance": "ARAL_remaining_13.json: description.original_excerpt"
+          }
+        ],
+        "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=9fa6e1148a24d46da58db55221344d97&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_megaturboral_la_10w-40_germany_german_pdb_463176.pdf",
+        "source_date": "2025-03-25",
+        "source_market": "Germany",
+        "source_language": "de"
+      },
+      "translated_content": {
+        "description_ru_literal": null,
+        "application_ru_literal": null,
+        "advantages_ru_literal": [],
+        "notes_ru_literal": null,
+        "other_sections_ru": [
+          {
+            "section_id": "subtitle_excerpt",
+            "translation_ru_literal": "Моторное масло Low SAPS."
+          }
+        ]
+      },
+      "content_status": "partial",
+      "full_content_available": false,
+      "content_scope": "internal_editorial_layer; not an automatic public import",
+      "retrieval_status": "not_fetched_in_this_stage",
+      "candidate_content": [],
+      "completion_requirement": "Предоставить назначенный Main PDS как файл или его текст: для полного извлечения и перевода всех продуктовых разделов.",
+      "incomplete_reason": "Полный оригинал не предоставлен. Полное воспроизведение разделов внешнего источника не выполнено; пересказ не подставлен вместо оригинала."
+    },
+    {
+      "internal_id": "ARAL-015",
+      "commercial_name": "Aral Turboral (Extra) 10W-40",
+      "source_content": {
+        "description_original": null,
+        "application_original": null,
+        "advantages_original": [],
+        "other_sections": [],
+        "source_url": null,
+        "source_date": null,
+        "source_market": null,
+        "source_language": null
+      },
+      "translated_content": {
+        "description_ru_literal": null,
+        "application_ru_literal": null,
+        "advantages_ru_literal": [],
+        "notes_ru_literal": null,
+        "other_sections_ru": []
+      },
+      "content_status": "unavailable",
+      "full_content_available": false,
+      "content_scope": "internal_editorial_layer; not an automatic public import",
+      "retrieval_status": "not_fetched_in_this_stage",
+      "candidate_content": [],
+      "incomplete_reason": "В замороженном MASTER не назначен Main PDS с подтверждённой идентичностью. Тексты кандидатов не перенесены.",
+      "completion_requirement": "Нужен точный исторический PDS для ваших SKU; современный Turboral не подставлять."
+    },
+    {
+      "internal_id": "ARAL-016",
+      "commercial_name": "Aral Turboral (Plus) 15W-40",
+      "source_content": {
+        "description_original": null,
+        "application_original": null,
+        "advantages_original": [],
+        "other_sections": [],
+        "source_url": null,
+        "source_date": null,
+        "source_market": null,
+        "source_language": null
+      },
+      "translated_content": {
+        "description_ru_literal": null,
+        "application_ru_literal": null,
+        "advantages_ru_literal": [],
+        "notes_ru_literal": null,
+        "other_sections_ru": []
+      },
+      "content_status": "unavailable",
+      "full_content_available": false,
+      "content_scope": "internal_editorial_layer; not an automatic public import",
+      "retrieval_status": "not_fetched_in_this_stage",
+      "candidate_content": [],
+      "incomplete_reason": "В замороженном MASTER не назначен Main PDS с подтверждённой идентичностью. Тексты кандидатов не перенесены.",
+      "completion_requirement": "Нужен точный исторический PDS для ваших SKU; современный Turboral не подставлять."
+    },
+    {
+      "internal_id": "ARAL-017",
+      "commercial_name": "Aral Silikatfrei G12",
+      "source_content": {
+        "description_original": null,
+        "application_original": null,
+        "advantages_original": [],
+        "other_sections": [],
+        "source_url": null,
+        "source_date": null,
+        "source_market": null,
+        "source_language": null
+      },
+      "translated_content": {
+        "description_ru_literal": null,
+        "application_ru_literal": null,
+        "advantages_ru_literal": [],
+        "notes_ru_literal": null,
+        "other_sections_ru": []
+      },
+      "content_status": "unavailable",
+      "full_content_available": false,
+      "content_scope": "internal_editorial_layer; not an automatic public import",
+      "retrieval_status": "not_fetched_in_this_stage",
+      "candidate_content": [],
+      "incomplete_reason": "В замороженном MASTER не назначен Main PDS с подтверждённой идентичностью. Тексты кандидатов не перенесены.",
+      "completion_requirement": "Нужен PDS, идентичность которого подтверждена для Silikatfrei G12, SKU 90837. Текст кандидата Antifreeze Silikatfrei не присваивать товару."
+    }
+  ],
+  "audit": {
+    "products_total": 17,
+    "content_complete": 0,
+    "content_partial": 13,
+    "content_unavailable": 4,
+    "products_requiring_additional_source": [
+      "Aral BlueTronic II 10W-40",
+      "Aral EcoTronic F 5W-20",
+      "Aral HighTronic 5W-40",
+      "Aral HighTronic F 5W-30",
+      "Aral HighTronic J 5W-30",
+      "Aral HighTronic M 5W-40",
+      "Aral HighTronic R 5W-30",
+      "Aral SuperTronic E 0W-30",
+      "Aral SuperTronic G 0W-40",
+      "Aral SuperTronic K 5W-30",
+      "Aral SuperTronic Longlife III 0W-30",
+      "Aral SuperTronic Longlife IV FE 0W-20",
+      "Aral MegaTurboral 10W-40",
+      "Aral MegaTurboral LA 10W-40",
+      "Aral Turboral (Extra) 10W-40",
+      "Aral Turboral (Plus) 15W-40",
+      "Aral Silikatfrei G12"
+    ]
+  }
+}
