@@ -997,4 +997,1079 @@ Name Method Units ARAL SuperTronic G 0W-40
 Density @ 15C, Relative ASTM D4052 g/ml 0.844
 Viscosity, Kinematic 100C ASTM D445 mm²/s 13.3
 Viscosity, Kinematic 40C ASTM D445 mm²/s 76
-Viscosity Index ASTM D2270 None 180
+Viscosity Index ASTM D2270 None 180Viscosity, CCS -35C (0W) ASTM D5293 mPa.s (cP) 6000
+Pour Point ASTM D97 °C -45
+Flash Point, PMCC ASTM D93 °C 210
+Ash, Sulphated ASTM D874 % w t 1.2
+```
+
+## ARAL-010 — Aral SuperTronic K 5W-30
+
+**content_status:** complete
+
+**main_technical_pds (без изменения):** aral_supertronic_k_5w-30_germany_german_pdb_470247.pdf; 2025-11-03.
+
+### Provenance — wepp-df3s57
+
+Название документа: **SuperTronic K 5W-30**. SAE 5W-30; дата 2025-03-24; язык en; рынок не указан явно. Это метаданные источника, не альтернативное название товара.
+
+Файл: [wepp-df3s57.pdf](<C:/Users/Shevc/OneDrive/Рабочий стол/PDS/wepp-df3s57.pdf>). SHA-256: `505ee94d9ccc33cd1dec533209f095540f3fc433c3139330caa4b1b8cd3590d6`.
+
+identity_status=exact; accepted_official_pds=true; accepted_for_content=true; accepted_for_technical_reference=true; is_main_technical_pds=false; revision_relation=older.
+
+- Полный текст и перевод принадлежат только этой редакции. Они не заменяют технические поля MASTER и не разрешают публикацию автоматически.
+
+#### Description — extracted
+
+**Оригинал:**
+
+ARAL SuperTronic K 5W-30 is designed for petrol and diesel engines, offering the following benefits:
+• Meets the highest standards for wear protection
+• Aral Low SAPS technology for extended lifespan of the diesel particulate filter
+• Suitable for vehicles with and without LongLife service
+• Improved fuel economy
+
+**Технический перевод:**
+
+ARAL SuperTronic K 5W-30 разработано для бензиновых и дизельных двигателей и обладает следующими преимуществами:
+• Соответствует самым высоким стандартам защиты от износа
+• Технология Aral Low SAPS для увеличенного срока службы дизельного сажевого фильтра
+• Пригодно для автомобилей как с обслуживанием LongLife, так и без него
+• Улучшенная экономия топлива
+
+#### Application — extracted
+
+**Оригинал:**
+
+ARAL SuperTronic K 5W-30 is suitable for use in automotive gasoline and diesel engines where the manufacturer
+recommends an ACEA C3, API SQ 5W-30 Lubricant.
+ARAL SuperTronic K 5W-30 is approved for use in vehicles from leading manufacturers please refer to the specifications
+section, and your owner's handbook.
+
+**Технический перевод:**
+
+ARAL SuperTronic K 5W-30 пригодно для автомобильных бензиновых и дизельных двигателей, для которых производитель рекомендует смазочный материал 5W-30 по ACEA C3, API SQ.
+ARAL SuperTronic K 5W-30 одобрено для автомобилей ведущих производителей; см. раздел спецификаций и руководство по эксплуатации автомобиля.
+
+#### Advantages — absent_in_source
+
+#### Storage — extracted
+
+**Оригинал:**
+
+All packages should be stored under cover. Where outside storage is unavoidable drums should be laid horizontally to
+avoid the possible ingress of water and damage to drum markings. Products should not be stored above 60°C, exposed
+to hot sun or freezing conditions.
+
+**Технический перевод:**
+
+Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.
+
+#### Recommendations — absent_in_source
+
+#### Notes — absent_in_source
+
+#### Другие продуктовые разделы
+
+**subtitle — оригинал:** High-performance engine oil for extended service intervals
+
+**Перевод:** Высокоэффективное моторное масло для увеличенных межсервисных интервалов
+
+#### Техническая справка этой редакции — не текущие поля MASTER
+
+**Performance / Specifications — оригинал:**
+
+ACEA C3
+API SQ
+BMW Longlife-04, MB-Approval 229.51/ 229.52, OPEL OV 040 1547 - D30/ G30, Porsche C30, Renault RN 0700 / RN 0710,
+VW 504 00/ 507 00
+Fulfils technical requirement of MB 229.31
+
+**Перевод формулировок Performance (обозначения сохранены):**
+
+ACEA C3
+API SQ
+BMW Longlife-04, Допуск MB 229.51/ 229.52, OPEL OV 040 1547 - D30/ G30, Porsche C30, Renault RN 0700 / RN 0710,
+VW 504 00/ 507 00
+Соответствует техническому требованию MB 229.31
+
+**Typical Characteristics — оригинал:**
+
+```text
+Name Method Units ARAL SuperTronic K 5W-30
+Density @ 15C, Relative ASTM D4052 g/ml 0.851
+Viscosity, Kinematic 100C ASTM D445 mm²/s 12.0
+Viscosity, Kinematic 40C ASTM D445 mm²/s 69
+Viscosity Index ASTM D2270 None 173
+Viscosity, CCS -30C (5W) ASTM D5293 mPa.s (cP) 5800
+Pour Point ASTM D97 °C -42
+Flash Point, PMCC ASTM D93 °C 196
+Ash, Sulphated ASTM D874 % w t 0.71
+```
+
+## ARAL-011 — Aral SuperTronic Longlife III 0W-30
+
+**content_status:** complete
+
+**main_technical_pds (без изменения):** aral_supertronic_longlife_iii_0w-30_germany_german_pdb_470402.pdf; 2025-11-03.
+
+### Provenance — wepp-dbd8r2
+
+Название документа: **ARAL SuperTronic Longlife III 0W-30**. SAE 0W-30; дата 2024-11-25; язык en; рынок не указан явно. Это метаданные источника, не альтернативное название товара.
+
+Файл: [wepp-dbd8r2.pdf](<C:/Users/Shevc/OneDrive/Рабочий стол/ппппдддс/wepp-dbd8r2.pdf>). SHA-256: `05a7f3c68693a9fd057a1754bb7109fd0c61b2e28ec951801584824665717a3a`.
+
+identity_status=exact; accepted_official_pds=true; accepted_for_content=true; accepted_for_technical_reference=true; is_main_technical_pds=false; revision_relation=older.
+
+- Полный текст и перевод принадлежат только этой редакции. Они не заменяют технические поля MASTER и не разрешают публикацию автоматически.
+
+#### Description — extracted
+
+**Оригинал:**
+
+Aral SuperTronic LongLife III 0W-30 has been specifically developed for latest European cars especially from VW group
+vehicles to ensure maximum wear protection, cleanliness of the engine and thereby supporting the function of diesel
+particulate filters.
+
+**Технический перевод:**
+
+Aral SuperTronic LongLife III 0W-30 специально разработано для новейших европейских автомобилей, в особенности автомобилей группы VW, чтобы обеспечить максимальную защиту от износа, чистоту двигателя и тем самым поддержать работу дизельных сажевых фильтров.
+
+#### Application — extracted
+
+**Оригинал:**
+
+ARAL SuperTronic Longlife III 0W-30 is approved for use in vehicles requiring Porsche C30, VW 504 00/ 507 00
+specification 0W-30 lubricant.
+Please refer to your owners handbook.
+
+**Технический перевод:**
+
+ARAL SuperTronic Longlife III 0W-30 одобрено для автомобилей, которым требуется смазочный материал 0W-30 по спецификации Porsche C30, VW 504 00/507 00.
+Пожалуйста, обратитесь к руководству по эксплуатации автомобиля.
+
+#### Advantages — absent_in_source
+
+#### Storage — extracted
+
+**Оригинал:**
+
+All packages should be stored under cover. Where outside storage is unavoidable drums should be laid horizontally to
+avoid the possible ingress of water and damage to drum markings. Products should not be stored above 60°C, exposed
+to hot sun or freezing conditions.
+
+**Технический перевод:**
+
+Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.
+
+#### Recommendations — absent_in_source
+
+#### Notes — absent_in_source
+
+#### Другие продуктовые разделы
+
+**subtitle — оригинал:** Aral Low SAPS-Technology for maximum wear protection.
+
+**Перевод:** Технология Aral Low SAPS для максимальной защиты от износа.
+
+#### Техническая справка этой редакции — не текущие поля MASTER
+
+**Performance / Specifications — оригинал:**
+
+BMW Longlife-04
+MB-Approval 229.31/ 229.51/ 229.52
+Porsche C30
+VW 504 00/ 507 00
+
+**Перевод формулировок Performance (обозначения сохранены):**
+
+BMW Longlife-04
+Допуск MB 229.31/ 229.51/ 229.52
+Porsche C30
+VW 504 00/ 507 00
+
+**Typical Characteristics — оригинал:**
+
+```text
+Name Method Units ARAL SuperTronic Longlife III 0W-30
+Density @ 15C, Relative DIN 51757 g/ml 0.843
+Viscosity, Kinematic 100C DIN 51562 mm²/s 12.3
+Viscosity, CCS -35C DIN 51377 mPa.s (cP) 5930
+Viscosity, Kinematic 40C DIN 51562 mm²/s 61
+Viscosity Index DIN ISO 2909 None 205
+Pour Point ASTM D5950 °C -48
+Flash Point, PMCC ASTM D93 °C 196
+Ash, Sulphated DIN 51575 % w t 0.85
+```
+
+## ARAL-012 — Aral SuperTronic Longlife IV FE 0W-20
+
+**content_status:** complete
+
+**main_technical_pds (без изменения):** aral_supertronic_ll_iv_fe_0w-20_germany_german_pdb_469571.pdf; 2025-05-02.
+
+### Provenance — wepp-d8te3h
+
+Название документа: **Aral SuperTronic LL IV FE 0W-20**. SAE 0W-20; дата 2024-09-04; язык en; рынок не указан явно. Это метаданные источника, не альтернативное название товара.
+
+Файл: [wepp-d8te3h.pdf](<C:/Users/Shevc/OneDrive/Рабочий стол/ппппдддс/wepp-d8te3h.pdf>). SHA-256: `05b3b3da354efa4b3bf18ab9aa5c34511632506af94b763cad1ce54bd768c01c`.
+
+identity_status=exact; accepted_official_pds=true; accepted_for_content=true; accepted_for_technical_reference=true; is_main_technical_pds=false; revision_relation=older.
+
+- Полный текст и перевод принадлежат только этой редакции. Они не заменяют технические поля MASTER и не разрешают публикацию автоматически.
+- Дублирующий заголовок Description не принят за содержательный подзаголовок. API SP / ILSAC GF-6 сохранены как текст редакции 2024-09-04; текущие API SQ / GF-7 в MASTER не изменены.
+
+#### Description — extracted
+
+**Оригинал:**
+
+Aral SuperTronic LL IV FE 0W-20, part of the full synthetic series, helps the engine maintain excellent performance and
+provide a long-lasting driving experience.
+Aral is inherited from a long-established German professional brand and uses XMF technology to make your drive easy.
+
+**Технический перевод:**
+
+Aral SuperTronic LL IV FE 0W-20, входящее в полностью синтетическую серию, помогает двигателю сохранять отличные эксплуатационные характеристики и обеспечивает длительный опыт эксплуатации автомобиля.
+Aral продолжает традиции немецкого профессионального бренда с долгой историей и использует технологию XMF, чтобы сделать вождение лёгким.
+
+#### Application — extracted
+
+**Оригинал:**
+
+Aral SuperTronic LL IV FE 0W-20 is suitable for use in automotive gasoline, diesel and hybrid engines in vehicles where
+the manufacturer recommends an ACEA C5, C6, API SP, ILSAC GF-6 or earleir specification 0W-20 lubricant.
+
+**Технический перевод:**
+
+Aral SuperTronic LL IV FE 0W-20 пригодно для автомобильных бензиновых, дизельных и гибридных двигателей в транспортных средствах, для которых производитель рекомендует смазочный материал 0W-20 по ACEA C5, C6, API SP, ILSAC GF-6 или более ранней спецификации.
+
+#### Advantages — extracted
+
+**Оригинал:**
+
+The Aral SuperTronic:
+Keeps the engine clean, reduces harmful deposits, and effectively helps engine run smoothly.
+Reduces engine wear, helps engine components operate for extended periods of time, effectively
+reducing long-term maintenance costs.
+Reduces friction, improves engine efficiency, and effectively improves fuel economy.
+Outstanding antioxidant performance reduces oil thickening and effectively prevents engine lubrication
+failure.
+
+**Технический перевод:**
+
+Aral SuperTronic:
+• Поддерживает чистоту двигателя, уменьшает вредные отложения и эффективно помогает двигателю работать плавно.
+• Уменьшает износ двигателя, помогает его компонентам работать в течение длительного времени, эффективно снижая долгосрочные расходы на техническое обслуживание.
+• Уменьшает трение, повышает эффективность двигателя и эффективно улучшает экономию топлива.
+• Выдающиеся антиокислительные свойства уменьшают загущение масла и эффективно предотвращают нарушение смазывания двигателя.
+
+#### Storage — extracted
+
+**Оригинал:**
+
+All packages should be stored under cover. Where outside storage is unavoidable drums should be laid horizontally to
+avoid the possible ingress of water and damage to drum markings. Products should not be stored above 60°C, exposed
+to hot sun or freezing conditions.
+
+**Технический перевод:**
+
+Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.
+
+#### Recommendations — absent_in_source
+
+#### Notes — absent_in_source
+
+#### Другие продуктовые разделы
+
+#### Техническая справка этой редакции — не текущие поля MASTER
+
+**Performance / Specifications — оригинал:**
+
+ACEA C5, C6
+API SP
+ILSAC GF-6
+BMW Longlife-17 FE+
+Porsche C20
+VW 508 00/ 509 00
+
+**Перевод формулировок Performance (обозначения сохранены):**
+
+ACEA C5, C6
+API SP
+ILSAC GF-6
+BMW Longlife-17 FE+
+Porsche C20
+VW 508 00/ 509 00
+
+**Typical Characteristics — оригинал:**
+
+```text
+Name Method Units Aral SuperTronic LL IV FE 0W-20
+Viscosity, Kinematic 40C ASTM D445 mm²/s 42
+Pour Point ASTM D97 °C -45
+Flash Point, PMCC ASTM D93 °C 200
+Density @ 15C, Relative ASTM D4052 g/ml 0.844
+Viscosity, Kinematic 100C ASTM D445 mm²/s 8.0
+Viscosity, CCS -35C (0W) ASTM D5293 mPa.s (cP) 5822
+Viscosity Index ASTM D2270 None 166
+Ash, Sulphated ASTM D874 % w t 0.74
+```
+
+## ARAL-013 — Aral MegaTurboral 10W-40
+
+**content_status:** complete
+
+**main_technical_pds (без изменения):** aral_megaturboral_10w-40_germany_german_pdb_456130.pdf; 2026-02-12.
+
+### Provenance — wepp-df4c8c
+
+Название документа: **Aral MegaTurboral 10W-40**. SAE 10W-40; дата 2025-03-24; язык en; рынок не указан явно. Это метаданные источника, не альтернативное название товара.
+
+Файл: [wepp-df4c8c.pdf](<C:/Users/Shevc/OneDrive/Рабочий стол/PDS/wepp-df4c8c.pdf>). SHA-256: `c3f3ddf39f3b9650e2364d5248c5be28b3554cd6dbfa188a1087c257074dcd76`.
+
+identity_status=exact; accepted_official_pds=true; accepted_for_content=true; accepted_for_technical_reference=true; is_main_technical_pds=false; revision_relation=older.
+
+- Полный текст и перевод принадлежат только этой редакции. Они не заменяют технические поля MASTER и не разрешают публикацию автоматически.
+
+#### Description — extracted
+
+**Оригинал:**
+
+Aral MegaTurboral  with XMF® technology is an Heavy Duty Engine oil developed especially for extended drains in the
+latest Euro 6 standard diesel engines.
+
+**Технический перевод:**
+
+Aral MegaTurboral с технологией XMF® — масло для высоконагруженных двигателей, специально разработанное для увеличенных интервалов замены в новейших дизельных двигателях стандарта Euro 6.
+
+#### Application — extracted
+
+**Оригинал:**
+
+The minimized content of sulphated ash, phosphorus and Sulfur (Low SAPS Oil) makes Aral MegaTurboral  the ideal
+partner for the most modern engines with exhaust aftertreatment.
+
+**Технический перевод:**
+
+Минимизированное содержание сульфатной золы, фосфора и серы (масло Low SAPS) делает Aral MegaTurboral идеальным партнёром для самых современных двигателей с системой доочистки отработавших газов.
+
+#### Advantages — extracted
+
+**Оригинал:**
+
+Aral “eXTra Motorschutz Formel” XMF® technology makes Aral MegaTurboral  10W-40 more resilient and notably
+reduces piston deposits and related abrasion.Engines are kept cleaner and wear is reduced.
+Aral “eXTra Motorschutz Formel” XMF® technology performs up to 30% better in reducing the build-up of deposits and
+related wear.*
+*Compared to API and ACEA industry requirements.
+
+**Технический перевод:**
+
+• Технология Aral «eXTra Motorschutz Formel» XMF® делает Aral MegaTurboral 10W-40 более стойким и заметно уменьшает отложения на поршнях и связанный с ними абразивный износ. Двигатели остаются чище, а износ уменьшается.
+• Технология Aral «eXTra Motorschutz Formel» XMF® до 30% эффективнее снижает образование отложений и связанный с ними износ.*
+*По сравнению с отраслевыми требованиями API и ACEA.
+
+#### Storage — extracted
+
+**Оригинал:**
+
+All packages should be stored under cover. Where outside storage is unavoidable drums should be laid horizontally to
+avoid the possible ingress of water and damage to drum markings. Products should not be stored above 60°C, exposed
+to hot sun or freezing conditions.
+
+**Технический перевод:**
+
+Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.
+
+#### Recommendations — absent_in_source
+
+#### Notes — absent_in_source
+
+#### Другие продуктовые разделы
+
+**subtitle — оригинал:** Premium heavy duty Diesel engine oil
+
+**Перевод:** Моторное масло премиум-класса для высоконагруженных дизельных двигателей
+
+**advantages_footnote — оригинал:** *Compared to API and ACEA industry requirements.
+
+**Перевод:** *По сравнению с отраслевыми требованиями API и ACEA.
+
+#### Техническая справка этой редакции — не текущие поля MASTER
+
+**Performance / Specifications — оригинал:**
+
+ACEA E4, E7
+API CI-4
+JASO DH-1
+Cummins CES 20077, CES 20078
+DDC Powerguard 93K215
+Deutz DQC III-18
+DTFR 15B120
+Mack EO-N
+MAN M 3277
+MTU Oil Category 3
+RVI RLD-2
+Volvo VDS-3
+
+**Перевод формулировок Performance (обозначения сохранены):**
+
+ACEA E4, E7
+API CI-4
+JASO DH-1
+Cummins CES 20077, CES 20078
+DDC Powerguard 93K215
+Deutz DQC III-18
+DTFR 15B120
+Mack EO-N
+MAN M 3277
+Категория масла MTU 3
+RVI RLD-2
+Volvo VDS-3
+
+**Typical Characteristics — оригинал:**
+
+```text
+Name Method Units MegaTurboral 10W-40
+Density @ 15C ASTM D4052 g/ml 0.868
+Viscosity, Kinematic 100C ASTM D445 mm²/s 14.8
+Viscosity, CCS -25C (10W) ASTM D5293 mPa.s (cP) 6100
+Viscosity, Kinematic 40C ASTM D445 mm²/s 98
+Ash, Sulphated ASTM D874 % w t 1.83
+Total Base Number, TBN ASTM D2896 mg KOH/g 12.7
+Pour Point ASTM D97 °C -42
+Flash Point, PMCC ASTM D93 °C 211
+```
+
+## ARAL-014 — Aral MegaTurboral LA 10W-40
+
+**content_status:** complete
+
+**main_technical_pds (без изменения):** aral_megaturboral_la_10w-40_germany_german_pdb_463176.pdf; 2025-03-25.
+
+### Provenance — wepp-df4cev
+
+Название документа: **Aral MegaTurboral LA 10W-40**. SAE 10W-40; дата 2025-03-24; язык en; рынок не указан явно. Это метаданные источника, не альтернативное название товара.
+
+Файл: [wepp-df4cev.pdf](<C:/Users/Shevc/OneDrive/Рабочий стол/PDS/wepp-df4cev.pdf>). SHA-256: `6c6c51c8b4db2699d6405bc95bfb1ad1cf3d63cfba64b0d99b37422bb43f700a`.
+
+identity_status=exact; accepted_official_pds=true; accepted_for_content=true; accepted_for_technical_reference=true; is_main_technical_pds=false; revision_relation=older.
+
+- Полный текст и перевод принадлежат только этой редакции. Они не заменяют технические поля MASTER и не разрешают публикацию автоматически.
+
+#### Description — extracted
+
+**Оригинал:**
+
+Aral MegaTurboral LA is an Heavy Duty Engine oil developed especially for extended drains in the latest Euro 6 standard
+diesel engines. It can also be used in low emission Euro 4 and Euro 5 vehicles especially those where low SAPS
+lubricants are required. as well as older on-road and off-raod vehicles that require this performance level. .
+It prevents deposits on major engine parts such as pistons and cams and maintains the efficiency of exhaust
+aftertreatment systems ensuring continued compliance with emissions legislation.
+
+**Технический перевод:**
+
+Aral MegaTurboral LA — масло для высоконагруженных двигателей, специально разработанное для увеличенных интервалов замены в новейших дизельных двигателях стандарта Euro 6. Оно также может использоваться в автомобилях Euro 4 и Euro 5 с низким уровнем выбросов, особенно там, где требуются смазочные материалы Low SAPS, а также в более старых дорожных и внедорожных транспортных средствах, которым требуется такой уровень эксплуатационных свойств.
+Оно предотвращает отложения на основных деталях двигателя, таких как поршни и кулачки, и поддерживает эффективность систем доочистки отработавших газов, обеспечивая постоянное соблюдение требований законодательства о выбросах.
+
+#### Application — absent_in_source
+
+#### Advantages — extracted
+
+**Оригинал:**
+
+Designed to protect the latest European vehicles against all types of engine wear, deposit and soot build-up
+and bore polishing.
+The formulation continues to protect even under the most severe conditionsthus extending engine life and
+preventing unscheduled downtime.
+Enables longer drain intervals
+
+**Технический перевод:**
+
+• Разработано для защиты новейших европейских автомобилей от всех видов износа двигателя, накопления отложений и сажи, а также полировки стенок цилиндров.
+• Рецептура продолжает обеспечивать защиту даже в самых тяжёлых условиях, тем самым продлевая срок службы двигателя и предотвращая внеплановые простои.
+• Позволяет увеличить интервалы замены масла
+
+#### Storage — extracted
+
+**Оригинал:**
+
+All packages should be stored under cover. Where outside storage is unavoidable drums should be laid horizontally to
+avoid the possible ingress of water and damage to drum markings. Products should not be stored above 60°C, exposed
+to hot sun or freezing conditions.
+
+**Технический перевод:**
+
+Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.
+
+#### Recommendations — absent_in_source
+
+#### Notes — absent_in_source
+
+#### Другие продуктовые разделы
+
+**subtitle — оригинал:** Low SAPS Engine Oil
+
+**Перевод:** Моторное масло Low SAPS
+
+#### Техническая справка этой редакции — не текущие поля MASTER
+
+**Performance / Specifications — оригинал:**
+
+ACEA E6, E7, E8, E9, E11
+API CJ-4
+JASO DH-2
+CAT ECF-3
+Cummins CES 20081
+Deutz DQC IV-18 LA
+DTFR 15C110
+Mack EO-O Premium Plus, EOS-4.5
+MTU Oil Category 3.1
+RVI RLD-3
+Volvo CNG, VDS-4.5
+Meets requirements of- MAN M 3271-1, M 3477
+For Iveco trucks requiring ACEA E6, E7, E8, E9, E11
+For DAF trucks requiring ACEA E6, E7, E8, E9, E11
+
+**Перевод формулировок Performance (обозначения сохранены):**
+
+ACEA E6, E7, E8, E9, E11
+API CJ-4
+JASO DH-2
+CAT ECF-3
+Cummins CES 20081
+Deutz DQC IV-18 LA
+DTFR 15C110
+Mack EO-O Premium Plus, EOS-4.5
+Категория масла MTU 3.1
+RVI RLD-3
+Volvo CNG, VDS-4.5
+Соответствует требованиям — MAN M 3271-1, M 3477
+Для грузовых автомобилей Iveco, которым требуются ACEA E6, E7, E8, E9, E11
+Для грузовых автомобилей DAF, которым требуются ACEA E6, E7, E8, E9, E11
+
+**Typical Characteristics — оригинал:**
+
+```text
+Name Method Units Aral MegaTurboral LA 10W-40
+Density @ 15C ASTM D1298 g/ml 0.86
+Viscosity, Kinematic 100C ASTM D445 mm²/s 13.7
+Viscosity, Kinematic 40C ASTM D445 mm²/s 99
+Viscosity Index ASTM D2270 None 138
+Ash, Sulphated ASTM D874 % w t 0.96
+Total Base Number, TBN ASTM D2896 mg KOH/g 9.6
+Pour Point ASTM D97 °C -42
+Viscosity, CCS -25C (10W) ASTM D5293 mPa.s (cP) 6100
+```
+
+## ARAL-015 — Aral ExtraTurboral SAE 10W-40
+
+**content_status:** complete
+
+**main_technical_pds (без изменения):** None; None.
+
+Название документа и его оригинальные цитаты хранятся только внутри provenance принятого PDF; не являются official_name/current_line_name/публичным альтернативным названием товара.
+
+### Provenance — aral_turboral_10w-40_germany_german_pdb_467759
+
+Название документа: **Aral Turboral 10W-40**. SAE 10W-40; дата 2025-11-27; язык de; рынок Germany. Это метаданные источника, не альтернативное название товара.
+
+Файл: [aral_turboral_10w-40_germany_german_pdb_467759.pdf](<C:/Users/Shevc/OneDrive/Рабочий стол/ппппдддс/aral_turboral_10w-40_germany_german_pdb_467759.pdf>). SHA-256: `181e2ebd679c081296b117701b1355bd26109fa1394e4b4f486ba05a3af97c9d`.
+
+identity_status=user_confirmed; accepted_official_pds=true; accepted_for_content=true; accepted_for_technical_reference=true; is_main_technical_pds=false; revision_relation=null (Main PDS не назначен).
+
+- В MASTER не назначен Main PDS; revision_relation=null означает отсутствие базы сравнения, а не неизвестную дату принятого PDF. Никакой Main PDS не назначен этим слоем.
+- Полный текст и перевод принадлежат только этой редакции. Они не заменяют технические поля MASTER и не разрешают публикацию автоматически.
+
+#### Description — extracted
+
+**Оригинал:**
+
+Aral Turboral 10W-40 ist ein Leichtlaufmotorenöl für den universellen Einsatz in Diesel und Ottomotoren. Ein gutes
+Kaltstartverhalten mit einer schnellen Ölversorgung des Motors und ein wirkungsvoller Schutz gegen Kalt- und
+Schwarzschlamm ermöglichen den Einsatz auch bei schwierigen Betriebsbedingungen. Die universelle Anwendung
+und die Verlängerung von Ölwechselintervallen tragen zur Reduzierung der Betriebskosten bei.
+
+**Технический перевод:**
+
+Aral Turboral 10W-40 — моторное масло с пониженным трением для универсального применения в дизельных и бензиновых двигателях. Хорошие характеристики холодного пуска с быстрой подачей масла в двигатель и эффективная защита от низкотемпературного и чёрного шлама позволяют использовать его также в тяжёлых условиях эксплуатации. Универсальное применение и увеличение интервалов замены масла способствуют снижению эксплуатационных расходов.
+
+#### Application — extracted
+
+**Оригинал:**
+
+Aral Turboral 10W-40 kann in LKW, Omnibussen, Transportern, Traktoren und anderen landwirtschaftlichen Geräten,
+Baumaschinen, Notstromaggregaten u.ä. verwendet werden (Herstellervorschriften beachten). Es bietet aufgrund von
+verlängerten Ölwechselintervallen und der Leichtlaufeigenschaften die Voraussetzung für optimale Wirtschaftlichkeit
+und Betriebssicherheit der Motoren. Umfangreiche Spezifikationen / Freigaben ermöglichen einen sehr universellen
+Einsatz.
+
+**Технический перевод:**
+
+Aral Turboral 10W-40 может использоваться в грузовых автомобилях, автобусах, малотоннажных грузовых автомобилях, тракторах и другой сельскохозяйственной технике, строительных машинах, аварийных генераторных установках и т. п. (соблюдать предписания производителей). Благодаря увеличенным интервалам замены масла и свойствам пониженного трения оно создаёт предпосылки для оптимальной экономичности и эксплуатационной надёжности двигателей. Широкий перечень спецификаций/допусков позволяет применять его весьма универсально.
+
+#### Advantages — extracted
+
+**Оригинал:**
+
+universelle Einsatzmöglichkeiten verringern die Lagerhaltungskosten
+ausgezeichneter Verschleißschutz und hervorragende Motorsauberkeit
+gutes Kaltstartverhalten
+zahlreiche Herstellerspezifikationen / Freigaben, auch für verlängerte Ölwechselintervalle
+
+**Технический перевод:**
+
+• универсальные возможности применения снижают расходы на складские запасы
+• отличная защита от износа и превосходная чистота двигателя
+• хорошие характеристики холодного пуска
+• многочисленные спецификации/допуски производителей, в том числе для увеличенных интервалов замены масла
+
+#### Storage — extracted
+
+**Оригинал:**
+
+Gebinde jeglicher Art sind möglichst überdacht aufzubewahren. Bei einer ungeschützten Lagerung im Freien ohne
+Überdachung sind die Öldrums liegend zu lagern, um ein Eindringen von Wasser zu vermeiden und die Lesbarkeit der
+Beschriftungen zu erhalten. Die Produkte sollten nicht bei Temperaturen über 60 °C gelagert werden. Sie sind vor
+direkter Sonnenbestrahlung bzw. Frost zu schützen.
+
+**Технический перевод:**
+
+Тару любого типа по возможности следует хранить под навесом. При незащищённом хранении на открытом воздухе без навеса бочки с маслом следует укладывать горизонтально, чтобы избежать попадания воды и сохранить читаемость маркировки. Продукты не следует хранить при температуре выше 60 °C. Их необходимо защищать от прямых солнечных лучей и мороза.
+
+#### Recommendations — absent_in_source
+
+#### Notes — absent_in_source
+
+#### Другие продуктовые разделы
+
+**subtitle — оригинал:** Leichtlaufmotorenöl für den gemischten Fuhrpark
+
+**Перевод:** Моторное масло с пониженным трением для смешанного автопарка
+
+#### Техническая справка этой редакции — не текущие поля MASTER
+
+**Performance / Specifications — оригинал:**
+
+ACEA E7
+API CI-4/SL
+CAT ECF-2
+Cummins CES 20077, CES 20078
+DDC Powerguard 93K215
+Deutz DQC III-18
+DTFR 15B110
+Mack EO-M Plus, EO-N
+MTU Oil Category 2
+RVI RLD-2
+Volvo VDS-3
+Meets requirements of MAN M 3275-1
+
+**Перевод формулировок Performance (обозначения сохранены):**
+
+ACEA E7
+API CI-4/SL
+CAT ECF-2
+Cummins CES 20077, CES 20078
+DDC Powerguard 93K215
+Deutz DQC III-18
+DTFR 15B110
+Mack EO-M Plus, EO-N
+Категория масла MTU 2
+RVI RLD-2
+Volvo VDS-3
+Соответствует требованиям MAN M 3275-1
+
+**Typical Characteristics — оригинал:**
+
+```text
+Prüfmethoden Einheit Aral Turboral 10W-40
+Dichte @ 15°C ASTM D4052 g/ml 0.87
+Viskosität, kin. 100°C ASTM D445 mm²/s 14.4
+Viskosität, CCS -25°C ASTM D5293 mPa.s (cP) 6400
+Viskosität, kin. 40°C ASTM D445 mm²/s 99
+Viskositätsindex ASTM D2270 None 150
+Sulfatasche ASTM D874 % wt 1.4
+Basenzahl, TBN ASTM D2896 mg KOH/g 10.5
+Pour Point ASTM D97 °C -42
+```
+
+| Показатель — перевод | Метод | Единица в источнике | Значение в источнике |
+|---|---|---|---|
+| Плотность при 15 °C | ASTM D4052 | g/ml | 0.87 |
+| Кинематическая вязкость при 100 °C | ASTM D445 | mm²/s | 14.4 |
+| Вязкость CCS при −25 °C | ASTM D5293 | mPa.s (cP) | 6400 |
+| Кинематическая вязкость при 40 °C | ASTM D445 | mm²/s | 99 |
+| Индекс вязкости | ASTM D2270 | None | 150 |
+| Сульфатная зольность | ASTM D874 | % wt | 1.4 |
+| Общее щелочное число, TBN | ASTM D2896 | mg KOH/g | 10.5 |
+| Температура застывания | ASTM D97 | °C | -42 |
+
+**Specifications — перевод формулировок (идентификаторы сохранены):**
+
+ACEA E7
+API CI-4/SL
+CAT ECF-2
+Cummins CES 20077, CES 20078
+DDC Powerguard 93K215
+Deutz DQC III-18
+DTFR 15B110
+Mack EO-M Plus, EO-N
+MTU Oil Category 2
+RVI RLD-2
+Volvo VDS-3
+Соответствует требованиям MAN M 3275-1
+
+## ARAL-016 — Aral масло Turboral (Plus) 15W-40
+
+**content_status:** complete
+
+**main_technical_pds (без изменения):** None; None.
+
+Название документа и его оригинальные цитаты хранятся только внутри provenance принятого PDF; не являются official_name/current_line_name/публичным альтернативным названием товара.
+
+### Provenance — aral_turboral_15w-40_germany_german_pdb_467736
+
+Название документа: **Aral Turboral 15W-40**. SAE 15W-40; дата 2025-03-31; язык de; рынок Germany. Это метаданные источника, не альтернативное название товара.
+
+Файл: [aral_turboral_15w-40_germany_german_pdb_467736.pdf](<C:/Users/Shevc/OneDrive/Рабочий стол/ппппдддс/aral_turboral_15w-40_germany_german_pdb_467736.pdf>). SHA-256: `c3acf7c3ff785cba20f23f4289d81b0ff8163dc18e1febcaf54e7c6827141db3`.
+
+identity_status=user_confirmed; accepted_official_pds=true; accepted_for_content=true; accepted_for_technical_reference=true; is_main_technical_pds=false; revision_relation=null (Main PDS не назначен).
+
+- В MASTER не назначен Main PDS; revision_relation=null означает отсутствие базы сравнения, а не неизвестную дату принятого PDF. Никакой Main PDS не назначен этим слоем.
+- Полный текст и перевод принадлежат только этой редакции. Они не заменяют технические поля MASTER и не разрешают публикацию автоматически.
+
+#### Description — extracted
+
+**Оригинал:**
+
+Mineralölbasisches Motorenöl mit hervorragendem Leistungsvermögen und einem speziell auf den
+Nutzfahrzeugeinsatz abgestimmten Additivpaket. Die Kombination von Sicherheit, verlängerten Ölwechselintervallen (im
+Rahmen der Herstellervorschriften) und vielfältigem Einsatzbereich macht Aral Turboral 15W-40 zu einem universellen
+Motorenöl für LKW`s, Omnibusse, Baumaschinen, Traktoren und anderen landwirtschaftlichen Geräten.
+
+**Технический перевод:**
+
+Моторное масло на минеральной основе с превосходными эксплуатационными свойствами и пакетом присадок, специально адаптированным для коммерческого транспорта. Сочетание надёжности, увеличенных интервалов замены масла (в рамках предписаний производителей) и широкой области применения делает Aral Turboral 15W-40 универсальным моторным маслом для грузовых автомобилей, автобусов, строительных машин, тракторов и другой сельскохозяйственной техники.
+
+#### Application — absent_in_source
+
+#### Advantages — extracted
+
+**Оригинал:**
+
+hervorragende Motorsauberkeit auch bei schweren Betriebszuständen
+gutes Rußtragevermögen und deutlich verringerte Ablagerungen im Motor
+große Reserven bei langen Ölwechselintervallen und schwierigen Betriebsbedingungen
+vielseitige Einsatzmöglichkeiten in Otto- und Dieselmotoren
+
+**Технический перевод:**
+
+• превосходная чистота двигателя даже в тяжёлых режимах эксплуатации
+• хорошая способность удерживать сажу во взвешенном состоянии и значительно меньшее количество отложений в двигателе
+• большой запас эксплуатационных свойств при длительных интервалах замены масла и тяжёлых условиях эксплуатации
+• разнообразные возможности применения в бензиновых и дизельных двигателях
+
+#### Storage — extracted
+
+**Оригинал:**
+
+Gebinde jeglicher Art sind möglichst überdacht aufzubewahren.
+Bei einer ungeschützten Lagerung im Freien ohne Überdachung sind die Öldrums liegend zu lagern, um ein Eindringen
+von Wasser zu vermeiden und die Lesbarkeit der Beschriftungen zu erhalten.
+Die Produkte sollten nicht bei Temperaturen über 60 °C gelagert werden.
+Sie sind vor direkter Sonnenbestrahlung bzw. Frost zu schützen.
+
+**Технический перевод:**
+
+Тару любого типа по возможности следует хранить под навесом. При незащищённом хранении на открытом воздухе без навеса бочки с маслом следует укладывать горизонтально, чтобы избежать попадания воды и сохранить читаемость маркировки. Продукты не следует хранить при температуре выше 60 °C. Их необходимо защищать от прямых солнечных лучей и мороза.
+
+#### Recommendations — absent_in_source
+
+#### Notes — absent_in_source
+
+#### Другие продуктовые разделы
+
+**subtitle — оригинал:** Universal-Nutzfahrzeugmotorenöl
+
+**Перевод:** Универсальное моторное масло для коммерческого транспорта
+
+#### Техническая справка этой редакции — не текущие поля MASTER
+
+**Performance / Specifications — оригинал:**
+
+ACEA E7
+API CI-4/SL
+CAT ECF-2
+Cummins CES 20077, CES 20078
+DDC Powerguard 93K215
+Deutz DQC III-18
+DTFR 15B110
+Mack EO-M Plus EO-N
+MTU Oil Category 2
+RVI RLD-2
+Volvo VDS-3
+Meets requirements of MAN M 3275-1
+
+**Перевод формулировок Performance (обозначения сохранены):**
+
+ACEA E7
+API CI-4/SL
+CAT ECF-2
+Cummins CES 20077, CES 20078
+DDC Powerguard 93K215
+Deutz DQC III-18
+DTFR 15B110
+Mack EO-M Plus EO-N
+Категория масла MTU 2
+RVI RLD-2
+Volvo VDS-3
+Соответствует требованиям MAN M 3275-1
+
+**Typical Characteristics — оригинал:**
+
+```text
+Prüfmethoden Einheit Aral Turboral 15W-40
+Dichte @ 15°C ASTM D4052 g/ml 0,875
+Viskosität, kinematisch @ 100°C ASTM D445 mm²/s 14,7
+Viskosität, CCS @ -20°C (15W) ASTM D5293 mPa.s (cP) 5410
+Viskosität, kinematisch @ 40°C ASTM D445 mm²/s 109
+Viskositätsindex ASTM D2270 None 140
+Sulfatasche ASTM D874 % w t 1,42
+Total Base Number, TBN ASTM D2896 mg KOH/g 10,6
+Pour Point ASTM D97 °C -42
+Flammpunkt, PMCC ASTM D93 °C 209
+```
+
+| Показатель — перевод | Метод | Единица в источнике | Значение в источнике |
+|---|---|---|---|
+| Плотность при 15 °C | ASTM D4052 | g/ml | 0,875 |
+| Кинематическая вязкость при 100 °C | ASTM D445 | mm²/s | 14,7 |
+| Вязкость CCS при −20 °C (15W) | ASTM D5293 | mPa.s (cP) | 5410 |
+| Кинематическая вязкость при 40 °C | ASTM D445 | mm²/s | 109 |
+| Индекс вязкости | ASTM D2270 | None | 140 |
+| Сульфатная зольность | ASTM D874 | % wt | 1,42 |
+| Общее щелочное число, TBN | ASTM D2896 | mg KOH/g | 10,6 |
+| Температура застывания | ASTM D97 | °C | -42 |
+| Температура вспышки, PMCC | ASTM D93 | °C | 209 |
+
+**Specifications — перевод формулировок (идентификаторы сохранены):**
+
+ACEA E7
+API CI-4/SL
+CAT ECF-2
+Cummins CES 20077, CES 20078
+DDC Powerguard 93K215
+Deutz DQC III-18
+DTFR 15B110
+Mack EO-M Plus EO-N
+MTU Oil Category 2
+RVI RLD-2
+Volvo VDS-3
+Соответствует требованиям MAN M 3275-1
+
+### Provenance — wepp-df7nsx
+
+Название документа: **Aral Turboral 15W-40**. SAE 15W-40; дата 2025-03-27; язык en; рынок не указан явно. Это метаданные источника, не альтернативное название товара.
+
+Файл: [wepp-df7nsx.pdf](<C:/Users/Shevc/OneDrive/Рабочий стол/PDS/wepp-df7nsx.pdf>). SHA-256: `b4c29dfb75c1ee87ab735133888583e010128822a9ce35b9d61dd66e0e6b7d7e`.
+
+identity_status=user_confirmed; accepted_official_pds=true; accepted_for_content=true; accepted_for_technical_reference=true; is_main_technical_pds=false; revision_relation=null (Main PDS не назначен).
+
+- В MASTER не назначен Main PDS; revision_relation=null означает отсутствие базы сравнения, а не неизвестную дату принятого PDF. Никакой Main PDS не назначен этим слоем.
+- Дополнительно обнаружен в ранее указанной папке PDS. Это EN-редакция 2025-03-27 того же документированного продукта; DE-редакция 2025-03-31 остаётся предпочтительной для контента Plus.
+- Полный текст и перевод принадлежат только этой редакции. Они не заменяют технические поля MASTER и не разрешают публикацию автоматически.
+
+#### Description — extracted
+
+**Оригинал:**
+
+Mineral oil based SHPD engine oil with excellent performance. Dedicated HD-formulation provides protection against
+wear and deposits, ensuring reduced maintenance costs.
+
+**Технический перевод:**
+
+Моторное масло SHPD на минеральной основе с отличными эксплуатационными свойствами. Специализированная рецептура для высоконагруженных двигателей обеспечивает защиту от износа и отложений, снижая расходы на техническое обслуживание.
+
+#### Application — absent_in_source
+
+#### Advantages — absent_in_source
+
+#### Storage — extracted
+
+**Оригинал:**
+
+All packages should be stored under cover. Where outside storage is unavoidable drums should be laid horizontally to
+avoid the possible ingress of water and damage to drum markings. Products should not be stored above 60°C, exposed
+to hot sun or freezing conditions.
+
+**Технический перевод:**
+
+Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.
+
+#### Recommendations — absent_in_source
+
+#### Notes — absent_in_source
+
+#### Другие продуктовые разделы
+
+**subtitle — оригинал:** SHPD engine oil
+
+**Перевод:** Моторное масло SHPD
+
+#### Техническая справка этой редакции — не текущие поля MASTER
+
+**Performance / Specifications — оригинал:**
+
+ACEA E7
+API CI-4/SL
+CAT ECF-2
+Cummins CES 20077, CES 20078
+DDC Powerguard 93K215
+Deutz DQC III-18
+DTFR 15B110
+Mack EO-M Plus EO-N
+MTU Oil Category 2
+RVI RLD-2
+Volvo VDS-3
+Meets requirements of MAN M 3275-1
+
+**Перевод формулировок Performance (обозначения сохранены):**
+
+ACEA E7
+API CI-4/SL
+CAT ECF-2
+Cummins CES 20077, CES 20078
+DDC Powerguard 93K215
+Deutz DQC III-18
+DTFR 15B110
+Mack EO-M Plus EO-N
+Категория масла MTU 2
+RVI RLD-2
+Volvo VDS-3
+Соответствует требованиям MAN M 3275-1
+
+**Typical Characteristics — оригинал:**
+
+```text
+Name Method Units Aral Turboral 15W-40
+Density @ 15C ASTM D4052 g/ml 0.875
+Viscosity, Kinematic 100C ASTM D445 mm²/s 14.7
+Viscosity, CCS -20C (15W) ASTM D5293 mPa.s (cP) 5410
+Viscosity, Kinematic 40C ASTM D445 mm²/s 109
+Viscosity Index ASTM D2270 None 140
+Ash, Sulphated ASTM D874 % w t 1.42
+Total Base Number, TBN ASTM D2896 mg KOH/g 10.6
+Pour Point ASTM D97 °C -42
+Flash Point, PMCC ASTM D93 °C 209
+```
+
+| Показатель — перевод | Метод | Единица в источнике | Значение в источнике |
+|---|---|---|---|
+| Плотность при 15 °C | ASTM D4052 | g/ml | 0.875 |
+| Кинематическая вязкость при 100 °C | ASTM D445 | mm²/s | 14.7 |
+| Вязкость CCS при −20 °C (15W) | ASTM D5293 | mPa.s (cP) | 5410 |
+| Кинематическая вязкость при 40 °C | ASTM D445 | mm²/s | 109 |
+| Индекс вязкости | ASTM D2270 | None | 140 |
+| Сульфатная зольность | ASTM D874 | % wt | 1.42 |
+| Общее щелочное число, TBN | ASTM D2896 | mg KOH/g | 10.6 |
+| Температура застывания | ASTM D97 | °C | -42 |
+| Температура вспышки, PMCC | ASTM D93 | °C | 209 |
+
+**Specifications — перевод формулировок (идентификаторы сохранены):**
+
+ACEA E7
+API CI-4/SL
+CAT ECF-2
+Cummins CES 20077, CES 20078
+DDC Powerguard 93K215
+Deutz DQC III-18
+DTFR 15B110
+Mack EO-M Plus EO-N
+MTU Oil Category 2
+RVI RLD-2
+Volvo VDS-3
+Соответствует требованиям MAN M 3275-1
+
+## ARAL-017 — Aral Silikatfrei G12
+
+**content_status:** unavailable
+
+**main_technical_pds (без изменения):** None; None.
+
+### Ручная справка пользователя — не официальный PDS
+`source_type = user_provided_manual_reference`; `verified_official_data = false`. SKU 90837, 1 L сохранены.
+
+Название справочного источника: Aral Antifreeze Silikatfrei
+
+Антифриз долговременного действия для современных автомобилей, в том числе с алюминиевыми блоками цилиндров.
+
+- VW/Audi/SEAT/Skoda: VW TL 774D
+- MB 325.3
+- Ford WSSM97B44-D
+- Renault Type D
+- DAF
+- Opel после 2001
+- MAN 324 Type SNF
+- ASTM D4985
+- ASTM D3306
+- защита металлов
+- нейтральность к уплотнителям и прокладкам
+- отсутствие силикатов
+- отсутствие нитритов
+- отсутствие фосфатов
+- отсутствие аминных соединений
+- цвет розово-фиолетовый
+- концентрация 33% — примерно до −20 °C
+- концентрация 50% — примерно до −40 °C
+- не смешивать с силикатсодержащими антифризами
+
+Не подтверждены: связь SKU 90837 с официальным Aral Antifreeze Silikatfrei; точное обозначение G12 / G12+; официальные формулировки допусков; концентрации; цвет; совместимость.
+
+## Рекомендации для отдельного обновления MASTER
+
+### ARAL-015 — Aral ExtraTurboral SAE 10W-40
+
+Отсутствие подтверждённой связи коммерческого товара с официальным PDS; из-за этого content был unavailable и техническая публикация блокировалась по идентичности.
+
+Прямая идентификация документа пользователем в текущем задании.
+
+Предлагается: `identity_status=user_confirmed`, `technical_publication_allowed=true`. Это предложение, не действующий статус.
+
+Применить только отдельной задачей обновления MASTER: перенести спецификации с сохранением Meets/approval-формулировок и проверить новое состояние. В этой версии действуют прежние статусы и запрет публикации MASTER. Подтверждение пользователя не выдаётся за подтверждение ARAL SKU.
+
+### ARAL-016 — Aral масло Turboral (Plus) 15W-40
+
+Отсутствие подтверждённой связи коммерческого товара с официальным PDS; из-за этого content был unavailable и техническая публикация блокировалась по идентичности.
+
+Прямая идентификация документа пользователем в текущем задании.
+
+Предлагается: `identity_status=user_confirmed`, `technical_publication_allowed=true`. Это предложение, не действующий статус.
+
+Применить только отдельной задачей обновления MASTER: перенести спецификации с сохранением Meets/approval-формулировок и проверить новое состояние. В этой версии действуют прежние статусы и запрет публикации MASTER. Подтверждение пользователя не выдаётся за подтверждение ARAL SKU.
+
+## Финальный аудит
+
+- products_total: 17
+- motor_oils_total: 16
+- motor_oils_with_accepted_official_pds: 16 / 16
+- content_complete: 16
+- content_partial: 0
+- content_unavailable: 1
+- extraction_failed: 0
+- accepted_official_pds_total: 18
+- rejected_identity_mismatch: 1
+- user_confirmed_identity: 2
+- manual_reference_only: 1
+- uploaded_pdf_files_total: 36
+- duplicate_pdf_files: 5
+- sds_excluded_from_content: 12
+
+Подсчёт отказов по идентичности относится к PDS: один общий SuperTronic 0W-20. Двенадцать SDS исключены по типу документа и не входят в число принятых PDS. Пять повторных копий не увеличивают число редакций.
+
+## Что действительно осталось открытым
+
+- Silikatfrei G12: официальный PDS и связь SKU 90837 не подтверждены; ручная справка не официальная.
+- SuperTronic E: внутреннее противоречие Application A5/B5 / Performance C2; MASTER technical_publication_allowed=false.
+- MegaTurboral LA: физическое расхождение PDS/SDS сохраняется; physical_properties_status=manual_review.
+- Extra/Plus: связь с приложенными PDS подтверждена пользователем, контент завершён; применение рекомендаций и обновление замороженного MASTER — отдельная задача.
+- При дальнейшем публичном экспорте текстовых разделов учитывать различия редакций, особенно API SP/GF-6 в принятом LL IV FE 2024 против текущих SQ/GF-7 в MASTER. Это не отсутствие PDS и не основание отклонять контент.
