@@ -1,0 +1,1000 @@
+{
+  "schema_version": "ARAL_CONTENT_LAYER/1.2",
+  "master_reference": "ARAL_PRODUCT_MASTER_v1.1.json",
+  "master_sha256": "9bb7a9ed84ba4f5ff343dcfb9f50e0fad0f0fa4079aabbb31031276c48d603f8",
+  "previous_content_layer": "ARAL_CONTENT_LAYER_v1.1.json",
+  "acceptance_policy_source": "C:\\Users\\Shevc\\.codex\\attachments\\c3bc4b07-4e08-4b39-a82d-14a8d73c5e93\\Pasted text.txt",
+  "scope": "Все доступные PDF из трёх переданных пользователем комплектов. URL выбранных Main PDS сохранены из MASTER; повторной загрузки или веб-поиска нет. Счётчик accepted_official_pds_total учитывает уникальные принятые загруженные PDF, не ссылки без загруженного файла.",
+  "publication_rule": "Полнота CONTENT не меняет разрешение технической публикации MASTER. Нормы и показатели в оригинальном тексте/переводе относятся к дате своей редакции и не должны автоматически заменять текущие нормы или экспортироваться как актуальные характеристики.",
+  "status_definitions": {
+    "complete": "Все имеющиеся продуктовые разделы принятого PDF извлечены полностью и переведены; отсутствие самостоятельного раздела отмечено, а не восполнено.",
+    "partial": "Часть имеющихся продуктовых разделов не извлечена или не переведена.",
+    "unavailable": "Нет принятого официального PDS; наличие ручной справки не меняет этот статус.",
+    "absent_in_source": "Самостоятельного раздела нет в проверенном PDF; полезный текст внутри Description/Application сохранён на своём месте.",
+    "extraction_failed": "Раздел присутствует, но его текст не удалось извлечь.",
+    "revision_relation_null": "Main PDS в MASTER не назначен; временное сравнение с ним неприменимо."
+  },
+  "audit": {
+    "products_total": 17,
+    "motor_oils_total": 16,
+    "motor_oils_with_accepted_official_pds": 16,
+    "content_complete": 16,
+    "content_partial": 0,
+    "content_unavailable": 1,
+    "extraction_failed": 0,
+    "accepted_official_pds_total": 18,
+    "rejected_identity_mismatch": 1,
+    "user_confirmed_identity": 2,
+    "manual_reference_only": 1,
+    "uploaded_pdf_files_total": 36,
+    "duplicate_pdf_files": 5,
+    "sds_excluded_from_content": 12
+  },
+  "products": [
+    {
+      "internal_id": "ARAL-001",
+      "commercial_name": "Aral BlueTronic II 10W-40",
+      "commercial_name_source": "frozen_MASTER",
+      "commercial_snapshot": {
+        "our_skus": [
+          "15F073",
+          "15F076",
+          "15F078",
+          "15F471"
+        ],
+        "package_sizes": [
+          {
+            "volume": 208,
+            "unit": "L"
+          },
+          {
+            "volume": 1,
+            "unit": "L"
+          },
+          {
+            "volume": 4,
+            "unit": "L"
+          },
+          {
+            "volume": 5,
+            "unit": "L"
+          }
+        ],
+        "sku_package_mapping": [
+          {
+            "sku": "15F073",
+            "volume": 208,
+            "unit": "L",
+            "source": "user_assortment"
+          },
+          {
+            "sku": "15F076",
+            "volume": 1,
+            "unit": "L",
+            "source": "user_assortment"
+          },
+          {
+            "sku": "15F078",
+            "volume": 4,
+            "unit": "L",
+            "source": "user_assortment"
+          },
+          {
+            "sku": "15F471",
+            "volume": 5,
+            "unit": "L",
+            "source": "user_assortment"
+          }
+        ]
+      },
+      "main_technical_pds": {
+        "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=8485c0156e39da4cee8b8f48a8546696&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf",
+        "date": "2025-11-03",
+        "market": "Germany",
+        "language": "de",
+        "document_key": "aral_bluetronic_ii_10w-40_germany_german_pdb_470643.pdf",
+        "status": "selected_main",
+        "document_key_code": "470643",
+        "recency_scope": "latest_found_in_previous_project_material_not_global_certification"
+      },
+      "master_validation_snapshot": {
+        "identity_status": "verified",
+        "technical_performance_status": "review_note",
+        "physical_properties_status": "review_note",
+        "technical_publication_allowed": true,
+        "status_source": "ARAL_remaining_13_report_v3.md",
+        "review_notes": [
+          "SDS пишет Blue Tronic II раздельно; SAE и документный код 470643 совпадают — орфографическое различие.",
+          "PDS/SDS: KV100 14.3 входит в 13.8–16.3 mm²/s; плотность 0.864 g/ml согласуется с <1000 kg/m³. KV40 96.6 против 89.8 mm²/s и Pour Point −39 против −42 °C различаются: не объявлены округлением и не подменены. Типичные PDS-показатели сохранены; причина междокументной разницы не установлена.",
+          "VW 5 01 01 сохранено в исходном написании PDS; нормализация в VW 501 01 не выполнена.",
+          "Performance из PDS; сохранено нетипичное написание VW 5 01 01 без автоматической правки. Физические значения PDS/SDS различаются."
+        ],
+        "unresolved_conflicts": []
+      },
+      "accepted_official_pds": [
+        {
+          "document_id": "wepp-dcrgw2",
+          "source_file": "C:\\Users\\Shevc\\OneDrive\\Рабочий стол\\PDS\\wepp-dcrgw2.pdf",
+          "duplicate_files": [
+            "C:\\Users\\Shevc\\OneDrive\\Рабочий стол\\PDS ARAL\\wepp-dcrgw2.pdf"
+          ],
+          "sha256": "dabf3cc57cfd15a6d855e7b16c3ec2c8d08f6cb14ce789d603bc63aeb0731f99",
+          "document_product_name": "BlueTronic II 10W-40",
+          "document_SAE": "10W-40",
+          "document_date": "2025-01-08",
+          "language": "en",
+          "source_market": null,
+          "source_market_basis": "not_explicitly_identified_in_pdf; EN does not establish market",
+          "document_key": null,
+          "document_key_basis": "not_printed; local filename retained separately",
+          "source_url": null,
+          "source_url_status": "local_user_upload; download URL not established",
+          "identity_status": "exact",
+          "identity_match": true,
+          "accepted_official_pds": true,
+          "accepted_for_content": true,
+          "accepted_for_technical_reference": true,
+          "is_main_technical_pds": false,
+          "revision_relation": "older",
+          "revision_comparator": "frozen_MASTER_main_technical_pds",
+          "notes": [
+            "Полный текст и перевод принадлежат только этой редакции. Они не заменяют технические поля MASTER и не разрешают публикацию автоматически."
+          ],
+          "pages": 1,
+          "source_content": {
+            "description_original": "The engine oil with Aral Synth Technology provides good anti-wear capabilities and keeps engines clean.\nFor gasoline and diesel engines.",
+            "application_original": null,
+            "advantages_original": [],
+            "advantages_full_original": null,
+            "advantages_intro_original": null,
+            "storage_original": "All packages should be stored under cover. Where outside storage is unavoidable drums should be laid horizontally to\navoid the possible ingress of water and damage to drum markings. Products should not be stored above 60°C, exposed\nto hot sun or freezing conditions.",
+            "recommendations_original": null,
+            "notes_original": null,
+            "other_sections": [
+              {
+                "section": "subtitle",
+                "text_original": "Passenger car engine oil",
+                "section_status": "extracted"
+              }
+            ],
+            "section_status": {
+              "description": "extracted",
+              "application": "absent_in_source",
+              "advantages": "absent_in_source",
+              "storage": "extracted",
+              "recommendations": "absent_in_source",
+              "notes": "absent_in_source"
+            },
+            "source_file": "C:\\Users\\Shevc\\OneDrive\\Рабочий стол\\PDS\\wepp-dcrgw2.pdf",
+            "source_url": null,
+            "source_date": "2025-01-08",
+            "source_market": null,
+            "source_language": "en"
+          },
+          "translated_content": {
+            "description_ru_literal": "Моторное масло с технологией Aral Synth обеспечивает хорошие противоизносные свойства и поддерживает чистоту двигателей.\nДля бензиновых и дизельных двигателей.",
+            "application_ru_literal": null,
+            "advantages_ru_literal": [],
+            "advantages_intro_ru_literal": null,
+            "storage_ru_literal": "Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.",
+            "recommendations_ru_literal": null,
+            "notes_ru_literal": null,
+            "other_sections_ru": [
+              {
+                "section": "subtitle",
+                "text_ru_literal": "Моторное масло для легковых автомобилей"
+              }
+            ],
+            "translation_status": "complete"
+          },
+          "technical_reference": {
+            "scope": "source_edition_only_not_master_fields",
+            "typical_characteristics_original": "Name Method Units ral BlueTronic II 10W-40\nDensity @ 15C, Relative ASTM D4052 g/ml 0.864\nViscosity, Kinematic 100C ASTM D445 mm²/s 14.3\nViscosity, Kinematic 40C ASTM D445 mm²/s 95\nViscosity Index ASTM D2270 None 152\nViscosity, CCS -25C (10W) ASTM D5293 mPa.s (cP) 6300\nPour Point ASTM D97 °C -36\nFlash Point, PMCC ASTM D93 °C 210\nAsh, Sulphated ASTM D874 % w t 1.2",
+            "performance_original": "ACEA A3/B4\nAPI SP\nVW 501 01/ 505 00\nMeets - Fiat 9.55535-D2\nFulfills the technical requirements of MB 229.3",
+            "typical_characteristics_status": "extracted",
+            "performance_status": "extracted",
+            "performance_ru_literal": "ACEA A3/B4\nAPI SP\nVW 501 01/ 505 00\nСоответствует — Fiat 9.55535-D2\nСоответствует техническим требованиям MB 229.3"
+          },
+          "extraction_audit": {
+            "method": "pypdf embedded text; PDF visual checks for layout-sensitive pages; pdfplumber table cells for Extra/Plus",
+            "ocr_used": false,
+            "text_normalization": "page footers removed; original spelling retained; list continuation lines joined; full section blocks retained",
+            "sections_excluded": [
+              "publisher address/contact details",
+              "generic trademark and legal disclaimer"
+            ],
+            "exclusion_reason": "Издательские/юридические сведения не являются продуктовым описанием; сохранены в full_pdf_text_original для проверки.",
+            "full_pdf_text_original": "BlueTronic II 10W-40\nPassenger car engine oil\nDescription\n \nThe engine oil with Aral Synth Technology provides good anti-wear capabilities and keeps engines clean.\n For gasoline and diesel engines.\nTypical Characteristics\nName Method Units ral BlueTronic II 10W-40\nDensity @ 15C, Relative ASTM D4052 g/ml 0.864\nViscosity, Kinematic 100C ASTM D445 mm²/s 14.3\nViscosity, Kinematic 40C ASTM D445 mm²/s 95\nViscosity Index ASTM D2270 None 152\nViscosity, CCS -25C (10W) ASTM D5293 mPa.s (cP) 6300\nPour Point ASTM D97 °C -36\nFlash Point, PMCC ASTM D93 °C 210\nAsh, Sulphated ASTM D874 % w t 1.2\nProduct Performance Claims\nACEA A3/B4\nAPI SP\nVW 501 01/ 505 00\nMeets - Fiat 9.55535-D2\nFulfills the technical requirements of MB 229.3\nStorage\nAll packages should be stored under cover. Where outside storage is unavoidable drums should be laid horizontally to\navoid the possible ingress of water and damage to drum markings. Products should not be stored above 60°C, exposed\nto hot sun or freezing conditions.\nBlueTronic II 10W-40\n08 Jan 2025\nAral, the Aral logo and related marks are trademarks of Aral Aktiengesellschaft, used under licence.\nBP, the BP logo and related marks are trademarks of BP p.l.c., used under licence. This data sheet and the information it contains is believed to be accurate as\nof the date of printing. However, no warranty or representation, express or implied, is made as to its accuracy or completeness. Data provided is based on\nstandard tests under laboratory conditions and is given as a guide only. Users are advised to ensure that they refer to the latest version of this data sheet. It is the\nresponsibility of the user to evaluate and use products safely, to assess suitability for the intended application and to comply with all applicable laws and\nregulations. Safety Data Sheets are available for all our products and should be consulted for appropriate information regarding storage, safe handling, and\ndisposal of the product. No responsibility is taken by either BP plc or its subsidiaries for any damage or injury resulting from abnormal use of the material, from\nany failure to adhere to recommendations, or from hazards inherent in the nature of the material. All products, services and information supplied are provided\nunder our standard conditions of sale. You should consult our local representative if you require any further information.\nAir BP Lubricants/BP Lubricants USA Inc., 1500 Valley Road , Wayne , NJ 07470, USA\n+1 973 633 2200\nwww.airbp.com/lubricants\nPage: 1/1",
+            "content_pages": {
+              "description": [
+                1
+              ],
+              "application": [],
+              "advantages": [],
+              "storage": [
+                1
+              ],
+              "recommendations": [],
+              "notes": []
+            }
+          },
+          "content_status": "complete"
+        }
+      ],
+      "preferred_content_document_id": "wepp-dcrgw2",
+      "content_status": "complete",
+      "automatic_technical_publication_changes": false
+    },
+    {
+      "internal_id": "ARAL-002",
+      "commercial_name": "Aral EcoTronic F 5W-20",
+      "commercial_name_source": "frozen_MASTER",
+      "commercial_snapshot": {
+        "our_skus": [
+          "25094"
+        ],
+        "package_sizes": [
+          "4 L"
+        ],
+        "sku_package_mapping": [
+          {
+            "sku": "25094",
+            "volume": 4,
+            "unit": "L",
+            "source": "user_assortment"
+          }
+        ]
+      },
+      "main_technical_pds": {
+        "source_url": "https://www.aral-lubricants.de/aral-schmierstoffe/aral-motorenoele/motorenoele-pkw?cHash=414025733de61d5f4ec5908550d781be&tx_datasheet_datasheetproduct%5Baction%5D=downloadPdf&tx_datasheet_datasheetproduct%5Bcontroller%5D=Datasheet&tx_datasheet_datasheetproduct%5Bkey%5D=aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf",
+        "date": "2021-05-20",
+        "market": "Germany",
+        "language": "de",
+        "document_key": "aral_ecotronic_f_5w-20_germany_german_pdb_468246.pdf",
+        "status": "selected_main",
+        "document_key_code": null,
+        "recency_scope": "latest_found_in_previous_project_material_not_global_certification"
+      },
+      "master_validation_snapshot": {
+        "identity_status": "verified",
+        "technical_performance_status": "verified",
+        "physical_properties_status": "review_note",
+        "technical_publication_allowed": true,
+        "status_source": "MASTER reassessment of existing Eco PDS/SDS under v3 rules",
+        "review_notes": [
+          "Точное имя и SAE 5W-20 подтверждены; замена на 0W-20 запрещена.",
+          "В 2013 PDS API/ILSAC не указаны; отсутствие записи не отрицает Performance DE 2021. Ford 948-B остаётся Meets.",
+          "KV40: DE 2021 43.5, EN 2013/SDS 43.51 mm²/s. Сохранено различие представления/редакций; причина округления не доказана. Диапазоны SDS для KV100, плотности и вспышки совместимы с PDS.",
+          "Утверждённая номенклатура пользователя: SKU 25094 — 4 L; источник user_assortment."
+        ],
+        "unresolved_conflicts": []
+      },
+      "accepted_official_pds": [
+        {
+          "document_id": "bpxe-9ar8eu",
+          "source_file": "C:\\Users\\Shevc\\OneDrive\\Рабочий стол\\PDS\\bpxe-9ar8eu.pdf",
+          "duplicate_files": [
+            "C:\\Users\\Shevc\\OneDrive\\Рабочий стол\\PDS ARAL\\bpxe-9ar8eu.pdf"
+          ],
+          "sha256": "5152708080111d4851359bffff538e3971b2b41542b616fc48884d203208596e",
+          "document_product_name": "Aral EcoTronic F 5W-20",
+          "document_SAE": "5W-20",
+          "document_date": "2013-08-19",
+          "language": "en",
+          "source_market": null,
+          "source_market_basis": "not_explicitly_identified_in_pdf; EN does not establish market",
+          "document_key": null,
+          "document_key_basis": "not_printed; local filename retained separately",
+          "source_url": null,
+          "source_url_status": "local_user_upload; download URL not established",
+          "identity_status": "exact",
+          "identity_match": true,
+          "accepted_official_pds": true,
+          "accepted_for_content": true,
+          "accepted_for_technical_reference": true,
+          "is_main_technical_pds": false,
+          "revision_relation": "older",
+          "revision_comparator": "frozen_MASTER_main_technical_pds",
+          "notes": [
+            "Полный текст и перевод принадлежат только этой редакции. Они не заменяют технические поля MASTER и не разрешают публикацию автоматически."
+          ],
+          "pages": 1,
+          "source_content": {
+            "description_original": "Aral EcoTronic F 5W-20 is a high-performance engine oil in Aral Synthetic-Technology specially engineered for Ford\nEcoBoostR engines that need an oil according to Ford WSS-M2C948-B. It is also suitable for use in most modern Ford\npetrol engines that require an oil according to Ford WSS-M2C913-B, WSS-M2C913-C or WSS-M2C925-B (with the\nexception of Ford Ka, Focus ST and Focus RS). The product is able to provide extra fuel economy.",
+            "application_original": null,
+            "advantages_original": [
+              "excellent protection against wear",
+              "delivers superior performance under extreme cold start up conditions relative to thicker grades",
+              "fuel economy potential"
+            ],
+            "advantages_full_original": "excellent protection against wear\ndelivers superior performance under extreme cold start up conditions relative to thicker grades\nfuel economy potential",
+            "advantages_intro_original": null,
+            "storage_original": null,
+            "recommendations_original": null,
+            "notes_original": null,
+            "other_sections": [
+              {
+                "section": "subtitle",
+                "text_original": "High performance engine oil",
+                "section_status": "extracted"
+              }
+            ],
+            "section_status": {
+              "description": "extracted",
+              "application": "absent_in_source",
+              "advantages": "extracted",
+              "storage": "absent_in_source",
+              "recommendations": "absent_in_source",
+              "notes": "absent_in_source"
+            },
+            "source_file": "C:\\Users\\Shevc\\OneDrive\\Рабочий стол\\PDS\\bpxe-9ar8eu.pdf",
+            "source_url": null,
+            "source_date": "2013-08-19",
+            "source_market": null,
+            "source_language": "en"
+          },
+          "translated_content": {
+            "description_ru_literal": "Aral EcoTronic F 5W-20 — высокоэффективное моторное масло, изготовленное по технологии Aral Synthetic-Technology и специально разработанное для двигателей Ford EcoBoostR, которым требуется масло по спецификации Ford WSS-M2C948-B. Оно также пригодно для большинства современных бензиновых двигателей Ford, которым требуется масло по спецификации Ford WSS-M2C913-B, WSS-M2C913-C или WSS-M2C925-B (за исключением Ford Ka, Focus ST и Focus RS). Продукт способен обеспечить дополнительную экономию топлива.",
+            "application_ru_literal": null,
+            "advantages_ru_literal": [
+              "отличная защита от износа",
+              "обеспечивает более высокие эксплуатационные показатели при запуске в условиях экстремального холода по сравнению с более вязкими маслами",
+              "потенциал экономии топлива"
+            ],
+            "advantages_intro_ru_literal": null,
+            "storage_ru_literal": null,
+            "recommendations_ru_literal": null,
+            "notes_ru_literal": null,
+            "other_sections_ru": [
+              {
+                "section": "subtitle",
+                "text_ru_literal": "Высокоэффективное моторное масло"
+              }
+            ],
+            "translation_status": "complete"
+          },
+          "technical_reference": {
+            "scope": "source_edition_only_not_master_fields",
+            "typical_characteristics_original": "Name Method Units Aral EcoTronic F 5W-20\nDensity @ 15C, Relative ASTM D1298 g/ml 0.847\nAppearance Visual - Clear & Bright\nViscosity, Kinematic 40C ASTM D445 mm²/s 43.51\nViscosity, Kinematic 100C ASTM D445 mm²/s 8.2\nViscosity Index ASTM D2270 None 166\nViscosity, CCS -30C (5W) ASTM D5293 mPa.s (cP) 3450\nViscosity, HTHS 150C ASTM D4683 cP 2.6\nPour Point ASTM D97 °C -45\nFlash Point, PMCC ASTM D93 °C 210",
+            "performance_original": "Meets Ford WSS-M2C948-B",
+            "typical_characteristics_status": "extracted",
+            "performance_status": "extracted",
+            "performance_ru_literal": "Соответствует Ford WSS-M2C948-B"
+          },
+          "extraction_audit": {
+            "method": "pypdf embedded text; PDF visual checks for layout-sensitive pages; pdfplumber table cells for Extra/Plus",
+            "ocr_used": false,
+            "text_normalization": "page footers removed; original spelling retained; list continuation lines joined; full section blocks retained",
+            "sections_excluded": [
+              "publisher address/contact details",
+              "generic trademark and legal disclaimer"
+            ],
+            "exclusion_reason": "Издательские/юридические сведения не являются продуктовым описанием; сохранены в full_pdf_text_original для проверки.",
+            "full_pdf_text_original": "Aral EcoTronic F 5W-20\nHigh performance engine oil\nDescription\nAral EcoTronic F 5W-20 is a high-performance engine oil in Aral Synthetic-Technology specially engineered for Ford\nEcoBoostR engines that need an oil according to Ford WSS-M2C948-B. It is also suitable for use in most modern Ford\npetrol engines that require an oil according to Ford WSS-M2C913-B, WSS-M2C913-C or WSS-M2C925-B (with the\nexception of Ford Ka, Focus ST and Focus RS). The product is able to provide extra fuel economy.\nAdvantages\nexcellent protection against wear\ndelivers superior performance under extreme cold start up conditions relative to thicker grades\nfuel economy potential\n \nTypical Characteristics\nName Method Units Aral EcoTronic F 5W-20\nDensity @ 15C, Relative ASTM D1298 g/ml 0.847\nAppearance Visual - Clear & Bright\nViscosity, Kinematic 40C ASTM D445 mm²/s 43.51\nViscosity, Kinematic 100C ASTM D445 mm²/s 8.2\nViscosity Index ASTM D2270 None 166\nViscosity, CCS -30C (5W) ASTM D5293 mPa.s (cP) 3450\nViscosity, HTHS 150C ASTM D4683 cP 2.6\nPour Point ASTM D97 °C -45\nFlash Point, PMCC ASTM D93 °C 210\nProduct Performance Claims\nMeets Ford WSS-M2C948-B\nAral EcoTronic F 5W-20\n19 Aug 2013\nAral, the Aral logo and related marks are trademarks of Aral Aktiengesellschaft, used under licence.\nThis data sheet and the information it contains is believed to be accurate as of the date of printing. However, no warranty or representation, express or implied, is\nmade as to its accuracy or completeness. Data provided is based on standard tests under laboratory conditions and is given as a guide only. Users are advised\nto ensure that they refer to the latest version of this data sheet. It is the responsibility of the user to evaluate and use products safely, to assess suitability for the\nintended application and to comply with all applicable laws and regulations. Safety Data Sheets are available for all our products and should be consulted for\nappropriate information regarding storage, safe handling, and disposal of the product. No responsibility is taken by either BP plc or its subsidiaries for any\ndamage or injury resulting from abnormal use of the material, from any failure to adhere to recommendations, or from hazards inherent in the nature of the\nmaterial. All products, services and information supplied are provided under our standard conditions of sale. You should consult our local representative if you\nrequire any further information.\nAral Aktiengesellschaft, Geschäftsbereich Schmierstoffe, Überseeallee 1, D-20457 Hamburg\n01801-11 55 11\nwww.aral-lubricants.de\nPage: 1/1",
+            "content_pages": {
+              "description": [
+                1
+              ],
+              "application": [],
+              "advantages": [
+                1
+              ],
+              "storage": [],
+              "recommendations": [],
+              "notes": []
+            }
+          },
+          "content_status": "complete"
+        }
+      ],
+      "preferred_content_document_id": "bpxe-9ar8eu",
+      "content_status": "complete",
+      "automatic_technical_publication_changes": false
+    },
+    {
+      "internal_id": "ARAL-003",
+      "commercial_name": "Aral HighTronic 5W-40",
+      "commercial_name_source": "frozen_MASTER",
+      "commercial_snapshot": {
+        "our_skus": [
+          "20637",
+          "20632",
+          "20634",
+          "20635"
+        ],
+        "package_sizes": [
+          {
+            "volume": 1,
+            "unit": "L"
+          },
+          {
+            "volume": 208,
+            "unit": "L"
+          },
+          {
+            "volume": 4,
+            "unit": "L"
+          },
+          {
+            "volume": 5,
+            "unit": "L"
+          }
+        ],
+        "sku_package_mapping": [
+          {
+            "sku": "20637",
+            "volume": 1,
+            "unit": "L",
+            "source": "user_assortment"
+          },
+          {
+            "sku": "20632",
+            "volume": 208,
+            "unit": "L",
+            "source": "user_assortment"
+          },
+          {
+            "sku": "20634",
+            "volume": 4,
+            "unit": "L",
+            "source": "user_assortment"
+          },
+          {
+            "sku": "20635",
+            "volume": 5,
+            "unit": "L",
+            "source": "user_assortment"
+          }
+        ]
+      },
+      "main_technical_pds": {
+        "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=0c1278be5813b8bcf8c2522ad7f4d0b6&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_hightronic_5w-40_germany_german_pdb_467316.pdf",
+        "date": "2024-11-08",
+        "market": "Germany",
+        "language": "de",
+        "document_key": "aral_hightronic_5w-40_germany_german_pdb_467316.pdf",
+        "status": "selected_main",
+        "document_key_code": "467316",
+        "recency_scope": "latest_found_in_previous_project_material_not_global_certification"
+      },
+      "master_validation_snapshot": {
+        "identity_status": "verified",
+        "technical_performance_status": "verified",
+        "physical_properties_status": "review_note",
+        "technical_publication_allowed": true,
+        "status_source": "ARAL_remaining_13_report_v3.md",
+        "review_notes": [
+          "SDS 2026: KV100 13.8–16.34 mm²/s; немецкий PDS 13.5 выходит за диапазон. Английский PDS 14.0 согласуется с SDS. Автоматический выбор формулы не сделан.",
+          "Performance DE/Global согласован; основной DE PDS новее на день. Reference согласуется с перечисленными значениями; это не чтение журнала."
+        ],
+        "unresolved_conflicts": []
+      },
+      "accepted_official_pds": [
+        {
+          "document_id": "bpxe-8rl4z9",
+          "source_file": "C:\\Users\\Shevc\\OneDrive\\Рабочий стол\\PDS ARAL\\bpxe-8rl4z9.pdf",
+          "duplicate_files": [],
+          "sha256": "caca4d5522a8e1482694f1bc558b7b67f22d66505795aa3b1b26b6fd22ebee0a",
+          "document_product_name": "Aral HighTronic 5W-40",
+          "document_SAE": "5W-40",
+          "document_date": "2022-03-21",
+          "language": "en",
+          "source_market": null,
+          "source_market_basis": "not_explicitly_identified_in_pdf; EN does not establish market",
+          "document_key": null,
+          "document_key_basis": "not_printed; local filename retained separately",
+          "source_url": null,
+          "source_url_status": "local_user_upload; download URL not established",
+          "identity_status": "exact",
+          "identity_match": true,
+          "accepted_official_pds": true,
+          "accepted_for_content": true,
+          "accepted_for_technical_reference": true,
+          "is_main_technical_pds": false,
+          "revision_relation": "older",
+          "revision_comparator": "frozen_MASTER_main_technical_pds",
+          "notes": [
+            "Полный текст и перевод принадлежат только этой редакции. Они не заменяют технические поля MASTER и не разрешают публикацию автоматически."
+          ],
+          "pages": 2,
+          "source_content": {
+            "description_original": "High performance engine oil with Aral Synthetic Technology for demanding driving conditions and excellent wear\nprotection.\n• for gasoline and diesel engines\n• exploits high performance reserves in engines with extended oil drainintervals\n• low-Ash additive technology",
+            "application_original": "Perfectly suitable for VW diesel engines with pump-nozzle-direct-injection and other car manufacturers, which use these\nengines like Chrysler, Ford, Mitsubishi, VW Nutzfahrzeuge, Skoda, Audi and Seat",
+            "advantages_original": [],
+            "advantages_full_original": null,
+            "advantages_intro_original": null,
+            "storage_original": "All packages should be stored under cover. Where outside storage is unavoidable drums should be laid horizontally to\navoid the possible ingress of water and damage to drum markings. Products should not be stored above 60°C, exposed\nto hot sun or freezing conditions.",
+            "recommendations_original": null,
+            "notes_original": null,
+            "other_sections": [
+              {
+                "section": "subtitle",
+                "text_original": "High performance engine oil.",
+                "section_status": "extracted"
+              }
+            ],
+            "section_status": {
+              "description": "extracted",
+              "application": "extracted",
+              "advantages": "absent_in_source",
+              "storage": "extracted",
+              "recommendations": "absent_in_source",
+              "notes": "absent_in_source"
+            },
+            "source_file": "C:\\Users\\Shevc\\OneDrive\\Рабочий стол\\PDS ARAL\\bpxe-8rl4z9.pdf",
+            "source_url": null,
+            "source_date": "2022-03-21",
+            "source_market": null,
+            "source_language": "en"
+          },
+          "translated_content": {
+            "description_ru_literal": "Высокоэффективное моторное масло с технологией Aral Synthetic Technology для сложных условий вождения и отличной защиты от износа.\n• Для бензиновых и дизельных двигателей\n• Использует высокий запас эксплуатационных свойств в двигателях с увеличенными интервалами замены масла\n• Технология малозольных присадок",
+            "application_ru_literal": "Отлично подходит для дизельных двигателей VW с непосредственным впрыском через насос-форсунки, а также для других автопроизводителей, использующих такие двигатели, например Chrysler, Ford, Mitsubishi, VW Nutzfahrzeuge, Skoda, Audi и Seat",
+            "advantages_ru_literal": [],
+            "advantages_intro_ru_literal": null,
+            "storage_ru_literal": "Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.",
+            "recommendations_ru_literal": null,
+            "notes_ru_literal": null,
+            "other_sections_ru": [
+              {
+                "section": "subtitle",
+                "text_ru_literal": "Высокоэффективное моторное масло."
+              }
+            ],
+            "translation_status": "complete"
+          },
+          "technical_reference": {
+            "scope": "source_edition_only_not_master_fields",
+            "typical_characteristics_original": "Name Method Units Aral HighTronic 5W-40\nDensity @ 15°C, Relative ASTM D4052 g/ml 0.848\nViscosity, Kinematic 100°C ASTM D445 mm²/s 13.9\nViscosity, Kinematic 40°C ASTM D445 mm²/s 82\nViscosity, CCS -30°C ASTM D5293 mPa.s (cP) 5500\nViscosity Index ASTM D2270 None 174\nTBN ASTM D2896 mg KOH/g 7,6\nAsh, Sulphated ASTM D874 w t.% 0,8\nFlash Point, PMCC ASTM D93 °C 210\nPour Point ASTM D97 °C -48",
+            "performance_original": "ACEA C3\nAPI SN/CF\nBMW Longlife-04\ndexos2®*\nMeets Fiat 9.55535-S2\nMeets Ford WSS-M2C917-A\nMB-Approval 226.5/ 229.31/ 229.51\nPorsche A40\nRenault RN 0700 / RN 0710\nVW 502 00/ 505 00/ 505 01",
+            "typical_characteristics_status": "extracted",
+            "performance_status": "extracted",
+            "performance_ru_literal": "ACEA C3\nAPI SN/CF\nBMW Longlife-04\ndexos2®*\nСоответствует Fiat 9.55535-S2\nСоответствует Ford WSS-M2C917-A\nДопуск MB 226.5/ 229.31/ 229.51\nPorsche A40\nRenault RN 0700 / RN 0710\nVW 502 00/ 505 00/ 505 01"
+          },
+          "extraction_audit": {
+            "method": "pypdf embedded text; PDF visual checks for layout-sensitive pages; pdfplumber table cells for Extra/Plus",
+            "ocr_used": false,
+            "text_normalization": "page footers removed; original spelling retained; list continuation lines joined; full section blocks retained",
+            "sections_excluded": [
+              "publisher address/contact details",
+              "generic trademark and legal disclaimer"
+            ],
+            "exclusion_reason": "Издательские/юридические сведения не являются продуктовым описанием; сохранены в full_pdf_text_original для проверки.",
+            "full_pdf_text_original": "Aral HighTronic 5W-40\nHigh performance engine oil.\nDescription\nHigh performance engine oil with Aral Synthetic Technology for demanding driving conditions and excellent wear\nprotection.\n• for gasoline and diesel engines\n• exploits high performance reserves in engines with extended oil drainintervals\n• low-Ash additive technology\nApplication\nPerfectly suitable for VW diesel engines with pump-nozzle-direct-injection and other car manufacturers, which use these\nengines like Chrysler, Ford, Mitsubishi, VW Nutzfahrzeuge, Skoda, Audi and Seat\nTypical Characteristics\nName Method Units Aral HighTronic 5W-40\nDensity @ 15°C, Relative ASTM D4052 g/ml 0.848\nViscosity, Kinematic 100°C ASTM D445 mm²/s 13.9\nViscosity, Kinematic 40°C ASTM D445 mm²/s 82\nViscosity, CCS -30°C ASTM D5293 mPa.s (cP) 5500\nViscosity Index ASTM D2270 None 174\nTBN ASTM D2896 mg KOH/g 7,6\nAsh, Sulphated ASTM D874 w t.% 0,8\nFlash Point, PMCC ASTM D93 °C 210\nPour Point ASTM D97 °C -48\nProduct Performance Claims\nACEA C3\nAPI SN/CF\nBMW Longlife-04\ndexos2®*\nMeets Fiat 9.55535-S2\nMeets Ford WSS-M2C917-A\nMB-Approval 226.5/ 229.31/ 229.51\nPorsche A40\nRenault RN 0700 / RN 0710\nVW 502 00/ 505 00/ 505 01\nPage: 1/2\n\f\nStorage\nAll packages should be stored under cover. Where outside storage is unavoidable drums should be laid horizontally to\navoid the possible ingress of water and damage to drum markings. Products should not be stored above 60°C, exposed\nto hot sun or freezing conditions.\nAral HighTronic 5W-40\n21 Mar 2022\nAral, the Aral logo and related marks are trademarks of Aral Aktiengesellschaft, used under licence.\nThis data sheet and the information it contains is believed to be accurate as of the date of printing. However, no warranty or representation, express or implied, is\nmade as to its accuracy or completeness. Data provided is based on standard tests under laboratory conditions and is given as a guide only. Users are advised\nto ensure that they refer to the latest version of this data sheet. It is the responsibility of the user to evaluate and use products safely, to assess suitability for the\nintended application and to comply with all applicable laws and regulations. Safety Data Sheets are available for all our products and should be consulted for\nappropriate information regarding storage, safe handling, and disposal of the product. No responsibility is taken by either BP plc or its subsidiaries for any\ndamage or injury resulting from abnormal use of the material, from any failure to adhere to recommendations, or from hazards inherent in the nature of the\nmaterial. All products, services and information supplied are provided under our standard conditions of sale. You should consult our local representative if you\nrequire any further information.\nAral Aktiengesellschaft, Geschäftsbereich Schmierstoffe, Überseeallee 1, D-20457 Hamburg\n01801-11 55 11\nwww.aral-lubricants.de\nPage: 2/2",
+            "content_pages": {
+              "description": [
+                1
+              ],
+              "application": [
+                1
+              ],
+              "advantages": [],
+              "storage": [
+                2
+              ],
+              "recommendations": [],
+              "notes": []
+            }
+          },
+          "content_status": "complete"
+        },
+        {
+          "document_id": "wepp-dav4bq",
+          "source_file": "C:\\Users\\Shevc\\OneDrive\\Рабочий стол\\PDS\\wepp-dav4bq.pdf",
+          "duplicate_files": [],
+          "sha256": "a990dd29f2d620fc1211230d52b6d192f058d67cee86271dba1ca3178785794c",
+          "document_product_name": "Aral HighTronic 5W-40",
+          "document_SAE": "5W-40",
+          "document_date": "2024-11-07",
+          "language": "en",
+          "source_market": null,
+          "source_market_basis": "not_explicitly_identified_in_pdf; EN does not establish market",
+          "document_key": null,
+          "document_key_basis": "not_printed; local filename retained separately",
+          "source_url": null,
+          "source_url_status": "local_user_upload; download URL not established",
+          "identity_status": "exact",
+          "identity_match": true,
+          "accepted_official_pds": true,
+          "accepted_for_content": true,
+          "accepted_for_technical_reference": true,
+          "is_main_technical_pds": false,
+          "revision_relation": "older",
+          "revision_comparator": "frozen_MASTER_main_technical_pds",
+          "notes": [
+            "Полный текст и перевод принадлежат только этой редакции. Они не заменяют технические поля MASTER и не разрешают публикацию автоматически."
+          ],
+          "pages": 1,
+          "source_content": {
+            "description_original": "High performance engine oil with Aral Synthetic Technology for demanding driving conditions and excellent wear\nprotection.\n• For gasoline and diesel engines\n• Exploits high performance reserves in engines with extended oil drain intervals\n• Low-Ash Additive Technology\n*GM dexos2TM: supersedes GM-LL-B-025 and GM-LL-A-025 : D225GXFH082",
+            "application_original": null,
+            "advantages_original": [],
+            "advantages_full_original": null,
+            "advantages_intro_original": null,
+            "storage_original": "All packages should be stored under cover. Where outside storage is unavoidable drums should be laid horizontally to\navoid the possible ingress of water and damage to drum markings. Products should not be stored above 60°C, exposed\nto hot sun or freezing conditions.",
+            "recommendations_original": null,
+            "notes_original": null,
+            "other_sections": [
+              {
+                "section": "subtitle",
+                "text_original": "High performance engine oil.",
+                "section_status": "extracted"
+              }
+            ],
+            "section_status": {
+              "description": "extracted",
+              "application": "absent_in_source",
+              "advantages": "absent_in_source",
+              "storage": "extracted",
+              "recommendations": "absent_in_source",
+              "notes": "absent_in_source"
+            },
+            "source_file": "C:\\Users\\Shevc\\OneDrive\\Рабочий стол\\PDS\\wepp-dav4bq.pdf",
+            "source_url": null,
+            "source_date": "2024-11-07",
+            "source_market": null,
+            "source_language": "en"
+          },
+          "translated_content": {
+            "description_ru_literal": "Высокоэффективное моторное масло с технологией Aral Synthetic Technology для сложных условий вождения и отличной защиты от износа.\n• Для бензиновых и дизельных двигателей\n• Использует высокий запас эксплуатационных свойств в двигателях с увеличенными интервалами замены масла\n• Технология малозольных присадок\n*GM dexos2TM: заменяет GM-LL-B-025 и GM-LL-A-025: D225GXFH082",
+            "application_ru_literal": null,
+            "advantages_ru_literal": [],
+            "advantages_intro_ru_literal": null,
+            "storage_ru_literal": "Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.",
+            "recommendations_ru_literal": null,
+            "notes_ru_literal": null,
+            "other_sections_ru": [
+              {
+                "section": "subtitle",
+                "text_ru_literal": "Высокоэффективное моторное масло."
+              }
+            ],
+            "translation_status": "complete"
+          },
+          "technical_reference": {
+            "scope": "source_edition_only_not_master_fields",
+            "typical_characteristics_original": "Name Method Units Aral HighTronic 5W-40\nViscosity, Kinematic 100C ASTM D445 mm²/s 14.0\nViscosity, Kinematic 40C ASTM D445 mm²/s 86\nViscosity Index ASTM D2270 None 169\nViscosity, CCS -30C (5W) ASTM D5293 mPa.s (cP) 5500\nPour Point ASTM D97 °C -45\nFlash Point, PMCC ASTM D93 °C 214\nAsh, Sulphated ASTM D874 % w t 0.8\nDensity @ 15C, Relative ASTM D4052 g/ml 0.851",
+            "performance_original": "ACEA C3\nAPI CF/SN\nGMdexos2™ supersedes GM-LL-B-025 and GM-LL-A-025\nMB-Approval 229.31/ 229.51\nOPEL OV 040 1547-D40\nPorsche A40\nRenault RN 0700 / RN 0710\nVW 505 00/ 505 01\nMeets Fiat 9.55535-S2, Ford WSS-M2C917-A, MB-226.5",
+            "typical_characteristics_status": "extracted",
+            "performance_status": "extracted",
+            "performance_ru_literal": "ACEA C3\nAPI CF/SN\nGMdexos2™ заменяет GM-LL-B-025 and GM-LL-A-025\nДопуск MB 229.31/ 229.51\nOPEL OV 040 1547-D40\nPorsche A40\nRenault RN 0700 / RN 0710\nVW 505 00/ 505 01\nСоответствует Fiat 9.55535-S2, Ford WSS-M2C917-A, MB-226.5"
+          },
+          "extraction_audit": {
+            "method": "pypdf embedded text; PDF visual checks for layout-sensitive pages; pdfplumber table cells for Extra/Plus",
+            "ocr_used": false,
+            "text_normalization": "page footers removed; original spelling retained; list continuation lines joined; full section blocks retained",
+            "sections_excluded": [
+              "publisher address/contact details",
+              "generic trademark and legal disclaimer"
+            ],
+            "exclusion_reason": "Издательские/юридические сведения не являются продуктовым описанием; сохранены в full_pdf_text_original для проверки.",
+            "full_pdf_text_original": "Aral HighTronic 5W-40\nHigh performance engine oil.\nDescription\nHigh performance engine oil with Aral Synthetic Technology for demanding driving conditions and excellent wear\nprotection.\n• For gasoline and diesel engines\n• Exploits high performance reserves in engines with extended oil drain intervals\n• Low-Ash Additive Technology\n*GM dexos2TM: supersedes GM-LL-B-025 and GM-LL-A-025 : D225GXFH082\nTypical Characteristics\nName Method Units Aral HighTronic 5W-40\nViscosity, Kinematic 100C ASTM D445 mm²/s 14.0\nViscosity, Kinematic 40C ASTM D445 mm²/s 86\nViscosity Index ASTM D2270 None 169\nViscosity, CCS -30C (5W) ASTM D5293 mPa.s (cP) 5500\nPour Point ASTM D97 °C -45\nFlash Point, PMCC ASTM D93 °C 214\nAsh, Sulphated ASTM D874 % w t 0.8\nDensity @ 15C, Relative ASTM D4052 g/ml 0.851\nProduct Performance Claims\nACEA C3\nAPI CF/SN\nGMdexos2™ supersedes GM-LL-B-025 and GM-LL-A-025\nMB-Approval 229.31/ 229.51\nOPEL OV 040 1547-D40\nPorsche A40\nRenault RN 0700 / RN 0710\nVW 505 00/ 505 01\nMeets Fiat 9.55535-S2, Ford WSS-M2C917-A, MB-226.5\nStorage\nAll packages should be stored under cover. Where outside storage is unavoidable drums should be laid horizontally to\navoid the possible ingress of water and damage to drum markings. Products should not be stored above 60°C, exposed\nto hot sun or freezing conditions.\nAral HighTronic 5W-40\n07 Nov 2024\nAral, the Aral logo and related marks are trademarks of Aral Aktiengesellschaft, used under licence.\nThis data sheet and the information it contains is believed to be accurate as of the date of printing. However, no warranty or representation, express or implied, is\nmade as to its accuracy or completeness. Data provided is based on standard tests under laboratory conditions and is given as a guide only. Users are advised\nto ensure that they refer to the latest version of this data sheet. It is the responsibility of the user to evaluate and use products safely, to assess suitability for the\nintended application and to comply with all applicable laws and regulations. Safety Data Sheets are available for all our products and should be consulted for\nappropriate information regarding storage, safe handling, and disposal of the product. No responsibility is taken by either BP plc or its subsidiaries for any\ndamage or injury resulting from abnormal use of the material, from any failure to adhere to recommendations, or from hazards inherent in the nature of the\nmaterial. All products, services and information supplied are provided under our standard conditions of sale. You should consult our local representative if you\nrequire any further information.\nAral Aktiengesellschaft, Geschäftsbereich Schmierstoffe, Überseeallee 1, D-20457 Hamburg\n01801-11 55 11\nwww.aral-lubricants.de\nPage: 1/1",
+            "content_pages": {
+              "description": [
+                1
+              ],
+              "application": [],
+              "advantages": [],
+              "storage": [
+                1
+              ],
+              "recommendations": [],
+              "notes": []
+            }
+          },
+          "content_status": "complete"
+        }
+      ],
+      "preferred_content_document_id": "wepp-dav4bq",
+      "content_status": "complete",
+      "automatic_technical_publication_changes": false
+    },
+    {
+      "internal_id": "ARAL-004",
+      "commercial_name": "Aral HighTronic F 5W-30",
+      "commercial_name_source": "frozen_MASTER",
+      "commercial_snapshot": {
+        "our_skus": [
+          "10332",
+          "10333",
+          "10334"
+        ],
+        "package_sizes": [
+          {
+            "volume": 1,
+            "unit": "L"
+          },
+          {
+            "volume": 208,
+            "unit": "L"
+          },
+          {
+            "volume": 4,
+            "unit": "L"
+          }
+        ],
+        "sku_package_mapping": [
+          {
+            "sku": "10332",
+            "volume": 1,
+            "unit": "L",
+            "source": "user_assortment"
+          },
+          {
+            "sku": "10333",
+            "volume": 208,
+            "unit": "L",
+            "source": "user_assortment"
+          },
+          {
+            "sku": "10334",
+            "volume": 4,
+            "unit": "L",
+            "source": "user_assortment"
+          }
+        ]
+      },
+      "main_technical_pds": {
+        "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=458fb9eabcefe541a54a2b5b69ebfc9a&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_hightronic_f_5w-30_germany_german_pdb_456182.pdf",
+        "date": "2025-03-06",
+        "market": "Germany",
+        "language": "de",
+        "document_key": "aral_hightronic_f_5w-30_germany_german_pdb_456182.pdf",
+        "status": "selected_main",
+        "document_key_code": "456182",
+        "recency_scope": "latest_found_in_previous_project_material_not_global_certification"
+      },
+      "master_validation_snapshot": {
+        "identity_status": "verified",
+        "technical_performance_status": "verified",
+        "physical_properties_status": "review_note",
+        "technical_publication_allowed": true,
+        "status_source": "ARAL_remaining_13_report_v3.md",
+        "review_notes": [
+          "SDS: KV100 9.8–11.2 против DE PDS 9.7; KV40 58 против 55; Pour Point −33 против −42 °C. В Performance только Meets Ford, не OEM approval.",
+          "Performance согласован; Ford остаётся Meets. Opel OV0401547-D40 не добавлен. DE/Global физические таблицы одной даты сохранены отдельно."
+        ],
+        "unresolved_conflicts": []
+      },
+      "accepted_official_pds": [
+        {
+          "document_id": "wepp-dejrb4",
+          "source_file": "C:\\Users\\Shevc\\OneDrive\\Рабочий стол\\PDS\\wepp-dejrb4.pdf",
+          "duplicate_files": [],
+          "sha256": "a55c921ca11ac3099850345be50decf3308099c115661dc42984232ead1a5773",
+          "document_product_name": "Aral HighTronic F 5W-30",
+          "document_SAE": "5W-30",
+          "document_date": "2025-03-06",
+          "language": "en",
+          "source_market": null,
+          "source_market_basis": "not_explicitly_identified_in_pdf; EN does not establish market",
+          "document_key": null,
+          "document_key_basis": "not_printed; local filename retained separately",
+          "source_url": null,
+          "source_url_status": "local_user_upload; download URL not established",
+          "identity_status": "exact",
+          "identity_match": true,
+          "accepted_official_pds": true,
+          "accepted_for_content": true,
+          "accepted_for_technical_reference": true,
+          "is_main_technical_pds": false,
+          "revision_relation": "same_date",
+          "revision_comparator": "frozen_MASTER_main_technical_pds",
+          "notes": [
+            "Полный текст и перевод принадлежат только этой редакции. Они не заменяют технические поля MASTER и не разрешают публикацию автоматически.",
+            "Визуально обнаружено наложение колонтитула на последнюю строку Storage. Порядок текста восстановлен из встроенных PDF-объектов pypdf; слова не заимствованы из другой редакции."
+          ],
+          "pages": 1,
+          "source_content": {
+            "description_original": "Aral HighTronic F 5W-30 is a high performance engine oil based on Aral Synthetic Technology and especially\ndeveloped for passenger cars from Ford, Volvo, Jaguar and Land Rover with gasoline or diesel engines.",
+            "application_original": "Aral HighTronic F 5W-30 is suitable for use where oils with the specifications according to ACEA A5/B5 are\nrecomended. This unique formulation meets the requirements of Ford WSS-M2C913-D, WSS-M2C913-C, WSS-\nM2C913-B and WSS-M2C913-A and is strongly recommended for use in Ford diesel engines.",
+            "advantages_original": [
+              "excellent thermal and oxidtion stability",
+              "increased protection against wear",
+              "potential for fuel saving"
+            ],
+            "advantages_full_original": "excellent thermal and oxidtion stability\nincreased protection against wear\npotential for fuel saving",
+            "advantages_intro_original": null,
+            "storage_original": "All packages should be stored under cover. Where outside storage is unavoidable drums should be laid horizontally to\navoid the possible ingress of water and damage to drum markings. Products should not be stored above 60°C, exposed\nto hot sun or freezing conditions.",
+            "recommendations_original": null,
+            "notes_original": null,
+            "other_sections": [
+              {
+                "section": "subtitle",
+                "text_original": "Engine oil in Aral Synthetic-Technology",
+                "section_status": "extracted"
+              }
+            ],
+            "section_status": {
+              "description": "extracted",
+              "application": "extracted",
+              "advantages": "extracted",
+              "storage": "extracted",
+              "recommendations": "absent_in_source",
+              "notes": "absent_in_source"
+            },
+            "source_file": "C:\\Users\\Shevc\\OneDrive\\Рабочий стол\\PDS\\wepp-dejrb4.pdf",
+            "source_url": null,
+            "source_date": "2025-03-06",
+            "source_market": null,
+            "source_language": "en"
+          },
+          "translated_content": {
+            "description_ru_literal": "Aral HighTronic F 5W-30 — высокоэффективное моторное масло на основе технологии Aral Synthetic Technology, специально разработанное для легковых автомобилей Ford, Volvo, Jaguar и Land Rover с бензиновыми или дизельными двигателями.",
+            "application_ru_literal": "Aral HighTronic F 5W-30 пригодно для применения там, где рекомендуются масла со спецификациями по ACEA A5/B5. Эта уникальная рецептура соответствует требованиям Ford WSS-M2C913-D, WSS-M2C913-C, WSS-M2C913-B и WSS-M2C913-A и настоятельно рекомендуется для дизельных двигателей Ford.",
+            "advantages_ru_literal": [
+              "отличная термическая и окислительная стабильность",
+              "повышенная защита от износа",
+              "потенциал экономии топлива"
+            ],
+            "advantages_intro_ru_literal": null,
+            "storage_ru_literal": "Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.",
+            "recommendations_ru_literal": null,
+            "notes_ru_literal": null,
+            "other_sections_ru": [
+              {
+                "section": "subtitle",
+                "text_ru_literal": "Моторное масло на основе технологии Aral Synthetic-Technology"
+              }
+            ],
+            "translation_status": "complete"
+          },
+          "technical_reference": {
+            "scope": "source_edition_only_not_master_fields",
+            "typical_characteristics_original": "Name Method Units Aral HighTronic F 5W-30\nDensity @ 15C, Relative ASTM D4052 g/ml 0.85\nViscosity, Kinematic 100C ASTM D445 mm²/s 9.9\nViscosity, Kinematic 40C ASTM D445 mm²/s 56\nViscosity Index ASTM D2270 None 163\nViscosity, CCS -30C ASTM D5293 mPa.s (cP) 4600\nViscosity, HTHS 150C ASTM D4741 cP 2.96\nPour Point ASTM D97 °C -33\nFlash Point, PMCC ASTM D93 °C 204",
+            "performance_original": "ACEA A5/B5\nAPI SP/CF\nILSAC GF-6\nMeets Ford WSS-M2C913-A/ B/ C/ D",
+            "typical_characteristics_status": "extracted",
+            "performance_status": "extracted",
+            "performance_ru_literal": "ACEA A5/B5\nAPI SP/CF\nILSAC GF-6\nСоответствует Ford WSS-M2C913-A/ B/ C/ D"
+          },
+          "extraction_audit": {
+            "method": "pypdf embedded text; PDF visual checks for layout-sensitive pages; pdfplumber table cells for Extra/Plus",
+            "ocr_used": false,
+            "text_normalization": "page footers removed; original spelling retained; list continuation lines joined; full section blocks retained",
+            "sections_excluded": [
+              "publisher address/contact details",
+              "generic trademark and legal disclaimer"
+            ],
+            "exclusion_reason": "Издательские/юридические сведения не являются продуктовым описанием; сохранены в full_pdf_text_original для проверки.",
+            "full_pdf_text_original": "Aral HighTronic F 5W-30\nEngine oil in Aral Synthetic-Technology\nDescription\nAral HighTronic F 5W-30 is a high performance engine oil based on Aral Synthetic Technology and especially\ndeveloped for passenger cars from Ford, Volvo, Jaguar and Land Rover with gasoline or diesel engines.\nApplication\nAral HighTronic F 5W-30 is suitable for use where oils with the specifications according to ACEA A5/B5 are\nrecomended. This unique formulation meets the requirements of Ford WSS-M2C913-D, WSS-M2C913-C, WSS-\nM2C913-B and WSS-M2C913-A and is strongly recommended for use in Ford diesel engines.\nAdvantages\nexcellent thermal and oxidtion stability\nincreased protection against wear\npotential for fuel saving\nTypical Characteristics\nName Method Units Aral HighTronic F 5W-30\nDensity @ 15C, Relative ASTM D4052 g/ml 0.85\nViscosity, Kinematic 100C ASTM D445 mm²/s 9.9\nViscosity, Kinematic 40C ASTM D445 mm²/s 56\nViscosity Index ASTM D2270 None 163\nViscosity, CCS -30C ASTM D5293 mPa.s (cP) 4600\nViscosity, HTHS 150C ASTM D4741 cP 2.96\nPour Point ASTM D97 °C -33\nFlash Point, PMCC ASTM D93 °C 204\nProduct Performance Claims\nACEA A5/B5\nAPI SP/CF\nILSAC GF-6\nMeets Ford WSS-M2C913-A/ B/ C/ D\nStorage\nAll packages should be stored under cover. Where outside storage is unavoidable drums should be laid horizontally to\navoid the possible ingress of water and damage to drum markings. Products should not be stored above 60°C, exposed\nto hot sun or freezing conditions.\nAral HighTronic F 5W-30\n06 Mar 2025\nAral, the Aral logo and related marks are trademarks of Aral Aktiengesellschaft, used under licence.\nThis data sheet and the information it contains is believed to be accurate as of the date of printing. However, no warranty or representation, express or implied, is\nmade as to its accuracy or completeness. Data provided is based on standard tests under laboratory conditions and is given as a guide only. Users are advised\nto ensure that they refer to the latest version of this data sheet. It is the responsibility of the user to evaluate and use products safely, to assess suitability for the\nintended application and to comply with all applicable laws and regulations. Safety Data Sheets are available for all our products and should be consulted for\nappropriate information regarding storage, safe handling, and disposal of the product. No responsibility is taken by either BP plc or its subsidiaries for any\ndamage or injury resulting from abnormal use of the material, from any failure to adhere to recommendations, or from hazards inherent in the nature of the\nmaterial. All products, services and information supplied are provided under our standard conditions of sale. You should consult our local representative if you\nrequire any further information.\nAral Aktiengesellschaft, Geschäftsbereich Schmierstoffe, Überseeallee 1, D-20457 Hamburg\n01801-11 55 11\nwww.aral-lubricants.de\nPage: 1/1",
+            "content_pages": {
+              "description": [
+                1
+              ],
+              "application": [
+                1
+              ],
+              "advantages": [
+                1
+              ],
+              "storage": [
+                1
+              ],
+              "recommendations": [],
+              "notes": []
+            }
+          },
+          "content_status": "complete"
+        }
+      ],
+      "preferred_content_document_id": "wepp-dejrb4",
+      "content_status": "complete",
+      "automatic_technical_publication_changes": false
+    },
+    {
+      "internal_id": "ARAL-005",
+      "commercial_name": "Aral HighTronic J 5W-30",
+      "commercial_name_source": "frozen_MASTER",
+      "commercial_snapshot": {
+        "our_skus": [
+          "20198",
+          "20190",
+          "20194",
+          "20191"
+        ],
+        "package_sizes": [
+          {
+            "volume": 1,
+            "unit": "L"
+          },
+          {
+            "volume": 208,
+            "unit": "L"
+          },
+          {
+            "volume": 4,
+            "unit": "L"
+          },
+          {
+            "volume": 60,
+            "unit": "L"
+          }
+        ],
+        "sku_package_mapping": [
+          {
+            "sku": "20198",
+            "volume": 1,
+            "unit": "L",
+            "source": "user_assortment"
+          },
+          {
+            "sku": "20190",
+            "volume": 208,
+            "unit": "L",
+            "source": "user_assortment"
+          },
+          {
+            "sku": "20194",
+            "volume": 4,
+            "unit": "L",
+            "source": "user_assortment"
+          },
+          {
+            "sku": "20191",
+            "volume": 60,
+            "unit": "L",
+            "source": "user_assortment"
+          }
+        ]
+      },
+      "main_technical_pds": {
+        "source_url": "https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=fe22a203db6bba42c3a3924948fb7743&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_hightronic_j_5w-30_germany_german_pdb_466947.pdf",
+        "date": "2025-02-26",
+        "market": "Germany",
+        "language": "de",
+        "document_key": "aral_hightronic_j_5w-30_germany_german_pdb_466947.pdf",
+        "status": "selected_main",
+        "document_key_code": "466947",
+        "recency_scope": "latest_found_in_previous_project_material_not_global_certification"
+      },
+      "master_validation_snapshot": {
+        "identity_status": "verified",
+        "technical_performance_status": "review_note",
+        "physical_properties_status": "review_note",
+        "technical_publication_allowed": true,
+        "status_source": "ARAL_remaining_13_report_v3.md",
+        "review_notes": [
+          "PDS DE/EN совпадают по общим строкам; только EN дополнительно содержит вспышку 220 °C ASTM D93. Она оставлена в отдельной редакции.",
+          "EN Application употребляет approved рядом с Fiat, но раздел Performance явно говорит Meets Fiat 9.55535-S1. В массив OEM approvals Fiat не перенесён.",
+          "Венгерский SDS 466947-DE04: KV40 60.3 против 51 mm²/s PDS; это не округление. KV100 9.5 входит в 9.3–12.44; Pour Point −39 совпадает. Региональный SDS не заменяет немецкий PDS и не подтверждает формулу конкретной упаковки.",
+          "SDS найден на официальном домене через индекс; полное прямое открытие не удалось. Рынок HU не следует автоматически использовать как SDS для иной страны.",
+          "В EN Application Fiat упомянут как approved, но Performance явно Meets. Для публикации Fiat только Meets; физические различия HU SDS отдельно."
+        ],
+        "unresolved_conflicts": []
+      },
+      "accepted_official_pds": [
+        {
+          "document_id": "wepp-dea9dl",
+          "source_file": "C:\\Users\\Shevc\\OneDrive\\Рабочий стол\\PDS\\wepp-dea9dl.pdf",
+          "duplicate_files": [],
+          "sha256": "e040ef3c217ef4a68fb331c4863623e0331616fc3ffc1e374d0cffe6b2be0893",
+          "document_product_name": "Aral HighTronic J 5W-30",
+          "document_SAE": "5W-30",
+          "document_date": "2025-02-26",
+          "language": "en",
+          "source_market": null,
+          "source_market_basis": "not_explicitly_identified_in_pdf; EN does not establish market",
+          "document_key": null,
+          "document_key_basis": "not_printed; local filename retained separately",
+          "source_url": null,
+          "source_url_status": "local_user_upload; download URL not established",
+          "identity_status": "exact",
+          "identity_match": true,
+          "accepted_official_pds": true,
+          "accepted_for_content": true,
+          "accepted_for_technical_reference": true,
+          "is_main_technical_pds": false,
+          "revision_relation": "same_date",
+          "revision_comparator": "frozen_MASTER_main_technical_pds",
+          "notes": [
+            "Полный текст и перевод принадлежат только этой редакции. Они не заменяют технические поля MASTER и не разрешают публикацию автоматически."
+          ],
+          "pages": 1,
+          "source_content": {
+            "description_original": "Aral HighTronic J 5W-30 is a modern low ash engine oil in Aral Synthetic-Technology developed for gasoline or\ndiesel engines.",
+            "application_original": "Aral HighTronic J 5W-30 is suitable for use where oils with the specifications according to ACEA C2 are\nrecomended. This unique formulation is approved for engines requiring PSA B71 2290 or Fiat 9.55535-S1.",
+            "advantages_original": [
+              "Protects against harmful ash deposits",
+              "Prolongs the life of the after treatment device"
+            ],
+            "advantages_full_original": "Protects against harmful ash deposits\nProlongs the life of the after treatment device",
