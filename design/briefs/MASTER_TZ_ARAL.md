@@ -997,4 +997,197 @@ product:
 
 ### Этап B — Figma
 - foundations;
-- components;
+- components;- desktop;
+- mobile;
+- prototypes;
+- design QA.
+
+### Этап C — Technical design
+- hosting audit;
+- stack;
+- data model;
+- content workflow;
+- integrations.
+
+### Этап D — Development
+- frontend;
+- content/data;
+- forms;
+- comparison;
+- catalog;
+- store locator;
+- SEO/accessibility.
+
+### Этап E — QA / launch
+- content verification;
+- responsive;
+- browsers;
+- speed;
+- forms;
+- analytics;
+- legal;
+- deployment.
+
+---
+
+## 32. Открытые вопросы / backlog
+
+1. Финальный текст первого экрана.
+2. Нужна ли полноценная корзина и продажа прямо на сайте.
+3. Нужен ли личный кабинет.
+4. Источник данных для полноценного подбора по автомобилю.
+5. Финальные email для заявок.
+6. Реальные B2B-услуги: обучение, POS, матрицы.
+7. Полный список точек «Где купить».
+8. OZON и другие внешние ссылки.
+9. Официальный brand guide ARAL и точные цвета/шрифты.
+10. Все права и правила использования логотипов/фотографий.
+11. Финальные категории каталога после сбора номенклатуры.
+12. Точный hosting stack.
+13. Нужна ли мультиязычность. Архитектуру желательно делать i18n-ready, но второй язык не является обязательным для v1.
+14. Финальный состав header utility icons.
+15. Источник реальных отзывов и партнёрских логотипов.
+
+---
+
+# Приложение A. Матрица визуальных референсов
+
+## A1. LIQUI MOLY — hero
+Файл: `references/01_LIQUI_MOLY_hero_reference.png`
+
+Использовать:
+- hero composition;
+- крупный продукт;
+- whitespace;
+- сильную типографику;
+- быстрые сервисные действия.
+
+Не копировать брендовые формы/графику 1:1.
+
+## A2. STIHL — mega-menu
+Файл: `references/02_STIHL_megamenu_reference.png`
+
+Использовать:
+- полноширинную структуру;
+- много колонок;
+- чёткую иерархию;
+- smooth open/close.
+
+## A3. STIHL — каталог
+Файл: `references/03_STIHL_catalog_reference.png`
+
+Использовать:
+- минимализм;
+- фильтры;
+- воздушные карточки;
+- заметные, но редкие промо-метки.
+
+## A4. Dark automotive — storytelling
+Файл: `references/04_Dark_scroll_storytelling_reference.png`
+
+Использовать:
+- page-like scrolling;
+- крупную типографику;
+- тёмные акцентные секции;
+- custom cursor.
+
+## A5. Dark automotive — logos/testimonials
+Файл: `references/05_Dark_logos_testimonials_reference.png`
+
+Использовать:
+- монохромный marquee;
+- единый цвет логотипов;
+- крупные карточки отзывов.
+
+## A6. Layered cards
+Файл: `references/06_Layered_cards_reference.png`
+
+Использовать:
+- листание;
+- глубину;
+- hover/tap reveal;
+- только как teaser.
+
+## A7. Основной ARAL hero
+Файл: `references/07_Approved_main_hero_reference.png`
+
+**Статус: утверждено как основной визуальный ориентир первого экрана.**
+
+## A8. ARAL comparison
+Файл: `references/08_Approved_comparison_reference.png`
+
+**Статус: утверждено для финального черновика сайта.**
+
+## A9–A12. Working concepts
+- `09_Working_fullpage_concept_dense.png`
+- `11_Working_spacious_variant_A.png`
+- `12_Working_spacious_variant_B.png`
+
+Использовать только как историю поиска. Плотную компоновку из раннего fullpage-концепта не повторять.
+
+---
+
+# Приложение B. Ссылки
+
+Основные ссылки вынесены также в отдельный файл `WORK_MODE_TASKS_AND_LINKS.md`.
+
+- https://www.kaercher.com/us/en/
+- https://www.liqui-moly.com/en/
+- https://www.stihlusa.com/en
+- https://www.stihlusa.com/en/professional
+- https://www.aral-lubricants.de/en/
+- https://aral.az/ru/
+- https://ravenol.ru/
+- https://nomad-lubricants.ru/
+- https://centravtomasel.ru/search?pcode=aral
+- https://msdspds.aral.com/
+
+---
+
+# Приложение C. Правило работы с референсами
+
+Референсы нужны для определения:
+- структуры;
+- UX;
+- плотности;
+- motion;
+- компонентной логики.
+
+Они **не являются макетами для копирования**. Финальный ARAL должен быть самостоятельным дизайном.
+
+---
+
+# Приложение D. Визуальные материалы в документе
+
+## D1. LIQUI MOLY — hero
+![LIQUI MOLY hero reference](references/01_LIQUI_MOLY_hero_reference.png)
+
+## D2. STIHL — mega-menu
+![STIHL mega-menu reference](references/02_STIHL_megamenu_reference.png)
+
+## D3. STIHL — каталог
+![STIHL catalog reference](references/03_STIHL_catalog_reference.png)
+
+## D4. Scroll storytelling
+![Dark scroll storytelling reference](references/04_Dark_scroll_storytelling_reference.png)
+
+## D5. Logos / testimonials
+![Dark logos and testimonials reference](references/05_Dark_logos_testimonials_reference.png)
+
+## D6. Layered cards
+![Layered cards reference](references/06_Layered_cards_reference.png)
+
+## D7. Основной утверждённый hero ARAL
+![Approved ARAL main hero](references/07_Approved_main_hero_reference.png)
+
+## D8. Утверждённое сравнение ARAL
+![Approved ARAL comparison](references/08_Approved_comparison_reference.png)
+
+## D9. Рабочий fullpage-концепт — слишком плотный, не финальный
+![Working dense concept](references/09_Working_fullpage_concept_dense.png)
+
+## D10. Рабочий просторный вариант A
+![Working spacious variant A](references/11_Working_spacious_variant_A.png)
+
+## D11. Рабочий просторный вариант B
+![Working spacious variant B](references/12_Working_spacious_variant_B.png)
