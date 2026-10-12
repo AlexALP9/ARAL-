@@ -1,0 +1,305 @@
+{
+  "ARAL-001": {
+    "variants": {
+      "15F073": {
+        "volume": "208 L",
+        "image": "/media/production/ARAL-001_15F073_208L.jpg",
+        "format": "jpg"
+      },
+      "15F076": {
+        "volume": "1 L",
+        "image": "/media/production/ARAL-001_15F076_1L.jpg",
+        "format": "jpg"
+      },
+      "15F078": {
+        "volume": "4 L",
+        "image": "/media/production/ARAL-001_15F078_4L.jpg",
+        "format": "jpg"
+      },
+      "15F471": {
+        "volume": "5 L",
+        "image": "/media/production/ARAL-001_15F471_5L.jpg",
+        "format": "jpg"
+      }
+    }
+  },
+  "ARAL-002": {
+    "variants": {
+      "25094": {
+        "volume": "4 L",
+        "image": "/media/production/ARAL-002_25094_4L.jpg",
+        "format": "jpg"
+      }
+    }
+  },
+  "ARAL-003": {
+    "variants": {
+      "20637": {
+        "volume": "1 L",
+        "image": "/media/production/ARAL-003_20637_1L.jpg",
+        "format": "jpg"
+      },
+      "20632": {
+        "volume": "208 L",
+        "image": "/media/production/ARAL-003_20632_208L.jpg",
+        "format": "jpg"
+      },
+      "20634": {
+        "volume": "4 L",
+        "image": "/media/production/ARAL-003_20634_4L.jpg",
+        "format": "jpg"
+      },
+      "20635": {
+        "volume": "5 L",
+        "image": "/media/production/ARAL-003_20635_5L.jpg",
+        "format": "jpg"
+      }
+    }
+  },
+  "ARAL-004": {
+    "variants": {
+      "10332": {
+        "volume": "1 L",
+        "image": "/media/production/ARAL-004_10332_1L.jpg",
+        "format": "jpg"
+      },
+      "10333": {
+        "volume": "208 L",
+        "image": "/media/production/ARAL-004_10333_208L.jpg",
+        "format": "jpg"
+      },
+      "10334": {
+        "volume": "4 L",
+        "image": "/media/production/ARAL-004_10334_4L.jpg",
+        "format": "jpg"
+      }
+    }
+  },
+  "ARAL-005": {
+    "variants": {
+      "20198": {
+        "volume": "1 L",
+        "image": "/media/production/ARAL-005_20198_1L.jpg",
+        "format": "jpg"
+      },
+      "20190": {
+        "volume": "208 L",
+        "image": "/media/production/ARAL-005_20190_208L.jpg",
+        "format": "jpg"
+      },
+      "20194": {
+        "volume": "4 L",
+        "image": "/media/production/ARAL-005_20194_4L.jpg",
+        "format": "jpg"
+      },
+      "20191": {
+        "volume": "60 L",
+        "image": "/media/production/ARAL-005_20191_60L.jpg",
+        "format": "jpg"
+      }
+    }
+  },
+  "ARAL-006": {
+    "variants": {
+      "21407": {
+        "volume": "1 L",
+        "image": "/media/production/ARAL-006_21407_1L.jpg",
+        "format": "jpg"
+      },
+      "156EC2": {
+        "volume": "208 L",
+        "image": "/media/production/ARAL-006_156EC2_208L.jpg",
+        "format": "jpg"
+      },
+      "21404": {
+        "volume": "4 L",
+        "image": "/media/production/ARAL-006_21404_4L.jpg",
+        "format": "jpg"
+      }
+    }
+  },
+  "ARAL-007": {
+    "variants": {
+      "16008": {
+        "volume": "1 L",
+        "image": "/media/production/ARAL-007_16008_1L.jpg",
+        "format": "jpg"
+      },
+      "16004": {
+        "volume": "4 L",
+        "image": "/media/production/ARAL-007_16004_4L.jpg",
+        "format": "jpg"
+      }
+    }
+  },
+  "ARAL-008": {
+    "variants": {
+      "10508": {
+        "volume": "1 L",
+        "image": "/media/production/ARAL-008_10508_1L.jpg",
+        "format": "jpg"
+      },
+      "10502": {
+        "volume": "208 L",
+        "image": "/media/production/ARAL-008_10502_208L.jpg",
+        "format": "jpg"
+      },
+      "10504": {
+        "volume": "4 L",
+        "image": "/media/production/ARAL-008_10504_4L.jpg",
+        "format": "jpg"
+      }
+    }
+  },
+  "ARAL-009": {
+    "variants": {
+      "15A8A": {
+        "volume": "1 L",
+        "image": "/media/production/ARAL-009_15A8A_1L.jpg",
+        "format": "jpg"
+      },
+      "15A8AD": {
+        "volume": "4 L",
+        "image": "/media/production/ARAL-009_15A8AD_4L.jpg",
+        "format": "jpg"
+      }
+    }
+  },
+  "ARAL-010": {
+    "variants": {
+      "15DBCC": {
+        "volume": "1 L",
+        "image": "/media/production/ARAL-010_15DBCC_1L.jpg",
+        "format": "jpg"
+      },
+      "15DBC5": {
+        "volume": "20 L",
+        "image": "/media/production/ARAL-010_15DBC5_20L.jpg",
+        "format": "jpg"
+      },
+      "15DBCE": {
+        "volume": "4 L",
+        "image": "/media/production/ARAL-010_15DBCE_4L.jpg",
+        "format": "jpg"
+      },
+      "15F477": {
+        "volume": "5 L",
+        "image": "/media/production/ARAL-010_15F477_5L.jpg",
+        "format": "jpg"
+      }
+    }
+  },
+  "ARAL-011": {
+    "variants": {
+      "15F474": {
+        "volume": "1 L",
+        "image": "/media/production/ARAL-011_15F474_1L.jpg",
+        "format": "jpg"
+      },
+      "160EC7": {
+        "volume": "5 L",
+        "image": "/media/production/ARAL-011_160EC7_5L.jpg",
+        "format": "jpg"
+      }
+    }
+  },
+  "ARAL-012": {
+    "variants": {
+      "15F45F": {
+        "volume": "1 L",
+        "image": "/media/production/ARAL-012_15F45F_1L.webp",
+        "format": "webp"
+      },
+      "15F460": {
+        "volume": "5 L",
+        "image": "/media/production/ARAL-012_15F460_5L.webp",
+        "format": "webp"
+      }
+    }
+  },
+  "ARAL-013": {
+    "variants": {
+      "23937": {
+        "volume": "208 L",
+        "image": "/media/production/ARAL-013_23937_208L.jpg",
+        "format": "jpg"
+      },
+      "13932": {
+        "volume": "20 L",
+        "image": "/media/production/ARAL-013_13932_20L.jpg",
+        "format": "jpg"
+      },
+      "10625": {
+        "volume": "5 L",
+        "image": "/media/production/ARAL-013_10625_5L.webp",
+        "format": "webp"
+      }
+    }
+  },
+  "ARAL-014": {
+    "variants": {
+      "1620": {
+        "volume": "20 L",
+        "image": "/media/production/ARAL-014_1620_20L.jpg",
+        "format": "jpg"
+      },
+      "11289": {
+        "volume": "208 L",
+        "image": "/media/production/ARAL-014_11289_208L.jpg",
+        "format": "jpg"
+      }
+    }
+  },
+  "ARAL-015": {
+    "variants": {
+      "11190": {
+        "volume": "208 L",
+        "image": "/media/production/ARAL-015_11190_208L.jpg",
+        "format": "jpg"
+      },
+      "22003": {
+        "volume": "20 L",
+        "image": "/media/production/ARAL-015_22003_20L.webp",
+        "format": "webp"
+      },
+      "22004": {
+        "volume": "5 L",
+        "image": "/media/production/ARAL-015_22004_5L.jpg",
+        "format": "jpg"
+      },
+      "2682": {
+        "volume": "60 L",
+        "image": "/media/production/ARAL-015_2682_60L.jpg",
+        "format": "jpg"
+      }
+    }
+  },
+  "ARAL-016": {
+    "variants": {
+      "22119": {
+        "volume": "208 L",
+        "image": "/media/production/ARAL-016_22119_208L.jpg",
+        "format": "jpg"
+      },
+      "11281": {
+        "volume": "20 L",
+        "image": "/media/production/ARAL-016_11281_20L.webp",
+        "format": "webp"
+      },
+      "14047": {
+        "volume": "60 L",
+        "image": "/media/production/ARAL-016_14047_60L.jpg",
+        "format": "jpg"
+      }
+    }
+  },
+  "ARAL-017": {
+    "variants": {
+      "90837": {
+        "volume": "1 L",
+        "image": "/media/production/ARAL-017_90837_1L.jpg",
+        "format": "jpg"
+      }
+    }
+  }
+}
