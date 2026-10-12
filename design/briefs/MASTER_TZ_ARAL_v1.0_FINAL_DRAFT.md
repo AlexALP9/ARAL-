@@ -998,3 +998,328 @@ product:
 Для массового обновления желательно иметь CSV/XLSX import или скрипт импорта.
 
 ---
+## 24. SEO
+
+Минимум:
+- уникальные title/description;
+- человекочитаемые URL;
+- sitemap.xml;
+- robots.txt;
+- canonical;
+- Open Graph;
+- Product structured data — только с реальными данными;
+- BreadcrumbList;
+- Organization;
+- индексируемые категории;
+- фильтры не должны создавать бесконечные дубли страниц.
+
+---
+
+## 25. Доступность
+
+- keyboard navigation;
+- focus states;
+- контраст;
+- alt-тексты;
+- логичная heading hierarchy;
+- формы с labels;
+- понятные ошибки;
+- mega-menu управляется клавиатурой;
+- motion не обязателен для доступа к контенту.
+
+---
+
+## 26. Performance
+
+Цели:
+- быстрый первый экран;
+- оптимизация LCP;
+- WebP/AVIF, где допустимо;
+- responsive images;
+- lazy load ниже fold;
+- анимации без scroll-jank;
+- 3D загружать лениво;
+- не загружать весь каталог на первой странице;
+- минимизировать тяжёлые third-party scripts.
+
+---
+
+## 27. Формы, приватность и безопасность
+
+- server-side validation;
+- антиспам;
+- согласие на обработку персональных данных;
+- политика конфиденциальности;
+- не хранить лишние персональные данные;
+- email-routing конфигурируемый;
+- никакие секреты/API keys не лежат в frontend.
+
+---
+
+## 28. Аналитика
+
+**[НУЖНО УТОЧНИТЬ]**
+- Яндекс Метрика;
+- цели по формам;
+- переходы «Где купить»;
+- compare usage;
+- product view;
+- search usage;
+- B2B/B2C route selection.
+
+Подключать только после решения по privacy/cookies.
+
+---
+
+## 29. Критерии приёмки
+
+### Design
+- все обязательные desktop/mobile экраны;
+- auto layout;
+- компоненты/variants;
+- единые tokens;
+- интерактивный prototype;
+- утверждённый hero сохранён по визуальному принципу;
+- сравнение соответствует утверждённому концепту;
+- контент не уплотнён;
+- все референсы помечены как inspiration, а не копируются 1:1.
+
+### Development
+- адаптив;
+- клавиатурная навигация;
+- реальные данные вместо demo;
+- каталог 100+ без деградации;
+- compare работает;
+- документы доступны;
+- нет выдуманных характеристик;
+- формы отправляются;
+- ошибки обработаны;
+- тест на desktop/mobile;
+- performance audit;
+- no broken links.
+
+---
+
+## 30. Запрещённые/нежелательные решения
+
+- EON EV как референс — исключён;
+- тяжёлый футуристический AI-стиль;
+- плотная компоновка без воздуха;
+- десятки микро-блоков в одном экране;
+- выдуманные характеристики товара;
+- неподтверждённые OEM-допуски;
+- фальшивые отзывы;
+- неподтверждённые бренды в «Нам доверяют»;
+- копирование чужого дизайна 1:1;
+- hover-only функциональность;
+- неоптимизированные 3D/видео;
+- фиктивный Oil Finder;
+- хардкод каталога в верстке.
+
+---
+
+## 31. Этапы проекта
+
+### Этап A — Data audit / Work mode
+- номенклатура;
+- PDS;
+- брендовые материалы;
+- адреса;
+- B2B-процесс;
+- референсы.
+
+### Этап B — Figma
+- foundations;
+- components;
+- desktop;
+- mobile;
+- prototypes;
+- design QA.
+
+### Этап C — Technical design
+- hosting audit;
+- stack;
+- data model;
+- content workflow;
+- integrations.
+
+### Этап D — Development
+- frontend;
+- content/data;
+- forms;
+- comparison;
+- catalog;
+- store locator;
+- SEO/accessibility.
+
+### Этап E — QA / launch
+- content verification;
+- responsive;
+- browsers;
+- speed;
+- forms;
+- analytics;
+- legal;
+- deployment.
+
+---
+
+## 32. Открытые вопросы / backlog
+
+1. Финальный текст первого экрана.
+2. Нужен ли личный кабинет как B2B/сервисная функция.
+3. Подбор масла v1: убрать / параметры / журнал допусков Германия 2026.
+4. Финальные email и телефоны для страницы «Контакты» и заявок.
+5. Полный подтверждённый список партнёрских точек и адресов Автовсячины.
+6. Точные URL конкретных товаров на Склад СПК и Автовсячине.
+7. Официальный brand guide ARAL и точные цвета/шрифты.
+8. Финальные категории каталога после сверки номенклатуры.
+9. Дополнительный PDF с допусками и спецификациями.
+10. Точный hosting stack.
+11. Нужна ли мультиязычность; архитектуру желательно оставить i18n-ready.
+12. Нужен ли реальный источник/контент для отзывов в v1.
+13. Правила/права использования логотипов автопроизводителей и официальных изображений.
+
+---
+
+# Приложение A. Матрица визуальных референсов
+
+## A1. LIQUI MOLY — hero
+Файл: `references/01_LIQUI_MOLY_hero_reference.png`
+
+Использовать:
+- hero composition;
+- крупный продукт;
+- whitespace;
+- сильную типографику;
+- быстрые сервисные действия.
+
+Не копировать брендовые формы/графику 1:1.
+
+## A2. STIHL — mega-menu
+Файл: `references/02_STIHL_megamenu_reference.png`
+
+Использовать:
+- полноширинную структуру;
+- много колонок;
+- чёткую иерархию;
+- smooth open/close.
+
+## A3. STIHL — каталог
+Файл: `references/03_STIHL_catalog_reference.png`
+
+Использовать:
+- минимализм;
+- фильтры;
+- воздушные карточки;
+- заметные, но редкие промо-метки.
+
+## A4. Dark automotive — storytelling
+Файл: `references/04_Dark_scroll_storytelling_reference.png`
+
+Использовать:
+- page-like scrolling;
+- крупную типографику;
+- тёмные акцентные секции;
+- custom cursor.
+
+## A5. Dark automotive — logos/testimonials
+Файл: `references/05_Dark_logos_testimonials_reference.png`
+
+Использовать:
+- монохромный marquee;
+- единый цвет логотипов;
+- крупные карточки отзывов.
+
+## A6. Layered cards
+Файл: `references/06_Layered_cards_reference.png`
+
+Использовать:
+- листание;
+- глубину;
+- hover/tap reveal;
+- только как teaser.
+
+## A7. Основной ARAL hero
+Файл: `references/07_Approved_main_hero_reference.png`
+
+**Статус: утверждено как основной визуальный ориентир первого экрана.**
+
+## A8. ARAL comparison
+Файл: `references/08_Approved_comparison_reference.png`
+
+**Статус: утверждено для финального черновика сайта.**
+
+## A9–A12. Working concepts
+- `09_Working_fullpage_concept_dense.png`
+- `11_Working_spacious_variant_A.png`
+- `12_Working_spacious_variant_B.png`
+
+Использовать только как историю поиска. Плотную компоновку из раннего fullpage-концепта не повторять.
+
+---
+
+# Приложение B. Ссылки
+
+Основные ссылки вынесены также в отдельный файл `WORK_MODE_TASKS_AND_LINKS.md`.
+
+- https://www.kaercher.com/us/en/
+- https://www.liqui-moly.com/en/
+- https://www.stihlusa.com/en
+- https://www.stihlusa.com/en/professional
+- https://www.aral-lubricants.de/en/
+- https://aral.az/ru/
+- https://ravenol.ru/
+- https://nomad-lubricants.ru/
+- https://centravtomasel.ru/search?pcode=aral
+- https://msdspds.aral.com/
+
+---
+
+# Приложение C. Правило работы с референсами
+
+Референсы нужны для определения:
+- структуры;
+- UX;
+- плотности;
+- motion;
+- компонентной логики.
+
+Они **не являются макетами для копирования**. Финальный ARAL должен быть самостоятельным дизайном.
+
+---
+
+# Приложение D. Визуальные материалы в документе
+
+## D1. LIQUI MOLY — hero
+![LIQUI MOLY hero reference](references/01_LIQUI_MOLY_hero_reference.png)
+
+## D2. STIHL — mega-menu
+![STIHL mega-menu reference](references/02_STIHL_megamenu_reference.png)
+
+## D3. STIHL — каталог
+![STIHL catalog reference](references/03_STIHL_catalog_reference.png)
+
+## D4. Scroll storytelling
+![Dark scroll storytelling reference](references/04_Dark_scroll_storytelling_reference.png)
+
+## D5. Logos / testimonials
+![Dark logos and testimonials reference](references/05_Dark_logos_testimonials_reference.png)
+
+## D6. Layered cards
+![Layered cards reference](references/06_Layered_cards_reference.png)
+
+## D7. Основной утверждённый hero ARAL
+![Approved ARAL main hero](references/07_Approved_main_hero_reference.png)
+
+## D8. Утверждённое сравнение ARAL
+![Approved ARAL comparison](references/08_Approved_comparison_reference.png)
+
+## D9. Рабочий fullpage-концепт — слишком плотный, не финальный
+![Working dense concept](references/09_Working_fullpage_concept_dense.png)
+
+## D10. Рабочий просторный вариант A
+![Working spacious variant A](references/11_Working_spacious_variant_A.png)
+
+## D11. Рабочий просторный вариант B
+![Working spacious variant B](references/12_Working_spacious_variant_B.png)
