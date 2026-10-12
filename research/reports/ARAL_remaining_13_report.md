@@ -998,3 +998,193 @@
 **Ваши SKU и объёмы:** 23937 — 208 л; 13932 — 20 л; 10625 — 5 л.
 
 Фасовки взяты только из задания. Внешнее подтверждение точного SKU/объёма: не установлено; остальные связи не исправлены.
+**PDS:** [2026-02-12](https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=b5e0c342bd380e867e04b08bb526bffb&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_megaturboral_10w-40_germany_german_pdb_456130.pdf); рынок Germany, язык de; ключ документа 456130; официальный product code в теле PDS не найден.
+
+**Описание — русский пересказ:** Масло для дизелей коммерческой техники и длительных интервалов замены; рассчитано на требования производителей и европейские испытания.
+
+**Применение — русский пересказ:** Грузовые автомобили, строительная и сельскохозяйственная техника Euro 2–6, которым не требуется Low SAPS и подходят перечисленные спецификации; соблюдать руководство.
+
+**Преимущества — русский пересказ:**
+
+- Стабильная масляная плёнка уменьшает износ.
+- Хорошие свойства при холодном запуске.
+- Резерв свойств при высокосернистом дизельном топливе.
+- Интервалы до 120 000 км при разрешении изготовителя.
+
+**Performance выбранного PDS:**
+
+| Категория | Значения / исходная формулировка |
+|---|---|
+| API | API CI-4 |
+| ACEA | ACEA E4, E7 |
+| Official approval | — |
+| Meets / fulfils | — |
+| Recommended for | — |
+| Application reference | Euro 2/3/4/5/6; не Low SAPS |
+| Performance level — OEM без однозначной маркировки approval | Cummins CES 20077, CES 20078; DDC Powerguard 93K215; Deutz DQC III-18; DTFR 15B120; Mack EO-N; MAN M 3277; MTU Oil Category 3; RVI RLD-2; Volvo VDS-3 |
+| Other | JASO DH-1 |
+
+**Все Typical Characteristics выбранного PDS:**
+
+| Показатель | Метод | Единица | Значение |
+|---|---|---|---|
+| Плотность при 15 °C | ASTM D4052 | g/ml | 0.868 |
+| Кинематическая вязкость при 100 °C | ASTM D445 | mm²/s | 14.8 |
+| Динамическая вязкость CCS при −25 °C | ASTM D5293 | mPa.s (cP) | 6100 |
+| Кинематическая вязкость при 40 °C | ASTM D445 | mm²/s | 98 |
+| Сульфатная зольность | ASTM D874 | % wt | 1.83 |
+| Общее щелочное число, TBN | ASTM D2896 | mg KOH/g | 12.7 |
+| Температура застывания (Pour Point) | ASTM D97 | °C | -42 |
+
+**Другие официальные PDS:**
+
+- [Дата не прочитана · Global / en](https://www.aral-lubricants.de/en/datasheets/automotive?cHash=78aee20713dcaf1013bd464e98a8ccaf&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_megaturboral_10w-40_global_english_pdb_456130.pdf) — ссылка найдена, документ не открылся.
+
+**SDS — отдельный документ:**
+
+[2025-10-13](https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=c8ea456be6fe7b176ddbe8c5459cd81f&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_megaturboral_10w-40_germany_german-de_sdb_456130.pdf); версия 11; product code **456130-DE01**; Germany, de. Доступ: official_pdf_text_read.
+
+Доступные свойства смеси. Отдельные свойства ингредиентов не являются свойствами готового масла и не перенесены.
+
+| Section 9: свойство смеси | Значение | Единица | Метод, если указан |
+|---|---|---|---|
+| Агрегатное состояние | жидкость | — | — |
+| Цвет | янтарный | — | — |
+| Кинематическая вязкость, 40 °C | 98.3 | mm²/s | — |
+| Кинематическая вязкость, 100 °C | 14–15.1 | mm²/s | — |
+| Плотность, 15 °C | <1000 | kg/m³ | — |
+| Растворимость в воде | нерастворимо | — | — |
+| Pour Point | -39 | °C | — |
+| Температура вспышки, открытый тигель | 215 | °C | ASTM D92 |
+
+**Безопасность:** Кожный сенсибилизатор: возможна аллергическая реакция кожи. SDS предписывает защитные перчатки и избегание вдыхания паров. Полная информация — в SDS.
+
+**Изображение:** `image_missing=true`: пригодный официальный packshot не подтверждён.
+
+**Журнал 2026:** не предоставлен; сравнение не выполнялось.
+
+**Примечания:**
+
+- SDS KV40 98.3 против PDS 98 — небольшое различие; KV100 14.8 входит в 14–15.1. Pour Point −42/−39 °C сохранены отдельно; метод SDS не указан. SDS-вспышка 215 °C не добавлена в PDS.
+- По SDS смесь имеет классификацию Skin Sens. 1 / H317. Это отдельная запись безопасности.
+
+### Aral MegaTurboral LA 10W-40
+
+**Официальное название:** Aral MegaTurboral LA 10W-40. **SAE:** 10W-40. **Класс ассортимента:** Truck. **Статус данных:** manual_review; **идентичность:** verified, confidence=high.
+
+**Ваши SKU и объёмы:** 1620 — 20 л; 11289 — 208 л.
+
+Фасовки взяты только из задания. Внешнее подтверждение точного SKU/объёма: не установлено; остальные связи не исправлены.
+
+**PDS:** [2025-03-25](https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=9fa6e1148a24d46da58db55221344d97&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_megaturboral_la_10w-40_germany_german_pdb_463176.pdf); рынок Germany, язык de; ключ документа 463176; официальный product code в теле PDS не найден.
+
+**Описание — русский пересказ:** Масло с пониженным содержанием сульфатной золы, фосфора и серы для двигателей Euro 4–6 с очисткой выхлопа.
+
+**Применение — русский пересказ:** Коммерческие дизели с системами очистки выхлопа, особенно с сажевыми фильтрами, которым предписан Low SAPS.
+
+**Преимущества — русский пересказ:**
+
+- Low SAPS поддерживает очистку выхлопа и соответствие требованиям Euro 4–6.
+- Технология синтеза позволяет увеличивать интервалы по правилам OEM, сокращая обслуживание и простои.
+- Уменьшает износ и поддерживает ресурс агрегатов.
+- Моющие присадки препятствуют отложениям.
+- Диспергирующие присадки удерживают сажу, ограничивая загущение и абразивный износ.
+
+**Performance выбранного PDS:**
+
+| Категория | Значения / исходная формулировка |
+|---|---|
+| API | API CJ-4 |
+| ACEA | ACEA E6, E7, E8, E9, E11 |
+| Official approval | — |
+| Meets / fulfils | Meets requirements of- MAN M 3271-1, M 3477 |
+| Recommended for | For Iveco trucks requiring ACEA E6, E7, E8, E9, E11; For DAF trucks requiring ACEA E6, E7, E8, E9, E11 |
+| Application reference | — |
+| Performance level — OEM без однозначной маркировки approval | CAT ECF-3; Cummins CES 20081; Deutz DQC IV-18 LA; DTFR 15C110; Mack EO-O Premium Plus, EOS-4.5; MTU Oil Category 3.1; RVI RLD-3; Volvo CNG, VDS-4.5 |
+| Other | JASO DH-2 |
+
+**Все Typical Characteristics выбранного PDS:**
+
+| Показатель | Метод | Единица | Значение |
+|---|---|---|---|
+| Плотность при 15 °C | ASTM D1298 | g/ml | 0.86 |
+| Кинематическая вязкость при 100 °C | ASTM D445 | mm²/s | 13.7 |
+| Кинематическая вязкость при 40 °C | ASTM D445 | mm²/s | 99 |
+| Динамическая вязкость CCS при −25 °C | ASTM D5293 | mPa.s (cP) | 6100 |
+| Индекс вязкости | ASTM D2270 | безразмерно | 138 |
+| Сульфатная зольность | ASTM D874 | % wt | 0.96 |
+| Общее щелочное число, TBN | ASTM D2896 | mg KOH/g | 9.6 |
+| Температура застывания (Pour Point) | ASTM D97 | °C | -42 |
+
+**Другие официальные PDS:**
+
+- [Дата не прочитана · Global / en](https://www.aral-lubricants.de/en/datasheets/automotive?cHash=83e937df9d1a71b68031a2361c18511c&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_megaturboral_la_10w-40_global_english_pdb_463176.pdf) — ссылка найдена, документ не открылся.
+
+**SDS — отдельный документ:**
+
+[2026-04-07](https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=4144d7670fedd3e402bb73510c9718e3&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_megaturboral_la_10w-40_germany_german-de_sdb_463176.pdf); версия 9; product code **463176-DE01**; Germany, de. Доступ: official_pdf_text_read.
+
+Доступные свойства смеси. Отдельные свойства ингредиентов не являются свойствами готового масла и не перенесены.
+
+| Section 9: свойство смеси | Значение | Единица | Метод, если указан |
+|---|---|---|---|
+| Агрегатное состояние | жидкость | — | — |
+| Цвет | тёмно-янтарный | — | — |
+| Кинематическая вязкость, 40 °C | 100.9 | mm²/s | — |
+| Кинематическая вязкость, 100 °C | 14.2–15.2 | mm²/s | — |
+| Плотность, 15 °C | <1000 | kg/m³ | — |
+| Растворимость в воде | нерастворимо | — | — |
+| Pour Point | -36 | °C | — |
+| Температура вспышки, закрытый тигель | 202 | °C | ASTM D93 |
+| Температура вспышки, открытый тигель | 233 | °C | ASTM D92 |
+
+**Безопасность:** По разделу 2 смесь не классифицирована как опасная; дополнительная маркировка предупреждает о возможной аллергической реакции. Полная информация — в SDS.
+
+**Изображение:** `image_missing=true`: пригодный официальный packshot не подтверждён.
+
+**Журнал 2026:** не предоставлен; сравнение не выполнялось.
+
+**Примечания:**
+
+- SDS KV40 100.9 против PDS 99; плотность PDS согласуется с ограничением SDS. Отличия KV100 и Pour Point требуют проверки редакции.
+
+**Конфликты — не исправлены автоматически:**
+
+| Поле | Основной PDS | Другой источник | Ссылка |
+|---|---|---|---|
+| kv100 | 13.7 mm²/s | 14.2–15.2 mm²/s | [Источник](https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=4144d7670fedd3e402bb73510c9718e3&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_megaturboral_la_10w-40_germany_german-de_sdb_463176.pdf) |
+| pour | -42 °C | -36 °C | [Источник](https://www.aral-lubricants.de/datenblaetter/automotiv?cHash=4144d7670fedd3e402bb73510c9718e3&tx_datasheet_datasheet%5Baction%5D=downloadPdf&tx_datasheet_datasheet%5Bcontroller%5D=Datasheet&tx_datasheet_datasheet%5Bkey%5D=aral_megaturboral_la_10w-40_germany_german-de_sdb_463176.pdf) |
+
+- Значение PDS вне диапазона SDS для того же названия, SAE и базового кода. Это не совместимое представление точки и диапазона; требуется подтверждение редакции.
+- Дополнительное расхождение; метод SDS не указан. Не заменяет PDS и само по себе не доказывает другой продукт.
+
+## Verified
+
+Нет продуктов без примечаний. Точная идентичность названия/SAE подтверждена у всех 13; общий статус оценивает также технические разночтения.
+
+## Review notes
+
+- Aral BlueTronic II 10W-40 — данные выбранного PDS пригодны с примечаниями карточки.
+- Aral HighTronic J 5W-30 — данные выбранного PDS пригодны с примечаниями карточки.
+- Aral HighTronic R 5W-30 — данные выбранного PDS пригодны с примечаниями карточки.
+- Aral SuperTronic G 0W-40 — данные выбранного PDS пригодны с примечаниями карточки.
+- Aral SuperTronic K 5W-30 — данные выбранного PDS пригодны с примечаниями карточки.
+- Aral SuperTronic Longlife III 0W-30 — данные выбранного PDS пригодны с примечаниями карточки.
+- Aral SuperTronic Longlife IV FE 0W-20 — данные выбранного PDS пригодны с примечаниями карточки.
+- Aral MegaTurboral 10W-40 — данные выбранного PDS пригодны с примечаниями карточки.
+
+Общие незавершённые части: журнал 2026, полные оригинальные описательные тексты/переводы, визуальная проверка изображений. Они явно отмечены и не выданы за выполненную сверку.
+
+## Manual review
+
+- **HighTronic 5W-40:** разные таблицы DE/EN PDS (например, KV40 79/86 и KV100 13.5/14.0). DE KV100 также вне диапазона SDS.
+- **HighTronic F 5W-30:** PDS одной даты дают Pour Point −42/−33 °C и разные вязкости. Нужна применимая к поставке редакция.
+- **HighTronic M 5W-40:** PDS одной даты дают KV40 70/81 и VI 188/170; это не округление.
+- **SuperTronic E 0W-30:** в EN PDS 2025 года Performance ACEA C2, но Application A5/B5; прежний DE PDS указывает A5/B5 и другие свойства.
+- **MegaTurboral LA 10W-40:** PDS KV100 13.7 вне SDS 14.2–15.2 mm²/s; дополнительно Pour Point −42/−36 °C. Требуется согласование актуальной редакции.
+
+Для этих пяти продуктов `manual_review=true`, `technical_publication_allowed=false`. SKU, SAE, названия и исходные значения не изменены.
+
+## PDS not found
+
+Нет. Официальный PDS найден для каждого из 13 продуктов.
