@@ -2,18 +2,31 @@
 
 Рабочий репозиторий проекта монобрендового сайта ARAL.
 
-## Текущий статус
+## Статус переноса
+- Найдено в ChatGPT Project: **118** файлов/артефактов.
+- Текстовые слои, отчёты, ТЗ, промты и архивные версии перенесены и структурированы.
+- В репозитории сейчас **55 файлов**.
+- Бинарные исходники (XLSX/PDF/DOCX/ZIP/изображения) перечислены в `PROJECT_FILE_INVENTORY.md`; часть из них требует ручной загрузки из-за ограничения текущего GitHub-коннектора на прямой raw-byte перенос из Project Files.
+- Текущий production/public слой, созданный локально в Codex/Work, отсутствует в Project Files и перечислен в `MISSING_FILES.md`.
+
+## Текущий проект
 - 17 продуктов
 - 47 SKU / вариантов фасовки
-- `current/` — актуальные зафиксированные слои данных
-- `archive/` — устаревшие версии
-- `research/` — PDS и исследовательские материалы
-- `design/` — ТЗ, брифы, промты и визуальные референсы
+- `current/master/` — frozen technical source of truth
+- `current/content/` — актуальный content layer
+- `current/media/` — текущие доступные media manifests/maps/reports
+- `current/catalog/` — место для production/public catalog после загрузки недостающих файлов
+- `archive/` — старые версии
+- `research/` — исследования и PDS-материалы
+- `design/` — ТЗ, ветки, Figma briefs, workflow/prompts
 
-## Правила
-- `ARAL_PRODUCT_MASTER_v1.2` — frozen source of truth, не редактировать напрямую.
-- Для Figma/frontend использовать публичный каталог и production media, когда они добавлены в `current/catalog/`.
-- Не подменять отсутствующие актуальные файлы старыми версиями.
-- Технический статус продукта и медиа-одобрение независимы.
+## Ключевые правила
+- `ARAL_PRODUCT_MASTER_v1.2` — **FROZEN / READ ONLY**.
+- Не подменять отсутствующие актуальные production/public файлы старыми версиями.
+- Для Figma/frontend использовать `ARAL_PUBLIC_CATALOG_v1` + `ARAL_PRODUCTION_MEDIA_MAP_v1` + `media/production/`, когда они будут добавлены.
+- Медиа-одобрение не меняет технический статус продукта.
 
-См. `PROJECT_FILE_INVENTORY.md` и `MISSING_FILES.md`.
+## Навигация
+- `PROJECT_FILE_INVENTORY.md` — полный список Project Files и статус переноса.
+- `MISSING_FILES.md` — чего не хватает для полного handoff в Figma/frontend.
+- `SECURITY_NOTES.md` — заметки по публичному репозиторию.
