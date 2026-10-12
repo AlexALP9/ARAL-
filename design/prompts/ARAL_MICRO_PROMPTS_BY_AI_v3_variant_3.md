@@ -997,3 +997,720 @@ official name, short description, Description RU, Performance, Application, Adva
 
 ```text
 Используй только официальные материалы ARAL, утверждённую листовку и официальный сайт.
+Сначала покажи, какие факты реально подтверждены.
+
+Если источники расходятся — спроси, какой считаем приоритетным.
+
+После этого напиши краткий блок «О бренде» без энциклопедической перегрузки.
+```
+
+## GPT-08 — microcopy
+
+```text
+Подготовь microcopy для:
+search, filters, compare, empty states, errors, forms, success, where to buy, PDS downloads.
+
+Перед массовой работой задай вопросы по tone of voice, если он ещё не закреплён.
+
+Не использовать шутливый стиль, если он не согласован.
+```
+
+## GPT-09 — SEO content
+
+```text
+Сначала проверь, какие страницы и данные подтверждены.
+
+Не создавай schema markup с выдуманными price/availability.
+
+Подготовь:
+title templates, meta description templates, category SEO, product SEO, Open Graph rules, schema recommendations.
+
+Если URL structure ещё не утверждена — сначала задай вопрос.
+```
+
+## GPT-10 — content QA
+
+```text
+Проверь весь подготовленный контент против официальных PDS и MASTER_TZ_ARAL.md.
+
+Ищи:
+- неподтверждённые свойства;
+- терминологические расхождения;
+- тавтологии;
+- слишком рекламные утверждения;
+- разные варианты названий одного продукта.
+
+Сначала выдай отчёт.
+Не исправляй технические данные без подтверждения источника.
+```
+
+
+# 5. CODEX
+
+## Роль
+Codex — техническая архитектура, репозиторий, разработка и тесты. Код начинать только после достаточной определённости Figma, данных и хостинга.
+
+## CODEX-01 — изучить материалы, не писать код
+
+**Прикрепить:** `MASTER_TZ_ARAL.md`, Figma handoff, `ARAL_catalog_enriched.xlsx`
+
+```text
+Пока не пиши код.
+
+Изучи:
+- ТЗ;
+- Figma;
+- товарную модель.
+
+Выведи:
+- известные требования;
+- неизвестные технические параметры;
+- зависимости от хостинга;
+- потенциальные интеграции;
+- риски.
+
+Задай только блокирующие вопросы.
+Не более 7 за один заход.
+```
+
+## CODEX-02 — ADR / варианты архитектуры
+
+```text
+На основе ответов подготовь 2–3 архитектурных варианта.
+
+Для каждого:
+- frontend;
+- backend;
+- data storage;
+- content workflow;
+- PDS storage;
+- search;
+- compare;
+- forms;
+- deployment;
+- maintenance.
+
+Сравни:
+- сложность;
+- стоимость поддержки;
+- ограничения хостинга;
+- масштабирование.
+
+Дай рекомендацию, но не начинай реализацию.
+Спроси, какой вариант утверждаем.
+```
+
+## CODEX-03 — repository plan
+
+```text
+Для утверждённой архитектуры предложи структуру репозитория.
+
+Покажи:
+- folders;
+- data;
+- components;
+- routes;
+- services;
+- tests;
+- docs;
+- scripts.
+
+Не создавай файлы до моего подтверждения структуры.
+```
+
+## CODEX-04 — scaffold
+
+```text
+Теперь создай только базовый scaffold проекта.
+
+Не реализуй все страницы сразу.
+
+После создания:
+- install;
+- lint;
+- typecheck;
+- build.
+
+Покажи результат и список созданных файлов.
+Если есть ошибка — исправь её до следующего этапа.
+```
+
+## CODEX-05 — data model
+
+```text
+Реализуй product data model по ТЗ.
+
+Перед кодом сравни её с ARAL_catalog_enriched.xlsx.
+
+Если поле непонятно — спроси.
+
+Нужно поддержать:
+official name, series, category, SAE, description, performance,
+application, advantages, characteristics, packaging, images, PDS,
+source, date, compare.
+
+Добавь validation.
+```
+
+## CODEX-06 — import pipeline
+
+```text
+Создай импорт XLSX/CSV в структурированную товарную модель.
+
+Сначала покажи mapping.
+
+Не удаляй неизвестные поля молча.
+
+Для ошибок:
+invalid / missing / duplicate / manual_review.
+
+Добавь dry-run режим.
+
+Сначала запусти dry-run и покажи отчёт.
+```
+
+## CODEX-07 — design tokens / UI foundation
+
+```text
+Реализуй tokens и базовые компоненты по Figma handoff.
+
+Не придумывай новые стили.
+
+Сначала:
+typography, colors, spacing, buttons, focus states, containers.
+
+Проверь desktop/mobile.
+Не переходи к страницам до successful visual sanity check.
+```
+
+## CODEX-08 — Header + Mega-menu
+
+```text
+Реализуй header и mega-menu строго по утверждённому Figma.
+
+Нужно:
+desktop, keyboard, focus, Escape, mobile drawer, reduced motion.
+
+Не добавляй пункты, которых нет в утверждённой структуре.
+
+Добавь тесты взаимодействия.
+```
+
+## CODEX-09 — Home page
+
+```text
+Реализуй только утверждённые блоки главной.
+
+Не добавляй декоративные эффекты сверх Figma.
+
+Для каждого сложного motion:
+- проверь performance;
+- reduced motion;
+- touch behavior.
+
+После этапа покажи список реализованных блоков и расхождения с Figma, если они есть.
+```
+
+## CODEX-10 — Catalog
+
+```text
+Реализуй catalog на structured data.
+
+Нужно:
+grid, filters, sorting, search, compare add, URL state, loading, empty, error.
+
+Не использовать hardcoded список товаров.
+
+Если pagination/load more ещё не утверждены — остановись и спроси.
+```
+
+## CODEX-11 — Product Detail
+
+```text
+Реализуй product detail.
+
+Выводить только существующие поля.
+Если поля нет — секция не должна показывать выдуманный placeholder в production.
+
+Нужно:
+PDS download, performance, application, compare, where to buy.
+
+Добавь SEO metadata из реальных данных.
+```
+
+## CODEX-12 — Comparison
+
+```text
+Реализуй approved comparison UX.
+
+Нужно:
+add/remove, max 4, badge, tray, clear all, compare table, persistence,
+mobile, empty/one-item states.
+
+Если share/print технически не определены — спроси до реализации.
+
+Добавь тесты state persistence.
+```
+
+## CODEX-13 — B2B + forms
+
+```text
+Реализуй только утверждённые B2B блоки и формы.
+
+До подключения отправки проверь:
+SMTP/API, адреса получателей, validation, consent, anti-spam.
+
+Если хоть одного параметра нет — не выдумывай.
+Сделай interface layer и запроси данные.
+```
+
+## CODEX-14 — Where to buy
+
+```text
+Реализуй store locator только на утверждённых данных.
+
+Если map provider ещё не выбран — предложи варианты и остановись.
+
+Не внедряй API без согласования.
+
+Поддержать:
+list, map, filters, directions, external channels.
+```
+
+## CODEX-15 — Global Search
+
+```text
+Реализуй поиск по:
+name, series, viscosity, SAE, API, ACEA, OEM, category.
+
+Сначала покажи индексируемые поля.
+
+Если нужен сторонний search engine — объясни зачем и спроси согласование.
+```
+
+## CODEX-16 — Responsive QA
+
+```text
+Проведи адаптивный QA:
+1440/1600, 1024, 430, 390 и промежуточные ширины.
+
+Проверь:
+mega-menu, filters, compare, tables, forms, map, animation.
+
+Сначала выдай список проблем.
+Исправь только подтверждённые расхождения.
+```
+
+## CODEX-17 — Accessibility
+
+```text
+Проведи accessibility audit.
+
+Проверить:
+keyboard, focus, semantic headings, labels, aria, contrast,
+reduced motion, screen-reader behavior.
+
+Если visual fix конфликтует с Figma — сначала покажи проблему и спроси согласование.
+```
+
+## CODEX-18 — Performance
+
+```text
+Проведи performance audit.
+
+Проверь:
+LCP, images, lazy load, JS, animation, 3D, fonts, third-party scripts.
+
+Не жертвуй утверждённым качеством изображений без объяснения.
+
+Сначала покажи bottlenecks и предложи варианты.
+```
+
+## CODEX-19 — SEO technical
+
+```text
+Реализуй:
+sitemap, robots, canonical, OG, structured data, breadcrumbs.
+
+Не публикуй price/availability schema, если этих данных нет.
+
+Проверь фильтры на duplicate indexing.
+```
+
+## CODEX-20 — staging build
+
+```text
+Подготовь staging build.
+
+Не публикуй production.
+
+Перед staging:
+lint, typecheck, tests, build, broken links, forms in safe mode.
+
+Покажи итоговый QA report.
+Спроси отдельное подтверждение перед любым production deploy.
+```
+
+# 6. DEEPSEEK
+
+## Роль
+DeepSeek — независимый технический критик. Не должен автоматически переписывать проект.
+
+## DEEP-01 — review ADR
+
+**Прикрепить:** `MASTER_TZ_ARAL.md`, ADR Codex.
+
+```text
+Прочитай MASTER_TZ_ARAL.md и ADR Codex.
+
+Не предлагай новую архитектуру сразу.
+
+Найди:
+- риски;
+- избыточность;
+- скрытые зависимости;
+- проблемы поддержки.
+
+Для каждого:
+severity, evidence, почему проблема, требуется ли вопрос пользователю.
+
+Если данных не хватает — задай вопрос.
+```
+
+## DEEP-02 — review data model
+
+```text
+Проверь product data model против:
+MASTER_TZ_ARAL.md и ARAL_catalog_enriched.xlsx.
+
+Ищи:
+- потерю источников;
+- отсутствие версионности;
+- неудобство PDS updates;
+- проблемы сравнения;
+- проблемы фильтров.
+
+Не меняй модель без обоснования.
+```
+
+## DEEP-03 — review import pipeline
+
+```text
+Проверь import pipeline.
+
+Ищи:
+- silent data loss;
+- duplicate handling;
+- invalid normalization;
+- неправильное объединение SKU;
+- отсутствие audit trail.
+
+Дай test cases.
+```
+
+## DEEP-04 — frontend architecture review
+
+```text
+Проверь структуру frontend.
+
+Ищи:
+- hardcode;
+- duplicated components;
+- state leakage;
+- слабое разделение data/UI;
+- responsive risks.
+
+Не предлагай полный rewrite, если можно исправить локально.
+```
+
+## DEEP-05 — compare review
+
+```text
+Проверь compare implementation.
+
+Сравни с утверждённым UX.
+
+Проверить:
+max 4, persistence, remove/clear, mobile, empty states,
+incompatible fields, share/print.
+
+Все отклонения ранжируй по severity.
+```
+
+## DEEP-06 — forms/security
+
+```text
+Проверь формы и backend interaction.
+
+Ищи:
+validation, spam, secret exposure, PII, CSRF, rate limiting, logging.
+
+Не делай предположений об инфраструктуре.
+Если параметр неизвестен — спроси.
+```
+
+## DEEP-07 — accessibility/performance
+
+```text
+Сделай независимый аудит accessibility и performance.
+
+Не ограничивайся общими советами.
+
+Для каждого замечания:
+- место;
+- impact;
+- severity;
+- конкретное исправление.
+
+Отдели must-fix от nice-to-have.
+```
+
+## DEEP-08 — final code audit
+
+```text
+Проверь готовый проект против MASTER_TZ_ARAL.md.
+
+Составь матрицу:
+требование / реализовано / частично / нет / evidence.
+
+Сначала выдай только расхождения.
+
+Не предлагай production deploy.
+```
+
+# 7. VS CODE
+
+## Роль
+VS Code — не отдельный ИИ, а рабочая среда проекта и контроль изменений.
+
+## VSCODE-01 — структура
+
+Поддерживать:
+
+```text
+/docs
+  MASTER_TZ_ARAL.md
+  DECISION_LOG.md
+  ADR.md
+  CONTENT_RULES.md
+
+/data
+  ARAL_catalog_raw.xlsx
+  ARAL_catalog_enriched.xlsx
+
+/public/docs/pds
+
+/src
+/tests
+/scripts
+```
+
+## VSCODE-02 — git workflow
+
+Перед каждым крупным этапом:
+
+```text
+git status
+git pull
+создать отдельную feature branch
+после изменений посмотреть git diff
+запустить тесты
+только потом commit
+```
+
+Примеры веток:
+
+```text
+feat/header-megamenu
+feat/catalog
+feat/product-detail
+feat/compare
+feat/b2b
+feat/store-locator
+chore/data-import
+fix/accessibility
+fix/performance
+```
+
+## VSCODE-03 — контроль каждого изменения Codex
+
+```text
+1. Открой git diff.
+2. Проверь, не изменены ли несвязанные файлы.
+3. Проверь, не появился ли hardcode товарных данных.
+4. Проверь, не добавлены ли секреты.
+5. Запусти lint/typecheck/tests/build.
+6. Только после этого принимай изменение.
+```
+
+# 8. ПРАВИЛЬНАЯ ОЧЕРЁДНОСТЬ ВСЕГО ПРОЕКТА
+
+## Фаза A — данные
+1. WORK-01
+2. WORK-02
+3. WORK-03
+4. WORK-04
+5. WORK-05
+6. WORK-06
+7. WORK-07
+8. WORK-08
+9. WORK-15
+10. WORK-16
+
+На выходе:
+- каталог;
+- PDS;
+- словарь;
+- точки продаж.
+
+## Фаза B — research
+1. WORK-09 Kärcher
+2. WORK-10 LIQUI MOLY
+3. WORK-11 STIHL
+4. WORK-12 RAVENOL
+5. WORK-13 aral.az
+6. WORK-14 NOMAD
+7. PERP-01…06
+
+## Фаза C — фиксация решений
+1. GPT-01
+2. GPT-02
+
+## Фаза D — Figma
+1. FIGMA-01
+2. FIGMA-02
+3. FIGMA-03
+4. FIGMA-04
+5. FIGMA-05
+6. FIGMA-06
+7. FIGMA-07
+8. FIGMA-08
+9. FIGMA-09
+10. FIGMA-10
+11. FIGMA-11
+12. FIGMA-12
+13. FIGMA-13
+14. FIGMA-14
+15. FIGMA-15
+16. FIGMA-16
+17. FIGMA-17
+18. FIGMA-18
+19. FIGMA-19
+20. FIGMA-20
+
+## Фаза E — контент
+1. GPT-03
+2. GPT-04
+3. GPT-05
+4. GPT-06
+5. GPT-07
+6. GPT-08
+7. GPT-09
+8. GPT-10
+
+## Фаза F — техническое решение
+1. WORK-17 hosting audit
+2. CODEX-01
+3. CODEX-02
+4. DEEP-01
+5. утверждение архитектуры
+
+## Фаза G — разработка
+1. CODEX-03
+2. CODEX-04
+3. CODEX-05
+4. CODEX-06
+5. CODEX-07
+6. CODEX-08
+7. CODEX-09
+8. CODEX-10
+9. CODEX-11
+10. CODEX-12
+11. CODEX-13
+12. CODEX-14
+13. CODEX-15
+
+После ключевых частей запускать соответствующий DeepSeek review.
+
+## Фаза H — QA
+1. CODEX-16
+2. CODEX-17
+3. CODEX-18
+4. CODEX-19
+5. DEEP-06
+6. DEEP-07
+7. DEEP-08
+8. GPT-10 content QA
+9. CODEX-20 staging
+
+Production — только после отдельного подтверждения пользователя.
+
+# 9. МАТРИЦА: КАКОЙ ФАЙЛ КУДА
+
+| Файл | Work | Perplexity | Figma | ChatGPT | Codex | DeepSeek |
+|---|---:|---:|---:|---:|---:|---:|
+| MASTER_TZ_ARAL.md | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| FIGMA_BRANCH_BRIEF.md | research | — | ✅ | ✅ | ✅ | optional |
+| WORK_MODE_TASKS_AND_LINKS.md | ✅ | — | — | ✅ | — | — |
+| 01_LIQUI_MOLY_hero_reference.png | ✅ | optional | ✅ | optional | — | — |
+| 02_STIHL_megamenu_reference.png | ✅ | optional | ✅ | optional | — | — |
+| 03_STIHL_catalog_reference.png | ✅ | optional | ✅ | optional | — | — |
+| 04_Dark_scroll_storytelling_reference.png | — | optional | ✅ | optional | — | — |
+| 05_Dark_logos_testimonials_reference.png | — | optional | ✅ | optional | — | — |
+| 06_Layered_cards_reference.png | — | optional | ✅ | optional | — | — |
+| 07_Approved_main_hero_reference.png | ✅ | — | ✅ PRIORITY | ✅ | ✅ | optional |
+| 08_Approved_comparison_reference.png | ✅ | optional | ✅ PRIORITY | ✅ | ✅ | ✅ |
+| 10_BlueTronic_5W40_techsheet_example.pdf | ✅ | — | optional | ✅ | example | optional |
+| ARAL_catalog_raw.xlsx | ✅ | — | optional | ✅ | ✅ | ✅ |
+| ARAL_catalog_enriched.xlsx | ✅ | — | ✅ content | ✅ | ✅ | ✅ |
+| ARAL_TERMINOLOGY_EN_RU.md | ✅ | — | ✅ | ✅ | ✅ | optional |
+| Figma handoff | — | — | source | ✅ | ✅ | ✅ |
+| Hosting info | ✅ | — | — | — | ✅ | ✅ |
+| ADR.md | — | — | — | ✅ | ✅ | ✅ |
+
+# 10. КОНТРОЛЬНЫЙ ПРОМТ ПЕРЕД СЛЕДУЮЩИМ ЭТАПОМ
+
+```text
+Перед переходом к следующему этапу проведи проверку.
+
+1. Какие решения уже подтверждены мной?
+2. Какие данные всё ещё неизвестны?
+3. Есть ли противоречия между источниками?
+4. Использовал ли ты где-нибудь предположение как факт?
+5. Есть ли вопрос, который правильнее задать сейчас, чем исправлять потом?
+6. Что именно будет считаться готовым результатом текущего этапа?
+
+Если есть блокирующий вопрос — сначала задай его.
+Не переходи дальше автоматически.
+```
+
+# 11. ЧТО ИИ НЕ ДОЛЖЕН РЕШАТЬ БЕЗ ПОЛЬЗОВАТЕЛЯ
+
+Всегда требуется отдельное подтверждение пользователя, если предлагается:
+
+- менять утверждённый hero;
+- менять утверждённое сравнение;
+- менять B2B/B2C 70/30;
+- добавлять корзину;
+- добавлять личный кабинет;
+- включать цены;
+- подключать наличие;
+- выбирать источник Oil Finder;
+- утверждать B2B-услуги;
+- публиковать отзывы;
+- публиковать партнёрские логотипы;
+- утверждать юридические тексты;
+- выбирать окончательный production stack;
+- менять хостинг;
+- подключать платные сервисы;
+- публиковать production.
+
+# 12. БЫСТРАЯ ШПАРГАЛКА
+
+Если задача требует ходить по сайту → **Work**.  
+Если нужно искать внешние примеры и проверять рынок → **Perplexity**.  
+Если нужно рисовать UX/UI → **Figma**.  
+Если нужно сводить решения или писать тексты → **ChatGPT**.  
+Если нужно писать/менять код → **Codex**.  
+Если нужен независимый критический аудит архитектуры или кода → **DeepSeek**.  
+Если нужно проверять файлы, diff и git → **VS Code**.
