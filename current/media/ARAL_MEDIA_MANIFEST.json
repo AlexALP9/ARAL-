@@ -997,4 +997,1310 @@
         "preview_cell": "H22",
         "archive_member": "xl/media/image21.jpg",
         "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."      },
+      "original": {
+        "file": "media/originals/ARAL-007_16004_4L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 173518,
+        "sha256": "98daa6fa18f13cc268fef30bce0ac8b4869dccfa66fd9ba7e4bbc4a35cd331fa"
+      },
+      "web": {
+        "file": "media/web/ARAL-007_16004_4L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 376646,
+        "sha256": "16fa3d944d2a9f1b52fcd88624ce2c1af76ab3e6ad95b839bb728d20c6510a1f"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 117.06
+    },
+    {
+      "internal_id": "ARAL-008",
+      "commercial_name": "Aral SuperTronic E 0W-30",
+      "sku": "10508",
+      "package_size": "1 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-008_10508_1L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 23,
+        "preview_cell": "H23",
+        "archive_member": "xl/media/image22.jpg",
+        "external_original_path": "unknown",
         "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-008_10508_1L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 111520,
+        "sha256": "892508aaf097a7fb46b950db4db6fbd8e2586c14596c1cb9365e245f7bdc99d0"
+      },
+      "web": {
+        "file": "media/web/ARAL-008_10508_1L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 213566,
+        "sha256": "b404b66efaa3df08592d203553a6be3abdf01bfa85497332fb2e9452f0a3a25d"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 91.5
+    },
+    {
+      "internal_id": "ARAL-008",
+      "commercial_name": "Aral SuperTronic E 0W-30",
+      "sku": "10502",
+      "package_size": "208 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-008_10502_208L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 24,
+        "preview_cell": "H24",
+        "archive_member": "xl/media/image23.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-008_10502_208L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816"
+      },
+      "web": {
+        "file": "media/web/ARAL-008_10502_208L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 161970,
+        "sha256": "fba58672ee578cb11278ed48326b530bca0a2ccc28a7060498e02fafc12d426c"
+      },
+      "image_role": "generic_package_representation",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 91.51
+    },
+    {
+      "internal_id": "ARAL-008",
+      "commercial_name": "Aral SuperTronic E 0W-30",
+      "sku": "10504",
+      "package_size": "4 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-008_10504_4L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 25,
+        "preview_cell": "H25",
+        "archive_member": "xl/media/image24.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-008_10504_4L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 183465,
+        "sha256": "ddf5a481a45818fcac491129d0cf1f29fb200978d34921262ca03bebdcd67be4"
+      },
+      "web": {
+        "file": "media/web/ARAL-008_10504_4L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 409176,
+        "sha256": "e30ee7985a973f53003962070a501af7d589b1ca53a358e2bb475e85c6bee27c"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 123.03
+    },
+    {
+      "internal_id": "ARAL-009",
+      "commercial_name": "Aral SuperTronic G 0W-40",
+      "sku": "15A8A",
+      "package_size": "1 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-009_15A8A_1L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 26,
+        "preview_cell": "H26",
+        "archive_member": "xl/media/image25.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-009_15A8A_1L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 110702,
+        "sha256": "6b3da611bf3c9f6ddfbdc825d3444e19a1fe71810a62d0766ebab9417c4e6afd"
+      },
+      "web": {
+        "file": "media/web/ARAL-009_15A8A_1L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 210804,
+        "sha256": "4b40b4250c1e4bd5065d3b0cfa21f8181a6ffcc0a989265ad447afc1c13b53b4"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 90.42
+    },
+    {
+      "internal_id": "ARAL-009",
+      "commercial_name": "Aral SuperTronic G 0W-40",
+      "sku": "15A8AD",
+      "package_size": "4 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-009_15A8AD_4L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 27,
+        "preview_cell": "H27",
+        "archive_member": "xl/media/image26.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-009_15A8AD_4L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 189029,
+        "sha256": "eeb055d7493bf220bf6d960ef119eb2b2a8d79fd9cb11ad64735763042706fb2"
+      },
+      "web": {
+        "file": "media/web/ARAL-009_15A8AD_4L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 412900,
+        "sha256": "2e19c61446359c8bc1c0b85cd37218b2ea0b1d18ee8df831d4bf11e9c9b6d657"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 118.43
+    },
+    {
+      "internal_id": "ARAL-010",
+      "commercial_name": "Aral SuperTronic K 5W-30",
+      "sku": "15DBCC",
+      "package_size": "1 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-010_15DBCC_1L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 28,
+        "preview_cell": "H28",
+        "archive_member": "xl/media/image27.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-010_15DBCC_1L.jpg",
+        "format": "jpg",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 237668,
+        "sha256": "222f130dd6d1dc3b14fb07b2d6c24136a8de580e7ba0f364dc4d14b7b61cfd29"
+      },
+      "web": {
+        "file": "media/web/ARAL-010_15DBCC_1L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 595890,
+        "sha256": "9a87e0eb2b1f290830ebe1e14589ef8dc045655656036411e057168d5d49bacf"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 150.72
+    },
+    {
+      "internal_id": "ARAL-010",
+      "commercial_name": "Aral SuperTronic K 5W-30",
+      "sku": "15DBC5",
+      "package_size": "20 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-010_15DBC5_20L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 29,
+        "preview_cell": "H29",
+        "archive_member": "xl/media/image28.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-010_15DBC5_20L.jpg",
+        "format": "jpg",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 222094,
+        "sha256": "848fa816ef3fb0aad58ed7538a3fe15134ea0e0930efe624a2b3a733260cd3fc"
+      },
+      "web": {
+        "file": "media/web/ARAL-010_15DBC5_20L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 461770,
+        "sha256": "f92948bc3546f789859955ea06f826d973bc82feeded3cab2cf66eb2eb7df516"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 107.92
+    },
+    {
+      "internal_id": "ARAL-010",
+      "commercial_name": "Aral SuperTronic K 5W-30",
+      "sku": "15DBCE",
+      "package_size": "4 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-010_15DBCE_4L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 30,
+        "preview_cell": "H30",
+        "archive_member": "xl/media/image29.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-010_15DBCE_4L.jpg",
+        "format": "jpg",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 327477,
+        "sha256": "1db37871cb923ea3330d0250bcf34142ecb02438758851118762d8fb5dd34c70"
+      },
+      "web": {
+        "file": "media/web/ARAL-010_15DBCE_4L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 797652,
+        "sha256": "b6ef6abf3cfbda9eec4cc2e4bdd8ffa08fa5598811fa109aedb3cfb7bd0efa00"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 143.57
+    },
+    {
+      "internal_id": "ARAL-010",
+      "commercial_name": "Aral SuperTronic K 5W-30",
+      "sku": "15F477",
+      "package_size": "5 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-010_15F477_5L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 31,
+        "preview_cell": "H31",
+        "archive_member": "xl/media/image42.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-010_15F477_5L.jpg",
+        "format": "jpg",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 326338,
+        "sha256": "bcd0f7c30657d1a178020a81d4e8eb19b479e24a72b966fd28baabf1e8b070dc"
+      },
+      "web": {
+        "file": "media/web/ARAL-010_15F477_5L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 818006,
+        "sha256": "e0e082921f6ef1d6af546b70cd02ee10317ff2c0705297768ca0b36f72a9c609"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 150.66
+    },
+    {
+      "internal_id": "ARAL-011",
+      "commercial_name": "Aral SuperTronic Longlife III 0W-30",
+      "sku": "15F474",
+      "package_size": "1 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-011_15F474_1L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 32,
+        "preview_cell": "H32",
+        "archive_member": "xl/media/image30.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-011_15F474_1L.jpg",
+        "format": "jpg",
+        "width": 600,
+        "height": 600,
+        "bytes": 34113,
+        "sha256": "56199eec5a33fca4623c8b47b97d474254aa179a02286c24b598434880d9b2bf"
+      },
+      "web": {
+        "file": "media/web/ARAL-011_15F474_1L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 600,
+        "height": 600,
+        "bytes": 92948,
+        "sha256": "c8e72273ca8354d59bd5891a62d6ffccdb83d99c0462f8fb0b649f8e88d5d4f2"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 172.47
+    },
+    {
+      "internal_id": "ARAL-011",
+      "commercial_name": "Aral SuperTronic Longlife III 0W-30",
+      "sku": "160EC7",
+      "package_size": "5 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-011_160EC7_5L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 33,
+        "preview_cell": "H33",
+        "archive_member": "xl/media/image31.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-011_160EC7_5L.jpg",
+        "format": "jpg",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 240359,
+        "sha256": "47fb466ad27c60a1080acbec1d09a48c7188d5215c531168fe5e44996b8ad924"
+      },
+      "web": {
+        "file": "media/web/ARAL-011_160EC7_5L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 556992,
+        "sha256": "8b9c75da9c6e10778ac60d589ef3eb2b5a0d21953be8e21e637f18dbf39b607b"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 131.73
+    },
+    {
+      "internal_id": "ARAL-012",
+      "commercial_name": "Aral SuperTronic Longlife IV FE 0W-20",
+      "sku": "15F45F",
+      "package_size": "1 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-012_15F45F_1L.png",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 34,
+        "preview_cell": "H34",
+        "archive_member": "xl/media/image.png",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-012_15F45F_1L.png",
+        "format": "png",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 977810,
+        "sha256": "d37060d32cc5f8571e2cc3e1669522ef1fc250353608978045d05954cea34e73"
+      },
+      "web": {
+        "file": "media/web/ARAL-012_15F45F_1L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 681484,
+        "sha256": "6f5cbdcb808e851eed18af9ef76fddc0eb7afadf88f0b7f60f657b3e5a4ff3e1"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": -30.31
+    },
+    {
+      "internal_id": "ARAL-012",
+      "commercial_name": "Aral SuperTronic Longlife IV FE 0W-20",
+      "sku": "15F460",
+      "package_size": "5 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-012_15F460_5L.png",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 35,
+        "preview_cell": "H35",
+        "archive_member": "xl/media/image2.png",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-012_15F460_5L.png",
+        "format": "png",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 1342350,
+        "sha256": "bb86c70abdb6b5a5d9630852c318e52ac2bc6d336d688178535241d6b90e3ab6"
+      },
+      "web": {
+        "file": "media/web/ARAL-012_15F460_5L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 983850,
+        "sha256": "fa2d0a742b8d30cfbcfc9f351614ef5ac1229c4048abaad7c7053c10ae78c657"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": -26.71
+    },
+    {
+      "internal_id": "ARAL-013",
+      "commercial_name": "Aral MegaTurboral 10W-40",
+      "sku": "23937",
+      "package_size": "208 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-013_23937_208L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 36,
+        "preview_cell": "H36",
+        "archive_member": "xl/media/image32.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-013_23937_208L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816"
+      },
+      "web": {
+        "file": "media/web/ARAL-013_23937_208L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 161970,
+        "sha256": "fba58672ee578cb11278ed48326b530bca0a2ccc28a7060498e02fafc12d426c"
+      },
+      "image_role": "generic_package_representation",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 91.51
+    },
+    {
+      "internal_id": "ARAL-013",
+      "commercial_name": "Aral MegaTurboral 10W-40",
+      "sku": "13932",
+      "package_size": "20 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-013_13932_20L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 37,
+        "preview_cell": "H37",
+        "archive_member": "xl/media/image33.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-013_13932_20L.jpg",
+        "format": "jpg",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 212564,
+        "sha256": "6564c502ecee9be3924f746e3a7dabe0d5645ce609410082937730ae328eb15d"
+      },
+      "web": {
+        "file": "media/web/ARAL-013_13932_20L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 474934,
+        "sha256": "84d7c6159128e2cd60dbe7bc0d1de12bd3667369837cbbbc4b2b24a838bee1d6"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 123.43
+    },
+    {
+      "internal_id": "ARAL-013",
+      "commercial_name": "Aral MegaTurboral 10W-40",
+      "sku": "10625",
+      "package_size": "5 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-013_10625_5L.png",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 38,
+        "preview_cell": "H38",
+        "archive_member": "xl/media/image3.png",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-013_10625_5L.png",
+        "format": "png",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 1333271,
+        "sha256": "bd4465bcd5cf5853383891e289b9fed82cfe3bfdc846469ef0ed171cdb0363aa"
+      },
+      "web": {
+        "file": "media/web/ARAL-013_10625_5L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 1065684,
+        "sha256": "91763c5a6566cc111438c83e2c2c63e3c9d52a9a1fb164189e2eab7ac8f48f3a"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": -20.07
+    },
+    {
+      "internal_id": "ARAL-014",
+      "commercial_name": "Aral MegaTurboral LA 10W-40",
+      "sku": "1620",
+      "package_size": "20 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-014_1620_20L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 39,
+        "preview_cell": "H39",
+        "archive_member": "xl/media/image34.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-014_1620_20L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 89311,
+        "sha256": "8e188d333768fa2ebab47e590131e6c4d9dcc5c5ca3ec18dddd994f112cf11f0"
+      },
+      "web": {
+        "file": "media/web/ARAL-014_1620_20L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 180588,
+        "sha256": "a5a69a4d7fecef43da825541c07be72e9b8f0c8467f7eea0414d94cf7e29e93f"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 102.2
+    },
+    {
+      "internal_id": "ARAL-014",
+      "commercial_name": "Aral MegaTurboral LA 10W-40",
+      "sku": "11289",
+      "package_size": "208 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-014_11289_208L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 40,
+        "preview_cell": "H40",
+        "archive_member": "xl/media/image35.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-014_11289_208L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816"
+      },
+      "web": {
+        "file": "media/web/ARAL-014_11289_208L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 161970,
+        "sha256": "fba58672ee578cb11278ed48326b530bca0a2ccc28a7060498e02fafc12d426c"
+      },
+      "image_role": "generic_package_representation",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 91.51
+    },
+    {
+      "internal_id": "ARAL-015",
+      "commercial_name": "Aral ExtraTurboral SAE 10W-40",
+      "sku": "11190",
+      "package_size": "208 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-015_11190_208L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 41,
+        "preview_cell": "H41",
+        "archive_member": "xl/media/image36.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-015_11190_208L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816"
+      },
+      "web": {
+        "file": "media/web/ARAL-015_11190_208L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 161970,
+        "sha256": "fba58672ee578cb11278ed48326b530bca0a2ccc28a7060498e02fafc12d426c"
+      },
+      "image_role": "generic_package_representation",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 91.51
+    },
+    {
+      "internal_id": "ARAL-015",
+      "commercial_name": "Aral ExtraTurboral SAE 10W-40",
+      "sku": "22003",
+      "package_size": "20 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-015_22003_20L.png",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 42,
+        "preview_cell": "H42",
+        "archive_member": "xl/media/image4.png",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-015_22003_20L.png",
+        "format": "png",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 1054000,
+        "sha256": "e3d2158febd4e2f0a1bef013c24736d20ac9e288915d9ea7ad554c3fa0558482"
+      },
+      "web": {
+        "file": "media/web/ARAL-015_22003_20L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 802016,
+        "sha256": "b984413d38d28c2e1fdf5c2dddb651ac8aad5daf4aadd590fc01ef1280e23504"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": -23.91,
+      "approval_note": "Current Extra 20 L image explicitly accepted by user; no manual visual hold. Commercial name unchanged."
+    },
+    {
+      "internal_id": "ARAL-015",
+      "commercial_name": "Aral ExtraTurboral SAE 10W-40",
+      "sku": "22004",
+      "package_size": "5 L",
+      "source_image": {        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-015_22004_5L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 43,
+        "preview_cell": "H43",
+        "archive_member": "xl/media/image37.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-015_22004_5L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 152026,
+        "sha256": "73769ba7ca1c6e7db8248345ccec058d3b52ad8ca864c5bc5d0ac226aa98dbd2"
+      },
+      "web": {
+        "file": "media/web/ARAL-015_22004_5L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 309670,
+        "sha256": "c08a70645bc7a8dacdbe0f447cbfddf8ff587c214b12a271ab59428575668ad4"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 103.7
+    },
+    {
+      "internal_id": "ARAL-015",
+      "commercial_name": "Aral ExtraTurboral SAE 10W-40",
+      "sku": "2682",
+      "package_size": "60 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-015_2682_60L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 44,
+        "preview_cell": "H44",
+        "archive_member": "xl/media/image38.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-015_2682_60L.jpg",
+        "format": "jpg",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 162979,
+        "sha256": "d9cfb04b50135741d7701e187169bce81cee8f17666cce62906fb52df114bcd5"
+      },
+      "web": {
+        "file": "media/web/ARAL-015_2682_60L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 402596,
+        "sha256": "f67b4f39945ab73e73373ba7f4e6d1e26f533fbce74568a3ef46db6d4ea3ebaf"
+      },
+      "image_role": "generic_package_representation",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 147.02
+    },
+    {
+      "internal_id": "ARAL-016",
+      "commercial_name": "Aral масло Turboral (Plus) 15W-40",
+      "sku": "22119",
+      "package_size": "208 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-016_22119_208L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 45,
+        "preview_cell": "H45",
+        "archive_member": "xl/media/image39.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-016_22119_208L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816"
+      },
+      "web": {
+        "file": "media/web/ARAL-016_22119_208L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 161970,
+        "sha256": "fba58672ee578cb11278ed48326b530bca0a2ccc28a7060498e02fafc12d426c"
+      },
+      "image_role": "generic_package_representation",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 91.51
+    },
+    {
+      "internal_id": "ARAL-016",
+      "commercial_name": "Aral масло Turboral (Plus) 15W-40",
+      "sku": "11281",
+      "package_size": "20 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-016_11281_20L.png",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 46,
+        "preview_cell": "H46",
+        "archive_member": "xl/media/image5.png",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-016_11281_20L.png",
+        "format": "png",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 1105987,
+        "sha256": "62d11c667ac8d5707f50eede6b7d3d03ab2d920d3676c75886bc93758a0e1000"
+      },
+      "web": {
+        "file": "media/web/ARAL-016_11281_20L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 864902,
+        "sha256": "bec54559f82e1f4299fd833e19cc555e94a8f9e1b61da023994b56068b957e3c"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": -21.8
+    },
+    {
+      "internal_id": "ARAL-016",
+      "commercial_name": "Aral масло Turboral (Plus) 15W-40",
+      "sku": "14047",
+      "package_size": "60 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-016_14047_60L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 47,
+        "preview_cell": "H47",
+        "archive_member": "xl/media/image40.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-016_14047_60L.jpg",
+        "format": "jpg",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 162979,
+        "sha256": "d9cfb04b50135741d7701e187169bce81cee8f17666cce62906fb52df114bcd5"
+      },
+      "web": {
+        "file": "media/web/ARAL-016_14047_60L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 402596,
+        "sha256": "f67b4f39945ab73e73373ba7f4e6d1e26f533fbce74568a3ef46db6d4ea3ebaf"
+      },
+      "image_role": "generic_package_representation",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 147.02
+    },
+    {
+      "internal_id": "ARAL-017",
+      "commercial_name": "Aral Silikatfrei G12",
+      "sku": "90837",
+      "package_size": "1 L",
+      "source_image": {
+        "type": "approved_standalone_RAW_original",
+        "file": "C:\\Users\\Shevc\\Documents\\Codex\\2026-10-11\\aral-https-msdspds-aral-com-1\\outputs\\ARAL_MEDIA_ORIGINALS_RAW\\ARAL-017_90837_1L.jpg",
+        "verified_against_xlsx": "C:\\Users\\Shevc\\Downloads\\ARAL_catalog_final.xlsx",
+        "sheet": "Реестр фото",
+        "row": 48,
+        "preview_cell": "H48",
+        "archive_member": "xl/media/image41.jpg",
+        "external_original_path": "unknown",
+        "scope": "Standalone file previously extracted byte-for-byte from current approved XLSX. Other unlinked legacy photos not used."
+      },
+      "original": {
+        "file": "media/originals/ARAL-017_90837_1L.jpg",
+        "format": "jpg",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 204261,
+        "sha256": "94cf15ba5873198f26b95c0a16ed6e169159960a7af930a17ecf4e52ee0d3fb1"
+      },
+      "web": {
+        "file": "media/web/ARAL-017_90837_1L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 510774,
+        "sha256": "288cde5529467a8f18af16831e5e835f79469adf3bccdd51664c8ebc8e1ed3fd"
+      },
+      "image_role": "sku_package_image",
+      "media_status": "approved_by_user",
+      "show_on_volume_select": true,
+      "validation": {
+        "original_exists": true,
+        "webp_exists": true,
+        "opens_successfully": true,
+        "nonempty_image": true,
+        "dimensions_equal": true,
+        "decoded_RGBA_pixels_equal": true,
+        "lossless_VP8L_verified": true,
+        "original_bytes_preserved": true
+      },
+      "size_change_percent": 150.06
+    }
+  ],
+  "size_report": {
+    "original_total_size": 12063470,
+    "webp_total_size": 17952458,
+    "difference_percent": 48.82,
+    "webp_smaller": 5,
+    "webp_larger": 42,
+    "webp_equal_size": 0
+  },
+  "audit": {
+    "products_total": 17,
+    "sku_variants_total": 47,
+    "source_images_found": 47,
+    "original_images_saved": 47,
+    "webp_images_created": 47,
+    "missing_images": 0,
+    "conversion_errors": 0,
+    "sku_mapping_errors": 0,
+    "package_mapping_errors": 0,
+    "dimensions_changed": 0,
+    "decoded_pixel_mismatches": 0,
+    "original_files_modified": 0,
+    "MASTER_modified": false,
+    "catalog_modified": false
+  }
+}
