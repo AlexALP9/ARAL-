@@ -1,0 +1,53 @@
+name: Publish ARAL site
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Assemble public site
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _site/assets _site/media/production
+          cp index.html catalog.json _site/
+          cp assets/style.css assets/app.js assets/favicon.svg _site/assets/
+          cp media/production/* _site/media/production/
+          touch _site/.nojekyll
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('_site/catalog.json').read_text(encoding='utf-8'))
+          assert len(d['products']) == 17
+          images=list(Path('_site/media/production').iterdir())
+          assert len(images) == 47, len(images)
+          n=0
+          for p in d['products']:
+              for v in p['variants']:
+                  n+=1
+                  assert Path('_site'+v['image']).is_file(), v['image']
+          assert n == 47
+          print(f'Validated: {len(d["products"])} products, {n} SKU, {len(images)} images')
+          PY
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
