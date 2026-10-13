@@ -1,0 +1,1961 @@
+{
+  "products": [
+    {
+      "internal_id": "ARAL-001",
+      "commercial_name": "Aral BlueTronic II 10W-40",
+      "category": "PKW",
+      "sae": "10W-40",
+      "content": {
+        "description": "Моторное масло с технологией Aral Synth обеспечивает хорошие противоизносные свойства и поддерживает чистоту двигателей.\nДля бензиновых и дизельных двигателей.",
+        "application": null,
+        "advantages": [],
+        "storage": "Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.",
+        "other_sections": [
+          {
+            "type": "subtitle",
+            "text": "Моторное масло для легковых автомобилей"
+          }
+        ]
+      },
+      "technical": {
+        "performance": {
+          "api": [
+            "SP"
+          ],
+          "acea": [
+            "A3/B4"
+          ],
+          "official_approvals": [
+            {
+              "text": "MB-Approval 229.3",
+              "claim_type": "official_approval"
+            }
+          ],
+          "meets": [
+            {
+              "text": "Meets - Fiat 9.55535-D2",
+              "claim_type": "meets"
+            }
+          ],
+          "recommended_for": [],
+          "application_references": [],
+          "performance_levels": [
+            {
+              "text": "VW 5 01 01 / 505 00",
+              "claim_type": "performance_level"
+            }
+          ],
+          "other": []
+        },
+        "typical_characteristics": [
+          {
+            "characteristic": "Плотность при 15 °C",
+            "method": "ASTM D4052",
+            "unit": "g/ml",
+            "value": "0.864"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 100 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "14.3"
+          },
+          {
+            "characteristic": "Динамическая вязкость CCS при −25 °C",
+            "method": "ASTM D5293",
+            "unit": "mPa.s (cP)",
+            "value": "6280"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 40 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "96.6"
+          },
+          {
+            "characteristic": "Индекс вязкости",
+            "method": "ASTM D2270",
+            "unit": null,
+            "value": "151"
+          },
+          {
+            "characteristic": "Температура застывания (Pour Point)",
+            "method": "ASTM D97",
+            "unit": "°C",
+            "value": "-39"
+          },
+          {
+            "characteristic": "Температура вспышки, PMCC",
+            "method": "ASTM D93",
+            "unit": "°C",
+            "value": "200"
+          },
+          {
+            "characteristic": "Сульфатная зольность",
+            "method": "ASTM D874",
+            "unit": "% wt",
+            "value": "1.2"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "sku": "15F073",
+          "volume": "208 L",
+          "image": "/media/production/ARAL-001_15F073_208L.jpg"
+        },
+        {
+          "sku": "15F076",
+          "volume": "1 L",
+          "image": "/media/production/ARAL-001_15F076_1L.jpg"
+        },
+        {
+          "sku": "15F078",
+          "volume": "4 L",
+          "image": "/media/production/ARAL-001_15F078_4L.jpg"
+        },
+        {
+          "sku": "15F471",
+          "volume": "5 L",
+          "image": "/media/production/ARAL-001_15F471_5L.jpg"
+        }
+      ]
+    },
+    {
+      "internal_id": "ARAL-002",
+      "commercial_name": "Aral EcoTronic F 5W-20",
+      "category": "PKW",
+      "sae": "5W-20",
+      "content": {
+        "description": "Aral EcoTronic F 5W-20 — высокоэффективное моторное масло, изготовленное по технологии Aral Synthetic-Technology и специально разработанное для двигателей Ford EcoBoostR, которым требуется масло по спецификации Ford WSS-M2C948-B. Оно также пригодно для большинства современных бензиновых двигателей Ford, которым требуется масло по спецификации Ford WSS-M2C913-B, WSS-M2C913-C или WSS-M2C925-B (за исключением Ford Ka, Focus ST и Focus RS). Продукт способен обеспечить дополнительную экономию топлива.",
+        "application": null,
+        "advantages": [
+          "отличная защита от износа",
+          "обеспечивает более высокие эксплуатационные показатели при запуске в условиях экстремального холода по сравнению с более вязкими маслами",
+          "потенциал экономии топлива"
+        ],
+        "other_sections": [
+          {
+            "type": "subtitle",
+            "text": "Высокоэффективное моторное масло"
+          }
+        ]
+      },
+      "technical": {
+        "performance": {
+          "api": [
+            "SN"
+          ],
+          "acea": [],
+          "official_approvals": [],
+          "meets": [
+            {
+              "text": "Meets - Ford WSS-M2C948-B",
+              "claim_type": "meets"
+            }
+          ],
+          "recommended_for": [],
+          "application_references": [
+            {
+              "text": "Ford WSS-M2C913-B",
+              "claim_type": "application_reference"
+            },
+            {
+              "text": "Ford WSS-M2C913-C",
+              "claim_type": "application_reference"
+            },
+            {
+              "text": "Ford WSS-M2C925-B",
+              "claim_type": "application_reference"
+            }
+          ],
+          "performance_levels": [],
+          "other": [
+            {
+              "text": "ILSAC GF-5"
+            }
+          ]
+        },
+        "typical_characteristics": [
+          {
+            "characteristic": "Плотность при 15 °C",
+            "method": "ASTM D1298",
+            "unit": "g/ml",
+            "value": "0.847"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 40 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "43.5"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 100 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "8.2"
+          },
+          {
+            "characteristic": "Индекс вязкости",
+            "method": "ASTM D2270",
+            "unit": null,
+            "value": "166"
+          },
+          {
+            "characteristic": "Динамическая вязкость CCS при −30 °C (5W)",
+            "method": "ASTM D5293",
+            "unit": "mPa.s (cP)",
+            "value": "3450"
+          },
+          {
+            "characteristic": "Вязкость HTHS при 150 °C",
+            "method": "ASTM D4683",
+            "unit": "cP",
+            "value": "2.6"
+          },
+          {
+            "characteristic": "Температура застывания",
+            "method": "ASTM D97",
+            "unit": "°C",
+            "value": "-45"
+          },
+          {
+            "characteristic": "Температура вспышки PMCC",
+            "method": "ASTM D93",
+            "unit": "°C",
+            "value": "210"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "sku": "25094",
+          "volume": "4 L",
+          "image": "/media/production/ARAL-002_25094_4L.jpg"
+        }
+      ]
+    },
+    {
+      "internal_id": "ARAL-003",
+      "commercial_name": "Aral HighTronic 5W-40",
+      "category": "PKW",
+      "sae": "5W-40",
+      "content": {
+        "description": "Высокоэффективное моторное масло с технологией Aral Synthetic Technology для сложных условий вождения и отличной защиты от износа.\n• Для бензиновых и дизельных двигателей\n• Использует высокий запас эксплуатационных свойств в двигателях с увеличенными интервалами замены масла\n• Технология малозольных присадок\n*GM dexos2TM: заменяет GM-LL-B-025 и GM-LL-A-025: D225GXFH082",
+        "application": null,
+        "advantages": [],
+        "storage": "Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.",
+        "other_sections": [
+          {
+            "type": "subtitle",
+            "text": "Высокоэффективное моторное масло."
+          }
+        ]
+      },
+      "technical": {
+        "performance": {
+          "api": [
+            "CF",
+            "SN"
+          ],
+          "acea": [
+            "C3"
+          ],
+          "official_approvals": [
+            {
+              "text": "MB-Approval 229.31/ 229.51",
+              "claim_type": "official_approval"
+            }
+          ],
+          "meets": [
+            {
+              "text": "Meets Fiat 9.55535-S2, Ford WSS-M2C917-A, MB-226.5",
+              "claim_type": "meets"
+            }
+          ],
+          "recommended_for": [],
+          "application_references": [],
+          "performance_levels": [
+            {
+              "text": "GMdexos2™ supersedes GM-LL-B-025 and GM-LL-A-025",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "OPEL OV 040 1547-D40",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Porsche A40",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Renault RN 0700 / RN 0710",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "VW 505 00/ 505 01",
+              "claim_type": "performance_level"
+            }
+          ],
+          "other": []
+        },
+        "typical_characteristics": [
+          {
+            "characteristic": "Плотность при 15 °C",
+            "method": "ASTM D4052",
+            "unit": "g/ml",
+            "value": "0.849"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 100 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "13.5"
+          },
+          {
+            "characteristic": "Динамическая вязкость CCS при −30 °C",
+            "method": "ASTM D5293",
+            "unit": "mPa.s (cP)",
+            "value": "5875"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 40 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "79"
+          },
+          {
+            "characteristic": "Индекс вязкости",
+            "method": "ASTM D2270",
+            "unit": null,
+            "value": "174"
+          },
+          {
+            "characteristic": "Температура застывания (Pour Point)",
+            "method": "ASTM D97",
+            "unit": "°C",
+            "value": "-42"
+          },
+          {
+            "characteristic": "Сульфатная зольность",
+            "method": "ASTM D874",
+            "unit": "% wt",
+            "value": "0.8"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "sku": "20637",
+          "volume": "1 L",
+          "image": "/media/production/ARAL-003_20637_1L.jpg"
+        },
+        {
+          "sku": "20632",
+          "volume": "208 L",
+          "image": "/media/production/ARAL-003_20632_208L.jpg"
+        },
+        {
+          "sku": "20634",
+          "volume": "4 L",
+          "image": "/media/production/ARAL-003_20634_4L.jpg"
+        },
+        {
+          "sku": "20635",
+          "volume": "5 L",
+          "image": "/media/production/ARAL-003_20635_5L.jpg"
+        }
+      ]
+    },
+    {
+      "internal_id": "ARAL-004",
+      "commercial_name": "Aral HighTronic F 5W-30",
+      "category": "PKW",
+      "sae": "5W-30",
+      "content": {
+        "description": "Aral HighTronic F 5W-30 — высокоэффективное моторное масло на основе технологии Aral Synthetic Technology, специально разработанное для легковых автомобилей Ford, Volvo, Jaguar и Land Rover с бензиновыми или дизельными двигателями.",
+        "application": "Aral HighTronic F 5W-30 пригодно для применения там, где рекомендуются масла со спецификациями по ACEA A5/B5. Эта уникальная рецептура соответствует требованиям Ford WSS-M2C913-D, WSS-M2C913-C, WSS-M2C913-B и WSS-M2C913-A и настоятельно рекомендуется для дизельных двигателей Ford.",
+        "advantages": [
+          "отличная термическая и окислительная стабильность",
+          "повышенная защита от износа",
+          "потенциал экономии топлива"
+        ],
+        "storage": "Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.",
+        "other_sections": [
+          {
+            "type": "subtitle",
+            "text": "Моторное масло на основе технологии Aral Synthetic-Technology"
+          }
+        ]
+      },
+      "technical": {
+        "performance": {
+          "api": [
+            "SP",
+            "CF"
+          ],
+          "acea": [
+            "A5/B5"
+          ],
+          "official_approvals": [],
+          "meets": [
+            {
+              "text": "Meets Ford WSS-M2C913-A/ B/ C/ D",
+              "claim_type": "meets"
+            }
+          ],
+          "recommended_for": [
+            {
+              "text": "Ford diesel engines",
+              "claim_type": "recommended_for"
+            }
+          ],
+          "application_references": [
+            {
+              "text": "ACEA A1/B1; ACEA A5/B5; Ford, Volvo, Jaguar, Land Rover",
+              "claim_type": "application_reference"
+            }
+          ],
+          "performance_levels": [],
+          "other": [
+            {
+              "text": "ILSAC GF-6",
+              "claim_type": "performance_level"
+            }
+          ]
+        },
+        "typical_characteristics": [
+          {
+            "characteristic": "Плотность при 15 °C",
+            "method": "ASTM D4052",
+            "unit": "g/ml",
+            "value": "0.85"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 100 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "9.7"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 40 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "55"
+          },
+          {
+            "characteristic": "Индекс вязкости",
+            "method": "ASTM D2270",
+            "unit": null,
+            "value": "162"
+          },
+          {
+            "characteristic": "Динамическая вязкость CCS при −30 °C",
+            "method": "ASTM D5293",
+            "unit": "mPa.s (cP)",
+            "value": "4750"
+          },
+          {
+            "characteristic": "Вязкость HTHS при 150 °C",
+            "method": "ASTM D4741",
+            "unit": "cP",
+            "value": "2.96"
+          },
+          {
+            "characteristic": "Температура застывания (Pour Point)",
+            "method": "ASTM D97",
+            "unit": "°C",
+            "value": "-42"
+          },
+          {
+            "characteristic": "Температура вспышки, PMCC",
+            "method": "ASTM D93",
+            "unit": "°C",
+            "value": "204"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "sku": "10332",
+          "volume": "1 L",
+          "image": "/media/production/ARAL-004_10332_1L.jpg"
+        },
+        {
+          "sku": "10333",
+          "volume": "208 L",
+          "image": "/media/production/ARAL-004_10333_208L.jpg"
+        },
+        {
+          "sku": "10334",
+          "volume": "4 L",
+          "image": "/media/production/ARAL-004_10334_4L.jpg"
+        }
+      ]
+    },
+    {
+      "internal_id": "ARAL-005",
+      "commercial_name": "Aral HighTronic J 5W-30",
+      "category": "PKW",
+      "sae": "5W-30",
+      "content": {
+        "description": "Aral HighTronic J 5W-30 — современное малозольное моторное масло на основе технологии Aral Synthetic-Technology, разработанное для бензиновых или дизельных двигателей.",
+        "application": null,
+        "advantages": [
+          "Защищает от вредных зольных отложений",
+          "Продлевает срок службы устройства доочистки отработавших газов"
+        ],
+        "storage": "Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.",
+        "other_sections": [
+          {
+            "type": "subtitle",
+            "text": "Моторное масло на основе технологии Aral Synthetic-Technology"
+          }
+        ]
+      },
+      "technical": {
+        "performance": {
+          "api": [],
+          "acea": [
+            "C2"
+          ],
+          "official_approvals": [
+            {
+              "text": "PSA Approval B71 2290",
+              "claim_type": "official_approval"
+            }
+          ],
+          "meets": [
+            {
+              "text": "Meets Fiat 9.55535-S1",
+              "claim_type": "meets"
+            }
+          ],
+          "recommended_for": [],
+          "application_references": [
+            {
+              "text": "Бензиновые и дизельные двигатели; сажевые фильтры",
+              "claim_type": "application_reference"
+            }
+          ],
+          "performance_levels": [],
+          "other": []
+        },
+        "typical_characteristics": [
+          {
+            "characteristic": "Плотность при 15 °C",
+            "method": "ASTM D4052",
+            "unit": "g/ml",
+            "value": "0.849"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 100 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "9.5"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 40 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "51"
+          },
+          {
+            "characteristic": "Индекс вязкости",
+            "method": "ASTM D2270",
+            "unit": null,
+            "value": "172"
+          },
+          {
+            "characteristic": "Динамическая вязкость CCS при −30 °C",
+            "method": "ASTM D5293",
+            "unit": "mPa.s (cP)",
+            "value": "4100"
+          },
+          {
+            "characteristic": "Температура застывания (Pour Point)",
+            "method": "ASTM D97",
+            "unit": "°C",
+            "value": "-39"
+          },
+          {
+            "characteristic": "Сульфатная зольность",
+            "method": "ASTM D874",
+            "unit": "% wt",
+            "value": "0.56"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "sku": "20198",
+          "volume": "1 L",
+          "image": "/media/production/ARAL-005_20198_1L.jpg"
+        },
+        {
+          "sku": "20190",
+          "volume": "208 L",
+          "image": "/media/production/ARAL-005_20190_208L.jpg"
+        },
+        {
+          "sku": "20194",
+          "volume": "4 L",
+          "image": "/media/production/ARAL-005_20194_4L.jpg"
+        },
+        {
+          "sku": "20191",
+          "volume": "60 L",
+          "image": "/media/production/ARAL-005_20191_60L.jpg"
+        }
+      ]
+    },
+    {
+      "internal_id": "ARAL-006",
+      "commercial_name": "Aral HighTronic M 5W-40",
+      "category": "PKW",
+      "sae": "5W-40",
+      "content": {
+        "description": "Высокоэффективное моторное масло с использованием технологии Aral-Synth-Technology.\nAral High Tronic M 5W-40 пригодно для автомобильных бензиновых и дизельных двигателей. Оно одобрено для автомобилей широкого круга производителей; см. раздел спецификаций и руководство по эксплуатации автомобиля.\nAral High Tronic M 5W-40 обеспечивает непрерывную защиту при любых условиях вождения и температурах и демонстрирует превосходные эксплуатационные показатели при запуске в условиях экстремального холода.",
+        "application": null,
+        "advantages": [],
+        "storage": "Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.",
+        "other_sections": [
+          {
+            "type": "subtitle",
+            "text": "Высокоэффективное моторное масло."
+          }
+        ]
+      },
+      "technical": {
+        "performance": {
+          "api": [
+            "SP"
+          ],
+          "acea": [
+            "A3/B4"
+          ],
+          "official_approvals": [
+            {
+              "text": "MB-Approval 226.5/ 229.3/ 229.5",
+              "claim_type": "official_approval"
+            }
+          ],
+          "meets": [],
+          "recommended_for": [],
+          "application_references": [
+            {
+              "text": "Mercedes-Benz; AMG; Brabus; VW",
+              "claim_type": "application_reference"
+            }
+          ],
+          "performance_levels": [
+            {
+              "text": "BMW Longlife-01",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Porsche A40",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Renault RN 0700 / RN 0710",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "VW 502 00/ 505 00",
+              "claim_type": "performance_level"
+            }
+          ],
+          "other": []
+        },
+        "typical_characteristics": [
+          {
+            "characteristic": "Плотность при 15 °C",
+            "method": "ASTM D4052",
+            "unit": "g/ml",
+            "value": "0,8519"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 100 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "12,9"
+          },
+          {
+            "characteristic": "Динамическая вязкость CCS при −30 °C",
+            "method": "ASTM D5293",
+            "unit": "mPa.s (cP)",
+            "value": "6000"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 40 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "70"
+          },
+          {
+            "characteristic": "Индекс вязкости",
+            "method": "ASTM D2270",
+            "unit": null,
+            "value": "188"
+          },
+          {
+            "characteristic": "Температура застывания (Pour Point)",
+            "method": "ASTM D97",
+            "unit": "°C",
+            "value": "-45"
+          },
+          {
+            "characteristic": "Температура вспышки, PMCC",
+            "method": "ASTM D93",
+            "unit": "°C",
+            "value": "213"
+          },
+          {
+            "characteristic": "Сульфатная зольность",
+            "method": "ASTM D874",
+            "unit": "% wt",
+            "value": "1,2"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "sku": "21407",
+          "volume": "1 L",
+          "image": "/media/production/ARAL-006_21407_1L.jpg"
+        },
+        {
+          "sku": "156EC2",
+          "volume": "208 L",
+          "image": "/media/production/ARAL-006_156EC2_208L.jpg"
+        },
+        {
+          "sku": "21404",
+          "volume": "4 L",
+          "image": "/media/production/ARAL-006_21404_4L.jpg"
+        }
+      ]
+    },
+    {
+      "internal_id": "ARAL-007",
+      "commercial_name": "Aral HighTronic R 5W-30",
+      "category": "PKW",
+      "sae": "5W-30",
+      "content": {
+        "description": "Aral HighTronic R — современное малозольное моторное масло на основе технологии Aral Synth-Technology, разработанное для дизельных двигателей, которым требуется продукт по ACEA C4, например современных дизельных двигателей Renault.\nПоддерживает эффективность и срок службы современных устройств доочистки отработавших газов, таких как дизельные сажевые фильтры (DPF).",
+        "application": null,
+        "advantages": [],
+        "storage": "Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.",
+        "other_sections": [
+          {
+            "type": "subtitle",
+            "text": "Современное малозольное моторное масло"
+          }
+        ]
+      },
+      "technical": {
+        "performance": {
+          "api": [],
+          "acea": [
+            "C4"
+          ],
+          "official_approvals": [
+            {
+              "text": "MB-Approval 226.51",
+              "claim_type": "official_approval"
+            }
+          ],
+          "meets": [],
+          "recommended_for": [],
+          "application_references": [
+            {
+              "text": "ACEA C4; Renault; DPF",
+              "claim_type": "application_reference"
+            }
+          ],
+          "performance_levels": [
+            {
+              "text": "Renault RN 0720",
+              "claim_type": "performance_level"
+            }
+          ],
+          "other": []
+        },
+        "typical_characteristics": [
+          {
+            "characteristic": "Плотность при 15 °C",
+            "method": "ASTM D4052",
+            "unit": "g/ml",
+            "value": "0.850"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 100 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "12.2"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 40 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "71"
+          },
+          {
+            "characteristic": "Индекс вязкости",
+            "method": "ASTM D2270",
+            "unit": null,
+            "value": "171"
+          },
+          {
+            "characteristic": "Динамическая вязкость CCS при −30 °C",
+            "method": "ASTM D5293",
+            "unit": "mPa.s (cP)",
+            "value": "6200"
+          },
+          {
+            "characteristic": "Температура застывания (Pour Point)",
+            "method": "ASTM D97",
+            "unit": "°C",
+            "value": "-45"
+          },
+          {
+            "characteristic": "Температура вспышки, PMCC",
+            "method": "ASTM D93",
+            "unit": "°C",
+            "value": "238"
+          },
+          {
+            "characteristic": "Сульфатная зольность",
+            "method": "ASTM D874",
+            "unit": "% wt",
+            "value": "0.5"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "sku": "16008",
+          "volume": "1 L",
+          "image": "/media/production/ARAL-007_16008_1L.jpg"
+        },
+        {
+          "sku": "16004",
+          "volume": "4 L",
+          "image": "/media/production/ARAL-007_16004_4L.jpg"
+        }
+      ]
+    },
+    {
+      "internal_id": "ARAL-008",
+      "commercial_name": "Aral SuperTronic E 0W-30",
+      "category": "PKW",
+      "sae": "0W-30",
+      "content": {
+        "description": null,
+        "application": null,
+        "advantages": []
+      },
+      "technical": {},
+      "variants": [
+        {
+          "sku": "10508",
+          "volume": "1 L",
+          "image": "/media/production/ARAL-008_10508_1L.jpg"
+        },
+        {
+          "sku": "10502",
+          "volume": "208 L",
+          "image": "/media/production/ARAL-008_10502_208L.jpg"
+        },
+        {
+          "sku": "10504",
+          "volume": "4 L",
+          "image": "/media/production/ARAL-008_10504_4L.jpg"
+        }
+      ]
+    },
+    {
+      "internal_id": "ARAL-009",
+      "commercial_name": "Aral SuperTronic G 0W-40",
+      "category": "PKW",
+      "sae": "0W-40",
+      "content": {
+        "description": "Высокоэффективное моторное масло на основе синтетической технологии для легковых автомобилей:\nДля бензиновых или дизельных двигателей\nОбеспечивает выдающиеся противоизносные свойства\nВысокоэффективное моторное масло, рассчитанное на самые длительные интервалы замены при гибких сроках технического обслуживания\nОбеспечивает меньший расход топлива и масла",
+        "application": "ARAL SuperTronic G 0W-40 пригодно для автомобильных бензиновых и дизельных двигателей, для которых производитель рекомендует смазочный материал 0W-40 по ACEA A3/B4, API SQ или более ранней спецификации.\nARAL SuperTronic G 0W-40 одобрено для автомобилей ведущих производителей; см. раздел спецификаций и руководство по эксплуатации автомобиля.",
+        "advantages": [],
+        "storage": "Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.",
+        "other_sections": [
+          {
+            "type": "subtitle",
+            "text": "Моторное масло на основе синтетической технологии для бензиновых или дизельных двигателей"
+          }
+        ]
+      },
+      "technical": {
+        "performance": {
+          "api": [
+            "SQ"
+          ],
+          "acea": [
+            "A3/B4"
+          ],
+          "official_approvals": [
+            {
+              "text": "MB-Approval 229.5",
+              "claim_type": "official_approval"
+            }
+          ],
+          "meets": [
+            {
+              "text": "Fulfils the technical requirements of MB 229.3",
+              "claim_type": "meets"
+            }
+          ],
+          "recommended_for": [],
+          "application_references": [
+            {
+              "text": "ACEA A3/B3; ACEA A3/B4; API SQ",
+              "claim_type": "application_reference"
+            }
+          ],
+          "performance_levels": [
+            {
+              "text": "BMW Longlife-01",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Porsche A40",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Renault RN 0700 / RN 0710",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "VW 502 00 / 505 00",
+              "claim_type": "performance_level"
+            }
+          ],
+          "other": []
+        },
+        "typical_characteristics": [
+          {
+            "characteristic": "Плотность при 15 °C",
+            "method": "ASTM D4052",
+            "unit": "g/ml",
+            "value": "0.844"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 100 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "13.3"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 40 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "76"
+          },
+          {
+            "characteristic": "Индекс вязкости",
+            "method": "ASTM D2270",
+            "unit": null,
+            "value": "180"
+          },
+          {
+            "characteristic": "Динамическая вязкость CCS при −35 °C",
+            "method": "ASTM D5293",
+            "unit": "mPa.s (cP)",
+            "value": "5980"
+          },
+          {
+            "characteristic": "Температура застывания (Pour Point)",
+            "method": "ASTM D97",
+            "unit": "°C",
+            "value": "-45"
+          },
+          {
+            "characteristic": "Температура вспышки, PMCC",
+            "method": "ASTM D93",
+            "unit": "°C",
+            "value": "210"
+          },
+          {
+            "characteristic": "Сульфатная зольность",
+            "method": "ASTM D874",
+            "unit": "% wt",
+            "value": "1.2"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "sku": "15A8A",
+          "volume": "1 L",
+          "image": "/media/production/ARAL-009_15A8A_1L.jpg"
+        },
+        {
+          "sku": "15A8AD",
+          "volume": "4 L",
+          "image": "/media/production/ARAL-009_15A8AD_4L.jpg"
+        }
+      ]
+    },
+    {
+      "internal_id": "ARAL-010",
+      "commercial_name": "Aral SuperTronic K 5W-30",
+      "category": "PKW",
+      "sae": "5W-30",
+      "content": {
+        "description": "ARAL SuperTronic K 5W-30 разработано для бензиновых и дизельных двигателей и обладает следующими преимуществами:\n• Соответствует самым высоким стандартам защиты от износа\n• Технология Aral Low SAPS для увеличенного срока службы дизельного сажевого фильтра\n• Пригодно для автомобилей как с обслуживанием LongLife, так и без него\n• Улучшенная экономия топлива",
+        "application": "ARAL SuperTronic K 5W-30 пригодно для автомобильных бензиновых и дизельных двигателей, для которых производитель рекомендует смазочный материал 5W-30 по ACEA C3, API SQ.\nARAL SuperTronic K 5W-30 одобрено для автомобилей ведущих производителей; см. раздел спецификаций и руководство по эксплуатации автомобиля.",
+        "advantages": [],
+        "storage": "Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.",
+        "other_sections": [
+          {
+            "type": "subtitle",
+            "text": "Высокоэффективное моторное масло для увеличенных межсервисных интервалов"
+          }
+        ]
+      },
+      "technical": {
+        "performance": {
+          "api": [
+            "SQ"
+          ],
+          "acea": [
+            "C3"
+          ],
+          "official_approvals": [
+            {
+              "text": "MB-Approval 229.51/ 229.52",
+              "claim_type": "official_approval"
+            }
+          ],
+          "meets": [
+            {
+              "text": "Fulfils technical requirement of MB 229.31",
+              "claim_type": "meets"
+            }
+          ],
+          "recommended_for": [],
+          "application_references": [
+            {
+              "text": "VW; Audi; SEAT; Skoda; Mercedes-Benz; BMW",
+              "claim_type": "application_reference"
+            }
+          ],
+          "performance_levels": [
+            {
+              "text": "BMW Longlife-04",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "OPEL OV 040 1547 - D30/ G30",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Porsche C30",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Renault RN 0700 / RN 0710",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "VW 504 00/ 507 00",
+              "claim_type": "performance_level"
+            }
+          ],
+          "other": []
+        },
+        "typical_characteristics": [
+          {
+            "characteristic": "Плотность при 15 °C",
+            "method": "ASTM D4052",
+            "unit": "g/ml",
+            "value": "0.851"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 100 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "12.0"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 40 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "69"
+          },
+          {
+            "characteristic": "Индекс вязкости",
+            "method": "ASTM D2270",
+            "unit": null,
+            "value": "173"
+          },
+          {
+            "characteristic": "Динамическая вязкость CCS при −30 °C",
+            "method": "ASTM D5293",
+            "unit": "mPa.s (cP)",
+            "value": "5800"
+          },
+          {
+            "characteristic": "Температура застывания (Pour Point)",
+            "method": "ASTM D97",
+            "unit": "°C",
+            "value": "-42"
+          },
+          {
+            "characteristic": "Температура вспышки, PMCC",
+            "method": "ASTM D93",
+            "unit": "°C",
+            "value": "196"
+          },
+          {
+            "characteristic": "Сульфатная зольность",
+            "method": "ASTM D874",
+            "unit": "% wt",
+            "value": "0.71"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "sku": "15DBCC",
+          "volume": "1 L",
+          "image": "/media/production/ARAL-010_15DBCC_1L.jpg"
+        },
+        {
+          "sku": "15DBC5",
+          "volume": "20 L",
+          "image": "/media/production/ARAL-010_15DBC5_20L.jpg"
+        },
+        {
+          "sku": "15DBCE",
+          "volume": "4 L",
+          "image": "/media/production/ARAL-010_15DBCE_4L.jpg"
+        },
+        {
+          "sku": "15F477",
+          "volume": "5 L",
+          "image": "/media/production/ARAL-010_15F477_5L.jpg"
+        }
+      ]
+    },
+    {
+      "internal_id": "ARAL-011",
+      "commercial_name": "Aral SuperTronic Longlife III 0W-30",
+      "category": "PKW",
+      "sae": "0W-30",
+      "content": {
+        "description": "Aral SuperTronic LongLife III 0W-30 специально разработано для новейших европейских автомобилей, в особенности автомобилей группы VW, чтобы обеспечить максимальную защиту от износа, чистоту двигателя и тем самым поддержать работу дизельных сажевых фильтров.",
+        "application": "ARAL SuperTronic Longlife III 0W-30 одобрено для автомобилей, которым требуется смазочный материал 0W-30 по спецификации Porsche C30, VW 504 00/507 00.\nПожалуйста, обратитесь к руководству по эксплуатации автомобиля.",
+        "advantages": [],
+        "storage": "Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.",
+        "other_sections": [
+          {
+            "type": "subtitle",
+            "text": "Технология Aral Low SAPS для максимальной защиты от износа."
+          }
+        ]
+      },
+      "technical": {
+        "performance": {
+          "api": [],
+          "acea": [],
+          "official_approvals": [
+            {
+              "text": "MB-Approval 229.31/ 229.51/ 229.52",
+              "claim_type": "official_approval"
+            },
+            {
+              "text": "Porsche C30",
+              "claim_type": "official_approval"
+            },
+            {
+              "text": "VW 504 00/ 507 00",
+              "claim_type": "official_approval"
+            }
+          ],
+          "meets": [],
+          "recommended_for": [],
+          "application_references": [],
+          "performance_levels": [
+            {
+              "text": "BMW Longlife-04",
+              "claim_type": "performance_level"
+            }
+          ],
+          "other": []
+        },
+        "typical_characteristics": [
+          {
+            "characteristic": "Плотность при 15 °C",
+            "method": "DIN 51757",
+            "unit": "g/ml",
+            "value": "0.843"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 100 °C",
+            "method": "DIN 51562",
+            "unit": "mm²/s",
+            "value": "12.3"
+          },
+          {
+            "characteristic": "Динамическая вязкость CCS при −35 °C",
+            "method": "DIN 51377",
+            "unit": "mPa.s (cP)",
+            "value": "5930"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 40 °C",
+            "method": "DIN 51562",
+            "unit": "mm²/s",
+            "value": "61"
+          },
+          {
+            "characteristic": "Индекс вязкости",
+            "method": "DIN ISO 2909",
+            "unit": null,
+            "value": "205"
+          },
+          {
+            "characteristic": "Температура застывания (Pour Point)",
+            "method": "ASTM D5950",
+            "unit": "°C",
+            "value": "-48"
+          },
+          {
+            "characteristic": "Сульфатная зольность",
+            "method": "DIN 51575",
+            "unit": "% wt",
+            "value": "0.85"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "sku": "15F474",
+          "volume": "1 L",
+          "image": "/media/production/ARAL-011_15F474_1L.jpg"
+        },
+        {
+          "sku": "160EC7",
+          "volume": "5 L",
+          "image": "/media/production/ARAL-011_160EC7_5L.jpg"
+        }
+      ]
+    },
+    {
+      "internal_id": "ARAL-012",
+      "commercial_name": "Aral SuperTronic Longlife IV FE 0W-20",
+      "category": "PKW",
+      "sae": "0W-20",
+      "content": {
+        "description": "Aral SuperTronic LL IV FE 0W-20, входящее в полностью синтетическую серию, помогает двигателю сохранять отличные эксплуатационные характеристики и обеспечивает длительный опыт эксплуатации автомобиля.\nAral продолжает традиции немецкого профессионального бренда с долгой историей и использует технологию XMF, чтобы сделать вождение лёгким.",
+        "application": null,
+        "advantages": [
+          "Поддерживает чистоту двигателя, уменьшает вредные отложения и эффективно помогает двигателю работать плавно.",
+          "Уменьшает износ двигателя, помогает его компонентам работать в течение длительного времени, эффективно снижая долгосрочные расходы на техническое обслуживание.",
+          "Уменьшает трение, повышает эффективность двигателя и эффективно улучшает экономию топлива.",
+          "Выдающиеся антиокислительные свойства уменьшают загущение масла и эффективно предотвращают нарушение смазывания двигателя."
+        ],
+        "advantages_intro": "Aral SuperTronic:",
+        "storage": "Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию."
+      },
+      "technical": {
+        "performance": {
+          "api": [
+            "SQ"
+          ],
+          "acea": [
+            "C5",
+            "C6"
+          ],
+          "official_approvals": [
+            {
+              "text": "MB-Approval 229.71/ 229.72",
+              "claim_type": "official_approval"
+            }
+          ],
+          "meets": [
+            {
+              "text": "Fulfills the technical requirement of BMW Longlife-14 FE+",
+              "claim_type": "meets"
+            }
+          ],
+          "recommended_for": [],
+          "application_references": [
+            {
+              "text": "ACEA C5/C6; SAE 0W-20",
+              "claim_type": "application_reference"
+            }
+          ],
+          "performance_levels": [
+            {
+              "text": "BMW Longlife-17 FE+",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Porsche C20",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "VW 508 00/ 509 00",
+              "claim_type": "performance_level"
+            }
+          ],
+          "other": [
+            {
+              "text": "ILSAC GF-7",
+              "claim_type": "performance_level"
+            }
+          ]
+        },
+        "typical_characteristics": [
+          {
+            "characteristic": "Плотность при 15 °C",
+            "method": "ASTM D4052",
+            "unit": "g/ml",
+            "value": "0.844"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 100 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "7.97"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 40 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "42"
+          },
+          {
+            "characteristic": "Индекс вязкости",
+            "method": "ASTM D2270",
+            "unit": null,
+            "value": "166"
+          },
+          {
+            "characteristic": "Динамическая вязкость CCS при −35 °C",
+            "method": "ASTM D5293",
+            "unit": "mPa.s (cP)",
+            "value": "5822"
+          },
+          {
+            "characteristic": "Температура застывания (Pour Point)",
+            "method": "ASTM D97",
+            "unit": "°C",
+            "value": "-45"
+          },
+          {
+            "characteristic": "Сульфатная зольность",
+            "method": "ASTM D874",
+            "unit": "% wt",
+            "value": "0.74"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "sku": "15F45F",
+          "volume": "1 L",
+          "image": "/media/production/ARAL-012_15F45F_1L.png"
+        },
+        {
+          "sku": "15F460",
+          "volume": "5 L",
+          "image": "/media/production/ARAL-012_15F460_5L.png"
+        }
+      ]
+    },
+    {
+      "internal_id": "ARAL-013",
+      "commercial_name": "Aral MegaTurboral 10W-40",
+      "category": "Truck",
+      "sae": "10W-40",
+      "content": {
+        "description": "Aral MegaTurboral с технологией XMF® — масло для высоконагруженных двигателей, специально разработанное для увеличенных интервалов замены в новейших дизельных двигателях стандарта Euro 6.",
+        "application": null,
+        "advantages": [
+          "Технология Aral «eXTra Motorschutz Formel» XMF® делает Aral MegaTurboral 10W-40 более стойким и заметно уменьшает отложения на поршнях и связанный с ними абразивный износ. Двигатели остаются чище, а износ уменьшается.",
+          "Технология Aral «eXTra Motorschutz Formel» XMF® до 30% эффективнее снижает образование отложений и связанный с ними износ.*"
+        ],
+        "storage": "Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.",
+        "other_sections": [
+          {
+            "type": "subtitle",
+            "text": "Моторное масло премиум-класса для высоконагруженных дизельных двигателей"
+          },
+          {
+            "type": "advantages_footnote",
+            "text": "*По сравнению с отраслевыми требованиями API и ACEA."
+          }
+        ]
+      },
+      "technical": {
+        "performance": {
+          "api": [
+            "CI-4"
+          ],
+          "acea": [
+            "E4",
+            "E7"
+          ],
+          "official_approvals": [],
+          "meets": [],
+          "recommended_for": [],
+          "application_references": [
+            {
+              "text": "Euro 2/3/4/5/6; не Low SAPS",
+              "claim_type": "application_reference"
+            }
+          ],
+          "performance_levels": [
+            {
+              "text": "Cummins CES 20077, CES 20078",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "DDC Powerguard 93K215",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Deutz DQC III-18",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "DTFR 15B120",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Mack EO-N",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "MAN M 3277",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "MTU Oil Category 3",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "RVI RLD-2",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Volvo VDS-3",
+              "claim_type": "performance_level"
+            }
+          ],
+          "other": [
+            {
+              "text": "JASO DH-1",
+              "claim_type": "performance_level"
+            }
+          ]
+        },
+        "typical_characteristics": [
+          {
+            "characteristic": "Плотность при 15 °C",
+            "method": "ASTM D4052",
+            "unit": "g/ml",
+            "value": "0.868"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 100 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "14.8"
+          },
+          {
+            "characteristic": "Динамическая вязкость CCS при −25 °C",
+            "method": "ASTM D5293",
+            "unit": "mPa.s (cP)",
+            "value": "6100"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 40 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "98"
+          },
+          {
+            "characteristic": "Сульфатная зольность",
+            "method": "ASTM D874",
+            "unit": "% wt",
+            "value": "1.83"
+          },
+          {
+            "characteristic": "Общее щелочное число, TBN",
+            "method": "ASTM D2896",
+            "unit": "mg KOH/g",
+            "value": "12.7"
+          },
+          {
+            "characteristic": "Температура застывания (Pour Point)",
+            "method": "ASTM D97",
+            "unit": "°C",
+            "value": "-42"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "sku": "23937",
+          "volume": "208 L",
+          "image": "/media/production/ARAL-013_23937_208L.jpg"
+        },
+        {
+          "sku": "13932",
+          "volume": "20 L",
+          "image": "/media/production/ARAL-013_13932_20L.jpg"
+        },
+        {
+          "sku": "10625",
+          "volume": "5 L",
+          "image": "/media/production/ARAL-013_10625_5L.png"
+        }
+      ]
+    },
+    {
+      "internal_id": "ARAL-014",
+      "commercial_name": "Aral MegaTurboral LA 10W-40",
+      "category": "Truck",
+      "sae": "10W-40",
+      "content": {
+        "description": "Aral MegaTurboral LA — масло для высоконагруженных двигателей, специально разработанное для увеличенных интервалов замены в новейших дизельных двигателях стандарта Euro 6. Оно также может использоваться в автомобилях Euro 4 и Euro 5 с низким уровнем выбросов, особенно там, где требуются смазочные материалы Low SAPS, а также в более старых дорожных и внедорожных транспортных средствах, которым требуется такой уровень эксплуатационных свойств.\nОно предотвращает отложения на основных деталях двигателя, таких как поршни и кулачки, и поддерживает эффективность систем доочистки отработавших газов, обеспечивая постоянное соблюдение требований законодательства о выбросах.",
+        "application": null,
+        "advantages": [
+          "Разработано для защиты новейших европейских автомобилей от всех видов износа двигателя, накопления отложений и сажи, а также полировки стенок цилиндров.",
+          "Рецептура продолжает обеспечивать защиту даже в самых тяжёлых условиях, тем самым продлевая срок службы двигателя и предотвращая внеплановые простои.",
+          "Позволяет увеличить интервалы замены масла"
+        ],
+        "storage": "Все виды упаковки следует хранить под укрытием. Если хранения на открытом воздухе избежать невозможно, бочки следует укладывать горизонтально, чтобы предотвратить возможное попадание воды и повреждение маркировки бочек. Продукты не следует хранить при температуре выше 60 °C, подвергать воздействию жаркого солнца или замораживанию.",
+        "other_sections": [
+          {
+            "type": "subtitle",
+            "text": "Моторное масло Low SAPS"
+          }
+        ]
+      },
+      "technical": {
+        "performance": {
+          "api": [
+            "CJ-4"
+          ],
+          "acea": [
+            "E6",
+            "E7",
+            "E8",
+            "E9",
+            "E11"
+          ],
+          "official_approvals": [],
+          "meets": [
+            {
+              "text": "Meets requirements of- MAN M 3271-1, M 3477",
+              "claim_type": "meets"
+            }
+          ],
+          "recommended_for": [
+            {
+              "text": "For Iveco trucks requiring ACEA E6, E7, E8, E9, E11",
+              "claim_type": "recommended_for"
+            },
+            {
+              "text": "For DAF trucks requiring ACEA E6, E7, E8, E9, E11",
+              "claim_type": "recommended_for"
+            }
+          ],
+          "application_references": [],
+          "performance_levels": [
+            {
+              "text": "CAT ECF-3",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Cummins CES 20081",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Deutz DQC IV-18 LA",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "DTFR 15C110",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Mack EO-O Premium Plus, EOS-4.5",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "MTU Oil Category 3.1",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "RVI RLD-3",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Volvo CNG, VDS-4.5",
+              "claim_type": "performance_level"
+            }
+          ],
+          "other": [
+            {
+              "text": "JASO DH-2",
+              "claim_type": "performance_level"
+            }
+          ]
+        }
+      },
+      "variants": [
+        {
+          "sku": "1620",
+          "volume": "20 L",
+          "image": "/media/production/ARAL-014_1620_20L.jpg"
+        },
+        {
+          "sku": "11289",
+          "volume": "208 L",
+          "image": "/media/production/ARAL-014_11289_208L.jpg"
+        }
+      ]
+    },
+    {
+      "internal_id": "ARAL-015",
+      "commercial_name": "Aral ExtraTurboral SAE 10W-40",
+      "category": "Truck",
+      "sae": "10W-40",
+      "content": {
+        "description": "Aral ExtraTurboral SAE 10W-40 — моторное масло с пониженным трением для универсального применения в дизельных и бензиновых двигателях. Хорошие характеристики холодного пуска с быстрой подачей масла в двигатель и эффективная защита от низкотемпературного и чёрного шлама позволяют использовать его также в тяжёлых условиях эксплуатации. Универсальное применение и увеличение интервалов замены масла способствуют снижению эксплуатационных расходов.",
+        "application": "Aral ExtraTurboral SAE 10W-40 может использоваться в грузовых автомобилях, автобусах, малотоннажных грузовых автомобилях, тракторах и другой сельскохозяйственной технике, строительных машинах, аварийных генераторных установках и т. п. (соблюдать предписания производителей). Благодаря увеличенным интервалам замены масла и свойствам пониженного трения оно создаёт предпосылки для оптимальной экономичности и эксплуатационной надёжности двигателей. Широкий перечень спецификаций/допусков позволяет применять его весьма универсально.",
+        "advantages": [
+          "универсальные возможности применения снижают расходы на складские запасы",
+          "отличная защита от износа и превосходная чистота двигателя",
+          "хорошие характеристики холодного пуска",
+          "многочисленные спецификации/допуски производителей, в том числе для увеличенных интервалов замены масла"
+        ],
+        "storage": "Тару любого типа по возможности следует хранить под навесом. При незащищённом хранении на открытом воздухе без навеса бочки с маслом следует укладывать горизонтально, чтобы избежать попадания воды и сохранить читаемость маркировки. Продукты не следует хранить при температуре выше 60 °C. Их необходимо защищать от прямых солнечных лучей и мороза.",
+        "other_sections": [
+          {
+            "type": "subtitle",
+            "text": "Моторное масло с пониженным трением для смешанного автопарка"
+          }
+        ]
+      },
+      "technical": {
+        "performance": {
+          "api": [
+            "CI-4",
+            "SL"
+          ],
+          "acea": [
+            "E7"
+          ],
+          "official_approvals": [],
+          "meets": [
+            {
+              "text": "Meets requirements of MAN M 3275-1",
+              "claim_type": "meets"
+            }
+          ],
+          "recommended_for": [],
+          "application_references": [],
+          "performance_levels": [
+            {
+              "text": "CAT ECF-2",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Cummins CES 20077, CES 20078",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "DDC Powerguard 93K215",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Deutz DQC III-18",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "DTFR 15B110",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Mack EO-M Plus, EO-N",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "MTU Oil Category 2",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "RVI RLD-2",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Volvo VDS-3",
+              "claim_type": "performance_level"
+            }
+          ],
+          "other": []
+        },
+        "typical_characteristics": [
+          {
+            "characteristic": "Плотность при 15 °C",
+            "method": "ASTM D4052",
+            "unit": "g/ml",
+            "value": "0.87"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 100 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "14.4"
+          },
+          {
+            "characteristic": "Вязкость CCS при −25 °C",
+            "method": "ASTM D5293",
+            "unit": "mPa.s (cP)",
+            "value": "6400"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 40 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "99"
+          },
+          {
+            "characteristic": "Индекс вязкости",
+            "method": "ASTM D2270",
+            "unit": null,
+            "value": "150"
+          },
+          {
+            "characteristic": "Сульфатная зольность",
+            "method": "ASTM D874",
+            "unit": "% wt",
+            "value": "1.4"
+          },
+          {
+            "characteristic": "Общее щелочное число, TBN",
+            "method": "ASTM D2896",
+            "unit": "mg KOH/g",
+            "value": "10.5"
+          },
+          {
+            "characteristic": "Температура застывания",
+            "method": "ASTM D97",
+            "unit": "°C",
+            "value": "-42"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "sku": "11190",
+          "volume": "208 L",
+          "image": "/media/production/ARAL-015_11190_208L.jpg"
+        },
+        {
+          "sku": "22003",
+          "volume": "20 L",
+          "image": "/media/production/ARAL-015_22003_20L.png"
+        },
+        {
+          "sku": "22004",
+          "volume": "5 L",
+          "image": "/media/production/ARAL-015_22004_5L.jpg"
+        },
+        {
+          "sku": "2682",
+          "volume": "60 L",
+          "image": "/media/production/ARAL-015_2682_60L.jpg"
+        }
+      ]
+    },
+    {
+      "internal_id": "ARAL-016",
+      "commercial_name": "Aral масло Turboral (Plus) 15W-40",
+      "category": "Truck",
+      "sae": "15W-40",
+      "content": {
+        "description": "Моторное масло на минеральной основе с превосходными эксплуатационными свойствами и пакетом присадок, специально адаптированным для коммерческого транспорта. Сочетание надёжности, увеличенных интервалов замены масла (в рамках предписаний производителей) и широкой области применения делает Aral масло Turboral (Plus) 15W-40 универсальным моторным маслом для грузовых автомобилей, автобусов, строительных машин, тракторов и другой сельскохозяйственной техники.",
+        "application": null,
+        "advantages": [
+          "превосходная чистота двигателя даже в тяжёлых режимах эксплуатации",
+          "хорошая способность удерживать сажу во взвешенном состоянии и значительно меньшее количество отложений в двигателе",
+          "большой запас эксплуатационных свойств при длительных интервалах замены масла и тяжёлых условиях эксплуатации",
+          "разнообразные возможности применения в бензиновых и дизельных двигателях"
+        ],
+        "storage": "Тару любого типа по возможности следует хранить под навесом. При незащищённом хранении на открытом воздухе без навеса бочки с маслом следует укладывать горизонтально, чтобы избежать попадания воды и сохранить читаемость маркировки. Продукты не следует хранить при температуре выше 60 °C. Их необходимо защищать от прямых солнечных лучей и мороза.",
+        "other_sections": [
+          {
+            "type": "subtitle",
+            "text": "Универсальное моторное масло для коммерческого транспорта"
+          }
+        ]
+      },
+      "technical": {
+        "performance": {
+          "api": [
+            "CI-4",
+            "SL"
+          ],
+          "acea": [
+            "E7"
+          ],
+          "official_approvals": [],
+          "meets": [
+            {
+              "text": "Meets requirements of MAN M 3275-1",
+              "claim_type": "meets"
+            }
+          ],
+          "recommended_for": [],
+          "application_references": [],
+          "performance_levels": [
+            {
+              "text": "CAT ECF-2",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Cummins CES 20077, CES 20078",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "DDC Powerguard 93K215",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Deutz DQC III-18",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "DTFR 15B110",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Mack EO-M Plus EO-N",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "MTU Oil Category 2",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "RVI RLD-2",
+              "claim_type": "performance_level"
+            },
+            {
+              "text": "Volvo VDS-3",
+              "claim_type": "performance_level"
+            }
+          ],
+          "other": []
+        },
+        "typical_characteristics": [
+          {
+            "characteristic": "Плотность при 15 °C",
+            "method": "ASTM D4052",
+            "unit": "g/ml",
+            "value": "0,875"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 100 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "14,7"
+          },
+          {
+            "characteristic": "Вязкость CCS при −20 °C (15W)",
+            "method": "ASTM D5293",
+            "unit": "mPa.s (cP)",
+            "value": "5410"
+          },
+          {
+            "characteristic": "Кинематическая вязкость при 40 °C",
+            "method": "ASTM D445",
+            "unit": "mm²/s",
+            "value": "109"
+          },
+          {
+            "characteristic": "Индекс вязкости",
+            "method": "ASTM D2270",
+            "unit": null,
+            "value": "140"
+          },
+          {
+            "characteristic": "Сульфатная зольность",
+            "method": "ASTM D874",
+            "unit": "% wt",
+            "value": "1,42"
+          },
+          {
+            "characteristic": "Общее щелочное число, TBN",
+            "method": "ASTM D2896",
+            "unit": "mg KOH/g",
+            "value": "10,6"
+          },
+          {
+            "characteristic": "Температура застывания",
+            "method": "ASTM D97",
+            "unit": "°C",
+            "value": "-42"
+          },
+          {
+            "characteristic": "Температура вспышки, PMCC",
+            "method": "ASTM D93",
+            "unit": "°C",
+            "value": "209"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "sku": "22119",
+          "volume": "208 L",
+          "image": "/media/production/ARAL-016_22119_208L.jpg"
+        },
+        {
+          "sku": "11281",
+          "volume": "20 L",
+          "image": "/media/production/ARAL-016_11281_20L.png"
+        },
+        {
+          "sku": "14047",
+          "volume": "60 L",
+          "image": "/media/production/ARAL-016_14047_60L.jpg"
+        }
+      ]
+    },
+    {
+      "internal_id": "ARAL-017",
+      "commercial_name": "Aral Silikatfrei G12",
+      "category": "Coolant",
+      "sae": null,
+      "content": {
+        "description": null,
+        "application": null,
+        "advantages": []
+      },
+      "technical": {},
+      "variants": [
+        {
+          "sku": "90837",
+          "volume": "1 L",
+          "image": "/media/production/ARAL-017_90837_1L.jpg"
+        }
+      ]
+    }
+  ]
+}
