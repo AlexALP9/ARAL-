@@ -1,7 +1,7 @@
 {
   "version": 1,
   "manufacturer_search_url": "https://msdspds.aral.com/msdspds/msdspds.nsf/AralSearch?OpenForm&output=Full&&sitelang=EN",
-  "note": "Only public PDF copies available in the generated site will be listed. Frozen MASTER controls permission for publishing PDS: ARAL-008 and ARAL-017 are blocked from automatic PDS publication. SDS may be published separately. Uploaded versions are never assumed to replace master PDS. Do not substitute generic search/home URLs for actual PDFs.",
+  "note": "Only public PDF copies available in the generated site will be listed. Frozen MASTER controls permission for publishing PDS: ARAL-008 and ARAL-017 are blocked from automatic PDS publication. SDS may be published separately. Uploaded versions are never assumed to replace master PDS. Do not substitute generic search/home URLs for actual PDFs. ARAL-016 PDS publishing awaits the selected main DE edition 2025-03-31; the uploaded EN PDS 2025-03-29 must not silently replace it.",
   "products": [
     {
       "internal_id": "ARAL-001",
@@ -307,7 +307,7 @@
       "internal_id": "ARAL-016",
       "commercial_name": "Aral масло Turboral (Plus) 15W-40",
       "publication": {
-        "pds": true,
+        "pds": false,
         "sds": true
       },
       "documents": {
