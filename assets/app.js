@@ -66,7 +66,7 @@
   function documentDownloads(id){
     const d=availableDocuments[id]||{};
     const buttons=[['pds','Скачать паспорт продукта (PDS)'],['sds','Скачать паспорт безопасности (SDS)']]
-      .filter(([k])=>d[k]&&typeof d[k]==='string'&&/^\\.\\/docs\\/(pds|sds)\\/ARAL-\\d{3}\\.pdf$/.test(d[k]))
+      .filter(([k])=>d[k]&&typeof d[k]==='string'&&/^\.\/docs\/(pds|sds)\/ARAL-\d{3}\.pdf$/.test(d[k]))
       .map(([k,label])=>'<a class="doc-download" href="'+escapeHTML(d[k])+'" download="'+escapeHTML(id+'_'+k.toUpperCase()+'.pdf')+'" type="application/pdf"><span aria-hidden="true">↓</span> '+escapeHTML(label)+'</a>').join('');
     return '<section class="doc-panel" aria-label="Документация продукта"><h2>Документация</h2>'
       +(buttons||'<p class="doc-unavailable">PDF пока не размещён на сайте. Используйте официальный поиск ARAL.</p>')
