@@ -6,3 +6,13 @@
 @media(max-width:490px){.wrap{width:calc(100% - 36px)}.nav{gap:10px}.compare-icon{font-size:10px}.hero-copy{padding:52px 0 10px}.hero h1{font-size:43px}.hero-stats{gap:10px}.hero-stats div{padding-right:10px}.hero-stats strong{font-size:20px}.hero-stats span{font-size:9px}.hero-image{min-height:320px}.product-stage{height:275px}.pack-label{min-width:190px}.section-top h2{font-size:34px}.path{padding:25px}.path h3{font-size:29px}.card-grid{grid-template-columns:1fr 1fr;gap:8px}.product-thumb{height:165px;padding:10px}.product-thumb img{height:143px}.product-body{padding:12px}.product-body h3{font-size:13px;min-height:48px}.product-actions{flex-direction:column;align-items:start}.product-meta{font-size:10px}.compare-btn{padding:7px}.filter-row{flex-wrap:wrap}.filter-row input{flex-basis:100%}.filter-row select{flex:1}.page-intro h1{font-size:39px}.detail-copy h1{font-size:35px}.business-grid{grid-template-columns:1fr}.business-grid article{min-height:180px}.simple-list{grid-template-columns:1fr}.footer-main{grid-template-columns:1fr 1fr}.footer-main>div:first-child{grid-column:1/-1}.where-tabs button{padding:12px}.compare-icon{font-size:0}.compare-icon span{font-size:11px}.hero-image .orbit-a{width:80%}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media print{.site-header,.topstrip,footer,.compare-btn,.minor-btn,#toast{display:none!important}.page{padding:0}.compare-scroll{overflow:visible}.compare-table{min-width:0}.compare-table td,.compare-table th{font-size:10px;padding:8px}}
+
+/* Product passport downloads. Only deployed PDFs are linked. */
+.doc-panel{margin:28px 0;padding:24px;border:1px solid #dfe5ef;border-radius:16px;background:#f7faff}
+.doc-panel h2{margin:0 0 16px;font-size:clamp(21px,2.3vw,27px)}
+.doc-download{display:inline-flex;align-items:center;gap:10px;margin:0 10px 12px 0;padding:13px 16px;background:#073fa5;color:#fff;text-decoration:none;border-radius:8px;font-weight:700}
+.doc-download:hover,.doc-download:focus-visible{background:#002b7b;color:#fff}
+.doc-download span{font-size:22px;font-weight:600}
+.doc-manufacturer{display:block;margin-top:10px;color:#063f9e;font-weight:650}
+.doc-unavailable{margin:0 0 12px;color:#5a6680}
+@media(max-width:640px){.doc-panel{padding:18px}.doc-download{display:flex;width:100%;justify-content:center;margin-right:0}}
