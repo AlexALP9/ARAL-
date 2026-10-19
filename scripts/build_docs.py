@@ -53,7 +53,7 @@ def main():
     output = {}
     for item in products:
         pid = item["internal_id"]
-        assert re.fullmatch(r"ARAL-\\d{3}", pid), pid
+        assert re.fullmatch(r"ARAL-\d{3}", pid), pid
         entry = {}
         for kind in ("pds", "sds"):
             # PDS for a product blocked by frozen MASTER must remain blocked;
