@@ -2,76 +2,154 @@
 
 @GitHub
 
-We continue maintaining the ARAL product database in repository:
+Продолжаем работу над товарной базой ARAL в репозитории:
 
 https://github.com/AlexALP9/ARAL-
 
-Do not ask me to re-upload project files if they are available in GitHub.
+Основные проектные файлы уже находятся в GitHub.
+Не проси меня повторно загружать их, если они доступны через GitHub.
 
-Start by reading:
+Сначала прочитай:
 
 1. current/product-work/README.md
-2. current/product-work/ARAL_PRODUCT_WORKING_TABLE_v1.csv
-3. current/master/ARAL_PRODUCT_MASTER_v1.2.json
-4. current/content/ARAL_CONTENT_LAYER_v1.2.json
-5. current/content/ARAL_PDS_ACCEPTANCE_MAP_v1.md
-6. current/catalog/ARAL_PUBLIC_CATALOG_v1.json
-7. current/catalog/ARAL_PUBLIC_CATALOG_INTEGRITY_REPORT_v1.md
-8. current/media/ARAL_PRODUCTION_MEDIA_MAP_v1.json
+2. current/product-work/SOURCE_MANIFEST.md
+3. current/product-work/ARAL_PRODUCT_WORKING_TABLE_v1.csv
+4. current/master/ARAL_PRODUCT_MASTER_v1.2.json
+5. current/master/ARAL_PRODUCT_MASTER_v1.2.md
+6. current/content/ARAL_CONTENT_LAYER_v1.2.json
+7. current/content/ARAL_PDS_ACCEPTANCE_MAP_v1.md
+8. current/catalog/ARAL_PUBLIC_CATALOG_v1.json
+9. current/catalog/ARAL_PUBLIC_CATALOG_INTEGRITY_REPORT_v1.md
+10. current/media/ARAL_PUBLIC_MEDIA_MAP.json
+11. current/media/ARAL_PRODUCTION_MEDIA_MAP_v1.json
 
-Use media/production/ when exact SKU images are needed.
+При необходимости точных изображений используй:
+media/production/
 
-MAIN GOAL:
-continue completing the working product table: add official URLs, PDS/SDS links, verified product pages, B2B/B2C purchase links, image verification, source notes, conflicts, and action statuses.
+==================================================
+ЦЕЛЬ ЭТОГО ЧАТА
+==================================================
 
-SOURCE PRIORITY:
-1. User assortment controls which products, commercial names, SKU and package.
-2. ARAL_PRODUCT_MASTER_v1.2 is the frozen technical authority.
-3. Accepted official PDS controls current technical claims and typical characteristics.
-4. Official SDS is separate and never substitutes for PDS.
-5. CONTENT_LAYER is content only, not a replacement for technical data.
-6. Images verify visual SKU/package identity only.
-7. Retail/wholesale pages are commercial sources, not technical authorities.
+Продолжать вести товарную базу ARAL:
 
-CRITICAL RULE:
-Never silently overwrite confirmed data when a new source disagrees.
+- добавлять официальные страницы продукта;
+- добавлять PDS/SDS;
+- добавлять точные B2B/B2C ссылки покупки;
+- проверять SKU и фасовки;
+- проверять изображения;
+- фиксировать технические конфликты;
+- добавлять source notes;
+- вести last_checked и action_required;
+- готовить данные для сайта.
 
-For every conflict show:
-- Current value
-- New value
-- Source
-- Possible reason
-- Recommended action
+Рабочий файл:
+current/product-work/ARAL_PRODUCT_WORKING_TABLE_v1.csv
 
-Then wait for my decision before changing authoritative technical fields.
+==================================================
+ИСТОЧНИКИ И ПРИОРИТЕТ
+==================================================
 
-LINK HANDLING:
-When I send a URL:
-1. identify product/internal_id and SKU if possible;
-2. classify the URL: official product / PDS / SDS / image / B2B purchase / B2C purchase / additional source;
-3. verify name, SAE, SKU, package and version where possible;
-4. propose exactly which working-table column should receive it;
-5. only then update the working table.
+1. Пользовательский ассортимент определяет:
+   - какие товары входят в проект;
+   - commercial name;
+   - SKU;
+   - package/volume.
 
-For each link keep:
-- URL
-- source type
-- what it proves
-- last checked date
-- status: VERIFIED / REVIEW_REQUIRED / BROKEN / ARCHIVED.
+2. ARAL_PRODUCT_MASTER_v1.2 — frozen technical authority проекта.
 
-IMAGE RULE:
-Join exact internal_id + SKU + volume.
-Do not substitute a similar package.
-If a photo label conflicts with MASTER/PDS, record IMAGE_LABEL_CONFLICT and do not change technical data from the image.
+3. Принятый официальный PDS определяет:
+   - SAE;
+   - API;
+   - ACEA;
+   - OEM approvals;
+   - typical characteristics.
 
-PDS / SDS:
-Keep separate.
-Do not use one product's document for another product.
-Preserve approval / meets / recommended / application-reference distinctions.
+4. SDS — отдельный safety source и не заменяет PDS.
 
-COMMERCIAL LINKS:
-Use separate columns:
+5. CONTENT_LAYER — текстовый слой, не технический authority.
+
+6. Изображения проверяют визуальное соответствие SKU/package, но не переписывают технические данные.
+
+7. Магазины/дистрибьюторы — коммерческие ссылки, не технический источник.
+
+==================================================
+КРИТИЧЕСКОЕ ПРАВИЛО
+==================================================
+
+Не считать данные из рабочей таблицы автоматически истинными только потому, что они уже внесены.
+
+Но при любом расхождении НЕ исправлять значение молча.
+
+Сначала показать:
+
+ТЕКУЩЕЕ ЗНАЧЕНИЕ:
+...
+
+НАЙДЕННОЕ ЗНАЧЕНИЕ:
+...
+
+ИСТОЧНИК:
+...
+
+ВОЗМОЖНАЯ ПРИЧИНА:
+...
+
+РЕКОМЕНДУЕМОЕ ДЕЙСТВИЕ:
+...
+
+После этого ждать моего решения.
+
+==================================================
+PUBLIC / INTERNAL
+==================================================
+
+Не смешивать:
+public_product_data
+и
+internal_source_data.
+
+В публичные данные нельзя автоматически переносить:
+- внутренние заметки;
+- локальные пути;
+- неподтверждённые технические claims;
+- research-only данные.
+
+==================================================
+ССЫЛКИ
+==================================================
+
+Когда я отправляю URL:
+
+1. Определи продукт / internal_id.
+2. Определи SKU и фасовку, если это возможно.
+3. Определи тип ссылки:
+   - official product page;
+   - PDS;
+   - SDS;
+   - image;
+   - B2B purchase;
+   - B2C purchase;
+   - additional verified source.
+4. Проверь:
+   - название;
+   - SAE;
+   - SKU;
+   - package;
+   - version.
+5. Укажи точную строку и колонку рабочей таблицы.
+6. После подтверждения обновляй рабочий CSV.
+
+Для ссылки фиксировать:
+- URL;
+- source type;
+- что она подтверждает;
+- last_checked;
+- status.
+
+Статусы:
+VERIFIED / REVIEW_REQUIRED / BROKEN / ARCHIVED.
+
+Коммерческие поля:
 - official_product_url
 - skladspk_url
 - retail_url
@@ -79,25 +157,98 @@ Use separate columns:
 - purchase_link_type
 
 purchase_link_type:
-DIRECT_PRODUCT / CATEGORY / HOMEPAGE / MISSING
+DIRECT_PRODUCT / CATEGORY / HOMEPAGE / MISSING.
 
-Do not invent URLs.
-Do not replace a missing direct product link with a homepage without marking its type.
+Не придумывать URL.
+Не выдавать homepage за direct product URL.
 
-WORKING FILE:
-current/product-work/ARAL_PRODUCT_WORKING_TABLE_v1.csv
+==================================================
+ИЗОБРАЖЕНИЯ
+==================================================
 
-Work on this file as the editable operational table.
-Do not modify the frozen MASTER unless I explicitly instruct you to create a new reviewed MASTER version.
+Точная связка:
+internal_id + SKU + volume.
 
-After each edit report only:
-CHANGED:
+Не заменять похожей упаковкой.
+
+Если изображение конфликтует с текущим MASTER/PDS:
+- пометить IMAGE_LABEL_CONFLICT;
+- зафиксировать conflict_notes/action_required;
+- не менять технические данные по фотографии.
+
+Известный пример:
+ARAL-003 / SKU 20634 / 4 L.
+
+==================================================
+PDS / SDS
+==================================================
+
+Хранить раздельно.
+
+Нельзя использовать документ одного продукта для другого только из-за одинаковой SAE.
+
+Сохранять различие:
+- official approval;
+- meets requirements;
+- recommended for;
+- application reference.
+
+==================================================
+КОНТРОЛЬ КАЧЕСТВА
+==================================================
+
+После крупных изменений проверять:
+
+- 17 продуктов;
+- 47 SKU;
+- duplicate SKU;
+- пустые обязательные поля;
+- PDS/SDS gaps;
+- missing images;
+- image/SKU mismatch;
+- conflicting technical values;
+- malformed или broken URLs;
+- manual-review items.
+
+Не изменять количество продуктов/SKU молча.
+
+==================================================
+ФОРМАТ РАБОТЫ
+==================================================
+
+Я могу писать коротко, например:
+
+«добавь эту ссылку к HighTronic»
+«проверь фото 4 литра»
+«вот новый PDS»
+«добавь ссылку покупки»
+
+Если соответствие однозначно — работай по текущей базе.
+Если есть риск изменить не тот SKU — задай один точный уточняющий вопрос.
+
+После каждого изменения сообщай:
+
+ИЗМЕНЕНО:
 ...
-UNCHANGED:
-...
-REQUIRES REVIEW:
+
+НЕ ИЗМЕНЕНО:
 ...
 
-First task in this new chat:
-read the GitHub files above, audit the current working table, and tell me which link/status columns are still empty and what should be filled next.
-Do not make speculative technical corrections.
+ТРЕБУЕТ ПРОВЕРКИ:
+...
+
+==================================================
+ПЕРВАЯ ЗАДАЧА
+==================================================
+
+Сейчас ничего не меняй.
+
+1. Прочитай перечисленные GitHub-файлы.
+2. Подтверди количество строк/SKU в рабочей таблице.
+3. Кратко опиши структуру колонок.
+4. Покажи, какие URL-поля ещё пустые.
+5. Покажи manual-review/conflict точки.
+6. Остановись и жди моей первой ссылки или следующей команды.
+
+Не перестраивай всю базу без необходимости.
+Не вноси speculative technical corrections.
