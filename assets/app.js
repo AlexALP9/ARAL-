@@ -6,6 +6,8 @@
   const cats = {'PKW':'Легковые автомобили','Truck':'Грузовой транспорт','Coolant':'Охлаждающие жидкости'};
   const groups = {'PKW':'ЛЕГКОВЫЕ','Truck':'ГРУЗОВЫЕ','Coolant':'ОХЛАЖДЕНИЕ'};
   const catalogURL='./catalog.json';
+  const documentsURL='./docs/available.json';
+  let availableDocuments={};
   const brandURL='https://msdspds.aral.com/msdspds/msdspds.nsf/AralSearch?OpenForm&output=Full&&sitelang=EN';
   const b2bURL='https://skladspk.ru/';
   const b2cURL='https://centravtomasel.ru/';
@@ -61,6 +63,15 @@
     return safeEntries((p.technical||{}).typical_characteristics).map(x=>'<tr><th scope="row">'+escapeHTML(x.characteristic)+'</th><td>'+cleanText(x.value)+(x.unit?' '+escapeHTML(x.unit):'')+'</td><td>'+cleanText(x.method)+'</td></tr>').join('');
   }
   function detailSection(title,content,opened=false){return '<details '+(opened?'open':'')+'><summary>'+escapeHTML(title)+'</summary><div class="details-content">'+content+'</div></details>'}
+  function documentDownloads(id){
+    const d=availableDocuments[id]||{};
+    const buttons=[['pds','Скачать паспорт продукта (PDS)'],['sds','Скачать паспорт безопасности (SDS)']]
+      .filter(([k])=>d[k]&&typeof d[k]==='string'&&/^\\.\\/docs\\/(pds|sds)\\/ARAL-\\d{3}\\.pdf$/.test(d[k]))
+      .map(([k,label])=>'<a class="doc-download" href="'+escapeHTML(d[k])+'" download="'+escapeHTML(id+'_'+k.toUpperCase()+'.pdf')+'" type="application/pdf"><span aria-hidden="true">↓</span> '+escapeHTML(label)+'</a>').join('');
+    return '<section class="doc-panel" aria-label="Документация продукта"><h2>Документация</h2>'
+      +(buttons||'<p class="doc-unavailable">PDF пока не размещён на сайте. Используйте официальный поиск ARAL.</p>')
+      +'<a class="doc-manufacturer" href="'+escapeHTML(brandURL)+'" target="_blank" rel="noopener noreferrer">Все паспорта продукта и безопасности на сайте ARAL ↗</a></section>';
+  }
   function renderProduct(id){
     const p=products.find(p=>p.internal_id===id);
     if(!p){main.innerHTML=wrapper('<div class="empty"><h3>Товар не найден</h3><p>Вернитесь к каталогу.</p><a class="btn btn-blue" href="#/catalog">Каталог ↗</a></div>');return}
@@ -72,7 +83,7 @@
       +detailSection('Спецификации и допуски',pr?'<table class="data-table"><tbody>'+pr+'</tbody></table>':'<p>Технические утверждения не разрешены к публикации для этой позиции.</p>')
       +detailSection('Типовые характеристики',typical?'<table class="data-table"><thead><tr><th>Характеристика</th><th>Значение</th><th>Метод</th></tr></thead><tbody>'+typical+'</tbody></table>':'<p>Публичные физические характеристики для этой позиции отсутствуют.</p>')
       +(c.storage?detailSection('Хранение','<p>'+escapeHTML(c.storage)+'</p>'):'');
-    main.innerHTML=wrapper('<a class="back-link" href="#/catalog">← Вернуться в каталог</a><div class="product-detail-top"><div class="detail-image"><img id="detail-photo" src="'+escapeHTML(pathImg(variant))+'" alt="'+escapeHTML(p.commercial_name+' '+variant.volume)+'"></div><div class="detail-copy"><span class="kicker">'+escapeHTML(groups[p.category]||p.category)+' / '+escapeHTML(p.internal_id)+'</span><h1>'+escapeHTML(p.commercial_name)+'</h1><p>'+escapeHTML(c.description?c.description.split('\n')[0]:'Варианты фасовки и подтверждённые технические сведения.')+'</p><div class="tags">'+(p.sae?'<span>SAE '+escapeHTML(p.sae)+'</span>':'')+'<span>'+escapeHTML(cats[p.category]||p.category)+'</span><span>'+p.variants.length+' SKU</span></div><div class="detail-label">ДОСТУПНЫЕ ФАСОВКИ</div><div class="variants">'+p.variants.map((v,i)=>'<button type="button" data-variant="'+escapeHTML(v.sku)+'" class="variant-btn '+(i===0?'active':'')+'" aria-pressed="'+(i===0?'true':'false')+'">'+escapeHTML(v.volume)+'</button>').join('')+'</div><div id="selected-sku" class="sku-info">Артикул: '+escapeHTML(variant.sku)+'</div><div class="detail-actions"><a class="btn btn-blue" href="#/where">Где купить ↗</a><button type="button" class="compare-btn '+(compared.includes(id)?'active':'')+'" data-compare="'+escapeHTML(id)+'">'+(compared.includes(id)?'✓ Выбрано':'+ Сравнить')+'</button></div><p class="disclaimer">Точные ссылки на SKU в магазинах пока не подтверждены. Уточняйте цену и наличие у продавца.</p></div></div><div class="details">'+blocks+'</div><p class="disclaimer">Поиск документов производителя: <a class="text-link" href="'+escapeHTML(brandURL)+'" target="_blank" rel="noopener noreferrer">Паспорт продукта (PDS) и паспорт безопасности (SDS) ↗</a>. Отсутствующие значения не дополнялись из внутренних или архивных данных.</p>');
+    main.innerHTML=wrapper('<a class="back-link" href="#/catalog">← Вернуться в каталог</a><div class="product-detail-top"><div class="detail-image"><img id="detail-photo" src="'+escapeHTML(pathImg(variant))+'" alt="'+escapeHTML(p.commercial_name+' '+variant.volume)+'"></div><div class="detail-copy"><span class="kicker">'+escapeHTML(groups[p.category]||p.category)+' / '+escapeHTML(p.internal_id)+'</span><h1>'+escapeHTML(p.commercial_name)+'</h1><p>'+escapeHTML(c.description?c.description.split('\n')[0]:'Варианты фасовки и подтверждённые технические сведения.')+'</p><div class="tags">'+(p.sae?'<span>SAE '+escapeHTML(p.sae)+'</span>':'')+'<span>'+escapeHTML(cats[p.category]||p.category)+'</span><span>'+p.variants.length+' SKU</span></div><div class="detail-label">ДОСТУПНЫЕ ФАСОВКИ</div><div class="variants">'+p.variants.map((v,i)=>'<button type="button" data-variant="'+escapeHTML(v.sku)+'" class="variant-btn '+(i===0?'active':'')+'" aria-pressed="'+(i===0?'true':'false')+'">'+escapeHTML(v.volume)+'</button>').join('')+'</div><div id="selected-sku" class="sku-info">Артикул: '+escapeHTML(variant.sku)+'</div><div class="detail-actions"><a class="btn btn-blue" href="#/where">Где купить ↗</a><button type="button" class="compare-btn '+(compared.includes(id)?'active':'')+'" data-compare="'+escapeHTML(id)+'">'+(compared.includes(id)?'✓ Выбрано':'+ Сравнить')+'</button></div><p class="disclaimer">Точные ссылки на SKU в магазинах пока не подтверждены. Уточняйте цену и наличие у продавца.</p></div></div><div class="details">'+blocks+'</div>'+documentDownloads(id)+'<p class="disclaimer">Поиск документов производителя: <a class="text-link" href="'+escapeHTML(brandURL)+'" target="_blank" rel="noopener noreferrer">Паспорт продукта (PDS) и паспорт безопасности (SDS) ↗</a>. Отсутствующие значения не дополнялись из внутренних или архивных данных.</p>');
     $$('[data-variant]').forEach(b=>b.addEventListener('click',()=>{
       const v=p.variants.find(v=>v.sku===b.dataset.variant);if(!v)return;
       $('#detail-photo').src=pathImg(v);$('#detail-photo').alt=p.commercial_name+' '+v.volume;
@@ -168,6 +179,9 @@
   });
   window.addEventListener('hashchange',route);
   persist();
+  fetch(documentsURL).then(r=>{if(!r.ok)throw new Error('Документация не найдена');return r.json()})
+    .then(data=>{availableDocuments=data.products||{};if((location.hash||'').includes('#/product/'))route()})
+    .catch(()=>{availableDocuments={}});
   fetch(catalogURL).then(r=>{if(!r.ok)throw new Error('Ошибка каталога '+r.status);return r.json()}).then(data=>{
     if(!Array.isArray(data.products))throw new Error('Некорректная структура');
     products=data.products;route();
