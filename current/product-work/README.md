@@ -1,18 +1,18 @@
 # ARAL product work — source index
 
-This folder is the working entry point for ordinary ChatGPT sessions that maintain the ARAL product table.
+Эта папка — рабочая точка входа для обычных ChatGPT-сессий, которые продолжают вести товарную базу ARAL через подключённый GitHub.
 
-## Working table
+## Рабочая таблица
 
 - `current/product-work/ARAL_PRODUCT_WORKING_TABLE_v1.csv`
-  - 47 SKU rows derived from the frozen technical MASTER.
-  - One row per SKU/package variant.
-  - Includes reserved columns for official product URLs, PDS/SDS, B2B/B2C purchase links, source notes, conflicts and actions.
-  - Do not silently overwrite technical fields when a new source disagrees.
+  - 47 SKU-строк;
+  - одна строка = один SKU / фасовка;
+  - содержит товарные данные, media mapping, PDS/SDS, технические статусы, поля ссылок, конфликтов и action_required;
+  - это рабочий слой, а не замена техническому MASTER.
 
-## Canonical sources already in this repository
+## Канонические источники в репозитории
 
-Technical authority:
+Технический authority:
 - `current/master/ARAL_PRODUCT_MASTER_v1.2.json`
 - `current/master/ARAL_PRODUCT_MASTER_v1.2.md`
 
@@ -29,43 +29,64 @@ Public catalog:
 - `current/catalog/ARAL_PUBLIC_CATALOG_INTEGRITY_REPORT_v1.md`
 
 Media:
+- `current/media/ARAL_PUBLIC_MEDIA_MAP.json`
 - `current/media/ARAL_PRODUCTION_MEDIA_MAP_v1.json`
-- `current/media/ARAL_PRODUCTION_MEDIA_REPORT_v1.md`
+- `current/media/ARAL_MEDIA_MANIFEST.json`
 - `media/production/`
 
 Runtime site catalog:
 - `catalog.json`
-- This is a runtime artifact, not the technical authority.
+- это runtime-артефакт сайта, а не технический authority.
 
-## Source priority
+Подробный порядок источников:
+- `current/product-work/SOURCE_MANIFEST.md`
 
-1. User assortment controls products, commercial name, SKU and package.
-2. Frozen MASTER controls technical/publication status.
-3. Accepted official PDS controls API/ACEA/OEM/typical characteristics.
-4. Official SDS is a separate safety source.
-5. CONTENT_LAYER controls prepared content, not technical truth.
-6. Exact product/SKU image controls visual representation only.
-7. Retail/B2B pages are commercial links and must not be treated as technical sources.
+## Приоритет данных
 
-## Conflict rule
+1. Пользовательский ассортимент определяет товары, коммерческие названия, SKU и фасовки.
+2. Frozen MASTER определяет текущие технические/publication статусы проекта.
+3. Принятый официальный PDS определяет API/ACEA/OEM/typical characteristics.
+4. Официальный SDS хранится отдельно как safety-source.
+5. CONTENT_LAYER определяет подготовленный текст, но не заменяет технические поля.
+6. Точная фотография продукта/SKU подтверждает визуальное соответствие, но не переписывает MASTER.
+7. Retail/B2B страницы — коммерческие ссылки, не технические источники.
 
-Never silently replace a confirmed value. Record:
-- current value,
-- new value,
-- source,
-- likely reason,
-- recommended action,
-then wait for approval.
+## Правило конфликтов
 
-## Known item to review
+Никогда не заменять подтверждённое значение молча.
 
-ARAL-003 / SKU 20634 / 4 L:
-current image label shows ACEA A3/B4 and MB 229.3/229.5 while the current MASTER uses ACEA C3 and MB-Approval 229.31/229.51.
-Treat this as `IMAGE_LABEL_CONFLICT`; do not change MASTER technical data from the photo.
+Сначала фиксировать:
+- current value;
+- new value;
+- source;
+- likely reason;
+- recommended action.
 
-## Chat starter
+После этого ждать решения пользователя.
 
-Use:
+## Известный конфликт для контроля
+
+`ARAL-003 / SKU 20634 / 4 L`:
+текущее фото показывает ACEA A3/B4 и MB 229.3/229.5, а текущий MASTER — ACEA C3 и MB-Approval 229.31/229.51.
+
+Статус:
+`IMAGE_LABEL_CONFLICT`.
+
+Не менять технические данные MASTER по фотографии; требуется подходящее изображение 4 L для текущей технической версии.
+
+## Старт нового обычного чата
+
+Использовать:
 - `current/product-work/CHAT_PROMPT_PRODUCT_TABLE.md`
 
-The ordinary chat should read files from GitHub first. No manual re-upload is required when the GitHub connector is available.
+Если GitHub подключён, основные материалы повторно прикладывать не нужно.
+
+## РУЧНОЙ ШАГ — только если нужен исходный Excel
+
+Локальный файл `ARAL_catalog_final.xlsx` сейчас не добавлен в GitHub автоматически. Его размер около 12 MB, а доступный GitHub-коннектор в этом чате надёжно пишет текстовые файлы, но не принимает локальный бинарный XLSX напрямую.
+
+Если нужно, чтобы новый чат/разработчик имел именно исходный Excel, загрузить вручную в:
+
+`current/product-work/ARAL_catalog_final.xlsx`
+
+Для обычной работы со ссылками и проверками это не блокер: `ARAL_PRODUCT_WORKING_TABLE_v1.csv` + canonical JSON/MD уже находятся в GitHub.
