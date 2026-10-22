@@ -1,0 +1,2404 @@
+{
+  "schema_version": "ARAL_PRODUCTION_MEDIA_AUDIT/1.0",
+  "source_media_root": "LOCAL_SOURCE_ARCHIVE (not a repository path)",
+  "source_reference_root": "LOCAL_REFERENCE_ARCHIVE (not a repository path)",
+  "reference_sha256": {
+    "ARAL_MEDIA_MANIFEST.json": "3a046576f3055b7704c1556a386b83bde574cbc346fa846706161b0f50eecbd6",
+    "ARAL_PUBLIC_MEDIA_MAP.json": "1cc6742820515f330dfd52205cbee87d46c6f34c15ad10e724bfe47cdcac58f1",
+    "ARAL_WEBP_CONVERSION_REPORT.md": "1eba22f675aadd96fa69df2a8ce828b155d743821dd546bfaa29503132b82307"
+  },
+  "encoder": {
+    "pillow": "12.3.0",
+    "libwebp": "1.6.0",
+    "method": 6
+  },
+  "totals": {
+    "production_total_size": 10647988,
+    "original_total_size": 12063470,
+    "lossless_webp_total_size": 17952458,
+    "savings_vs_original_percent": 11.7336,
+    "savings_vs_lossless_percent": 40.6879
+  },
+  "checks": {
+    "production_files": 47,
+    "missing": 0,
+    "sku_mapping_errors": 0,
+    "original_files_modified": 0,
+    "lossless_files_modified": 0,
+    "reference_files_modified": 0,
+    "dimensions_changed": 0,
+    "production_decoded_RGBA_mismatches": 0,
+    "candidates_q95_files": 42,
+    "candidates_q92_files": 42,
+    "unique_compression_tests_per_quality": 31
+  },
+  "generic_groups_by_sha256": {
+    "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816": [
+      "ARAL-001/15F073",
+      "ARAL-003/20632",
+      "ARAL-004/10333",
+      "ARAL-005/20190",
+      "ARAL-006/156EC2",
+      "ARAL-008/10502",
+      "ARAL-013/23937",
+      "ARAL-014/11289",
+      "ARAL-015/11190",
+      "ARAL-016/22119"
+    ],
+    "d9cfb04b50135741d7701e187169bce81cee8f17666cce62906fb52df114bcd5": [
+      "ARAL-005/20191",
+      "ARAL-015/2682",
+      "ARAL-016/14047"
+    ]
+  },
+  "records": [
+    {
+      "internal_id": "ARAL-001",
+      "sku": "15F073",
+      "volume": "208 L",
+      "image_role": "generic_package_representation",
+      "original": {
+        "file": "media/originals/ARAL-001_15F073_208L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-001_15F073_208L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 161970,
+        "sha256": "fba58672ee578cb11278ed48326b530bca0a2ccc28a7060498e02fafc12d426c"
+      },
+      "production": {
+        "file": "media/production/ARAL-001_15F073_208L.jpg",
+        "source": "original",
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-001_15F073_208L.webp",
+          "bytes": 34490,
+          "sha256": "f8af418b434500066c9c558f563f0cd4716c008e4f8e8f3c289788675a925a3c",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 59.2201
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-001_15F073_208L.webp",
+          "bytes": 26650,
+          "sha256": "18383e6d9fb478e7f43524bef901444dadd272053b926f3b1d9b546bd80c63ac",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 68.4899
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-001",
+      "sku": "15F076",
+      "volume": "1 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-001_15F076_1L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 116607,
+        "sha256": "fbb26ded21bb8a1c4fa7196cd561bfd92232c28b88fbe12c1d8b1ae4568413f8"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-001_15F076_1L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 219344,
+        "sha256": "79a733495b71e7fccec3e37b8ff587d2485201574b496f0ad81bca342273cae8"
+      },
+      "production": {
+        "file": "media/production/ARAL-001_15F076_1L.jpg",
+        "source": "original",
+        "bytes": 116607,
+        "sha256": "fbb26ded21bb8a1c4fa7196cd561bfd92232c28b88fbe12c1d8b1ae4568413f8",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-001_15F076_1L.webp",
+          "bytes": 58680,
+          "sha256": "e1c4ece21d641dd92938ef02941268120ff3ce022b602a7b55535ad5b24d60d5",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 49.6771
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-001_15F076_1L.webp",
+          "bytes": 46596,
+          "sha256": "fa7b630be8235be1add9795bb4a5801a833490fa106d77070168d90ab59f6bfa",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 60.0401
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-001",
+      "sku": "15F078",
+      "volume": "4 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-001_15F078_4L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 176982,
+        "sha256": "5c44847d8d09fbb7173024685e04105221da10b6a41f8d7087d7b48e02693054"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-001_15F078_4L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 384692,
+        "sha256": "23dc3b0285f2719a72de47b612494df114133bd9888c88ac4ce09bdb4dfdb5e0"
+      },
+      "production": {
+        "file": "media/production/ARAL-001_15F078_4L.jpg",
+        "source": "original",
+        "bytes": 176982,
+        "sha256": "5c44847d8d09fbb7173024685e04105221da10b6a41f8d7087d7b48e02693054",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-001_15F078_4L.webp",
+          "bytes": 100256,
+          "sha256": "69ed19063e4cf06f3e864ad310d85e3c58e1ce5c6385ecc2d7d062be90291f81",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 43.3524
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-001_15F078_4L.webp",
+          "bytes": 78002,
+          "sha256": "63d85e733b9ec4fcbcc9d65ff8c2cb9fd8af741906695fe63b5052a9c7f7ef4d",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 55.9266
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-001",
+      "sku": "15F471",
+      "volume": "5 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-001_15F471_5L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 119048,
+        "sha256": "6755376bc38a255d3643489ce5c9827c441145db241d9451983edbab4ef869f5"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-001_15F471_5L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 224444,
+        "sha256": "f94c2866d43022cf10fc822b4c6fc893492d245e80901a1a78aa5f437f0dece0"
+      },
+      "production": {
+        "file": "media/production/ARAL-001_15F471_5L.jpg",
+        "source": "original",
+        "bytes": 119048,
+        "sha256": "6755376bc38a255d3643489ce5c9827c441145db241d9451983edbab4ef869f5",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-001_15F471_5L.webp",
+          "bytes": 66984,
+          "sha256": "0d1542c5c2ecab21d43aa5ac58df91173f1f9cbf464c45b5c666c1b699690faf",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 43.7336
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-001_15F471_5L.webp",
+          "bytes": 52150,
+          "sha256": "a8208b7ff6f3188591b482046e756f1d7ec6ca718ec0351efc9dd2db8a4bf8c3",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 56.1941
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-002",
+      "sku": "25094",
+      "volume": "4 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-002_25094_4L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 159684,
+        "sha256": "de74c66fe8f1cea5c9e16bc801ee981510e2a0b3e9f822715dd9caa3c679a262"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-002_25094_4L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 329918,
+        "sha256": "5e965a952ae2408c9fa346e25f9f0c35ff57c1638f155ecbe04447202034dd96"
+      },
+      "production": {
+        "file": "media/production/ARAL-002_25094_4L.jpg",
+        "source": "original",
+        "bytes": 159684,
+        "sha256": "de74c66fe8f1cea5c9e16bc801ee981510e2a0b3e9f822715dd9caa3c679a262",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-002_25094_4L.webp",
+          "bytes": 108992,
+          "sha256": "5ae6a33a71d5bf68e71dbcfb4e7f71ab582a96dd998e90116fb9f7bcae5bf424",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 31.7452
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-002_25094_4L.webp",
+          "bytes": 82742,
+          "sha256": "ca3a97c4653a88e23998492b36e7a9025f97476f633c11ba1db022842a1fe2b9",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 48.1839
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-003",
+      "sku": "20637",
+      "volume": "1 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-003_20637_1L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 120912,
+        "sha256": "1a4c90a616cd3623f5f609b058727a94f1907950c5dd5c9fae7aafc5f22dc3c6"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-003_20637_1L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 232282,
+        "sha256": "773b00e2701a5c3212cfbcd4ea3b71b5185d2ff4443349a6c816dfb7e06bbe19"
+      },
+      "production": {
+        "file": "media/production/ARAL-003_20637_1L.jpg",
+        "source": "original",
+        "bytes": 120912,
+        "sha256": "1a4c90a616cd3623f5f609b058727a94f1907950c5dd5c9fae7aafc5f22dc3c6",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-003_20637_1L.webp",
+          "bytes": 63720,
+          "sha256": "91d3e3dba5dae2d3d006aedafd955169c85e0edf6cd70ddf1c8323f24d78b4d0",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 47.3005
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-003_20637_1L.webp",
+          "bytes": 50588,
+          "sha256": "fcc24fa278132c2824e6d3db62c7ef6aa5661ebacd058b3fe27863ae552a5b9d",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 58.1613
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-003",
+      "sku": "20632",
+      "volume": "208 L",
+      "image_role": "generic_package_representation",
+      "original": {
+        "file": "media/originals/ARAL-003_20632_208L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-003_20632_208L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 161970,
+        "sha256": "fba58672ee578cb11278ed48326b530bca0a2ccc28a7060498e02fafc12d426c"
+      },
+      "production": {
+        "file": "media/production/ARAL-003_20632_208L.jpg",
+        "source": "original",
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-003_20632_208L.webp",
+          "bytes": 34490,
+          "sha256": "f8af418b434500066c9c558f563f0cd4716c008e4f8e8f3c289788675a925a3c",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 59.2201
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-003_20632_208L.webp",
+          "bytes": 26650,
+          "sha256": "18383e6d9fb478e7f43524bef901444dadd272053b926f3b1d9b546bd80c63ac",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 68.4899
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-003",
+      "sku": "20634",
+      "volume": "4 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-003_20634_4L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 182835,
+        "sha256": "739a4e17a3c73fe1fe668d278c17fed37bb067f33e62ea8284cf11c03632926a"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-003_20634_4L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 405820,
+        "sha256": "ca1c6170edae1e72743b30211fa5a16360d8d505653e5aa64adfc8b21340bf2c"
+      },
+      "production": {
+        "file": "media/production/ARAL-003_20634_4L.jpg",
+        "source": "original",
+        "bytes": 182835,
+        "sha256": "739a4e17a3c73fe1fe668d278c17fed37bb067f33e62ea8284cf11c03632926a",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-003_20634_4L.webp",
+          "bytes": 106878,
+          "sha256": "402e71932001ca34b55a8e7fa5b9fe2a4b919793ed4a96cc1ba08b987ba70b9b",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 41.544
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-003_20634_4L.webp",
+          "bytes": 81812,
+          "sha256": "90e5572e8c2332bbefb456fb5b0cb212d82edbc6fa1e7216351e88447617c65c",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 55.2536
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-003",
+      "sku": "20635",
+      "volume": "5 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-003_20635_5L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 196668,
+        "sha256": "ce53a6a6fbc43f499ce7a4a7b8a69c112f76cea829cd98de9b21f4b8ec73b314"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-003_20635_5L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 408918,
+        "sha256": "0a6a971a3be4c13529ff80dd8cb4524f607ec0ebf0f14a18d718392606938561"
+      },
+      "production": {
+        "file": "media/production/ARAL-003_20635_5L.jpg",
+        "source": "original",
+        "bytes": 196668,
+        "sha256": "ce53a6a6fbc43f499ce7a4a7b8a69c112f76cea829cd98de9b21f4b8ec73b314",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-003_20635_5L.webp",
+          "bytes": 105812,
+          "sha256": "652e2ea3256e7392ac456c8f1e85c596d2bfe7c863fe8380dfa3a7326e6127fb",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 46.1977
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-003_20635_5L.webp",
+          "bytes": 81186,
+          "sha256": "2f42409edefe0ca15b1ec270a690fcd90e146bd44e8e47a500248679b341e59c",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 58.7193
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-004",
+      "sku": "10332",
+      "volume": "1 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-004_10332_1L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 116933,
+        "sha256": "4931fa742b2e9ff06c51e0fb3f48804825d8a4106d6797183412f8bdfb7d5e93"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-004_10332_1L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 219684,
+        "sha256": "35a759e66e0852eb0174ef0d91373b3ce370a90f99008397398ad66eb997ff77"
+      },
+      "production": {
+        "file": "media/production/ARAL-004_10332_1L.jpg",
+        "source": "original",
+        "bytes": 116933,
+        "sha256": "4931fa742b2e9ff06c51e0fb3f48804825d8a4106d6797183412f8bdfb7d5e93",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-004_10332_1L.webp",
+          "bytes": 59066,
+          "sha256": "a78a1e3de7abfdb19ea94127b1afdda58caf18e935727ed94b000b4b0f94edf2",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 49.4873
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-004_10332_1L.webp",
+          "bytes": 48668,
+          "sha256": "1d7778989cfdaeec39a8b4840dd7956bba21de7c79f6a3eef3c8f64b070bd57f",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 58.3796
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-004",
+      "sku": "10333",
+      "volume": "208 L",
+      "image_role": "generic_package_representation",
+      "original": {
+        "file": "media/originals/ARAL-004_10333_208L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-004_10333_208L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 161970,
+        "sha256": "fba58672ee578cb11278ed48326b530bca0a2ccc28a7060498e02fafc12d426c"
+      },
+      "production": {
+        "file": "media/production/ARAL-004_10333_208L.jpg",
+        "source": "original",
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-004_10333_208L.webp",
+          "bytes": 34490,
+          "sha256": "f8af418b434500066c9c558f563f0cd4716c008e4f8e8f3c289788675a925a3c",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 59.2201
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-004_10333_208L.webp",
+          "bytes": 26650,
+          "sha256": "18383e6d9fb478e7f43524bef901444dadd272053b926f3b1d9b546bd80c63ac",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 68.4899
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-004",
+      "sku": "10334",
+      "volume": "4 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-004_10334_4L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 184671,
+        "sha256": "11e0ab0441abd3de9922ae977e97e660b3ab625767ad06815882dc97f0742ec1"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-004_10334_4L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 400560,
+        "sha256": "13d3f859bac5f0219d70ce8108f880d436f5c0dc3707e9bc970a8b0207832699"
+      },
+      "production": {
+        "file": "media/production/ARAL-004_10334_4L.jpg",
+        "source": "original",
+        "bytes": 184671,
+        "sha256": "11e0ab0441abd3de9922ae977e97e660b3ab625767ad06815882dc97f0742ec1",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-004_10334_4L.webp",
+          "bytes": 109826,
+          "sha256": "e3a6adec821480a76f70998509b5007e16929b93d1f1795fc52fe2964b4ca395",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 40.5288
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-004_10334_4L.webp",
+          "bytes": 85088,
+          "sha256": "7a34753606e5652467dd9142342cc0897c5d9a84e429b5f2846de93130a158c9",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 53.9245
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-005",
+      "sku": "20198",
+      "volume": "1 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-005_20198_1L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 114820,
+        "sha256": "c4cb7bb06bc2f32e1f464d1dfb13bacef519fa0e40025066fa6e9dea89637bba"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-005_20198_1L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 217236,
+        "sha256": "2ddba97dd5ad90f26bb658295415dc0fb01733fe6779d1571af4150df962e9f1"
+      },
+      "production": {
+        "file": "media/production/ARAL-005_20198_1L.jpg",
+        "source": "original",
+        "bytes": 114820,
+        "sha256": "c4cb7bb06bc2f32e1f464d1dfb13bacef519fa0e40025066fa6e9dea89637bba",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-005_20198_1L.webp",
+          "bytes": 58558,
+          "sha256": "1739a91aebcbebaecb8c7894a8c0174b8274c359cb402b96b4825f9a3b49b7f0",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 49.0002
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-005_20198_1L.webp",
+          "bytes": 46040,
+          "sha256": "cacebcf65537cb5519989bfd7c47b1fa30670877e3ad495cdb7815fda58bf5eb",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 59.9025
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-005",
+      "sku": "20190",
+      "volume": "208 L",
+      "image_role": "generic_package_representation",
+      "original": {
+        "file": "media/originals/ARAL-005_20190_208L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-005_20190_208L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 161970,
+        "sha256": "fba58672ee578cb11278ed48326b530bca0a2ccc28a7060498e02fafc12d426c"
+      },
+      "production": {
+        "file": "media/production/ARAL-005_20190_208L.jpg",
+        "source": "original",
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-005_20190_208L.webp",
+          "bytes": 34490,
+          "sha256": "f8af418b434500066c9c558f563f0cd4716c008e4f8e8f3c289788675a925a3c",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 59.2201
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-005_20190_208L.webp",
+          "bytes": 26650,
+          "sha256": "18383e6d9fb478e7f43524bef901444dadd272053b926f3b1d9b546bd80c63ac",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 68.4899
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-005",
+      "sku": "20194",
+      "volume": "4 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-005_20194_4L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 183599,
+        "sha256": "91c789f460e7966f2c68c6b93b7501da1e9f7332880b798ee2106f2d295c468d"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-005_20194_4L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 410998,
+        "sha256": "43f9493d3b5e45e21b473868302a0338e2c323b9c20acec2b36298b587d7ecdc"
+      },
+      "production": {
+        "file": "media/production/ARAL-005_20194_4L.jpg",
+        "source": "original",
+        "bytes": 183599,
+        "sha256": "91c789f460e7966f2c68c6b93b7501da1e9f7332880b798ee2106f2d295c468d",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-005_20194_4L.webp",
+          "bytes": 107260,
+          "sha256": "e949a03e9dd02141aadb125e8508653ba60f47cbe1c20da167553674a20d706c",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 41.5792
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-005_20194_4L.webp",
+          "bytes": 81998,
+          "sha256": "8b98830c8697a36dd139422cdbbbeeef135ca4c131d8a0bfdcf063cffed87927",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 55.3385
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-005",
+      "sku": "20191",
+      "volume": "60 L",
+      "image_role": "generic_package_representation",
+      "original": {
+        "file": "media/originals/ARAL-005_20191_60L.jpg",
+        "format": "jpg",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 162979,
+        "sha256": "d9cfb04b50135741d7701e187169bce81cee8f17666cce62906fb52df114bcd5"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-005_20191_60L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 402596,
+        "sha256": "f67b4f39945ab73e73373ba7f4e6d1e26f533fbce74568a3ef46db6d4ea3ebaf"
+      },
+      "production": {
+        "file": "media/production/ARAL-005_20191_60L.jpg",
+        "source": "original",
+        "bytes": 162979,
+        "sha256": "d9cfb04b50135741d7701e187169bce81cee8f17666cce62906fb52df114bcd5",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-005_20191_60L.webp",
+          "bytes": 69964,
+          "sha256": "b1d9c2bafea4c68fc0b2701db344094976598d537a466c0124caa5ae69178bd1",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 57.0718
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-005_20191_60L.webp",
+          "bytes": 53424,
+          "sha256": "5ddae0da2fda006aa449efa61a4d1ad68747e2ce78cb3763b26134e1c7aa313e",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 67.2203
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-006",
+      "sku": "21407",
+      "volume": "1 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-006_21407_1L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 124028,
+        "sha256": "722ee7d21e2c9a1d390c04da19d06f11f32fc08cc96583fa82f3f200c6e4950d"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-006_21407_1L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 232804,
+        "sha256": "5bc45c8077e0d10b243509802069b2455c6e5e8c5ea02740cc8c45f7ae77ffb9"
+      },
+      "production": {
+        "file": "media/production/ARAL-006_21407_1L.jpg",
+        "source": "original",
+        "bytes": 124028,
+        "sha256": "722ee7d21e2c9a1d390c04da19d06f11f32fc08cc96583fa82f3f200c6e4950d",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-006_21407_1L.webp",
+          "bytes": 63918,
+          "sha256": "746d80cf0237c24ff204d81406d8941483d2a395f52e58c0ba1dc8ee45ded1e3",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 48.4649
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-006_21407_1L.webp",
+          "bytes": 51078,
+          "sha256": "5db7b22cab802bbf8bf3ceec2056afe71c5b9a9d79a6174f5ffa1906e783dc25",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 58.8174
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-006",
+      "sku": "156EC2",
+      "volume": "208 L",
+      "image_role": "generic_package_representation",
+      "original": {
+        "file": "media/originals/ARAL-006_156EC2_208L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-006_156EC2_208L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 161970,
+        "sha256": "fba58672ee578cb11278ed48326b530bca0a2ccc28a7060498e02fafc12d426c"
+      },
+      "production": {
+        "file": "media/production/ARAL-006_156EC2_208L.jpg",
+        "source": "original",
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-006_156EC2_208L.webp",
+          "bytes": 34490,
+          "sha256": "f8af418b434500066c9c558f563f0cd4716c008e4f8e8f3c289788675a925a3c",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 59.2201
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-006_156EC2_208L.webp",
+          "bytes": 26650,
+          "sha256": "18383e6d9fb478e7f43524bef901444dadd272053b926f3b1d9b546bd80c63ac",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 68.4899
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-006",
+      "sku": "21404",
+      "volume": "4 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-006_21404_4L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 190842,
+        "sha256": "924fe888bd862269da90af7a43d124aaf3dbfb59e71c68d4064736c89efc4ea1"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-006_21404_4L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 414850,
+        "sha256": "7968722f933a43333daea0e5d52c206467a3a6f89333419571d14129baef8adf"
+      },
+      "production": {
+        "file": "media/production/ARAL-006_21404_4L.jpg",
+        "source": "original",
+        "bytes": 190842,
+        "sha256": "924fe888bd862269da90af7a43d124aaf3dbfb59e71c68d4064736c89efc4ea1",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-006_21404_4L.webp",
+          "bytes": 111934,
+          "sha256": "937f8df8ab64b70d2b4b267593434561b1122dd0b224c13e5bbcef2227ab7aaa",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 41.3473
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-006_21404_4L.webp",
+          "bytes": 86572,
+          "sha256": "67d44a46f62bc85eb92f940f17a04f0f179a57135e4efca2992cef6ab0929719",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 54.6368
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-007",
+      "sku": "16008",
+      "volume": "1 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-007_16008_1L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 113281,
+        "sha256": "19dc05e78816899a106496a61f52dc2d17c035fbfd99b9026c52d502f2c249cc"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-007_16008_1L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 203168,
+        "sha256": "b231d3cbab7dd5b232c436d408f77a995a8ee8d90615d66f0eb11e0f852e55f3"
+      },
+      "production": {
+        "file": "media/production/ARAL-007_16008_1L.jpg",
+        "source": "original",
+        "bytes": 113281,
+        "sha256": "19dc05e78816899a106496a61f52dc2d17c035fbfd99b9026c52d502f2c249cc",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-007_16008_1L.webp",
+          "bytes": 53904,
+          "sha256": "1d8ce8f1f690563e29f2d16c04039ab04d131483980a011aa8ddc186b0e245ca",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 52.4157
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-007_16008_1L.webp",
+          "bytes": 43144,
+          "sha256": "8cd4a77a921a32fc862236a76491730428a0da2477887db0724e5638943c645b",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 61.9142
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-007",
+      "sku": "16004",
+      "volume": "4 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-007_16004_4L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 173518,
+        "sha256": "98daa6fa18f13cc268fef30bce0ac8b4869dccfa66fd9ba7e4bbc4a35cd331fa"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-007_16004_4L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 376646,
+        "sha256": "16fa3d944d2a9f1b52fcd88624ce2c1af76ab3e6ad95b839bb728d20c6510a1f"
+      },
+      "production": {
+        "file": "media/production/ARAL-007_16004_4L.jpg",
+        "source": "original",
+        "bytes": 173518,
+        "sha256": "98daa6fa18f13cc268fef30bce0ac8b4869dccfa66fd9ba7e4bbc4a35cd331fa",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-007_16004_4L.webp",
+          "bytes": 88296,
+          "sha256": "c33f2849bdb3ec095aeb5da1831184a6ac1984cb904143bd37d61dab9979b2ad",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 49.1142
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-007_16004_4L.webp",
+          "bytes": 65098,
+          "sha256": "257acaa1af17702a6c3fecfb03408c8c94d63d32a60e9d56cde70f1ef11ca184",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 62.4834
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-008",
+      "sku": "10508",
+      "volume": "1 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-008_10508_1L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 111520,
+        "sha256": "892508aaf097a7fb46b950db4db6fbd8e2586c14596c1cb9365e245f7bdc99d0"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-008_10508_1L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 213566,
+        "sha256": "b404b66efaa3df08592d203553a6be3abdf01bfa85497332fb2e9452f0a3a25d"
+      },
+      "production": {
+        "file": "media/production/ARAL-008_10508_1L.jpg",
+        "source": "original",
+        "bytes": 111520,
+        "sha256": "892508aaf097a7fb46b950db4db6fbd8e2586c14596c1cb9365e245f7bdc99d0",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-008_10508_1L.webp",
+          "bytes": 62742,
+          "sha256": "85c917bf74fc42c75a1912a58ae7fb72dbd4f026058e7c33c796f7ea410a2f89",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 43.7392
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-008_10508_1L.webp",
+          "bytes": 49458,
+          "sha256": "9afa4dd3cbbbc2fd1ae2f272daea7653a9bf3a5ccc2893d4b2a00e96e6f1c24c",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 55.651
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-008",
+      "sku": "10502",
+      "volume": "208 L",
+      "image_role": "generic_package_representation",
+      "original": {
+        "file": "media/originals/ARAL-008_10502_208L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-008_10502_208L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 161970,
+        "sha256": "fba58672ee578cb11278ed48326b530bca0a2ccc28a7060498e02fafc12d426c"
+      },
+      "production": {
+        "file": "media/production/ARAL-008_10502_208L.jpg",
+        "source": "original",
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-008_10502_208L.webp",
+          "bytes": 34490,
+          "sha256": "f8af418b434500066c9c558f563f0cd4716c008e4f8e8f3c289788675a925a3c",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 59.2201
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-008_10502_208L.webp",
+          "bytes": 26650,
+          "sha256": "18383e6d9fb478e7f43524bef901444dadd272053b926f3b1d9b546bd80c63ac",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 68.4899
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-008",
+      "sku": "10504",
+      "volume": "4 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-008_10504_4L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 183465,
+        "sha256": "ddf5a481a45818fcac491129d0cf1f29fb200978d34921262ca03bebdcd67be4"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-008_10504_4L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 409176,
+        "sha256": "e30ee7985a973f53003962070a501af7d589b1ca53a358e2bb475e85c6bee27c"
+      },
+      "production": {
+        "file": "media/production/ARAL-008_10504_4L.jpg",
+        "source": "original",
+        "bytes": 183465,
+        "sha256": "ddf5a481a45818fcac491129d0cf1f29fb200978d34921262ca03bebdcd67be4",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-008_10504_4L.webp",
+          "bytes": 109400,
+          "sha256": "ddcdb4f8c0c042b210cf18ff5b8220fabddb015f383f8ae977f57098aa15b64e",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 40.3701
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-008_10504_4L.webp",
+          "bytes": 82982,
+          "sha256": "d04ca4dc8371c1c1f2fac3c022e26ff9af6d4f1d83b83b0919e3696ac3f8b3bd",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 54.7696
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-009",
+      "sku": "15A8A",
+      "volume": "1 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-009_15A8A_1L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 110702,
+        "sha256": "6b3da611bf3c9f6ddfbdc825d3444e19a1fe71810a62d0766ebab9417c4e6afd"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-009_15A8A_1L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 210804,
+        "sha256": "4b40b4250c1e4bd5065d3b0cfa21f8181a6ffcc0a989265ad447afc1c13b53b4"
+      },
+      "production": {
+        "file": "media/production/ARAL-009_15A8A_1L.jpg",
+        "source": "original",
+        "bytes": 110702,
+        "sha256": "6b3da611bf3c9f6ddfbdc825d3444e19a1fe71810a62d0766ebab9417c4e6afd",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-009_15A8A_1L.webp",
+          "bytes": 63438,
+          "sha256": "29df495b7c95febd638f274308664c485509a85e347a013de4c906839cc45595",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 42.6948
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-009_15A8A_1L.webp",
+          "bytes": 50326,
+          "sha256": "88c6026be72585021c4b6d47e43cfc6724f0158931a39df296e544c306bbdd6f",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 54.5392
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-009",
+      "sku": "15A8AD",
+      "volume": "4 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-009_15A8AD_4L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 189029,
+        "sha256": "eeb055d7493bf220bf6d960ef119eb2b2a8d79fd9cb11ad64735763042706fb2"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-009_15A8AD_4L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 412900,
+        "sha256": "2e19c61446359c8bc1c0b85cd37218b2ea0b1d18ee8df831d4bf11e9c9b6d657"
+      },
+      "production": {
+        "file": "media/production/ARAL-009_15A8AD_4L.jpg",
+        "source": "original",
+        "bytes": 189029,
+        "sha256": "eeb055d7493bf220bf6d960ef119eb2b2a8d79fd9cb11ad64735763042706fb2",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-009_15A8AD_4L.webp",
+          "bytes": 111766,
+          "sha256": "fbf30f21e4f07eb6c13d6b8414a29ee13e1c9be737f1f5bec816bbf9e0d9df28",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 40.8736
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-009_15A8AD_4L.webp",
+          "bytes": 85216,
+          "sha256": "91075aad6962c78856f1dbe4f9a3276b36103ba87e60847f0fb32c9ddafc444a",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 54.9191
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-010",
+      "sku": "15DBCC",
+      "volume": "1 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-010_15DBCC_1L.jpg",
+        "format": "jpg",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 237668,
+        "sha256": "222f130dd6d1dc3b14fb07b2d6c24136a8de580e7ba0f364dc4d14b7b61cfd29"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-010_15DBCC_1L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 595890,
+        "sha256": "9a87e0eb2b1f290830ebe1e14589ef8dc045655656036411e057168d5d49bacf"
+      },
+      "production": {
+        "file": "media/production/ARAL-010_15DBCC_1L.jpg",
+        "source": "original",
+        "bytes": 237668,
+        "sha256": "222f130dd6d1dc3b14fb07b2d6c24136a8de580e7ba0f364dc4d14b7b61cfd29",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-010_15DBCC_1L.webp",
+          "bytes": 151752,
+          "sha256": "b144a5ef5b77814803f459771360251d7a66927afeabfaa8c448d4e2c13f07b1",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 36.1496
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-010_15DBCC_1L.webp",
+          "bytes": 110516,
+          "sha256": "a073b6e17977249ec30f87ed626329acd01c2a8785b3befa8e5c9522d3d74be4",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 53.4998
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-010",
+      "sku": "15DBC5",
+      "volume": "20 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-010_15DBC5_20L.jpg",
+        "format": "jpg",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 222094,
+        "sha256": "848fa816ef3fb0aad58ed7538a3fe15134ea0e0930efe624a2b3a733260cd3fc"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-010_15DBC5_20L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 461770,
+        "sha256": "f92948bc3546f789859955ea06f826d973bc82feeded3cab2cf66eb2eb7df516"
+      },
+      "production": {
+        "file": "media/production/ARAL-010_15DBC5_20L.jpg",
+        "source": "original",
+        "bytes": 222094,
+        "sha256": "848fa816ef3fb0aad58ed7538a3fe15134ea0e0930efe624a2b3a733260cd3fc",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-010_15DBC5_20L.webp",
+          "bytes": 121942,
+          "sha256": "18a8da5280d5b9b7fb31d5cadf5154bd2dac14ffca2fb40f47116d33ea5a804e",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 45.0944
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-010_15DBC5_20L.webp",
+          "bytes": 90720,
+          "sha256": "df0049ef63b4785ffefb96fd96fd11274742813fab9ecf3d70617b1bf5da7006",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 59.1524
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-010",
+      "sku": "15DBCE",
+      "volume": "4 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-010_15DBCE_4L.jpg",
+        "format": "jpg",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 327477,
+        "sha256": "1db37871cb923ea3330d0250bcf34142ecb02438758851118762d8fb5dd34c70"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-010_15DBCE_4L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 797652,
+        "sha256": "b6ef6abf3cfbda9eec4cc2e4bdd8ffa08fa5598811fa109aedb3cfb7bd0efa00"
+      },
+      "production": {
+        "file": "media/production/ARAL-010_15DBCE_4L.jpg",
+        "source": "original",
+        "bytes": 327477,
+        "sha256": "1db37871cb923ea3330d0250bcf34142ecb02438758851118762d8fb5dd34c70",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-010_15DBCE_4L.webp",
+          "bytes": 244898,
+          "sha256": "f0dc91c828b6e85130d6c952a1de0d3ec2b3032f29843e0d84cf984369729694",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 25.2167
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-010_15DBCE_4L.webp",
+          "bytes": 187358,
+          "sha256": "ca4c2c2828ea24551f9ac70d2461e314b18586c0b2ac9b86d77df6ca8f7949c1",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 42.7874
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-010",
+      "sku": "15F477",
+      "volume": "5 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-010_15F477_5L.jpg",
+        "format": "jpg",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 326338,
+        "sha256": "bcd0f7c30657d1a178020a81d4e8eb19b479e24a72b966fd28baabf1e8b070dc"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-010_15F477_5L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 818006,
+        "sha256": "e0e082921f6ef1d6af546b70cd02ee10317ff2c0705297768ca0b36f72a9c609"
+      },
+      "production": {
+        "file": "media/production/ARAL-010_15F477_5L.jpg",
+        "source": "original",
+        "bytes": 326338,
+        "sha256": "bcd0f7c30657d1a178020a81d4e8eb19b479e24a72b966fd28baabf1e8b070dc",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-010_15F477_5L.webp",
+          "bytes": 246748,
+          "sha256": "614c6bf7337aff7638adb6abe5dd5828e2aed7318b1d2248baa2ac309641b035",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 24.3888
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-010_15F477_5L.webp",
+          "bytes": 186244,
+          "sha256": "e4e66003171ca5fd578d31f62988383402c07244845c756aeef3eb9a3678c023",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 42.9291
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-011",
+      "sku": "15F474",
+      "volume": "1 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-011_15F474_1L.jpg",
+        "format": "jpg",
+        "width": 600,
+        "height": 600,
+        "bytes": 34113,
+        "sha256": "56199eec5a33fca4623c8b47b97d474254aa179a02286c24b598434880d9b2bf"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-011_15F474_1L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 600,
+        "height": 600,
+        "bytes": 92948,
+        "sha256": "c8e72273ca8354d59bd5891a62d6ffccdb83d99c0462f8fb0b649f8e88d5d4f2"
+      },
+      "production": {
+        "file": "media/production/ARAL-011_15F474_1L.jpg",
+        "source": "original",
+        "bytes": 34113,
+        "sha256": "56199eec5a33fca4623c8b47b97d474254aa179a02286c24b598434880d9b2bf",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-011_15F474_1L.webp",
+          "bytes": 27452,
+          "sha256": "c5ec1a19a3c3b008a3f01a6c9c99e1849d5cd9e6926e35d24859f37b418c6a30",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 19.5263
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-011_15F474_1L.webp",
+          "bytes": 20990,
+          "sha256": "d32e02724de260318c53cbee2caf2c2e9c48d49e1c49bb48e34714c4ac8f5871",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 38.4692
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-011",
+      "sku": "160EC7",
+      "volume": "5 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-011_160EC7_5L.jpg",
+        "format": "jpg",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 240359,
+        "sha256": "47fb466ad27c60a1080acbec1d09a48c7188d5215c531168fe5e44996b8ad924"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-011_160EC7_5L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 556992,
+        "sha256": "8b9c75da9c6e10778ac60d589ef3eb2b5a0d21953be8e21e637f18dbf39b607b"
+      },
+      "production": {
+        "file": "media/production/ARAL-011_160EC7_5L.jpg",
+        "source": "original",
+        "bytes": 240359,
+        "sha256": "47fb466ad27c60a1080acbec1d09a48c7188d5215c531168fe5e44996b8ad924",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-011_160EC7_5L.webp",
+          "bytes": 147842,
+          "sha256": "643e0c311d46b19859bbaf555c242bc9e0dec6670f36870ad255e19679501762",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 38.4912
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-011_160EC7_5L.webp",
+          "bytes": 110002,
+          "sha256": "275da1459e2d7665c9b03e9bbc0c694b31fad2abf1905bfcce6cbdd7dca10c62",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 54.2343
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-012",
+      "sku": "15F45F",
+      "volume": "1 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-012_15F45F_1L.png",
+        "format": "png",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 977810,
+        "sha256": "d37060d32cc5f8571e2cc3e1669522ef1fc250353608978045d05954cea34e73"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-012_15F45F_1L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 681484,
+        "sha256": "6f5cbdcb808e851eed18af9ef76fddc0eb7afadf88f0b7f60f657b3e5a4ff3e1"
+      },
+      "production": {
+        "file": "media/production/ARAL-012_15F45F_1L.webp",
+        "source": "web",
+        "bytes": 681484,
+        "sha256": "6f5cbdcb808e851eed18af9ef76fddc0eb7afadf88f0b7f60f657b3e5a4ff3e1",
+        "format": "webp"
+      },
+      "candidates": {}
+    },
+    {
+      "internal_id": "ARAL-012",
+      "sku": "15F460",
+      "volume": "5 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-012_15F460_5L.png",
+        "format": "png",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 1342350,
+        "sha256": "bb86c70abdb6b5a5d9630852c318e52ac2bc6d336d688178535241d6b90e3ab6"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-012_15F460_5L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 983850,
+        "sha256": "fa2d0a742b8d30cfbcfc9f351614ef5ac1229c4048abaad7c7053c10ae78c657"
+      },
+      "production": {
+        "file": "media/production/ARAL-012_15F460_5L.webp",
+        "source": "web",
+        "bytes": 983850,
+        "sha256": "fa2d0a742b8d30cfbcfc9f351614ef5ac1229c4048abaad7c7053c10ae78c657",
+        "format": "webp"
+      },
+      "candidates": {}
+    },
+    {
+      "internal_id": "ARAL-013",
+      "sku": "23937",
+      "volume": "208 L",
+      "image_role": "generic_package_representation",
+      "original": {
+        "file": "media/originals/ARAL-013_23937_208L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-013_23937_208L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 161970,
+        "sha256": "fba58672ee578cb11278ed48326b530bca0a2ccc28a7060498e02fafc12d426c"
+      },
+      "production": {
+        "file": "media/production/ARAL-013_23937_208L.jpg",
+        "source": "original",
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-013_23937_208L.webp",
+          "bytes": 34490,
+          "sha256": "f8af418b434500066c9c558f563f0cd4716c008e4f8e8f3c289788675a925a3c",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 59.2201
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-013_23937_208L.webp",
+          "bytes": 26650,
+          "sha256": "18383e6d9fb478e7f43524bef901444dadd272053b926f3b1d9b546bd80c63ac",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 68.4899
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-013",
+      "sku": "13932",
+      "volume": "20 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-013_13932_20L.jpg",
+        "format": "jpg",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 212564,
+        "sha256": "6564c502ecee9be3924f746e3a7dabe0d5645ce609410082937730ae328eb15d"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-013_13932_20L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 474934,
+        "sha256": "84d7c6159128e2cd60dbe7bc0d1de12bd3667369837cbbbc4b2b24a838bee1d6"
+      },
+      "production": {
+        "file": "media/production/ARAL-013_13932_20L.jpg",
+        "source": "original",
+        "bytes": 212564,
+        "sha256": "6564c502ecee9be3924f746e3a7dabe0d5645ce609410082937730ae328eb15d",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-013_13932_20L.webp",
+          "bytes": 104280,
+          "sha256": "a0ff8eaff2f73d0636ed5c6d22ed5efa0c9c2de59434a69efa156fc63112eac5",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 50.9418
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-013_13932_20L.webp",
+          "bytes": 80546,
+          "sha256": "6a6562197cc0a0f062dfd3996226cd847e9e8efe7759356ea27d00adeab71c40",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 62.1074
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-013",
+      "sku": "10625",
+      "volume": "5 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-013_10625_5L.png",
+        "format": "png",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 1333271,
+        "sha256": "bd4465bcd5cf5853383891e289b9fed82cfe3bfdc846469ef0ed171cdb0363aa"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-013_10625_5L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 1065684,
+        "sha256": "91763c5a6566cc111438c83e2c2c63e3c9d52a9a1fb164189e2eab7ac8f48f3a"
+      },
+      "production": {
+        "file": "media/production/ARAL-013_10625_5L.webp",
+        "source": "web",
+        "bytes": 1065684,
+        "sha256": "91763c5a6566cc111438c83e2c2c63e3c9d52a9a1fb164189e2eab7ac8f48f3a",
+        "format": "webp"
+      },
+      "candidates": {}
+    },
+    {
+      "internal_id": "ARAL-014",
+      "sku": "1620",
+      "volume": "20 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-014_1620_20L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 89311,
+        "sha256": "8e188d333768fa2ebab47e590131e6c4d9dcc5c5ca3ec18dddd994f112cf11f0"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-014_1620_20L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 180588,
+        "sha256": "a5a69a4d7fecef43da825541c07be72e9b8f0c8467f7eea0414d94cf7e29e93f"
+      },
+      "production": {
+        "file": "media/production/ARAL-014_1620_20L.jpg",
+        "source": "original",
+        "bytes": 89311,
+        "sha256": "8e188d333768fa2ebab47e590131e6c4d9dcc5c5ca3ec18dddd994f112cf11f0",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-014_1620_20L.webp",
+          "bytes": 45250,
+          "sha256": "f8d7eaf9fcbeff7117df5b53889497b453a268ab9e0dc58ddd9c071450b8f27d",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 49.3343
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-014_1620_20L.webp",
+          "bytes": 34886,
+          "sha256": "1bc71b362e3449999377ec3f59b548401f710d1226f2505d9aa0f550963dd131",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 60.9387
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-014",
+      "sku": "11289",
+      "volume": "208 L",
+      "image_role": "generic_package_representation",
+      "original": {
+        "file": "media/originals/ARAL-014_11289_208L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-014_11289_208L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 161970,
+        "sha256": "fba58672ee578cb11278ed48326b530bca0a2ccc28a7060498e02fafc12d426c"
+      },
+      "production": {
+        "file": "media/production/ARAL-014_11289_208L.jpg",
+        "source": "original",
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-014_11289_208L.webp",
+          "bytes": 34490,
+          "sha256": "f8af418b434500066c9c558f563f0cd4716c008e4f8e8f3c289788675a925a3c",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 59.2201
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-014_11289_208L.webp",
+          "bytes": 26650,
+          "sha256": "18383e6d9fb478e7f43524bef901444dadd272053b926f3b1d9b546bd80c63ac",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 68.4899
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-015",
+      "sku": "11190",
+      "volume": "208 L",
+      "image_role": "generic_package_representation",
+      "original": {
+        "file": "media/originals/ARAL-015_11190_208L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-015_11190_208L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 161970,
+        "sha256": "fba58672ee578cb11278ed48326b530bca0a2ccc28a7060498e02fafc12d426c"
+      },
+      "production": {
+        "file": "media/production/ARAL-015_11190_208L.jpg",
+        "source": "original",
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-015_11190_208L.webp",
+          "bytes": 34490,
+          "sha256": "f8af418b434500066c9c558f563f0cd4716c008e4f8e8f3c289788675a925a3c",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 59.2201
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-015_11190_208L.webp",
+          "bytes": 26650,
+          "sha256": "18383e6d9fb478e7f43524bef901444dadd272053b926f3b1d9b546bd80c63ac",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 68.4899
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-015",
+      "sku": "22003",
+      "volume": "20 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-015_22003_20L.png",
+        "format": "png",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 1054000,
+        "sha256": "e3d2158febd4e2f0a1bef013c24736d20ac9e288915d9ea7ad554c3fa0558482"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-015_22003_20L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 802016,
+        "sha256": "b984413d38d28c2e1fdf5c2dddb651ac8aad5daf4aadd590fc01ef1280e23504"
+      },
+      "production": {
+        "file": "media/production/ARAL-015_22003_20L.webp",
+        "source": "web",
+        "bytes": 802016,
+        "sha256": "b984413d38d28c2e1fdf5c2dddb651ac8aad5daf4aadd590fc01ef1280e23504",
+        "format": "webp"
+      },
+      "candidates": {}
+    },
+    {
+      "internal_id": "ARAL-015",
+      "sku": "22004",
+      "volume": "5 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-015_22004_5L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 152026,
+        "sha256": "73769ba7ca1c6e7db8248345ccec058d3b52ad8ca864c5bc5d0ac226aa98dbd2"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-015_22004_5L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 309670,
+        "sha256": "c08a70645bc7a8dacdbe0f447cbfddf8ff587c214b12a271ab59428575668ad4"
+      },
+      "production": {
+        "file": "media/production/ARAL-015_22004_5L.jpg",
+        "source": "original",
+        "bytes": 152026,
+        "sha256": "73769ba7ca1c6e7db8248345ccec058d3b52ad8ca864c5bc5d0ac226aa98dbd2",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-015_22004_5L.webp",
+          "bytes": 74080,
+          "sha256": "84c558cc3039ca53d40f620ecb4918dba16971bb9435b113ce3e28093f867813",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 51.2715
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-015_22004_5L.webp",
+          "bytes": 56952,
+          "sha256": "53c3e6a674e5baae88db90fbe928f041f190cabe24190d9a6b3ececbe7a99ede",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 62.538
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-015",
+      "sku": "2682",
+      "volume": "60 L",
+      "image_role": "generic_package_representation",
+      "original": {
+        "file": "media/originals/ARAL-015_2682_60L.jpg",
+        "format": "jpg",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 162979,
+        "sha256": "d9cfb04b50135741d7701e187169bce81cee8f17666cce62906fb52df114bcd5"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-015_2682_60L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 402596,
+        "sha256": "f67b4f39945ab73e73373ba7f4e6d1e26f533fbce74568a3ef46db6d4ea3ebaf"
+      },
+      "production": {
+        "file": "media/production/ARAL-015_2682_60L.jpg",
+        "source": "original",
+        "bytes": 162979,
+        "sha256": "d9cfb04b50135741d7701e187169bce81cee8f17666cce62906fb52df114bcd5",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-015_2682_60L.webp",
+          "bytes": 69964,
+          "sha256": "b1d9c2bafea4c68fc0b2701db344094976598d537a466c0124caa5ae69178bd1",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 57.0718
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-015_2682_60L.webp",
+          "bytes": 53424,
+          "sha256": "5ddae0da2fda006aa449efa61a4d1ad68747e2ce78cb3763b26134e1c7aa313e",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 67.2203
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-016",
+      "sku": "22119",
+      "volume": "208 L",
+      "image_role": "generic_package_representation",
+      "original": {
+        "file": "media/originals/ARAL-016_22119_208L.jpg",
+        "format": "jpg",
+        "width": 800,
+        "height": 800,
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-016_22119_208L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 800,
+        "height": 800,
+        "bytes": 161970,
+        "sha256": "fba58672ee578cb11278ed48326b530bca0a2ccc28a7060498e02fafc12d426c"
+      },
+      "production": {
+        "file": "media/production/ARAL-016_22119_208L.jpg",
+        "source": "original",
+        "bytes": 84576,
+        "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-016_22119_208L.webp",
+          "bytes": 34490,
+          "sha256": "f8af418b434500066c9c558f563f0cd4716c008e4f8e8f3c289788675a925a3c",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 59.2201
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-016_22119_208L.webp",
+          "bytes": 26650,
+          "sha256": "18383e6d9fb478e7f43524bef901444dadd272053b926f3b1d9b546bd80c63ac",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 68.4899
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-016",
+      "sku": "11281",
+      "volume": "20 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-016_11281_20L.png",
+        "format": "png",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 1105987,
+        "sha256": "62d11c667ac8d5707f50eede6b7d3d03ab2d920d3676c75886bc93758a0e1000"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-016_11281_20L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 864902,
+        "sha256": "bec54559f82e1f4299fd833e19cc555e94a8f9e1b61da023994b56068b957e3c"
+      },
+      "production": {
+        "file": "media/production/ARAL-016_11281_20L.webp",
+        "source": "web",
+        "bytes": 864902,
+        "sha256": "bec54559f82e1f4299fd833e19cc555e94a8f9e1b61da023994b56068b957e3c",
+        "format": "webp"
+      },
+      "candidates": {}
+    },
+    {
+      "internal_id": "ARAL-016",
+      "sku": "14047",
+      "volume": "60 L",
+      "image_role": "generic_package_representation",
+      "original": {
+        "file": "media/originals/ARAL-016_14047_60L.jpg",
+        "format": "jpg",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 162979,
+        "sha256": "d9cfb04b50135741d7701e187169bce81cee8f17666cce62906fb52df114bcd5"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-016_14047_60L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 402596,
+        "sha256": "f67b4f39945ab73e73373ba7f4e6d1e26f533fbce74568a3ef46db6d4ea3ebaf"
+      },
+      "production": {
+        "file": "media/production/ARAL-016_14047_60L.jpg",
+        "source": "original",
+        "bytes": 162979,
+        "sha256": "d9cfb04b50135741d7701e187169bce81cee8f17666cce62906fb52df114bcd5",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-016_14047_60L.webp",
+          "bytes": 69964,
+          "sha256": "b1d9c2bafea4c68fc0b2701db344094976598d537a466c0124caa5ae69178bd1",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 57.0718
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-016_14047_60L.webp",
+          "bytes": 53424,
+          "sha256": "5ddae0da2fda006aa449efa61a4d1ad68747e2ce78cb3763b26134e1c7aa313e",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": true,
+          "savings_vs_original_percent": 67.2203
+        }
+      }
+    },
+    {
+      "internal_id": "ARAL-017",
+      "sku": "90837",
+      "volume": "1 L",
+      "image_role": "sku_package_image",
+      "original": {
+        "file": "media/originals/ARAL-017_90837_1L.jpg",
+        "format": "jpg",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 204261,
+        "sha256": "94cf15ba5873198f26b95c0a16ed6e169159960a7af930a17ecf4e52ee0d3fb1"
+      },
+      "lossless_webp": {
+        "file": "media/web/ARAL-017_90837_1L.webp",
+        "format": "webp",
+        "conversion": "lossless",
+        "width": 1100,
+        "height": 1100,
+        "bytes": 510774,
+        "sha256": "288cde5529467a8f18af16831e5e835f79469adf3bccdd51664c8ebc8e1ed3fd"
+      },
+      "production": {
+        "file": "media/production/ARAL-017_90837_1L.jpg",
+        "source": "original",
+        "bytes": 204261,
+        "sha256": "94cf15ba5873198f26b95c0a16ed6e169159960a7af930a17ecf4e52ee0d3fb1",
+        "format": "jpg"
+      },
+      "candidates": {
+        "q95": {
+          "file": "media/candidates_q95/ARAL-017_90837_1L.webp",
+          "bytes": 96296,
+          "sha256": "70e6cd7df64acbed9790a3ba83e1dba93e6cd3aec7d2b62b1eb8a5e5e237095f",
+          "quality": 95,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 52.8564
+        },
+        "q92": {
+          "file": "media/candidates_q92/ARAL-017_90837_1L.webp",
+          "bytes": 73638,
+          "sha256": "0732f11f1ff015f30a37cb4880a31144801fa6fc0201098f53481c6e3d47943d",
+          "quality": 92,
+          "lossless": false,
+          "production": false,
+          "compression_reused_by_sha256": false,
+          "savings_vs_original_percent": 63.9491
+        }
+      }
+    }
+  ],
+  "handoff_projection": {
+    "scope": "historical_audit_only_not_canonical_or_current_deployment",
+    "original_file_sha256": "2a854e535d4081489ee61b2645c8552bc8e5a76533b063dd17107db279b6d93b",
+    "redacted_fields": [
+      "source_media_root",
+      "source_reference_root"
+    ],
+    "rule": "All 47 source records, image hashes, sizes, metrics and original checks retained. Paths for local originals, WebP and candidates are historical references, not evidence of files in GitHub. Current verification is in MEDIA_V2_VERIFIED_RESULTS.json. No image/candidate bytes included."
+  }
+}

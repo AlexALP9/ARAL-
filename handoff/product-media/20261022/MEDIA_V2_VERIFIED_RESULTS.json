@@ -1,0 +1,2030 @@
+{
+  "schema_version": "ARAL_MEDIA_V2_VERIFIED_HANDOFF/1.0",
+  "scope": "audit_only_not_a_new_canonical_media_layer",
+  "base_main_commit": "ff14ac5b87c617c6c73fe2b55c8b63ffbad2ff31",
+  "sources": {
+    "media_v2_original_sha256": "7b0c914c259427452043494ac7b890f7077cb279fb6338b005ce37fbc54353c5",
+    "production_audit_original_sha256": "2a854e535d4081489ee61b2645c8552bc8e5a76533b063dd17107db279b6d93b",
+    "xlsx_original_sha256": "07c053251a6d9fe9d38356c37acea68ece31e716ec8a8f22ce5d7c6418dbef28",
+    "master_original_sha256": "9982b9d5b37bd5d3cc281ae8dabc10da4c1913f25b08b359c87aa708067b0c94",
+    "note": "Original source-byte hashes, not hashes of reserialized GitHub JSON. Personal local paths excluded."
+  },
+  "historical_media_audit": {
+    "products": 17,
+    "SKU_variants": 47,
+    "embedded_images": 47,
+    "images_extracted": 47,
+    "public_ready": 47,
+    "requires_processing": 0,
+    "manual_visual_decision": 0,
+    "generic_208L_images": 10,
+    "generic_60L_images": 3,
+    "missing_image": 0,
+    "metadata_27_rows": 6,
+    "metadata_27_cells": 31,
+    "unique_image_byte_streams": 36,
+    "background_counts": {
+      "white": 31,
+      "near_white": 16
+    }
+  },
+  "user_approval": {
+    "source": "direct_user_message",
+    "background_decision": "Все существующие фоны приняты пользователем как есть; изменения только при последующей замене изображения.",
+    "extra_20L_decision": "Изображение SKU 22003 подходит; оставить его.",
+    "scope": "Media only; no image conversion or technical changes",
+    "supersedes": "Earlier processing queue and Extra 20 L manual visual hold"
+  },
+  "background_method": {
+    "target": "#FFFFFF",
+    "analysis": "Проверены пиксели четырёх углов и внешней полосы шириной 2% меньшего размера; визуально просмотрены все изображения. Объект и естественная локальная тень не перекрашивались.",
+    "white": "Нет прозрачных пикселей; не менее 99.5% угловых пикселей и 98% краевой полосы имеют RGB 255,255,255.",
+    "near_white": "Нет alpha; не менее 95% угловых пикселей имеют все каналы >=245, но критерий white не выполнен.",
+    "transparent": "Обнаружен alpha<255; не смешивается с фоном автоматически.",
+    "non_white": "Не выполнены предыдущие критерии.",
+    "limitation": "Классификация внешнего фона не является полной сегментацией каждого пикселя вокруг контура упаковки."
+  },
+  "metadata_repairs": [
+    {
+      "excel_row": 31,
+      "SKU": "15F477",
+      "invalid_cells": [
+        "L31"
+      ],
+      "discarded_value": "27",
+      "replacement_basis": "Embedded bytes and ZIP member for format/dimensions/file; unknown for external path or unverified source URL."
+    },
+    {
+      "excel_row": 34,
+      "SKU": "15F45F",
+      "invalid_cells": [
+        "I34",
+        "J34",
+        "K34",
+        "L34",
+        "M34",
+        "N34"
+      ],
+      "discarded_value": "27",
+      "replacement_basis": "Embedded bytes and ZIP member for format/dimensions/file; unknown for external path or unverified source URL."
+    },
+    {
+      "excel_row": 35,
+      "SKU": "15F460",
+      "invalid_cells": [
+        "I35",
+        "J35",
+        "K35",
+        "L35",
+        "M35",
+        "N35"
+      ],
+      "discarded_value": "27",
+      "replacement_basis": "Embedded bytes and ZIP member for format/dimensions/file; unknown for external path or unverified source URL."
+    },
+    {
+      "excel_row": 38,
+      "SKU": "10625",
+      "invalid_cells": [
+        "I38",
+        "J38",
+        "K38",
+        "L38",
+        "M38",
+        "N38"
+      ],
+      "discarded_value": "27",
+      "replacement_basis": "Embedded bytes and ZIP member for format/dimensions/file; unknown for external path or unverified source URL."
+    },
+    {
+      "excel_row": 42,
+      "SKU": "22003",
+      "invalid_cells": [
+        "I42",
+        "J42",
+        "K42",
+        "L42",
+        "M42",
+        "N42"
+      ],
+      "discarded_value": "27",
+      "replacement_basis": "Embedded bytes and ZIP member for format/dimensions/file; unknown for external path or unverified source URL."
+    },
+    {
+      "excel_row": 46,
+      "SKU": "11281",
+      "invalid_cells": [
+        "I46",
+        "J46",
+        "K46",
+        "L46",
+        "M46",
+        "N46"
+      ],
+      "discarded_value": "27",
+      "replacement_basis": "Embedded bytes and ZIP member for format/dimensions/file; unknown for external path or unverified source URL."
+    }
+  ],
+  "generic_image_groups": [
+    {
+      "group_id": "barrel_208L_common",
+      "image_role": "generic_package_representation",
+      "same_bytes_verified": true,
+      "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+      "count": 10,
+      "SKUs": [
+        "15F073",
+        "20632",
+        "10333",
+        "20190",
+        "156EC2",
+        "10502",
+        "23937",
+        "11289",
+        "11190",
+        "22119"
+      ],
+      "excel_rows": [
+        2,
+        8,
+        12,
+        15,
+        19,
+        24,
+        36,
+        40,
+        41,
+        45
+      ],
+      "product_specific_label_claimed": false
+    },
+    {
+      "group_id": "barrel_60L_common",
+      "image_role": "generic_package_representation",
+      "same_bytes_verified": true,
+      "sha256": "d9cfb04b50135741d7701e187169bce81cee8f17666cce62906fb52df114bcd5",
+      "count": 3,
+      "SKUs": [
+        "20191",
+        "2682",
+        "14047"
+      ],
+      "excel_rows": [
+        17,
+        44,
+        47
+      ],
+      "product_specific_label_claimed": false
+    }
+  ],
+  "current_verification": {
+    "products": 17,
+    "sku_variants": 47,
+    "xlsx_embedded_bytes_matched": 47,
+    "raw_original_sha256_matched": 47,
+    "main_png_jpg_original_sha256_matched": 47,
+    "local_production_sha256_matched": 47,
+    "pixel_dimensions_matched": 47,
+    "local_png_webp_pairs_RGBA_equal": 5,
+    "source_files_changed": 0,
+    "limitations": [
+      "Background pixel measurements are historical observations, not newly rerun segmentation.",
+      "No manufacturer SKU printed on every label is asserted.",
+      "HighTronic 20634 label conflict is outside the closed background/visual queue.",
+      "No current deployment, network URL validity or technical specification approval is inferred."
+    ]
+  },
+  "five_png_webp_pairs": [
+    {
+      "internal_id": "ARAL-012",
+      "sku": "15F45F",
+      "package_size": "1 L",
+      "existing_png": {
+        "file": "media/production/ARAL-012_15F45F_1L.png",
+        "bytes": 977810,
+        "sha256": "d37060d32cc5f8571e2cc3e1669522ef1fc250353608978045d05954cea34e73"
+      },
+      "local_webp": {
+        "file": "media/production/ARAL-012_15F45F_1L.webp",
+        "bytes": 681484,
+        "sha256": "6f5cbdcb808e851eed18af9ef76fddc0eb7afadf88f0b7f60f657b3e5a4ff3e1"
+      },
+      "same_dimensions": true,
+      "same_decoded_RGBA": true,
+      "uploaded": false
+    },
+    {
+      "internal_id": "ARAL-012",
+      "sku": "15F460",
+      "package_size": "5 L",
+      "existing_png": {
+        "file": "media/production/ARAL-012_15F460_5L.png",
+        "bytes": 1342350,
+        "sha256": "bb86c70abdb6b5a5d9630852c318e52ac2bc6d336d688178535241d6b90e3ab6"
+      },
+      "local_webp": {
+        "file": "media/production/ARAL-012_15F460_5L.webp",
+        "bytes": 983850,
+        "sha256": "fa2d0a742b8d30cfbcfc9f351614ef5ac1229c4048abaad7c7053c10ae78c657"
+      },
+      "same_dimensions": true,
+      "same_decoded_RGBA": true,
+      "uploaded": false
+    },
+    {
+      "internal_id": "ARAL-013",
+      "sku": "10625",
+      "package_size": "5 L",
+      "existing_png": {
+        "file": "media/production/ARAL-013_10625_5L.png",
+        "bytes": 1333271,
+        "sha256": "bd4465bcd5cf5853383891e289b9fed82cfe3bfdc846469ef0ed171cdb0363aa"
+      },
+      "local_webp": {
+        "file": "media/production/ARAL-013_10625_5L.webp",
+        "bytes": 1065684,
+        "sha256": "91763c5a6566cc111438c83e2c2c63e3c9d52a9a1fb164189e2eab7ac8f48f3a"
+      },
+      "same_dimensions": true,
+      "same_decoded_RGBA": true,
+      "uploaded": false
+    },
+    {
+      "internal_id": "ARAL-015",
+      "sku": "22003",
+      "package_size": "20 L",
+      "existing_png": {
+        "file": "media/production/ARAL-015_22003_20L.png",
+        "bytes": 1054000,
+        "sha256": "e3d2158febd4e2f0a1bef013c24736d20ac9e288915d9ea7ad554c3fa0558482"
+      },
+      "local_webp": {
+        "file": "media/production/ARAL-015_22003_20L.webp",
+        "bytes": 802016,
+        "sha256": "b984413d38d28c2e1fdf5c2dddb651ac8aad5daf4aadd590fc01ef1280e23504"
+      },
+      "same_dimensions": true,
+      "same_decoded_RGBA": true,
+      "uploaded": false
+    },
+    {
+      "internal_id": "ARAL-016",
+      "sku": "11281",
+      "package_size": "20 L",
+      "existing_png": {
+        "file": "media/production/ARAL-016_11281_20L.png",
+        "bytes": 1105987,
+        "sha256": "62d11c667ac8d5707f50eede6b7d3d03ab2d920d3676c75886bc93758a0e1000"
+      },
+      "local_webp": {
+        "file": "media/production/ARAL-016_11281_20L.webp",
+        "bytes": 864902,
+        "sha256": "bec54559f82e1f4299fd833e19cc555e94a8f9e1b61da023994b56068b957e3c"
+      },
+      "same_dimensions": true,
+      "same_decoded_RGBA": true,
+      "uploaded": false
+    }
+  ],
+  "records": [
+    {
+      "internal_id": "ARAL-001",
+      "commercial_name": "Aral BlueTronic II 10W-40",
+      "sku": "15F073",
+      "package_size": "208 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+      "original_bytes": 84576,
+      "existing_repo_image": "media/production/ARAL-001_15F073_208L.jpg",
+      "xlsx_member": "xl/media/image.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "generic_package_representation",
+      "generic_group": "barrel_208L_common",
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-001",
+      "commercial_name": "Aral BlueTronic II 10W-40",
+      "sku": "15F076",
+      "package_size": "1 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "fbb26ded21bb8a1c4fa7196cd561bfd92232c28b88fbe12c1d8b1ae4568413f8",
+      "original_bytes": 116607,
+      "existing_repo_image": "media/production/ARAL-001_15F076_1L.jpg",
+      "xlsx_member": "xl/media/image2.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-001",
+      "commercial_name": "Aral BlueTronic II 10W-40",
+      "sku": "15F078",
+      "package_size": "4 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "5c44847d8d09fbb7173024685e04105221da10b6a41f8d7087d7b48e02693054",
+      "original_bytes": 176982,
+      "existing_repo_image": "media/production/ARAL-001_15F078_4L.jpg",
+      "xlsx_member": "xl/media/image3.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-001",
+      "commercial_name": "Aral BlueTronic II 10W-40",
+      "sku": "15F471",
+      "package_size": "5 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "6755376bc38a255d3643489ce5c9827c441145db241d9451983edbab4ef869f5",
+      "original_bytes": 119048,
+      "existing_repo_image": "media/production/ARAL-001_15F471_5L.jpg",
+      "xlsx_member": "xl/media/image4.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-002",
+      "commercial_name": "Aral EcoTronic F 5W-20",
+      "sku": "25094",
+      "package_size": "4 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "de74c66fe8f1cea5c9e16bc801ee981510e2a0b3e9f822715dd9caa3c679a262",
+      "original_bytes": 159684,
+      "existing_repo_image": "media/production/ARAL-002_25094_4L.jpg",
+      "xlsx_member": "xl/media/image5.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-003",
+      "commercial_name": "Aral HighTronic 5W-40",
+      "sku": "20637",
+      "package_size": "1 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "1a4c90a616cd3623f5f609b058727a94f1907950c5dd5c9fae7aafc5f22dc3c6",
+      "original_bytes": 120912,
+      "existing_repo_image": "media/production/ARAL-003_20637_1L.jpg",
+      "xlsx_member": "xl/media/image6.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-003",
+      "commercial_name": "Aral HighTronic 5W-40",
+      "sku": "20632",
+      "package_size": "208 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+      "original_bytes": 84576,
+      "existing_repo_image": "media/production/ARAL-003_20632_208L.jpg",
+      "xlsx_member": "xl/media/image7.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "generic_package_representation",
+      "generic_group": "barrel_208L_common",
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-003",
+      "commercial_name": "Aral HighTronic 5W-40",
+      "sku": "20634",
+      "package_size": "4 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "739a4e17a3c73fe1fe668d278c17fed37bb067f33e62ea8284cf11c03632926a",
+      "original_bytes": 182835,
+      "existing_repo_image": "media/production/ARAL-003_20634_4L.jpg",
+      "xlsx_member": "xl/media/image8.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": "Already recorded in main/PR3; not resolved by media acceptance."
+    },
+    {
+      "internal_id": "ARAL-003",
+      "commercial_name": "Aral HighTronic 5W-40",
+      "sku": "20635",
+      "package_size": "5 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "ce53a6a6fbc43f499ce7a4a7b8a69c112f76cea829cd98de9b21f4b8ec73b314",
+      "original_bytes": 196668,
+      "existing_repo_image": "media/production/ARAL-003_20635_5L.jpg",
+      "xlsx_member": "xl/media/image9.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-004",
+      "commercial_name": "Aral HighTronic F 5W-30",
+      "sku": "10332",
+      "package_size": "1 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "4931fa742b2e9ff06c51e0fb3f48804825d8a4106d6797183412f8bdfb7d5e93",
+      "original_bytes": 116933,
+      "existing_repo_image": "media/production/ARAL-004_10332_1L.jpg",
+      "xlsx_member": "xl/media/image10.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-004",
+      "commercial_name": "Aral HighTronic F 5W-30",
+      "sku": "10333",
+      "package_size": "208 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+      "original_bytes": 84576,
+      "existing_repo_image": "media/production/ARAL-004_10333_208L.jpg",
+      "xlsx_member": "xl/media/image11.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "generic_package_representation",
+      "generic_group": "barrel_208L_common",
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-004",
+      "commercial_name": "Aral HighTronic F 5W-30",
+      "sku": "10334",
+      "package_size": "4 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "11e0ab0441abd3de9922ae977e97e660b3ab625767ad06815882dc97f0742ec1",
+      "original_bytes": 184671,
+      "existing_repo_image": "media/production/ARAL-004_10334_4L.jpg",
+      "xlsx_member": "xl/media/image12.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-005",
+      "commercial_name": "Aral HighTronic J 5W-30",
+      "sku": "20198",
+      "package_size": "1 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "c4cb7bb06bc2f32e1f464d1dfb13bacef519fa0e40025066fa6e9dea89637bba",
+      "original_bytes": 114820,
+      "existing_repo_image": "media/production/ARAL-005_20198_1L.jpg",
+      "xlsx_member": "xl/media/image13.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-005",
+      "commercial_name": "Aral HighTronic J 5W-30",
+      "sku": "20190",
+      "package_size": "208 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+      "original_bytes": 84576,
+      "existing_repo_image": "media/production/ARAL-005_20190_208L.jpg",
+      "xlsx_member": "xl/media/image14.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "generic_package_representation",
+      "generic_group": "barrel_208L_common",
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-005",
+      "commercial_name": "Aral HighTronic J 5W-30",
+      "sku": "20194",
+      "package_size": "4 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "91c789f460e7966f2c68c6b93b7501da1e9f7332880b798ee2106f2d295c468d",
+      "original_bytes": 183599,
+      "existing_repo_image": "media/production/ARAL-005_20194_4L.jpg",
+      "xlsx_member": "xl/media/image15.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-005",
+      "commercial_name": "Aral HighTronic J 5W-30",
+      "sku": "20191",
+      "package_size": "60 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 1100,
+        "height": 1100
+      },
+      "original_sha256": "d9cfb04b50135741d7701e187169bce81cee8f17666cce62906fb52df114bcd5",
+      "original_bytes": 162979,
+      "existing_repo_image": "media/production/ARAL-005_20191_60L.jpg",
+      "xlsx_member": "xl/media/image16.jpg",
+      "background_status": "near_white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 0.06715,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 0.05709,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          254.0,
+          254.0,
+          254.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "generic_package_representation",
+      "generic_group": "barrel_60L_common",
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-006",
+      "commercial_name": "Aral HighTronic M 5W-40",
+      "sku": "21407",
+      "package_size": "1 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "722ee7d21e2c9a1d390c04da19d06f11f32fc08cc96583fa82f3f200c6e4950d",
+      "original_bytes": 124028,
+      "existing_repo_image": "media/production/ARAL-006_21407_1L.jpg",
+      "xlsx_member": "xl/media/image17.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-006",
+      "commercial_name": "Aral HighTronic M 5W-40",
+      "sku": "156EC2",
+      "package_size": "208 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+      "original_bytes": 84576,
+      "existing_repo_image": "media/production/ARAL-006_156EC2_208L.jpg",
+      "xlsx_member": "xl/media/image18.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "generic_package_representation",
+      "generic_group": "barrel_208L_common",
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-006",
+      "commercial_name": "Aral HighTronic M 5W-40",
+      "sku": "21404",
+      "package_size": "4 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "924fe888bd862269da90af7a43d124aaf3dbfb59e71c68d4064736c89efc4ea1",
+      "original_bytes": 190842,
+      "existing_repo_image": "media/production/ARAL-006_21404_4L.jpg",
+      "xlsx_member": "xl/media/image19.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-007",
+      "commercial_name": "Aral HighTronic R 5W-30",
+      "sku": "16008",
+      "package_size": "1 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "19dc05e78816899a106496a61f52dc2d17c035fbfd99b9026c52d502f2c249cc",
+      "original_bytes": 113281,
+      "existing_repo_image": "media/production/ARAL-007_16008_1L.jpg",
+      "xlsx_member": "xl/media/image20.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-007",
+      "commercial_name": "Aral HighTronic R 5W-30",
+      "sku": "16004",
+      "package_size": "4 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "98daa6fa18f13cc268fef30bce0ac8b4869dccfa66fd9ba7e4bbc4a35cd331fa",
+      "original_bytes": 173518,
+      "existing_repo_image": "media/production/ARAL-007_16004_4L.jpg",
+      "xlsx_member": "xl/media/image21.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-008",
+      "commercial_name": "Aral SuperTronic E 0W-30",
+      "sku": "10508",
+      "package_size": "1 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "892508aaf097a7fb46b950db4db6fbd8e2586c14596c1cb9365e245f7bdc99d0",
+      "original_bytes": 111520,
+      "existing_repo_image": "media/production/ARAL-008_10508_1L.jpg",
+      "xlsx_member": "xl/media/image22.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-008",
+      "commercial_name": "Aral SuperTronic E 0W-30",
+      "sku": "10502",
+      "package_size": "208 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+      "original_bytes": 84576,
+      "existing_repo_image": "media/production/ARAL-008_10502_208L.jpg",
+      "xlsx_member": "xl/media/image23.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "generic_package_representation",
+      "generic_group": "barrel_208L_common",
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-008",
+      "commercial_name": "Aral SuperTronic E 0W-30",
+      "sku": "10504",
+      "package_size": "4 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "ddf5a481a45818fcac491129d0cf1f29fb200978d34921262ca03bebdcd67be4",
+      "original_bytes": 183465,
+      "existing_repo_image": "media/production/ARAL-008_10504_4L.jpg",
+      "xlsx_member": "xl/media/image24.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-009",
+      "commercial_name": "Aral SuperTronic G 0W-40",
+      "sku": "15A8A",
+      "package_size": "1 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "6b3da611bf3c9f6ddfbdc825d3444e19a1fe71810a62d0766ebab9417c4e6afd",
+      "original_bytes": 110702,
+      "existing_repo_image": "media/production/ARAL-009_15A8A_1L.jpg",
+      "xlsx_member": "xl/media/image25.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-009",
+      "commercial_name": "Aral SuperTronic G 0W-40",
+      "sku": "15A8AD",
+      "package_size": "4 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "eeb055d7493bf220bf6d960ef119eb2b2a8d79fd9cb11ad64735763042706fb2",
+      "original_bytes": 189029,
+      "existing_repo_image": "media/production/ARAL-009_15A8AD_4L.jpg",
+      "xlsx_member": "xl/media/image26.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-010",
+      "commercial_name": "Aral SuperTronic K 5W-30",
+      "sku": "15DBCC",
+      "package_size": "1 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 1100,
+        "height": 1100
+      },
+      "original_sha256": "222f130dd6d1dc3b14fb07b2d6c24136a8de580e7ba0f364dc4d14b7b61cfd29",
+      "original_bytes": 237668,
+      "existing_repo_image": "media/production/ARAL-010_15DBCC_1L.jpg",
+      "xlsx_member": "xl/media/image27.jpg",
+      "background_status": "near_white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 0.18957,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 0.14577,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          254.0,
+          254.0,
+          254.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-010",
+      "commercial_name": "Aral SuperTronic K 5W-30",
+      "sku": "15DBC5",
+      "package_size": "20 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 1100,
+        "height": 1100
+      },
+      "original_sha256": "848fa816ef3fb0aad58ed7538a3fe15134ea0e0930efe624a2b3a733260cd3fc",
+      "original_bytes": 222094,
+      "existing_repo_image": "media/production/ARAL-010_15DBC5_20L.jpg",
+      "xlsx_member": "xl/media/image28.jpg",
+      "background_status": "near_white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 0.15031,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 0.12838,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          254.0,
+          254.0,
+          254.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-010",
+      "commercial_name": "Aral SuperTronic K 5W-30",
+      "sku": "15DBCE",
+      "package_size": "4 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 1100,
+        "height": 1100
+      },
+      "original_sha256": "1db37871cb923ea3330d0250bcf34142ecb02438758851118762d8fb5dd34c70",
+      "original_bytes": 327477,
+      "existing_repo_image": "media/production/ARAL-010_15DBCE_4L.jpg",
+      "xlsx_member": "xl/media/image29.jpg",
+      "background_status": "near_white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 0.05527,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 0.03031,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          254.0,
+          254.0,
+          254.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-010",
+      "commercial_name": "Aral SuperTronic K 5W-30",
+      "sku": "15F477",
+      "package_size": "5 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 1100,
+        "height": 1100
+      },
+      "original_sha256": "bcd0f7c30657d1a178020a81d4e8eb19b479e24a72b966fd28baabf1e8b070dc",
+      "original_bytes": 326338,
+      "existing_repo_image": "media/production/ARAL-010_15F477_5L.jpg",
+      "xlsx_member": "xl/media/image42.jpg",
+      "background_status": "near_white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 0.0439,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 0.01788,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          254.0,
+          254.0,
+          254.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-011",
+      "commercial_name": "Aral SuperTronic Longlife III 0W-30",
+      "sku": "15F474",
+      "package_size": "1 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 600,
+        "height": 600
+      },
+      "original_sha256": "56199eec5a33fca4623c8b47b97d474254aa179a02286c24b598434880d9b2bf",
+      "original_bytes": 34113,
+      "existing_repo_image": "media/production/ARAL-011_15F474_1L.jpg",
+      "xlsx_member": "xl/media/image30.jpg",
+      "background_status": "near_white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 0.93833,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-011",
+      "commercial_name": "Aral SuperTronic Longlife III 0W-30",
+      "sku": "160EC7",
+      "package_size": "5 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 1100,
+        "height": 1100
+      },
+      "original_sha256": "47fb466ad27c60a1080acbec1d09a48c7188d5215c531168fe5e44996b8ad924",
+      "original_bytes": 240359,
+      "existing_repo_image": "media/production/ARAL-011_160EC7_5L.jpg",
+      "xlsx_member": "xl/media/image31.jpg",
+      "background_status": "near_white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 0.12242,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 0.09056,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          254.0,
+          254.0,
+          254.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-012",
+      "commercial_name": "Aral SuperTronic Longlife IV FE 0W-20",
+      "sku": "15F45F",
+      "package_size": "1 L",
+      "original_format": "PNG",
+      "pixel_dimensions": {
+        "width": 1100,
+        "height": 1100
+      },
+      "original_sha256": "d37060d32cc5f8571e2cc3e1669522ef1fc250353608978045d05954cea34e73",
+      "original_bytes": 977810,
+      "existing_repo_image": "media/production/ARAL-012_15F45F_1L.png",
+      "xlsx_member": "xl/media/image.png",
+      "background_status": "near_white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 0.09866,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 0.09064,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          254.0,
+          254.0,
+          254.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-012",
+      "commercial_name": "Aral SuperTronic Longlife IV FE 0W-20",
+      "sku": "15F460",
+      "package_size": "5 L",
+      "original_format": "PNG",
+      "pixel_dimensions": {
+        "width": 1100,
+        "height": 1100
+      },
+      "original_sha256": "bb86c70abdb6b5a5d9630852c318e52ac2bc6d336d688178535241d6b90e3ab6",
+      "original_bytes": 1342350,
+      "existing_repo_image": "media/production/ARAL-012_15F460_5L.png",
+      "xlsx_member": "xl/media/image2.png",
+      "background_status": "near_white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 0.05682,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 0.03126,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          254.0,
+          254.0,
+          254.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-013",
+      "commercial_name": "Aral MegaTurboral 10W-40",
+      "sku": "23937",
+      "package_size": "208 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+      "original_bytes": 84576,
+      "existing_repo_image": "media/production/ARAL-013_23937_208L.jpg",
+      "xlsx_member": "xl/media/image32.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "generic_package_representation",
+      "generic_group": "barrel_208L_common",
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-013",
+      "commercial_name": "Aral MegaTurboral 10W-40",
+      "sku": "13932",
+      "package_size": "20 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 1100,
+        "height": 1100
+      },
+      "original_sha256": "6564c502ecee9be3924f746e3a7dabe0d5645ce609410082937730ae328eb15d",
+      "original_bytes": 212564,
+      "existing_repo_image": "media/production/ARAL-013_13932_20L.jpg",
+      "xlsx_member": "xl/media/image33.jpg",
+      "background_status": "near_white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 0.1374,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 0.08687,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          254.0,
+          254.0,
+          254.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-013",
+      "commercial_name": "Aral MegaTurboral 10W-40",
+      "sku": "10625",
+      "package_size": "5 L",
+      "original_format": "PNG",
+      "pixel_dimensions": {
+        "width": 1100,
+        "height": 1100
+      },
+      "original_sha256": "bd4465bcd5cf5853383891e289b9fed82cfe3bfdc846469ef0ed171cdb0363aa",
+      "original_bytes": 1333271,
+      "existing_repo_image": "media/production/ARAL-013_10625_5L.png",
+      "xlsx_member": "xl/media/image3.png",
+      "background_status": "near_white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 0.03048,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 0.01019,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          254.0,
+          254.0,
+          254.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-014",
+      "commercial_name": "Aral MegaTurboral LA 10W-40",
+      "sku": "1620",
+      "package_size": "20 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "8e188d333768fa2ebab47e590131e6c4d9dcc5c5ca3ec18dddd994f112cf11f0",
+      "original_bytes": 89311,
+      "existing_repo_image": "media/production/ARAL-014_1620_20L.jpg",
+      "xlsx_member": "xl/media/image34.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-014",
+      "commercial_name": "Aral MegaTurboral LA 10W-40",
+      "sku": "11289",
+      "package_size": "208 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+      "original_bytes": 84576,
+      "existing_repo_image": "media/production/ARAL-014_11289_208L.jpg",
+      "xlsx_member": "xl/media/image35.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "generic_package_representation",
+      "generic_group": "barrel_208L_common",
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-015",
+      "commercial_name": "Aral ExtraTurboral SAE 10W-40",
+      "sku": "11190",
+      "package_size": "208 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+      "original_bytes": 84576,
+      "existing_repo_image": "media/production/ARAL-015_11190_208L.jpg",
+      "xlsx_member": "xl/media/image36.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "generic_package_representation",
+      "generic_group": "barrel_208L_common",
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-015",
+      "commercial_name": "Aral ExtraTurboral SAE 10W-40",
+      "sku": "22003",
+      "package_size": "20 L",
+      "original_format": "PNG",
+      "pixel_dimensions": {
+        "width": 1100,
+        "height": 1100
+      },
+      "original_sha256": "e3d2158febd4e2f0a1bef013c24736d20ac9e288915d9ea7ad554c3fa0558482",
+      "original_bytes": 1054000,
+      "existing_repo_image": "media/production/ARAL-015_22003_20L.png",
+      "xlsx_member": "xl/media/image4.png",
+      "background_status": "near_white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 0.08574,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 0.07737,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          254.0,
+          254.0,
+          254.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-015",
+      "commercial_name": "Aral ExtraTurboral SAE 10W-40",
+      "sku": "22004",
+      "package_size": "5 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "73769ba7ca1c6e7db8248345ccec058d3b52ad8ca864c5bc5d0ac226aa98dbd2",
+      "original_bytes": 152026,
+      "existing_repo_image": "media/production/ARAL-015_22004_5L.jpg",
+      "xlsx_member": "xl/media/image37.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-015",
+      "commercial_name": "Aral ExtraTurboral SAE 10W-40",
+      "sku": "2682",
+      "package_size": "60 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 1100,
+        "height": 1100
+      },
+      "original_sha256": "d9cfb04b50135741d7701e187169bce81cee8f17666cce62906fb52df114bcd5",
+      "original_bytes": 162979,
+      "existing_repo_image": "media/production/ARAL-015_2682_60L.jpg",
+      "xlsx_member": "xl/media/image38.jpg",
+      "background_status": "near_white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 0.06715,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 0.05709,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          254.0,
+          254.0,
+          254.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "generic_package_representation",
+      "generic_group": "barrel_60L_common",
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-016",
+      "commercial_name": "Aral масло Turboral (Plus) 15W-40",
+      "sku": "22119",
+      "package_size": "208 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 800,
+        "height": 800
+      },
+      "original_sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+      "original_bytes": 84576,
+      "existing_repo_image": "media/production/ARAL-016_22119_208L.jpg",
+      "xlsx_member": "xl/media/image39.jpg",
+      "background_status": "white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 1.0,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 1.0,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "generic_package_representation",
+      "generic_group": "barrel_208L_common",
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-016",
+      "commercial_name": "Aral масло Turboral (Plus) 15W-40",
+      "sku": "11281",
+      "package_size": "20 L",
+      "original_format": "PNG",
+      "pixel_dimensions": {
+        "width": 1100,
+        "height": 1100
+      },
+      "original_sha256": "62d11c667ac8d5707f50eede6b7d3d03ab2d920d3676c75886bc93758a0e1000",
+      "original_bytes": 1105987,
+      "existing_repo_image": "media/production/ARAL-016_11281_20L.png",
+      "xlsx_member": "xl/media/image5.png",
+      "background_status": "near_white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 0.07386,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 0.04217,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          254.0,
+          254.0,
+          254.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-016",
+      "commercial_name": "Aral масло Turboral (Plus) 15W-40",
+      "sku": "14047",
+      "package_size": "60 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 1100,
+        "height": 1100
+      },
+      "original_sha256": "d9cfb04b50135741d7701e187169bce81cee8f17666cce62906fb52df114bcd5",
+      "original_bytes": 162979,
+      "existing_repo_image": "media/production/ARAL-016_14047_60L.jpg",
+      "xlsx_member": "xl/media/image40.jpg",
+      "background_status": "near_white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 0.06715,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 0.05709,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          254.0,
+          254.0,
+          254.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "generic_package_representation",
+      "generic_group": "barrel_60L_common",
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    },
+    {
+      "internal_id": "ARAL-017",
+      "commercial_name": "Aral Silikatfrei G12",
+      "sku": "90837",
+      "package_size": "1 L",
+      "original_format": "JPEG",
+      "pixel_dimensions": {
+        "width": 1100,
+        "height": 1100
+      },
+      "original_sha256": "94cf15ba5873198f26b95c0a16ed6e169159960a7af930a17ecf4e52ee0d3fb1",
+      "original_bytes": 204261,
+      "existing_repo_image": "media/production/ARAL-017_90837_1L.jpg",
+      "xlsx_member": "xl/media/image41.jpg",
+      "background_status": "near_white",
+      "background_measurement": {
+        "corner_exact_white_fraction": 0.14618,
+        "corner_near_white_fraction": 1.0,
+        "edge_exact_white_fraction": 0.13914,
+        "transparent_pixel_fraction": 0.0,
+        "corner_median_rgb": [
+          254.0,
+          254.0,
+          254.0
+        ]
+      },
+      "background_acceptance": "user_approved_as_is",
+      "image_role": "product_package_image",
+      "generic_group": null,
+      "public_media_allowed": true,
+      "public_media_allowed_scope": "User media acceptance only; no technical publication/label approval.",
+      "requires_processing": false,
+      "manual_visual_decision_required": false,
+      "external_original_path": "unknown",
+      "source_checked_at": "2026-10-12",
+      "separate_technical_label_issue": null
+    }
+  ]
+}
