@@ -4,7 +4,7 @@
 
 Date: 22 October 2026. Chat: `01a1442a-93fd-7032-a44e-e153440537d9`.
 
-PR: PENDING_CREATION_URL
+PR: https://github.com/AlexALP9/ARAL-/pull/7
 
 ## Repository / scope
 
@@ -30,7 +30,7 @@ Each original PNG is preserved once without pixel edits. Source bytes are not in
 
 Full checkout → prototype review.html → review.css/review.js → seven SVG wrappers → five existing source images plus two new K PNGs. K light masks reference those same two PNGs. Reflected images reuse the same wrappers. Side/closeup/back PNGs are source-review resources only. mobile.html and storyboard.html embed review.html. Google Fonts is optional with local font fallbacks. HTTP and browser SVG/Blob/DOMParser/FileReader support are required. No GSAP or WebGL dependency.
 
-See [README](../../design/hero/prototypes/hero-4s-k-views/README.md) for run commands. Local isolated preview during this sync: `http://127.0.0.1:8767/design/hero/prototypes/hero-4s-k-views/review.html`; this is not a public deployment and requires the local server. The folder alone is not standalone because it reuses repository/parent-PR files.
+See [README](../../design/hero/prototypes/hero-4s-k-views/README.md) for run commands. Prepared local preview address (localhost connectivity was not verified in this environment): `http://127.0.0.1:8767/design/hero/prototypes/hero-4s-k-views/review.html`; this is not a public deployment and requires the local server. The folder alone is not standalone because it reuses repository/parent-PR files.
 
 ## Desktop / mobile / transition QA
 
