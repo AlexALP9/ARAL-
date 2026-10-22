@@ -1,0 +1,247 @@
+[
+  {
+    "name": "K_front",
+    "asset": "assets/k-views/K_front.png",
+    "size": [
+      1086,
+      1448
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      0,
+      30,
+      1064,
+      1448
+    ],
+    "solid_bbox": [
+      241,
+      33,
+      846,
+      1434
+    ],
+    "partial_alpha_pixels": 759625,
+    "neutral_white_partial_alpha_pixels": 23902,
+    "sha256": "e376c12563bfa276f6e10c30fad6bf3b4f04d86a314f8d99b768d747b4a189c7",
+    "alpha_histogram_bands": {
+      "0-0": 812204,
+      "1-7": 13280,
+      "8-31": 895,
+      "32-127": 1968,
+      "128-239": 3354,
+      "240-254": 740128,
+      "255-255": 699
+    },
+    "bbox_alpha_8": [
+      240,
+      33,
+      847,
+      1435
+    ],
+    "bbox_alpha_240": [
+      242,
+      34,
+      845,
+      1433
+    ]
+  },
+  {
+    "name": "K_34_right",
+    "asset": "assets/k-views/K_34_right.png",
+    "size": [
+      1086,
+      1448
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      0,
+      30,
+      1068,
+      1420
+    ],
+    "solid_bbox": [
+      239,
+      33,
+      875,
+      1416
+    ],
+    "partial_alpha_pixels": 774002,
+    "neutral_white_partial_alpha_pixels": 22069,
+    "sha256": "81239cc3ca17fd43b09625849f1a356a3eb63c417eeafeb33710d6229e7b892e",
+    "alpha_histogram_bands": {
+      "0-0": 797595,
+      "1-7": 12219,
+      "8-31": 1049,
+      "32-127": 2192,
+      "128-239": 3248,
+      "240-254": 755294,
+      "255-255": 931
+    },
+    "bbox_alpha_8": [
+      239,
+      33,
+      876,
+      1417
+    ],
+    "bbox_alpha_240": [
+      241,
+      34,
+      874,
+      1415
+    ]
+  },
+  {
+    "name": "K_side",
+    "asset": "assets/k-views/K_side.png",
+    "size": [
+      1086,
+      1448
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      31,
+      23,
+      1072,
+      1426
+    ],
+    "solid_bbox": [
+      366,
+      30,
+      727,
+      1418
+    ],
+    "partial_alpha_pixels": 474273,
+    "neutral_white_partial_alpha_pixels": 117,
+    "sha256": "73824b4896ee857c4c2afacd9a79847776c81a660e7030072b90ac29c54addbd",
+    "alpha_histogram_bands": {
+      "0-0": 1097595,
+      "1-7": 8938,
+      "8-31": 772,
+      "32-127": 2432,
+      "128-239": 2787,
+      "240-254": 459344,
+      "255-255": 660
+    },
+    "bbox_alpha_8": [
+      365,
+      28,
+      728,
+      1418
+    ],
+    "bbox_alpha_240": [
+      367,
+      31,
+      727,
+      1417
+    ]
+  },
+  {
+    "name": "K_back",
+    "asset": "assets/k-views/K_back.png",
+    "size": [
+      1086,
+      1448
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      0,
+      23,
+      1073,
+      1448
+    ],
+    "solid_bbox": [
+      271,
+      28,
+      868,
+      1438
+    ],
+    "partial_alpha_pixels": 760536,
+    "neutral_white_partial_alpha_pixels": 48710,
+    "sha256": "218a81dbf4cd67712a6c82423d3e5c8fe63c174f8c345ae7e41053ea648490e0",
+    "alpha_histogram_bands": {
+      "0-0": 811547,
+      "1-7": 17445,
+      "8-31": 1085,
+      "32-127": 2242,
+      "128-239": 3055,
+      "240-254": 736709,
+      "255-255": 445
+    },
+    "bbox_alpha_8": [
+      270,
+      28,
+      869,
+      1439
+    ],
+    "bbox_alpha_240": [
+      272,
+      29,
+      867,
+      1437
+    ]
+  },
+  {
+    "name": "K_label_closeup",
+    "asset": "assets/k-views/K_label_closeup.png",
+    "size": [
+      1122,
+      1402
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      0,
+      0,
+      1090,
+      1402
+    ],
+    "solid_bbox": [
+      161,
+      0,
+      977,
+      1402
+    ],
+    "partial_alpha_pixels": 1132792,
+    "neutral_white_partial_alpha_pixels": 49629,
+    "sha256": "5bff8d396f666f6bbdd0c80ae103e2fc208852d40c04b869d54c8f7285643139",
+    "alpha_histogram_bands": {
+      "0-0": 439275,
+      "1-7": 8863,
+      "8-31": 746,
+      "32-127": 1736,
+      "128-239": 2737,
+      "240-254": 1118710,
+      "255-255": 977
+    },
+    "bbox_alpha_8": [
+      161,
+      0,
+      978,
+      1402
+    ],
+    "bbox_alpha_240": [
+      162,
+      0,
+      977,
+      1402
+    ]
+  }
+]
