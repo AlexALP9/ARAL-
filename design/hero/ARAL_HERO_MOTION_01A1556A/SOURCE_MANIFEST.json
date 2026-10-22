@@ -1,0 +1,163 @@
+{
+  "chat_key": "ARAL_HERO_MOTION_01A1556A",
+  "audited_on": "2026-10-22",
+  "base_commit": "ff14ac5b87c617c6c73fe2b55c8b63ffbad2ff31",
+  "branch": "codex/aral-hero-design-sync-01a1556a",
+  "approved_motion_source": "HERO/03_ARAL_HERO_4S_ANIMATION_PROMPT.md",
+  "reconciliation": "HERO/ARAL_HERO_MOTION_01A1556A_RECONCILIATION.md",
+  "assets": [
+    {
+      "path": "design/hero/ARAL_HERO_MOTION_01A1556A/superseded/storyboard-v2/ARAL-01-0.0s.jpg",
+      "source_name": "ARAL-01-0.0s.jpg",
+      "source_path": "design-work/hero-storyboard-v2/frames/ARAL-01-0.0s.jpg",
+      "sha256": "67107c8a4e311eca9b54ad1f66c554871238717940803c192ca94e1001dcb312",
+      "bytes": 72121,
+      "status": "SUPERSEDED",
+      "scope": "Unapproved historical 6-second draft; not current storyboard or production media."
+    },
+    {
+      "path": "design/hero/ARAL_HERO_MOTION_01A1556A/superseded/storyboard-v2/ARAL-02-0.7s.jpg",
+      "source_name": "ARAL-02-0.7s.jpg",
+      "source_path": "design-work/hero-storyboard-v2/frames/ARAL-02-0.7s.jpg",
+      "sha256": "4b15d4db4fa8867350fa17e9a5032f227f988416f7cb6b9644b033ee27752ed0",
+      "bytes": 66215,
+      "status": "SUPERSEDED",
+      "scope": "Unapproved historical 6-second draft; not current storyboard or production media."
+    },
+    {
+      "path": "design/hero/ARAL_HERO_MOTION_01A1556A/superseded/storyboard-v2/ARAL-03-1.4s.jpg",
+      "source_name": "ARAL-03-1.4s.jpg",
+      "source_path": "design-work/hero-storyboard-v2/frames/ARAL-03-1.4s.jpg",
+      "sha256": "4a8883021a82d05c37430fe4f1cdf5a58320c79385aaf5f597b560f15f00a159",
+      "bytes": 48874,
+      "status": "SUPERSEDED",
+      "scope": "Unapproved historical 6-second draft; not current storyboard or production media."
+    },
+    {
+      "path": "design/hero/ARAL_HERO_MOTION_01A1556A/superseded/storyboard-v2/ARAL-04-2.2s.jpg",
+      "source_name": "ARAL-04-2.2s.jpg",
+      "source_path": "design-work/hero-storyboard-v2/frames/ARAL-04-2.2s.jpg",
+      "sha256": "97c20b02c980416a38fa99401e04807257dd880ce646e86a30e5b0774cb8ee5e",
+      "bytes": 45385,
+      "status": "SUPERSEDED",
+      "scope": "Unapproved historical 6-second draft; not current storyboard or production media."
+    },
+    {
+      "path": "design/hero/ARAL_HERO_MOTION_01A1556A/superseded/storyboard-v2/ARAL-05-3.2s.jpg",
+      "source_name": "ARAL-05-3.2s.jpg",
+      "source_path": "design-work/hero-storyboard-v2/frames/ARAL-05-3.2s.jpg",
+      "sha256": "f911a057a8ea35a471321e63b8c0475816f446dc8d912dc653dfcab0b4e1dbd6",
+      "bytes": 39377,
+      "status": "SUPERSEDED",
+      "scope": "Unapproved historical 6-second draft; not current storyboard or production media."
+    },
+    {
+      "path": "design/hero/ARAL_HERO_MOTION_01A1556A/superseded/storyboard-v2/ARAL-06-4.2s.jpg",
+      "source_name": "ARAL-06-4.2s.jpg",
+      "source_path": "design-work/hero-storyboard-v2/frames/ARAL-06-4.2s.jpg",
+      "sha256": "7ce9b00747d72292dce9f4a08d299001b867af620fc160255b9e93c86c6f8577",
+      "bytes": 62169,
+      "status": "SUPERSEDED",
+      "scope": "Unapproved historical 6-second draft; not current storyboard or production media."
+    },
+    {
+      "path": "design/hero/ARAL_HERO_MOTION_01A1556A/superseded/storyboard-v2/ARAL-07-5.0s.jpg",
+      "source_name": "ARAL-07-5.0s.jpg",
+      "source_path": "design-work/hero-storyboard-v2/frames/ARAL-07-5.0s.jpg",
+      "sha256": "3988427909b833c2cf176a4805c8700c92740f25777ef093f398a1cb74f797a9",
+      "bytes": 85697,
+      "status": "SUPERSEDED",
+      "scope": "Unapproved historical 6-second draft; not current storyboard or production media."
+    },
+    {
+      "path": "design/hero/ARAL_HERO_MOTION_01A1556A/superseded/storyboard-v2/ARAL-08-6.0s.jpg",
+      "source_name": "ARAL-08-6.0s.jpg",
+      "source_path": "design-work/hero-storyboard-v2/frames/ARAL-08-6.0s.jpg",
+      "sha256": "01ff722af6daabe29a61409f4996132458c59e59451fb25939e32585e7ca007c",
+      "bytes": 105401,
+      "status": "SUPERSEDED",
+      "scope": "Unapproved historical 6-second draft; not current storyboard or production media."
+    },
+    {
+      "path": "HERO/references/ARAL_HERO_MOTION_01A1556A/Сториборд рекламы моторных масел ARAL.png",
+      "source_name": "Сториборд рекламы моторных масел ARAL.png",
+      "source_path": "HERO/Сториборд рекламы моторных масел ARAL.png",
+      "sha256": "acb224b0c83e5a8441d0ac458e5776ee102a291919730dd547765f14fb015f10",
+      "bytes": 2017694,
+      "status": "APPROVED",
+      "scope": "Reference framing/light only; not authoritative labels, timings or final layout."
+    },
+    {
+      "path": "HERO/references/ARAL_HERO_MOTION_01A1556A/ARAL Hero_ Анимационный бриф и таймлайн.png",
+      "source_name": "ARAL Hero_ Анимационный бриф и таймлайн.png",
+      "source_path": "HERO/ARAL Hero_ Анимационный бриф и таймлайн.png",
+      "sha256": "db97e6b828ea06dd385ffb2e345281e90d0352007b25fd531dca0214308cf10d",
+      "bytes": 2134120,
+      "status": "APPROVED",
+      "scope": "Reference framing/light only; not authoritative labels, timings or final layout."
+    },
+    {
+      "path": "design/hero/ARAL_HERO_MOTION_01A1556A/sources/main-1l-original.png",
+      "source_name": "codex-clipboard-dee675ac-b49d-441e-ba5d-4023dd4c87f0.png",
+      "source_path": "codex-clipboard-dee675ac-b49d-441e-ba5d-4023dd4c87f0.png",
+      "sha256": "3dfccdb71bd8c1de6745805a2f9976fe33627eda7516a66a16d6bd966bfb0723",
+      "bytes": 1116845,
+      "status": "APPROVED",
+      "scope": "User-supplied unchanged image for scene role only; not a new SKU or production replacement."
+    },
+    {
+      "path": "design/hero/ARAL_HERO_MOTION_01A1556A/sources/second-1l-original.png",
+      "source_name": "codex-clipboard-505dbbf0-008c-418e-a984-807d2e386f7e.png",
+      "source_path": "codex-clipboard-505dbbf0-008c-418e-a984-807d2e386f7e.png",
+      "sha256": "415a685c50057ed7332092bc510d0270ad054d4c11d880066c8f5597f0051374",
+      "bytes": 1365911,
+      "status": "APPROVED",
+      "scope": "User-supplied unchanged image for scene role only; not a new SKU or production replacement."
+    },
+    {
+      "path": "design/hero/ARAL_HERO_MOTION_01A1556A/sources/third-1l-original.png",
+      "source_name": "codex-clipboard-034ea941-3a54-48b0-87b4-5b7444a72fe7.png",
+      "source_path": "codex-clipboard-034ea941-3a54-48b0-87b4-5b7444a72fe7.png",
+      "sha256": "8cdf170e5f0859e443e0d364f126c7967f3599085e9943c4577627ddefad0feb",
+      "bytes": 360613,
+      "status": "APPROVED",
+      "scope": "User-supplied unchanged image for scene role only; not a new SKU or production replacement."
+    }
+  ],
+  "reuse_without_copy": [
+    {
+      "path": "media/production/ARAL-015_22003_20L.png",
+      "sha256": "e3d2158febd4e2f0a1bef013c24736d20ac9e288915d9ea7ad554c3fa0558482",
+      "bytes": 1054000
+    },
+    {
+      "path": "media/production/ARAL-011_160EC7_5L.jpg",
+      "sha256": "47fb466ad27c60a1080acbec1d09a48c7188d5215c531168fe5e44996b8ad924",
+      "bytes": 240359
+    },
+    {
+      "path": "media/production/ARAL-016_22119_208L.jpg",
+      "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+      "bytes": 84576
+    }
+  ],
+  "local_only_video": {
+    "original_name": "видео херо .mp4",
+    "sha256": "3fba207a592d68581b619b3894294f4a534f89b347f49460e487752ceea71f7f",
+    "bytes": 11034697,
+    "duration_seconds": 20.8333,
+    "size": [
+      1396,
+      672
+    ],
+    "fps": 30,
+    "purpose": "LIQUI MOLY motion reference only",
+    "public_transfer": false
+  },
+  "rules": [
+    "Original bytes unchanged.",
+    "No inferred SKU mapping.",
+    "Reference illustrations are not label or product-data sources.",
+    "SUPERSEDED frames are not approved deliverables."
+  ]
+}
