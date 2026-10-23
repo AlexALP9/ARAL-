@@ -20,10 +20,21 @@
 .k-front{opacity:var(--front-alpha)}.k-right{opacity:var(--right-alpha)}
 .camera .k-view img{inset:0;width:100%;height:100%;object-fit:fill;filter:none;-webkit-box-reflect:none;translate:none}
 .k-glint{position:absolute;inset:0;pointer-events:none;background:linear-gradient(108deg,transparent 35%,#c6e7ff55 44%,#ffffff99 49%,#d7edff44 54%,transparent 64%);background-size:260% 100%;background-position:var(--glint-position) 0;opacity:var(--glint-alpha);mix-blend-mode:screen;mask-size:100% 100%;mask-repeat:no-repeat}
-.k-front .k-glint{mask-image:url('assets/k-views/K_front.png');mask-size:164.545454545% 102.695035461%;mask-position:50.117370892% 78.947368421%}.k-right .k-glint{mask-image:url('assets/k-views/K_34_right.png');mask-size:166.687043976% 104.031630283%;mask-position:53.222245222% 53.529726017%}
+.k-front .k-glint{mask-image:url('assets/k-views/K_front.svg')}.k-right .k-glint{mask-image:url('assets/k-views/K_34_right.svg')}
 .k-contact-shadow{position:absolute;left:7%;top:98.3%;width:86%;height:2.4%;border-radius:50%;background:#142b42;opacity:.19;filter:blur(3px);transform:translateX(var(--shadow-x)) scaleX(var(--shadow-width))}
 .k-reflection{position:absolute;left:0;top:99.5%;width:100%;height:100%;opacity:var(--reflection-alpha);pointer-events:none;mask-image:linear-gradient(to bottom,#000,transparent 14%)}
 .k-reflection .k-body{transform:scaleY(-1);filter:none}
 .camera > img{transition:translate .22s ease-out}
 @media(prefers-reduced-motion:reduce){.camera > img{transition:none}.k-glint{display:none}}
 .k-right{transform:translateX(3.35%)}
+
+/* Reference correction: compact fan, consistent original 1L orientation. */
+[data-product=second-1l]{height:35%;left:30%;top:57%}
+[data-product=third-1l]{height:35%;right:29%;top:57%}
+[data-product=pack-20l]{left:7%}
+[data-product=pack-5l]{right:7%}
+
+/* Right-side photographic plane, present from the first macro frame. */
+.k-opening{position:absolute;aspect-ratio:422/1038;--opening:0}
+.camera .k-opening-front{inset:0;width:100%;height:100%;transform-origin:right bottom;transform:scaleX(calc(1 - .025 * var(--opening)));-webkit-box-reflect:below 1px linear-gradient(transparent 90%,#ffffff12)}
+.k-opening-side{position:absolute;left:97.5%;top:29.35%;width:5.8%;height:69.84%;transform-origin:left center;transform:scaleX(var(--opening));background-image:url('assets/k-views/K_side.png');background-size:300.83% 149.28%;background-position:50.48% 93.72%;clip-path:polygon(0 0,100% 2.4%,100% 97.6%,0 100%)}

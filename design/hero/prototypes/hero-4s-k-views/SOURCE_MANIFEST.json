@@ -1,7 +1,7 @@
 {
-  "status": "DRAFT / NOT FINALLY APPROVED",
+  "status": "IMPLEMENTATION HANDOFF / visual side-plane QA pending",
   "chat": "01a1442a-93fd-7032-a44e-e153440537d9",
-  "date": "2026-10-22",
+  "date": "2026-10-23",
   "base_pr": 2,
   "base_branch": "codex/aral-hero-design-sync-01a1556a",
   "base_commit": "b89d9b97ac9723b303b9c8c500614c1077b272f6",
@@ -12,35 +12,35 @@
       "name": "K_front",
       "sha256": "e376c12563bfa276f6e10c30fad6bf3b4f04d86a314f8d99b768d747b4a189c7",
       "bytes": 1384010,
-      "role": "primary runtime view"
+      "role": "archived reference; not active runtime"
     },
     {
       "path": "assets/k-views/K_34_right.png",
       "name": "K_34_right",
       "sha256": "81239cc3ca17fd43b09625849f1a356a3eb63c417eeafeb33710d6229e7b892e",
       "bytes": 1383774,
-      "role": "secondary runtime view"
+      "role": "archived reference; not active runtime"
     },
     {
       "path": "assets/k-views/K_side.png",
       "name": "K_side",
       "sha256": "73824b4896ee857c4c2afacd9a79847776c81a660e7030072b90ac29c54addbd",
       "bytes": 970549,
-      "role": "reference only"
+      "role": "right-side texture plane"
     },
     {
       "path": "assets/k-views/K_back.png",
       "name": "K_back",
       "sha256": "218a81dbf4cd67712a6c82423d3e5c8fe63c174f8c345ae7e41053ea648490e0",
       "bytes": 1503636,
-      "role": "archival source; not used by Hero"
+      "role": "archived reference; not active runtime"
     },
     {
       "path": "assets/k-views/K_label_closeup.png",
       "name": "K_label_closeup",
       "sha256": "5bff8d396f666f6bbdd0c80ae103e2fc208852d40c04b869d54c8f7285643139",
       "bytes": 1987370,
-      "role": "reference only"
+      "role": "archived reference; not active runtime"
     }
   ],
   "dependencies": [
@@ -78,16 +78,19 @@
       "repo_path": "media/production/ARAL-016_22119_208L.jpg",
       "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
       "provided_by": "main"
+    },
+    {
+      "path": "../../ARAL_HERO_MOTION_01A1556A/sources/main-1l-original.png",
+      "sha256": "3dfccdb71bd8c1de6745805a2f9976fe33627eda7516a66a16d6bd966bfb0723",
+      "bytes": 1116845,
+      "role": "active original K front"
     }
   ],
   "registration": {
-    "file": "k-view-registration.json",
-    "runtime_right_translation_x_percent": 3.35,
-    "nominal_orbit_degrees": [
-      0,
-      7,
-      0
-    ],
+    "historical_file": "k-view-registration.json",
+    "active_front": "assets/main-1l.svg",
+    "active_side": "assets/k-views/K_side.png",
+    "technique": "photographic side-plane approximation; front settles by 1.02 seconds",
     "calibrated_3d_angle": false
   },
   "runtime": {
@@ -104,7 +107,6 @@
     "original LIQUI MOLY video",
     "extracted video frames",
     "historical 6s frames and ZIP",
-    "old main-1l.svg",
     "stale HANDOFF and product mapping"
   ],
   "files": [
@@ -154,6 +156,11 @@
       "bytes": 970549
     },
     {
+      "path": "assets/main-1l.svg",
+      "sha256": "bc18d043032b08aa3102f0232d5a753b87f395b6086ff42daf962634e18b43a8",
+      "bytes": 6691
+    },
+    {
       "path": "assets/pack-20l.svg",
       "sha256": "a731214c06883d4fd58cad428fa824b69ee32b2b7f1b6331a23f421cb4b2f0a1",
       "bytes": 20961
@@ -175,8 +182,8 @@
     },
     {
       "path": "FIGMA_MAP.md",
-      "sha256": "3ffc652926129d098f4aa78123b61f14862fddb3c64b89fbad5fc480efff9da7",
-      "bytes": 1941
+      "sha256": "2b39d8034522f4da49f9e5d1a833f747e4b6e3711e0a289d35cafad73a1a8a5f",
+      "bytes": 683
     },
     {
       "path": "k-assets-audit.json",
@@ -200,38 +207,39 @@
     },
     {
       "path": "README.md",
-      "sha256": "3087555363b9efe272394c798655c12bee00ea10217a8f2445e2db6727e6a660",
-      "bytes": 4115
+      "sha256": "0fd10287c2682d2da373d23b89d718e023f49db0e4cbc4485266a3da460dcf83",
+      "bytes": 3308
     },
     {
       "path": "review.css",
-      "sha256": "2d5beac2427534c595c3b1b8b7524b0126edc69312d7e9968b5df9b6162f6152",
-      "bytes": 6426
+      "sha256": "378fb7f9916618745fc758cf86f400a84f2987d5d3c93094fee282e7efd8a2d9",
+      "bytes": 7173
     },
     {
       "path": "review.html",
-      "sha256": "90cae9d76b7ba33450bad8dca9dc8941ce0895fb42a82228b4433c9b9d412931",
-      "bytes": 3277
+      "sha256": "3e5f5bda40bc47648edd55429fff2bf24b5c05cd775069901f014c9cf1deeee1",
+      "bytes": 2819
     },
     {
       "path": "review.js",
-      "sha256": "924cfe9ada8fa2a2c04a9190420ac503fe9ee31db4c9278ab3c9521e8cd933a1",
-      "bytes": 6879
+      "sha256": "71a7de2a70c03927fac80ea55f90fc27f31bfaedc4b8a398164bd8652488e179",
+      "bytes": 6919
     },
     {
       "path": "storyboard.html",
-      "sha256": "23b7372622bb559cfb4228f212fa0d0d727774aebeb3082b2d1dcee122005563",
-      "bytes": 1709
+      "sha256": "48bc9cb76aa7d09bbbee885c2853af5773db4bfa7306e2b0b2c7510d5c162525",
+      "bytes": 2102
     },
     {
       "path": "TIMING_AND_QA.md",
-      "sha256": "aba2b22ed271df65140cdd0c34503064c4787aca99bfc32f5c76bf92bfbe2e53",
-      "bytes": 5103
+      "sha256": "da67e4efd3fff41d54af16c1dbaaa54aec0a1a20b311decdd2edc81d3bdc1d87",
+      "bytes": 670
     },
     {
       "path": "verify-prototype.mjs",
-      "sha256": "809272dd7318943ece5ac7fd83901805a02c7b3e98995fea171bf97c79981b47",
-      "bytes": 3479
+      "sha256": "efc565637603a17c774fc72874c687ef1aeaf3672ae8b0a01d287e4e7957c01b",
+      "bytes": 3811
     }
-  ]
+  ],
+  "duration_seconds": 4.8
 }

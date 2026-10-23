@@ -1,50 +1,27 @@
-# ARAL HERO 4s / K views
+# ARAL HERO — current 4.8-second implementation
 
-**STATUS: DRAFT / NOT FINALLY APPROVED**
+Current implementation: `review.html`, `review.css`, `review.js` in this folder. Existing directory name is retained to avoid duplicate packages. Supersedes the earlier 4-second K crossfade prototype.
 
-Isolated browser prototype from chat `01a1442a-93fd-7032-a44e-e153440537d9`, preserved on 22 October 2026. This is not the production Hero or an approved final render.
-
-## Run locally
-
-This branch depends on PR #2 (`codex/aral-hero-design-sync-01a1556a`, baseline `b89d9b97ac9723b303b9c8c500614c1077b272f6`). The dependent PR targets that branch, not main. Two reused 1L photos are absent from main until PR #2 is merged. Do not copy this folder alone and call it standalone.
-
+## Run
 From the complete repository checkout:
-
 ```sh
 python -m http.server 8767 --bind 127.0.0.1
 ```
+Open http://127.0.0.1:8767/design/hero/prototypes/hero-4s-k-views/review.html
 
-Open `http://127.0.0.1:8767/design/hero/prototypes/hero-4s-k-views/review.html`.
+One automatic play after all photograph decoding, 4.8 seconds, then a stationary final frame. No timer restarts it. Final pointer parallax is disabled. Review buttons allow explicit manual replay/scrubbing only; remove the review-controls and their bindings when integrating, or retain them only in a development review. Reloading the page starts a new visit. Reduced motion shows the final frame immediately; hiding the page finishes the animation rather than replaying on return. `?t=4.8&scene=1` opens a fixed final view.
 
-- `review.html`: continuous 4-second sequence, repeat, final frame and scrubber.
-- `mobile.html`: 390px iframe review.
-- `storyboard.html`: eight static timeline views; not eight exported final frames.
-- `asset-review.html`: original K PNGs against light/dark/gray/checker backgrounds. The back is visible here only for source review.
-- `review.html?t=0.665`: pause at the first transition midpoint.
-- `review.html?t=1.065`: pause at the return transition midpoint.
-- `review.html?t=4&scene=1`: isolated final product scene.
+## Dependencies / integration
+This PR remains based on PR #2, branch `codex/aral-hero-design-sync-01a1556a`, baseline `b89d9b97ac9723b303b9c8c500614c1077b272f6`. This folder alone is NOT standalone. Keep the relative paths or update the resolver when bundling.
 
-HTTP is required. SVGs reference existing PNG/JPG files instead of embedding duplicate originals. The loader resolves those references, embeds the existing bytes in memory and decodes the resulting SVG before showing the scene. K light masks use the corresponding original PNG and registration values. The external Google Fonts stylesheet is optional: Manrope falls back to Arial if unavailable. No other external runtime dependency is required.
+Required: review HTML/CSS/JS; six `assets/*.svg` wrappers (main-1l, second-1l, third-1l, pack-5l, pack-20l, barrel); existing `assets/k-views/K_side.png`; three original 1L PNGs in `design/hero/ARAL_HERO_MOTION_01A1556A/sources/`; existing 5L/20L/barrel files in `media/production/`. SOURCE_MANIFEST.json records paths and hashes. No original photograph was reuploaded or changed. Other K views are historical reference files, not active views. Google Fonts Manrope is optional with Arial fallback.
 
-## Scope and composition
+The SVG resolver fetches referenced photographs and embeds bytes only in memory before image.decode. Serve via HTTP from repository root. On integration, mount once after entering home, await decode, retain final state until leaving; clean up RAF/listeners/object URLs on unmount. Do not reinitialize on scroll, hover, resize or catalog interactions. Preserve catalog/router; CTA hrefs here are placeholders. `pagehide` releases blob URLs; a restored back-forward-cache page needs image rehydration or a fresh mount.
 
-Six packages: K 1L centered in front, LL IV FE left, High Tronic M right; 20L behind left, 5L behind right, generic blue ARAL barrel behind center. The barrel has no inferred oil grade or performance claims. Other packages retain their front photos and subtle pointer parallax. The review has copy and placeholder CTA routes; it does not include the site's catalog/router.
+## Figma
+Desktop 93:52 and mobile 98:54 in file xgN1ERA1pWbl2x8MvOiA5m use 4.8-second tracks. Figma player looping is separate from browser code. The Figma prototype navigates at 4.8 seconds to static final frames 125:56 / 125:406; those have no animation tracks or automatic return. Native timeline loop preference is not exposed by the available API. This workaround is not a website dependency.
 
-Canonical motion references remain unchanged: [03](../../../../HERO/03_ARAL_HERO_4S_ANIMATION_PROMPT.md), [04](../../../../HERO/04_WORK_PROMPT_ARAL_HERO_4S.md). See [TIMING_AND_QA.md](TIMING_AND_QA.md) for the explicitly unresolved timing differences.
+## Validation and limits
+Run `node verify-prototype.mjs`. Checks hashes, file references, reveal times, reduced-motion and RAF termination; it does not certify pixel rendering. The opening right-side plane is a photographic 2.5D approximation and its moving seam still needs visual acceptance. Main original K retains neck-left orientation; no label mirroring or old crossfade. Camera/composition and reveals preserved, all time coordinates multiplied by 1.2.
 
-## Files and provenance
-
-[SOURCE_MANIFEST.json](SOURCE_MANIFEST.json) records the five unique K originals, SHA-256, registration and reused dependencies. Each PNG is stored once. Front/right SVGs are normalized presentation wrappers referencing those files; they do not repaint labels. `prepare-k-views.py` can rebuild those wrappers and registration from the original audit. `k-assets-audit.json` preserves alpha measurements without personal source paths.
-
-K_front is the primary view; K_34_right is the secondary view. K_side and K_label_closeup are auxiliary references, not runtime overlays. K_back is an archival source and is not loaded by the Hero. The new K appearance differs from the previous original, including neck orientation and label artwork; acceptance for local exploration is not production-media approval.
-
-The source folder's old name `hero-final-approved` does not establish acceptance. Old HANDOFF/product mapping, full-site snapshots, old screenshot, 6-second frames/ZIPs, LIQUI MOLY video and extracted frames are deliberately excluded. The existing photos and two reference PNGs in PR #2 are reused or linked, never uploaded again.
-
-## Verification
-
-```sh
-node --check design/hero/prototypes/hero-4s-k-views/review.js
-node design/hero/prototypes/hero-4s-k-views/verify-prototype.mjs
-```
-
-The checker is read-only and verifies source/dependency SHA-256, local links, six package objects and timeline logic in a DOM stub, including mobile parameters and the reduced-motion final state. It does not certify browser paint, smoothness, typography, crossfade quality or acceptance. Visual status and outstanding tasks are recorded separately. Review artifacts must not be connected to production routes without a later explicit integration task.
+No main merge or production publication. Checked publishing workflow: `.github/workflows/pages.yml` runs on push to main or manual dispatch, not this branch push. No deployment command is part of this package.

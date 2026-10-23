@@ -24,11 +24,12 @@ function exercise(reduced=false,mobile=false){
  const names=['barrel','pack-20l','pack-5l','second-1l','third-1l','main-1l'];
  const products=Object.fromEntries(names.map(name=>[name,Object.assign(node(),{dataset:{product:name}})]));
  const camera=node(),scene=Object.assign(node(),{querySelector:()=>camera,querySelectorAll:()=>Object.values(products)}),controls={};
- const context={URLSearchParams,location:{search:''},matchMedia:q=>({matches:q.includes('reduced')?reduced:mobile,addEventListener(){}}),cancelAnimationFrame(){},requestAnimationFrame(){return 1},performance:{now:()=>0},document:{hidden:false,body:{classList:{add(){}}},querySelector:q=>q==='.aral-scene'?scene:(controls[q]??=node()),createElement:node,addEventListener(){}},console};
+ const context={URLSearchParams,location:{search:''},matchMedia:q=>({matches:q.includes('reduced')?reduced:mobile,addEventListener(){}}),cancelAnimationFrame(){context.pending=null},requestAnimationFrame(fn){context.pending=fn;return 1},performance:{now:()=>0},document:{hidden:false,body:{classList:{add(){}}},querySelector:q=>q==='.aral-scene'?scene:(controls[q]??=node()),createElement:node,addEventListener(){}},console};
  vm.createContext(context);vm.runInContext(code.slice(0,code.indexOf('const loadedPhotos='))+'globalThis.check={draw,play,orbitAt};})();',context);
  const samples=[];
- for(const t of [0,.665,.85,1.065,1.18,2.3,2.65,3,3.4,3.7,4]){context.check.draw(t);const visible=names.filter(n=>Number(products[n].style.opacity)>0);samples.push({t,visible,orbit:products['main-1l'].dataset.orbit});if(t<=2.3)assert.deepEqual(visible,['main-1l']);if(t===3||t===3.4)assert.equal(visible.length,3);if(t===4)assert.equal(visible.length,6);if(t<3.4)for(const n of ['barrel','pack-20l','pack-5l'])assert.equal(Number(products[n].style.opacity),0);}
- if(reduced){context.check.play();assert.equal(controls['#time'].value,'4.00');assert.equal(products['main-1l'].dataset.orbit,'0.00');}
+ for(const t of [0,.665,.85,1.065,1.18,2.3,2.65,3,3.4,3.7,4]){context.check.draw(t*1.2);const visible=names.filter(n=>Number(products[n].style.opacity)>0);samples.push({t,visible,orbit:products['main-1l'].dataset.orbit});if(t<=2.3)assert.deepEqual(visible,['main-1l']);if(t===3||t===3.4)assert.equal(visible.length,3);if(t===4)assert.equal(visible.length,6);if(t<3.4)for(const n of ['barrel','pack-20l','pack-5l'])assert.equal(Number(products[n].style.opacity),0);}
+ if(reduced){context.check.play();assert.equal(controls['#time'].value,'4.80');assert.equal(products['main-1l'].dataset.orbit,'0');}
+ if(!reduced){context.check.play();for(const now of [0,1000,4799,4800]){const fn=context.pending;context.pending=null;if(fn)fn(now);}assert.equal(context.pending,null,'must stop scheduling after final');assert.equal(controls['#time'].value,'4.80');assert.equal(scene.dataset.time,'4.80');}
  return samples;
 }
 console.log(JSON.stringify({status:'PASS: structural/timeline only',desktop:exercise(),mobile:exercise(false,true),reduced_motion:exercise(true),visual:'REVIEW_REQUIRED; this checker does not render images'},null,2));
