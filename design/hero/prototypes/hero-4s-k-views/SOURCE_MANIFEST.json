@@ -1,0 +1,245 @@
+{
+  "status": "IMPLEMENTATION HANDOFF / visual side-plane QA pending",
+  "chat": "01a1442a-93fd-7032-a44e-e153440537d9",
+  "date": "2026-10-23",
+  "base_pr": 2,
+  "base_branch": "codex/aral-hero-design-sync-01a1556a",
+  "base_commit": "b89d9b97ac9723b303b9c8c500614c1077b272f6",
+  "main_commit": "ff14ac5b87c617c6c73fe2b55c8b63ffbad2ff31",
+  "k_sources": [
+    {
+      "path": "assets/k-views/K_front.png",
+      "name": "K_front",
+      "sha256": "e376c12563bfa276f6e10c30fad6bf3b4f04d86a314f8d99b768d747b4a189c7",
+      "bytes": 1384010,
+      "role": "archived reference; not active runtime"
+    },
+    {
+      "path": "assets/k-views/K_34_right.png",
+      "name": "K_34_right",
+      "sha256": "81239cc3ca17fd43b09625849f1a356a3eb63c417eeafeb33710d6229e7b892e",
+      "bytes": 1383774,
+      "role": "archived reference; not active runtime"
+    },
+    {
+      "path": "assets/k-views/K_side.png",
+      "name": "K_side",
+      "sha256": "73824b4896ee857c4c2afacd9a79847776c81a660e7030072b90ac29c54addbd",
+      "bytes": 970549,
+      "role": "right-side texture plane"
+    },
+    {
+      "path": "assets/k-views/K_back.png",
+      "name": "K_back",
+      "sha256": "218a81dbf4cd67712a6c82423d3e5c8fe63c174f8c345ae7e41053ea648490e0",
+      "bytes": 1503636,
+      "role": "archived reference; not active runtime"
+    },
+    {
+      "path": "assets/k-views/K_label_closeup.png",
+      "name": "K_label_closeup",
+      "sha256": "5bff8d396f666f6bbdd0c80ae103e2fc208852d40c04b869d54c8f7285643139",
+      "bytes": 1987370,
+      "role": "archived reference; not active runtime"
+    }
+  ],
+  "dependencies": [
+    {
+      "role": "second-1l",
+      "path": "../../ARAL_HERO_MOTION_01A1556A/sources/second-1l-original.png",
+      "repo_path": "design/hero/ARAL_HERO_MOTION_01A1556A/sources/second-1l-original.png",
+      "sha256": "415a685c50057ed7332092bc510d0270ad054d4c11d880066c8f5597f0051374",
+      "provided_by": "PR #2"
+    },
+    {
+      "role": "third-1l",
+      "path": "../../ARAL_HERO_MOTION_01A1556A/sources/third-1l-original.png",
+      "repo_path": "design/hero/ARAL_HERO_MOTION_01A1556A/sources/third-1l-original.png",
+      "sha256": "8cdf170e5f0859e443e0d364f126c7967f3599085e9943c4577627ddefad0feb",
+      "provided_by": "PR #2"
+    },
+    {
+      "role": "pack-5l",
+      "path": "../../../../media/production/ARAL-011_160EC7_5L.jpg",
+      "repo_path": "media/production/ARAL-011_160EC7_5L.jpg",
+      "sha256": "47fb466ad27c60a1080acbec1d09a48c7188d5215c531168fe5e44996b8ad924",
+      "provided_by": "main"
+    },
+    {
+      "role": "pack-20l",
+      "path": "../../../../media/production/ARAL-015_22003_20L.png",
+      "repo_path": "media/production/ARAL-015_22003_20L.png",
+      "sha256": "e3d2158febd4e2f0a1bef013c24736d20ac9e288915d9ea7ad554c3fa0558482",
+      "provided_by": "main"
+    },
+    {
+      "role": "barrel",
+      "path": "../../../../media/production/ARAL-016_22119_208L.jpg",
+      "repo_path": "media/production/ARAL-016_22119_208L.jpg",
+      "sha256": "9e6a5aa21f8a14d1ae090bb54b64d540ffe85a95c97022fc5a2b095e66f2f816",
+      "provided_by": "main"
+    },
+    {
+      "path": "../../ARAL_HERO_MOTION_01A1556A/sources/main-1l-original.png",
+      "sha256": "3dfccdb71bd8c1de6745805a2f9976fe33627eda7516a66a16d6bd966bfb0723",
+      "bytes": 1116845,
+      "role": "active original K front"
+    }
+  ],
+  "registration": {
+    "historical_file": "k-view-registration.json",
+    "active_front": "assets/main-1l.svg",
+    "active_side": "assets/k-views/K_side.png",
+    "technique": "photographic side-plane approximation; front settles by 1.02 seconds",
+    "calibrated_3d_angle": false
+  },
+  "runtime": {
+    "html": "review.html",
+    "js": "review.js",
+    "css": "review.css",
+    "mobile": "mobile.html",
+    "storyboard": "storyboard.html"
+  },
+  "excluded": [
+    "full-site source snapshots",
+    "catalog duplicate",
+    "old screenshot",
+    "original LIQUI MOLY video",
+    "extracted video frames",
+    "historical 6s frames and ZIP",
+    "stale HANDOFF and product mapping"
+  ],
+  "files": [
+    {
+      "path": "asset-review.html",
+      "sha256": "2ec34a65c0c3012a04801abfe431a5b42777f00e8c7ad72cb57bb71814ec588b",
+      "bytes": 1747
+    },
+    {
+      "path": "assets/barrel.svg",
+      "sha256": "088f54c2a247acc7264dd20fada5a6befd97163332b3321f65cd36f049b11512",
+      "bytes": 12962
+    },
+    {
+      "path": "assets/k-views/K_34_right.png",
+      "sha256": "81239cc3ca17fd43b09625849f1a356a3eb63c417eeafeb33710d6229e7b892e",
+      "bytes": 1383774
+    },
+    {
+      "path": "assets/k-views/K_34_right.svg",
+      "sha256": "ba1163a21e117ebb9e2c6b3a2e7b6a9cba8dcdd11f7d0e6bc61c4b0153b39373",
+      "bytes": 198
+    },
+    {
+      "path": "assets/k-views/K_back.png",
+      "sha256": "218a81dbf4cd67712a6c82423d3e5c8fe63c174f8c345ae7e41053ea648490e0",
+      "bytes": 1503636
+    },
+    {
+      "path": "assets/k-views/K_front.png",
+      "sha256": "e376c12563bfa276f6e10c30fad6bf3b4f04d86a314f8d99b768d747b4a189c7",
+      "bytes": 1384010
+    },
+    {
+      "path": "assets/k-views/K_front.svg",
+      "sha256": "8130328f02e8e93fb5153f8619e3508670ec4bae6abaa6c1a700d8dac5685d29",
+      "bytes": 195
+    },
+    {
+      "path": "assets/k-views/K_label_closeup.png",
+      "sha256": "5bff8d396f666f6bbdd0c80ae103e2fc208852d40c04b869d54c8f7285643139",
+      "bytes": 1987370
+    },
+    {
+      "path": "assets/k-views/K_side.png",
+      "sha256": "73824b4896ee857c4c2afacd9a79847776c81a660e7030072b90ac29c54addbd",
+      "bytes": 970549
+    },
+    {
+      "path": "assets/main-1l.svg",
+      "sha256": "bc18d043032b08aa3102f0232d5a753b87f395b6086ff42daf962634e18b43a8",
+      "bytes": 6691
+    },
+    {
+      "path": "assets/pack-20l.svg",
+      "sha256": "a731214c06883d4fd58cad428fa824b69ee32b2b7f1b6331a23f421cb4b2f0a1",
+      "bytes": 20961
+    },
+    {
+      "path": "assets/pack-5l.svg",
+      "sha256": "d61685d0fc93df2f6a3f027d6c7a4dafa11578a6fe0be61a805365b411c8641b",
+      "bytes": 24987
+    },
+    {
+      "path": "assets/second-1l.svg",
+      "sha256": "ac9944d244e71a88de4e009c393ea0cb23cdc0c8d5df42bccb4e3e92b61ff54a",
+      "bytes": 6719
+    },
+    {
+      "path": "assets/third-1l.svg",
+      "sha256": "7047be81c836d872c90aba0a1421071ab5540ab3d424df4ede3f9b9a615f5d13",
+      "bytes": 4523
+    },
+    {
+      "path": "FIGMA_MAP.md",
+      "sha256": "2b39d8034522f4da49f9e5d1a833f747e4b6e3711e0a289d35cafad73a1a8a5f",
+      "bytes": 683
+    },
+    {
+      "path": "k-assets-audit.json",
+      "sha256": "d8a6e4a66b404b12e9fc51b360737aaf80101cd2384799e8ec33ae9acc51959a",
+      "bytes": 4129
+    },
+    {
+      "path": "k-view-registration.json",
+      "sha256": "6f1510fcaec66f1e748486ff17c5488ab5b9cebc3f4f93814acfa9c5f92e914b",
+      "bytes": 634
+    },
+    {
+      "path": "mobile.html",
+      "sha256": "343c1d612d0d460413f13e8082b176b597f58c3a2caf108937e66f64be16d15a",
+      "bytes": 455
+    },
+    {
+      "path": "prepare-k-views.py",
+      "sha256": "e38b931f071e534e0449ce9a08d11efe5201d56d80e7ac1784f37637b5b301ba",
+      "bytes": 1017
+    },
+    {
+      "path": "README.md",
+      "sha256": "0fd10287c2682d2da373d23b89d718e023f49db0e4cbc4485266a3da460dcf83",
+      "bytes": 3308
+    },
+    {
+      "path": "review.css",
+      "sha256": "378fb7f9916618745fc758cf86f400a84f2987d5d3c93094fee282e7efd8a2d9",
+      "bytes": 7173
+    },
+    {
+      "path": "review.html",
+      "sha256": "3e5f5bda40bc47648edd55429fff2bf24b5c05cd775069901f014c9cf1deeee1",
+      "bytes": 2819
+    },
+    {
+      "path": "review.js",
+      "sha256": "71a7de2a70c03927fac80ea55f90fc27f31bfaedc4b8a398164bd8652488e179",
+      "bytes": 6919
+    },
+    {
+      "path": "storyboard.html",
+      "sha256": "48bc9cb76aa7d09bbbee885c2853af5773db4bfa7306e2b0b2c7510d5c162525",
+      "bytes": 2102
+    },
+    {
+      "path": "TIMING_AND_QA.md",
+      "sha256": "da67e4efd3fff41d54af16c1dbaaa54aec0a1a20b311decdd2edc81d3bdc1d87",
+      "bytes": 670
+    },
+    {
+      "path": "verify-prototype.mjs",
+      "sha256": "efc565637603a17c774fc72874c687ef1aeaf3672ae8b0a01d287e4e7957c01b",
+      "bytes": 3811
+    }
+  ],
+  "duration_seconds": 4.8
+}

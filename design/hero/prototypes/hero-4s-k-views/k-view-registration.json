@@ -1,0 +1,32 @@
+[
+  {
+    "name": "K_front",
+    "viewBox": [
+      0,
+      0,
+      660,
+      1410
+    ],
+    "uniform_scale": 1.0,
+    "x": -213.5,
+    "y": -30.0,
+    "opaque_top": 3,
+    "opaque_baseline": 1404,
+    "source_sha256": "e376c12563bfa276f6e10c30fad6bf3b4f04d86a314f8d99b768d747b4a189c7"
+  },
+  {
+    "name": "K_34_right",
+    "viewBox": [
+      0,
+      0,
+      660,
+      1410
+    ],
+    "uniform_scale": 1.0130151843817787,
+    "x": -234.24945770065077,
+    "y": -30.429501084598698,
+    "opaque_top": 3,
+    "opaque_baseline": 1404,
+    "source_sha256": "81239cc3ca17fd43b09625849f1a356a3eb63c417eeafeb33710d6229e7b892e"
+  }
+]
