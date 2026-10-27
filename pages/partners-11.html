@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>ARAL — Для партнёров | черновик 11</title>
+<style>
+:root{--blue:#0756a1;--navy:#06346c;--bright:#1680d4;--ice:#f2f7fc;--line:#dae5ef;--ink:#19334e;--muted:#60758b;--paper:#ffffff;--max:1180px;}
+*{box-sizing:border-box;}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit}button{font:inherit}.container{width:min(100% - 80px,var(--max));margin:auto}.nav{border-bottom:1px solid #e1e8f0;background:white}.nav-wrap{height:84px;display:flex;align-items:center;justify-content:space-between;gap:34px}.brand{font-size:31px;font-weight:880;letter-spacing:-.075em;line-height:1;color:var(--navy)}.menu{display:flex;gap:30px;align-items:center;white-space:nowrap;overflow-x:auto;scrollbar-width:none}.menu::-webkit-scrollbar{display:none}.menu span{height:84px;display:flex;align-items:center;border-bottom:3px solid transparent;font-size:13px;font-weight:670;color:#63778d}.menu .current{color:var(--blue);border-color:var(--blue)}
+.hero{background:linear-gradient(105deg,#06346c 0%,#064784 70%,#0756a1);color:#fff;overflow:hidden}.hero-wrap{display:grid;grid-template-columns:1fr 46%;align-items:center;gap:62px;min-height:360px}.kicker{color:#95c8f2;text-transform:uppercase;letter-spacing:.20em;font-size:11px;font-weight:750;margin-bottom:25px}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(62px,8vw,104px);font-weight:720;letter-spacing:-.065em;line-height:1.04;margin:0}.hero-visual{align-self:stretch;min-height:360px;position:relative;overflow:hidden}.hero-visual img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center;opacity:.93}.hero-visual:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#06447b 0%,transparent 48%);z-index:1}.hero-caption{position:absolute;z-index:2;bottom:20px;right:0;background:rgba(0,38,82,.70);padding:9px 13px;border-radius:4px 0 0 4px;font-size:11px;color:#e7f0fa}
+.section{padding:98px 0 105px}.section.gray{background:#f5f8fc}.tag{display:flex;align-items:center;gap:12px;color:#1776c1;font-size:11px;font-weight:790;letter-spacing:.04em;margin-bottom:18px}.tag:after{content:"";width:52px;height:1px;background:#9cbddb}h2{color:var(--navy);font-size:clamp(33px,4vw,53px);line-height:1.14;letter-spacing:-.047em;font-weight:730;margin-bottom:26px}h3{font-size:24px;color:var(--navy);line-height:1.27;letter-spacing:-.03em;margin-bottom:14px}.two-col{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr);gap:clamp(48px,6vw,90px);align-items:start}.copy p{font-size:16.5px;line-height:1.84;letter-spacing:-.006em;color:#385069;margin:0 0 22px}.copy p:last-child{margin-bottom:0}.visual-card{border-radius:12px;overflow:hidden;background:#dce7f0;box-shadow:0 18px 38px rgba(24,60,97,.08);position:relative}.visual-card img{display:block;width:100%;height:100%;object-fit:cover}.visual-label{position:absolute;bottom:13px;left:13px;background:rgba(4,40,77,.81);font-size:11px;color:#e7f0fa;padding:8px 10px;border-radius:5px;max-width:calc(100% - 26px)}.production-visual{height:465px;margin-top:72px}.production-visual img{object-position:center}
+.timeline{padding:90px 0 100px;background:var(--ice);border-top:1px solid #e1eaf3;border-bottom:1px solid #e1eaf3}.timeline-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:49px}.timeline-head h2{margin-bottom:0}.section-subtitle{font-size:15px;color:var(--muted);line-height:1.6;max-width:380px;margin:0 0 5px}.years{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:10px;position:relative;isolation:isolate;padding:10px 0;margin-bottom:26px}.years:before{content:"";position:absolute;left:5%;right:5%;height:3px;top:50%;transform:translateY(-50%);background:linear-gradient(90deg,#aed0ed,#1776bd,#91bddf);z-index:-1}.year-btn{cursor:pointer;border:1px solid #c4d8e9;background:#fff;border-radius:11px;color:#083b76;min-height:69px;width:100%;font-weight:760;font-size:clamp(18px,1.85vw,27px);letter-spacing:-.055em;transition:background .2s,box-shadow .2s,transform .2s,border-color .2s;box-shadow:0 4px 18px rgba(6,62,116,.06)}.year-btn:hover{transform:translateY(-4px);border-color:#3490d6;box-shadow:0 10px 22px rgba(7,61,122,.12)}.year-btn[aria-expanded="true"]{background:var(--navy);border-color:var(--navy);color:white;box-shadow:0 10px 25px rgba(7,57,109,.18)}.year-btn:focus-visible{outline:3px solid #65b4ed;outline-offset:4px}.year-panel{min-height:0}.year-detail{border:1px solid #d8e5f0;border-radius:12px;background:white;padding:26px 32px 28px;display:grid;grid-template-columns:123px 1fr;gap:30px;align-items:start;box-shadow:0 9px 28px rgba(24,60,97,.05);animation:reveal .2s ease-out}.year-detail[hidden]{display:none}.year-detail time{font-size:36px;line-height:1;color:var(--blue);font-weight:750;letter-spacing:-.055em}.year-detail h3{font-size:23px;margin-bottom:6px}.year-detail p{color:#51657a;font-size:16px;line-height:1.6;margin:0}.year-empty{text-align:center;color:var(--muted);font-size:13px;margin:0;padding:9px 0}@keyframes reveal{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+.specialists-grid{grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);align-items:center}.specialist-image{height:405px}.specialist-image img{object-position:center}.specialist-copy .copy p{margin-bottom:20px}.role-motifs{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:24px}.role-motifs div{height:5px;border-radius:4px;background:#d2e4f3}.role-motifs div:nth-child(2){background:#7fb6de}.role-motifs div:nth-child(3){background:#1675bd}
+.draft-section{padding:100px 0}.draft-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:28px}.draft-head h2{margin-bottom:0}.draft-flag{color:#687c8d;border:1px solid #d1dce6;border-radius:50px;font-size:12px;padding:9px 12px;white-space:nowrap;background:white}.draft-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.draft-card{border:1px solid var(--line);border-radius:12px;padding:32px;background:white;min-height:250px}.draft-card p{font-size:16px;line-height:1.73;color:#476077;margin-bottom:0}.draft-card .caption{font-size:12px;color:#8797a5;line-height:1.55;margin-top:19px;padding-top:16px;border-top:1px solid #e6edf3}.draft-card small{font-size:11px;text-transform:uppercase;color:#758ba0;letter-spacing:.08em;font-weight:750}
+.connect-section{background:#f5f8fc;padding:100px 0}.connect-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.connect-card{border:1px solid #dae5f0;background:white;border-radius:12px;padding:34px;display:flex;flex-direction:column;gap:15px;min-height:238px}.connect-card h3{margin:0}.connect-card p{line-height:1.65;color:#5a7084;margin:0;font-size:15px}.contact-link{font-size:20px;font-weight:700;color:var(--blue);text-decoration:none;overflow-wrap:anywhere}.contact-link:hover{text-decoration:underline}.pill{align-self:start;display:inline-block;background:#eaf2f9;color:#37698f;padding:7px 10px;border-radius:7px;font-weight:660;font-size:11px}.ghost-btn{display:inline-block;align-self:flex-start;font-weight:700;text-decoration:none;background:var(--blue);color:#fff;padding:13px 17px;border-radius:7px;font-size:14px}.ghost-btn:hover{background:var(--navy)}.hint{margin-top:24px;color:var(--muted);font-size:13px;line-height:1.7}.foot{background:var(--navy);color:#fff}.foot-inner{padding:39px 0;display:flex;justify-content:space-between;align-items:center;gap:20px}.foot .brand{color:white}.foot small{color:#b9d0e6;font-size:13px}
+@media(max-width:950px){.container{width:calc(100% - 48px)}.menu{gap:18px}.nav-wrap,.menu span{height:72px}.hero-wrap{grid-template-columns:1fr 44%;gap:20px;min-height:325px}.hero-visual{min-height:325px}.section{padding:73px 0}.two-col{gap:30px}.production-visual{height:380px}.year-btn{min-height:62px}.timeline{padding:72px 0}.year-detail{grid-template-columns:90px 1fr}.year-detail time{font-size:31px}}
+@media(max-width:680px){.container{width:calc(100% - 36px)}.nav-wrap{height:auto;display:block;padding-top:20px}.brand{font-size:28px}.menu{margin-top:18px;gap:21px}.menu span{font-size:12px;height:41px}.hero-wrap{grid-template-columns:1fr;gap:0;min-height:0}.hero-copy{padding:62px 0 44px}.hero-visual{min-height:205px;margin:0 -18px}.hero-visual img{object-position:center 45%}.hero-visual:before{background:linear-gradient(180deg,#064784 0%,transparent 35%)}.hero-caption{right:18px}h1{font-size:65px}h2{font-size:37px}.section{padding:66px 0 76px}.two-col{display:flex;flex-direction:column;gap:26px}.copy p{font-size:16px;line-height:1.78;margin-bottom:19px}.production-visual{margin-top:0;width:100%;height:290px}.timeline{padding:65px 0 75px}.timeline-head{display:block;margin-bottom:30px}.timeline-head h2{margin-bottom:12px}.section-subtitle{font-size:14px}.years{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:0;margin-bottom:22px}.years:before{display:none}.year-btn{min-height:60px;font-size:22px}.year-detail{grid-template-columns:1fr;gap:10px;padding:22px}.year-detail time{font-size:29px}.year-detail h3{font-size:21px}.year-detail p{font-size:15px}.specialists-grid{flex-direction:column-reverse}.specialist-image{width:100%;height:252px}.role-motifs{margin-top:17px}.draft-section,.connect-section{padding:69px 0}.draft-head{flex-direction:column;gap:15px}.draft-grid,.connect-grid{grid-template-columns:1fr;gap:14px}.draft-card,.connect-card{padding:25px;min-height:0}.connect-card{gap:12px}.contact-link{font-size:18px}.foot-inner{padding:31px 0}}
+@media(max-width:400px){.years{grid-template-columns:repeat(2,minmax(0,1fr))}.year-btn{min-height:56px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.year-btn,.year-detail{animation:none;transition:none}}
+
+/* ДОПОЛНЕНИЕ V5: черновое оформление разделов текста; не дизайн-система */
+.company-quality{border-top:1px solid #e7edf3;padding-top:85px;padding-bottom:90px}
+.quality-body{display:grid;grid-template-columns:.65fr 1.35fr;gap:76px;align-items:start}
+.quality-heading h2{margin-bottom:18px}.quality-side{font-size:14px;line-height:1.65;color:#67809a;padding-left:18px;border-left:3px solid #a9cdea}
+.quality-text p{font-size:16.5px;margin-bottom:19px}
+.advantage-section{background:#f4f8fc;padding:88px 0 96px;border-top:1px solid #e2ecf5}
+.editorial-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:32px}
+.editorial-head h2{margin-bottom:0;max-width:680px}.editorial-head p{font-size:15px;max-width:415px;line-height:1.68;color:#60758b;margin:0}
+.advantage-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.advantage-card{padding:30px 32px 28px;background:#fff;border:1px solid #dce7f0;border-radius:12px;box-shadow:0 8px 24px rgba(15,61,102,.04);min-width:0;display:flex;flex-direction:column}
+.advantage-number{font-size:21px;font-weight:850;letter-spacing:-.03em;color:#0c69ad;margin-bottom:20px}.advantage-number span{font-size:12px;font-weight:500;letter-spacing:0;color:#9aafc1}
+.advantage-card h3{font-size:25px;max-width:460px;margin-bottom:18px}
+.advantage-copy p{font-size:15px;line-height:1.72;color:#425b73;margin:0 0 15px}
+.advantage-copy p:last-child{margin-bottom:0}
+.item-source{border-top:1px solid #eaf0f5;margin-top:auto;padding-top:16px;margin-bottom:0;font-size:11px;line-height:1.5;color:#8095a8}
+.advantage-copy{padding-bottom:20px}
+.editorial-note{margin:20px 0 0;font-size:12px;line-height:1.6;color:#8294a6}
+.interesting-section{padding:91px 0 103px;background:#fff}
+.interesting-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.story-card{min-width:0;border:1px solid #dbe6f0;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 5px 20px rgba(13,61,105,.035)}
+.story-card summary{list-style:none;padding:28px 31px 23px;cursor:pointer;display:flex;flex-direction:column;min-height:264px;outline:none}
+.story-card summary::-webkit-details-marker{display:none}
+.story-card summary:focus-visible{outline:3px solid #73b6ec;outline-offset:-5px}
+.story-card[open]{border-color:#93bddc;box-shadow:0 13px 34px rgba(10,76,130,.11)}
+.story-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:17px}
+.story-number{font-size:13px;font-weight:800;color:#0f75be}.story-category{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#31729f;background:#eaf4fb;border-radius:22px;padding:6px 10px;font-weight:700}
+.story-title{display:block;font-size:22px;line-height:1.28;font-weight:730;color:var(--navy);letter-spacing:-.023em;margin-bottom:11px}
+.story-lead{display:block;font-size:14px;line-height:1.65;color:#5b7186;max-width:470px}
+.story-more{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:23px;font-size:13px;color:#0c6daf;font-weight:750}
+.story-arrow{font-size:25px;line-height:1;font-weight:400;transition:transform .18s ease}
+.story-card[open] .story-arrow{transform:rotate(45deg)}
+.word-opened{display:none}.story-card[open] .word-opened{display:inline}.story-card[open] .word-collapsed{display:none}
+.story-expanded{padding:0 31px 28px;border-top:1px solid #e6eef5;animation:reveal .2s ease-out}
+.story-article-copy{padding-top:23px}.story-article-copy p{font-size:14.5px;line-height:1.77;color:#435e75;margin:0 0 15px}
+.story-article-copy p:last-child{margin-bottom:0}
+.story-source{margin:21px 0 0;padding-top:14px;border-top:1px solid #e6edf5;color:#8296a9;font-size:11px;line-height:1.65}
+@media(max-width:950px){.quality-body{gap:35px;grid-template-columns:.72fr 1.28fr}.editorial-head{display:block}.editorial-head h2{margin-bottom:15px}.editorial-head p{max-width:640px}.advantage-card{padding:25px}.advantage-card h3{font-size:22px}.story-card summary{padding:24px;min-height:285px}.story-expanded{padding:0 24px 23px}}
+@media(max-width:680px){.quality-body{display:block}.quality-heading{margin-bottom:27px}.company-quality,.advantage-section,.interesting-section{padding:65px 0}.advantage-grid,.interesting-grid{grid-template-columns:1fr;gap:13px}.advantage-card{padding:23px}.advantage-card h3{font-size:22px}.advantage-copy p{font-size:15px}.story-card summary{min-height:0;padding:23px}.story-title{font-size:21px}.story-more{padding-top:22px}.story-expanded{padding:0 23px 22px}}
+@media(prefers-reduced-motion:reduce){.story-arrow,.story-expanded{animation:none;transition:none}}
+
+
+/* V6: ONLY page splitting and 7-item adaptive navigation, not approved design. */
+.nav-wrap{min-height:84px;height:auto;padding-top:12px;padding-bottom:12px;flex-wrap:wrap;gap:12px 20px}
+.menu{display:flex;flex-wrap:wrap;overflow:visible;white-space:normal;gap:6px 14px;scrollbar-width:auto}
+.menu a{color:#63778d;text-decoration:none;display:inline-flex;align-items:center;min-height:44px;padding:7px 3px;border-bottom:3px solid transparent;font-size:12px;font-weight:670;transition:color .14s}
+.menu a:hover{color:var(--blue)}
+.menu a[aria-current="page"]{color:var(--blue);border-bottom-color:var(--blue)}
+.nav-toggle{display:none;align-items:center;gap:9px;border:1px solid #c7d9e9;color:var(--navy);border-radius:8px;background:white;padding:10px 14px;font-weight:700;cursor:pointer;font-size:13px}
+.hero h1{overflow-wrap:anywhere}.page-empty{padding:95px 0 120px;min-height:410px;background:#f5f8fc}
+.page-empty-inner{max-width:780px;border-radius:12px;padding:36px 40px;background:white;border:1px solid var(--line);box-shadow:0 7px 28px rgba(24,60,97,.04)}
+.page-empty p{font-size:16px;line-height:1.78;color:#476077}
+.page-empty .text-note{font-size:13px;color:#7590a7;margin:22px 0 0}
+.page-status{display:inline-flex;border:1px solid #bfd4e6;background:#eaf3fa;border-radius:8px;padding:7px 10px;margin:0 0 18px;color:#286693;font-size:12px;font-weight:700}
+.page-assets{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:20px 0 0}
+.page-assets img{width:100%;height:245px;object-fit:cover;border-radius:12px;display:block}
+.page-assets figcaption{font-size:11px;color:#71869b;margin-top:9px}
+.page-note{padding:10px 0 26px;color:#71869b;font-size:12px}
+@media(max-width:1060px){.nav-wrap{display:block;padding-top:17px;padding-bottom:7px}.menu{margin-top:12px;gap:4px 17px}}
+@media(max-width:680px){.nav-wrap{display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between;padding-top:15px;padding-bottom:15px}
+.nav-toggle{display:inline-flex}.menu{display:none;width:100%;flex-basis:100%;margin:0;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;padding:12px 0 2px;overflow:visible}
+.menu.is-open{display:grid}.menu a{display:flex;min-height:43px;width:100%;background:#f2f7fc;padding:10px;border:1px solid #deebf4;border-radius:6px;font-size:12px}
+.menu a[aria-current="page"]{border-color:#1976bd;background:#e6f2fa}.page-empty{padding:60px 0}.page-empty-inner{padding:24px 20px}.page-assets{grid-template-columns:1fr}.page-assets img{height:200px}
+}
+@media(max-width:360px){.menu{grid-template-columns:1fr}}
+
+
+.aral-page[hidden]{display:none!important}
+.aral-page{display:block}
+
+/* === V7: advantages + interesting upgrades === */
+.adv-overview{padding:34px 0 12px;background:#fff}
+.adv-intro-box{background:linear-gradient(180deg,#f7fbff 0%,#eef5fb 100%);border:1px solid #dbe8f3;border-radius:18px;padding:26px 28px;box-shadow:0 10px 28px rgba(11,55,96,.05)}
+.adv-intro-box p{margin:0 0 14px;color:#385069;line-height:1.78;font-size:16px}.adv-intro-box p:last-child{margin-bottom:0}
+.adv-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.adv-chip{background:#fff;border:1px solid #cfe0ef;border-radius:999px;padding:9px 13px;font-size:13px;font-weight:650;color:#19456d}
+.adv-stack{display:grid;gap:26px}.adv-topic{display:grid;grid-template-columns:minmax(280px,.9fr) minmax(0,1.1fr);gap:26px;align-items:stretch;background:#fff;border:1px solid #dbe6f1;border-radius:20px;overflow:hidden;box-shadow:0 16px 38px rgba(14,49,84,.06)}
+.adv-topic.reverse{grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr)}
+.adv-topic.reverse .topic-media{order:2}.adv-topic.reverse .topic-copy{order:1}
+.topic-media{min-height:310px;position:relative;background:#e2ebf2}.topic-media img{width:100%;height:100%;object-fit:cover;display:block}.topic-media .visual-label{left:16px;bottom:16px}
+.topic-copy{padding:30px 30px 32px}.topic-copy h3{font-size:28px;margin-bottom:12px}.topic-copy p{font-size:16px;line-height:1.82;color:#3b536c;margin:0 0 16px}.topic-copy h4{font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:#1776c1;margin:18px 0 10px}.topic-copy ul{margin:0 0 4px 18px;padding:0;color:#3b536c}.topic-copy li{margin:0 0 10px;line-height:1.7}
+.adv-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:26px}.adv-summary .mini{background:#fff;border:1px solid #dbe6f1;border-radius:14px;padding:18px}.adv-summary strong{display:block;color:#0a4e93;font-size:13px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}.adv-summary span{display:block;font-size:14px;line-height:1.6;color:#4b6077}
+.story-intro{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(260px,.95fr);gap:24px;align-items:start;margin-bottom:34px}.story-note{background:#f8fbfe;border:1px solid #d8e6f1;border-radius:18px;padding:24px 24px 20px}.story-note p{margin:0 0 12px;font-size:16px;line-height:1.82;color:#3b536c}.story-note p:last-child{margin-bottom:0}
+.story-guides{display:grid;grid-template-columns:1fr 1fr;gap:12px}.story-guides .mini{background:#fff;border:1px solid #dbe6f1;border-radius:14px;padding:16px}.story-guides strong{display:block;font-size:13px;color:#0a4e93;text-transform:uppercase;letter-spacing:.05em;margin-bottom:9px}.story-guides span{display:block;font-size:14px;line-height:1.55;color:#55697f}
+.story-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}.story-card{background:#fff;border:1px solid #dbe6f1;border-radius:18px;overflow:hidden;box-shadow:0 12px 30px rgba(14,49,84,.055);display:grid;grid-template-columns:1fr;transition:.25s ease}.story-card.open{grid-column:1 / -1}.story-thumb{aspect-ratio:16/9;background:#dbe4ee;overflow:hidden}.story-thumb img{width:100%;height:100%;object-fit:cover;display:block}.story-body{padding:20px 22px 22px}.story-meta{font-size:12px;color:#1776c1;font-weight:780;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}.story-body h3{font-size:24px;margin-bottom:12px}.story-body p.lead{font-size:15px;line-height:1.72;color:#4b6077;margin-bottom:16px}.story-actions{display:flex;align-items:center;justify-content:space-between;gap:16px}.story-actions .hint{font-size:12px;color:#73879b}.story-toggle{border:0;background:#0d5ca7;color:#fff;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer}.story-toggle:hover{background:#084b8a}.story-details{display:none;border-top:1px solid #e1e9f1;padding:24px 22px 24px;background:#fbfdff}.story-card.open .story-details{display:block}.story-layout{display:grid;grid-template-columns:minmax(320px,.9fr) minmax(0,1.1fr);gap:24px}.story-layout .story-side-image{border-radius:16px;overflow:hidden;background:#dbe4ee;min-height:340px}.story-layout .story-side-image img{width:100%;height:100%;object-fit:cover;display:block}.story-layout .story-side-image figcaption{padding:10px 12px;font-size:12px;color:#eff6ff;background:#063b72}.story-copy h4{font-size:14px;color:#1776c1;text-transform:uppercase;letter-spacing:.05em;margin:0 0 8px}.story-copy p{font-size:15.6px;line-height:1.84;color:#3b536c;margin:0 0 14px}.story-copy ul{margin:0 0 14px 18px;padding:0;color:#3b536c}.story-copy li{margin-bottom:9px;line-height:1.7}.story-copy .article-end{background:#f2f7fc;border-left:3px solid #1d74bf;border-radius:0 12px 12px 0;padding:14px 14px 14px 16px;color:#36506b;font-size:14px;line-height:1.7}
+@media (max-width: 960px){.adv-topic,.adv-topic.reverse,.story-intro,.story-layout{grid-template-columns:1fr}.adv-topic.reverse .topic-media,.adv-topic.reverse .topic-copy{order:initial}.adv-summary,.story-guides{grid-template-columns:1fr 1fr}.topic-media{min-height:260px}.story-card.open{grid-column:auto}.story-grid{grid-template-columns:1fr}.story-details{padding:20px 18px}}
+@media (max-width: 700px){.adv-summary,.story-guides{grid-template-columns:1fr}.topic-copy{padding:24px 20px 24px}.story-body{padding:18px}.story-details{padding:18px 16px 18px}.story-actions{align-items:flex-start;flex-direction:column}.story-layout .story-side-image{min-height:220px}.adv-intro-box,.story-note{padding:20px 18px}}
+
+/* Photo inventory (draft): only the Advantages and Interesting pages. */
+.aral-page[data-route="advantages"] .photo-slot,
+.aral-page[data-route="interesting"] .photo-slot{
+  width:100%;height:100%;min-height:180px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:9px;padding:18px;text-align:center;
+  border:2px dashed #a8b7c6;border-radius:4px;color:#42556a;
+  background:repeating-linear-gradient(-45deg,#f3f6f9,#f3f6f9 16px,#eaf0f5 16px,#eaf0f5 32px);
+  position:relative;z-index:2;overflow:hidden;
+}
+.aral-page[data-route="advantages"] .photo-slot-label,
+.aral-page[data-route="interesting"] .photo-slot-label{display:block;font-size:clamp(16px,2vw,22px);font-weight:790;color:#285477;}
+.aral-page[data-route="advantages"] .photo-slot-note,
+.aral-page[data-route="interesting"] .photo-slot-note{display:block;font-size:12px;line-height:1.5;color:#536b80;max-width:90%;}
+.aral-page[data-route="advantages"] .hero-visual>.photo-slot,
+.aral-page[data-route="interesting"] .hero-visual>.photo-slot{position:absolute;inset:0;min-height:0;}
+.aral-page[data-route="advantages"] .hero-visual:before,
+.aral-page[data-route="interesting"] .hero-visual:before{display:none;}
+.aral-page[data-route="advantages"] .hero-visual .hero-caption,
+.aral-page[data-route="interesting"] .hero-visual .hero-caption{display:none;}
+.aral-page[data-route="advantages"] .topic-media .photo-slot,
+.aral-page[data-route="interesting"] .story-thumb .photo-slot{position:absolute;inset:0;min-height:0;}
+.aral-page[data-route="advantages"] .topic-media,
+.aral-page[data-route="interesting"] .story-thumb{position:relative;}
+.aral-page[data-route="advantages"] .topic-media .visual-label{display:none;}
+.aral-page[data-route="interesting"] .story-side-image .photo-slot{min-height:290px;}
+@media(max-width:700px){.aral-page[data-route="interesting"] .story-side-image .photo-slot{min-height:200px}}
+
+
+/* V8 — approved removal of two editorial HERO photographs, no other pages changed */
+.aral-page[data-route="advantages"] .hero-visual,
+.aral-page[data-route="interesting"] .hero-visual {display:none!important;}
+.aral-page[data-route="advantages"] .hero-wrap,
+.aral-page[data-route="interesting"] .hero-wrap {grid-template-columns:1fr!important;min-height:245px;}
+.aral-page[data-route="advantages"] .hero-copy,
+.aral-page[data-route="interesting"] .hero-copy {padding-block:38px;}
+.story-side-image img.selected-photo {display:block;max-width:100%;}
+
+
+/* ADV 04: only labels, vertical original-image comparison and in-page navigation. */
+.aral-page[data-route="advantages"] .adv-summary .mini {
+  display:block;text-decoration:none;color:inherit;cursor:pointer;position:relative;
+  padding-right:30px;transition:border-color .18s ease,box-shadow .18s ease,background-color .18s ease;
+}
+.aral-page[data-route="advantages"] .adv-summary .mini::after {
+  content:"↗";position:absolute;right:15px;top:16px;font-size:16px;font-weight:750;color:#267abd;
+}
+.aral-page[data-route="advantages"] .adv-summary .mini:hover {
+  border-color:#88b9dd;background:#f9fcff;box-shadow:0 6px 18px rgba(10,77,139,.08);
+}
+.aral-page[data-route="advantages"] .adv-summary .mini:focus-visible {
+  outline:3px solid #147bc5;outline-offset:3px;
+}
+.aral-page[data-route="advantages"] #adv-xmf,
+.aral-page[data-route="advantages"] .adv-topic[id] {scroll-margin-top:24px;}
+.aral-page[data-route="advantages"] .xmf-comparison {
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:19px;padding:21px 16px 35px;min-height:0;width:100%;
+}
+.aral-page[data-route="advantages"] .xmf-comparison figure {
+  width:min(100%,340px);margin:0;display:flex;flex-direction:column;gap:7px;
+}
+.aral-page[data-route="advantages"] .xmf-comparison figcaption {
+  font-size:13px;font-weight:800;letter-spacing:.025em;color:#164a78;
+  text-align:center;line-height:1.35;
+}
+.aral-page[data-route="advantages"] .xmf-comparison img {
+  display:block;width:100%;height:auto;object-fit:contain;
+  border-radius:6px;aspect-ratio:148/104;
+}
+@media(max-width:700px){
+ .aral-page[data-route="advantages"] .xmf-comparison {padding:20px 16px 30px;gap:16px;}
+ .aral-page[data-route="advantages"] .xmf-comparison figure {width:min(100%,340px);}
+}
+@media(prefers-reduced-motion:reduce){
+ .aral-page[data-route="advantages"] .adv-summary .mini {transition:none;}
+}
+
+
+/* Drivers — draft 01. Page-only component adjustments on top of the accepted ARAL V8 style. */
+.aral-page[data-route="drivers"] .hero-visual{display:none!important}
+.aral-page[data-route="drivers"] .hero-wrap{grid-template-columns:1fr!important;min-height:245px}
+.aral-page[data-route="drivers"] .hero-copy{padding-block:38px}
+.aral-page[data-route="drivers"]{overflow-x:clip}
+.aral-page[data-route="drivers"] .nav .menu a:not([href]){cursor:default}
+.aral-page[data-route="drivers"] .nav .menu a[aria-disabled="true"]{pointer-events:none}
+.aral-page[data-route="drivers"] .nav .menu a[aria-current="page"]{color:var(--blue);border-bottom:3px solid var(--blue)}
+.aral-page[data-route="drivers"] .nav .menu a{display:flex;align-items:center;min-height:84px;text-decoration:none;color:#63778d;font-size:13px;font-weight:670;border-bottom:3px solid transparent}
+.aral-page[data-route="drivers"] #main-content [id]{scroll-margin-top:34px}
+.driver-intro{padding-bottom:75px}
+.driver-lead-layout{display:grid;grid-template-columns:minmax(0,1.28fr) minmax(270px,.72fr);gap:48px;align-items:stretch}
+.driver-lead-copy{padding:6px 0 10px}.driver-lead-copy h2{max-width:850px}.driver-intro-text{max-width:735px;font-size:17px;line-height:1.85;color:#466078;margin:0 0 28px}
+.driver-hero-card{position:relative;min-height:390px;border-radius:18px;overflow:hidden;border:1px solid #cbdced;box-shadow:0 18px 40px rgba(12,61,106,.10);background:#d9e6f0}.driver-hero-card img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}.driver-hero-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,52,108,.04),rgba(7,52,108,.18))}.driver-hero-badge{position:absolute;left:18px;bottom:18px;z-index:1;background:rgba(6,52,108,.78);color:#eef6fc;border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:12px 14px 11px;max-width:280px;backdrop-filter:blur(3px)}.driver-hero-badge strong{display:block;font-size:14px;line-height:1.35;margin-bottom:4px}.driver-hero-badge span{display:block;font-size:12px;line-height:1.45;color:#c9dced}
+.driver-path-word{font-size:34px;line-height:1;font-weight:870;color:var(--navy);letter-spacing:-.07em;margin-bottom:29px;display:flex;align-items:center;gap:14px}
+.driver-path-bar{width:54px;height:4px;border-radius:99px;background:#f0c342}
+.driver-intro-rule{padding:13px 0;border-top:1px solid #cddfeb;font-size:15px;color:#405b77;font-weight:640}
+.driver-intro-rule span{font-size:12px;color:#1b75b8;margin-right:15px;font-weight:810}
+.button-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.driver-nav .mini{display:block;text-decoration:none;color:inherit;cursor:pointer;position:relative;padding-right:28px;transition:border-color .18s ease,box-shadow .18s ease}
+.driver-nav .mini:after{content:'↗';position:absolute;right:13px;top:15px;color:#0b6aae;font-size:15px}
+.driver-nav .mini:hover{border-color:#8dbce0;box-shadow:0 10px 24px rgba(7,79,151,.1)}
+.driver-nav .mini:focus-visible{outline:3px solid #4197d5;outline-offset:4px}
+.driver-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:36px}
+.driver-step{background:white;border:1px solid #dce7f0;border-radius:16px;padding:30px 27px;box-shadow:0 10px 24px rgba(14,56,95,.035)}
+.driver-step-num{font-size:32px;color:#0c69ad;font-weight:820;letter-spacing:-.05em;margin-bottom:24px}.driver-step-num span{font-size:13px;letter-spacing:0;color:#90aabd;font-weight:550}
+.driver-step h3{font-size:22px;line-height:1.28;min-height:58px}.driver-step p,.driver-term p,.driver-doc p,.driver-doc-tip p,.driver-action p,.driver-purchase p{font-size:15.5px;line-height:1.78;color:#425b73;margin:0}
+.driver-terms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:32px}
+.driver-term{padding:28px 29px 30px;border:1px solid #dce7f0;border-radius:16px;background:white;box-shadow:0 10px 26px rgba(16,62,103,.04)}
+.driver-term-key{color:#1376bd;font-weight:780;letter-spacing:.09em;font-size:12px;text-transform:uppercase;margin-bottom:18px}
+.driver-term h3{font-size:22px;line-height:1.35;margin-bottom:14px}
+.driver-maintenance-grid{display:grid;grid-template-columns:minmax(0,1.13fr) minmax(280px,.87fr);gap:25px;align-items:stretch;margin-top:33px}
+.driver-maintenance-list{border:1px solid #dce7f0;border-radius:17px;background:white;padding:2px 28px}
+.driver-maintenance-item{display:grid;grid-template-columns:43px 1fr;gap:16px;padding:24px 0 26px;border-bottom:1px solid #e1e9f1}
+.driver-maintenance-item:last-child{border-bottom:0}
+.driver-maintenance-index{font-size:13px;color:#1a7bc1;font-weight:780;margin-top:4px}
+.driver-maintenance-item h3{font-size:21px;margin-bottom:12px}.driver-maintenance-item p{font-size:15px;line-height:1.76;color:#435c74;margin:0}
+.driver-photo-slot{min-height:425px;border:1px solid #bcd5e9;border-radius:17px;background:linear-gradient(155deg,#eaf3fa,#dcebf6);display:flex;flex-direction:column;justify-content:space-between;padding:29px;position:relative;overflow:hidden}
+.driver-photo-slot:before{content:"";width:320px;height:320px;border:1px solid #c2d9ed;border-radius:50%;position:absolute;top:18%;left:27%;opacity:.65;box-shadow:0 0 0 42px rgba(255,255,255,.14),0 0 0 83px rgba(255,255,255,.1)}
+.driver-photo-lines{display:flex;align-items:center;gap:9px;position:relative}.driver-photo-lines span{height:4px;background:#8fb7d5;border-radius:8px;width:39px}.driver-photo-lines span:last-child{background:#e5c352;width:18px}
+.driver-photo-caption{z-index:1;position:relative;max-width:320px;background:#fff;border:1px solid #d0e0ed;border-radius:13px;padding:17px 19px}
+.driver-photo-caption strong{display:block;color:#174974;font-size:15px;margin-bottom:7px}.driver-photo-caption span{display:block;color:#667e94;font-size:13px;line-height:1.56}.driver-photo-slot.driver-photo-real{padding:0;min-height:425px;background:#d6e4ef;border-color:#c8d9e8;display:block}.driver-photo-slot.driver-photo-real:before{display:none}.driver-photo-real img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}.driver-photo-real .driver-photo-caption{position:absolute;left:18px;bottom:18px;right:auto;max-width:300px;background:rgba(255,255,255,.94);box-shadow:0 10px 24px rgba(8,54,95,.10)}
+.driver-doc-grid,.driver-action-grid,.driver-purchase-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:32px}
+.driver-doc{padding:31px 31px 33px;border:1px solid #dce7f0;border-radius:17px;background:#fff;min-height:260px}
+.driver-doc-code{font-size:38px;letter-spacing:-.05em;font-weight:810;color:#0c65ae;margin-bottom:21px}
+.driver-doc h3,.driver-action h3,.driver-purchase h3{font-size:24px;margin-bottom:16px}
+.driver-doc-tip{display:grid;grid-template-columns:35px 1fr;gap:17px;padding:24px 28px;margin-top:18px;background:#f1f7fc;border:1px solid #dce8f1;border-radius:14px}
+.driver-doc-tip-mark{font-weight:800;border-radius:50%;background:#deedf8;color:#0d6dad;display:flex;justify-content:center;align-items:center;width:31px;height:31px}
+.driver-doc-tip h3{font-size:18px;margin:0 0 9px}
+.driver-action,.driver-purchase{background:#fff;border:1px solid #dce7f0;border-radius:17px;padding:32px;display:flex;flex-direction:column;align-items:flex-start;gap:0;min-height:322px;box-shadow:0 11px 30px rgba(14,56,95,.035)}
+.driver-action-count,.driver-purchase-type{font-size:12px;letter-spacing:.1em;color:#0d77b9;text-transform:uppercase;font-weight:780;margin-bottom:27px}
+.driver-action p,.driver-purchase p{margin-bottom:28px}
+.driver-action-bottom,.driver-purchase .button-row{margin-top:auto}
+.driver-purchase-type{letter-spacing:.07em}
+.btn-secondary{display:inline-block;align-self:flex-start;text-decoration:none;background:#eef5fb;border:1px solid #d1e2ef;border-radius:7px;color:#0b5696;padding:12px 16px;font-weight:700;font-size:14px}
+.btn-secondary:hover{background:#deecf7}
+.ghost-btn:focus-visible,.btn-secondary:focus-visible{outline:3px solid #79bcec;outline-offset:4px}
+@media(max-width:960px){.driver-lead-layout,.driver-maintenance-grid{grid-template-columns:1fr}.driver-steps{grid-template-columns:1fr 1fr}.driver-photo-slot{min-height:250px}.aral-page[data-route="drivers"] .nav .menu a{min-height:72px}}
+@media(max-width:700px){.driver-steps,.driver-terms,.driver-doc-grid,.driver-action-grid,.driver-purchase-grid{grid-template-columns:1fr}.driver-lead-copy h2{font-size:35px}.driver-intro{padding-bottom:52px}.driver-intro-text{font-size:16px}.driver-step{padding:24px}.driver-step h3{min-height:0}.driver-step-num{margin-bottom:12px}.driver-term,.driver-doc,.driver-action,.driver-purchase{padding:25px;min-height:0}.driver-maintenance-list{padding:0 22px}.driver-maintenance-item{grid-template-columns:29px 1fr;gap:9px}.driver-doc-tip{padding:18px;grid-template-columns:24px 1fr;gap:13px}.driver-photo-slot{min-height:240px}.aral-page[data-route="drivers"] .nav .menu a{min-height:41px;font-size:12px}}
+@media(prefers-reduced-motion:reduce){.driver-nav .mini{transition:none}}
+
+/* Drivers draft 08: wide photo, exact source BMW pixels, real HTML over local gradient. */
+.aral-page[data-route="drivers"] .driver-photo-caption,
+.aral-page[data-route="drivers"] .driver-hero-badge{display:none!important}
+.aral-page[data-route="drivers"] .driver-intro{padding-bottom:75px}
+.aral-page[data-route="drivers"] .driver-lead-layout{
+  position:relative;display:flex;align-items:center;isolation:isolate;
+  width:100%;min-height:0;aspect-ratio:2.5 / 1;
+  border:none;box-shadow:none;overflow:hidden;border-radius:0;background:#c9d9e8;
+}
+.aral-page[data-route="drivers"] .driver-hero-card{
+  position:absolute;inset:0;z-index:-2;width:100%;height:100%;min-height:0;
+  margin:0;border:0;border-radius:0;box-shadow:none;background:#c9d9e8;
+}
+.aral-page[data-route="drivers"] .driver-hero-card::after{content:none;display:none}
+.aral-page[data-route="drivers"] .driver-hero-card img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:contain;
+  object-position:center;transform:none;max-width:none;display:block;
+}
+.aral-page[data-route="drivers"] .driver-lead-layout::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(90deg,rgba(248,251,255,.98) 0%,rgba(248,251,255,.94) 18%,rgba(248,251,255,.88) 30%,rgba(248,251,255,.62) 41%,rgba(248,251,255,.14) 55%,transparent 68%);
+}
+.aral-page[data-route="drivers"] .driver-lead-copy{
+  position:relative;z-index:2;flex:0 0 46%;width:46%;max-width:750px;min-width:0;
+  padding:clamp(20px,2.6vw,50px) clamp(22px,2.8vw,52px);
+  border:0;background:none;box-shadow:none;backdrop-filter:none;
+}
+.aral-page[data-route="drivers"] .driver-hero-eyebrow{
+  display:block;color:#0759ad;font-size:12px;font-weight:800;letter-spacing:.035em;margin-bottom:20px
+}
+.aral-page[data-route="drivers"] .driver-lead-copy h1{
+  max-width:100%;font-size:clamp(31px,3.3vw,56px);line-height:1.14;letter-spacing:-.045em;color:#0b356a;margin:0 0 23px;
+}
+.aral-page[data-route="drivers"] .driver-intro-text{
+  max-width:100%;font-size:clamp(12px,1.04vw,17px);line-height:1.67;color:#425f81;margin:0 0 25px;
+}
+.aral-page[data-route="drivers"] .driver-photo-real img{display:block}
+@media (min-width:768px) and (max-width:1199px){
+  .aral-page[data-route="drivers"] .driver-lead-copy{flex-basis:54%;width:54%;padding:24px 25px}
+  .aral-page[data-route="drivers"] .driver-lead-copy h1{font-size:clamp(26px,3.3vw,39px);margin-bottom:12px}
+  .aral-page[data-route="drivers"] .driver-hero-eyebrow{margin-bottom:9px;font-size:11px}
+  .aral-page[data-route="drivers"] .driver-intro-text{font-size:12px;line-height:1.45;margin-bottom:14px}
+  .aral-page[data-route="drivers"] .driver-lead-copy .btn{padding:9px 13px;min-height:38px}
+}
+@media (max-width:767px){
+  .aral-page[data-route="drivers"] .driver-lead-layout{
+    display:flex;flex-direction:column;align-items:stretch;gap:12px;
+    aspect-ratio:auto;min-height:0;background:#fff;overflow:visible;
+  }
+  .aral-page[data-route="drivers"] .driver-lead-layout::before{display:none}
+  .aral-page[data-route="drivers"] .driver-lead-copy{order:0;flex:auto;width:100%;max-width:none;padding:0}
+  .aral-page[data-route="drivers"] .driver-lead-copy h1{font-size:clamp(33px,9vw,43px);margin-bottom:18px}
+  .aral-page[data-route="drivers"] .driver-intro-text{font-size:14px;line-height:1.72;margin-bottom:20px}
+  .aral-page[data-route="drivers"] .driver-hero-card{
+    position:relative;order:1;inset:auto;z-index:0;
+    width:100%;height:auto;min-height:0;aspect-ratio:2.5 / 1;
+    border-radius:10px;overflow:hidden;
+  }
+  .aral-page[data-route="drivers"] .driver-hero-card img{
+    position:static;width:100%;height:100%;object-fit:contain;transform:none;
+  }
+}
+
+
+/* ARAL B2B page draft: reuses layout tokens, typography, navigation, spacing and buttons from approved Drivers 08. */
+.aral-page[data-route="partners"] .section{scroll-margin-top:22px}
+.part-hero{padding:74px 0 56px;overflow:hidden}
+.part-hero-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:clamp(26px,4vw,60px);align-items:center}
+.part-hero-copy h1{font-size:clamp(43px,4.4vw,65px);font-weight:730;letter-spacing:-.056em;color:var(--navy);line-height:1.08;max-width:740px;margin:0 0 22px}
+.part-hero-copy .part-overline,.part-overline{display:flex;align-items:center;gap:13px;color:#0e77c3;font-weight:770;letter-spacing:.045em;font-size:11px;margin-bottom:24px}
+.part-hero-copy .part-overline:after{content:"";width:56px;height:1px;background:#abd1e9}
+.part-lead{font-size:19px;color:#0c62a7;font-weight:650;line-height:1.5;max-width:610px;margin-bottom:14px}
+.part-copy{font-size:16px;color:#425b72;line-height:1.8;margin-bottom:26px;max-width:660px}
+.part-hero-image{margin:0;min-height:350px;aspect-ratio:1.12/1;border-radius:17px;position:relative;overflow:hidden;background:#dbe8f3;box-shadow:0 24px 50px rgba(17,64,106,.13)}
+.part-hero-image img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center center}
+.part-hero-image::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 52%,rgba(2,29,67,.52))}
+.part-hero-image figcaption{position:absolute;z-index:1;bottom:19px;left:22px;right:20px;font-size:12px;color:#fff;font-weight:650}
+.part-hero-nav{margin-top:38px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.part-hero-nav .mini{display:block;text-decoration:none;padding:20px 19px 23px;background:#f3f8fc;border:1px solid #d9e6f1;border-radius:12px;color:#20415f;min-height:129px;transition:transform .2s,border-color .2s,box-shadow .2s}
+.part-hero-nav .mini strong{display:block;color:var(--navy);font-size:16px;font-weight:740;letter-spacing:-.025em;margin-bottom:10px}
+.part-hero-nav .mini span{display:block;font-size:12.5px;line-height:1.56;color:#60758b}
+.part-hero-nav .mini:hover{transform:translateY(-3px);border-color:#6db3e4;box-shadow:0 12px 24px rgba(19,66,109,.06)}
+.part-hero-nav .mini:focus-visible{outline:3px solid #67afe5;outline-offset:3px}
+.part-section-head{margin-bottom:34px}.part-section-head h2{max-width:800px;margin:0 0 16px}.part-section-lead{font-size:17px;font-weight:610;max-width:800px;color:#56718b;line-height:1.65;margin-bottom:0}
+.part-audience-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.part-audience{padding:32px 32px 38px;border:1px solid #dce7f0;border-radius:16px;background:#fff;box-shadow:0 12px 27px rgba(19,64,100,.035);min-height:240px}
+.part-audience-number{color:#0876c2;font-weight:780;font-size:12px;letter-spacing:.07em;margin-bottom:23px}
+.part-audience h3{font-size:23px;margin-bottom:14px}
+.part-audience p{line-height:1.79;color:#51677b;font-size:15.5px;margin:0}
+.part-catalog-layout{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:45px;align-items:center}
+.part-catalog-copy h2{max-width:560px}.part-catalog-copy .part-section-lead{margin-bottom:20px}
+.part-catalog-copy .part-copy{margin-bottom:23px}
+.part-catalog-showcase{border:1px solid #d8e4ee;border-radius:17px;background:linear-gradient(153deg,#eef7fd 0%,#e3f0f9 60%,#eff7fc 100%);padding:32px;position:relative;overflow:hidden}
+.part-catalog-showcase:before{content:"";position:absolute;width:400px;height:400px;border-radius:50%;border:1px solid rgba(21,123,190,.14);right:-120px;top:-140px;box-shadow:0 0 0 58px rgba(255,255,255,.20),0 0 0 125px rgba(255,255,255,.14)}
+.part-catalog-head{position:relative;display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:27px}
+.part-catalog-head strong{color:#0f4b82;letter-spacing:.09em;font-size:12px}
+.part-catalog-head span{font-size:11px;color:#5d7b92;font-weight:700}
+.part-category-row{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 58px;gap:10px;align-items:center;padding:18px 0;border-bottom:1px solid rgba(56,124,166,.2)}
+.part-category-row:last-child{border:0}
+.part-category-row h3{font-size:19px;margin:0 0 4px}.part-category-row p{font-size:12px;margin:0;color:#68849b;line-height:1.5}
+.part-category-row .num{font-size:33px;font-weight:790;color:#0a61a9;line-height:1;text-align:right;letter-spacing:-.05em}
+.part-note{font-size:13px;line-height:1.66;color:#657e92;margin-top:22px;max-width:580px}
+.part-tools-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:25px;align-items:stretch}
+.part-tools-text{border:1px solid #dce7f0;border-radius:17px;background:white;padding:37px;display:flex;flex-direction:column}
+.part-tools-text h2{margin-bottom:16px}.part-tools-text .part-copy{margin-bottom:20px}
+.part-tools-text .part-mini-note{font-size:13px;line-height:1.7;color:#59728a;border-left:3px solid #9fc9e5;padding:6px 0 6px 15px;margin-top:auto}
+.part-tools-panel{background:linear-gradient(135deg,#06346c,#07549b);border-radius:17px;padding:36px 34px;color:#eff8ff;display:flex;flex-direction:column;justify-content:center;min-height:315px}
+.part-tools-item{display:flex;align-items:flex-start;gap:16px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.part-tools-item:last-child{border-bottom:0}
+.part-tools-index{flex:0 0 33px;font-size:12px;color:#9dc8ef;font-weight:780;padding-top:2px}
+.part-tools-item strong{font-size:18px;line-height:1.35;letter-spacing:-.02em}
+.part-process{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.part-process article{background:#fff;border:1px solid #dce7f0;border-radius:16px;padding:30px 27px 34px;min-height:312px}
+.part-process-number{font-size:38px;letter-spacing:-.05em;font-weight:780;color:#0c65ae;margin-bottom:27px;display:block}
+.part-process h3{font-size:22px;margin-bottom:16px}
+.part-process p{font-size:15px;line-height:1.76;color:#4e667d;margin:0}
+.part-contact-wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);gap:48px;align-items:center;padding:43px 47px;border:1px solid #c7dcef;border-radius:17px;background:#eef6fc}
+.part-contact-wrap h2{margin-bottom:15px}
+.part-contact-wrap .part-copy{margin-bottom:17px}
+.part-contact-links{padding:29px 31px;background:#fff;border-radius:13px;border:1px solid #d6e5f0;display:flex;flex-direction:column;gap:22px}
+.part-contact-label{display:block;color:#6f8598;font-size:12px;font-weight:700;margin-bottom:5px}
+.part-contact-links .contact-link{font-size:22px;display:inline-block}
+.part-contact-links .button-row{margin-top:4px;display:flex;gap:9px;flex-wrap:wrap}
+.part-contact-links .ghost-btn{font-size:13px}
+.part-contact-links .btn-secondary{font-size:13px}
+.part-copy strong{color:#245578}
+@media(max-width:1020px){
+.part-hero{padding-top:57px}.part-hero-layout{grid-template-columns:minmax(0,1fr) minmax(290px,.8fr);gap:25px}.part-hero-image{min-height:300px}.part-hero-copy h1{font-size:clamp(39px,4.3vw,51px)}
+.part-hero-nav{grid-template-columns:repeat(2,minmax(0,1fr))}.part-process{grid-template-columns:1fr;gap:12px}.part-process article{min-height:0}
+}
+@media(max-width:760px){
+.part-hero{padding:38px 0 32px}.part-hero-layout,.part-catalog-layout,.part-tools-grid,.part-contact-wrap{grid-template-columns:1fr}
+.part-hero-copy h1{font-size:clamp(34px,8vw,49px)}.part-hero-image{min-height:0;aspect-ratio:16/9}.part-hero-nav{margin-top:26px;gap:10px}
+.part-audience-grid{grid-template-columns:1fr;gap:13px}.part-audience{min-height:0;padding:27px}.part-section-head{margin-bottom:27px}
+.part-catalog-layout{gap:25px}.part-catalog-showcase{padding:25px}.part-tools-grid{gap:14px}.part-tools-text{padding:28px}.part-tools-panel{padding:25px;min-height:0}
+.part-contact-wrap{padding:27px;gap:25px}.part-contact-links{padding:24px}
+}
+@media(max-width:480px){
+.part-hero-nav{grid-template-columns:1fr 1fr}.part-hero-nav .mini{padding:15px;min-height:112px}.part-hero-nav .mini strong{font-size:14px}.part-hero-nav .mini span{font-size:11.5px}
+.part-lead{font-size:16.5px}.part-copy{font-size:15px}.part-contact-links .contact-link{font-size:19px}
+}
+@media(prefers-reduced-motion:reduce){.part-hero-nav .mini{transition:none}}
+
+/* Partners draft 02 — two supplied photographs, original sections unchanged */
+.part-hero-image{min-height:0;aspect-ratio:399/269;border-radius:17px;background:#dce9f2}
+.part-hero-image img{object-fit:cover;object-position:center}
+.part-hero-image::after{display:none}
+.part-hero-image figcaption{display:none}
+
+@media(max-width:760px){.part-hero-image{aspect-ratio:399/269}}
+
+/* Partner benefits: reuse typography/colors/card treatment of the existing page. */
+.aral-page[data-route="partners"] .part-hero-nav{grid-template-columns:repeat(4,minmax(0,1fr));}
+.part-benefits{background:linear-gradient(180deg,#f8fbff 0%,#f1f7fc 100%);}
+.part-benefits-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
+.part-benefit{position:relative;min-width:0;background:#fff;border:1px solid #dce7f0;border-radius:16px;padding:30px 27px 32px;box-shadow:0 12px 27px rgba(19,64,100,.035);}
+.part-benefit-accent{display:block;width:37px;height:3px;background:#0e77c3;border-radius:3px;margin-bottom:22px;}
+.part-benefit h3{margin:0 0 13px;color:#0b356c;font-size:22px;line-height:1.22;letter-spacing:-.025em;}
+.part-benefit p{font-size:15px;line-height:1.75;color:#51677b;margin:0;}
+.part-benefit-more{display:inline-block;margin-top:14px;color:#07549b;font-size:14px;font-weight:700;text-decoration:none}.part-benefit-more:hover{text-decoration:underline}.part-benefit-more:focus-visible{outline:2px solid #07549b;outline-offset:3px}
+.part-benefits-footer{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:28px;}
+.part-benefits-footer p{color:#51677b;line-height:1.65;font-size:15px;margin:0;max-width:680px;}
+.part-benefits-footer .ghost-btn{flex:none;}
+@media(max-width:1100px){.aral-page[data-route="partners"] .part-hero-nav{grid-template-columns:repeat(3,minmax(0,1fr));}.part-benefits-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:760px){.aral-page[data-route="partners"] .part-hero-nav{grid-template-columns:repeat(2,minmax(0,1fr));}.part-benefits-footer{align-items:flex-start;flex-direction:column;}.part-benefits-grid{grid-template-columns:1fr;gap:13px;}.part-benefit{padding:27px;}}
+@media(max-width:480px){.part-benefit h3{font-size:21px;}}
+
+/* Revision 11: tighter transition from geography to B2B contacts. */
+#part-geography{padding-bottom:0}
+#part-contacts{padding-top:26px}
+@media(max-width:680px){#part-geography{padding-bottom:0}#part-contacts{padding-top:20px}}
+</style></head>
+<body>
+<div class="aral-page is-active" id="view-partners" data-route="partners">
+<header class="nav"><div class="container nav-wrap"><a class="brand" href="../index.html#company" style="text-decoration:none">ARAL</a><button aria-controls="site-menu" aria-expanded="false" class="nav-toggle" type="button">☰  Меню</button><nav aria-label="Главное меню" class="menu" id="site-menu">
+<a href="../index.html#company">Компания</a><a href="products-r15.html#/catalog">Продукция</a><a href="drivers-08.html">Для водителей</a><a aria-current="page" href="#part-top">Для партнёров</a><a href="advantages-04.html">Преимущества ARAL</a><a href="../index.html#interesting">Интересное</a><a href="contacts-03.html">Контакты</a></nav></div></header>
+<main id="main-content">
+  <section class="section part-hero" id="part-top">
+    <div class="container">
+      <div class="part-hero-layout">
+        <div class="part-hero-copy">
+          <h1>ARAL для профессиональных закупок</h1>
+          <p class="part-lead">Оптовые закупки ARAL: удобные форматы отгрузки и прямое обсуждение заказа.</p>
+          <p class="part-copy">Работаем с магазинами автозапчастей, СТО, оптовыми компаниями и автопарками. Подберите подходящие позиции ARAL и фасовки, выберите удобный способ получения заказа и обсудите детали сотрудничества с нашим отделом продаж.</p>
+          <div class="button-row"><a class="ghost-btn" href="https://skladspk.ru/contacts" target="_blank" rel="noopener noreferrer">Обсудить сотрудничество <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <figure class="part-hero-image"><img src="../media/editorial/partners-0.png" width="399" height="269" alt="Промышленная площадка с синими резервуарами и фирменным знаком ARAL"></figure>
+      </div>
+      <nav class="part-hero-nav" aria-label="Разделы страницы">
+        <a class="mini" href="#part-audience"><strong>Кому подходит</strong><span>Четыре профессиональные задачи бизнеса.</span></a>
+        <a class="mini" href="#part-benefits"><strong>Преимущества</strong><span>Каталог, доставка и условия обращения.</span></a>
+        <a class="mini" href="#part-request"><strong>Сотрудничество</strong><span>Порядок заказа и связь с отделом продаж.</span></a>
+        <a class="mini" href="#part-contacts"><strong>Контакты</strong><span>Телефон, почта и отдел продаж.</span></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="section gray" id="part-audience"><div class="container">
+    <div class="part-section-head"><h2>С учётом задач вашего бизнеса</h2><p class="part-section-lead">Подготовка закупки начинается с того, кому и для каких работ нужна продукция.</p></div>
+    <div class="part-audience-grid"><article class="part-audience"><h3>Магазинам и розничным сетям</h3><p>Составьте перечень продуктов и фасовок для вашей товарной матрицы. Сохраните точные наименования и артикулы: это поможет разделить позиции для заказа и подготовить информацию для продавцов.</p></article>
+<article class="part-audience"><h3>Автосервисам и СТО</h3><p>Соотнесите закупочный перечень с требованиями автомобилей, которые обслуживает сервис. Укажите нужные фасовки и вопросы по документации, чтобы обсудить их с поставщиком до заказа.</p></article>
+<article class="part-audience"><h3>Оптовым компаниям</h3><p>Подготовьте список интересующих позиций, планируемые объёмы и регион работы. Формат закупки и дальнейшего взаимодействия согласуйте с отделом продаж.</p></article>
+<article class="part-audience"><h3>Автопаркам и коммерческому транспорту</h3><p>Разделите потребность по типам техники и её требованиям. Для обращения укажите конкретные продукты или необходимые спецификации и предполагаемые объёмы закупки.</p></article></div>
+  </div></section>
+
+
+  <section class="section part-benefits" id="part-benefits">
+  <div class="container">
+    <div class="part-section-head">
+      <h2>Продукция ARAL для вашего бизнеса</h2>
+      <p class="part-section-lead">Подтверждённый состав каталога, понятные инструменты подготовки закупки и способы обсуждения заказа.</p>
+    </div>
+    <div class="part-benefits-grid">
+      <article class="part-benefit">
+        <span class="part-benefit-accent" aria-hidden="true"></span>
+        <h3>Легковые и грузовые масла в одном каталоге</h3>
+        <p>В ассортименте проекта представлены 12 легковых моторных масел, 4 грузовых моторных масла и одна охлаждающая жидкость. Всего — 17 продуктов для формирования закупочного перечня.</p>
+      </article>
+      <article class="part-benefit">
+        <span class="part-benefit-accent" aria-hidden="true"></span>
+        <h3>Шесть вариантов объёма</h3>
+        <p>В каталоге представлены фасовки 1, 4, 5, 20, 60 и 208 литров. Доступные объёмы указаны отдельно для каждого продукта — от небольших канистр до бочек.</p>
+      </article>
+      <article class="part-benefit">
+        <span class="part-benefit-accent" aria-hidden="true"></span>
+        <h3>Точные артикулы для заказа</h3>
+        <p>Каждая из 47 товарных позиций связана с конкретным продуктом и фасовкой. Артикул позволяет однозначно указать нужную позицию в запросе поставщику.</p>
+      </article>
+      <article class="part-benefit">
+        <span class="part-benefit-accent" aria-hidden="true"></span>
+        <h3>Сравнение перед закупкой</h3>
+        <p>На сайте можно сопоставить опубликованные параметры продуктов. Это помогает проверить различия между выбранными позициями перед составлением заказа.</p>
+        <a class="part-benefit-more" href="products-r15.html#/compare" target="_blank" rel="noopener noreferrer">Открыть сравнение ↗</a>
+      </article>
+      <article class="part-benefit">
+        <span class="part-benefit-accent" aria-hidden="true"></span>
+        <h3>Доставка собственным транспортом по Москве</h3>
+        <p>СПК доставляет заказы по Москве собственными автомобилями. Условия, стоимость и сроки доставки согласовываются при оформлении заказа.</p>
+      </article>
+      <article class="part-benefit">
+        <span class="part-benefit-accent" aria-hidden="true"></span>
+        <h3>Прямой контакт с B2B-отделом СПК</h3>
+        <p>Для коммерческих обращений опубликованы отдельные контакты: <a href="tel:+74951011235">+7 (495) 101-12-35</a> и <a href="mailto:info@skladspk.ru">info@skladspk.ru</a>. Через них можно обсудить выбранные позиции, объёмы и условия поставки.</p>
+      </article>
+    </div>
+    <div class="part-benefits-footer">
+      <a class="ghost-btn" href="https://skladspk.ru/contacts" target="_blank" rel="noopener noreferrer">Обсудить сотрудничество <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+
+  <section class="section" id="part-request"><div class="container">
+    <div class="part-section-head"><h2>Как начать сотрудничество</h2><p class="part-section-lead">Три шага от выбора продукции до согласования удобного формата закупки.</p></div>
+    <div class="part-process"><article><span class="part-process-number">01</span><h3>Расскажите о задаче</h3><p>Укажите формат бизнеса и для чего нужна продукция: продажа, обслуживание автомобилей или собственный автопарк. Так проще обсудить подходящий ассортимент.</p></article>
+<article><span class="part-process-number">02</span><h3>Выберите продукцию</h3><p>Подготовьте список масел, артикулов и нужных фасовок. Если точных позиций ещё нет, обозначьте категории, объёмы и технические требования.</p></article>
+<article><span class="part-process-number">03</span><h3>Согласуйте получение</h3><p>Выберите способ получения заказа: самовывоз или отправку, в том числе масла в бочках. С менеджером уточните порядок выдачи или отгрузки и необходимые документы.</p></article></div>
+    <p class="part-note">Вариант получения заказа и его условия согласовываются индивидуально.</p>
+  </div></section>
+
+  <section class="section gray" id="part-geography"><div class="container"><div class="part-section-head"><h2>36 точек. Один центр заказа.</h2><p class="part-section-lead">Партнёры в разных районах и городах. Коммерческие обращения — в единый B2B-канал.</p></div><div id="aral-partners-geography" aria-label="Интерактивная карта торговых точек"></div></div></section>
+<section class="section gray" id="part-contacts"><div class="container">
+    <div class="part-contact-wrap">
+      <div>
+        <h2>Свяжитесь с отделом оптовых продаж</h2>
+        <p class="part-section-lead" style="margin-bottom:17px">Коммерческие вопросы по закупке направляйте через действующие каналы поставщика.</p>
+        <p class="part-copy">Для обсуждения закупки воспользуйтесь телефоном, электронной почтой или страницей контактов. Перед обращением удобно подготовить артикулы и нужные объёмы.</p>
+      </div>
+      <div class="part-contact-links">
+        <div><span class="part-contact-label">Телефон отдела продаж</span><a class="contact-link" href="tel:+74951011235">+7 (495) 101-12-35</a></div>
+        <div><span class="part-contact-label">Электронная почта</span><a class="contact-link" href="mailto:info@skladspk.ru">info@skladspk.ru</a></div>
+        <div class="button-row"><a class="ghost-btn" href="https://skladspk.ru/contacts" target="_blank" rel="noopener noreferrer">Контакты отдела продаж <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </div>
+  </div></section>
+</main>
+<footer class="foot"><div class="container foot-inner"><div class="brand">ARAL</div><small>Для партнёров</small></div></footer>
+</div>
+<script>
+(()=>{
+  const button=document.querySelector('.nav-toggle');
+  if(button)button.addEventListener('click',()=>{
+    const menu=document.getElementById('site-menu');if(!menu)return;
+    const opened=button.getAttribute('aria-expanded')!=='true';
+    button.setAttribute('aria-expanded',String(opened));menu.classList.toggle('is-open',opened);
+  });
+})();
+</script>
+
+<template id="aral-map-component"><style>
+:host{display:block;--blue:#0756a1;--navy:#06346c;--bright:#1680d4;--ice:#f2f7fc;--line:#dae5ef;--ink:#19334e;--muted:#60758b;color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif}*{box-sizing:border-box}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,[role=button]:focus-visible{outline:3px solid #42a5e8;outline-offset:4px}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit}.network{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 60px #163d6510;overflow:hidden}.bar{padding:22px 25px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:20px}.tabs{display:flex;background:#f1f6fb;border:1px solid #e6eef6;padding:5px;border-radius:9px;gap:4px}.tab{border:0;border-radius:6px;color:#60768d;background:transparent;padding:12px 16px;font-size:13px;font-weight:690;white-space:nowrap;transition:background .2s,color .2s}.tab:hover{color:var(--blue);background:#e5eff8}.tab[aria-selected=true]{color:white;background:var(--navy);box-shadow:0 3px 8px #06346c20}.tab b{font-size:10px;margin-right:9px;font-weight:500;opacity:.58}.network-total{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:9px}.network-total strong{font-size:24px;letter-spacing:-.05em;color:var(--navy);font-weight:750}.canvas-row{display:grid;grid-template-columns:minmax(0,1fr) 314px;min-height:492px}.map{position:relative;background:#ebf3fa;min-width:0;min-height:492px;overflow:hidden}.map:after{position:absolute;inset:0;content:"";box-shadow:inset 0 0 50px #dce9f450;pointer-events:none}.map svg{position:absolute;inset:0;width:100%;height:100%;display:block}.map-title{position:absolute;z-index:2;top:16px;left:17px;pointer-events:none;padding:7px 11px 9px;border-radius:6px;background:#edf5fbea}.map-title .small{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#6688a6;margin-bottom:7px}.map-title h2{font-size:21px;letter-spacing:-.035em;color:var(--navy);margin:0;font-weight:730;line-height:1.2}.map-title p{font-size:10px;color:#7590a8;margin:7px 0 0;max-width:290px}.water{fill:#e7f1f9}.land{fill:#f8fbfe;stroke:#bdcfe1;stroke-width:.85;vector-effect:non-scaling-stroke;stroke-linejoin:round}.land.russia{fill:#dbe9f6;stroke:#abc3d9}.river{fill:none;stroke:#a9cae6;stroke-width:1;opacity:.65;vector-effect:non-scaling-stroke}.grid{stroke:#c0d5e8;stroke-dasharray:2 8;opacity:.45;stroke-width:.6}.urban{fill:#b5cde1;stroke:#9bbbd5;stroke-width:.55;opacity:.68;vector-effect:non-scaling-stroke}.dot-hit{fill:transparent}.pin{cursor:pointer;outline:none}.pin .halo{fill:#1680d4;opacity:.09;transition:r .2s,opacity .2s}.pin .disc{fill:white;stroke:#0756a1;stroke-width:2;filter:drop-shadow(0 3px 5px #06346c26);vector-effect:non-scaling-stroke}.pin .num{fill:#0756a1;font-size:14px;font-weight:780;pointer-events:none;dominant-baseline:middle;text-anchor:middle}.pin.selected .disc{fill:#0756a1;stroke:white;stroke-width:2.5}.pin.selected .num{fill:white}.pin:hover .halo,.pin:focus .halo{opacity:.2}.pin:focus-visible .disc{stroke:#ffce24;stroke-width:4}.pin .label{fill:var(--navy);font-size:13px;font-weight:690;paint-order:stroke;stroke:#f4f9fe;stroke-width:5px;stroke-linejoin:round;pointer-events:none}.context-city{fill:#7597b4;font-size:18px;letter-spacing:5px;font-weight:700;paint-order:stroke;stroke:#dbe9f6;stroke-width:4}.callout-leader{fill:none;stroke:#668cae;stroke-width:1;opacity:.7;vector-effect:non-scaling-stroke;pointer-events:none}.geo-anchor{fill:#467ca9;opacity:.6;pointer-events:none}.map-note{position:absolute;bottom:20px;left:25px;right:25px;display:flex;justify-content:space-between;align-items:center;gap:10px;pointer-events:none}.map-note span{font-size:10px;line-height:1.5;color:#6e8aa4}.map-note a{color:#6e8aa4;font-size:9px;text-decoration:none;pointer-events:auto}.map-legend{display:flex;align-items:center;gap:7px}.map-legend i{width:6px;height:6px;border-radius:50%;background:var(--blue)}.side{padding:24px 23px 18px;border-left:1px solid var(--line);background:#fff;min-width:0;display:flex;flex-direction:column}.side-kicker{color:#7c92a6;font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:14px}.side-top{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:19px}.side-top h3{font-size:21px;line-height:1.15;letter-spacing:-.035em;color:var(--navy);margin:0;max-width:180px}.side-count{font-size:33px;color:var(--blue);font-weight:750;letter-spacing:-.065em;line-height:1}.places{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:21px;max-height:140px;overflow-y:auto;padding:1px 3px 3px 0}.city-choice{border:1px solid #dde8f2;color:#678099;background:white;border-radius:5px;font-size:10px;font-weight:600;padding:6px 8px}.city-choice[aria-pressed=true]{border-color:#a6c9e7;color:var(--blue);background:#edf5fc}.partners{list-style:none;margin:0;padding:0;border-top:1px solid #e6eef5}.partners li{padding:10px 0;border-bottom:1px solid #eaf0f6;display:flex;gap:9px;font-size:12px;line-height:1.45;color:#425e77}.partners li:before{content:"";display:block;flex:none;width:4px;height:4px;border-radius:50%;background:#75add8;margin-top:7px}.partners-box{max-height:234px;overflow-y:auto}.more{margin-top:10px;background:none;border:0;padding:3px 0;font-size:11px;font-weight:700;color:var(--blue);text-align:left}.side-foot{font-size:10px;line-height:1.6;color:#8a9fb1;margin:auto 0 0;padding-top:15px}.bottom{padding:17px 25px;display:flex;align-items:center;justify-content:space-between;gap:22px;border-top:1px solid var(--line);background:#fff}.view-summary{display:flex;gap:9px;align-items:center;color:#60788f;font-size:11px}.view-summary b{color:var(--navy);font-size:12px}.step-controls{display:flex;align-items:center;gap:10px}.position{font-size:10px;color:#91a6b7;letter-spacing:.1em;margin-right:5px}.nav-arrow{width:31px;height:31px;border:1px solid #d8e5f0;background:white;border-radius:50%;color:var(--blue);display:grid;place-items:center;font-size:18px}.nav-arrow:hover{background:var(--navy);color:white;border-color:var(--navy)}.next-name{color:var(--blue);font-size:11px;font-weight:690;min-width:96px}.fineprint{font-size:11px;color:#8297aa;line-height:1.65;margin:17px 0 0}.order-note{font-size:12px;color:#60758b;margin:20px 0 0;line-height:1.7}.order-note a{color:#0756a1;font-weight:700;text-underline-offset:3px}.switching{animation:arrive .3s ease-out}@keyframes arrive{from{opacity:.5;transform:translateY(3px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:900px){.canvas-row{grid-template-columns:minmax(0,1fr) 270px}.side{padding:23px 21px}.map{min-height:480px}.bar{padding:18px}.tab{padding:11px 13px}.network-total{font-size:10px}.network-total strong{font-size:22px}}
+@media(max-width:680px){.bar{display:block;padding:13px}.tabs{display:grid;grid-template-columns:.95fr 1.55fr .95fr;gap:2px;padding:4px}.tab,.tabs .tab{padding:11px 4px;font-size:11px}.tab b{display:none}.network-total{display:none}.canvas-row{display:flex;flex-direction:column;min-height:0}.map{height:390px;min-height:390px}.map svg{height:100%}.map-title h2{font-size:17px}.map-title .small{font-size:8px}.map-title p{font-size:9px;max-width:240px}.map-note{left:17px;right:17px;bottom:13px}.map-note span{font-size:8px}.map-note a{font-size:8px}.side{border-left:0;border-top:1px solid var(--line);padding:21px 20px 17px;min-height:0}.side-kicker{margin-bottom:9px;font-size:9px}.side-top{margin-bottom:14px}.side-top h3{font-size:22px;max-width:230px}.side-count{font-size:33px}.places{max-height:120px;margin-bottom:14px;gap:6px}.city-choice{font-size:10px;padding:6px 9px}.partners-box{max-height:150px}.partners li{font-size:11px;padding:8px 0}.side-foot{padding-top:11px;font-size:9px}.bottom{padding:13px 16px;gap:8px}.view-summary{font-size:9px;gap:5px}.view-summary b{font-size:10px}.step-controls{gap:6px}.next-name{display:none}.nav-arrow{width:29px;height:29px}.position{font-size:9px;margin-right:2px}.fineprint{font-size:10px;margin-top:13px}.network{border-radius:10px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* Approved additive cartographic layer: original light-blue palette retained. */
+.detail-water{fill:#a9cae6;opacity:.78}
+.detail-local-road{fill:#7597b4;opacity:.40;stroke:#7597b4;stroke-width:.4;stroke-linejoin:round}
+.detail-road-line{fill:none;stroke:#7597b4;stroke-width:1.2;opacity:.65;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round}
+.detail-highway{fill:#7597b4;opacity:.72;stroke:#7597b4;stroke-width:.65;stroke-linejoin:round}
+.detail-city{fill:#60758b;font-size:12px;font-weight:540;paint-order:stroke;stroke:#dbe9f6;stroke-width:3;stroke-linejoin:round}
+.detail-town-dot{fill:#7597b4;stroke:#dbe9f6;stroke-width:1}
+.detail-road-label{fill:#6688a6;font-size:10px;font-weight:650;paint-order:stroke;stroke:#dbe9f6;stroke-width:4}
+.detail-water-label{fill:#7597b4;font-size:12px;font-style:italic;paint-order:stroke;stroke:#dbe9f6;stroke-width:3}
+
+</style>
+<section class="network" aria-label="Мини-карта партнёрской сети"><div class="bar"><div class="tabs" role="tablist" aria-label="География партнёров"><button class="tab" role="tab" id="tab-moscow" aria-controls="map-panel" aria-selected="true" data-view="moscow"><b>01</b>Москва</button><button class="tab" role="tab" id="tab-spb" aria-controls="map-panel" aria-selected="false" tabindex="-1" data-view="spb"><b>02</b>Санкт-Петербург</button><button class="tab" role="tab" id="tab-russia" aria-controls="map-panel" aria-selected="false" tabindex="-1" data-view="russia"><b>03</b>Россия</button></div><div class="network-total"><strong>36</strong> точек в базе</div></div><div class="canvas-row" id="map-panel" role="tabpanel" aria-labelledby="tab-moscow"><div class="map"><div class="map-title"><div class="small">География сотрудничества</div><h2 id="map-heading">Москва и область</h2><p id="map-caption">21 точка в разных районах и городах</p></div><svg id="geography" viewBox="0 0 1000 650" aria-label="Обзорная карта городов и регионов"><defs><pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse"><path class="grid" d="M80 0H0V80" fill="none"/></pattern></defs><rect width="1000" height="650" class="water"/><g id="land"></g><rect width="1000" height="650" fill="url(#grid)"/><g id="markers"></g></svg><div class="map-note"><span class="map-legend"><i></i>Обзорное расположение партнёров</span><a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a></div></div><aside class="side" aria-label="Точки в выбранном городе"><div class="side-kicker">Магазины и партнёры</div><div class="side-top"><h3 id="place-title">Москва и область</h3><span class="side-count" id="place-count">21</span></div><div id="places" class="places"></div><div class="partners-box"><ul id="partners" class="partners"></ul></div><button id="more" class="more" hidden>Показать все точки</button><p class="side-foot">Выберите район или город.<br>Запрос по заказу — в СПК.</p></aside></div><div class="bottom"><div class="view-summary" aria-live="polite" id="summary"><b>Москва и область</b><span>· 21 точка</span></div><div class="step-controls"><span id="position" class="position">01 / 03</span><button class="nav-arrow" id="previous" aria-label="Предыдущий раздел">←</button><span id="next-name" class="next-name">Далее — Санкт-Петербург</span><button class="nav-arrow" id="next" aria-label="Следующий раздел">→</button></div></div></section>
+</template><script type="application/json" id="aral-map-data">{"views":{"moscow":{"tab":"Москва","title":"Москва и область","caption":"21 точка в разных районах и городах","total":21,"bounds":[36.6,54.84,38.6,56.08],"groups":[{"id":"altuf","name":"Алтуфьево","lon":37.59,"lat":55.91,"count":1,"names":["Автовсячина Алтуфьево"],"label":false,"short":"Алтуфьево","x":498.0,"y":196.1},{"id":"noginsk","name":"Ногинск","lon":38.44,"lat":55.85,"count":1,"names":["Центр АвтоМасел Ногинск"],"label":true,"short":"Ногинск","x":669.0,"y":217.7},{"id":"leningradka","name":"Ленинградка / Подрезково","lon":37.34,"lat":55.94,"count":1,"names":["Центр АвтоМасел Ленинградка"],"label":true,"short":"Ленинградка","x":447.7,"y":185.4},{"id":"kuntsevo","name":"Кунцево / Автомолл","lon":37.38,"lat":55.72,"count":5,"names":["Автовсячина Юг","Центр АвтоМасел Кунцево пав. 1/3","Автовсячина Север","Центр АвтоМасел Кунцево пав. 10/4","Центр АвтоМасел Кунцево пав. 7/1, 7/3"],"label":true,"short":"Кунцево","x":455.7,"y":264.2},{"id":"avtomaster","name":"Автомастер / Коммунарка","lon":37.47,"lat":55.6,"count":1,"names":["Центр АвтоМасел Автомастер"],"label":false,"short":"Автомастер","x":473.8,"y":307.0},{"id":"trakt","name":"ТРАКТ 32","lon":37.64,"lat":55.58,"count":2,"names":["Центр АвтоМасел ТРАКТ 32 пав. 1-7","Центр АвтоМасел ТРАКТ 32 Бочка"],"label":false,"short":"ТРАКТ 32","x":508.0,"y":314.1},{"id":"kashirka","name":"АТЦ «Москва» / Каширское шоссе","lon":37.72,"lat":55.61,"count":1,"names":["Центр АвтоМасел АТЦ «Москва»"],"label":false,"short":"АТЦ «Москва»","x":524.1,"y":303.4},{"id":"zil","name":"Автозаводская / ЗиЛ","lon":37.65,"lat":55.7,"count":2,"names":["Техцентр OSTVIN","Центр АвтоМасел ЗиЛ"],"label":false,"short":"ЗиЛ / OSTVIN","x":510.1,"y":271.3},{"id":"southport","name":"Южный порт","lon":37.69,"lat":55.7,"count":4,"names":["Центр АвтоМасел Кожуховская","Центр АвтоМасел Южный порт","Центр АвтоМасел ТД Автомобили пав. 103","Центр АвтоМасел Южнопортовая пав. 101"],"label":false,"short":"Южный порт","x":518.1,"y":271.3},{"id":"mytishchi","name":"Мытищи","lon":37.74,"lat":55.91,"count":1,"names":["Центр АвтоМасел Мытищи"],"label":true,"short":"Мытищи","x":528.2,"y":196.1},{"id":"serpukhov","name":"Серпуховский округ / Борисово","lon":37.48,"lat":54.91,"count":1,"names":["Центр АвтоМасел Серпухов"],"label":true,"short":"Серпуховский округ","x":475.9,"y":550.5},{"id":"istra","name":"Истра","lon":36.86,"lat":55.91,"count":1,"names":["Центр АвтоМасел Истра"],"label":true,"short":"Истра","x":351.1,"y":196.1}],"svg":"\u003cpath class=\"land russia\" fill-rule=\"evenodd\" d=\"M1002,-2L1002,652L-2,652L-2,-2L1002,-2Z\"/>\u003cpath class=\"urban\" fill-rule=\"evenodd\" d=\"M683.6,216.7L677.5,261.3L663.3,228.5L669.9,184L683.6,216.7Z\"/>\u003cpath class=\"urban\" fill-rule=\"evenodd\" d=\"M600.9,566.5L594.2,560.4L590.7,548.7L598.6,550.5L600.9,562L639.2,562L627.1,584L603.4,584.2L601.4,576.8L600.9,566.5Z\"/>\u003cpath class=\"urban\" fill-rule=\"evenodd\" d=\"M447.7,304.3L447.6,288.5L440.7,298.9L437.4,315.7L418.5,313.1L401.6,297.6L401.6,279.4L404.2,265.9L419.5,279.4L434.3,258L439.9,220.4L433.9,201.6L427.2,184L411.9,181.6L401.6,170.3L406.7,129.1L422.5,137.5L429.7,161.1L450.2,156.6L452.8,172.4L452.7,193.1L461.6,164.6L452.7,142.9L471.5,143.9L493.6,161.1L491.4,179.5L498.7,188.5L502.2,174.3L503.8,156.6L516.5,166.9L516.6,193.1L523.5,184.7L521.7,165.7L528.1,165.6L531.9,170.3L534.8,159.5L537,147.4L545.5,150.5L549.8,161.1L565.9,166.6L577.9,179.4L586.5,176.6L595.8,174.9L631.6,206.8L622.1,235.5L606,252.2L603.6,242.9L603.4,229.5L605.3,221.5L611.1,220.4L590.5,208.4L577.9,243.2L584,248.2L593.2,247.7L590.1,262.9L590.7,274.9L601.8,282.3L613.7,288.5L614.9,297.6L613.7,311.1L624.2,315.1L631.6,324.7L600.5,320.8L583,293L582.4,309.4L580.5,329.2L562.5,320.3L547.2,306.6L543.5,321.9L542.1,342.7L519.3,335.5L498.7,342.7L498.8,380.9L480.8,396.8L475.7,360.8L485.4,355.4L491,342.7L481.6,321.1L468,306.6L450.2,315.7L447.7,304.3ZM543.3,204.3L529.4,220.4L551.3,224.6L567.7,238.6L571.1,222L572.8,202.2L567,196.7L560,193.1L543.3,204.3Z\"/>\u003cg class=\"approved-cartographic-details\" aria-hidden=\"true\">\u003cg class=\"photo-derived\" transform=\"matrix(0.5406289 0 0 0.5249665 201.24982 73.47778)\">\u003cpath class=\"detail-water\" d=\"M594,240h2v2h-2ZM876,282h2v2h-2ZM600,360h4v2h-4ZM600,362h2v2h-2Z\"/>\u003c/g>\u003cpath class=\"detail-highway\" transform=\"matrix(0.5406289 0 0 0.5249665 201.24982 73.47778)\" d=\"M238,0h4v2h-4ZM240,2h2v2h-2ZM240,4h4v2h-4ZM242,6h2v2h-2ZM242,8h4v2h-4ZM244,10h2v2h-2ZM244,12h4v2h-4ZM246,14h2v2h-2ZM246,16h4v2h-4ZM248,18h2v2h-2ZM248,20h4v2h-4ZM250,22h4v2h-4ZM254,24h2v2h-2ZM256,26h2v2h-2ZM258,28h4v2h-4ZM260,30h6v2h-6ZM264,32h4v2h-4ZM266,34h6v2h-6ZM270,36h4v2h-4ZM272,38h4v2h-4ZM274,40h4v2h-4ZM276,42h4v2h-4Z\"/>\u003cpath class=\"detail-road-line\" d=\"M370.5,149.1L387.8,163.2L405.1,175.8L417.5,192.1L429.9,203.1L446.2,217.8\"/>\u003cpath class=\"detail-road-line\" d=\"M316.4,203.7L348.3,206.3L374.3,208.9L398.6,215.2L422.4,222.6L444.0,232.0\"/>\u003cpath class=\"detail-road-line\" d=\"M201.8,268.2L248.8,266.1L292.1,261.9L329.4,257.7L365.1,254.6L394.3,250.4L419.7,247.2L444.5,245.7\"/>\u003cpath class=\"detail-road-line\" d=\"M446.2,217.8L461.8,210.0L480.2,208.9\"/>\u003cpath class=\"detail-road-line\" d=\"M541.3,204.2L557.5,215.2L567.3,229.9L571.0,246.7L571.0,265.6L564.0,280.3L552.7,291.9L535.9,299.7L514.8,301.8L497.5,299.2L482.9,290.8\"/>\u003cpath class=\"detail-road-line\" d=\"M557.5,215.2L588.3,218.9L618.6,216.8L647.8,216.3\"/>\u003cpath class=\"detail-road-line\" d=\"M571.0,265.6L595.4,277.7L619.2,292.4L644.6,307.1\"/>\u003cpath class=\"detail-road-line\" d=\"M552.7,291.9L567.8,313.9L579.7,333.3L590.0,354.9\"/>\u003cpath class=\"detail-road-line\" d=\"M497.5,299.2L488.3,321.3L480.8,342.8L478.1,361.7\"/>\u003ccircle class=\"detail-town-dot\" cx=\"395.9\" cy=\"170.1\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"400.9\" y=\"165.1\" text-anchor=\"start\">Зеленоград\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"467.2\" cy=\"196.8\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"472.2\" y=\"191.8\" text-anchor=\"start\">Химки\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"455.3\" cy=\"182.1\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"460.3\" y=\"177.1\" text-anchor=\"start\">Долгопрудный\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"548.3\" cy=\"162.7\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"553.3\" y=\"157.7\" text-anchor=\"start\">Пушкино\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"599.2\" cy=\"179.5\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"604.2\" y=\"174.5\" text-anchor=\"start\">Фрязино\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"652.7\" cy=\"242.5\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"657.7\" y=\"237.5\" text-anchor=\"start\">Электросталь\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"624.6\" cy=\"226.2\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"629.6\" y=\"221.2\" text-anchor=\"start\">Старая Купавна\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"425.6\" cy=\"219.4\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"430.6\" y=\"214.4\" text-anchor=\"start\">Красногорск\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"372.6\" cy=\"237.3\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"377.6\" y=\"232.3\" text-anchor=\"start\">Звенигород\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"412.6\" cy=\"257.7\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"417.6\" y=\"252.7\" text-anchor=\"start\">Одинцово\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"468.9\" cy=\"327.6\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"473.9\" y=\"322.6\" text-anchor=\"start\">Троицк\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"487.8\" cy=\"372.7\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"492.8\" y=\"367.7\" text-anchor=\"start\">Подольск\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"574.3\" cy=\"352.2\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"579.3\" y=\"347.2\" text-anchor=\"start\">Домодедово\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"610.5\" cy=\"296.6\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"615.5\" y=\"291.6\" text-anchor=\"start\">Раменское\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"541.8\" cy=\"315.5\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"546.8\" y=\"310.5\" text-anchor=\"start\">Видное\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"610.5\" cy=\"411.6\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"615.5\" y=\"406.6\" text-anchor=\"start\">Бронницы\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"733.2\" cy=\"413.1\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"738.2\" y=\"408.1\" text-anchor=\"start\">Воскресенск\u003c/text>\u003ctext class=\"detail-road-label\" x=\"747.4\" y=\"205.0\" text-anchor=\"start\">М-12\u003c/text>\u003ctext class=\"detail-road-label\" x=\"822.6\" y=\"423.4\" text-anchor=\"start\">М-5\u003c/text>\u003ctext class=\"detail-road-label\" x=\"598.2\" y=\"355.6\" text-anchor=\"start\">А-105\u003c/text>\u003ctext class=\"detail-road-label\" x=\"386.3\" y=\"387.1\" text-anchor=\"start\">А-107\u003c/text>\u003c/g>","context":[{"name":"МОСКВА","lon":37.61,"lat":55.75,"x":502.0,"y":253.5}]},"spb":{"tab":"Санкт-Петербург","title":"Санкт-Петербург","caption":"4 партнёрские точки в разных частях города","total":4,"bounds":[29.55,59.6,30.95,60.22],"groups":[{"id":"north","name":"Северный","lon":30.3,"lat":60.035,"count":1,"names":["ЦентрАвтоМасел Северный"],"label":true,"short":"Северный","x":517.8,"y":267.2},{"id":"irinovsky","name":"Ириновский","lon":30.44,"lat":59.969,"count":1,"names":["Центр АвтоМасел Ириновский"],"label":true,"short":"Ириновский","x":567.6,"y":314.1},{"id":"motodart","name":"МОТОДАРТ","lon":30.33,"lat":59.91,"count":1,"names":["Магазин МОТОДАРТ"],"label":true,"short":"МОТОДАРТ","x":528.5,"y":356.0},{"id":"avtolend","name":"АВТОЛЕНД","lon":30.23,"lat":59.86,"count":1,"names":["Магазин АВТОЛЕНД"],"label":true,"short":"АВТОЛЕНД","x":492.9,"y":391.5}],"svg":"\u003cpath class=\"land russia\" fill-rule=\"evenodd\" d=\"M1002,-2L1002,652L-2,652L-2,426.4L7.9,425.5L36.5,413.6L48.7,395.2L60,362L83.4,319.8L107.7,292.2L293.5,323.6L454.7,381.9L466.9,360.1L472.5,322.6L432.4,290.2L402.8,273.3L365.6,205.9L311.9,152.7L257.8,148L187,166.5L79.9,155.4L-2,65.3L-2,-2L1002,-2Z\"/>\u003cpath class=\"river\" d=\"M782.1,326.9L771.7,340L760.3,375.7L733.3,403.4L693.9,426.2L643.1,408.9L580.9,351.1L534.7,329.6L489.2,351.6L466.9,360.1\"/>\u003cpath class=\"urban\" fill-rule=\"evenodd\" d=\"M402.8,273.3L365.6,205.9L357.3,197.7L367.2,179.9L368.6,179.2L370.1,178.9L378.4,183.4L386.5,190.8L408.7,201L428.7,195.9L410.7,277.9L402.8,273.3Z\"/>\u003cpath class=\"urban\" fill-rule=\"evenodd\" d=\"M466.9,360.1L472.5,322.6L442.7,298.6L456,262.9L479.4,266.6L501,259.3L498.9,232.3L501,214L532.7,195.9L557,228.6L573.3,277.4L605,331.6L606.8,381.7L605,421.6L626.2,439.5L650.2,421.6L646.8,454L636.6,493.4L608.6,476.5L605,430.6L577.9,421.6L565.1,459.2L555.3,502.4L548.1,494.3L550.8,466.6L541.7,439.6L515.3,438.3L496.5,421.6L480.5,439.3L460.4,448.6L460.4,484.6L455.9,511.3L443.9,508.3L433.3,502.4L436.4,404.3L433,389.5L430.6,373.2L454.6,381.8L466.9,360.1Z\"/>\u003cg class=\"approved-cartographic-details\" aria-hidden=\"true\">\u003cg class=\"photo-derived\" transform=\"matrix(0.8076142 0 0 0.9610907 0.13553 -120.71399)\">\u003cpath class=\"detail-water\" d=\"M846,0h214v4h-214ZM848,4h212v2h-212ZM850,6h210v12h-210ZM852,18h208v2h-208ZM856,20h204v6h-204ZM858,26h202v4h-202ZM862,30h198v2h-198ZM864,32h196v2h-196ZM866,34h194v6h-194ZM868,40h192v4h-192ZM870,44h190v6h-190ZM872,50h188v4h-188Z\"/>\u003c/g>\u003cpath class=\"detail-highway\" transform=\"matrix(0.8076142 0 0 0.9610907 0.13553 -120.71399)\" d=\"M502,280h2v2h-2ZM506,280h12v2h-12ZM502,282h8v2h-8ZM514,282h6v2h-6ZM498,284h20v2h-20ZM500,286h10v2h-10ZM514,286h6v2h-6ZM502,288h8v2h-8ZM512,288h8v2h-8ZM504,290h20v2h-20ZM506,292h12v2h-12ZM520,292h8v2h-8ZM526,294h8v2h-8ZM530,296h8v2h-8ZM536,298h4v2h-4ZM538,300h4v2h-4ZM540,302h2v2h-2ZM540,304h4v2h-4ZM542,306h2v2h-2ZM542,308h4v2h-4ZM544,310h2v2h-2ZM544,312h4v2h-4ZM546,314h2v2h-2Z\"/>\u003cpath class=\"detail-road-line\" d=\"M223.8,139.7L253.7,129.2L287.6,120.5L319.1,117.6L350.6,123.4L379.7,132.1L412.8,155.1\"/>\u003cpath class=\"detail-road-line\" d=\"M403.9,190.7L395.1,217.6L384.6,241.6L351.4,252.2L324.8,259.9L306.2,266.6L298.1,287.7L297.3,310.8L290.1,338.7L315.9,347.3L351.4,369.4L385.4,385.8L429.0,402.1L463.7,410.8L507.3,416.5\"/>\u003cpath class=\"detail-road-line\" d=\"M412.8,155.1L465.3,167.6L504.9,182.0L540.4,204.1L569.5,217.6L592.9,233.0L608.3,254.1\"/>\u003cpath class=\"detail-road-line\" d=\"M507.3,416.5L533.2,423.3L556.6,414.6L578.4,407.9L605.0,395.4L630.1,381.9L662.4,373.3L697.1,364.6L747.2,365.6L776.3,365.6L803.7,373.3L851.4,362.7L888.5,348.3L949.9,323.3L995.1,319.5L1058.1,308.9\"/>\u003cpath class=\"detail-road-line\" d=\"M526.7,494.4L498.4,473.2L508.1,436.7\"/>\u003cpath class=\"detail-road-line\" d=\"M638.2,336.8L661.6,359.8L688.2,388.7L674.5,414.6L654.3,446.3L608.3,474.2L565.5,496.3L526.7,494.4\"/>\u003cpath class=\"detail-road-line\" d=\"M542.9,198.4L545.3,164.7L555.0,139.7L570.3,118.6L595.3,91.7\"/>\u003ccircle class=\"detail-town-dot\" cx=\"405.6\" cy=\"188.8\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"410.6\" y=\"183.8\" text-anchor=\"start\">Сестрорецк\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"493.6\" cy=\"145.5\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"498.6\" y=\"140.5\" text-anchor=\"start\">Сертолово\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"641.4\" cy=\"245.5\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"646.4\" y=\"240.5\" text-anchor=\"start\">Всеволожск\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"330.4\" cy=\"278.1\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"335.4\" y=\"273.1\" text-anchor=\"start\">Кронштадт\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"349.0\" cy=\"366.6\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"354.0\" y=\"361.6\" text-anchor=\"start\">Петергоф\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"283.6\" cy=\"343.5\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"288.6\" y=\"338.5\" text-anchor=\"start\">Ломоносов\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"785.9\" cy=\"313.7\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"790.9\" y=\"308.7\" text-anchor=\"start\">Шлиссельбург\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"762.5\" cy=\"368.5\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"767.5\" y=\"363.5\" text-anchor=\"start\">Кировск\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"680.1\" cy=\"451.1\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"685.1\" y=\"446.1\" text-anchor=\"start\">Отрадное\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"603.4\" cy=\"477.1\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"608.4\" y=\"472.1\" text-anchor=\"start\">Колпино\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"526.7\" cy=\"508.8\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"531.7\" y=\"503.8\" text-anchor=\"start\">Пушкин\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"528.3\" cy=\"550.1\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"533.3\" y=\"545.1\" text-anchor=\"start\">Павловск\u003c/text>\u003ctext class=\"detail-road-label\" x=\"581.8\" y=\"393.3\" text-anchor=\"start\">Е105\u003c/text>\u003c/g>","context":[]},"russia":{"tab":"Россия","title":"Россия","caption":"36 точек — единый канал заказа в СПК","total":36,"bounds":[23,47.5,94,66.5],"groups":[{"id":"moscow-region","name":"Москва и область","lon":37.6,"lat":55.75,"count":21,"names":["Автовсячина Алтуфьево","Центр АвтоМасел Ногинск","Центр АвтоМасел Ленинградка","Автовсячина Юг","Центр АвтоМасел Кунцево пав. 1/3","Автовсячина Север","Центр АвтоМасел Кунцево пав. 10/4","Центр АвтоМасел Кунцево пав. 7/1, 7/3","Центр АвтоМасел Автомастер","Центр АвтоМасел ТРАКТ 32 пав. 1-7","Центр АвтоМасел ТРАКТ 32 Бочка","Центр АвтоМасел АТЦ «Москва»","Техцентр OSTVIN","Центр АвтоМасел ЗиЛ","Центр АвтоМасел Кожуховская","Центр АвтоМасел Южный порт","Центр АвтоМасел ТД Автомобили пав. 103","Центр АвтоМасел Южнопортовая пав. 101","Центр АвтоМасел Мытищи","Центр АвтоМасел Серпухов","Центр АвтоМасел Истра"],"label":true,"short":"Москва и область","x":243.5,"y":411.3},{"id":"petersburg","name":"Санкт-Петербург","lon":30.3,"lat":59.9,"count":4,"names":["Центр АвтоМасел Ириновский","ЦентрАвтоМасел Северный","Магазин АВТОЛЕНД","Магазин МОТОДАРТ"],"label":true,"short":"Санкт-Петербург","x":153.9,"y":315.5},{"id":"tikhvin","name":"Тихвин","lon":33.53,"lat":59.65,"count":1,"names":["Магазин «AUTOMASLA» — Тихвин"],"label":false,"short":"Тихвин","x":193.5,"y":321.6},{"id":"pikalevo","name":"Пикалево","lon":34.18,"lat":59.51,"count":1,"names":["Магазин «AUTOMASLA» — Пикалево"],"label":false,"short":"Пикалево","x":201.5,"y":325.0},{"id":"borovichi","name":"Боровичи","lon":33.92,"lat":58.39,"count":1,"names":["Магазин «AUTOMASLA» — Боровичи"],"label":false,"short":"Боровичи","x":198.3,"y":351.7},{"id":"pskov","name":"Псков","lon":28.33,"lat":57.82,"count":1,"names":["Магазин Pramex"],"label":false,"short":"Псков","x":129.7,"y":364.9},{"id":"ryazan","name":"Рязань","lon":39.71,"lat":54.63,"count":1,"names":["Центр АвтоМасел — Рязань"],"label":false,"short":"Рязань","x":269.4,"y":435.4},{"id":"kaluga","name":"Калуга","lon":36.26,"lat":54.51,"count":1,"names":["Центр АвтоМасел — Калуга"],"label":false,"short":"Калуга","x":227.1,"y":437.9},{"id":"orel","name":"Орёл","lon":36.06,"lat":52.97,"count":4,"names":["Протектор57 — Магазин Камаз","Протектор57 — Магазин на Комсомольской 270","Протектор57 — Магазин на Михалицына 10","Протектор57 — Магазин на Ломоносова 6Б"],"label":true,"short":"Орёл","x":224.6,"y":469.9},{"id":"barnaul","name":"Барнаул","lon":83.8,"lat":53.35,"count":1,"names":["Магазин Чемпион"],"label":true,"short":"Барнаул","x":810.5,"y":462.1}],"svg":"\u003cpath class=\"land russia\" fill-rule=\"evenodd\" d=\"M1002,-2L1002,491L995.7,487.1L992.6,493.4L989.1,495.1L987.5,499.2L985.2,500.3L984.1,502.3L982.6,509.4L984.2,512L985.1,516.1L988.2,518.2L988.4,519.1L986.9,525L984.8,528.2L983,529.5L979.7,530.1L976.9,533.4L975.1,533.6L972.3,530.7L964.1,530.3L961,528.5L959.4,529.2L957.6,528.2L954.4,530.1L949.3,529.7L947.1,527.6L943.2,528L940,524.2L938.8,517.8L924.7,516.8L923.5,515.9L922.7,513.5L920.7,513.5L920.2,514.8L918.8,515.2L915.5,511.8L913.5,515L908.7,515.1L904.3,518.4L904,519.5L899.1,520.5L894.6,524.2L887.3,526.7L886.3,528.8L882.2,530.3L882.3,533.8L879.2,535.8L877.3,535.5L875.7,537.9L874.4,538.5L873.1,537.2L872.3,538.9L869.8,538.2L864.4,538.9L863.5,542.5L861.2,544.3L859.1,544.2L854.9,545.9L853.7,545.7L852.6,543.3L849.8,542L846.3,536.8L845.2,536.8L845,535.9L846.5,534.2L845.8,532.7L839.7,538L837.2,538L836.7,537L829.8,535.6L828.1,535.8L825.2,530.5L825.1,527.3L820.4,524.6L816.9,523.9L815.1,518.5L812.3,513.5L805.1,509.3L802.7,509.4L800.9,511.2L797.7,511.2L794.5,514.5L789.6,514.8L787.6,513.7L781.9,514.2L780.9,510L777,509.8L777.7,505.4L775.7,505.4L774.6,503.7L772.9,503.4L769.4,505.6L769.1,510.2L766.6,510.9L764.9,512.3L764.7,513.9L763.7,513.5L757.3,499.5L745.2,476.6L737.6,463.8L720.7,448.2L719.9,445.5L722.8,445.6L725.1,439.4L720.9,441.6L718,442.1L710.6,446.4L707.9,446.8L707.1,449.3L705.2,450.9L703.1,452.3L700.5,452.3L695.8,456L695.2,458.9L694.5,459.3L692.8,457.4L688.5,456.5L685.8,457.4L683.7,459.7L682.5,460L681.5,457L681.7,454.7L682.9,452.6L686.3,450.1L686.7,447.8L686.1,447.3L681.4,449.6L679.4,449L676.9,446.4L673.3,445.8L672.6,446.8L672.9,448.7L671.2,449.9L670.6,449.4L670.4,446.1L668,441.8L667,442.2L665.7,444.3L664.3,444L657.5,445.3L654.6,444.2L654.1,443.2L655.3,441L655.7,436L652.3,424.8L650.2,421L647.1,421.4L645.7,423L643.4,424L634.9,419.8L628.6,419.1L625.3,420.9L623,423.1L619.1,424.1L619.6,426.4L618.5,428L614.5,428.7L612.8,430.2L594.8,434.6L591.5,434.8L591,434L588.5,435.6L585.6,435.5L582.7,437.8L581.7,441L580.9,441.5L578.9,440.3L575.5,441.3L573.2,440.6L569.9,441.4L565.6,443.7L564.1,443.5L557.6,445.1L556.1,446.4L550.7,447.2L549.1,448.4L543.4,448.6L542.1,449.8L534.8,447.6L533.5,448.2L532.4,449.4L532.1,453.8L530.4,456.5L533.7,458L536.5,457.4L537.2,458.5L535.6,459.9L533.5,460.1L532.7,462.4L533.1,463.4L538.8,464.6L543.1,467.1L544,469.2L542.6,470.4L535.6,469.4L531.3,469.8L527.9,475.9L530.6,482.7L526.6,486.4L523.6,486.9L518.8,490.8L523.6,494L524.1,496.4L530.4,498.6L530.9,499.5L535.1,500.5L537.5,502.8L537.9,504.7L535.5,511.9L530,515.1L523.6,515.4L521.9,514.9L519.1,512.1L517.9,513.1L516.1,517.3L512.6,519L512.6,517.3L511.7,516.5L504.7,515.1L500.6,509.7L498.3,507.9L491.8,507.4L489.6,510.6L488.4,511.2L487,511.3L483.8,508.5L481.7,507.9L476.9,509.5L475.3,508.8L471.1,512.2L469.9,514.7L465.5,517.3L461.5,515.7L455.4,510.3L452.6,508.9L451.5,510.2L452.7,515.8L452.6,517.1L451.6,518.2L450.6,517.2L449.9,513.4L448.4,510.8L445.3,506.9L440.9,504.2L438,500.4L435.5,499.5L433,500.1L427.2,499.7L424.3,495.8L422.9,495.2L420.3,495.9L415.4,499.7L412.2,499.8L411.3,497.5L410,496.4L405.4,494.8L399.5,502.9L393.5,506.6L389.5,507.5L387.4,512L381.1,516.9L378.8,516.7L381.5,528.2L380.5,529.8L376.5,531.7L375.2,531.2L369.3,523L366.2,520.5L365,520.7L362.9,523.2L361.9,528.4L358.8,531.3L357.5,534.2L356.4,540.5L359.2,544.5L355.2,551L354.1,555.3L354.7,558.3L359.7,561.6L360.3,563.5L360,566.8L361.3,569.7L362.5,570.6L364.8,569.5L372.5,570.5L373.2,571.2L377.9,578.2L382.9,588.1L382.8,589L382,589.3L378,588.4L377.3,589.4L377.8,591.1L386.3,595.9L386.4,596.7L384.9,596.9L384.4,598.5L379.5,600.3L380.1,603.7L377.1,603L373.1,606.5L369.1,607.8L367.5,607.4L366.6,609.2L364.5,607.5L365.3,608.9L365.2,610.8L363.9,612L363.7,614.3L359.9,622.6L358.9,621.5L358.3,623.1L355.9,625.3L355.4,628.9L359.2,630.7L362.6,634.8L364.5,644.2L365.8,639.4L366.8,638.6L365.1,644.9L364.7,652L309.7,652L306.8,650.7L304.4,650.9L302.6,649.7L298.1,650.3L292.4,649.8L289.6,647.9L286.2,647.2L280.9,644.5L279.3,644.9L274.8,643.9L272.7,646.4L257.2,631.7L250.6,629.4L246.6,624.6L244.8,625.2L242.2,624.7L238.6,619.9L231.8,617.2L231.5,616.2L235.4,614.3L232.7,612.9L233.6,612.2L234.5,611.9L238.8,614.6L244.1,612.8L244.4,610.9L243.6,610.7L243.7,609.5L246.5,605.4L247.6,601.8L248.6,601L249.4,603L250.7,600.2L254.4,600.3L249.4,594.9L247.4,594.7L245.5,590.6L248,590.9L251.2,589.4L254.6,590.1L253.8,587.4L264,583.2L264.3,582.1L263.1,579.2L261,579.1L259.8,580.9L256.6,581.4L255.2,581.3L257.8,579.3L255.5,579.7L254.4,580.9L251,582.4L250.9,580.9L251.9,579L250.9,578.2L251.9,573.9L256.3,572L258.5,568.9L268.8,568.8L270.2,567.9L271.5,562.8L272.5,561.5L271.1,560.3L271.6,559.2L270.9,555.9L268.6,555L269.3,552.2L270.4,550.9L273,550.7L269.9,548.9L269.1,547.2L271.6,546.2L274.3,542.6L273.9,536.5L270.3,536.6L266.4,533.6L264.4,533.4L262.8,531.2L259.7,531.8L256.4,529.4L253.9,529.1L251.6,527.5L250.6,528L250.2,529.6L249,530L244.8,526.4L243.3,522.9L241.3,520.6L240.3,520.4L233.2,522.9L231.5,524.4L230,523.1L227.6,523.1L225.3,520.6L222.5,520.1L219.9,521.8L218.8,521.4L216.6,518.1L217,514.5L215.5,510.1L215.7,508.7L213.5,508L212.4,505.2L208.1,505.8L205.3,504.5L201.9,504.2L202.8,503.1L200.8,495.8L204,495.1L204.2,493.8L200.7,489.8L198.4,484.4L196.1,482.5L188.9,482.6L184.7,484.4L180.1,483.3L179.2,484L178.2,487.2L176.3,488.4L174.4,488.5L171.9,487.4L169.6,483.2L170.1,478.5L169,476.7L169.4,474.2L165.7,468.9L167.6,465.3L170.7,465.2L172.9,467.1L176.5,467.4L180,465L180.5,463.7L183.4,462.4L183.2,460.1L180.5,458.1L180.3,455L177.2,453.2L171.8,452.6L172.6,448L167.5,444.5L164.8,439.1L163.4,438.3L164.4,435.5L160,432.1L160.4,429.3L162.2,426.4L162,424.6L160.2,421.5L161.3,419L161.1,414.7L159.1,414.1L155.8,410.5L153.1,409.2L149.5,409.2L143.9,412.7L142.3,410.6L142.6,407.2L139,405.4L135.4,407.1L132.6,403.8L130.5,403.9L129.6,404.7L127.5,402.7L128.2,400.1L126.9,393.8L125.8,392.6L123.8,386.9L121.3,387.1L123.6,379.2L123.6,377L120,373.9L119.7,372.1L117.7,371.6L118.3,368.4L120.1,365.4L123,363.7L121.7,362.3L119.6,355.6L119.9,350.6L118.6,343.6L119.1,341L122.7,336L124.4,330.6L127.5,328.3L125.8,325.6L126.5,324L125.9,319.8L126.4,318.4L127.3,318.3L129.8,320.6L130.9,319.6L131.2,317.6L132,316.8L134.9,317.8L137.3,317.3L139.8,313.1L146.2,314.2L151.7,316.2L152.3,314.1L149.9,312.4L146.8,308.3L138.8,308.4L135.7,304.9L133.6,303.8L131.7,299.7L133.3,300.9L133.7,297.9L132,296.3L127.9,298.9L123.2,299.8L130.7,290.8L141,280.8L164.8,249.8L169.1,238.9L168.7,237.1L164.7,230.2L155.4,222.1L150.1,215.7L152.8,213.8L156.4,207.8L156.7,206.2L156.2,201.7L151.6,198L150.7,195.8L150,192.6L151.7,190.1L151.6,187.6L151.1,186.6L147.6,185.5L145.4,180.8L145.6,178.7L147.9,176.7L148.1,175.6L147.9,173.9L145.7,173.3L145.4,172.6L146.7,170L146.9,166L148,163.1L146.7,161.5L151.4,159.8L151.3,156.7L149,147.5L146.2,141.9L143.7,134L138.8,122.8L139,120.4L140.9,116.4L149.5,102.1L150.1,98.2L142.2,85.3L134.1,81.1L131.5,71.2L135.2,59.3L134.3,58.5L131.2,58.2L130.8,57.2L139.4,52.2L140.5,50.6L142.7,43.6L150.2,40.3L152.2,36.5L152.4,31.8L157.8,35.4L160.8,35.2L161.6,31.2L160.9,26.6L163.1,27.1L168.1,29.9L169.2,29.6L170.7,28.8L172.2,25.4L173.3,24.8L174.7,25.6L174.6,20.5L179.6,23.5L181.7,25.7L186.3,27.7L187.1,28.7L187,32.1L186,33L184,32.9L176.9,30.4L175.9,31.9L178.8,34.7L179.4,37.3L182.6,36.9L185.6,37.9L187,37.6L187.3,38.5L186.3,40.6L186.8,41.2L191.8,38.5L192.6,39.1L191.1,48.7L189.5,49.9L188.8,51.5L192.4,49.4L195.4,43.2L202.1,43.1L211.7,46.3L213.7,45.9L215.1,44.4L222.1,47.3L245.1,64.4L253.7,75.6L256.5,76.8L257.1,76L258.6,76.7L267.7,85L270.8,85.5L269.8,82L270.6,82.4L277.6,92.9L284.8,96.7L286,105.4L286.9,107.2L286.9,111L288.4,112.6L289.6,112.8L288.6,122.1L287.5,124.9L279.4,136.6L274.2,141.1L264.2,146.2L256.4,148.2L247.2,147.3L243.8,146.3L239.8,143.4L235.9,142L228.4,141.1L217.9,138.2L209.4,131.6L205.2,133.4L204.2,131.5L204.9,130.3L201.1,128.7L198,128.6L194.4,126.2L193,126.8L188.9,124.3L185.2,118.8L186.2,116.7L179.7,114.6L173.5,114.4L179,117.3L180.9,119.3L180.5,122.1L185.4,128.2L189.3,129.4L189.7,134L195.1,136.8L194.3,138.5L191.5,140.2L194,140.5L200.7,143.4L204.2,146.4L207.8,151.7L209,154.3L208.9,157.2L206.9,164.9L204.3,168.3L207.6,174.9L209.2,180.2L209.5,185.6L211,186.9L209.8,188.3L210,192.5L212,195.9L216.9,198.6L219.5,197.7L225.7,203L228.3,208.3L241.6,213.6L243.9,211.3L248,209.8L249.3,207.6L249.2,205.8L247.8,199.3L245.2,197.2L241.4,197.8L238.4,196.8L231.5,187L230.3,184.3L230.4,181.6L231.9,181.7L233.5,180.2L234.7,174.8L237.9,174.2L242.6,176.7L248.5,183.3L249.8,184L253.5,184L255,185.9L261.3,188.1L267.6,192.2L270,192L271.1,188.8L273.7,186.5L275.5,186.1L278,186.9L278.4,186.2L276.4,179.9L274.7,178L270.5,169.6L269.9,166.7L270.7,162.3L277,157.7L281.4,151.3L286.2,149.6L291.1,146.5L294.8,142.4L298.5,136L300.1,134.4L303,135.5L304.9,137.4L312.6,137.6L316.5,140.5L317.8,142.6L316.4,146.5L318.8,145.4L320.1,145.9L323.3,150L323.8,146.8L323.2,143.1L328,129.7L327.3,121.4L325.6,116.3L323,114.2L320.3,113.5L319.4,111.4L324.8,87.5L324.6,79L324.1,76.6L314.7,67.2L313.9,65L314.8,64.7L322.6,69.2L335.3,68.2L340.7,69.3L345.3,71.5L355,88.3L355.1,92.3L340.8,95.3L333.6,104.3L333.1,106.4L333.6,108.4L341.2,113.6L343.6,119.8L346.4,124.1L350.2,124.4L352.6,125.7L365,121.7L366.9,120.2L368.3,110.7L370,105L369.6,100.9L379.2,97.3L381.4,97.7L381.9,96.1L379.7,91.5L380.4,90.8L382.8,92.2L385.3,91.6L394.8,85.2L406,75.8L412.1,74.1L415.5,71.6L420.2,69.5L421.8,69.7L423.7,72.2L422.5,75L424.2,76.2L425.1,75.8L428.4,73.3L429.1,71.4L427,67.7L424.4,67.2L428.6,63L442.3,54L450.8,54.1L449.4,55.1L442.3,57L442.3,57.8L444.4,59.2L441.8,66.3L443.8,69.6L443.9,73L442.7,74.7L441,74.1L439.5,75.3L436.7,76L435.7,78.6L444.4,79.9L446,78.8L450.6,77.7L453.6,81.3L455.3,80.7L456.1,75L462.2,68.5L465.3,68.3L469.9,65.8L472.7,66.7L476.9,66.8L480.5,68.6L483.1,69L496,57.7L496.8,59.6L498.2,56.8L505.1,53.8L506.8,53.7L507.5,57.4L510.7,62.8L507.5,66.9L507.4,72.7L513.6,75.8L515,75.8L516.7,74.3L517.5,71.8L516.8,67.3L517.1,63.9L520.4,64.1L524.4,63.1L526.2,61.1L529.9,54.3L528.9,48.9L526.6,50.1L520.5,33.4L521.8,31.2L525.3,29.8L529.6,24.3L530.9,24.1L540.1,27.3L550.7,28L559.7,30.4L569.8,35.3L578.9,42.7L578.5,45.4L580.2,44.6L588.8,49.3L589.7,51.2L593.1,52.6L597.2,55.7L604.3,58.2L606.2,62.3L612.2,68.2L613.3,70.4L618.5,74L621.1,77L622.8,75.9L626.8,68.6L630.6,55.6L627.9,55.4L626,56.7L623.3,55L618,45.8L617.5,39.3L616.7,37.3L612,33.6L605.1,29.7L603.9,31.1L603.1,34.7L601.9,31L602.3,24.5L603.4,18.3L605.2,18.6L607.3,14.9L606.1,10.9L607.5,-2L674.4,-2L674.3,2.2L671.4,8.9L672.2,12.6L673,26.2L673.2,37.1L672.2,51.1L674,58.2L684.7,68.3L685.2,71.4L683.7,73.1L679.7,81.4L680.1,88.3L678.8,95L677.3,97.3L673,100.8L663.8,119.2L661.6,121.3L657.9,120.7L660.2,126.9L660,129.3L657.6,129.2L652.7,133.5L650,134.4L645.8,131.8L646.6,129.8L649.6,127.4L648.9,127.1L646.6,128.9L644.6,129.3L639.6,124.3L638,125.3L631.5,124.8L629,126.1L631.2,132.6L633.9,134.7L637.5,135.5L640.9,138L645.3,139.8L657.8,139.3L660.4,140.1L664.7,142.8L666.5,142.6L669.6,140.1L670.8,133.1L684.3,123.8L687.7,119.6L691.1,106.3L699.7,95L699.3,85L698,80.2L695,73.5L696.1,65.5L697.3,62.4L704,58.6L709.7,57.3L716.1,54.7L720.4,54.6L723.8,61.5L728.4,67.6L730,71.8L730.1,89.3L729.2,94.6L736.5,101.3L739.1,101.7L750.6,100.7L749.6,99.4L746.2,99.1L734.3,95.5L733.4,90.3L735.2,81.1L739.3,78.8L735,57.2L732.8,57.1L731.1,55.3L722.7,49.9L714.8,45.8L709.4,45.2L707.7,45.7L703.2,49.9L700.2,50.8L694.7,48.9L690,49.9L688.2,49L687.5,47.1L688.9,39.4L688.2,36.4L684.8,29.3L685.1,25.9L688.1,12.5L694.3,-2L790.5,-2L791.1,4.5L792.1,-2L801,-2L799.7,4.1L796.8,11L798.9,15.1L800.2,15.7L802,14.9L801.6,8.8L806.8,6.3L808.8,3.7L809.5,-2L1002,-2Z\"/>\u003cg class=\"approved-cartographic-details\" aria-hidden=\"true\">\u003cg class=\"photo-derived\" transform=\"matrix(0.8722409 0 0 0.8789594 84.43623 207.50152)\">\u003cpath class=\"detail-water\" d=\"M138,0h3v1h-3ZM139,1h2v1h-2ZM140,2h2v1h-2ZM140,3h5v2h-5ZM140,5h6v1h-6ZM140,6h7v1h-7ZM140,7h6v1h-6ZM140,8h7v1h-7ZM140,9h8v1h-8ZM140,10h4v1h-4ZM152,10h2v1h-2ZM142,11h2v1h-2ZM149,11h6v1h-6ZM143,12h2v1h-2ZM144,13h1v1h-1ZM144,14h2v2h-2ZM145,16h1v1h-1ZM52,48h1v1h-1ZM67,48h3v1h-3ZM142,48h2v1h-2ZM156,47h1v2h-1ZM11,65h2v4h-2ZM9,69h3v3h-3ZM10,72h2v3h-2ZM11,75h1v2h-1Z\"/>\u003c/g>\u003cg class=\"photo-derived\" transform=\"matrix(0.2448129 0 0 0.2374548 91.75294 266.66278)\">\u003cpath class=\"detail-water\" d=\"M22,0h6v2h-6ZM94,0h6v2h-6ZM170,0h10v2h-10ZM206,0h4v2h-4ZM214,0h6v2h-6ZM222,0h6v2h-6ZM238,0h4v2h-4ZM282,0h14v2h-14ZM390,0h8v2h-8ZM448,0h4v2h-4ZM510,0h22v2h-22ZM176,2h6v2h-6ZM208,2h4v2h-4ZM216,2h12v2h-12ZM390,2h16v2h-16ZM474,0h28v4h-28ZM508,2h26v2h-26ZM18,2h8v4h-8ZM180,4h4v2h-4ZM390,4h22v2h-22ZM476,4h26v2h-26ZM1000,2h2v4h-2ZM14,8h10v2h-10ZM70,8h4v2h-4ZM174,8h12v2h-12ZM206,8h14v2h-14Z\"/>\u003c/g>\u003ccircle class=\"detail-town-dot\" cx=\"324.3\" cy=\"258.5\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"329.3\" y=\"253.5\" text-anchor=\"start\">Сыктывкар\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"468.2\" cy=\"349.0\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"473.2\" y=\"344.0\" text-anchor=\"start\">Пермь\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"497.0\" cy=\"374.5\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"502.0\" y=\"369.5\" text-anchor=\"start\">Екатеринбург\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"565.9\" cy=\"374.5\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"570.9\" y=\"369.5\" text-anchor=\"start\">Тюмень\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"484.8\" cy=\"408.8\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"489.8\" y=\"403.8\" text-anchor=\"start\">Челябинск\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"429.8\" cy=\"450.1\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"434.8\" y=\"445.1\" text-anchor=\"start\">Уфа\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"661.9\" cy=\"417.6\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"666.9\" y=\"412.6\" text-anchor=\"start\">Омск\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"772.6\" cy=\"416.7\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"777.6\" y=\"411.7\" text-anchor=\"start\">Новосибирск\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"902.6\" cy=\"382.4\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"907.6\" y=\"377.4\" text-anchor=\"start\">Красноярск\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"392.3\" cy=\"458.9\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"397.3\" y=\"453.9\" text-anchor=\"start\">Самара\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"324.3\" cy=\"487.9\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"329.3\" y=\"482.9\" text-anchor=\"start\">Воронеж\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"326.0\" cy=\"542.4\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"331.0\" y=\"537.4\" text-anchor=\"start\">Волгоград\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"198.5\" cy=\"269.3\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"203.5\" y=\"264.3\" text-anchor=\"start\">Петрозаводск\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"272.4\" cy=\"331.5\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"277.4\" y=\"326.5\" text-anchor=\"start\">Вологда\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"244.0\" cy=\"336.5\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"249.0\" y=\"331.5\" text-anchor=\"start\">Череповец\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"167.6\" cy=\"347.9\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"172.6\" y=\"342.9\" text-anchor=\"start\">Великий Новгород\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"223.7\" cy=\"385.9\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"228.7\" y=\"380.9\" text-anchor=\"start\">Тверь\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"269.7\" cy=\"369.2\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"274.7\" y=\"364.2\" text-anchor=\"start\">Ярославль\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"286.4\" cy=\"368.3\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"291.4\" y=\"363.3\" text-anchor=\"start\">Кострома\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"329.2\" cy=\"396.1\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"334.2\" y=\"391.1\" text-anchor=\"start\">Нижний Новгород\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"179.6\" cy=\"430.3\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"184.6\" y=\"425.3\" text-anchor=\"start\">Смоленск\u003c/text>\u003ccircle class=\"detail-town-dot\" cx=\"244.0\" cy=\"442.9\" r=\"1.8\"/>\u003ctext class=\"detail-city\" x=\"249.0\" y=\"437.9\" text-anchor=\"start\">Тула\u003c/text>\u003ctext class=\"detail-water-label\" x=\"172.6\" y=\"289.9\" text-anchor=\"start\">Ладожское оз.\u003c/text>\u003ctext class=\"detail-water-label\" x=\"220.6\" y=\"273.1\" text-anchor=\"start\">Онежское оз.\u003c/text>\u003ctext class=\"detail-water-label\" x=\"132.7\" y=\"304.6\" text-anchor=\"start\">Финский залив\u003c/text>\u003c/g>","context":[]}}}</script><script>(()=>{
+'use strict';
+const host=document.getElementById('aral-partners-geography');
+if(!host||host.shadowRoot)return;
+const root=host.attachShadow({mode:'open'});
+const tpl=document.getElementById('aral-map-component');
+root.appendChild(tpl.content.cloneNode(true));
+const DATA=JSON.parse(document.getElementById('aral-map-data').textContent);
+const ORDER=['moscow','spb','russia'];let current='moscow',selected='all',expanded=false;
+const $=id=>root.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
+function word(n){let a=n%10,b=n%100;return a===1&&b!==11?'точка':a>1&&a<5&&(b<12||b>14)?'точки':'точек'}
+function useView(key,focus=false){if(!DATA.views[key])key='moscow';current=key;selected='all';expanded=false;let v=DATA.views[key];root.querySelectorAll('.tab').forEach(b=>{let on=b.dataset.view===key;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;if(on&&focus)b.focus()});$('map-panel').setAttribute('aria-labelledby','tab-'+key);$('map-heading').textContent=v.title;$('map-caption').textContent=v.caption;$('land').innerHTML=v.svg;renderMarkers();renderSide();$('position').textContent=String(ORDER.indexOf(key)+1).padStart(2,'0')+' / 03';$('next-name').textContent='Далее — '+DATA.views[ORDER[(ORDER.indexOf(key)+1)%3]].tab;$('summary').innerHTML='<b>'+esc(v.title)+'</b><span>· '+v.total+' '+word(v.total)+'</span>';$('map-panel').classList.remove('switching');void $('map-panel').offsetWidth;$('map-panel').classList.add('switching');}
+function positions(v,mobile){let a=v.groups.map(g=>({...g,px:g.x,py:g.y}));let gap=mobile?86:69;for(let k=0;k<150;k++){for(let i=0;i<a.length;i++)for(let j=i+1;j<a.length;j++){let dx=a[j].px-a[i].px,dy=a[j].py-a[i].py,d=Math.hypot(dx,dy);if(d<gap){if(d<.2){dx=Math.cos(i*2.4+1);dy=Math.sin(i*2.4+1);d=1}let f=(gap-d)/d*.51;a[i].px-=dx*f;a[i].py-=dy*f;a[j].px+=dx*f;a[j].py+=dy*f}}for(let n of a){n.px+=(n.x-n.px)*.009;n.py+=(n.y-n.py)*.009;n.px=Math.max(65,Math.min(935,n.px));n.py=Math.max(165,Math.min(545,n.py));}}return a}
+function renderMarkers(){let v=DATA.views[current],mobile=matchMedia('(max-width:680px)').matches,f=mobile?1.5:1,a=positions(v,mobile);let marker='';marker+=v.context.map(c=>'<text x="'+c.x+'" y="'+(c.y+35)+'" class="context-city">'+esc(c.name)+'</text>').join('');marker+=a.map(g=>{let on=g.id===selected,r=(g.count>10?24:g.count>1?21:15)*f;let left=g.px>740;let label=on||g.label;let leader=Math.hypot(g.px-g.x,g.py-g.y)>8?'<path class="callout-leader" d="M'+g.x+','+g.y+' L'+g.px+','+g.py+'"/><circle class="geo-anchor" cx="'+g.x+'" cy="'+g.y+'" r="'+(mobile?5:3)+'"/>':'';return leader+'<g class="pin '+(on?'selected':'')+'" role="button" tabindex="0" aria-pressed="'+on+'" aria-label="'+esc(g.name)+', '+g.count+' '+word(g.count)+'" data-group="'+g.id+'" transform="translate('+g.px+','+g.py+')"><title>'+esc(g.name)+' — '+g.count+' '+word(g.count)+'</title><circle class="dot-hit" r="'+(mobile?61:32)+'"/><circle class="halo" r="'+(r+8)+'"/><circle class="disc" r="'+r+'"/><text class="num" style="font-size:'+(mobile?29:14)+'px" y="1">'+g.count+'</text>'+(label?'<text class="label" style="font-size:'+(mobile?27:12)+'px" text-anchor="'+(left?'end':'start')+'" x="'+(left?-(r+10):r+10)+'" y="4">'+esc(g.short||g.name)+'</text>':'')+'</g>'}).join('');$('markers').innerHTML=marker;$('markers').querySelectorAll('.pin').forEach(b=>{b.onclick=()=>choose(b.dataset.group);b.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose(b.dataset.group)}}});declutterDetails()}
+function choose(id){selected=id;expanded=false;renderMarkers();renderSide()}
+function renderSide(){let v=DATA.views[current],g=selected==='all'?{id:'all',name:v.title,count:v.total,names:v.groups.flatMap(g=>g.names)}:v.groups.find(g=>g.id===selected);$('place-title').textContent=g.name;$('place-count').textContent=g.count;$('places').innerHTML='<button class="city-choice" aria-pressed="'+(selected==='all')+'" data-group="all">Все · '+v.total+'</button>'+v.groups.map(c=>'<button class="city-choice" aria-pressed="'+(c.id===selected)+'" data-group="'+c.id+'">'+esc(c.short||c.name)+' <span>· '+c.count+'</span></button>').join('');$('places').querySelectorAll('button').forEach(b=>b.onclick=()=>choose(b.dataset.group));let show=expanded?g.names:g.names.slice(0,5);$('partners').innerHTML=show.map(n=>'<li>'+esc(n)+'</li>').join('');$('more').hidden=g.names.length<=5;$('more').textContent=expanded?'Свернуть список':'Ещё '+(g.names.length-5)+' '+word(g.names.length-5)}
+
+function declutterDetails(){
+ const labels=[...root.querySelectorAll('.detail-city,.detail-water-label,.detail-road-label')];
+ labels.forEach(t=>t.style.visibility='visible');
+ const blocked=[...root.querySelectorAll('.pin .disc,.pin .label,.map-title')].map(t=>t.getBoundingClientRect());
+ const overlaps=(a,b)=>a.left<b.right+4&&a.right>b.left-4&&a.top<b.bottom+3&&a.bottom>b.top-3;
+ for(const t of labels){const box=t.getBoundingClientRect();if(blocked.some(b=>overlaps(box,b)))t.style.visibility='hidden';else blocked.push(box)}
+}
+
+root.querySelectorAll('.tab').forEach(b=>{b.onclick=()=>useView(b.dataset.view);b.onkeydown=e=>{let i=ORDER.indexOf(current);if(['ArrowRight','ArrowLeft','Home','End'].includes(e.key)){e.preventDefault();useView(ORDER[e.key==='Home'?0:e.key==='End'?2:(i+(e.key==='ArrowRight'?1:2))%3],true)}}});$('previous').onclick=()=>useView(ORDER[(ORDER.indexOf(current)+2)%3]);$('next').onclick=()=>useView(ORDER[(ORDER.indexOf(current)+1)%3]);$('more').onclick=()=>{expanded=!expanded;renderSide()};window.addEventListener('resize',renderMarkers);
+if(typeof ResizeObserver!=='undefined'){new ResizeObserver(()=>declutterDetails()).observe(root.querySelector('.map'));}
+// No hash handling by this component: preserve host page/site routing.
+useView('moscow');
+})();
+</script>
+</body></html>

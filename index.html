@@ -1,45 +1,385 @@
-<!doctype html>
-<html lang="ru">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#053fae"><meta name="description" content="ARAL — официальный продуктовый каталог в рамках информационного проекта партнёра: моторные масла для легкового и грузового транспорта. Характеристики, сравнение и каналы покупки.">
-<title>ARAL | Масла для бизнеса и автомобиля</title>
-<link rel="stylesheet" href="./assets/style.css"><link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
-</head>
-<body>
-<a class="skip" href="#main">К содержанию</a>
-<div class="topstrip"><div class="wrap">ARAL / МОТОРНЫЕ МАСЛА <div><a href="https://skladspk.ru/" target="_blank" rel="noopener noreferrer">Оптовые поставки ↗</a></div></div></div>
-<header class="site-header">
-<div class="wrap nav">
-<a class="wordmark" href="#/" aria-label="ARAL, главная">ARAL<span></span></a>
-<nav id="menu" aria-label="Основное меню">
-<a href="#/company">Компания</a><a href="#/catalog">Продукция</a><a href="#/drivers">Для водителей</a><a href="#/partners">Для партнёров</a><a href="#/advantages">Преимущества</a><a href="#/interesting">Интересное</a><a href="#/contacts">Контакты</a>
-</nav>
-<div class="tools"><a href="#/compare" id="compare-shortcut" class="compare-icon" aria-label="Сравнение товаров">Сравнение <span id="compare-num">0</span></a><button id="menu-toggle" class="hamburger" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button></div>
+<!DOCTYPE html>
+
+<html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>ARAL — Компания | HTML V8</title>
+<meta content="ARAL — автономный HTML-прототип версии 7, семь разделов, обновлённые страницы Преимущества и Интересное." name="description"/>
+<style>
+:root{--blue:#0756a1;--navy:#06346c;--bright:#1680d4;--ice:#f2f7fc;--line:#dae5ef;--ink:#19334e;--muted:#60758b;--paper:#ffffff;--max:1180px;}
+*{box-sizing:border-box;}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit}button{font:inherit}.container{width:min(100% - 80px,var(--max));margin:auto}.nav{border-bottom:1px solid #e1e8f0;background:white}.nav-wrap{height:84px;display:flex;align-items:center;justify-content:space-between;gap:34px}.brand{font-size:31px;font-weight:880;letter-spacing:-.075em;line-height:1;color:var(--navy)}.menu{display:flex;gap:30px;align-items:center;white-space:nowrap;overflow-x:auto;scrollbar-width:none}.menu::-webkit-scrollbar{display:none}.menu span{height:84px;display:flex;align-items:center;border-bottom:3px solid transparent;font-size:13px;font-weight:670;color:#63778d}.menu .current{color:var(--blue);border-color:var(--blue)}
+.hero{background:linear-gradient(105deg,#06346c 0%,#064784 70%,#0756a1);color:#fff;overflow:hidden}.hero-wrap{display:grid;grid-template-columns:1fr 46%;align-items:center;gap:62px;min-height:360px}.kicker{color:#95c8f2;text-transform:uppercase;letter-spacing:.20em;font-size:11px;font-weight:750;margin-bottom:25px}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(62px,8vw,104px);font-weight:720;letter-spacing:-.065em;line-height:1.04;margin:0}.hero-visual{align-self:stretch;min-height:360px;position:relative;overflow:hidden}.hero-visual img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center;opacity:.93}.hero-visual:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#06447b 0%,transparent 48%);z-index:1}.hero-caption{position:absolute;z-index:2;bottom:20px;right:0;background:rgba(0,38,82,.70);padding:9px 13px;border-radius:4px 0 0 4px;font-size:11px;color:#e7f0fa}
+.section{padding:98px 0 105px}.section.gray{background:#f5f8fc}.tag{display:flex;align-items:center;gap:12px;color:#1776c1;font-size:11px;font-weight:790;letter-spacing:.04em;margin-bottom:18px}.tag:after{content:"";width:52px;height:1px;background:#9cbddb}h2{color:var(--navy);font-size:clamp(33px,4vw,53px);line-height:1.14;letter-spacing:-.047em;font-weight:730;margin-bottom:26px}h3{font-size:24px;color:var(--navy);line-height:1.27;letter-spacing:-.03em;margin-bottom:14px}.two-col{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr);gap:clamp(48px,6vw,90px);align-items:start}.copy p{font-size:16.5px;line-height:1.84;letter-spacing:-.006em;color:#385069;margin:0 0 22px}.copy p:last-child{margin-bottom:0}.visual-card{border-radius:12px;overflow:hidden;background:#dce7f0;box-shadow:0 18px 38px rgba(24,60,97,.08);position:relative}.visual-card img{display:block;width:100%;height:100%;object-fit:cover}.visual-label{position:absolute;bottom:13px;left:13px;background:rgba(4,40,77,.81);font-size:11px;color:#e7f0fa;padding:8px 10px;border-radius:5px;max-width:calc(100% - 26px)}.production-visual{height:465px;margin-top:72px}.production-visual img{object-position:center}
+.timeline{padding:90px 0 100px;background:var(--ice);border-top:1px solid #e1eaf3;border-bottom:1px solid #e1eaf3}.timeline-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:49px}.timeline-head h2{margin-bottom:0}.section-subtitle{font-size:15px;color:var(--muted);line-height:1.6;max-width:380px;margin:0 0 5px}.years{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:10px;position:relative;isolation:isolate;padding:10px 0;margin-bottom:26px}.years:before{content:"";position:absolute;left:5%;right:5%;height:3px;top:50%;transform:translateY(-50%);background:linear-gradient(90deg,#aed0ed,#1776bd,#91bddf);z-index:-1}.year-btn{cursor:pointer;border:1px solid #c4d8e9;background:#fff;border-radius:11px;color:#083b76;min-height:69px;width:100%;font-weight:760;font-size:clamp(18px,1.85vw,27px);letter-spacing:-.055em;transition:background .2s,box-shadow .2s,transform .2s,border-color .2s;box-shadow:0 4px 18px rgba(6,62,116,.06)}.year-btn:hover{transform:translateY(-4px);border-color:#3490d6;box-shadow:0 10px 22px rgba(7,61,122,.12)}.year-btn[aria-expanded="true"]{background:var(--navy);border-color:var(--navy);color:white;box-shadow:0 10px 25px rgba(7,57,109,.18)}.year-btn:focus-visible{outline:3px solid #65b4ed;outline-offset:4px}.year-panel{min-height:0}.year-detail{border:1px solid #d8e5f0;border-radius:12px;background:white;padding:26px 32px 28px;display:grid;grid-template-columns:123px 1fr;gap:30px;align-items:start;box-shadow:0 9px 28px rgba(24,60,97,.05);animation:reveal .2s ease-out}.year-detail[hidden]{display:none}.year-detail time{font-size:36px;line-height:1;color:var(--blue);font-weight:750;letter-spacing:-.055em}.year-detail h3{font-size:23px;margin-bottom:6px}.year-detail p{color:#51657a;font-size:16px;line-height:1.6;margin:0}.year-empty{text-align:center;color:var(--muted);font-size:13px;margin:0;padding:9px 0}@keyframes reveal{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+.specialists-grid{grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);align-items:center}.specialist-image{height:405px}.specialist-image img{object-position:center}.specialist-copy .copy p{margin-bottom:20px}.role-motifs{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:24px}.role-motifs div{height:5px;border-radius:4px;background:#d2e4f3}.role-motifs div:nth-child(2){background:#7fb6de}.role-motifs div:nth-child(3){background:#1675bd}
+.draft-section{padding:100px 0}.draft-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:28px}.draft-head h2{margin-bottom:0}.draft-flag{color:#687c8d;border:1px solid #d1dce6;border-radius:50px;font-size:12px;padding:9px 12px;white-space:nowrap;background:white}.draft-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.draft-card{border:1px solid var(--line);border-radius:12px;padding:32px;background:white;min-height:250px}.draft-card p{font-size:16px;line-height:1.73;color:#476077;margin-bottom:0}.draft-card .caption{font-size:12px;color:#8797a5;line-height:1.55;margin-top:19px;padding-top:16px;border-top:1px solid #e6edf3}.draft-card small{font-size:11px;text-transform:uppercase;color:#758ba0;letter-spacing:.08em;font-weight:750}
+.connect-section{background:#f5f8fc;padding:100px 0}.connect-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.connect-card{border:1px solid #dae5f0;background:white;border-radius:12px;padding:34px;display:flex;flex-direction:column;gap:15px;min-height:238px}.connect-card h3{margin:0}.connect-card p{line-height:1.65;color:#5a7084;margin:0;font-size:15px}.contact-link{font-size:20px;font-weight:700;color:var(--blue);text-decoration:none;overflow-wrap:anywhere}.contact-link:hover{text-decoration:underline}.pill{align-self:start;display:inline-block;background:#eaf2f9;color:#37698f;padding:7px 10px;border-radius:7px;font-weight:660;font-size:11px}.ghost-btn{display:inline-block;align-self:flex-start;font-weight:700;text-decoration:none;background:var(--blue);color:#fff;padding:13px 17px;border-radius:7px;font-size:14px}.ghost-btn:hover{background:var(--navy)}.hint{margin-top:24px;color:var(--muted);font-size:13px;line-height:1.7}.foot{background:var(--navy);color:#fff}.foot-inner{padding:39px 0;display:flex;justify-content:space-between;align-items:center;gap:20px}.foot .brand{color:white}.foot small{color:#b9d0e6;font-size:13px}
+@media(max-width:950px){.container{width:calc(100% - 48px)}.menu{gap:18px}.nav-wrap,.menu span{height:72px}.hero-wrap{grid-template-columns:1fr 44%;gap:20px;min-height:325px}.hero-visual{min-height:325px}.section{padding:73px 0}.two-col{gap:30px}.production-visual{height:380px}.year-btn{min-height:62px}.timeline{padding:72px 0}.year-detail{grid-template-columns:90px 1fr}.year-detail time{font-size:31px}}
+@media(max-width:680px){.container{width:calc(100% - 36px)}.nav-wrap{height:auto;display:block;padding-top:20px}.brand{font-size:28px}.menu{margin-top:18px;gap:21px}.menu span{font-size:12px;height:41px}.hero-wrap{grid-template-columns:1fr;gap:0;min-height:0}.hero-copy{padding:62px 0 44px}.hero-visual{min-height:205px;margin:0 -18px}.hero-visual img{object-position:center 45%}.hero-visual:before{background:linear-gradient(180deg,#064784 0%,transparent 35%)}.hero-caption{right:18px}h1{font-size:65px}h2{font-size:37px}.section{padding:66px 0 76px}.two-col{display:flex;flex-direction:column;gap:26px}.copy p{font-size:16px;line-height:1.78;margin-bottom:19px}.production-visual{margin-top:0;width:100%;height:290px}.timeline{padding:65px 0 75px}.timeline-head{display:block;margin-bottom:30px}.timeline-head h2{margin-bottom:12px}.section-subtitle{font-size:14px}.years{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:0;margin-bottom:22px}.years:before{display:none}.year-btn{min-height:60px;font-size:22px}.year-detail{grid-template-columns:1fr;gap:10px;padding:22px}.year-detail time{font-size:29px}.year-detail h3{font-size:21px}.year-detail p{font-size:15px}.specialists-grid{flex-direction:column-reverse}.specialist-image{width:100%;height:252px}.role-motifs{margin-top:17px}.draft-section,.connect-section{padding:69px 0}.draft-head{flex-direction:column;gap:15px}.draft-grid,.connect-grid{grid-template-columns:1fr;gap:14px}.draft-card,.connect-card{padding:25px;min-height:0}.connect-card{gap:12px}.contact-link{font-size:18px}.foot-inner{padding:31px 0}}
+@media(max-width:400px){.years{grid-template-columns:repeat(2,minmax(0,1fr))}.year-btn{min-height:56px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.year-btn,.year-detail{animation:none;transition:none}}
+
+/* ДОПОЛНЕНИЕ V5: черновое оформление разделов текста; не дизайн-система */
+.company-quality{border-top:1px solid #e7edf3;padding-top:85px;padding-bottom:90px}
+.quality-body{display:grid;grid-template-columns:.65fr 1.35fr;gap:76px;align-items:start}
+.quality-heading h2{margin-bottom:18px}.quality-side{font-size:14px;line-height:1.65;color:#67809a;padding-left:18px;border-left:3px solid #a9cdea}
+.quality-text p{font-size:16.5px;margin-bottom:19px}
+.advantage-section{background:#f4f8fc;padding:88px 0 96px;border-top:1px solid #e2ecf5}
+.editorial-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:32px}
+.editorial-head h2{margin-bottom:0;max-width:680px}.editorial-head p{font-size:15px;max-width:415px;line-height:1.68;color:#60758b;margin:0}
+.advantage-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.advantage-card{padding:30px 32px 28px;background:#fff;border:1px solid #dce7f0;border-radius:12px;box-shadow:0 8px 24px rgba(15,61,102,.04);min-width:0;display:flex;flex-direction:column}
+.advantage-number{font-size:21px;font-weight:850;letter-spacing:-.03em;color:#0c69ad;margin-bottom:20px}.advantage-number span{font-size:12px;font-weight:500;letter-spacing:0;color:#9aafc1}
+.advantage-card h3{font-size:25px;max-width:460px;margin-bottom:18px}
+.advantage-copy p{font-size:15px;line-height:1.72;color:#425b73;margin:0 0 15px}
+.advantage-copy p:last-child{margin-bottom:0}
+.item-source{border-top:1px solid #eaf0f5;margin-top:auto;padding-top:16px;margin-bottom:0;font-size:11px;line-height:1.5;color:#8095a8}
+.advantage-copy{padding-bottom:20px}
+.editorial-note{margin:20px 0 0;font-size:12px;line-height:1.6;color:#8294a6}
+.interesting-section{padding:91px 0 103px;background:#fff}
+.interesting-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.story-card{min-width:0;border:1px solid #dbe6f0;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 5px 20px rgba(13,61,105,.035)}
+.story-card summary{list-style:none;padding:28px 31px 23px;cursor:pointer;display:flex;flex-direction:column;min-height:264px;outline:none}
+.story-card summary::-webkit-details-marker{display:none}
+.story-card summary:focus-visible{outline:3px solid #73b6ec;outline-offset:-5px}
+.story-card[open]{border-color:#93bddc;box-shadow:0 13px 34px rgba(10,76,130,.11)}
+.story-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:17px}
+.story-number{font-size:13px;font-weight:800;color:#0f75be}.story-category{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#31729f;background:#eaf4fb;border-radius:22px;padding:6px 10px;font-weight:700}
+.story-title{display:block;font-size:22px;line-height:1.28;font-weight:730;color:var(--navy);letter-spacing:-.023em;margin-bottom:11px}
+.story-lead{display:block;font-size:14px;line-height:1.65;color:#5b7186;max-width:470px}
+.story-more{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:23px;font-size:13px;color:#0c6daf;font-weight:750}
+.story-arrow{font-size:25px;line-height:1;font-weight:400;transition:transform .18s ease}
+.story-card[open] .story-arrow{transform:rotate(45deg)}
+.word-opened{display:none}.story-card[open] .word-opened{display:inline}.story-card[open] .word-collapsed{display:none}
+.story-expanded{padding:0 31px 28px;border-top:1px solid #e6eef5;animation:reveal .2s ease-out}
+.story-article-copy{padding-top:23px}.story-article-copy p{font-size:14.5px;line-height:1.77;color:#435e75;margin:0 0 15px}
+.story-article-copy p:last-child{margin-bottom:0}
+.story-source{margin:21px 0 0;padding-top:14px;border-top:1px solid #e6edf5;color:#8296a9;font-size:11px;line-height:1.65}
+@media(max-width:950px){.quality-body{gap:35px;grid-template-columns:.72fr 1.28fr}.editorial-head{display:block}.editorial-head h2{margin-bottom:15px}.editorial-head p{max-width:640px}.advantage-card{padding:25px}.advantage-card h3{font-size:22px}.story-card summary{padding:24px;min-height:285px}.story-expanded{padding:0 24px 23px}}
+@media(max-width:680px){.quality-body{display:block}.quality-heading{margin-bottom:27px}.company-quality,.advantage-section,.interesting-section{padding:65px 0}.advantage-grid,.interesting-grid{grid-template-columns:1fr;gap:13px}.advantage-card{padding:23px}.advantage-card h3{font-size:22px}.advantage-copy p{font-size:15px}.story-card summary{min-height:0;padding:23px}.story-title{font-size:21px}.story-more{padding-top:22px}.story-expanded{padding:0 23px 22px}}
+@media(prefers-reduced-motion:reduce){.story-arrow,.story-expanded{animation:none;transition:none}}
+
+
+/* V6: ONLY page splitting and 7-item adaptive navigation, not approved design. */
+.nav-wrap{min-height:84px;height:auto;padding-top:12px;padding-bottom:12px;flex-wrap:wrap;gap:12px 20px}
+.menu{display:flex;flex-wrap:wrap;overflow:visible;white-space:normal;gap:6px 14px;scrollbar-width:auto}
+.menu a{color:#63778d;text-decoration:none;display:inline-flex;align-items:center;min-height:44px;padding:7px 3px;border-bottom:3px solid transparent;font-size:12px;font-weight:670;transition:color .14s}
+.menu a:hover{color:var(--blue)}
+.menu a[aria-current="page"]{color:var(--blue);border-bottom-color:var(--blue)}
+.nav-toggle{display:none;align-items:center;gap:9px;border:1px solid #c7d9e9;color:var(--navy);border-radius:8px;background:white;padding:10px 14px;font-weight:700;cursor:pointer;font-size:13px}
+.hero h1{overflow-wrap:anywhere}.page-empty{padding:95px 0 120px;min-height:410px;background:#f5f8fc}
+.page-empty-inner{max-width:780px;border-radius:12px;padding:36px 40px;background:white;border:1px solid var(--line);box-shadow:0 7px 28px rgba(24,60,97,.04)}
+.page-empty p{font-size:16px;line-height:1.78;color:#476077}
+.page-empty .text-note{font-size:13px;color:#7590a7;margin:22px 0 0}
+.page-status{display:inline-flex;border:1px solid #bfd4e6;background:#eaf3fa;border-radius:8px;padding:7px 10px;margin:0 0 18px;color:#286693;font-size:12px;font-weight:700}
+.page-assets{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:20px 0 0}
+.page-assets img{width:100%;height:245px;object-fit:cover;border-radius:12px;display:block}
+.page-assets figcaption{font-size:11px;color:#71869b;margin-top:9px}
+.page-note{padding:10px 0 26px;color:#71869b;font-size:12px}
+@media(max-width:1060px){.nav-wrap{display:block;padding-top:17px;padding-bottom:7px}.menu{margin-top:12px;gap:4px 17px}}
+@media(max-width:680px){.nav-wrap{display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between;padding-top:15px;padding-bottom:15px}
+.nav-toggle{display:inline-flex}.menu{display:none;width:100%;flex-basis:100%;margin:0;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;padding:12px 0 2px;overflow:visible}
+.menu.is-open{display:grid}.menu a{display:flex;min-height:43px;width:100%;background:#f2f7fc;padding:10px;border:1px solid #deebf4;border-radius:6px;font-size:12px}
+.menu a[aria-current="page"]{border-color:#1976bd;background:#e6f2fa}.page-empty{padding:60px 0}.page-empty-inner{padding:24px 20px}.page-assets{grid-template-columns:1fr}.page-assets img{height:200px}
+}
+@media(max-width:360px){.menu{grid-template-columns:1fr}}
+
+
+.aral-page[hidden]{display:none!important}
+.aral-page{display:block}
+
+/* === V7: advantages + interesting upgrades === */
+.adv-overview{padding:34px 0 12px;background:#fff}
+.adv-intro-box{background:linear-gradient(180deg,#f7fbff 0%,#eef5fb 100%);border:1px solid #dbe8f3;border-radius:18px;padding:26px 28px;box-shadow:0 10px 28px rgba(11,55,96,.05)}
+.adv-intro-box p{margin:0 0 14px;color:#385069;line-height:1.78;font-size:16px}.adv-intro-box p:last-child{margin-bottom:0}
+.adv-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.adv-chip{background:#fff;border:1px solid #cfe0ef;border-radius:999px;padding:9px 13px;font-size:13px;font-weight:650;color:#19456d}
+.adv-stack{display:grid;gap:26px}.adv-topic{display:grid;grid-template-columns:minmax(280px,.9fr) minmax(0,1.1fr);gap:26px;align-items:stretch;background:#fff;border:1px solid #dbe6f1;border-radius:20px;overflow:hidden;box-shadow:0 16px 38px rgba(14,49,84,.06)}
+.adv-topic.reverse{grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr)}
+.adv-topic.reverse .topic-media{order:2}.adv-topic.reverse .topic-copy{order:1}
+.topic-media{min-height:310px;position:relative;background:#e2ebf2}.topic-media img{width:100%;height:100%;object-fit:cover;display:block}.topic-media .visual-label{left:16px;bottom:16px}
+.topic-copy{padding:30px 30px 32px}.topic-copy h3{font-size:28px;margin-bottom:12px}.topic-copy p{font-size:16px;line-height:1.82;color:#3b536c;margin:0 0 16px}.topic-copy h4{font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:#1776c1;margin:18px 0 10px}.topic-copy ul{margin:0 0 4px 18px;padding:0;color:#3b536c}.topic-copy li{margin:0 0 10px;line-height:1.7}
+.adv-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:26px}.adv-summary .mini{background:#fff;border:1px solid #dbe6f1;border-radius:14px;padding:18px}.adv-summary strong{display:block;color:#0a4e93;font-size:13px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}.adv-summary span{display:block;font-size:14px;line-height:1.6;color:#4b6077}
+.story-intro{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(260px,.95fr);gap:24px;align-items:start;margin-bottom:34px}.story-note{background:#f8fbfe;border:1px solid #d8e6f1;border-radius:18px;padding:24px 24px 20px}.story-note p{margin:0 0 12px;font-size:16px;line-height:1.82;color:#3b536c}.story-note p:last-child{margin-bottom:0}
+.story-guides{display:grid;grid-template-columns:1fr 1fr;gap:12px}.story-guides .mini{background:#fff;border:1px solid #dbe6f1;border-radius:14px;padding:16px}.story-guides strong{display:block;font-size:13px;color:#0a4e93;text-transform:uppercase;letter-spacing:.05em;margin-bottom:9px}.story-guides span{display:block;font-size:14px;line-height:1.55;color:#55697f}
+.story-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}.story-card{background:#fff;border:1px solid #dbe6f1;border-radius:18px;overflow:hidden;box-shadow:0 12px 30px rgba(14,49,84,.055);display:grid;grid-template-columns:1fr;transition:.25s ease}.story-card.open{grid-column:1 / -1}.story-thumb{aspect-ratio:16/9;background:#dbe4ee;overflow:hidden}.story-thumb img{width:100%;height:100%;object-fit:cover;display:block}.story-body{padding:20px 22px 22px}.story-meta{font-size:12px;color:#1776c1;font-weight:780;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}.story-body h3{font-size:24px;margin-bottom:12px}.story-body p.lead{font-size:15px;line-height:1.72;color:#4b6077;margin-bottom:16px}.story-actions{display:flex;align-items:center;justify-content:space-between;gap:16px}.story-actions .hint{font-size:12px;color:#73879b}.story-toggle{border:0;background:#0d5ca7;color:#fff;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer}.story-toggle:hover{background:#084b8a}.story-details{display:none;border-top:1px solid #e1e9f1;padding:24px 22px 24px;background:#fbfdff}.story-card.open .story-details{display:block}.story-layout{display:grid;grid-template-columns:minmax(320px,.9fr) minmax(0,1.1fr);gap:24px}.story-layout .story-side-image{border-radius:16px;overflow:hidden;background:#dbe4ee;min-height:340px}.story-layout .story-side-image img{width:100%;height:100%;object-fit:cover;display:block}.story-layout .story-side-image figcaption{padding:10px 12px;font-size:12px;color:#eff6ff;background:#063b72}.story-copy h4{font-size:14px;color:#1776c1;text-transform:uppercase;letter-spacing:.05em;margin:0 0 8px}.story-copy p{font-size:15.6px;line-height:1.84;color:#3b536c;margin:0 0 14px}.story-copy ul{margin:0 0 14px 18px;padding:0;color:#3b536c}.story-copy li{margin-bottom:9px;line-height:1.7}.story-copy .article-end{background:#f2f7fc;border-left:3px solid #1d74bf;border-radius:0 12px 12px 0;padding:14px 14px 14px 16px;color:#36506b;font-size:14px;line-height:1.7}
+@media (max-width: 960px){.adv-topic,.adv-topic.reverse,.story-intro,.story-layout{grid-template-columns:1fr}.adv-topic.reverse .topic-media,.adv-topic.reverse .topic-copy{order:initial}.adv-summary,.story-guides{grid-template-columns:1fr 1fr}.topic-media{min-height:260px}.story-card.open{grid-column:auto}.story-grid{grid-template-columns:1fr}.story-details{padding:20px 18px}}
+@media (max-width: 700px){.adv-summary,.story-guides{grid-template-columns:1fr}.topic-copy{padding:24px 20px 24px}.story-body{padding:18px}.story-details{padding:18px 16px 18px}.story-actions{align-items:flex-start;flex-direction:column}.story-layout .story-side-image{min-height:220px}.adv-intro-box,.story-note{padding:20px 18px}}
+
+/* Photo inventory (draft): only the Advantages and Interesting pages. */
+.aral-page[data-route="advantages"] .photo-slot,
+.aral-page[data-route="interesting"] .photo-slot{
+  width:100%;height:100%;min-height:180px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:9px;padding:18px;text-align:center;
+  border:2px dashed #a8b7c6;border-radius:4px;color:#42556a;
+  background:repeating-linear-gradient(-45deg,#f3f6f9,#f3f6f9 16px,#eaf0f5 16px,#eaf0f5 32px);
+  position:relative;z-index:2;overflow:hidden;
+}
+.aral-page[data-route="advantages"] .photo-slot-label,
+.aral-page[data-route="interesting"] .photo-slot-label{display:block;font-size:clamp(16px,2vw,22px);font-weight:790;color:#285477;}
+.aral-page[data-route="advantages"] .photo-slot-note,
+.aral-page[data-route="interesting"] .photo-slot-note{display:block;font-size:12px;line-height:1.5;color:#536b80;max-width:90%;}
+.aral-page[data-route="advantages"] .hero-visual>.photo-slot,
+.aral-page[data-route="interesting"] .hero-visual>.photo-slot{position:absolute;inset:0;min-height:0;}
+.aral-page[data-route="advantages"] .hero-visual:before,
+.aral-page[data-route="interesting"] .hero-visual:before{display:none;}
+.aral-page[data-route="advantages"] .hero-visual .hero-caption,
+.aral-page[data-route="interesting"] .hero-visual .hero-caption{display:none;}
+.aral-page[data-route="advantages"] .topic-media .photo-slot,
+.aral-page[data-route="interesting"] .story-thumb .photo-slot{position:absolute;inset:0;min-height:0;}
+.aral-page[data-route="advantages"] .topic-media,
+.aral-page[data-route="interesting"] .story-thumb{position:relative;}
+.aral-page[data-route="advantages"] .topic-media .visual-label{display:none;}
+.aral-page[data-route="interesting"] .story-side-image .photo-slot{min-height:290px;}
+@media(max-width:700px){.aral-page[data-route="interesting"] .story-side-image .photo-slot{min-height:200px}}
+
+
+/* V8 — approved removal of two editorial HERO photographs, no other pages changed */
+.aral-page[data-route="advantages"] .hero-visual,
+.aral-page[data-route="interesting"] .hero-visual {display:none!important;}
+.aral-page[data-route="advantages"] .hero-wrap,
+.aral-page[data-route="interesting"] .hero-wrap {grid-template-columns:1fr!important;min-height:245px;}
+.aral-page[data-route="advantages"] .hero-copy,
+.aral-page[data-route="interesting"] .hero-copy {padding-block:38px;}
+.story-side-image img.selected-photo {display:block;max-width:100%;}
+</style></head>
+<body><div aria-label="Страница Компания" class="aral-page is-active" data-route="company" id="view-company"><header class="nav"><div class="container nav-wrap"><a class="brand" href="#company" style="text-decoration:none">ARAL</a><button aria-controls="site-menu" aria-expanded="false" class="nav-toggle" type="button">☰  Меню</button><nav aria-label="Главное меню" class="menu" id="site-menu"><a aria-current="page" href="#company">Компания</a><a href="pages/products-r15.html#/catalog">Продукция</a><a href="pages/drivers-08.html">Для водителей</a><a href="pages/partners-11.html">Для партнёров</a><a href="pages/advantages-04.html">Преимущества ARAL</a><a href="#interesting">Интересное</a><a href="pages/contacts-03.html">Контакты</a></nav></div></header><div class="hero"><div class="container hero-wrap"><div class="hero-copy"><div class="kicker">ARAL / Компания</div><h1>Компания</h1></div><div class="hero-visual"><img alt="Изображение масла ARAL при заливке в двигатель" src="media/editorial/v8-00.jpg"/><div class="hero-caption">Фото из материалов ARAL</div></div></div></div><main id="main-content"><section aria-labelledby="history" class="section"><div class="container two-col"><div><div class="tag">01</div><h2 id="history">История производства</h2><div class="copy" id="approved-production">
+<p>Бренд ARAL появился в 1924 году. Его название образовано от немецких слов Aromaten и Aliphaten. Корни компании уходят ещё глубже — к 28 ноября 1898 года, когда 13 горнодобывающих компаний в Бохуме основали Westdeutsche Benzol-Verkaufs-Vereinigung GmbH — общество по продаже бензола, получаемого при коксовании каменного угля. Бензол использовался, в частности, для производства красок и освещения.</p>
+<p>В 1990 году было представлено Aral SuperTronic — полностью синтетическое моторное масло для двигателей того времени. Это одна из важных страниц истории моторных масел бренда.</p>
+<p>Многолетняя история производства смазочных материалов связана и с предприятием в Зальцбергене, где выпускали масла для грузовых автомобилей, а также трансмиссионные, гидравлические и индустриальные масла.</p>
+<p>Одна из действующих площадок — завод Hamburg-Neuhof в Гамбурге. По данным производителя, его мощность по смазочным материалам составляет 240 000 тонн в год. Новый способ смешивания позволил сократить выбросы CO₂ на литр продукции с 56 до 27 граммов, а моторные масла, по данным производителя, получили более высокую стабильность при старении.</p>
+</div></div><figure class="visual-card production-visual" style="margin-inline:0"><img alt="Резервуары ARAL на производственной площадке" loading="eager" src="media/editorial/v8-01.png"/><figcaption class="visual-label">Фото из материалов ARAL</figcaption></figure></div></section><section aria-labelledby="timeline-head" class="timeline" id="timeline"><div class="container"><div class="tag">02</div><div class="timeline-head"><h2 id="timeline-head">Ключевые даты ARAL</h2><p class="section-subtitle">Нажмите на год, чтобы раскрыть событие. Повторное нажатие свернёт описание.</p></div><div aria-label="Годы истории ARAL" class="years" role="group">
+<button aria-controls="year-detail" aria-expanded="false" class="year-btn" data-year="1898" type="button">1898</button>
+<button aria-controls="year-detail" aria-expanded="false" class="year-btn" data-year="1924" type="button">1924</button>
+<button aria-controls="year-detail" aria-expanded="false" class="year-btn" data-year="1952" type="button">1952</button>
+<button aria-controls="year-detail" aria-expanded="false" class="year-btn" data-year="1990" type="button">1990</button>
+<button aria-controls="year-detail" aria-expanded="false" class="year-btn" data-year="1998" type="button">1998</button>
+<button aria-controls="year-detail" aria-expanded="false" class="year-btn" data-year="2006" type="button">2006</button>
+<button aria-controls="year-detail" aria-expanded="false" class="year-btn" data-year="2024" type="button">2024</button>
+<button aria-controls="year-detail" aria-expanded="false" class="year-btn" data-year="2026" type="button">2026</button>
 </div>
-</header>
-<main id="main" tabindex="-1">
-<div id="content">
-<section class="hero"><div class="wrap hero-layout">
-<div class="hero-copy">
-<div class="eyebrow"><i></i> ПРОДУКЦИЯ ARAL · КАТАЛОГ</div>
-<h1>Технологии, которые <em>двигают вперёд.</em></h1>
-<p>Моторные масла и технические жидкости ARAL для повседневных поездок и профессиональных задач. Выбирайте с опорой на подтверждённые характеристики.</p>
-<div class="action-group"><a class="btn btn-yellow" href="#/catalog">Изучить каталог <b>↗</b></a><a class="btn btn-transparent" href="#/business">Для бизнеса <b>↗</b></a></div>
-<div class="hero-stats"><div><strong>17</strong><span>продуктов</span></div><div><strong>47</strong><span>фасовок и SKU</span></div><div><strong>02</strong><span>маршрута покупки</span></div></div>
+<div aria-live="polite" class="year-panel"><p class="year-empty" id="year-empty">Выберите год для просмотра события</p><article class="year-detail" hidden="" id="year-detail"><time id="event-year"></time><div><h3 id="event-title"></h3><p id="event-copy"></p></div></article></div>
+</div></section><section aria-labelledby="specialists" class="section gray"><div class="container two-col specialists-grid"><figure class="visual-card specialist-image" style="margin:0"><img alt="Продукция ARAL в автосервисе" loading="eager" src="media/editorial/v8-02.jpg"/><figcaption class="visual-label">Продукция ARAL в автосервисе · не изображение сотрудников ARAL</figcaption></figure><div class="specialist-copy"><div class="tag">03</div><h2 id="specialists">Специалисты</h2><div class="copy"><div id="approved-specialists">
+<p>Когда речь идёт о смазочных материалах, за словом «качество» стоит много разных профессиональных задач. Одни специалисты работают с составом масла и подбором компонентов, другие изучают его поведение при нагрузках и изменении температуры.</p>
+<p>Отдельное внимание обычно уделяют вязкости, стабильности, чистоте и соответствию требованиям. Не менее важны организация производственных этапов, экологические вопросы и промышленная безопасность.</p>
+<p>Такой подход показывает, почему для создания масла необходимы знания из нескольких областей. Для бренда ARAL тема качества присутствует и в его истории.</p>
+</div></div><div aria-hidden="true" class="role-motifs"><div></div><div></div><div></div></div></div></div></section><section aria-labelledby="quality-title" class="section company-quality" id="quality"><div class="container">
+<div class="tag">04 / Утверждённый текст</div><div class="quality-body"><div class="quality-heading"><h2 id="quality-title">Качество</h2><div class="quality-side">Требования к продукции<br/>и техническая документация</div></div><div class="copy quality-text"><p>Качество моторного масла определяется не только его характеристиками, но и тем, насколько оно соответствует требованиям конкретного двигателя и условиям эксплуатации автомобиля.</p><p>Для ARAL качество — один из основных принципов работы с продукцией. В материалах бренда особое внимание уделяется технологиям разработки смазочных материалов, контролю производственных процессов, соблюдению технических стандартов и безопасности.</p><p>Важную роль играет техническая документация. Паспорта безопасности (SDS) содержат сведения о составе продукции и мерах предосторожности. Технические характеристики, спецификации и допуски помогают определить, насколько конкретное масло соответствует требованиям автомобильной техники.</p><p>Даже масла с одинаковой вязкостью могут иметь разные спецификации и назначение. Поэтому при выборе важно учитывать не только обозначения на канистре, но и рекомендации производителя автомобиля.</p><p>Для водителя это возможность подобрать подходящее масло и избежать ошибок при обслуживании. Для магазинов, автосервисов и автопарков — основа грамотного подбора ассортимента, профессиональных консультаций и обоснованного выбора продукции.</p></div></div>
+</div></section></main><footer class="foot"><div class="container foot-inner"><div class="brand">ARAL</div><small>Компания · контентный прототип V6, не финальный дизайн</small></div></footer></div><div aria-label="Страница Продукция" class="aral-page" data-route="products" hidden="" id="view-products"><header class="nav"><div class="container nav-wrap"><div class="brand">ARAL</div><button aria-controls="site-menu" aria-expanded="false" class="nav-toggle" type="button">☰  Меню</button><nav aria-label="Главное меню" class="menu" id="site-menu"><a href="#company">Компания</a><a aria-current="page" href="pages/products-r15.html#/catalog">Продукция</a><a href="pages/drivers-08.html">Для водителей</a><a href="pages/partners-11.html">Для партнёров</a><a href="pages/advantages-04.html">Преимущества ARAL</a><a href="#interesting">Интересное</a><a href="pages/contacts-03.html">Контакты</a></nav></div></header><div class="hero"><div class="container hero-wrap"><div class="hero-copy"><div class="kicker">ARAL / Продукция</div><h1>Продукция</h1></div><div class="hero-visual"><img alt="Изображение масла ARAL при заливке в двигатель" src="media/editorial/v8-03.jpg"/></div></div></div><main id="main-content"><section class="page-empty"><div class="container"><div class="page-empty-inner"><span class="page-status">Текстовая структура · рабочий черновик</span><h2>Каталог продукции ARAL</h2><p>В каталоге собраны моторные масла и технические жидкости ARAL для легковых автомобилей и коммерческого транспорта.</p><p>Искать продукт можно по категории, вязкости SAE или артикулу. В карточке товара представлены область применения, доступные фасовки и опубликованные технические характеристики. Также можно ознакомиться с доступной документацией: техническим паспортом продукта (PDS) и паспортом безопасности (SDS).</p><p>Несколько продуктов можно сравнить между собой по подтверждённым техническим характеристикам.</p></div></div></section>
+<section class="section"><div class="container"><div class="tag">01 / ассортимент</div><h2>Найдите нужную продукцию.</h2><div class="copy"><p>Начните с категории или уточните выбор по вязкости и артикулу. Точные допуски, применение и сведения о фасовке указаны в карточках товаров.</p></div><div class="adv-summary"><div class="mini"><strong>Все товары</strong><span>Полный перечень продукции ARAL, представленной в текущем каталоге.</span></div><div class="mini"><strong>Для легковых</strong><span>Моторные масла для легковых автомобилей.</span></div><div class="mini"><strong>Грузовые масла</strong><span>Моторные масла для коммерческого транспорта.</span></div><div class="mini"><strong>Охлаждение</strong><span>Охлаждающие жидкости из доступной номенклатуры.</span></div></div><div class="copy"><p>Поиск: название продукта, SAE или артикул. Параметры выбора: категория, вязкость SAE и фасовка. Варианты сортировки: порядок каталога, название, вязкость и количество фасовок.</p><p class="text-note">В этом черновике здесь представлена текстовая структура каталога. Новые фильтры, поиск и сортировка не подключались.</p></div></div></section>
+<section class="section gray"><div class="container"><div class="tag">02 / товары</div><h2>Продукция в каталоге</h2><div class="copy"><p>В текущем наборе представлены 17 продуктов и 47 вариантов фасовок (SKU). Ниже сохранены наименования, категории, вязкость, фасовки и артикулы из рабочего товарного списка. Сведения о допусках и свойствах приведены в подробных карточках конкретных продуктов.</p></div><div class="adv-summary"><div class="mini"><strong>Aral BlueTronic II 10W-40</strong><span>Для легковых автомобилей · SAE 10W-40</span><span>Фасовки: 208 L, 1 L, 4 L, 5 L</span><span>Артикулы: 15F073, 15F076, 15F078, 15F471</span></div><div class="mini"><strong>Aral EcoTronic F 5W-20</strong><span>Для легковых автомобилей · SAE 5W-20</span><span>Фасовки: 4 L</span><span>Артикулы: 25094</span></div><div class="mini"><strong>Aral HighTronic 5W-40</strong><span>Для легковых автомобилей · SAE 5W-40</span><span>Фасовки: 1 L, 208 L, 4 L, 5 L</span><span>Артикулы: 20637, 20632, 20634, 20635</span></div><div class="mini"><strong>Aral HighTronic F 5W-30</strong><span>Для легковых автомобилей · SAE 5W-30</span><span>Фасовки: 1 L, 208 L, 4 L</span><span>Артикулы: 10332, 10333, 10334</span></div><div class="mini"><strong>Aral HighTronic J 5W-30</strong><span>Для легковых автомобилей · SAE 5W-30</span><span>Фасовки: 1 L, 208 L, 4 L, 60 L</span><span>Артикулы: 20198, 20190, 20194, 20191</span></div><div class="mini"><strong>Aral HighTronic M 5W-40</strong><span>Для легковых автомобилей · SAE 5W-40</span><span>Фасовки: 1 L, 208 L, 4 L</span><span>Артикулы: 21407, 156EC2, 21404</span></div><div class="mini"><strong>Aral HighTronic R 5W-30</strong><span>Для легковых автомобилей · SAE 5W-30</span><span>Фасовки: 1 L, 4 L</span><span>Артикулы: 16008, 16004</span></div><div class="mini"><strong>Aral SuperTronic E 0W-30</strong><span>Для легковых автомобилей · SAE 0W-30</span><span>Фасовки: 1 L, 208 L, 4 L</span><span>Артикулы: 10508, 10502, 10504</span></div><div class="mini"><strong>Aral SuperTronic G 0W-40</strong><span>Для легковых автомобилей · SAE 0W-40</span><span>Фасовки: 1 L, 4 L</span><span>Артикулы: 15A8A, 15A8AD</span></div><div class="mini"><strong>Aral SuperTronic K 5W-30</strong><span>Для легковых автомобилей · SAE 5W-30</span><span>Фасовки: 1 L, 20 L, 4 L, 5 L</span><span>Артикулы: 15DBCC, 15DBC5, 15DBCE, 15F477</span></div><div class="mini"><strong>Aral SuperTronic Longlife III 0W-30</strong><span>Для легковых автомобилей · SAE 0W-30</span><span>Фасовки: 1 L, 5 L</span><span>Артикулы: 15F474, 160EC7</span></div><div class="mini"><strong>Aral SuperTronic Longlife IV FE 0W-20</strong><span>Для легковых автомобилей · SAE 0W-20</span><span>Фасовки: 1 L, 5 L</span><span>Артикулы: 15F45F, 15F460</span></div><div class="mini"><strong>Aral MegaTurboral 10W-40</strong><span>Для коммерческого транспорта · SAE 10W-40</span><span>Фасовки: 208 L, 20 L, 5 L</span><span>Артикулы: 23937, 13932, 10625</span></div><div class="mini"><strong>Aral MegaTurboral LA 10W-40</strong><span>Для коммерческого транспорта · SAE 10W-40</span><span>Фасовки: 20 L, 208 L</span><span>Артикулы: 1620, 11289</span></div><div class="mini"><strong>Aral ExtraTurboral SAE 10W-40</strong><span>Для коммерческого транспорта · SAE 10W-40</span><span>Фасовки: 208 L, 20 L, 5 L, 60 L</span><span>Артикулы: 11190, 22003, 22004, 2682</span></div><div class="mini"><strong>Aral масло Turboral (Plus) 15W-40</strong><span>Для коммерческого транспорта · SAE 15W-40</span><span>Фасовки: 208 L, 20 L, 60 L</span><span>Артикулы: 22119, 11281, 14047</span></div><div class="mini"><strong>Aral Silikatfrei G12</strong><span>Охлаждающие жидкости</span><span>Фасовки: 1 L</span><span>Артикулы: 90837</span></div></div></div></section>
+<section class="section"><div class="container"><div class="tag">03 / сведения о продукте</div><h2>Карточка товара</h2><div class="copy"><p>Для каждого продукта предусмотрены отдельные разделы с подтверждёнными техническими данными. Наличие документации и отдельных характеристик зависит от конкретной позиции.</p></div><div class="adv-summary"><div class="mini"><strong>Описание</strong><span>Краткое описание конкретного продукта.</span></div><div class="mini"><strong>Применение</strong><span>Назначение и условия применения в опубликованных сведениях.</span></div><div class="mini"><strong>Преимущества</strong><span>Только подтверждённые свойства конкретного продукта.</span></div><div class="mini"><strong>Спецификации и допуски</strong><span>API, ACEA и сведения об одобрениях — без смешения разных видов технических заявлений.</span></div><div class="mini"><strong>Типовые характеристики</strong><span>Численные данные, если опубликованы для этой позиции.</span></div><div class="mini"><strong>Фасовки и артикулы</strong><span>Выбор объёма с сохранением соответствия конкретному SKU.</span></div><div class="mini"><strong>PDS и SDS</strong><span>Доступные технические паспорта продукта и паспорта безопасности.</span></div><div class="mini"><strong>Хранение</strong><span>Сведения из опубликованной документации, если они представлены.</span></div></div><div class="copy"><p>Совпадение класса вязкости ещё не означает совместимость масел с конкретным двигателем. Проверяйте требования производителя автомобиля и актуальные документы на выбранный продукт.</p></div></div></section>
+<section class="section gray"><div class="container"><div class="tag">04 / сравнение</div><h2>Сравнение масел.</h2><div class="copy"><p>Сопоставьте до четырёх продуктов по подтверждённым сведениям. Отсутствующие значения не заполняются предположениями.</p><p>Для сравнения предусмотрены: категория, вязкость SAE, API, ACEA, официальные одобрения, соответствие требованиям (Meets), рекомендации по применению, фасовки и описание.</p><p>«—» означает отсутствие опубликованной информации, а не отсутствие допусков или характеристик.</p><p class="text-note">Здесь приведено текстовое описание сравнения без добавления новой интерактивной функции.</p></div></div></section>
+<section class="section"><div class="container"><div class="tag">05 / точность выбора</div><h2>Информация, на которую можно опереться.</h2><div class="copy"><p>Каталог помогает перейти от общего списка продукции к техническим данным конкретного масла. Совпадение вязкости само по себе не подтверждает совместимость с автомобилем.</p></div><div class="adv-summary"><div class="mini"><strong>01 · Сузьте круг поиска</strong><span>Выберите категорию, вязкость или фасовку; при необходимости используйте поиск по артикулу.</span></div><div class="mini"><strong>02 · Изучите карточку продукта</strong><span>Проверьте назначение и опубликованные параметры, обратите внимание на разные типы технических заявлений и доступные PDS/SDS.</span></div><div class="mini"><strong>03 · Сравните и переходите к продавцу</strong><span>Сопоставьте до четырёх продуктов, выберите нужную фасовку и откройте подходящий канал покупки. Наличие и цену уточняйте у продавца.</span></div></div></div></section>
+<section class="section gray"><div class="container"><div class="tag">06 / дальнейший шаг</div><h2>Два маршрута. Один каталог.</h2><div class="copy"><p>Технические данные общие для всех посетителей. Путь к покупке зависит от того, выбираете ли вы масло для автомобиля или для бизнеса.</p></div><div class="adv-summary"><div class="mini"><strong>Для водителей</strong><span>Подбираете масло для автомобиля? Изучите характеристики и доступные фасовки, затем перейдите к розничному каталогу. Совместимость уточняйте по требованиям производителя автомобиля.</span></div><div class="mini"><strong>Для партнёров</strong><span>Изучаете ассортимент для закупки? В карточках доступны артикулы и подтверждённые технические данные. Условия и наличие уточняйте у продавца.</span></div></div><div class="copy"><p>Ссылки на покупку в Склад СПК могут вести на результаты поиска, а не на отдельную фасовку; повторение адреса для нескольких SKU предусмотрено. Для Aral Silikatfrei G12 (SKU 90837) ссылка пока отсутствует. Цены и остатки здесь не публикуются.</p></div></div></section></main><footer class="foot"><div class="container foot-inner"><div class="brand">ARAL</div><small>Продукция · контентный прототип V6, не финальный дизайн</small></div></footer></div><div aria-label="Страница Для водителей" class="aral-page" data-route="drivers" hidden="" id="view-drivers"><header class="nav"><div class="container nav-wrap"><div class="brand">ARAL</div><button aria-controls="site-menu" aria-expanded="false" class="nav-toggle" type="button">☰  Меню</button><nav aria-label="Главное меню" class="menu" id="site-menu"><a href="#company">Компания</a><a href="pages/products-r15.html#/catalog">Продукция</a><a aria-current="page" href="pages/drivers-08.html">Для водителей</a><a href="pages/partners-11.html">Для партнёров</a><a href="pages/advantages-04.html">Преимущества ARAL</a><a href="#interesting">Интересное</a><a href="pages/contacts-03.html">Контакты</a></nav></div></header><div class="hero"><div class="container hero-wrap"><div class="hero-copy"><div class="kicker">ARAL / Для водителей</div><h1>Для водителей</h1></div><div class="hero-visual"><img alt="Изображение масла ARAL при заливке в двигатель" src="media/editorial/v8-04.jpg"/></div></div></div><main id="main-content"><section class="page-empty"><div class="container"><div class="page-empty-inner"><span class="page-status">Текстовая структура · черновик</span><h2>Информация для водителей</h2><p>Здесь планируются сведения о подборе масел и консультациях. Полное содержание страницы не утверждено и поэтому не создаётся произвольно.</p><p class="text-note">Название и место страницы в верхнем меню утверждены. Тексты, дизайн и содержательные блоки страницы отдельно не согласованы.</p></div></div></section></main><footer class="foot"><div class="container foot-inner"><div class="brand">ARAL</div><small>Для водителей · контентный прототип V6, не финальный дизайн</small></div></footer></div><div aria-label="Страница Для партнёров" class="aral-page" data-route="partners" hidden="" id="view-partners"><header class="nav"><div class="container nav-wrap"><div class="brand">ARAL</div><button aria-controls="site-menu" aria-expanded="false" class="nav-toggle" type="button">☰  Меню</button><nav aria-label="Главное меню" class="menu" id="site-menu"><a href="#company">Компания</a><a href="pages/products-r15.html#/catalog">Продукция</a><a href="pages/drivers-08.html">Для водителей</a><a aria-current="page" href="pages/partners-11.html">Для партнёров</a><a href="pages/advantages-04.html">Преимущества ARAL</a><a href="#interesting">Интересное</a><a href="pages/contacts-03.html">Контакты</a></nav></div></header><div class="hero"><div class="container hero-wrap"><div class="hero-copy"><div class="kicker">ARAL / Для партнёров</div><h1>Для партнёров</h1></div><div class="hero-visual"><img alt="Изображение масла ARAL при заливке в двигатель" src="media/editorial/v8-05.jpg"/></div></div></div><main id="main-content"><section class="page-empty"><div class="container"><div class="page-empty-inner"><span class="page-status">Текстовая структура · черновик</span><h2>Информация для партнёров</h2><p>Это отдельная страница для оптовых покупателей, магазинов и автосервисов. Коммерческие формулировки и элементы сотрудничества будут согласованы отдельно.</p><p class="text-note">Название и место страницы в верхнем меню утверждены. Тексты, дизайн и содержательные блоки страницы отдельно не согласованы.</p></div></div></section></main><footer class="foot"><div class="container foot-inner"><div class="brand">ARAL</div><small>Для партнёров · контентный прототип V6, не финальный дизайн</small></div></footer></div><div aria-label="Страница Преимущества ARAL" class="aral-page" data-route="advantages" hidden="" id="view-advantages"><header class="nav"><div class="container nav-wrap"><div class="brand">ARAL</div><button aria-controls="site-menu" aria-expanded="false" class="nav-toggle" type="button">☰  Меню</button><nav aria-label="Главное меню" class="menu" id="site-menu"><a href="#company">Компания</a><a href="pages/products-r15.html#/catalog">Продукция</a><a href="pages/drivers-08.html">Для водителей</a><a href="pages/partners-11.html">Для партнёров</a><a aria-current="page" href="pages/advantages-04.html">Преимущества ARAL</a><a href="#interesting">Интересное</a><a href="pages/contacts-03.html">Контакты</a></nav></div></header><div class="hero"><div class="container hero-wrap"><div class="hero-copy"><div class="kicker">ARAL / Преимущества ARAL</div><h1>Преимущества ARAL</h1></div><div class="hero-visual"></div></div></div><main id="main-content">
+<section class="section adv-overview"><div class="container">
+<div class="adv-summary">
+<div class="mini"><strong>Ассортимент</strong><span>Несколько категорий смазочных материалов для разных задач и типов техники.</span></div>
+<div class="mini"><strong>Марки автомобилей</strong><span>Разные требования европейских, американских и азиатских моделей.</span></div>
+<div class="mini"><strong>Условия эксплуатации</strong><span>Подбор характеристик под город, трассу, нагрузку и рабочую температуру.</span></div>
+<div class="mini"><strong>Современные двигатели</strong><span>Отдельные решения для новых моторов и более требовательных сценариев эксплуатации.</span></div>
 </div>
-<div class="hero-image"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="product-stage"><img src="./media/production/ARAL-003_20634_4L.jpg" alt="Моторное масло Aral HighTronic 5W-40, фасовка 4 л"></div><div class="pack-label"><span>В ФОКУСЕ</span><strong>HIGH TRONIC 5W-40</strong><small>Исследуйте линейку продуктов</small></div></div>
 </div></section>
-<section class="wrap pad"><div class="section-top"><div><span class="kicker">ДВА НАПРАВЛЕНИЯ</span><h2>Найдите свой маршрут</h2></div><p>Один бренд — разные задачи. Продуманная навигация для оптовых клиентов и автовладельцев.</p></div>
-<div class="paths"><a class="path path-business" href="#/business"><span>01 / ПРОФЕССИОНАЛАМ</span><div><h3>Для бизнеса</h3><p>Ассортимент, техническая документация и инструменты поддержки партнёров.</p></div><b>↗</b></a><a class="path path-driver" href="#/drivers"><span>02 / АВТОВЛАДЕЛЬЦАМ</span><div><h3>Для автомобиля</h3><p>Описание, спецификации и сравнение продуктов для осознанного выбора.</p></div><b>↗</b></a></div></section>
-<section class="bg-light pad"><div class="wrap"><div class="section-top"><div><span class="kicker">ЛИНЕЙКА / ARAL</span><h2>Избранные продукты</h2></div><a class="text-link" href="#/catalog">Весь каталог ↗</a></div><div class="card-grid" id="featured"><p>Каталог загружается…</p></div></div></section>
-<section class="dark-panel"><div class="wrap dark-layout"><div><span class="kicker">ИНЖЕНЕРНЫЙ ПОДХОД</span><h2>Точность начинается с <em>характеристик.</em></h2><p>При выборе масла главное — соответствие требованиям производителя техники. В карточках ARAL раздельно представлены характеристики, спецификации и формулировки одобрений.</p><a class="btn btn-transparent" href="#/brand">Узнать больше ↗</a></div><div class="dark-visual" aria-hidden="true"><div class="ring"><strong>ARAL</strong><span>TECHNICAL PRECISION</span></div></div></div></section>
-<section class="wrap pad"><div class="section-top"><div><span class="kicker">B2B / ПОДДЕРЖКА</span><h2>Больше, чем поставки</h2></div><p>Решения для магазинов, автосервисов, дистрибьюторов и автопарков.</p></div><div class="benefits"><article><span>01</span><h3>Подбор ассортимента</h3><p>Фасовки и продуктовые линейки под задачи профессионального покупателя.</p></article><article><span>02</span><h3>Поддержка продаж</h3><p>Материалы, консультации и информация для сотрудников торговых точек.</p></article><article><span>03</span><h3>Техническая информация</h3><p>Характеристики и допуски только из утверждённой продуктовой базы.</p></article></div></section>
-<section class="wrap location-banner"><div><span class="kicker">КАНАЛЫ ПОКУПКИ</span><h2>Где приобрести ARAL?</h2><p>Оптовые поставки для бизнеса и розничный канал для автомобилистов.</p><a href="#/where" class="btn btn-yellow">Где купить <b>↗</b></a></div><div class="location-orbit" aria-hidden="true"><span>ARAL</span></div></section>
+<section class="section gray"><div class="container"><div class="adv-stack">
+<article class="adv-topic">
+<div class="topic-media"><img class="selected-photo" data-photo-id="ADV-02" alt="Ассортимент для разных задач" loading="eager" decoding="async" src="media/editorial/v8-06.webp" /><div class="visual-label">Ассортимент для разных задач</div></div>
+<div class="topic-copy">
+<h3>Ассортимент для разных задач</h3>
+<p>В собранных материалах ARAL представлены не только моторные масла для легковых автомобилей. В ассортименте бренда также упоминаются смазочные материалы для грузовой техники, трансмиссионные и гидравлические масла, а также продукция для промышленного оборудования. У каждой из этих категорий свои задачи: требования двигателя не совпадают с требованиями коробки передач или гидравлической системы.</p>
+<p>Для водителя это возможность познакомиться с разными направлениями продукции ARAL, а для магазина или оптового покупателя — рассматривать бренд сразу в нескольких товарных категориях. Автосервисам и компаниям с разнородным парком техники такой ассортимент интересен возможностью подбирать продукты под разные виды обслуживания.</p>
+<p>При этом наличие конкретной позиции, её назначение и совместимость всегда нужно сверять с актуальным каталогом, а не предполагать, что один продукт подходит ко всему.</p>
 </div>
-</main>
-<footer><div class="wrap footer-main"><div><a href="#/" class="footer-logo">ARAL</a><p>Информационный каталог масел и технических жидкостей. Для бизнеса и автомобиля.</p></div><div><strong>НАВИГАЦИЯ</strong><a href="#/catalog">Каталог</a><a href="#/compare">Сравнение</a><a href="#/brand">О бренде</a></div><div><strong>ПАРТНЁРАМ</strong><a href="#/business">Для бизнеса</a><a href="#/where">Где купить</a><a href="https://skladspk.ru/" target="_blank" rel="noopener noreferrer">Склад СПК ↗</a></div><div><strong>ПОМОЩЬ</strong><a href="#/contacts">Контакты</a><a href="https://msdspds.aral.com/msdspds/msdspds.nsf/AralSearch?OpenForm&amp;output=Full&amp;&amp;sitelang=EN" target="_blank" rel="noopener noreferrer">Поиск паспортов PDS и SDS ↗</a></div></div><div class="wrap footer-bottom"><span>© 2026 ARAL · Информационный сайт партнёра</span><span>Совместимость с техникой уточняйте по руководству производителя.</span></div></footer>
-<div id="toast" role="status" aria-live="polite"></div>
-<script src="./assets/editorial.js" defer></script><script src="./assets/app.js" defer></script>
-<noscript><div class="wrap" style="padding:30px 0">Для работы каталога и сравнения включите JavaScript в браузере.</div></noscript>
-</body></html>
+</article>
+<article class="adv-topic reverse">
+<div class="topic-media"><img class="selected-photo" data-photo-id="ADV-03" alt="Выбор для разных автомобильных марок" loading="eager" decoding="async" src="media/editorial/v8-07.webp" /><div class="visual-label">Выбор для разных автомобильных марок</div></div>
+<div class="topic-copy">
+<h3>Выбор для разных автомобильных марок</h3>
+<p>По материалам ARAL, ассортимент расширялся с учётом потребностей автомобилей европейских, американских и азиатских производителей. Это важно, потому что машины разных марок и даже разные двигатели одной модели могут предъявлять несовпадающие требования к моторным и трансмиссионным маслам.</p>
+<p>Для владельца автомобиля это означает, что выбор масла не сводится к популярности бренда или знакомой цифре на этикетке. Для продавца и мастера автосервиса более широкий ассортимент помогает отвечать на разнообразные запросы и подбирать продукт под техническое задание конкретного автомобиля.</p>
+<p>Речь не о том, что все масла ARAL подходят ко всем автомобилям: применимость подтверждается документацией выбранного продукта и требованиями автопроизводителя.</p>
+</div>
+</article>
+<article class="adv-topic">
+<div class="topic-media"><img class="selected-photo" data-photo-id="ADV-04" alt="Варианты для разных условий эксплуатации" loading="eager" decoding="async" src="media/editorial/v8-08.webp" /><div class="visual-label">Варианты для разных условий эксплуатации</div></div>
+<div class="topic-copy">
+<h3>Варианты для разных условий эксплуатации</h3>
+<p>Городские остановки, продолжительная работа на трассе и движение под повышенной нагрузкой создают для системы смазки разные условия. Поэтому среди важнейших характеристик моторного масла — его поведение при холодном запуске и при рабочей температуре двигателя.</p>
+<p>Материалы ARAL объясняют это на примере классов 5W-30 и 5W-40. При одинаковом зимнем обозначении 5W такие масла различаются высокотемпературной вязкостью: при нагреве состав класса 5W-40 обычно остаётся более вязким, чем 5W-30. Это техническое отличие, а не универсальное преимущество одного класса перед другим.</p>
+<p>Для покупателя и профессионального продавца ценность разнообразия заключается в возможности выбирать характеристики под предусмотренные изготовителем допуски и реальные условия обслуживания, не считая все моторные масла взаимозаменяемыми.</p>
+</div>
+</article>
+<article class="adv-topic reverse">
+<div class="topic-media"><img class="selected-photo" data-photo-id="ADV-05" alt="Решения для современных двигателей" loading="eager" decoding="async" src="media/editorial/v8-09.webp" /><div class="visual-label">Технологические решения для современных двигателей</div></div>
+<div class="topic-copy">
+<h3>Технологические решения для современных двигателей</h3>
+<p>Современные силовые установки могут требовать специальных свойств смазочных материалов. В документах отдельно рассматриваются турбированные двигатели с высокой тепловой нагрузкой и гибридные автомобили, в которых двигатель внутреннего сгорания часто запускается и останавливается, иногда без длительного прогрева.</p>
+<p>В качестве конкретного примера приводится Aral SuperTronic LL IV FE 0W-20 — полностью синтетическое моторное масло, описанное в материалах бренда с упоминанием Aral Synthetic Technology. Продукт рассматривается в связи с требованиями определённых современных двигателей и гибридных моделей.</p>
+<p>Это показывает наличие специализированных решений в ассортименте. Однако технология, вязкость 0W-20 и заявленное назначение одного масла не распространяются автоматически на остальные продукты: выбор проверяется по актуальным спецификациям конкретной канистры.</p>
+</div>
+</article>
+</div></div></section>
+</main><footer class="foot"><div class="container foot-inner"><div class="brand">ARAL</div><small>Преимущества ARAL</small></div></footer></div><div aria-label="Страница Интересное" class="aral-page" data-route="interesting" hidden="" id="view-interesting"><header class="nav"><div class="container nav-wrap"><div class="brand">ARAL</div><button aria-controls="site-menu" aria-expanded="false" class="nav-toggle" type="button">☰  Меню</button><nav aria-label="Главное меню" class="menu" id="site-menu"><a href="#company">Компания</a><a href="pages/products-r15.html#/catalog">Продукция</a><a href="pages/drivers-08.html">Для водителей</a><a href="pages/partners-11.html">Для партнёров</a><a href="pages/advantages-04.html">Преимущества ARAL</a><a aria-current="page" href="#interesting">Интересное</a><a href="pages/contacts-03.html">Контакты</a></nav></div></header><div class="hero"><div class="container hero-wrap"><div class="hero-copy"><div class="kicker">ARAL / Интересное</div><h1>Интересное</h1></div><div class="hero-visual"></div></div></div><main id="main-content">
+<section class="section"><div class="container">
+<h2>Интересное</h2>
+<div class="story-grid">
+<article class="story-card" id="статья-1">
+<div class="story-thumb"><img class="selected-photo" data-photo-id="INT-01-A" alt="Обложка статьи" loading="eager" decoding="async" src="media/editorial/v8-10.webp" /></div>
+<div class="story-body">
+<div class="story-meta">Статья 1</div>
+<h3>5W-30 или 5W-40: в чём реальная разница?</h3>
+<p class="lead">Классы вязкости 5W-30 и 5W-40 на первый взгляд похожи. Но при рабочей температуре двигателя они ведут себя по-разному, и выбор зависит от требований конкретного двигателя и условий его работы.</p>
+<div class="story-actions"><button aria-expanded="false" class="story-toggle" type="button">Читать статью</button></div>
+</div>
+<div class="story-details"><div class="story-layout"><figure class="story-side-image"><img class="selected-photo" data-photo-id="INT-01-B" alt="В раскрытой статье" loading="eager" decoding="async" src="media/editorial/v8-11.webp" /><figcaption>5W-30 или 5W-40: в чём реальная разница?</figcaption></figure><div class="story-copy"><h4>Главная идея</h4><p>У масел 5W-30 и 5W-40 одинаковый зимний класс вязкости, поэтому речь идёт не о том, какое масло «заводится лучше само по себе», а о различии их поведения при рабочей температуре двигателя. Вторая цифра показывает, насколько вязким остаётся масло после прогрева и как оно ведёт себя в нагруженном режиме.</p><p>Водителю, продавцу или мастеру легко принять похожие обозначения за взаимозаменяемые. Однако одинаковый зимний класс не означает одинаковую вязкость после прогрева. Замена без учёта требований автомобиля может оказаться неправильной.</p><h4>На что обратить внимание</h4><ul><li>не все масла одинаково подходят для одного и того же двигателя;</li><li>условия эксплуатации и рекомендации производителя важнее бытового мнения «так обычно льют»;</li><li>класс вязкости — это одна из ключевых характеристик, а не второстепенная цифра на этикетке.</li></ul><div class="article-end">Масло выбирают по требованиям автомобиля, а не только по привычке или популярности маркировки.</div></div></div></div>
+</article>
+<article class="story-card" id="статья-2">
+<div class="story-thumb"><img class="selected-photo" data-photo-id="INT-02-A" alt="Обложка статьи" loading="eager" decoding="async" src="media/editorial/v8-12.webp" /></div>
+<div class="story-body">
+<div class="story-meta">Статья 2</div>
+<h3>Масло и турбонаддув: что важно знать</h3>
+<p class="lead">Турбированные двигатели работают в более требовательных условиях. Повышенные температуры и нагрузки усиливают значение вязкости, температурной стабильности и правильного подбора масла.</p>
+<div class="story-actions"><button aria-expanded="false" class="story-toggle" type="button">Читать статью</button></div>
+</div>
+<div class="story-details"><div class="story-layout"><figure class="story-side-image"><img class="selected-photo" data-photo-id="INT-02-B" alt="В раскрытой статье" loading="eager" decoding="async" src="media/editorial/v8-13.webp" /><figcaption>Масло и турбонаддув: что важно знать</figcaption></figure><div class="story-copy"><h4>Почему тема важна</h4><p>Турбонаддув повышает требования к смазочному материалу, потому что узлы работают при более высоких температурах и серьёзных нагрузках. Для масла это означает не только задачу смазки, но и стабильную работу в условиях интенсивного нагрева и быстрого изменения режимов.</p><p>Для турбированного двигателя важны вязкость, соответствие требованиям автопроизводителя и корректный подбор продукта. Неподходящее масло может ухудшить смазку нагруженных узлов, поэтому ориентироваться нужно на техническую документацию автомобиля.</p><h4>Что можно вынести для себя</h4><ul><li>турбированный мотор особенно чувствителен к неправильному подбору масла;</li><li>высокая нагрузка делает рекомендации производителя ещё более важными;</li><li>подходящее масло подбирается не по общему впечатлению, а по техническим требованиям конкретного двигателя.</li></ul></div></div></div>
+</article>
+<article class="story-card" id="статья-3">
+<div class="story-thumb"><img class="selected-photo" data-photo-id="INT-03-A" alt="Обложка статьи" loading="eager" decoding="async" src="media/editorial/v8-14.webp" /></div>
+<div class="story-body">
+<div class="story-meta">Статья 3</div>
+<h3>Почему гибридам нужен особый подход к маслу</h3>
+<p class="lead">В гибридных автомобилях двигатель внутреннего сгорания может часто включаться и выключаться, работать короткими циклами и не всегда успевать полностью прогреваться. Это меняет требования к смазке.</p>
+<div class="story-actions"><button aria-expanded="false" class="story-toggle" type="button">Читать статью</button></div>
+</div>
+<div class="story-details"><div class="story-layout"><figure class="story-side-image"><img class="selected-photo" data-photo-id="INT-03-B" alt="В раскрытой статье" loading="eager" decoding="async" src="media/editorial/v8-15.webp" /><figcaption>Почему гибридам нужен особый подход к маслу</figcaption></figure><div class="story-copy"><h4>Что меняется в работе двигателя</h4><p>У гибридных автомобилей двигатель внутреннего сгорания не всегда работает непрерывно. Он может часто запускаться и останавливаться, выходить на работу после коротких пауз и не проводить столько времени в стабильном длительном режиме, как это часто бывает у традиционного автомобиля.</p><p>Для масла это означает более тесную связь между характеристиками продукта и условиями эксплуатации. Важно не только то, как оно работает после полного прогрева, но и то, как ведёт себя при частых запусках и переходах между режимами.</p><h4>Кому статья будет полезна</h4><ul><li>водителям, которые выбирают масло для гибридного автомобиля;</li><li>магазинам и сервисам, которым важно корректно консультировать по новым типам техники;</li><li>покупателям, желающим понять, почему гибрид — это не просто «обычная машина с электромотором».</li></ul></div></div></div>
+</article>
+<article class="story-card" id="статья-4">
+<div class="story-thumb"><img class="selected-photo" data-photo-id="INT-04-A" alt="Обложка статьи" loading="eager" decoding="async" src="media/editorial/v8-16.webp" /></div>
+<div class="story-body">
+<div class="story-meta">Статья 4</div>
+<h3>Может ли моторное масло помогать экономить топливо?</h3>
+<p class="lead">Моторное масло может влиять на потери энергии из-за трения, но возможный эффект зависит от характеристик масла и конструкции двигателя. Правильно выбранная вязкость — лишь часть общей картины.</p>
+<div class="story-actions"><button aria-expanded="false" class="story-toggle" type="button">Читать статью</button></div>
+</div>
+<div class="story-details"><div class="story-layout"><figure class="story-side-image"><img class="selected-photo" data-photo-id="INT-04-B" alt="В раскрытой статье" loading="eager" decoding="async" src="media/editorial/v8-17.webp" /><figcaption>Может ли моторное масло помогать экономить топливо?</figcaption></figure><div class="story-copy"><h4>Как это работает в общих чертах</h4><p>Масло влияет на режим работы двигателя через сопротивление трению и поведение при рабочей температуре. В материалах ARAL тема экономичности связана с подбором подходящей вязкости и использованием продуктов, созданных под определённые технические требования.</p><p>Снижение расхода топлива не гарантируется для любого автомобиля и любого масла. Возможная польза связана с тем, рассчитан ли двигатель на определённые характеристики смазочного материала и соответствует ли выбранный продукт рекомендациям производителя.</p><h4>Что стоит помнить</h4><ul><li>экономичность связана с корректным подбором масла, а не только с названием продукта;</li><li>важно учитывать допуски и требования двигателя;</li><li>у разных автомобилей эффект и допустимые характеристики могут различаться.</li></ul></div></div></div>
+</article>
+<article class="story-card" id="статья-5">
+<div class="story-thumb"><img class="selected-photo" data-photo-id="INT-05-A" alt="Обложка статьи" loading="eager" decoding="async" src="media/editorial/v8-18.webp" /></div>
+<div class="story-body">
+<div class="story-meta">Статья 5</div>
+<h3>Aral SuperTronic LL IV FE 0W-20: пример современного синтетического масла</h3>
+<p class="lead">Aral SuperTronic LL IV FE 0W-20 — пример специализированного масла для современных двигателей. Его характеристики стоит рассматривать вместе с требованиями конкретного автомобиля, а не только по обозначению вязкости.</p>
+<div class="story-actions"><button aria-expanded="false" class="story-toggle" type="button">Читать статью</button></div>
+</div>
+<div class="story-details"><div class="story-layout"><figure class="story-side-image"><img class="selected-photo" data-photo-id="INT-05-B" alt="В раскрытой статье" loading="eager" decoding="async" src="media/editorial/v8-19.webp" /><figcaption>Aral SuperTronic LL IV FE 0W-20: пример современного синтетического масла</figcaption></figure><div class="story-copy"><h4>Почему этот продукт показателен</h4><p>SuperTronic LL IV FE 0W-20 в материалах бренда описывается как полностью синтетическое масло с технологией Aral Synthetic Technology. Оно иллюстрирует направление специализированных продуктов для современных силовых агрегатов.</p><p>При выборе такого масла необходимо учитывать рекомендации автопроизводителя и соответствие техническим требованиям. Низкая вязкость сама по себе не означает, что продукт подходит для любого двигателя.</p></div></div></div>
+</article>
+<article class="story-card" id="статья-6">
+<div class="story-thumb"><img class="selected-photo" data-photo-id="INT-06-A" alt="Обложка статьи" loading="eager" decoding="async" src="media/editorial/v8-20.webp" /></div>
+<div class="story-body">
+<div class="story-meta">Статья 6</div>
+<h3>ARAL, Формула-1 и Нико Хюлькенберг</h3>
+<p class="lead">Нико Хюлькенберг — гонщик Формулы-1. Его выступления упоминаются в связи с технологическим партнёрством BP и ARAL в автоспорте.</p>
+<div class="story-actions"><button aria-expanded="false" class="story-toggle" type="button">Читать статью</button></div>
+</div>
+<div class="story-details"><div class="story-layout"><figure class="story-side-image"><img class="selected-photo" data-photo-id="INT-06-B" alt="В раскрытой статье" loading="eager" decoding="async" src="media/editorial/v8-21.webp" /><figcaption>ARAL, Формула-1 и Нико Хюлькенберг</figcaption></figure><div class="story-copy"><h4>Автоспорт и технологии</h4><p>Формула-1 связана с высокими требованиями к технике и инженерным решениям. История Нико Хюлькенберга позволяет взглянуть на автомобильную тему шире, чем только через обслуживание обычных дорожных машин.</p><p>В автоспорте ценятся инженерные решения и точность работы техники. Само упоминание партнёрства BP и ARAL не означает, что в двигателе конкретного болида использовалось определённое масло ARAL.</p></div></div></div>
+</article>
+</div>
+</div></section>
+</main><footer class="foot"><div class="container foot-inner"><div class="brand">ARAL</div><small>Интересное</small></div></footer></div><div aria-label="Страница Контакты" class="aral-page" data-route="contacts" hidden="" id="view-contacts"><header class="nav"><div class="container nav-wrap"><div class="brand">ARAL</div><button aria-controls="site-menu" aria-expanded="false" class="nav-toggle" type="button">☰  Меню</button><nav aria-label="Главное меню" class="menu" id="site-menu"><a href="#company">Компания</a><a href="pages/products-r15.html#/catalog">Продукция</a><a href="pages/drivers-08.html">Для водителей</a><a href="pages/partners-11.html">Для партнёров</a><a href="pages/advantages-04.html">Преимущества ARAL</a><a href="#interesting">Интересное</a><a aria-current="page" href="pages/contacts-03.html">Контакты</a></nav></div></header><div class="hero"><div class="container hero-wrap"><div class="hero-copy"><div class="kicker">ARAL / Контакты</div><h1>Контакты</h1></div><div class="hero-visual"><img alt="Изображение масла ARAL при заливке в двигатель" src="media/editorial/v8-22.jpg"/></div></div></div><main id="main-content"><section class="page-empty"><div class="container"><div class="page-empty-inner"><span class="page-status">Текстовая структура · черновик</span><h2>Как связаться и где купить</h2><p>Раздел для связи и информации о точках продаж. Адреса, графики и контакты не подменяются условными или выдуманными значениями.</p><p class="text-note">Название и место страницы в верхнем меню утверждены. Тексты, дизайн и содержательные блоки страницы отдельно не согласованы.</p></div></div></section></main><footer class="foot"><div class="container foot-inner"><div class="brand">ARAL</div><small>Контакты · контентный прототип V6, не финальный дизайн</small></div></footer></div>
+<script>
+(() => {
+  const routes = ['company','interesting'];
+  const titles = ['Компания','Интересное'];
+  const pages = [...document.querySelectorAll('.aral-page')];
+  function showPage(){
+    const requested = decodeURIComponent(location.hash.slice(1));
+    const route = routes.includes(requested) ? requested : 'company';
+    pages.forEach(p => {const active=p.dataset.route===route;p.hidden=!active;p.classList.toggle('is-active',active);});
+    document.title = 'ARAL — '+titles[routes.indexOf(route)]+' | HTML V8';
+    document.querySelectorAll('.nav-toggle').forEach(b => b.setAttribute('aria-expanded','false'));
+    document.querySelectorAll('.menu').forEach(n => n.classList.remove('is-open'));
+    window.scrollTo(0,0);
+  }
+  document.querySelectorAll('.nav-toggle').forEach(b=> {
+    b.addEventListener('click',()=>{
+      const nav=b.closest('.nav')?.querySelector('.menu');
+      if(!nav)return;
+      const open=b.getAttribute('aria-expanded')!=='true';
+      b.setAttribute('aria-expanded',String(open));
+      nav.classList.toggle('is-open',open);
+    });
+  });
+  window.addEventListener('hashchange',showPage);
+  showPage();
+})();
+</script>
+<script>
+(()=>{
+const events={
+"1898":{
+"title":"Основание компании",
+"text":"В 1898 году была основана Westdeutsche Benzol-Verkaufs-Vereinigung GmbH. С истории этой компании начинается история ARAL, хотя само название бренда появилось позже — в 1924 году."
+},
+"1924":{
+"title":"Появление бренда ARAL",
+"text":"В 1924 году появился бренд ARAL. Его название образовано от немецких слов Aromaten и Aliphaten, которые обозначают ароматические и алифатические компоненты. Позднее название ARAL вошло и в официальное наименование компании."
+},
+"1952":{
+"title":"Название Aral в имени компании",
+"text":"В 1952 году была основана B.V.-Aral Aktiengesellschaft. Тогда название Aral впервые появилось в наименовании компании. К этому времени сам бренд с таким именем существовал уже с 1924 года."
+},
+"1990":{
+"title":"Aral SuperTronic",
+"text":"В 1990 году представили Aral SuperTronic — полностью синтетическое высокоэффективное моторное масло для двигателей того времени. Это событие отдельно выделено в хронологии ARAL и относится непосредственно к истории моторных масел бренда."
+},
+"1998":{
+"title":"ARAL выходит в интернет",
+"text":"В год столетия компании ARAL вышел в интернет с сайтом www.aral.de. На нём были представлены сведения о продукции, информация и услуги для частных клиентов и бизнеса. Выход в интернет стал отдельной датой исторической хронологии бренда."
+},
+"2006":{
+"title":"Трёхмерный логотип ARAL",
+"text":"В 2006 году фирменный ромб ARAL получил трёхмерное оформление. Сине-белый ромб долгое время оставался визитной карточкой бренда, хотя отдельные детали его изображения менялись. Обновление 2006 года стало одним из таких изменений."
+},
+"2024":{
+"title":"Столетие бренда",
+"text":"В 2024 году ARAL отметил 100 лет со времени появления бренда. В юбилейных материалах компания вернулась к своей рекламной классике: один из известных сюжетов был переосмыслен под названием «We are walking». Год выделен в хронологии как юбилейный."
+},
+"2026":{
+"title":"Новая визуальная идентичность",
+"text":"В 2026 году ARAL обновляет систему визуальной идентичности. Привычные элементы бренда получают современное оформление и объединяются в единый язык дизайна. Такой подход должен создавать единый облик ARAL в разных точках контакта, в том числе в цифровых коммуникациях."
+}
+};
+const buttons=[...document.querySelectorAll('.year-btn')],detail=document.getElementById('year-detail'),empty=document.getElementById('year-empty');
+function setYear(y){ const selected=buttons.find(b=>b.dataset.year===y && b.getAttribute('aria-expanded')==='true');const open=!selected;
+buttons.forEach(b=>b.setAttribute('aria-expanded',String(open&&b.dataset.year===y)));
+if(!open){detail.hidden=true;empty.hidden=false;return;}
+document.getElementById('event-year').textContent=y;document.getElementById('event-title').textContent=events[y].title;document.getElementById('event-copy').textContent=events[y].text;
+detail.hidden=false;empty.hidden=true;
+}
+buttons.forEach(b=>b.addEventListener('click',()=>setYear(b.dataset.year)));
+})();
+</script>
+<script>
+(()=>{
+  function closePeers(card){
+    const grid = card.closest('.story-grid');
+    if(!grid) return;
+    grid.querySelectorAll('.story-card.open').forEach(other=>{
+      if(other!==card){
+        other.classList.remove('open');
+        const btn = other.querySelector('.story-toggle');
+        if(btn){btn.setAttribute('aria-expanded','false');btn.textContent='Читать статью';}
+      }
+    });
+  }
+  document.querySelectorAll('.story-toggle').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const card = btn.closest('.story-card');
+      if(!card) return;
+      const willOpen = !card.classList.contains('open');
+      closePeers(card);
+      card.classList.toggle('open', willOpen);
+      btn.setAttribute('aria-expanded', String(willOpen));
+      btn.textContent = willOpen ? 'Свернуть статью' : 'Читать статью';
+      if(willOpen){
+        setTimeout(()=>card.scrollIntoView({behavior:'smooth', block:'nearest'}), 80);
+      }
+    });
+  });
+})();
+</script></body></html>
