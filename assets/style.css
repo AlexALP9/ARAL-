@@ -16,3 +16,6 @@
 .doc-manufacturer{display:block;margin-top:10px;color:#063f9e;font-weight:650}
 .doc-unavailable{margin:0 0 12px;color:#5a6680}
 @media(max-width:640px){.doc-panel{padding:18px}.doc-download{display:flex;width:100%;justify-content:center;margin-right:0}}
+
+/* Editorial integration: keep approved CSS inside same-origin isolated documents. */
+.approved-shell{background:#fff;min-height:70vh}.approved-shell-heading{padding-top:32px;padding-bottom:18px}.approved-shell-heading h1{font-size:clamp(30px,4vw,48px);margin:7px 0 20px;letter-spacing:-.045em;color:#06346c}.approved-shell-heading nav{display:flex;gap:7px;flex-wrap:wrap;border-bottom:1px solid #dae5ef;padding-bottom:15px}.approved-shell-heading nav a{font-size:13px;text-decoration:none;color:#214867;background:#f2f7fc;border:1px solid #dce8f1;padding:10px 13px;border-radius:9px}.approved-shell-heading nav a[aria-current=page]{background:#0756a1;color:white;border-color:#0756a1}.approved-shell-heading nav a:focus-visible{outline:3px solid #ffe425;outline-offset:2px}.approved-frame{display:block;width:100%;min-height:850px;height:850px;border:0;background:white}@media(max-width:750px){.approved-shell-heading{padding-top:20px}.approved-shell-heading nav a{padding:8px 10px}.approved-frame{min-height:650px}}

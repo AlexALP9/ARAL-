@@ -140,7 +140,7 @@
   function route(){
     const value=decodeURIComponent((location.hash||'#/').replace(/^#\/?/,'')).replace(/^\/+/,'');
     const [name,arg]=value.split('/');
-    switch(name){
+    if(window.ARAL_EDITORIAL && window.ARAL_EDITORIAL.render(name,main)) { /* approved content */ } else switch(name){
       case 'catalog':renderCatalog();break;
       case 'product':renderProduct(arg);break;
       case 'compare':renderCompare();break;
@@ -153,7 +153,7 @@
     }
     $$('#menu a').forEach(a=>a.classList.toggle('current',a.getAttribute('href')==='#/'+name));
     $('#menu').classList.remove('open');$('#menu-toggle').setAttribute('aria-expanded','false');
-    const titles={catalog:'Каталог',product:'Продукт',compare:'Сравнение',brand:'О бренде',business:'Для бизнеса',drivers:'Для автомобиля',where:'Где купить',contacts:'Контакты'};
+    const titles={company:'Компания',partners:'Для партнёров',advantages:'Преимущества ARAL',interesting:'Интересное','products-design':'Продукция — редакция 15',catalog:'Каталог',product:'Продукт',compare:'Сравнение',brand:'О бренде',business:'Для бизнеса',drivers:'Для автомобиля',where:'Где купить',contacts:'Контакты'};
     document.title=(titles[name]||'Масла для бизнеса и автомобиля')+' | ARAL';
     window.scrollTo(0,0);
   }
