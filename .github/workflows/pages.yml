@@ -36,13 +36,18 @@ jobs:
           python3 scripts/validate_catalog.py
           python3 - <<'PY'
           from pathlib import Path
-          from html.parser import HTMLParser
+          import re
           paths = [Path('_site/index.html'), *sorted(Path('_site/pages').glob('*.html'))]
           assert len(paths)==6, paths
           for p in paths:
               text=p.read_text(encoding='utf-8')
               assert '<nav' in text and '<iframe' not in text, p
-              assert 'aria-disabled="true"' not in text.split('</nav>',1)[0], p
+              nav=re.search(r'<nav\\b[^>]*\\bid="(?:topNav|site-menu)"[^>]*>.*?</nav>',text,re.S)
+              assert nav is not None, p
+              assert 'aria-disabled="true"' not in nav.group(0), p
+              refs=set(re.findall(r'media/editorial/([\\w.-]+\\.(?:png|jpg|jpeg|webp))',text))
+              for ref in refs:
+                  assert (Path('_site/media/editorial')/ref).is_file(), (p,ref)
           assert len(list(Path('_site/media/editorial').iterdir())) == 33
           print('PASS: six full HTML documents for seven approved pages, 33 editorial assets')
           PY
