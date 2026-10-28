@@ -1,0 +1,54 @@
+name: PR9 ARAL home screenshots
+on:
+  push:
+    branches:
+      - codex/aral-home-hero48-cards-r15-20261028
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  visual:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser
+        run: |
+          npm install --no-save --no-package-lock playwright@1.57.0
+          npx playwright install --with-deps chromium
+      - name: Start localhost server
+        run: |
+          python3 -m http.server 8123 --bind 127.0.0.1 >/tmp/aral-home-server.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8123/design/hero/prototypes/hero-4s-k-views/home-integration-preview.html >/dev/null; then break; fi
+            sleep 1
+          done
+      - name: Responsive screenshots and behavioral checks
+        run: node design/hero/prototypes/hero-4s-k-views/capture-home.mjs
+      - name: Compare card animation variants in Chromium
+        run: node design/hero/prototypes/hero-4s-k-views/capture-card-motion.mjs
+      - name: Package self-contained review checkout
+        if: always()
+        run: |
+          mkdir -p review-output/site/design/hero/prototypes/hero-4s-k-views review-output/site/media review-output/site/pages
+          cp design/hero/prototypes/hero-4s-k-views/home-integration-preview.html review-output/site/design/hero/prototypes/hero-4s-k-views/
+          cp design/hero/prototypes/hero-4s-k-views/home-product-cards-*-preview.html review-output/site/design/hero/prototypes/hero-4s-k-views/
+          cp design/hero/prototypes/hero-4s-k-views/review.css design/hero/prototypes/hero-4s-k-views/review.js review-output/site/design/hero/prototypes/hero-4s-k-views/
+          cp -a design/hero/prototypes/hero-4s-k-views/assets review-output/site/design/hero/prototypes/hero-4s-k-views/
+          mkdir -p review-output/site/design/hero/ARAL_HERO_MOTION_01A1556A
+          cp -a design/hero/ARAL_HERO_MOTION_01A1556A/sources review-output/site/design/hero/ARAL_HERO_MOTION_01A1556A/
+          cp -a media/editorial media/production review-output/site/media/
+          cp pages/*.html review-output/site/pages/
+          cp index.html review-output/site/
+          printf '%s\n' 'Open from the site/ directory using: python3 -m http.server 8000' 'A: /design/hero/prototypes/hero-4s-k-views/home-product-cards-gradient-preview.html' 'B: /design/hero/prototypes/hero-4s-k-views/home-product-cards-3d-pin-preview.html' 'Home: /design/hero/prototypes/hero-4s-k-views/home-integration-preview.html' > review-output/OPEN-LOCALLY.txt
+      - name: Upload approval materials
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ARAL-PR9-home-and-A-B-card-motion-1440-1024-768-390
+          path: review-output/
+          if-no-files-found: warn
+          retention-days: 30
