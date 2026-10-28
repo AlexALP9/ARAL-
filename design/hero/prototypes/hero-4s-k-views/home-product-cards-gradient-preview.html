@@ -97,6 +97,7 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height
 /* These prototypes reuse every ARAL product-card HTML node verbatim from PR #9.
    Only the hover interaction changes; source HERO, comparison and routes are untouched. */
 #featured .product-card--minimal { overflow:visible; isolation:isolate; }
+#featured .home-cards { padding-top:28px; margin-top:-28px; }
 #featured .product-card--minimal:hover { z-index:3; }
 #featured .product-card--minimal .product-photo { border-radius:13px 13px 0 0; }
 #featured .product-card--minimal .compare-add { position:relative; z-index:6; }
@@ -113,6 +114,7 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height
    gradient layers, soft outer blur, moving 400% background and hover opacity.
    ARAL brand palette replaces the demo's green/purple/orange gradient. */
 #featured .product-card--minimal { background:#fff; }
+#featured .product-card--minimal .pc-body { background:#fff; position:relative; z-index:1; border-radius:0 0 12px 12px; }
 #featured .product-card--minimal:hover { transform:none; box-shadow:none; border-color:#a8c8ec; }
 #featured .product-card--minimal::before,
 #featured .product-card--minimal::after {
