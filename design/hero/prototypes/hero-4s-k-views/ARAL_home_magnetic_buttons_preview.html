@@ -157,25 +157,7 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height
  #featured .product-card--minimal::before,#featured .product-card--minimal::after{animation:none!important;transition:none}
 }
 
-/* Magnetic Button preview — motion-only, original ARAL button geometry and colors preserved.
-   Translation remains in the compositor and never changes layout. */
-[data-magnetic]{
-  --mag-x:0px;--mag-y:0px;--mag-scale:1;
-  transform:translate3d(var(--mag-x),var(--mag-y),0) scale(var(--mag-scale)) !important;
-  transition-property:background-color,border-color,color,box-shadow !important;
-  will-change:transform;
-  position:relative;
-}
-[data-magnetic]:hover{z-index:4}
-[data-magnetic]:focus-visible{outline:3px solid #ffe425;outline-offset:4px}
-@media(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){
-  [data-magnetic]{
-    transform:none!important;
-    will-change:auto!important;
-  }
-}
-
-</style></head>
+</style><link rel="stylesheet" href="../../../../assets/aral-magnetic.css"></head>
 <body><a class="skip-link" href="#home-page">К содержанию</a>
 <header class="home-nav"><div class="home-nav-inner"><a class="home-brand" href="home-integration-preview.html" aria-label="ARAL, главная"><span class="brand-diamond" aria-hidden="true"><span>ARAL</span></span><span class="brand-text">ARAL</span></a><button class="home-menu-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Меню</button><nav id="home-menu" class="home-menu" aria-label="Разделы сайта"><a href="../../../../index.html#company">Компания</a><a href="../../../../pages/products-r15.html#/catalog">Продукция</a><a href="../../../../pages/drivers-08.html">Для водителей</a><a href="../../../../pages/partners-11.html">Для партнёров</a><a href="../../../../pages/advantages-04.html">Преимущества ARAL</a><a href="../../../../index.html#interesting">Интересное</a><a href="../../../../pages/contacts-03.html">Контакты</a></nav><div class="home-nav-tools"><a class="home-compare-link" id="compareShortcut" href="../../../../pages/products-r15.html#/compare" aria-label="Сравнение товаров">Сравнение <span id="homeCompareCount">0</span></a><a class="navcta home-catalog-cta" href="../../../../pages/products-r15.html#/catalog">Каталог <span aria-hidden="true">↗</span></a></div></div></header>
 <main id="home-page">
@@ -227,105 +209,6 @@ document.querySelectorAll('[data-product-open]').forEach(card=>{card.onclick=e=>
 document.querySelectorAll('[data-compare]').forEach(b=>{b.onclick=e=>{e.stopPropagation();let id=b.dataset.compare;if(selected.includes(id))selected=selected.filter(x=>x!==id);else{if(selected.length>=4){notify('Можно сравнить не более четырёх продуктов');return}selected.push(id)}try{localStorage.setItem(key,JSON.stringify(selected))}catch{}sync();notify(selected.includes(id)?'Добавлено в сравнение':'Удалено из сравнения')}});
 sync();})();
 </script>
-<script id="aral-magnetic-preview">
-/*
- * Aceternity Magnetic Button mechanics adapted to static HTML:
- * cursor-distance falloff, strength 0.31, 10 px displacement cap and damped spring.
- * The rest-position hit-box is calculated after removing the animated translation,
- * so the moving target never feeds back into its own cursor distance (no jitter).
- *
- * Only the three marked real navigation links are affected. No React dependency.
- */
-(()=>{
- const links=[...document.querySelectorAll('[data-magnetic]')];
- const media=window.matchMedia('(hover:hover) and (pointer:fine)');
- const reduce=window.matchMedia('(prefers-reduced-motion:reduce)');
- const strength=0.31, limit=10, reach=115;
- const pointer={x:0,y:0,valid:false};
- const states=links.map(el=>({el,x:0,y:0,scale:1,vx:0,vy:0,vscale:0,pressed:false}));
- let frame=0,last=0;
- const clamp=(v,min,max)=>Math.max(min,Math.min(max,v));
- function enabled(){return media.matches&&!reduce.matches}
- function clearNow(){
-  pointer.valid=false;
-  if(frame)cancelAnimationFrame(frame);
-  frame=0;last=0;
-  for(const s of states){
-   Object.assign(s,{x:0,y:0,scale:1,vx:0,vy:0,vscale:0,pressed:false});
-   s.el.style.setProperty('--mag-x','0px');
-   s.el.style.setProperty('--mag-y','0px');
-   s.el.style.setProperty('--mag-scale','1');
-  }
- }
- function schedule(){if(!frame&&enabled())frame=requestAnimationFrame(tick)}
- function desired(s){
-  if(!pointer.valid||!enabled())return [0,0];
-  const box=s.el.getBoundingClientRect();
-  const cx=box.left+box.width/2-s.x;
-  const cy=box.top+box.height/2-s.y;
-  const halfW=box.width/2,halfH=box.height/2;
-  const nearestX=clamp(pointer.x,cx-halfW,cx+halfW);
-  const nearestY=clamp(pointer.y,cy-halfH,cy+halfH);
-  const edgeDistance=Math.hypot(pointer.x-nearestX,pointer.y-nearestY);
-  if(edgeDistance>=reach)return [0,0];
-  const t=clamp(1-edgeDistance/reach,0,1);
-  const influence=t*t*(3-2*t);
-  return [
-   clamp((pointer.x-cx)*strength*influence,-limit,limit),
-   clamp((pointer.y-cy)*strength*influence,-limit,limit)
-  ];
- }
- function spring(s,key,target,dt){
-  const velocity='v'+key;
-  s[velocity]=(s[velocity]+(target-s[key])*.18*dt)*Math.pow(.72,dt);
-  s[key]+=s[velocity]*dt;
-  if(Math.abs(target-s[key])<.012&&Math.abs(s[velocity])<.012){
-    s[key]=target;s[velocity]=0;
-  }
-  return s[key]!==target||s[velocity]!==0;
- }
- function tick(time){
-  frame=0;
-  if(!enabled()){clearNow();return}
-  const dt=clamp((time-(last||time))/16.667,.5,2);
-  last=time;
-  let moving=false;
-  for(const s of states){
-   const [tx,ty]=desired(s);
-   const activeX=spring(s,'x',tx,dt);
-   const activeY=spring(s,'y',ty,dt);
-   const activeScale=spring(s,'scale',s.pressed?.975:1,dt);
-   s.el.style.setProperty('--mag-x',s.x.toFixed(3)+'px');
-   s.el.style.setProperty('--mag-y',s.y.toFixed(3)+'px');
-   s.el.style.setProperty('--mag-scale',s.scale.toFixed(5));
-   if(activeX||activeY||activeScale)moving=true;
-  }
-  if(moving)frame=requestAnimationFrame(tick);
-  else last=0;
- }
- document.addEventListener('pointermove',e=>{
-   if(e.pointerType!=='mouse'&&e.pointerType!=='pen')return;
-   pointer.x=e.clientX;pointer.y=e.clientY;pointer.valid=true;schedule();
- },{passive:true});
- document.addEventListener('pointerout',e=>{
-   if(e.relatedTarget)return;pointer.valid=false;schedule();
- },{passive:true});
- window.addEventListener('blur',()=>{pointer.valid=false;states.forEach(s=>s.pressed=false);schedule()});
- window.addEventListener('scroll',schedule,{passive:true});
- window.addEventListener('resize',schedule,{passive:true});
- for(const s of states){
-  const press=()=>{if(!enabled())return;s.pressed=true;schedule()};
-  const release=()=>{s.pressed=false;schedule()};
-  s.el.addEventListener('pointerdown',press);
-  s.el.addEventListener('pointerup',release);
-  s.el.addEventListener('pointercancel',release);
-  s.el.addEventListener('pointerleave',release);
- }
- const update=()=>{if(!enabled())clearNow();else schedule()};
- media.addEventListener('change',update);
- reduce.addEventListener('change',update);
- window.ARALMagneticPreview={count:links.length,strength,limit,reach};
-})();
-</script>
 
-</body></html>
+
+<script src="../../../../assets/aral-magnetic.js" defer></script></body></html>
