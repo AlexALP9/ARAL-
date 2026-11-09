@@ -10,7 +10,7 @@ const report={source:'PR #9 / home-integration-preview.html',screens:[],checks:[
 let failures=[];
 const assert=(ok,message)=>{report.checks.push({ok,message});if(!ok)failures.push(message);};
 for(const width of [1440,1024,768,390]){
- const page=await browser.newPage({viewport:{width,height:900},deviceScaleFactor:1,reducedMotion:'no-preference'});
+ const page=await browser.newPage({viewport:{width,height:900},deviceScaleFactor:1,hasTouch:width<=768,reducedMotion:'no-preference'});
  const errors=[],responses=[];
  page.on('pageerror',e=>errors.push(e.message));
  page.on('response',r=>{if(r.status()>=400)responses.push(r.status()+' '+r.url())});
