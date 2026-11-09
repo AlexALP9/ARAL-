@@ -62,7 +62,7 @@ for(const width of [1440,1024,768,390]){
  verify(await cards.first().locator('.pin-perspective').count()===1,width+': pin survives dynamic filtering');
  await page.locator('#saeFilter').selectOption('');
  if(width<=800){
-   await page.locator('#applyFilters').click();
+   await page.keyboard.press('Escape');
    verify(await page.locator('#filtersPanel').evaluate(n=>!n.classList.contains('drawer-open')),width+': mobile filter drawer closes');
  }
  await first.scrollIntoViewIfNeeded();
