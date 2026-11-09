@@ -30,6 +30,8 @@ jobs:
         run: node design/hero/prototypes/hero-4s-k-views/capture-home.mjs
       - name: Compare card animation variants in Chromium
         run: node design/hero/prototypes/hero-4s-k-views/capture-card-motion.mjs
+      - name: Product catalog 3D Pin regression and screenshots
+        run: node design/hero/prototypes/hero-4s-k-views/capture-products-pin.mjs
       - name: Package self-contained review checkout
         if: always()
         run: |
