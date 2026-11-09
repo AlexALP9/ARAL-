@@ -28,6 +28,8 @@ jobs:
           done
       - name: Test magnetic motion and capture 1440, 1024, 768, 390 px screenshots
         run: node design/hero/prototypes/hero-4s-k-views/capture-magnetic.mjs
+      - name: Check softened attraction on product, partner and article buttons
+        run: node design/hero/prototypes/hero-4s-k-views/capture-magnetic-pages.mjs
       - name: Package approval preview without modifying published site
         if: always()
         run: |
@@ -39,6 +41,8 @@ jobs:
           cp -a design/hero/ARAL_HERO_MOTION_01A1556A/sources review-output/site/design/hero/ARAL_HERO_MOTION_01A1556A/
           cp -a media/editorial media/production review-output/site/media/
           cp pages/*.html review-output/site/pages/
+          mkdir -p review-output/site/assets
+          cp assets/aral-magnetic.css assets/aral-magnetic.js review-output/site/assets/
           cp index.html review-output/site/
           printf '%s\n' 'Run in site/ folder: python3 -m http.server 8000' 'Preview: http://localhost:8000/design/hero/prototypes/hero-4s-k-views/ARAL_home_magnetic_buttons_preview.html' > review-output/OPEN-MAGNETIC.txt
       - name: Upload screenshots and complete HTML preview
