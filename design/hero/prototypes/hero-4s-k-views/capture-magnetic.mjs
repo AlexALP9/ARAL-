@@ -9,7 +9,8 @@ function ok(cond,message){report.checks.push({ok:Boolean(cond),message});if(!con
 const buttons=[
  ['hero-primary','../../../../pages/drivers-08.html','/pages/drivers-08.html'],
  ['hero-secondary','../../../../pages/products-r15.html#/catalog','/pages/products-r15.html#/catalog'],
- ['b2b-primary','../../../../pages/partners-11.html','/pages/partners-11.html']
+ ['b2b-primary','../../../../pages/partners-11.html','/pages/partners-11.html'],
+ ['header-catalog','../../../../pages/products-r15.html#/catalog','/pages/products-r15.html#/catalog']
 ];
 const state=async(el)=>el.evaluate(n=>{
  const c=getComputedStyle(n),m=new DOMMatrix(c.transform);
@@ -30,7 +31,7 @@ for(const width of [1440,1024,768,390]){
     over:document.documentElement.scrollWidth-innerWidth,
     broken:[...document.images].filter(x=>!x.complete||x.naturalWidth===0).map(x=>x.src)};
  });
- ok(stats.buttons===3,width+': exactly three real ARAL CTA links are magnetic');
+ ok(stats.buttons===4,width+': exactly four real ARAL CTA links are magnetic');
  ok(stats.cards===4,width+': four existing revision 15 product cards remain');
  ok(stats.frame==='4.80',width+': HERO keeps its exact final 4.80-second frame');
  ok(stats.over<=3,width+': no horizontal overflow ('+stats.over+'px)');
@@ -50,8 +51,8 @@ for(const width of [1440,1024,768,390]){
    await page.mouse.move(box.x+box.width*.82,box.y+box.height*.65);
    await page.waitForTimeout(690);
    const m=await state(link);
-   ok(Math.hypot(m.tx,m.ty)>1.5,width+': '+name+' attracts the cursor proportionally');
-   ok(Math.abs(m.tx)<=10.3&&Math.abs(m.ty)<=10.3,width+': '+name+' stays in the 10px displacement cap');
+   ok(Math.hypot(m.tx,m.ty)>.7,width+': '+name+' attracts the cursor proportionally');
+   ok(Math.abs(m.tx)<=5.3&&Math.abs(m.ty)<=5.3,width+': '+name+' stays in the 5px displacement cap');
    if(width===1440&&name==='hero-primary'){
     await page.screenshot({path:out+'/ARAL-magnetic-hero-hover-1440.png',fullPage:false,animations:'allow'});
     const center=await link.boundingBox();
@@ -75,6 +76,8 @@ for(const width of [1440,1024,768,390]){
  // Real link navigation. A moving link must still be click-targetable.
  for(const [name,href,final] of buttons){
   const link=page.locator('[data-magnetic="'+name+'"]');
+  // Header catalog is deliberately hidden on narrow phones by existing ARAL design.
+  if(name==='header-catalog' && !(await link.isVisible()))continue;
   await link.scrollIntoViewIfNeeded();
   await link.click();
   ok(page.url().includes(final),width+': '+name+' remains clickable and navigates correctly');

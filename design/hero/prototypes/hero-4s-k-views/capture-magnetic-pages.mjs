@@ -23,7 +23,8 @@ for(const width of [1440,1024,768,390]){
  page.on('pageerror',e=>errors.push(e.message));
  await page.goto(HOME,{waitUntil:'domcontentloaded'});
  await page.waitForTimeout(350);
- check(await page.locator('[data-magnetic]').count()===3,width+': three original home CTAs');
+ check(await page.locator('[data-magnetic]').count()===4,width+': four home CTA links including header catalog');
+ check(await page.locator('[data-magnetic="header-catalog"]').getAttribute('href')==='../../../../pages/products-r15.html#/catalog',width+': header catalog destination remains unchanged');
  const api=await page.evaluate(()=>window.ARALMagneticButtons);
  check(api?.initialized&&api.maxShift===5&&api.strength===.17,width+': gentler 5px magnetic script loaded');
  if(!touch){
