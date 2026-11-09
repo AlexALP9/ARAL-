@@ -242,7 +242,7 @@ sync();})();
  const reduce=window.matchMedia('(prefers-reduced-motion:reduce)');
  const strength=0.31, limit=10, reach=115;
  const pointer={x:0,y:0,valid:false};
- const states=links.map(el=>({el,x:0,y:0,scale:1,vx:0,vy:0,vs:0,pressed:false}));
+ const states=links.map(el=>({el,x:0,y:0,scale:1,vx:0,vy:0,vscale:0,pressed:false}));
  let frame=0,last=0;
  const clamp=(v,min,max)=>Math.max(min,Math.min(max,v));
  function enabled(){return media.matches&&!reduce.matches}
@@ -251,7 +251,7 @@ sync();})();
   if(frame)cancelAnimationFrame(frame);
   frame=0;last=0;
   for(const s of states){
-   Object.assign(s,{x:0,y:0,scale:1,vx:0,vy:0,vs:0,pressed:false});
+   Object.assign(s,{x:0,y:0,scale:1,vx:0,vy:0,vscale:0,pressed:false});
    s.el.style.setProperty('--mag-x','0px');
    s.el.style.setProperty('--mag-y','0px');
    s.el.style.setProperty('--mag-scale','1');
