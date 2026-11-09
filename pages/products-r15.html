@@ -94,6 +94,104 @@
  .details-grid > .product-description > p,
  .details-grid > .product-note > p {padding:0 18px 18px;}
 }
+
+/* PR #9 / approved 3D Animated Pin motion, adapted from the existing B preview.
+   Product-card content, photos, filters, PDP routes and compare actions unchanged. */
+#assortment .cards{padding-top:28px;margin-top:-28px}
+#assortment .product-card--minimal{
+  overflow:visible;isolation:isolate;transform-style:preserve-3d;
+  backface-visibility:hidden;
+  transition:transform 650ms cubic-bezier(.2,.75,.25,1),box-shadow 650ms ease,border-color .2s;
+}
+#assortment .product-card--minimal:hover,#assortment .product-card--minimal:focus-within{
+  transform:perspective(1100px) translate3d(0,-9px,22px) rotateX(11deg) scale(.985);
+  box-shadow:0 27px 44px rgba(8,47,104,.19);border-color:#afd0f3;z-index:3;
+}
+#assortment .product-card--minimal:focus-visible,
+#assortment .product-card--minimal:focus,
+#assortment .product-card--minimal .compare-add:focus-visible{
+  outline:3px solid #ffe425;outline-offset:4px;
+}
+#assortment .product-card--minimal .product-photo{border-radius:13px 13px 0 0}
+#assortment .product-card--minimal .product-photo img{
+  transform:translateZ(0);transition:transform 650ms cubic-bezier(.2,.75,.25,1);
+}
+#assortment .product-card--minimal:hover .product-photo img{
+  transform:translateZ(28px) scale(1.015)
+}
+#assortment .product-card--minimal .pc-body{
+  transform:translateZ(0);transition:transform 650ms ease
+}
+#assortment .product-card--minimal:hover .pc-body{
+  transform:translateZ(12px)
+}
+#assortment .product-card--minimal .compare-add{position:relative;z-index:8}
+#assortment .pin-perspective{
+  position:absolute;pointer-events:none;z-index:7;inset:0;
+  transform-style:preserve-3d;opacity:0;transition:opacity 450ms ease
+}
+#assortment .product-card--minimal:hover .pin-perspective,
+#assortment .product-card--minimal:focus-within .pin-perspective,
+#assortment .product-card--minimal:focus .pin-perspective{opacity:1}
+#assortment .pin-label{
+  position:absolute;left:50%;top:-23px;transform:translate(-50%,6px);
+  border-radius:100px;background:#061d40;color:#fff;
+  padding:5px 13px;font-weight:750;font-size:10px;white-space:nowrap;
+  box-shadow:0 7px 22px #0326544d;
+  transition:transform 600ms cubic-bezier(.2,.8,.25,1)
+}
+#assortment .product-card--minimal:hover .pin-label,
+#assortment .product-card--minimal:focus-within .pin-label{
+  transform:translate(-50%,-1px)
+}
+#assortment .pin-label::after{
+  content:"";position:absolute;bottom:0;left:15%;width:70%;height:1px;
+  background:linear-gradient(90deg,transparent,#6bd8ff,transparent)
+}
+#assortment .pin-stem{
+  position:absolute;left:50%;top:4px;height:33px;width:2px;
+  transform:translateX(-50%);
+  background:linear-gradient(to bottom,#78daff,#0082d5,transparent);
+  filter:drop-shadow(0 0 4px #2faefa)
+}
+#assortment .pin-tip{
+  position:absolute;left:50%;top:35px;height:7px;width:7px;
+  transform:translateX(-50%);border-radius:50%;background:#c6fbff;
+  box-shadow:0 0 0 4px #58c9ff2d,0 0 15px #0b9de3
+}
+#assortment .pin-wave{
+  position:absolute;left:50%;top:36px;width:108px;height:108px;
+  border-radius:50%;border:1px solid #4fafff77;
+  background:radial-gradient(circle,#0f89de11,transparent 68%);
+  transform:translate(-50%,-50%) rotateX(70deg) scale(.1);
+  opacity:0;animation:aral-catalog-pin-pulse 5.5s ease-out infinite paused;
+}
+#assortment .pin-wave:nth-of-type(5){animation-delay:1.5s}
+#assortment .pin-wave:nth-of-type(6){animation-delay:3s}
+#assortment .product-card--minimal:hover .pin-wave,
+#assortment .product-card--minimal:focus-within .pin-wave{animation-play-state:running}
+@keyframes aral-catalog-pin-pulse{
+  0%{opacity:0;transform:translate(-50%,-50%) rotateX(70deg) scale(.05)}
+  10%{opacity:.85}75%{opacity:.26}
+  100%{opacity:0;transform:translate(-50%,-50%) rotateX(70deg) scale(1.45)}
+}
+@media(hover:none),(pointer:coarse){
+ #assortment .pin-perspective{display:none!important}
+ #assortment .product-card--minimal:hover,
+ #assortment .product-card--minimal:focus-within{transform:none!important;box-shadow:none}
+ #assortment .product-card--minimal:hover .pc-body{transform:none}
+ #assortment .product-card--minimal:hover .product-photo img{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+ #assortment .product-card--minimal,
+ #assortment .product-card--minimal .product-photo img,
+ #assortment .product-card--minimal .pc-body,
+ #assortment .pin-perspective,#assortment .pin-label{transition:none!important}
+ #assortment .product-card--minimal:hover,
+ #assortment .product-card--minimal:focus-within{transform:none!important}
+ #assortment .pin-wave{animation:none!important}
+}
+
 </style></head>
 <body><div class="notice-top"><div class="wrap"><span>ARAL / ТЕХНИЧЕСКИЙ КАТАЛОГ</span><span>РАБОЧИЙ HTML-ПРОТОТИП <b>· НЕ ОПУБЛИКОВАН</b></span></div></div>
 <header class="site-header"><div class="wrap nav-row"><a class="brand" href="../index.html#company"><span class="brand-diamond"><span>ARAL</span></span><span class="brand-text">ARAL</span></a><nav class="navlinks" id="topNav" aria-label="Семь разделов ARAL"><a href="../index.html#company">Компания</a><a class="current" href="#/catalog">Продукция</a><a href="drivers-08.html">Для водителей</a><a href="partners-11.html">Для партнёров</a><a href="advantages-04.html">Преимущества ARAL</a><a href="../index.html#interesting">Интересное</a><a href="contacts-03.html">Контакты</a></nav><div class="navtools"><a class="icon-btn primary-link" href="#/catalog">Каталог</a><a href="#/compare" class="icon-btn" id="headerCompare">Сравнение <em id="compareCount">0</em></a><button type="button" class="icon-btn mobile-toggle" id="menuToggle" aria-expanded="false" aria-controls="topNav" aria-label="Показать меню">☰</button></div></div></header>
@@ -162,7 +260,7 @@ function cards(p){
  <div class="pc-body"><h3>${escape(nameOf(p))}</h3>
  <div class="specchips" aria-label="Подтверждённые технические обозначения">${cardBadges(p)}</div>
  <div class="pc-volumes" aria-label="Доступные фасовки">${p.variants.map(v=>`<span>${escape(v.volume)}</span>`).join('')}</div>
- <div class="pc-foot"><button type="button" class="compare-add ${is?'selected':''}" data-compare="${escape(p.internal_id)}">${is?'✓ Добавлено':'+ Сравнить'}</button></div></div></article>`;
+ <div class="pc-foot"><button type="button" class="compare-add ${is?'selected':''}" data-compare="${escape(p.internal_id)}">${is?'✓ Добавлено':'+ Сравнить'}</button></div></div><span class="pin-perspective" aria-hidden="true"><span class="pin-label">ARAL · Подробнее о товаре</span><span class="pin-stem"></span><span class="pin-tip"></span><span class="pin-wave"></span><span class="pin-wave"></span><span class="pin-wave"></span></span></article>`;
 }
 function renderCatalog(){document.title='Продукция ARAL — рабочий HTML-прототип';
 const saes=[...new Set(products.map(p=>p.sae).filter(Boolean))].sort(); const vols=[...new Set(products.flatMap(p=>p.variants.map(v=>v.volume)))].sort((a,b)=>parseInt(a)-parseInt(b));
