@@ -18,7 +18,7 @@ const motion=async el=>el.evaluate(n=>{
 });
 for(const width of [1440,1024,768,390]){
  const touch=width<=768;
- const context=await browser.newContext({viewport:{width,height:900},hasTouch:touch,deviceScaleFactor:1,reducedMotion:'no-preference'});
+ const context=await browser.newContext({viewport:{width,height:900},hasTouch:touch,isMobile:touch,deviceScaleFactor:1,reducedMotion:'no-preference'});
  const page=await context.newPage(),errors=[];
  page.on('pageerror',e=>errors.push(e.message));
  await page.goto(HOME,{waitUntil:'domcontentloaded'});
@@ -67,9 +67,9 @@ for(const width of [1440,1024,768,390]){
   if(item.id==='articles'){
    check(await page.locator('.story-toggle[data-magnetic][type="button"]').count()===6,width+': six native article buttons');
    const first=all.first();
-   await first.scrollIntoViewIfNeeded();await first.click();
+   await first.scrollIntoViewIfNeeded();if(touch)await first.tap();else await first.click();
    check(await first.getAttribute('aria-expanded')==='true',width+': article expands');
-   await first.click();
+   if(touch)await first.tap();else await first.click();
    check(await first.getAttribute('aria-expanded')==='false',width+': article collapses');
    await page.waitForTimeout(700); // let the approved article scroll animation settle
   }
