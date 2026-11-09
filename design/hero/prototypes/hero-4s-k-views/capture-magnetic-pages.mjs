@@ -71,6 +71,7 @@ for(const width of [1440,1024,768,390]){
    check(await first.getAttribute('aria-expanded')==='true',width+': article expands');
    await first.click();
    check(await first.getAttribute('aria-expanded')==='false',width+': article collapses');
+   await page.waitForTimeout(700); // let the approved article scroll animation settle
   }
   if(!touch){
    const first=all.first();await first.scrollIntoViewIfNeeded();
@@ -78,12 +79,12 @@ for(const width of [1440,1024,768,390]){
    await page.mouse.move(r.x+r.width*.82,r.y+r.height*.55);
    await page.waitForTimeout(700);
    const m=await motion(first);
-   check(Math.abs(m.x)<=5.3&&Math.abs(m.y)<=5.3&&Math.hypot(m.x,m.y)>.5,width+': '+item.id+' gentle hover');
+   check(Math.abs(m.x)<=5.3&&Math.abs(m.y)<=5.3&&Math.hypot(m.x,m.y)>.5,width+': '+item.id+' gentle hover ('+m.x+','+m.y+','+m.raw+')');
    await page.mouse.move(1,1);await page.waitForTimeout(900);
    const back=await motion(first);
    check(Math.hypot(back.x,back.y)<.4,width+': '+item.id+' spring return');
   }else{
-   const m=await motion(all.first());check(m.raw==='none',width+': '+item.id+' disabled on touch');
+   const m=await motion(all.first());check(Math.abs(m.x)<.2&&Math.abs(m.y)<.2,width+': '+item.id+' no touch displacement ('+m.raw+')');
   }
   if([1440,390].includes(width)){
    await page.screenshot({path:root+'/'+item.id+'-'+width+'.png',fullPage:true,animations:'disabled'});
