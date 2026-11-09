@@ -52,11 +52,19 @@ for(const width of [1440,1024,768,390]){
  const ids=await page.evaluate(()=>{try{return JSON.parse(localStorage.getItem('aralProductsV13Compare')||'[]')}catch{return[]}});
  verify(ids.includes('ARAL-001'),width+': compare stores product in shared revision 15 key');
  verify(page.url().includes('#/catalog'),width+': compare does not open product detail');
+ if(width<=800){
+   await page.locator('#openFilters').click();
+   verify(await page.locator('#filtersPanel').evaluate(n=>n.classList.contains('drawer-open')),width+': mobile filter drawer opens');
+ }
  await page.locator('#saeFilter').selectOption({index:1});
  const filtered=await cards.count();
  verify(filtered>0&&filtered<17,width+': SAE filter operates after 3D pin is added');
  verify(await cards.first().locator('.pin-perspective').count()===1,width+': pin survives dynamic filtering');
  await page.locator('#saeFilter').selectOption('');
+ if(width<=800){
+   await page.locator('#applyFilters').click();
+   verify(await page.locator('#filtersPanel').evaluate(n=>!n.classList.contains('drawer-open')),width+': mobile filter drawer closes');
+ }
  await first.scrollIntoViewIfNeeded();
  await first.focus();
  const focus=await first.evaluate(n=>getComputedStyle(n).outlineStyle);
