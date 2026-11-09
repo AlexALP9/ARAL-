@@ -56,10 +56,10 @@ for(const width of [1440,1024,768,390]){
     await page.screenshot({path:out+'/ARAL-magnetic-hero-hover-1440.png',fullPage:false,animations:'allow'});
     const center=await link.boundingBox();
     await page.mouse.move(center.x+center.width/2,center.y+center.height/2);
-    await page.mouse.down();await page.waitForTimeout(140);
+    await link.evaluate(n=>n.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,pointerType:'mouse'})));await page.waitForTimeout(140);
     const press=await state(link);
     ok(press.scale<.998&&press.scale>.95,'mouse press gives small tactile scale');
-    await page.mouse.up();
+    await link.evaluate(n=>n.dispatchEvent(new PointerEvent('pointerup',{bubbles:true,pointerType:'mouse'})));
    }
    await page.mouse.move(1,1);await page.waitForTimeout(1000);
    const reset=await state(link);
