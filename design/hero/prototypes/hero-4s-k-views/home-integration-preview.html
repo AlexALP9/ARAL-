@@ -92,6 +92,70 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height
 @media(max-width:430px){.home-nav-inner{padding-inline:14px}.home-nav-tools .home-catalog-cta{display:none}.home-compare-link{padding:10px}.home-menu-toggle{padding:9px 11px}.home-cards{gap:9px}.product-photo{height:155px;padding:9px}.product-photo img{max-height:134px}.pc-body{padding:13px 10px;min-height:240px}.pc-body h3{font-size:14px}.specchips span{font-size:9px;padding:4px 5px}.pc-volumes span{font-size:9px;padding:3px 5px}.compare-add{font-size:10px;padding:8px 6px}.section-header{align-items:start}.section-header .navcta{font-size:12px}.audience-tile__body{padding:23px}.aral-hero .actions a{min-height:46px}.foot-links{gap:12px}.tech-story__photo img{object-position:center}}
 @media(prefers-reduced-motion:reduce){.home-toast{transition:none}}
 
+
+/* User-approved motion A from the already reviewed gradient prototype. */
+/* These prototypes reuse every ARAL product-card HTML node verbatim from PR #9.
+   Only the hover interaction changes; source HERO, comparison and routes are untouched. */
+#featured .product-card--minimal { overflow:visible; isolation:isolate; }
+#featured .home-cards { padding-top:28px; margin-top:-28px; }
+#featured .product-card--minimal:hover { z-index:3; }
+#featured .product-card--minimal .product-photo { border-radius:13px 13px 0 0; }
+#featured .product-card--minimal .compare-add { position:relative; z-index:6; }
+#featured .product-card--minimal .compare-add:focus-visible,
+#featured .product-card--minimal:focus-visible,
+#featured .product-card--minimal:focus { outline:3px solid #ffe425; outline-offset:4px; }
+@media(hover:none),(pointer:coarse){
+  #featured .product-card--minimal { transform:none!important; }
+  #featured .product-card--minimal .product-photo img { transform:none!important; }
+}
+
+
+/* A — faithful CSS translation of Aceternity BackgroundGradient's two radial
+   gradient layers, soft outer blur, moving 400% background and hover opacity.
+   ARAL brand palette replaces the demo's green/purple/orange gradient. */
+#featured .product-card--minimal { background:#fff; }
+#featured .product-card--minimal .pc-body { background:#fff; position:relative; z-index:1; border-radius:0 0 12px 12px; }
+#featured .product-card--minimal:hover { transform:none; box-shadow:none; border-color:#a8c8ec; }
+#featured .product-card--minimal::before,
+#featured .product-card--minimal::after {
+ content:""; position:absolute; inset:-3px; border-radius:16px;
+ background:
+  radial-gradient(circle farthest-side at 0% 100%, #0767d5 0%, transparent 60%),
+  radial-gradient(circle farthest-side at 100% 0%, #78c9ff 0%, transparent 59%),
+  radial-gradient(circle farthest-side at 100% 100%, #d6efff 0%, transparent 55%),
+  radial-gradient(circle farthest-side at 0% 0%, #0050c8, #0b2144 80%);
+ background-size:400% 400%;
+ background-position:0% 50%;
+ opacity:0; pointer-events:none;
+ transition:opacity 450ms ease;
+ animation: aral-background-sweep 5s ease-in-out infinite paused;
+}
+#featured .product-card--minimal::before {
+ filter:blur(11px); z-index:-1; inset:-5px;
+}
+#featured .product-card--minimal::after {
+ padding:3px; z-index:4;
+ -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+ -webkit-mask-composite:xor;mask-composite:exclude;
+}
+#featured .product-card--minimal:hover::before,
+#featured .product-card--minimal:hover::after,
+#featured .product-card--minimal:focus-within::before,
+#featured .product-card--minimal:focus-within::after,
+#featured .product-card--minimal:focus-visible::before,
+#featured .product-card--minimal:focus-visible::after {
+ opacity:1;animation-play-state:running;
+}
+@keyframes aral-background-sweep {
+ 0%,100%{background-position:0% 50%}
+ 50%{background-position:100% 50%}
+}
+@media(hover:none),(pointer:coarse){
+ #featured .product-card--minimal::before,#featured .product-card--minimal::after{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+ #featured .product-card--minimal::before,#featured .product-card--minimal::after{animation:none!important;transition:none}
+}
 </style></head>
 <body><a class="skip-link" href="#home-page">К содержанию</a>
 <header class="home-nav"><div class="home-nav-inner"><a class="home-brand" href="home-integration-preview.html" aria-label="ARAL, главная"><span class="brand-diamond" aria-hidden="true"><span>ARAL</span></span><span class="brand-text">ARAL</span></a><button class="home-menu-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Меню</button><nav id="home-menu" class="home-menu" aria-label="Разделы сайта"><a href="../../../../index.html#company">Компания</a><a href="../../../../pages/products-r15.html#/catalog">Продукция</a><a href="../../../../pages/drivers-08.html">Для водителей</a><a href="../../../../pages/partners-11.html">Для партнёров</a><a href="../../../../pages/advantages-04.html">Преимущества ARAL</a><a href="../../../../index.html#interesting">Интересное</a><a href="../../../../pages/contacts-03.html">Контакты</a></nav><div class="home-nav-tools"><a class="home-compare-link" id="compareShortcut" href="../../../../pages/products-r15.html#/compare" aria-label="Сравнение товаров">Сравнение <span id="homeCompareCount">0</span></a><a class="navcta home-catalog-cta" href="../../../../pages/products-r15.html#/catalog">Каталог <span aria-hidden="true">↗</span></a></div></div></header>

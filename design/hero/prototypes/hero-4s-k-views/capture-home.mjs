@@ -33,6 +33,11 @@ for(const width of [1440,1024,768,390]){
  assert(stats.overflow<=3,width+': no horizontal overflow ('+stats.overflow+'px)');
  assert(errors.length===0,width+': no JS page errors ('+errors.join('; ')+')');
  assert(responses.length===0,width+': no HTTP errors ('+responses.join('; ')+')');
+ if(width<=768){
+  const disabled=await page.locator('#featured .product-card--minimal').first()
+    .evaluate(n=>getComputedStyle(n,'::after').display==='none');
+  assert(disabled,width+': gradient effect is nonintrusive for touch screens');
+ }
  if(width<=880){
   const toggle=page.locator('.home-menu-toggle');
   await toggle.click();
@@ -45,6 +50,21 @@ for(const width of [1440,1024,768,390]){
  await page.screenshot({path:screenshot,fullPage:true,animations:'disabled'});
  report.screens.push({width,file:screenshot,height:await page.evaluate(()=>document.documentElement.scrollHeight),...stats});
  if(width===1440){
+  const product=page.locator('#featured .product-card--minimal').first();
+  await product.scrollIntoViewIfNeeded();
+  await product.hover();
+  await page.waitForTimeout(650);
+  const motion=await product.evaluate(n=>({
+    glow:Number(getComputedStyle(n,'::after').opacity),
+    running:getComputedStyle(n,'::after').animationPlayState==='running',
+    border:getComputedStyle(n).borderColor,
+  }));
+  assert(motion.glow>.8&&motion.running,'Approved Background Gradient activates on homepage product hover');
+  await page.screenshot({path:path.join(out,'ARAL-home-1440px-gradient-hover.png'),fullPage:false,animations:'allow'});
+  await page.mouse.move(2,2);
+  await page.waitForTimeout(650);
+  const off=await product.evaluate(n=>Number(getComputedStyle(n,'::after').opacity));
+  assert(off<.2,'Background Gradient fades out on mouse leave');
   await page.locator('[data-compare]').first().click();
   assert((await page.locator('#homeCompareCount').innerText()).trim()==='1','Compare: count updates');
   assert((await page.evaluate(()=>JSON.parse(localStorage.getItem('aralProductsV13Compare')||'[]'))).includes('ARAL-003'),'Compare: stored under revision 15 key');
