@@ -1,0 +1,37 @@
+name: PR9 Two-zone ARAL waves +20 comparison
+on:
+  push:
+    branches: [codex/aral-home-hero48-cards-r15-20261028]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  visual:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install Chromium and screenshot diff library
+        run: |
+          npm install --no-save --no-package-lock playwright@1.57.0 pngjs@7.0.0
+          npx playwright install --with-deps chromium
+      - name: Serve ARAL HTML
+        run: |
+          python3 -m http.server 8123 --bind 127.0.0.1 > /tmp/aral-two-zones.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8123/design/hero/prototypes/hero-4s-k-views/ARAL_home_waves_two_zones_plus20_preview.html >/dev/null; then break; fi
+            sleep 1
+          done
+      - name: Verify two revised waves and preserve HERO, cards and mobile
+        run: node design/hero/prototypes/hero-4s-k-views/capture-two-zones-plus20.mjs
+      - name: Upload screenshots and pixel comparisons
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ARAL-two-zone-contour-plus20-review
+          path: review-output/two-zone-waves20/
+          if-no-files-found: warn
+          retention-days: 30
