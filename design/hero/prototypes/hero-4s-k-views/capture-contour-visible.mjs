@@ -40,8 +40,8 @@ for(const width of [1440,1024,768,390]){
   heroTime:document.querySelector(".aral-scene")?.dataset.time,
   bg:getComputedStyle(featured,"::before").backgroundImage,
   lowerBg:getComputedStyle(featured,"::after").backgroundImage,
-  featuredRect:[r.x,r.y,r.width,r.height],
-  heroRect:[hero.getBoundingClientRect().x,hero.getBoundingClientRect().y,hero.getBoundingClientRect().width,hero.getBoundingClientRect().height],
+  featuredRect:[r.x+scrollX,r.y+scrollY,r.width,r.height],
+  heroRect:[hero.getBoundingClientRect().x+scrollX,hero.getBoundingClientRect().y+scrollY,hero.getBoundingClientRect().width,hero.getBoundingClientRect().height],
   overflow:document.documentElement.scrollWidth-innerWidth};
  });
  let after=await beforeData();
