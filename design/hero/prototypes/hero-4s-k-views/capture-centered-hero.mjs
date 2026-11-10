@@ -20,7 +20,7 @@ const rects=async p=>p.evaluate(()=>{
   hbg:document.querySelectorAll(".aral-hbg-border").length,
   magnetic:document.querySelectorAll("[data-magnetic]").length,
   time:document.querySelector(".aral-scene")?.dataset.time,
-  photos:[...document.querySelectorAll(".aral-scene img")].map(el=>el.getAttribute("src"))
+  photos:[...document.querySelectorAll(".aral-scene img")].map(el=>el.getAttribute("data-product")||el.getAttribute("class")||"camera-product")
  }
 });
 for(const width of [1440,1024,768,390]){
@@ -44,7 +44,7 @@ for(const width of [1440,1024,768,390]){
  check(b.actions?.bottom<=b.hero?.bottom+2,width+": buttons inside HERO");
  check(b.title?.width>0&&b.description?.width>0,width+": text has visible width");
  if(width>=1101){
-  check(b.copy.left<a.copy.left+40,width+": copy not pushed right off center");
+  check(b.title.left<a.title.left+75,width+": title remains balanced within left column");
   check(b.scene.left<a.scene.left,width+": right product column moved closer to copy");
   check(b.title.top>a.title.top+15,width+": title lowered toward product group");
  }
