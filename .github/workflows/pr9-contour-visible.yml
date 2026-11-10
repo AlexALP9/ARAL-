@@ -1,0 +1,38 @@
+name: PR9 Contour 2A visible comparison
+on:
+  push:
+    branches:
+      - codex/aral-home-hero48-cards-r15-20261028
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  visual:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install Chromium and PNG comparison dependency
+        run: |
+          npm install --no-save --no-package-lock playwright@1.57.0 pngjs@7.0.0
+          npx playwright install --with-deps chromium
+      - name: Serve preview
+        run: |
+          python3 -m http.server 8123 --bind 127.0.0.1 >/tmp/contour-visible.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8123/design/hero/prototypes/hero-4s-k-views/ARAL_home_contour_2A_visible_comparison_preview.html >/dev/null; then break; fi
+            sleep 1
+          done
+      - name: Capture before / after comparison on four viewports
+        run: node design/hero/prototypes/hero-4s-k-views/capture-contour-visible.mjs
+      - name: Upload comparison screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ARAL-PR9-Contour-2A-Before-After
+          path: review-output/contour-visible/
+          if-no-files-found: warn
+          retention-days: 30
