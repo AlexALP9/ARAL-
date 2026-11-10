@@ -38,7 +38,7 @@ body.aral-gradient-preview :is(.section.gray,.contacts-section.alt){background-c
 .aral-gradient-controls button[aria-pressed="true"]{background:#0756a1;color:#fff;border-color:#0756a1}
 .aral-gradient-controls button:focus-visible{outline:3px solid #ffe425;outline-offset:2px}
 .aral-gradient-controls small{display:block;color:#56728d;max-width:290px}
-@media(pointer:coarse),(max-width:680px),(prefers-reduced-motion:reduce){
+@media(hover:none),(pointer:coarse),(max-width:900px),(prefers-reduced-motion:reduce){
  .aral-gradient-field .aral-orb{animation:none!important;will-change:auto}
  .aral-gradient-field .aral-cursor{display:none}
 }
