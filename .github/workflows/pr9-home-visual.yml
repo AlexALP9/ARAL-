@@ -44,6 +44,8 @@ jobs:
           cp -a design/hero/ARAL_HERO_MOTION_01A1556A/sources review-output/site/design/hero/ARAL_HERO_MOTION_01A1556A/
           cp -a media/editorial media/production review-output/site/media/
           cp pages/*.html review-output/site/pages/
+          mkdir -p review-output/site/assets
+          cp assets/aral-magnetic.css assets/aral-magnetic.js review-output/site/assets/
           cp index.html review-output/site/
           printf '%s\n' 'Open from the site/ directory using: python3 -m http.server 8000' 'A: /design/hero/prototypes/hero-4s-k-views/home-product-cards-gradient-preview.html' 'B: /design/hero/prototypes/hero-4s-k-views/home-product-cards-3d-pin-preview.html' 'Home: /design/hero/prototypes/hero-4s-k-views/home-integration-preview.html' > review-output/OPEN-LOCALLY.txt
       - name: Upload approval materials

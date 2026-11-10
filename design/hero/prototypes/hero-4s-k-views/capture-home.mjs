@@ -23,12 +23,16 @@ for(const width of [1440,1024,768,390]){
   return {sceneReady:document.querySelector('.aral-scene')?.classList.contains('ready'),
     frame:document.querySelector('.aral-scene')?.dataset.time,
     cards:document.querySelectorAll('.product-card--minimal').length,
+    borderTiles:document.querySelectorAll('.aral-hbg-target > .aral-hbg-border').length,
+    magneticLinks:document.querySelectorAll('[data-magnetic]').length,
     sections:document.querySelectorAll('main section').length,
     broken:[...document.images].filter(img=>!img.complete||img.naturalWidth===0).map(img=>img.currentSrc||img.src),
     overflow:document.documentElement.scrollWidth-innerWidth};
  });
  assert(stats.sceneReady&&stats.frame==='4.80',width+': HERO loads and ends at 4.80s');
  assert(stats.cards===4,width+': four original catalogue cards');
+ assert(stats.borderTiles===7,width+': approved Hover Border Gradient applies to exactly seven information tiles');
+ assert(stats.magneticLinks===4,width+': four existing Magnetic Buttons retained');
  assert(stats.broken.length===0,width+': all HTML photographs decode ('+stats.broken.join(',')+')');
  assert(stats.overflow<=3,width+': no horizontal overflow ('+stats.overflow+'px)');
  assert(errors.length===0,width+': no JS page errors ('+errors.join('; ')+')');

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ARAL — Главная · объединённый черновик</title><meta name="description" content="Изолированный черновик главной ARAL: исходный HERO 4,8 с из PR #7 и карточки Продукции revision 15."><link rel="stylesheet" href="review.css"><style>
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ARAL — Главная · рабочая сборка PR №9</title><meta name="description" content="Изолированный черновик главной ARAL: исходный HERO 4,8 с из PR #7 и карточки Продукции revision 15."><link rel="stylesheet" href="review.css"><style>
 :root{--blue:#003c98;--blue2:#0a58cf;--deep:#0b1c38;--ink:#1a2638;--slate:#617187;--line:#e0e6ed;--mist:#f3f6fa;--yellow:#ffe425;--shadow:0 22px 65px rgba(7,38,90,.09)}
 body{background:#fff;color:var(--ink)}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.review-controls{display:none!important}
 .home-nav{position:relative;background:#fff;border-bottom:1px solid var(--line);z-index:6}.home-nav-inner{max-width:1390px;padding:0 34px;margin:auto;height:80px;display:flex;align-items:center;justify-content:space-between;gap:24px}.home-brand{font-size:26px;font-weight:900;letter-spacing:-.075em;color:var(--blue)}.home-menu{display:flex;gap:20px;align-items:center;flex-wrap:wrap}.home-menu a{font-size:12px;color:#3a4a60;font-weight:700}.home-menu a:hover,.home-menu a:focus{color:var(--blue)}
@@ -156,12 +156,61 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height
 @media(prefers-reduced-motion:reduce){
  #featured .product-card--minimal::before,#featured .product-card--minimal::after{animation:none!important;transition:none}
 }
-</style></head>
+
+
+/* Only 7 informational tiles: Aceternity Hover Border Gradient mechanics.
+   A moving colored spotlight along the rim expands to full gradient on hover.
+   No changes to CTA links, content, images, sizing or background colors. */
+@property --aral-hbg-angle { syntax:"<angle>";inherits:false;initial-value:0deg; }
+#audiences .aral-hbg-target,#where .aral-hbg-target,#b2b .aral-hbg-target{
+  position:relative;isolation:isolate;
+}
+.aral-hbg-target > .aral-hbg-border{
+  position:absolute;inset:1px;z-index:8;display:block;
+  border-radius:inherit;pointer-events:none;overflow:hidden;
+}
+.aral-hbg-border::before,.aral-hbg-border::after{
+  content:"";position:absolute;inset:0;box-sizing:border-box;
+  border-radius:inherit;padding:2px;pointer-events:none;
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  mask-composite:exclude;
+}
+.aral-hbg-border::before{
+  background:conic-gradient(from var(--aral-hbg-angle),
+    transparent 0deg 228deg,rgba(14,90,204,.1) 238deg,
+    #206de1 273deg,#a2e3ff 298deg,#ffe425 314deg,transparent 344deg);
+  opacity:.65;
+  animation:aral-hbg-orbit 4.8s linear infinite;
+  transition:opacity .45s ease;
+}
+.aral-hbg-border::after{
+  background:
+    radial-gradient(75% 180% at 50% 50%,#3275f8 0%,rgba(255,255,255,0) 100%),
+    linear-gradient(120deg,#7dd7ff 0%,#ffe425 46%,#066bdb 100%);
+  opacity:0;transition:opacity .45s cubic-bezier(.2,.7,.2,1);
+}
+.aral-hbg-target:is(:hover,:focus-within) > .aral-hbg-border::before{
+  opacity:.18;animation-play-state:paused;
+}
+.aral-hbg-target:is(:hover,:focus-within) > .aral-hbg-border::after{opacity:1}
+@keyframes aral-hbg-orbit{to{--aral-hbg-angle:360deg}}
+@media(hover:none),(pointer:coarse){
+  .aral-hbg-border::before{animation:none;opacity:.15}
+  .aral-hbg-border::after{transition:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .aral-hbg-border::before{animation:none!important;transition:none!important}
+  .aral-hbg-border::after{transition:none!important}
+}
+
+</style><link rel="stylesheet" href="../../../../assets/aral-magnetic.css"><!-- Draft v2 for visual approval only: softer magnetic motion, no main merge. --></head>
 <body><a class="skip-link" href="#home-page">К содержанию</a>
-<header class="home-nav"><div class="home-nav-inner"><a class="home-brand" href="home-integration-preview.html" aria-label="ARAL, главная"><span class="brand-diamond" aria-hidden="true"><span>ARAL</span></span><span class="brand-text">ARAL</span></a><button class="home-menu-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Меню</button><nav id="home-menu" class="home-menu" aria-label="Разделы сайта"><a href="../../../../index.html#company">Компания</a><a href="../../../../pages/products-r15.html#/catalog">Продукция</a><a href="../../../../pages/drivers-08.html">Для водителей</a><a href="../../../../pages/partners-11.html">Для партнёров</a><a href="../../../../pages/advantages-04.html">Преимущества ARAL</a><a href="../../../../index.html#interesting">Интересное</a><a href="../../../../pages/contacts-03.html">Контакты</a></nav><div class="home-nav-tools"><a class="home-compare-link" id="compareShortcut" href="../../../../pages/products-r15.html#/compare" aria-label="Сравнение товаров">Сравнение <span id="homeCompareCount">0</span></a><a class="navcta home-catalog-cta" href="../../../../pages/products-r15.html#/catalog">Каталог <span aria-hidden="true">↗</span></a></div></div></header>
+<header class="home-nav"><div class="home-nav-inner"><a class="home-brand" href="home-integration-preview.html" aria-label="ARAL, главная"><span class="brand-diamond" aria-hidden="true"><span>ARAL</span></span><span class="brand-text">ARAL</span></a><button class="home-menu-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Меню</button><nav id="home-menu" class="home-menu" aria-label="Разделы сайта"><a href="../../../../index.html#company">Компания</a><a href="../../../../pages/products-r15.html#/catalog">Продукция</a><a href="../../../../pages/drivers-08.html">Для водителей</a><a href="../../../../pages/partners-11.html">Для партнёров</a><a href="../../../../pages/advantages-04.html">Преимущества ARAL</a><a href="../../../../index.html#interesting">Интересное</a><a href="../../../../pages/contacts-03.html">Контакты</a></nav><div class="home-nav-tools"><a class="home-compare-link" id="compareShortcut" href="../../../../pages/products-r15.html#/compare" aria-label="Сравнение товаров">Сравнение <span id="homeCompareCount">0</span></a><a class="navcta home-catalog-cta" data-magnetic="header-catalog" href="../../../../pages/products-r15.html#/catalog">Каталог <span aria-hidden="true">↗</span></a></div></div></header>
 <main id="home-page">
 <section class="aral-hero" aria-labelledby="hero-title">
-<div class="aral-copy"><p class="eyebrow">ARAL · ТЕХНОЛОГИИ ДЛЯ ДВИЖЕНИЯ</p><h1 id="hero-title">Масла ARAL для тех, кто выбирает точность.</h1><p class="description">Моторные масла и технические жидкости для легкового и коммерческого транспорта. Подбор по проверенным характеристикам и официальным данным.</p><div class="actions"><a href="../../../../pages/drivers-08.html">Подобрать масло</a><a href="../../../../pages/products-r15.html#/catalog">Смотреть каталог</a></div></div>
+<div class="aral-copy"><p class="eyebrow">ARAL · ТЕХНОЛОГИИ ДЛЯ ДВИЖЕНИЯ</p><h1 id="hero-title">Масла ARAL для тех, кто выбирает точность.</h1><p class="description">Моторные масла и технические жидкости для легкового и коммерческого транспорта. Подбор по проверенным характеристикам и официальным данным.</p><div class="actions"><a href="../../../../pages/drivers-08.html" data-magnetic="hero-primary">Подобрать масло</a><a href="../../../../pages/products-r15.html#/catalog" data-magnetic="hero-secondary">Смотреть каталог</a></div></div>
 <div class="aral-scene" role="img" aria-label="ARAL: три литровых продукта впереди, 20 литров слева, 5 литров справа и синяя бочка сзади по центру"><div class="studio-floor"></div><div class="camera">
 <img data-product="barrel" src="assets/barrel.svg" alt="" width="430" height="685">
 <img data-product="pack-20l" src="assets/pack-20l.svg" alt="" width="755" height="1068">
@@ -171,8 +220,8 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height
 <div data-product="main-1l" class="k-opening"><span class="k-opening-side" aria-hidden="true"></span><img class="k-opening-front" src="assets/main-1l.svg" alt="" width="422" height="1038"></div>
 </div></div></section>
 <section class="home-section" id="audiences"><span class="micro">Два пути к ARAL</span><h2>Для автомобиля и для бизнеса</h2><div class="audience-grid">
-<article class="audience-tile"><img src="../../../../media/editorial/drivers-0.jpg" alt="Серебристый автомобиль на фоне моря и гор"><div class="audience-tile__body"><h3>Для автомобиля</h3><p>Информация о моторных маслах и технических жидкостях для повседневных поездок.</p><a href="../../../../pages/drivers-08.html">Для водителей ↗</a></div></article>
-<article class="audience-tile"><img src="../../../../media/editorial/partners-0.png" alt="Промышленная площадка с синими резервуарами ARAL"><div class="audience-tile__body"><h3>Для бизнеса</h3><p>Оптовые поставки, поддержка магазинов, автосервисов и корпоративных клиентов.</p><a href="../../../../pages/partners-11.html">Для партнёров ↗</a></div></article>
+<article class="audience-tile aral-hbg-target"><img src="../../../../media/editorial/drivers-0.jpg" alt="Серебристый автомобиль на фоне моря и гор"><div class="audience-tile__body"><h3>Для автомобиля</h3><p>Информация о моторных маслах и технических жидкостях для повседневных поездок.</p><a href="../../../../pages/drivers-08.html">Для водителей ↗</a></div><span aria-hidden="true" class="aral-hbg-border"></span></article>
+<article class="audience-tile aral-hbg-target"><img src="../../../../media/editorial/partners-0.png" alt="Промышленная площадка с синими резервуарами ARAL"><div class="audience-tile__body"><h3>Для бизнеса</h3><p>Оптовые поставки, поддержка магазинов, автосервисов и корпоративных клиентов.</p><a href="../../../../pages/partners-11.html" data-magnetic="b2b-primary">Для партнёров ↗</a></div><span aria-hidden="true" class="aral-hbg-border"></span></article>
 </div></section>
 <section class="home-section" id="featured"><div class="section-header"><div><span class="micro">Продукция ARAL</span><h2>Выбранные продукты</h2></div><a href="../../../../pages/products-r15.html#/catalog" class="navcta">Все 17 продуктов ↗</a></div><div class="home-cards"><article class="product-card product-card--minimal" data-product-open="ARAL-003" tabindex="0" role="link" aria-label="Открыть Aral HighTronic 5W-40">
 <div class="product-photo"><img src="../../../../media/production/ARAL-003_20637_1L.jpg" alt="Aral HighTronic 5W-40, 20637" loading="lazy" onload="this.parentElement.classList.add('photo-loaded')" onerror="this.hidden=true;this.parentElement.classList.add('image-missing')"><span class="photo-notice"><strong>ARAL</strong><small>Фото ожидает загрузки</small></span></div>
@@ -197,8 +246,8 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height
 <section class="home-section" id="about"><div class="brand-grid"><div class="brand-copy"><span class="micro">Бренд и производство</span><h2>ARAL — технологии и опыт</h2><p>Познакомьтесь с историей бренда, производством и подходом к качеству. Подробные утверждённые материалы уже доступны на странице «Компания».</p><a class="navcta" href="../../../../index.html#company">О компании ↗</a></div><img src="../../../../media/editorial/v8-00.jpg" alt="Оригинальная фотография масла ARAL при заливке в двигатель"></div></section>
 
 <section class="tech-story" id="technology" aria-labelledby="technology-title"><div class="tech-story__copy"><span class="micro">Технологии ARAL</span><h2 id="technology-title">Технологии для движения вперёд</h2><p>Познакомьтесь с технологиями ARAL и подходом к качеству в разделе «Преимущества ARAL».</p><a class="tech-link" href="../../../../pages/advantages-04.html">Преимущества ARAL <span aria-hidden="true">↗</span></a></div><div class="tech-story__photo"><img loading="lazy" src="../../../../media/editorial/advantages-0.jpg" alt="XMF — eXtra Motor Protection Formula, иллюстрация с утверждённой страницы «Преимущества ARAL»"></div></section>
-<section class="home-section" id="b2b"><span class="micro">B2B · Поддержка партнёров</span><h2>Больше, чем поставки</h2><div class="support-cards"><article class="support-card"><h3>Ассортимент</h3><p>Линейка продукции для магазинов автозапчастей, сервисов и автопарков.</p></article><article class="support-card"><h3>Техническая информация</h3><p>Карточки масел и доступные опубликованные спецификации без неподтверждённых заявлений.</p></article><article class="support-card"><h3>Сотрудничество</h3><p>Отдельная страница для вопросов партнёрства и оптовых закупок.</p></article></div><p style="margin-top:25px"><a href="../../../../pages/partners-11.html" class="navcta">Возможности для партнёров ↗</a></p></section>
-<section class="home-section" id="where"><span class="micro">Где купить</span><h2>Найдите подходящий канал покупки</h2><div class="purchase-grid"><article class="purchase-card"><span class="purchase-index">01 / ДЛЯ ВОДИТЕЛЕЙ</span><h3>Розничная покупка</h3><p>Выберите магазин, посмотрите его адрес и контакты на утверждённой странице.</p><a href="../../../../pages/contacts-03.html">Магазины и контакты <span aria-hidden="true">↗</span></a></article><article class="purchase-card purchase-card--blue"><span class="purchase-index">02 / ДЛЯ БИЗНЕСА</span><h3>Оптовые обращения</h3><p>Информация о сотрудничестве и обращение к отделу оптовых продаж.</p><a href="../../../../pages/partners-11.html">Для партнёров <span aria-hidden="true">↗</span></a></article></div></section>
+<section class="home-section" id="b2b"><span class="micro">B2B · Поддержка партнёров</span><h2>Больше, чем поставки</h2><div class="support-cards"><article class="support-card aral-hbg-target"><h3>Ассортимент</h3><p>Линейка продукции для магазинов автозапчастей, сервисов и автопарков.</p><span aria-hidden="true" class="aral-hbg-border"></span></article><article class="support-card aral-hbg-target"><h3>Техническая информация</h3><p>Карточки масел и доступные опубликованные спецификации без неподтверждённых заявлений.</p><span aria-hidden="true" class="aral-hbg-border"></span></article><article class="support-card aral-hbg-target"><h3>Сотрудничество</h3><p>Отдельная страница для вопросов партнёрства и оптовых закупок.</p><span aria-hidden="true" class="aral-hbg-border"></span></article></div><p style="margin-top:25px"><a href="../../../../pages/partners-11.html" class="navcta">Возможности для партнёров ↗</a></p></section>
+<section class="home-section" id="where"><span class="micro">Где купить</span><h2>Найдите подходящий канал покупки</h2><div class="purchase-grid"><article class="purchase-card aral-hbg-target"><span class="purchase-index">01 / ДЛЯ ВОДИТЕЛЕЙ</span><h3>Розничная покупка</h3><p>Выберите магазин, посмотрите его адрес и контакты на утверждённой странице.</p><a href="../../../../pages/contacts-03.html">Магазины и контакты <span aria-hidden="true">↗</span></a><span aria-hidden="true" class="aral-hbg-border"></span></article><article class="purchase-card purchase-card--blue aral-hbg-target"><span class="purchase-index">02 / ДЛЯ БИЗНЕСА</span><h3>Оптовые обращения</h3><p>Информация о сотрудничестве и обращение к отделу оптовых продаж.</p><a href="../../../../pages/partners-11.html">Для партнёров <span aria-hidden="true">↗</span></a><span aria-hidden="true" class="aral-hbg-border"></span></article></div></section>
 </main><aside class="review-controls" aria-label="Управление просмотром"><strong>Просмотр Hero · 4,8 секунды</strong><button id="play">Повторить</button><button id="final">Финальный кадр</button><label>Время <input id="time" type="range" min="0" max="4.8" step="0.01" value="4.8"><output id="readout">4.80 с</output></label><output id="orbit-readout">Непрерывный отъезд</output><div id="keyframes"></div><p id="phase">Финальная композиция</p><small>Исходные фотографии: горловины всех трёх 1L направлены влево. Непрерывный отъезд без смены фотографии. Кнопки Hero показывают будущие маршруты; сайт здесь не подключён.</small><small><a href="README.md">Инструкция и ограничения</a></small></aside>
 <footer class="site-foot"><div class="foot-inner"><div class="foot-brand"><strong>ARAL</strong><p>Технические сведения и доступность отдельных продуктов проверяйте по конкретным карточкам и официальным документам.</p></div><nav class="foot-links" aria-label="Навигация в подвале"><a href="../../../../index.html#company">Компания</a><a href="../../../../pages/products-r15.html#/catalog">Продукция</a><a href="../../../../pages/drivers-08.html">Для водителей</a><a href="../../../../pages/partners-11.html">Для партнёров</a><a href="../../../../pages/advantages-04.html">Преимущества</a><a href="../../../../index.html#interesting">Интересное</a><a href="../../../../pages/contacts-03.html">Контакты</a></nav></div></footer><div class="home-toast" id="homeToast" role="status" aria-live="polite"></div>
 <script src="review.js"></script><script>(()=>{const b=document.querySelector('.home-menu-toggle'),n=document.getElementById('home-menu');let lastOpen=false;function close(restore=false){if(b.getAttribute('aria-expanded')==='true'){b.setAttribute('aria-expanded','false');n.classList.remove('is-open');if(restore)b.focus()}}b.addEventListener('click',()=>{let open=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',String(open));n.classList.toggle('is-open',open)});n.addEventListener('click',e=>{if(e.target.closest('a'))close()});document.addEventListener('keydown',e=>{if(e.key==='Escape')close(true)});document.addEventListener('click',e=>{if(!e.target.closest('.home-nav'))close()});window.addEventListener('resize',()=>{if(innerWidth>880)close()});})();</script>
@@ -207,4 +256,7 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height
 document.querySelectorAll('[data-product-open]').forEach(card=>{card.onclick=e=>{if(e.target.closest('button,a,input,select'))return;open(card.dataset.productOpen)};card.onkeydown=e=>{if((e.key==='Enter'||e.key===' ')&&e.target===card){e.preventDefault();open(card.dataset.productOpen)}}});
 document.querySelectorAll('[data-compare]').forEach(b=>{b.onclick=e=>{e.stopPropagation();let id=b.dataset.compare;if(selected.includes(id))selected=selected.filter(x=>x!==id);else{if(selected.length>=4){notify('Можно сравнить не более четырёх продуктов');return}selected.push(id)}try{localStorage.setItem(key,JSON.stringify(selected))}catch{}sync();notify(selected.includes(id)?'Добавлено в сравнение':'Удалено из сравнения')}});
 sync();})();
-</script></body></html>
+</script>
+
+
+<script src="../../../../assets/aral-magnetic.js" defer></script></body></html>
