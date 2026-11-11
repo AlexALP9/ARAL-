@@ -24,7 +24,7 @@ body .contacts-site.aral-online-pending{cursor:default;border-style:dashed;borde
 body .aral-online-pending span{color:#6a7c91}
 .aral-vehicle-chooser{padding:20px 22px;background:#f0f6fd;border:1px solid #d3e4f5;border-radius:16px;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 20px}
 .aral-vehicle-chooser>p{grid-column:1/-1;color:#365c82;font-size:14px;font-weight:750;margin:0}
-.aral-vehicle-chooser button{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 20px;cursor:pointer;border:2px solid #b4d0eb;border-radius:12px;color:#084b93;background:white;font:800 clamp(15px,1.4vw,19px)/1.3 inherit;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.aral-vehicle-chooser button{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 20px;cursor:pointer;border:2px solid #b4d0eb;border-radius:12px;color:#084b93;background:white;font-family:inherit;font-weight:800;font-size:clamp(15px,1.4vw,19px);line-height:1.3;transition:background .2s,color .2s,border-color .2s,transform .2s}
 .aral-vehicle-chooser button:hover{border-color:#0764c5;transform:translateY(-1px)}
 .aral-vehicle-chooser button[aria-pressed=true]{background:#0755ad;border-color:#0755ad;color:white;box-shadow:0 8px 18px #064a9425}
 .aral-vehicle-chooser button:focus-visible{outline:3px solid #eece47;outline-offset:3px}
@@ -40,3 +40,16 @@ body.aral-review-links-on a.aral-review-route::after{content:attr(data-aral-revi
 @media(max-width:900px){header nav .aral-preview-pill{display:none}header nav.home-menu.is-open,header nav.navlinks.open,header nav.menu.is-open,header nav.menu.open{background:#063d7f!important;padding:15px!important;border:1px solid #3273ad!important;border-radius:0 0 12px 12px}header nav.home-menu.is-open a,header nav.navlinks.open a,header nav.menu.is-open a,header nav.menu.open a{width:100%;font-size:15px!important}}
 @media(max-width:640px){header a.aral-preview-brand img{width:46px;height:46px}body .contacts-sites-grid,.aral-vehicle-chooser{grid-template-columns:1fr}.aral-vehicle-chooser{padding:14px}.aral-vehicle-chooser>p{grid-column:1}body .aral-review-toggle{right:10px;bottom:10px;font-size:12px}}
 @media(prefers-reduced-motion:reduce){header nav .aral-preview-pill,.aral-vehicle-chooser button{transition:none!important}}
+
+/* Mobile: ensure the new five-section menu never spills into the header. */
+header.home-nav .home-nav-inner,header.site-header .nav-row,header.nav .nav-wrap{position:relative}
+@media(max-width:900px){
+ header.home-nav .home-menu-toggle,header.site-header .mobile-toggle,header.nav .nav-toggle{display:inline-flex!important}
+ header.home-nav nav.home-menu:not(.is-open),header.site-header nav.navlinks:not(.open),header.nav nav.menu:not(.is-open):not(.open){display:none!important}
+ header.home-nav nav.home-menu.is-open,header.site-header nav.navlinks.open,header.nav nav.menu.is-open,header.nav nav.menu.open{
+  display:flex!important;position:absolute!important;top:100%!important;left:0!important;right:0!important;
+  width:100%!important;height:auto!important;flex-direction:column!important;align-items:stretch!important;
+  gap:4px!important;z-index:180!important;margin:0!important
+ }
+ header.home-nav nav.home-menu.is-open a,header.site-header nav.navlinks.open a,header.nav nav.menu.is-open a,header.nav nav.menu.open a{justify-content:flex-start!important}
+}
