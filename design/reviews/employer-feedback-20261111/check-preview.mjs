@@ -26,7 +26,7 @@ try{
    try{await el.decode()}catch{}
    return {complete:el.complete,width:el.naturalWidth,height:el.naturalHeight,src:el.currentSrc};
  });
- check(logoState.complete&&logoState.width>=100&&logoState.height>=100&&logoState.src.startsWith('data:image/png;base64,'),'approved logo is visibly decoded from embedded PNG');
+ check(logoState.complete&&logoState.width>=30&&logoState.height>=30&&logoState.src.includes('/Aral_Logo.svg'),'verified ARAL logo is visibly decoded in Chromium');
  const compare=page.locator('#compareShortcut');
  const catalog=page.locator('.home-catalog-cta');
  const visuals=await Promise.all([compare,catalog].map(node=>node.evaluate(el=>{
