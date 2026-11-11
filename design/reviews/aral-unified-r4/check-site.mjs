@@ -49,7 +49,7 @@ try {
     check(await page.locator('.aral-contour-compare').count()===0,`${width} home: obsolete waves comparison panel removed`);
     check(await page.locator('body').getAttribute('data-contour-mode')==='after',`${width} home: approved +20% waves remain active`);
     check((await page.locator('#hero-title').textContent()).trim()==='ARAL Немецкое наследие',`${width} home: approved headline`);
-    check(await page.locator('#audiences .aral-r4-dot-link').count()===2,`${width} home: leading dots on photo cards`);
+    check(await page.locator('#audiences .aral-r3-dot-link').count()===2,`${width} home: leading dots on photo cards`);
     check(await page.locator('.product-card.product-card--minimal').count()===4,`${width} home: four product cards`);
     check(await page.locator('#compareShortcut[data-magnetic="header-compare"]').count()===1,`${width} home: magnetic compare`);
     check((await page.locator('#homeCompareCount').evaluate(el=>getComputedStyle(el).backgroundColor))==='rgba(0, 0, 0, 0)',`${width} home: no yellow count pill`);
