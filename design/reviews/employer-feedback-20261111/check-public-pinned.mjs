@@ -13,8 +13,6 @@ function check(value,message){ results.push({ok:!!value,message}); console.log((
 const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
 try {
   const context=await browser.newContext({viewport:{width:1440,height:900},deviceScaleFactor:1});
-  // githack uses an HTML confirmation screen for browsers unless this cookie is set.
-  await context.addCookies([{name:'__Http-phish',value:'1',domain:'raw.githack.com',path:'/'}]);
   const page=await context.newPage();
   page.on('pageerror',e=>errors.push('Browser JavaScript error: '+String(e)));
   let response;
