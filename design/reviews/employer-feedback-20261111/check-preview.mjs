@@ -35,6 +35,25 @@ try{
  })));
  check(visuals[0].visible&&visuals[0].background===visuals[1].background&&visuals[0].color===visuals[1].color,'compare button matches catalog button surface and text contrast');
  check(visuals[0].fontSize>=13&&visuals[0].width>=100&&visuals[0].height>=40,'compare button has readable label and usable size at desktop');
+ // Both header actions must use the very same shared magnetic pointer engine.
+ check(await compare.getAttribute('data-magnetic')==='header-compare'&&await catalog.getAttribute('data-magnetic')==='header-catalog','both header actions opt in to shared magnetic behavior');
+ await page.waitForFunction(()=>window.ARALMagneticButtons?.initialized===true);
+ check(await page.evaluate(()=>window.ARALMagneticButtons?.initialized===true),'shared magnetic engine initialized');
+ async function testMagnetic(locator,label){
+   const r=await locator.boundingBox();
+   await page.mouse.move(2,110);
+   await page.waitForTimeout(250);
+   await page.mouse.move(r.x+r.width*.77,r.y+r.height*.72,{steps:5});
+   await page.waitForTimeout(650);
+   const values=await locator.evaluate(el=>({x:parseFloat(el.style.getPropertyValue('--mag-x')||'0'),y:parseFloat(el.style.getPropertyValue('--mag-y')||'0')}));
+   check(Math.abs(values.x)+Math.abs(values.y)>.12&&Math.abs(values.x)<=5.2&&Math.abs(values.y)<=5.2,label+' follows pointer with limited magnetic shift');
+   await page.mouse.move(2,110,{steps:3});
+   await page.waitForTimeout(650);
+   const rest=await locator.evaluate(el=>({x:parseFloat(el.style.getPropertyValue('--mag-x')||'0'),y:parseFloat(el.style.getPropertyValue('--mag-y')||'0')}));
+   check(Math.abs(rest.x)<.4&&Math.abs(rest.y)<.4,label+' springs back when pointer leaves');
+ }
+ await testMagnetic(compare,'Compare');
+ await testMagnetic(catalog,'Catalog');
  await page.screenshot({path:dir+'/00-header-fixed-1440.png',clip:{x:0,y:0,width:1440,height:100}});
  check(await page.locator('.product-card.product-card--minimal').count()===4,'four unchanged featured cards');
  check(await page.locator('#play').count()===1,'HERO replay controls preserved');
