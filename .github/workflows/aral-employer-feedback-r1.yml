@@ -36,6 +36,8 @@ jobs:
           exit 1
       - name: Check all edited routes and capture screenshots
         run: node design/reviews/employer-feedback-20261111/check-preview.mjs
+      - name: Check publicly hosted commit-pinned preview
+        run: node design/reviews/employer-feedback-20261111/check-public-pinned.mjs
       - name: Upload review evidence
         if: always()
         uses: actions/upload-artifact@v4
