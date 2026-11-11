@@ -1,0 +1,45 @@
+name: ARAL employer feedback R1 preview
+on:
+  push:
+    branches:
+      - codex/aral-home-hero48-cards-r15-20261028
+    paths:
+      - "design/reviews/employer-feedback-20261111/**"
+      - "design/hero/prototypes/hero-4s-k-views/ARAL_home_employer_feedback_r1_preview.html"
+      - "pages/*-employer-feedback-r1-preview.html"
+      - "index-employer-feedback-r1-preview.html"
+      - "assets/aral-employer-*"
+      - ".github/workflows/aral-employer-feedback-r1.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  chromium:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install browser
+        run: |
+          npm install --no-save --no-package-lock playwright@1.57.0
+          npx playwright install --with-deps chromium
+      - name: Serve independent preview
+        run: |
+          python3 -m http.server 8123 --bind 127.0.0.1 >/tmp/aral-employer-preview.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8123/design/reviews/employer-feedback-20261111/index.html >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          exit 1
+      - name: Check all edited routes and capture screenshots
+        run: node design/reviews/employer-feedback-20261111/check-preview.mjs
+      - name: Upload review evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aral-employer-feedback-r1-screenshots
+          path: review-output/employer-feedback-r1/
+          if-no-files-found: warn
