@@ -99,3 +99,6 @@ body .aral-vehicle-chooser button .vehicle-label{text-align:left}
 @media(max-width:640px){body .aral-vehicle-chooser{grid-template-columns:1fr}}
 /* New footer destination; preserve approved shared footer appearance. */
 .aral-global-footer .af-contact .aral-r3-driver-cta{margin-top:10px}
+
+/* Prevent old third-party catalog layout from creating page-level horizontal scroll at 1024px. */
+body:has(.aral-vehicle-chooser){overflow-x:clip}

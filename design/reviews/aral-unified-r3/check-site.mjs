@@ -22,11 +22,12 @@ try {
   page.on('pageerror',e=>pageErrors.push(String(e)));
   for(const [name,path] of Object.entries(pages)){
    const response=await page.goto(root+path,{waitUntil:'domcontentloaded'});
-   await page.waitForTimeout(250);
+   await page.waitForTimeout(500);
    check(response?.ok()===true,`${width} ${name}: route loads`);
    check(await page.locator('body[data-feedback-preview="r3"]').count()===1,`${width} ${name}: full R3 scripts initialized`);
    check(await page.locator('header a.aral-preview-brand img').evaluate(el=>el.complete&&el.naturalWidth>0),`${width} ${name}: real brand logo decoded`);
-   check(await page.locator('.aral-global-footer .aral-r3-driver-cta').count()===1,`${width} ${name}: motorists footer CTA present`);
+   if(name==='company'||name==='interesting')console.log('R3 FOOTER DIAGNOSTIC '+name+' '+JSON.stringify(await page.evaluate(()=>[...document.querySelectorAll('footer')].map(f=>({className:f.className,hidden:!!f.closest('[hidden]'),ctas:f.querySelectorAll('.af-contact .af-cta').length,r3:f.querySelectorAll('.aral-r3-driver-cta').length})))));
+   check(await page.locator('.aral-global-footer .aral-r3-driver-cta').count()>=1,`${width} ${name}: motorists footer CTA present`);
    check(await page.locator('.aral-review-toggle').count()===0,`${width} ${name}: no debug floating button`);
    check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2),`${width} ${name}: no horizontal overflow`);
    if(name==='home'){

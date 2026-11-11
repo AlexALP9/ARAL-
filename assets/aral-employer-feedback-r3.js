@@ -180,6 +180,7 @@
   hideCoolantPublicReferences();
   applyR3ContentReview();
   if(new URLSearchParams(location.search).get('review')==='links')makeRouteInspection();
+  setTimeout(applyR3ContentReview,0);
   document.body.dataset.feedbackPreview='r3';
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install,{once:true});else install();
