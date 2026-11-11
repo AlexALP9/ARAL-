@@ -21,6 +21,21 @@ try{
  check(await page.locator('.aral-preview-brand img').count()===1,'real logo embedded');
  const logo=await page.locator('.aral-preview-brand img').evaluate(el=>({complete:el.complete,naturalWidth:el.naturalWidth}));
  check(logo.complete&&logo.naturalWidth>0,'logo is decoded');
+ // Regression for user-reported broken header assets and white-on-white compare button.
+ const logoState=await page.locator('.aral-preview-brand img').evaluate(async el=>{
+   try{await el.decode()}catch{}
+   return {complete:el.complete,width:el.naturalWidth,height:el.naturalHeight,src:el.currentSrc};
+ });
+ check(logoState.complete&&logoState.width>=100&&logoState.height>=100&&logoState.src.startsWith('data:image/png;base64,'),'approved logo is visibly decoded from embedded PNG');
+ const compare=page.locator('#compareShortcut');
+ const catalog=page.locator('.home-catalog-cta');
+ const visuals=await Promise.all([compare,catalog].map(node=>node.evaluate(el=>{
+   const s=getComputedStyle(el),rect=el.getBoundingClientRect();
+   return {color:s.color,background:s.backgroundColor,fontSize:parseFloat(s.fontSize),width:rect.width,height:rect.height,visible:rect.width>0&&rect.height>0};
+ })));
+ check(visuals[0].visible&&visuals[0].background===visuals[1].background&&visuals[0].color===visuals[1].color,'compare button matches catalog button surface and text contrast');
+ check(visuals[0].fontSize>=13&&visuals[0].width>=100&&visuals[0].height>=40,'compare button has readable label and usable size at desktop');
+ await page.screenshot({path:dir+'/00-header-fixed-1440.png',clip:{x:0,y:0,width:1440,height:100}});
  check(await page.locator('.product-card.product-card--minimal').count()===4,'four unchanged featured cards');
  check(await page.locator('#play').count()===1,'HERO replay controls preserved');
  check(await page.locator('[data-aral-targeted-review]').count()===1,'2A +20% wave mode preserved');
@@ -64,6 +79,11 @@ try{
  await page.locator('.home-menu-toggle').click();
  check(await page.locator('#home-menu').isVisible(),'mobile menu opens');
  check(await page.locator('#home-menu a').count()===5,'mobile menu still has 5 sections');
+ const mobileLogo=await page.locator('.aral-preview-brand img').evaluate(el=>el.complete&&el.naturalWidth>0);
+ check(mobileLogo,'approved logo also decodes on mobile');
+ const mobileCompare=await page.locator('#compareShortcut').evaluate(el=>{const s=getComputedStyle(el),r=el.getBoundingClientRect();return {color:s.color,background:s.backgroundColor,width:r.width,height:r.height}});
+ check(mobileCompare.width>45&&mobileCompare.height>=40&&mobileCompare.color!=='rgb(255, 255, 255)','mobile compare header control has visible contrast');
+ await page.screenshot({path:dir+'/00-header-fixed-390.png',clip:{x:0,y:0,width:390,height:90}});
  await page.screenshot({path:dir+'/05-mobile-menu.png',fullPage:false});
  // Logo interaction reloads home
  await page.locator('.home-menu-toggle').click();
