@@ -13,7 +13,13 @@
   interesting:to('index-employer-feedback-r3-preview.html#interesting'),
   contacts:to('pages/contacts-employer-feedback-r3-preview.html#contacts-stores')
  };
- const linkMapping=[\n ['index-employer-feedback-r1-preview.html',to('index-employer-feedback-r3-preview.html')],\n ['pages/products-employer-feedback-r1-preview.html',to('pages/products-employer-feedback-r3-preview.html')],\n ['pages/drivers-employer-feedback-r1-preview.html',to('pages/drivers-employer-feedback-r3-preview.html')],\n ['pages/partners-employer-feedback-r1-preview.html',to('pages/partners-employer-feedback-r3-preview.html')],\n ['pages/advantages-employer-feedback-r1-preview.html',to('pages/advantages-employer-feedback-r3-preview.html')],\n ['pages/contacts-employer-feedback-r1-preview.html',to('pages/contacts-employer-feedback-r3-preview.html')],
+ const linkMapping=[
+ ['index-employer-feedback-r1-preview.html',to('index-employer-feedback-r3-preview.html')],
+ ['pages/products-employer-feedback-r1-preview.html',to('pages/products-employer-feedback-r3-preview.html')],
+ ['pages/drivers-employer-feedback-r1-preview.html',to('pages/drivers-employer-feedback-r3-preview.html')],
+ ['pages/partners-employer-feedback-r1-preview.html',to('pages/partners-employer-feedback-r3-preview.html')],
+ ['pages/advantages-employer-feedback-r1-preview.html',to('pages/advantages-employer-feedback-r3-preview.html')],
+ ['pages/contacts-employer-feedback-r1-preview.html',to('pages/contacts-employer-feedback-r3-preview.html')],
  ['design/hero/prototypes/hero-4s-k-views/ARAL_home_contour_2A_footer_preview.html',routes.home],
  ['design/hero/prototypes/hero-4s-k-views/ARAL_home_markup_preview.html',routes.home],
  ['index-footer-preview.html',routes.company],
