@@ -29,6 +29,11 @@ try {
    if(name==='company'||name==='interesting')console.log('R3 FOOTER DIAGNOSTIC '+name+' '+JSON.stringify(await page.evaluate(()=>[...document.querySelectorAll('footer')].map(f=>({className:f.className,hidden:!!f.closest('[hidden]'),ctas:f.querySelectorAll('.af-contact .af-cta').length,r3:f.querySelectorAll('.aral-r3-driver-cta').length})))));
    check(await page.locator('.aral-global-footer .aral-r3-driver-cta').count()>=1,`${width} ${name}: motorists footer CTA present`);
    check(await page.locator('.aral-review-toggle').count()===0,`${width} ${name}: no debug floating button`);
+   
+   if(width===1024&&name==='products')console.log('CATALOG OVERFLOW '+JSON.stringify(await page.evaluate(()=>({
+     innerWidth,bodyWidth:document.body.scrollWidth,documentWidth:document.documentElement.scrollWidth,
+     offenders:[...document.querySelectorAll('*')].map(el=>({tag:el.tagName,cls:String(el.className).slice(0,80),right:Math.round(el.getBoundingClientRect().right),left:Math.round(el.getBoundingClientRect().left),scroll:el.scrollWidth,client:el.clientWidth})).filter(x=>x.right>innerWidth+3&&x.left<innerWidth+150).sort((a,b)=>b.right-a.right).slice(0,20)
+   }))));
    check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2),`${width} ${name}: no horizontal overflow`);
    if(name==='home'){
     check((await page.locator('#hero-title').textContent()).trim()==='ARAL Немецкое наследие',`${width} home: approved headline`);
