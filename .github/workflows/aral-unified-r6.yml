@@ -7,7 +7,8 @@ on:
       - "design/hero/prototypes/hero-4s-k-views/ARAL_home_employer_feedback_r6_preview.html"
       - "index-employer-feedback-r6-preview.html"
       - "pages/*-employer-feedback-r6-preview.html"
-      - "assets/aral-employer-feedback-r4.*"
+      - "assets/aral-employer-feedback-r6.*"
+      - "assets/aral-logo-supplied-r6.png"
       - "design/reviews/aral-unified-r6/**"
       - ".github/workflows/aral-unified-r6.yml"
   workflow_dispatch:
