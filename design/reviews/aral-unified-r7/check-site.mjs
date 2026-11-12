@@ -26,7 +26,7 @@ try {
    await page.waitForTimeout(500);
    check(response?.ok()===true,`${width} ${name}: route loads`);
    check(await page.locator('body[data-feedback-preview="r7"]').count()===1,`${width} ${name}: R7 scripts initialized`);
-   check(await page.locator('header a.aral-preview-brand img').evaluate(el=>el.complete&&el.naturalWidth>0&&el.naturalHeight>0&&el.currentSrc.includes('aral-logo-supplied-r6.png')),`${width} ${name}: real brand logo decoded`);
+   check(await page.locator('header a.aral-preview-brand img').evaluate(el=>el.complete&&el.naturalWidth>0&&el.naturalHeight>0&&el.currentSrc.includes('aral-logo-supplied-r7.png')),`${width} ${name}: real brand logo decoded`);
    if(name==='company'||name==='interesting')console.log('R5 FOOTER DIAGNOSTIC '+name+' '+JSON.stringify(await page.evaluate(()=>[...document.querySelectorAll('footer')].map(f=>({className:f.className,hidden:!!f.closest('[hidden]'),ctas:f.querySelectorAll('.af-contact .af-cta').length,r3:f.querySelectorAll('.aral-r7-driver-cta').length})))));
    check(await page.locator('.aral-global-footer .aral-r7-driver-cta').count()>=1,`${width} ${name}: motorists footer CTA present`);
    const foot=page.locator('.aral-global-footer:visible').first();
@@ -55,12 +55,14 @@ try {
    
    if(width===1440&&name==='home'){
     const asset=await page.evaluate(async()=>{
-      const r=await fetch(new URL('../../../../assets/aral-logo-supplied-r6.png',location.href));
+      const r=await fetch(new URL('../../../../assets/aral-logo-supplied-r7.png',location.href));
       const b=await r.arrayBuffer();const x=new Uint8Array(b);
       const sig=[137,80,78,71,13,10,26,10].every((v,i)=>x[i]===v);
-      return {status:r.status,length:x.length,signature:sig};
+      const hash=await crypto.subtle.digest('SHA-256',b);
+      const sha256=Array.from(new Uint8Array(hash),v=>v.toString(16).padStart(2,'0')).join('');
+      return {status:r.status,length:x.length,signature:sig,sha256};
     });
-    check(asset.status===200&&asset.length>1800&&asset.signature,'user-supplied logo binary is served as real PNG with expected signature');
+    check(asset.status===200&&asset.signature&&asset.sha256==='420c92cde3fd80ce74adacb36d0e777deb742cb742cc3284635da8d81ad28274','header serves the complete original user-supplied PNG');
    }
 
    if(name==='home'){

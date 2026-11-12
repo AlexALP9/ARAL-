@@ -83,7 +83,7 @@
    if(brand){
     brand.href=routes.home;brand.setAttribute('aria-label','ARAL — на главную с HERO-анимацией');
     brand.classList.add('aral-preview-brand');
-    brand.innerHTML='<img src="'+to('assets/aral-logo-supplied-r6.png')+'" alt="Логотип ARAL" width="74" height="74" decoding="async">';
+    brand.innerHTML='<img src="'+to('assets/aral-logo-supplied-r7.png')+'" alt="Логотип ARAL" width="74" height="74" decoding="async">';
    }
    const nav=header.querySelector('nav.home-menu,nav.navlinks,nav.menu');
    if(!nav)return;
