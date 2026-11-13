@@ -1,0 +1,260 @@
+/* ARAL employer feedback R1 — PREVIEW ONLY. Never imported by approved originals. */
+:root{--aral-preview-navy:#044b99;--aral-preview-bright:#1479d7}
+header.home-nav,header.site-header,header.nav{background:linear-gradient(105deg,#0758b2 0%,#054889 75%,#033b79 100%)!important;border-bottom:1px solid #2478c0!important;color:#fff!important}
+header.home-nav .home-nav-inner,header.site-header .nav-row,header.nav .nav-wrap{min-height:80px}
+header a.aral-preview-brand{display:inline-flex!important;align-items:center!important;gap:7px!important;min-width:75px!important;white-space:nowrap;color:white!important;text-decoration:none!important;font-weight:900!important;letter-spacing:-.04em!important}
+header a.aral-preview-brand img{height:58px;width:58px;object-fit:contain;display:block}
+header a.aral-preview-brand:focus-visible{outline:2px solid #ffda4e;outline-offset:4px}
+header nav.home-menu,header nav.navlinks,header nav.menu{position:relative;display:flex;align-items:center;gap:3px;overflow:visible;scrollbar-width:none}
+header nav.home-menu a,header nav.navlinks a,header nav.menu a{position:relative;z-index:2;border-bottom:0!important;text-decoration:none!important;color:#fff!important;font-weight:720!important;font-size:clamp(13px,1.03vw,15px)!important;padding:10px 12px!important;white-space:nowrap;min-height:42px;display:inline-flex;align-items:center;transition:color .16s;line-height:1.25}
+header nav.home-menu a:focus-visible,header nav.navlinks a:focus-visible,header nav.menu a:focus-visible{outline:2px solid #ffdc54;outline-offset:2px}
+header nav .aral-preview-pill{position:absolute;top:50%;height:43px;left:0;width:1px;z-index:1;border-radius:12px;pointer-events:none;background:linear-gradient(115deg,#1687ed,#0969c5);box-shadow:0 5px 14px #002c6070,inset 0 1px 0 #ffffff50;transition:transform .36s cubic-bezier(.19,1.19,.28,1),width .35s cubic-bezier(.19,1.19,.28,1),opacity .2s;opacity:0;transform:translate(0,-50%)}
+header.home-nav .home-nav-tools a.home-compare-link{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:6px!important;background:#fff!important;color:#064786!important;border:1px solid #e2f1ff!important;border-radius:8px!important;padding:11px 13px!important;font-size:14px!important;font-weight:800!important;line-height:1.25!important;text-decoration:none!important;white-space:nowrap!important;opacity:1!important}
+header.home-nav .home-nav-tools a.home-compare-link:hover{background:#eff7ff!important;color:#053b72!important}
+header.home-nav .home-nav-tools a.home-compare-link:focus-visible{outline:3px solid #ffdb55!important;outline-offset:3px!important}
+header.home-nav .home-nav-tools a.home-compare-link span{color:#092849!important;font-size:11px!important}
+header .home-nav-tools a.navcta,header .navtools a.icon-btn{background:#fff!important;color:#064786!important;border:1px solid #e2f1ff!important;font-size:14px!important;font-weight:800}
+header .home-menu-toggle,header .nav-toggle,header .mobile-toggle{color:#fff!important;background:#0a65b9!important;border:1px solid #73afe4!important;font-size:14px!important}
+header .nav-toggle:focus-visible,header .mobile-toggle:focus-visible,header .home-menu-toggle:focus-visible{outline:2px solid #ffd351;outline-offset:3px}
+/* Only legibility fixes: do not rescale hero images or redesign cards. */
+body .micro{font-size:max(12px,0.8rem)}
+body .specchips span,body .pc-volumes span{font-size:max(11px,.7rem)}
+body .contacts-site small{font-size:12px}
+body .contacts-site span,body .support-note{font-size:max(13px,.82rem)}
+body .filter-foot{font-size:13px}
+body .contacts-sites-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+body .contacts-site.aral-online-pending{cursor:default;border-style:dashed;border-color:#a3c6e8}
+body .aral-online-pending span{color:#6a7c91}
+.aral-vehicle-chooser{padding:20px 22px;background:#f0f6fd;border:1px solid #d3e4f5;border-radius:16px;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 20px}
+.aral-vehicle-chooser>p{grid-column:1/-1;color:#365c82;font-size:14px;font-weight:750;margin:0}
+.aral-vehicle-chooser button{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 20px;cursor:pointer;border:2px solid #b4d0eb;border-radius:12px;color:#084b93;background:white;font-family:inherit;font-weight:800;font-size:clamp(15px,1.4vw,19px);line-height:1.3;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.aral-vehicle-chooser button:hover{border-color:#0764c5;transform:translateY(-1px)}
+.aral-vehicle-chooser button[aria-pressed=true]{background:#0755ad;border-color:#0755ad;color:white;box-shadow:0 8px 18px #064a9425}
+.aral-vehicle-chooser button:focus-visible{outline:3px solid #eece47;outline-offset:3px}
+.aral-vehicle-chooser .vehicle-icon{font-size:26px}
+.aral-vehicle-chooser .vehicle-label{flex:1;text-align:left}
+.aral-vehicle-chooser .vehicle-state{font-size:13px;opacity:.8}
+.filters .filter-group:has(#categoryFilters){display:none}
+.aral-review-toggle{position:fixed;z-index:999999;right:16px;bottom:16px;padding:11px 14px;border:2px solid #ffcd3f;border-radius:11px;background:#092e63;color:white;box-shadow:0 8px 30px #021c4777;font-size:13px;font-weight:800;cursor:pointer}
+.aral-review-toggle[aria-pressed=true]{background:#fff3bd;color:#032c60}
+body.aral-review-links-on a.aral-review-route{outline:3px solid #f4ab23!important;outline-offset:3px!important;border-radius:5px;position:relative!important;z-index:3}
+body.aral-review-links-on a.aral-review-route::after{content:attr(data-aral-review-tip);position:absolute;left:0;top:-24px;z-index:15;min-width:max-content;background:#f4ab23;color:#13273a;padding:4px 6px;border-radius:4px;font:800 10px/1.2 sans-serif;box-shadow:0 3px 10px #0002;pointer-events:none}
+@media(max-width:1080px){header nav.home-menu a,header nav.navlinks a,header nav.menu a{padding-inline:8px!important;font-size:13px!important}body .contacts-sites-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){header nav .aral-preview-pill{display:none}header nav.home-menu.is-open,header nav.navlinks.open,header nav.menu.is-open,header nav.menu.open{background:#063d7f!important;padding:15px!important;border:1px solid #3273ad!important;border-radius:0 0 12px 12px}header nav.home-menu.is-open a,header nav.navlinks.open a,header nav.menu.is-open a,header nav.menu.open a{width:100%;font-size:15px!important}}
+@media(max-width:640px){header a.aral-preview-brand img{width:46px;height:46px}body .contacts-sites-grid,.aral-vehicle-chooser{grid-template-columns:1fr}.aral-vehicle-chooser{padding:14px}.aral-vehicle-chooser>p{grid-column:1}body .aral-review-toggle{right:10px;bottom:10px;font-size:12px}}
+@media(prefers-reduced-motion:reduce){header nav .aral-preview-pill,.aral-vehicle-chooser button{transition:none!important}}
+
+/* Mobile: ensure the new five-section menu never spills into the header. */
+header.home-nav .home-nav-inner,header.site-header .nav-row,header.nav .nav-wrap{position:relative}
+@media(max-width:900px){
+ header.home-nav .home-menu-toggle,header.site-header .mobile-toggle,header.nav .nav-toggle{display:inline-flex!important}
+ header.home-nav nav.home-menu:not(.is-open),header.site-header nav.navlinks:not(.open),header.nav nav.menu:not(.is-open):not(.open){display:none!important}
+ header.home-nav nav.home-menu.is-open,header.site-header nav.navlinks.open,header.nav nav.menu.is-open,header.nav nav.menu.open{
+  display:flex!important;position:absolute!important;top:100%!important;left:0!important;right:0!important;
+  width:100%!important;height:auto!important;flex-direction:column!important;align-items:stretch!important;
+  gap:4px!important;z-index:180!important;margin:0!important
+ }
+ header.home-nav nav.home-menu.is-open a,header.site-header nav.navlinks.open a,header.nav nav.menu.is-open a,header.nav nav.menu.open a{justify-content:flex-start!important}
+}
+
+/* ARAL unified R3 approval preview: targeted changes; no modifications to R1 or production. */
+/* Strong but local photographic text contrast, without replacing approved photographs. */
+body #audiences .audience-tile::after{
+ background:linear-gradient(0deg,rgba(4,17,38,.95) 0%,rgba(4,26,52,.73) 48%,rgba(4,29,59,.13) 100%)!important;
+}
+body #audiences .audience-tile__body{z-index:2}
+body #audiences .audience-tile__body p{color:#f2f6ff!important;font-size:clamp(14px,1vw,16px)!important;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+body #audiences .audience-tile__body h3{color:#fff!important;text-shadow:0 1px 3px rgba(0,0,0,.25)}
+/* Replace only marked text-link arrows by a subtle leading dot. */
+.aral-r3-dot-link{display:inline-flex!important;align-items:baseline!important;gap:9px;vertical-align:baseline;text-decoration:none}
+.aral-r3-dot-link::before{content:"";display:inline-block!important;position:relative!important;width:6px!important;height:6px!important;min-width:6px!important;min-height:6px!important;border-radius:50%!important;background:currentColor!important;opacity:.9!important;top:-2px!important;flex-shrink:0}
+body #audiences .aral-r3-dot-link{color:#ffe425!important}
+body #audiences .aral-r3-dot-link:hover{text-decoration:underline;text-underline-offset:4px}
+.aral-global-footer .af-news .aral-r3-dot-link{position:relative!important;display:block!important;padding-left:16px!important}
+.aral-global-footer .af-news .aral-r3-dot-link::before{position:absolute!important;left:0!important;top:7px!important;background:#a6cff7!important}
+.aral-global-footer .af-contact .aral-r3-dot-link{display:inline-flex!important}
+.aral-global-footer .aral-r3-dot-link:hover{text-decoration:underline;text-underline-offset:3px}
+/* Comparison count remains, without the old yellow capsule. */
+header.home-nav #homeCompareCount{display:inline!important;margin-left:3px!important;padding:0!important;min-width:0!important;min-height:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;color:#064786!important;font-size:inherit!important;line-height:inherit!important}
+header.home-nav #compareShortcut{display:inline-flex!important;align-items:center!important;gap:4px!important}
+/* Product toggle layout without redundant instructions/state labels. */
+body .aral-vehicle-chooser{grid-template-columns:repeat(2,minmax(0,1fr))}
+body .aral-vehicle-chooser button{justify-content:flex-start}
+body .aral-vehicle-chooser button .vehicle-label{text-align:left}
+@media(max-width:640px){body .aral-vehicle-chooser{grid-template-columns:1fr}}
+/* New footer destination; preserve approved shared footer appearance. */
+.aral-global-footer .af-contact .aral-r3-driver-cta{margin-top:10px}
+
+/* Prevent old third-party catalog layout from creating page-level horizontal scroll at 1024px. */
+body:has(.aral-vehicle-chooser){overflow-x:clip}
+
+/* R3: keep the full desktop navigation within a 1024px laptop viewport. */
+@media(min-width:901px) and (max-width:1100px){
+ header.site-header .nav-row{gap:12px!important}
+ header.site-header .nav-row>a.brand{min-width:90px!important}
+ header.site-header .navtools{gap:6px!important;flex-shrink:0}
+ header.site-header .navtools .icon-btn{padding-inline:10px!important;font-size:12px!important}
+}
+/* Header comparison count as plain text across catalog, without yellow capsule. */
+header.site-header #headerCompare em,
+header.nav #headerCompare em{background:transparent!important;box-shadow:none!important;border-radius:0!important;padding:0!important;margin-left:4px!important;color:#064786!important;font-style:normal!important}
+
+/* ARAL R4 footer: equal clean actions, no double-dot treatment */
+.aral-global-footer .af-contact .af-cta,
+.aral-global-footer .af-contact .aral-r9-driver-cta{
+ box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:0!important;
+ width:min(100%,252px)!important;max-width:252px!important;min-height:46px!important;margin:0!important;padding:11px 14px!important;
+ border:1px solid rgba(149,207,255,.65)!important;border-radius:9px!important;
+ background:rgba(21,105,205,.28)!important;color:#fff!important;font-size:13px!important;font-weight:750!important;
+ line-height:1.35!important;text-align:center!important;text-decoration:none!important;white-space:normal!important;
+}
+.aral-global-footer .af-contact .af-cta::before,
+.aral-global-footer .af-contact .af-cta::after{content:none!important;display:none!important}
+.aral-global-footer .af-contact .af-cta:hover{background:rgba(38,126,230,.48)!important;border-color:rgba(208,235,255,.84)!important}
+.aral-global-footer .af-contact .af-cta:focus-visible{outline:3px solid #ffd958!important;outline-offset:3px!important}
+/* Clean news cards: no left line, competing dot or arbitrary offsets */
+.aral-global-footer .af-news{display:grid!important;gap:10px!important;min-width:0!important}
+.aral-global-footer .af-news .af-teaser{
+ box-sizing:border-box!important;display:block!important;width:100%!important;min-width:0!important;
+ margin:0!important;padding:12px 14px!important;border:1px solid rgba(143,196,243,.22)!important;
+ border-radius:9px!important;background:rgba(255,255,255,.045)!important;text-decoration:none!important;
+ overflow-wrap:anywhere!important;transition:background .2s,border-color .2s!important;
+}
+.aral-global-footer .af-news .af-teaser::before,
+.aral-global-footer .af-news .af-teaser::after{content:none!important;display:none!important}
+.aral-global-footer .af-news .af-teaser:hover{background:rgba(35,109,183,.23)!important;border-color:rgba(143,196,243,.56)!important;text-decoration:none!important}
+.aral-global-footer .af-news .af-teaser small{display:block!important;margin:0 0 5px!important;font-size:10px!important;font-weight:760!important;letter-spacing:.09em!important;line-height:1.4!important;color:#a6d7ff!important}
+.aral-global-footer .af-news .af-teaser span{display:block!important;color:#eff7ff!important;font-size:13px!important;font-weight:670!important;line-height:1.45!important}
+.aral-contour-compare{display:none!important}
+
+/* ARAL R5 — two true MagneticButton CTAs with gradient/glow, identical at every viewport. */
+.aral-global-footer .af-contact a.af-cta.aral-r9-footer-cta{
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  gap:0!important;position:relative!important;isolation:isolate!important;
+  min-height:48px!important;width:min(100%,252px)!important;max-width:252px!important;
+  border:1px solid rgba(114,194,255,.65)!important;border-radius:9px!important;
+  background:linear-gradient(135deg,#0b4b93 0%,#0966bb 58%,#0b4e98 100%)!important;
+  color:#fff!important;font-weight:780!important;font-size:13px!important;text-align:center!important;
+  box-shadow:0 3px 12px rgba(0,24,59,.20),inset 0 1px 0 rgba(255,255,255,.12)!important;
+  text-shadow:0 1px 1px rgba(0,18,54,.3);
+  transition-property:background-color,border-color,color,box-shadow,filter!important;
+  transition-duration:.22s!important;transition-timing-function:ease!important;
+  text-decoration:none!important;
+}
+.aral-global-footer .af-contact a.af-cta.aral-r9-footer-cta:hover,
+.aral-global-footer .af-contact a.af-cta.aral-r9-footer-cta:focus-visible{
+  background:linear-gradient(130deg,#0e63af 0%,#147ddd 56%,#125aab 100%)!important;
+  border-color:rgba(181,225,255,.97)!important;
+  box-shadow:0 0 0 1px rgba(126,203,255,.18),0 0 22px rgba(37,145,243,.45),
+      inset 0 0 17px rgba(154,213,255,.16)!important;
+  filter:brightness(1.07)!important;
+}
+.aral-global-footer .af-contact a.af-cta.aral-r9-footer-cta::before,
+.aral-global-footer .af-contact a.af-cta.aral-r9-footer-cta::after{
+  display:none!important;content:none!important;
+}
+/* Restore the original three-item editorial list, its vertical blue line and all source links. */
+.aral-global-footer .af-news{display:grid!important;gap:9px!important}
+.aral-global-footer .af-news a.af-teaser{
+  display:block!important;position:relative!important;width:100%!important;
+  padding:0 0 0 12px!important;margin:0 0 6px!important;
+  background:transparent!important;border:0!important;
+  border-left:2px solid rgba(119,188,253,.55)!important;
+  border-radius:0!important;box-shadow:none!important;min-width:0!important;
+  color:#d9ecff!important;text-decoration:none!important;
+}
+.aral-global-footer .af-news a.af-teaser::before,
+.aral-global-footer .af-news a.af-teaser::after{display:none!important;content:none!important}
+.aral-global-footer .af-news a.af-teaser:hover{
+  background:rgba(31,95,169,.13)!important;
+  border-left-color:#8ad1ff!important;box-shadow:none!important;text-decoration:none!important;
+}
+.aral-global-footer .af-news a.af-teaser small{
+  display:block!important;margin:0 0 4px!important;
+  color:#8bcaff!important;font-size:10px!important;font-weight:760!important;
+  letter-spacing:.1em!important;line-height:1.45!important;
+}
+.aral-global-footer .af-news a.af-teaser span{
+  display:block!important;color:#e4f2ff!important;font-size:13px!important;font-weight:680!important;
+  line-height:1.4!important;
+}
+
+/* Each single-action card is one native link and one keyboard stop. */
+a.card-link {text-decoration:none;color:inherit}
+a.audience-tile, a.purchase-card--blue {color:white}
+a.card-link:focus-visible {outline:3px solid #2689d0;outline-offset:3px}
+a.card-link:is(:hover,:focus-visible) .card-link-label {text-decoration:underline;text-underline-offset:3px}
+#timeline .year-btn:is(:hover,:focus-visible,[aria-expanded="true"]) {
+  border-color:#3490d6;
+  box-shadow:0 0 0 1px rgba(52,144,214,.28),0 0 18px rgba(52,144,214,.35),inset 0 0 14px rgba(52,144,214,.14);
+}
+
+/* R9 red preview marks only, never merged into published site automatically. */
+.aral-r9-redmark{position:relative!important;outline:2px solid rgba(215,43,58,.83)!important;outline-offset:3px!important;border-radius:6px}
+.aral-r9-redmark[data-review-change]::after{content:"ПРОВЕРИТЬ " attr(data-review-change);display:inline-block;position:absolute;top:-10px;right:0;z-index:9;padding:2px 6px;background:#b91e35;color:white;font-size:9px;font-weight:800;line-height:1.3;letter-spacing:.04em;border-radius:3px;white-space:nowrap}
+.aral-r9-review-line{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:18px 20px;margin:12px 0 22px;background:#fff7f7;color:#80202a;line-height:1.55;border:1px solid #f1c5ce}
+.aral-r9-review-placeholder{padding:20px 0!important;background:#fff8f8}
+.aral-r9-sales-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+#timeline .year-btn:not([aria-expanded="true"]):is(:hover,:focus-visible){background:linear-gradient(130deg,#f1f9ff,#e3f2ff)!important;border-color:#7dbef1!important;box-shadow:0 0 0 1px rgba(52,144,214,.26),0 0 21px rgba(51,153,237,.32),inset 0 0 14px rgba(120,194,252,.18)!important;transform:translateY(-2px)}
+#timeline .year-btn[aria-expanded="true"]:is(:hover,:focus-visible){border-color:#a0d4ff!important;box-shadow:0 0 0 2px rgba(128,207,255,.45),0 0 21px rgba(51,153,237,.38),inset 0 0 14px rgba(120,194,252,.12)!important}
+#timeline .year-btn:focus-visible{outline:3px solid #65b4ed!important;outline-offset:3px!important}
+.aral-r9-cooperation{position:relative}.aral-r9-coop-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:25px;align-items:stretch}
+.aral-r9-coop-copy{padding:clamp(22px,3.4vw,54px) 0}.aral-r9-coop-copy h2{font-size:clamp(30px,3.5vw,46px);line-height:1.1;margin:16px 0 22px}
+.aral-r9-coop-copy p{font-size:clamp(15px,1.5vw,19px);line-height:1.7;color:#526680;max-width:570px}
+.aral-r9-coop-card{display:flex;flex-direction:column;justify-content:center;gap:18px;position:relative;isolation:isolate;padding:clamp(28px,4vw,62px);border-radius:17px;border:1px solid rgba(132,207,253,.65);color:#fff;background:linear-gradient(135deg,#082c57,#0e5aa7);box-shadow:0 16px 42px rgba(5,50,111,.12);transition:transform .25s,box-shadow .25s}
+.aral-r9-coop-card:hover,.aral-r9-coop-card:focus-visible{transform:translateY(-3px);box-shadow:0 0 0 1px rgba(94,188,250,.5),0 18px 35px rgba(34,118,220,.25)}
+.aral-r9-coop-card strong{font-size:clamp(23px,2.7vw,34px)}.aral-r9-coop-card>span:not(.aral-hbg-border){line-height:1.4}
+.aral-r9-coop-card .card-link-label{color:#bde7ff;font-weight:750;margin-top:16px}.aral-r9-coop-icon{letter-spacing:.25em;color:#9bd5ff;font-size:12px;font-weight:850}
+.aral-r9-anchor-alias{position:absolute;top:0}
+@media(max-width:768px){.aral-r9-coop-layout{grid-template-columns:1fr}.aral-r9-coop-copy{padding:18px 0}.aral-r9-coop-card{min-height:225px}.aral-r9-sales-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){#timeline .year-btn{transition:none!important}.aral-r9-coop-card{transition:none!important}}
+
+/* Tight original ARAL badge, without the white square or oversized image canvas. */
+header.home-nav a.aral-preview-brand,
+header.site-header a.aral-preview-brand,
+header.nav a.aral-preview-brand{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ flex:0 0 64px!important;min-width:64px!important;width:64px!important;height:64px!important;
+ padding:0!important;margin-block:0!important;gap:0!important;background:transparent!important;
+ border:0!important;border-radius:6px!important;box-shadow:none!important;line-height:1!important;
+}
+header.home-nav a.aral-preview-brand img,
+header.site-header a.aral-preview-brand img,
+header.nav a.aral-preview-brand img{
+ display:block!important;width:64px!important;height:64px!important;max-width:none!important;
+ object-fit:contain!important;background:transparent!important;border:0!important;border-radius:0!important;
+ filter:drop-shadow(0 2px 4px rgba(0,25,68,.18));
+}
+@media(max-width:640px){
+ header.home-nav a.aral-preview-brand,
+ header.site-header a.aral-preview-brand,
+ header.nav a.aral-preview-brand{flex-basis:52px!important;min-width:52px!important;width:52px!important;height:52px!important}
+ header.home-nav a.aral-preview-brand img,
+ header.site-header a.aral-preview-brand img,
+ header.nav a.aral-preview-brand img{width:52px!important;height:52px!important}
+}
+
+/* R10: agreed commercial contacts and completed replacement blocks. */
+body a.aral-r9-coop-card,body a.aral-r9-coop-card strong{color:#fff!important}
+body a.aral-r9-coop-card>span:not(.aral-hbg-border){color:#d6edff!important}
+.aral-importer-label{display:block;font-size:13px;font-weight:650;letter-spacing:.02em;color:#526b87;line-height:1.5}
+.aral-primary-phone{display:block;font-size:clamp(21px,2.3vw,30px);font-weight:800;line-height:1.3;text-decoration:none;color:#0755ad;overflow-wrap:anywhere}
+.aral-contact-channels{display:flex;flex-wrap:wrap;gap:10px}
+.aral-contact-channels a{display:inline-flex!important;align-items:center;justify-content:center;padding:11px 15px;border:1px solid #b4d4ef;border-radius:8px;text-decoration:none;font-size:14px;font-weight:750;color:#0755ad;background:#f5faff;line-height:1.35}
+.aral-contact-channels a:hover{background:#e4f2ff;border-color:#1678ca}
+.aral-contact-channels a:focus-visible{outline:3px solid #1479d7;outline-offset:3px}
+.aral-max-contact{margin:0!important;font-size:13px!important;line-height:1.6!important;color:#526b87!important}
+.aral-max-contact span{white-space:nowrap}
+.aral-r10-contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.aral-r10-contact-panel{display:flex;flex-direction:column;gap:18px;padding:30px;background:#eef6fc;border:1px solid #c7dcef;border-radius:16px;min-width:0}
+body .aral-r10-purchase{grid-template-columns:repeat(2,minmax(0,1fr))}
+body .aral-r10-benefits{grid-template-columns:repeat(2,minmax(0,1fr))}
+.aral-benefit-number{display:block;font-size:13px;font-weight:800;color:#2478c0;margin-bottom:24px;letter-spacing:.15em}
+.aral-global-footer .aral-importer-label{color:#cce6ff;font-size:13px}
+.aral-global-footer .aral-contact-channels{gap:8px;margin-block:12px}
+.aral-global-footer .aral-contact-channels a{padding:8px 10px;font-size:12px;background:#ffffff0d;color:#fff;border-color:#ffffff40}
+.aral-global-footer .aral-max-contact{color:#cce6ff!important;margin-bottom:14px!important}
+@media(max-width:760px){.aral-r10-contact-layout{grid-template-columns:1fr;gap:22px}body .aral-r10-benefits{grid-template-columns:1fr}.aral-r10-contact-panel{padding:24px}body .aral-r10-purchase{grid-template-columns:1fr}}
+
+/* Contact policy: retain original directory data, omit email from this preview UI. */
+a[href^="mailto:"]{display:none!important}
