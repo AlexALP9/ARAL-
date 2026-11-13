@@ -1,0 +1,39 @@
+name: ARAL unified R9 complete review
+on:
+  push:
+    branches:
+      - codex/aral-home-hero48-cards-r15-20261028
+    paths:
+      - "design/hero/prototypes/hero-4s-k-views/ARAL_home_employer_feedback_r9_preview.html"
+      - "index-employer-feedback-r9-preview.html"
+      - "pages/*-employer-feedback-r9-preview.html"
+      - "assets/aral-employer-feedback-r9.*"
+      - "assets/aral-footer-preview-r9.js"
+      - "design/reviews/aral-unified-r9/**"
+      - ".github/workflows/aral-unified-r9.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  chromium:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.57.0
+          npx playwright install --with-deps chromium
+      - name: Serve full review site
+        run: |
+          python3 -m http.server 8123 --bind 127.0.0.1 >/tmp/aral-r9.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8123/design/hero/prototypes/hero-4s-k-views/ARAL_home_employer_feedback_r9_preview.html >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          exit 1
+      - name: Chromium all linked pages, PDS and responsive 4 sizes
+        run: node design/reviews/aral-unified-r9/check-r9.cjs
