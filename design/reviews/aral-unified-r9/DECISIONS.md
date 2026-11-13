@@ -1,6 +1,6 @@
 # ARAL R9 — entire full-site review
 
-Entry point: `design/hero/prototypes/hero-4s-k-views/ARAL_home_employer_feedback_r8_preview.html`.
+Entry point: `design/hero/prototypes/hero-4s-k-views/ARAL_home_employer_feedback_r9_preview.html`.
 
 Based on R8; R8/main/Pages unchanged. Retains approved PDS R7, HERO animation, 2A waves +20%, catalog data 16 oils, local logo, Ozon, footer, magnetic buttons. Red marks are review-only.
 
