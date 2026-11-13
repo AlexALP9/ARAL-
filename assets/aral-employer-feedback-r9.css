@@ -74,21 +74,6 @@ body #audiences .aral-r3-dot-link:hover{text-decoration:underline;text-underline
 .aral-global-footer .af-news .aral-r3-dot-link::before{position:absolute!important;left:0!important;top:7px!important;background:#a6cff7!important}
 .aral-global-footer .af-contact .aral-r3-dot-link{display:inline-flex!important}
 .aral-global-footer .aral-r3-dot-link:hover{text-decoration:underline;text-underline-offset:3px}
-/* Bigger recognizable ARAL logo at the existing header height. */
-header.home-nav a.aral-preview-brand img,
-header.site-header a.aral-preview-brand img,
-header.nav a.aral-preview-brand img{width:74px!important;height:74px!important;object-fit:contain!important}
-header.home-nav a.aral-preview-brand,
-header.site-header a.aral-preview-brand,
-header.nav a.aral-preview-brand{min-width:78px!important}
-@media(max-width:640px){
- header.home-nav a.aral-preview-brand img,
- header.site-header a.aral-preview-brand img,
- header.nav a.aral-preview-brand img{width:58px!important;height:58px!important}
- header.home-nav a.aral-preview-brand,
- header.site-header a.aral-preview-brand,
- header.nav a.aral-preview-brand{min-width:60px!important}
-}
 /* Comparison count remains, without the old yellow capsule. */
 header.home-nav #homeCompareCount{display:inline!important;margin-left:3px!important;padding:0!important;min-width:0!important;min-height:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;color:#064786!important;font-size:inherit!important;line-height:inherit!important}
 header.home-nav #compareShortcut{display:inline-flex!important;align-items:center!important;gap:4px!important}
@@ -223,3 +208,28 @@ a.card-link:is(:hover,:focus-visible) .card-link-label {text-decoration:underlin
 .aral-r9-anchor-alias{position:absolute;top:0}
 @media(max-width:768px){.aral-r9-coop-layout{grid-template-columns:1fr}.aral-r9-coop-copy{padding:18px 0}.aral-r9-coop-card{min-height:225px}.aral-r9-sales-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){#timeline .year-btn{transition:none!important}.aral-r9-coop-card{transition:none!important}}
+
+/* Tight original ARAL badge, without the white square or oversized image canvas. */
+header.home-nav a.aral-preview-brand,
+header.site-header a.aral-preview-brand,
+header.nav a.aral-preview-brand{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ flex:0 0 64px!important;min-width:64px!important;width:64px!important;height:64px!important;
+ padding:0!important;margin-block:0!important;gap:0!important;background:transparent!important;
+ border:0!important;border-radius:6px!important;box-shadow:none!important;line-height:1!important;
+}
+header.home-nav a.aral-preview-brand img,
+header.site-header a.aral-preview-brand img,
+header.nav a.aral-preview-brand img{
+ display:block!important;width:64px!important;height:64px!important;max-width:none!important;
+ object-fit:contain!important;background:transparent!important;border:0!important;border-radius:0!important;
+ filter:drop-shadow(0 2px 4px rgba(0,25,68,.18));
+}
+@media(max-width:640px){
+ header.home-nav a.aral-preview-brand,
+ header.site-header a.aral-preview-brand,
+ header.nav a.aral-preview-brand{flex-basis:52px!important;min-width:52px!important;width:52px!important;height:52px!important}
+ header.home-nav a.aral-preview-brand img,
+ header.site-header a.aral-preview-brand img,
+ header.nav a.aral-preview-brand img{width:52px!important;height:52px!important}
+}
