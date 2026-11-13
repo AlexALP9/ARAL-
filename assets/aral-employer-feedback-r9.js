@@ -1,4 +1,4 @@
-/* ARAL employer-feedback R7. Runs only on independently named preview HTML copies. Use a verified ARAL logo SVG; the old embedded raster was malformed and did not decode. */
+/* ARAL R9 preview: shared navigation and original logo with a tight transparent SVG viewport. */
 (()=>{'use strict';
  const script=document.currentScript;
  const ROOT=new URL(script?.dataset.feedbackRoot||'./',document.baseURI);
@@ -89,7 +89,7 @@
    if(brand){
     brand.href=routes.home;brand.setAttribute('aria-label','ARAL — на главную с HERO-анимацией');
     brand.classList.add('aral-preview-brand');
-    brand.innerHTML='<img src="'+to('assets/aral-logo-supplied-r7.png')+'" alt="Логотип ARAL" width="74" height="74" decoding="async">';
+    brand.innerHTML='<img src="'+to('assets/aral-logo-header-r9.svg')+'" alt="Логотип ARAL" width="64" height="64" decoding="async">';
    }
    const nav=header.querySelector('nav.home-menu,nav.navlinks,nav.menu');
    if(!nav)return;
