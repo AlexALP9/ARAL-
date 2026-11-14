@@ -145,11 +145,11 @@
    }
    function apply(index,instant=false){
     selected=index;const now=performance.now();
-    const swell=mobile.matches ? .035 : .10;
+    const swell=mobile.matches ? 0 : .10;
     const push=index<0||mobile.matches?0:links[index].offsetWidth*swell/2+3;
     links.forEach((a,i)=>{
      const on=i===index,v=states[i];a.dataset.jellyOn=String(on);
-     v.tx=Math.sign(i-index)*push;v.ts=index<0||reduce.matches?1:on?1+swell:.98;
+     v.tx=Math.sign(i-index)*push;v.ts=index<0||reduce.matches||mobile.matches?1:on?1+swell:.98;
      if(reduce.matches)v.tx=0;
      v.start=now+((frame||instant)?0:Math.abs(i-index)*32);
      if(instant||reduce.matches){v.x=v.tx;v.sx=v.sy=v.ts;v.vx=v.vxs=v.vys=0;paint(i)}
@@ -275,9 +275,20 @@
 
   for(const button of document.querySelectorAll('.home-menu-toggle,.nav-toggle,.mobile-toggle')){
    button.classList.add('aral-menu-toggle');
-   button.innerHTML='<span class="aral-menu-glyph" aria-hidden="true"><i></i><i></i><i></i></span>';
+   button.innerHTML='<span class="aral-menu-label">МЕНЮ</span>';
    const label=()=>button.setAttribute('aria-label',button.getAttribute('aria-expanded')==='true'?'Закрыть меню':'Открыть меню');
    label();new MutationObserver(label).observe(button,{attributes:true,attributeFilter:['aria-expanded']});
+   const header=button.closest('header');
+   const nav=header.querySelector('.aral-jelly-menu');
+   const close=(restoreFocus=false)=>{
+    if(button.getAttribute('aria-expanded')!=='true')return;
+    button.setAttribute('aria-expanded','false');nav?.classList.remove('open','is-open');
+    if(restoreFocus)button.focus();
+   };
+   header.addEventListener('keydown',e=>{if(e.key==='Escape'){close(true);e.preventDefault()}});
+   nav?.addEventListener('click',e=>{if(e.target.closest('a'))close()});
+   document.addEventListener('click',e=>{if(!header.contains(e.target))close()});
+   matchMedia('(min-width:1201px)').addEventListener('change',e=>{if(e.matches)close()});
   }
   for(const b of document.querySelectorAll('[data-max-phone]')){
    if(b.dataset.boundMax)return;b.dataset.boundMax='true';
