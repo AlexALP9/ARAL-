@@ -94,7 +94,105 @@
  .details-grid > .product-description > p,
  .details-grid > .product-note > p {padding:0 18px 18px;}
 }
-</style></head>
+
+/* PR #9 / approved 3D Animated Pin motion, adapted from the existing B preview.
+   Product-card content, photos, filters, PDP routes and compare actions unchanged. */
+#assortment .cards{padding-top:28px;margin-top:-28px}
+#assortment .product-card--minimal{
+  overflow:visible;isolation:isolate;transform-style:preserve-3d;
+  backface-visibility:hidden;
+  transition:transform 650ms cubic-bezier(.2,.75,.25,1),box-shadow 650ms ease,border-color .2s;
+}
+#assortment .product-card--minimal:hover,#assortment .product-card--minimal:focus-within{
+  transform:perspective(1100px) translate3d(0,-9px,22px) rotateX(11deg) scale(.985);
+  box-shadow:0 27px 44px rgba(8,47,104,.19);border-color:#afd0f3;z-index:3;
+}
+#assortment .product-card--minimal:focus-visible,
+#assortment .product-card--minimal:focus,
+#assortment .product-card--minimal .compare-add:focus-visible{
+  outline:3px solid #ffe425;outline-offset:4px;
+}
+#assortment .product-card--minimal .product-photo{border-radius:13px 13px 0 0}
+#assortment .product-card--minimal .product-photo img{
+  transform:translateZ(0);transition:transform 650ms cubic-bezier(.2,.75,.25,1);
+}
+#assortment .product-card--minimal:hover .product-photo img{
+  transform:translateZ(28px) scale(1.015)
+}
+#assortment .product-card--minimal .pc-body{
+  transform:translateZ(0);transition:transform 650ms ease
+}
+#assortment .product-card--minimal:hover .pc-body{
+  transform:translateZ(12px)
+}
+#assortment .product-card--minimal .compare-add{position:relative;z-index:8}
+#assortment .pin-perspective{
+  position:absolute;pointer-events:none;z-index:7;inset:0;
+  transform-style:preserve-3d;opacity:0;transition:opacity 450ms ease
+}
+#assortment .product-card--minimal:hover .pin-perspective,
+#assortment .product-card--minimal:focus-within .pin-perspective,
+#assortment .product-card--minimal:focus .pin-perspective{opacity:1}
+#assortment .pin-label{
+  position:absolute;left:50%;top:-23px;transform:translate(-50%,6px);
+  border-radius:100px;background:#061d40;color:#fff;
+  padding:5px 13px;font-weight:750;font-size:10px;white-space:nowrap;
+  box-shadow:0 7px 22px #0326544d;
+  transition:transform 600ms cubic-bezier(.2,.8,.25,1)
+}
+#assortment .product-card--minimal:hover .pin-label,
+#assortment .product-card--minimal:focus-within .pin-label{
+  transform:translate(-50%,-1px)
+}
+#assortment .pin-label::after{
+  content:"";position:absolute;bottom:0;left:15%;width:70%;height:1px;
+  background:linear-gradient(90deg,transparent,#6bd8ff,transparent)
+}
+#assortment .pin-stem{
+  position:absolute;left:50%;top:4px;height:33px;width:2px;
+  transform:translateX(-50%);
+  background:linear-gradient(to bottom,#78daff,#0082d5,transparent);
+  filter:drop-shadow(0 0 4px #2faefa)
+}
+#assortment .pin-tip{
+  position:absolute;left:50%;top:35px;height:7px;width:7px;
+  transform:translateX(-50%);border-radius:50%;background:#c6fbff;
+  box-shadow:0 0 0 4px #58c9ff2d,0 0 15px #0b9de3
+}
+#assortment .pin-wave{
+  position:absolute;left:50%;top:36px;width:108px;height:108px;
+  border-radius:50%;border:1px solid #4fafff77;
+  background:radial-gradient(circle,#0f89de11,transparent 68%);
+  transform:translate(-50%,-50%) rotateX(70deg) scale(.1);
+  opacity:0;animation:aral-catalog-pin-pulse 5.5s ease-out infinite paused;
+}
+#assortment .pin-wave:nth-of-type(5){animation-delay:1.5s}
+#assortment .pin-wave:nth-of-type(6){animation-delay:3s}
+#assortment .product-card--minimal:hover .pin-wave,
+#assortment .product-card--minimal:focus-within .pin-wave{animation-play-state:running}
+@keyframes aral-catalog-pin-pulse{
+  0%{opacity:0;transform:translate(-50%,-50%) rotateX(70deg) scale(.05)}
+  10%{opacity:.85}75%{opacity:.26}
+  100%{opacity:0;transform:translate(-50%,-50%) rotateX(70deg) scale(1.45)}
+}
+@media(hover:none),(pointer:coarse){
+ #assortment .pin-perspective{display:none!important}
+ #assortment .product-card--minimal:hover,
+ #assortment .product-card--minimal:focus-within{transform:none!important;box-shadow:none}
+ #assortment .product-card--minimal:hover .pc-body{transform:none}
+ #assortment .product-card--minimal:hover .product-photo img{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+ #assortment .product-card--minimal,
+ #assortment .product-card--minimal .product-photo img,
+ #assortment .product-card--minimal .pc-body,
+ #assortment .pin-perspective,#assortment .pin-label{transition:none!important}
+ #assortment .product-card--minimal:hover,
+ #assortment .product-card--minimal:focus-within{transform:none!important}
+ #assortment .pin-wave{animation:none!important}
+}
+
+</style><link rel="stylesheet" href="../assets/aral-magnetic.css"></head>
 <body><div class="notice-top"><div class="wrap"><span>ARAL / ТЕХНИЧЕСКИЙ КАТАЛОГ</span><span>РАБОЧИЙ HTML-ПРОТОТИП <b>· НЕ ОПУБЛИКОВАН</b></span></div></div>
 <header class="site-header"><div class="wrap nav-row"><a class="brand" href="../index.html#company"><span class="brand-diamond"><span>ARAL</span></span><span class="brand-text">ARAL</span></a><nav class="navlinks" id="topNav" aria-label="Семь разделов ARAL"><a href="../index.html#company">Компания</a><a class="current" href="#/catalog">Продукция</a><a href="drivers-08.html">Для водителей</a><a href="partners-11.html">Для партнёров</a><a href="advantages-04.html">Преимущества ARAL</a><a href="../index.html#interesting">Интересное</a><a href="contacts-03.html">Контакты</a></nav><div class="navtools"><a class="icon-btn primary-link" href="#/catalog">Каталог</a><a href="#/compare" class="icon-btn" id="headerCompare">Сравнение <em id="compareCount">0</em></a><button type="button" class="icon-btn mobile-toggle" id="menuToggle" aria-expanded="false" aria-controls="topNav" aria-label="Показать меню">☰</button></div></div></header>
 <div class="demo-banner"><div class="wrap"><span class="demo-dot"></span><span>Версия для обсуждения · каталог и сравнение работают автономно; фотографии упаковок загружаются из GitHub при наличии интернета.</span></div></div>
@@ -162,12 +260,12 @@ function cards(p){
  <div class="pc-body"><h3>${escape(nameOf(p))}</h3>
  <div class="specchips" aria-label="Подтверждённые технические обозначения">${cardBadges(p)}</div>
  <div class="pc-volumes" aria-label="Доступные фасовки">${p.variants.map(v=>`<span>${escape(v.volume)}</span>`).join('')}</div>
- <div class="pc-foot"><button type="button" class="compare-add ${is?'selected':''}" data-compare="${escape(p.internal_id)}">${is?'✓ Добавлено':'+ Сравнить'}</button></div></div></article>`;
+ <div class="pc-foot"><button type="button" class="compare-add ${is?'selected':''}" data-compare="${escape(p.internal_id)}">${is?'✓ Добавлено':'+ Сравнить'}</button></div></div><span class="pin-perspective" aria-hidden="true"><span class="pin-label">ARAL · Подробнее о товаре</span><span class="pin-stem"></span><span class="pin-tip"></span><span class="pin-wave"></span><span class="pin-wave"></span><span class="pin-wave"></span></span></article>`;
 }
 function renderCatalog(){document.title='Продукция ARAL — рабочий HTML-прототип';
 const saes=[...new Set(products.map(p=>p.sae).filter(Boolean))].sort(); const vols=[...new Set(products.flatMap(p=>p.variants.map(v=>v.volume)))].sort((a,b)=>parseInt(a)-parseInt(b));
 const opts=(key)=>[...new Set(products.flatMap(p=>terms(p,key)))].sort((a,b)=>a.localeCompare(b,'ru'));const seriesList=[...new Set(products.map(seriesOf))].sort();const selectOptions=(arr,prompt)=>'<option value="">'+prompt+'</option>'+arr.map(x=>'<option value="'+escape(x)+'">'+escape(x)+'</option>').join('');
-main.innerHTML=`<section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><div class="eyebrow">Продукция / ARAL</div><h1>Каталог продукции <span>ARAL</span></h1><div class="intro"><p>В каталоге собраны моторные масла и технические жидкости ARAL для легковых автомобилей и коммерческого транспорта.</p><p>Искать продукт можно по категории, вязкости SAE или артикулу. В карточке товара представлены область применения, доступные фасовки и опубликованные технические характеристики. Также можно ознакомиться с доступной документацией: техническим паспортом продукта (PDS) и паспортом безопасности (SDS).</p><p>Несколько продуктов можно сравнить между собой по подтверждённым техническим характеристикам.</p></div><div class="hero-links"><a class="btn btn-primary" href="#assortment">Перейти к каталогу <span>↘</span></a><a class="btn btn-outline" href="#howto">Как выбрать продукт <span>↗</span></a></div></div><div class="hero-art hero-art--supplied"><img src="../media/editorial/product-1.png" alt="Упаковки продукции ARAL: канистры моторного масла и промышленная тара" fetchpriority="high" decoding="async"></div></div></section>
+main.innerHTML=`<section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><div class="eyebrow">Продукция / ARAL</div><h1>Каталог продукции <span>ARAL</span></h1><div class="intro"><p>В каталоге собраны моторные масла и технические жидкости ARAL для легковых автомобилей и коммерческого транспорта.</p><p>Искать продукт можно по категории, вязкости SAE или артикулу. В карточке товара представлены область применения, доступные фасовки и опубликованные технические характеристики. Также можно ознакомиться с доступной документацией: техническим паспортом продукта (PDS) и паспортом безопасности (SDS).</p><p>Несколько продуктов можно сравнить между собой по подтверждённым техническим характеристикам.</p></div><div class="hero-links"><a class="btn btn-primary" data-magnetic="products-catalog" href="#assortment">Перейти к каталогу <span>↘</span></a><a class="btn btn-outline" data-magnetic="products-guide" href="#howto">Как выбрать продукт <span>↗</span></a></div></div><div class="hero-art hero-art--supplied"><img src="../media/editorial/product-1.png" alt="Упаковки продукции ARAL: канистры моторного масла и промышленная тара" fetchpriority="high" decoding="async"></div></div></section>
 <section class="wrap" id="assortment"><div class="section-intro"><div><div class="micro blue">01 / ассортимент</div><h2>Найдите нужную продукцию.</h2></div><p>Начните с категории или уточните выбор по вязкости и артикулу. Точные допуски, применение и сведения о фасовке указаны в карточках товаров.</p></div><div class="catalog-layout"><div id="filterShade" class="filter-shade" hidden></div><aside class="filters" id="filtersPanel" aria-label="Фильтры каталога"><div class="filter-head">Фильтры <span class="filters-buttons"><button class="clear-btn" id="clearFilters">Сбросить</button><button type="button" class="filters-close" id="closeFilters" aria-label="Закрыть фильтры">✕</button></span></div><div class="filter-group"><label>КАТЕГОРИЯ</label><div class="cat-list" id="categoryFilters"></div></div><div class="filter-group"><label for="saeFilter">ВЯЗКОСТЬ SAE</label><select id="saeFilter"><option value="">Любая вязкость</option>${saes.map(x=>`<option value="${escape(x)}">${escape(x)}</option>`).join('')}</select></div><div class="filter-group"><label for="volumeFilter">ФАСОВКА</label><select id="volumeFilter"><option value="">Все объёмы</option>${vols.map(x=>`<option value="${escape(x)}">${escape(x)}</option>`).join('')}</select></div><div class="filter-group"><label for="aceaFilter">ACEA</label><select id="aceaFilter">${selectOptions(opts('acea'),'Любая ACEA')}</select></div><div class="filter-group"><label for="apiFilter">API</label><select id="apiFilter">${selectOptions(opts('api'),'Любая API')}</select></div><div class="filter-group"><label for="officialFilter">ОФИЦИАЛЬНОЕ ОДОБРЕНИЕ OEM</label><select id="officialFilter">${selectOptions(opts('official_approvals'),'Любое одобрение')}</select></div><div class="filter-group"><label for="meetsFilter">СООТВЕТСТВИЕ ТРЕБОВАНИЯМ OEM</label><select id="meetsFilter">${selectOptions(opts('meets'),'Любое соответствие')}</select></div><div class="filter-group"><label for="recommendedFilter">РЕКОМЕНДАЦИИ ПО ПРИМЕНЕНИЮ</label><select id="recommendedFilter">${selectOptions(opts('recommended_for'),'Любая рекомендация')}</select></div><div class="filter-group"><label for="seriesFilter">СЕРИЯ ARAL</label><select id="seriesFilter">${selectOptions(seriesList,'Все серии')}</select></div><p class="filter-foot">OEM-поля разделены по статусу: официальные одобрения, заявленные соответствия (Meets) и рекомендации. Это не равнозначные подтверждения. Сверяйте требования производителя техники.</p><button class="btn btn-primary filters-apply" id="applyFilters" type="button">Показать товары</button></aside><div><div class="catalog-toolbar"><button class="btn btn-outline mobile-filter-open" id="openFilters" type="button" aria-expanded="false" aria-controls="filtersPanel">☷ Фильтры <span id="filterNum"></span></button><label class="searchbox"><input id="searchBox" type="search" value="${escape(search)}" placeholder="Название, артикул, SAE или допуски…" aria-label="Поиск по названию, артикулу, вязкости и спецификациям или допускам"></label><select id="sortBox" class="select-sort" aria-label="Сортировка товаров"><option value="default">Порядок каталога</option><option value="az">Название: А—Я</option><option value="za">Название: Я—А</option><option value="sae">Вязкость SAE</option></select></div><div id="activeChips" class="active-chips" aria-live="polite"></div><div class="result-note"><span><span class="dot"></span><strong id="resultCount">${products.length}</strong> позиций</span><span id="dataStatus">${fullLoaded?'PUBLIC CATALOG · подтверждённые данные встроены':'Локальный список SKU · расширенные данные загружаются'}</span></div><div class="cards" id="cards"></div><p class="catalog-disclaimer">Проверяйте соответствие требованиям производителя автомобиля по подтверждённым характеристикам конкретного масла. Неуказанные допуски и спецификации не следует считать подтверждёнными.</p></div></div></section>
 <section class="info-section" id="howto"><div class="wrap info-grid"><div><div class="micro blue">02 / точность выбора</div><h2>Сначала требования двигателя. Затем масло.</h2><p class="lead">Класс SAE характеризует вязкость моторного масла, но сам по себе не определяет его пригодность для конкретного двигателя. При подборе важно сопоставлять предписания автопроизводителя с категорией ACEA или API и, если это требуется, с допуском производителя техники. Масла одинаковой вязкости могут существенно отличаться по эксплуатационным требованиям и назначению.</p><div class="mini-rule"></div></div><div class="steps"><div class="step"><span class="step-index">01</span><div><h3>Начните с руководства автомобиля</h3><p>Проверьте рекомендованный класс SAE, требуемую категорию ACEA/API и обозначения допусков OEM. Учитывайте специальные требования двигателя и системы нейтрализации выхлопа, включая DPF или GPF, если они предусмотрены производителем.</p></div></div><div class="step"><span class="step-index">02</span><div><h3>Различайте спецификации и одобрения</h3><p>API и ACEA описывают эксплуатационные категории масел. Официальное одобрение автопроизводителя и формулировка «соответствует требованиям» (Meets) имеют разный статус. Не считайте их взаимозаменяемыми.</p></div></div><div class="step"><span class="step-index">03</span><div><h3>Сверьте выбранное масло по документам</h3><p>Сопоставьте сведения карточки с требованиями двигателя и техническим паспортом PDS. Если спецификация или допуск не указаны, это не подтверждает совместимость и не означает автоматического отсутствия одобрения. Выберите фасовку уже после определения подходящего продукта.</p></div></div></div></div></section>
 <section class="direction"><div class="wrap direction-content"><div class="direction-intro"><div><h2>Два маршрута</h2></div></div><article class="direction-card"><div class="micro" style="color:#99cbff">Для водителей</div><h3>Подбираете масло для автомобиля?</h3><p>Изучите характеристики и доступные фасовки, затем перейдите к розничному каталогу. Совместимость уточняйте по требованиям производителя автомобиля.</p><a class="btn btn-yellow" href="${B2C}" target="_blank" rel="noopener noreferrer">Розничный каталог ↗</a></article><article class="direction-card"><div class="micro" style="color:#99cbff">Для партнёров</div><h3>Изучаете ассортимент для закупки?</h3><p>В карточках доступны артикулы и подтверждённые технические данные. Ссылки ведут на поиск продукции на сайте «Склад СПК», не обязательно на отдельную фасовку.</p><a class="btn btn-yellow" href="https://skladspk.ru/" target="_blank" rel="noopener noreferrer">Склад СПК ↗</a></article></div></section>`;
@@ -249,4 +347,4 @@ function load(){products=BACKUP;fullLoaded=true;route();}
 load();
 })();
 </script>
-</body></html>
+<script src="../assets/aral-magnetic.js" defer></script></body></html>

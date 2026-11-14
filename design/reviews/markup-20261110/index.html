@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ARAL · Скриншоты правок</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f4f7fb;color:#0b2749;font-family:system-ui,sans-serif}
+main{max-width:1504px;margin:auto;padding:24px clamp(12px,3vw,42px)}
+h1{font-size:clamp(24px,3vw,38px);line-height:1.12;margin:0 0 24px}nav{display:flex;gap:16px;flex-wrap:wrap;align-items:end;margin-bottom:20px}
+label{display:grid;gap:5px;font-size:14px}select{font:inherit;color:inherit;max-width:100%;padding:9px;border:1px solid #afc1d2;background:white;border-radius:6px;min-height:44px}
+figure{margin:0}figcaption{margin-bottom:10px;color:#445a70}img{display:block;max-width:100%;height:auto;border:1px solid #d8e1e9}
+</style></head><body><main><h1>ARAL · Скриншоты правок</h1>
+<nav aria-label="Выбор снимка"><label>Раздел<select id="section"><option value="hero">Главная · HERO</option><option value="audiences">Для автомобиля и для бизнеса</option><option value="brand" selected>ARAL — технологии и опыт</option><option value="quality">Компания · Качество</option><option value="labels">Для водителей · Обозначения</option><option value="business">Для партнёров · Задачи бизнеса</option><option value="steps">Как начать сотрудничество</option><option value="sales">Контакты отдела продаж</option><option value="stores">Справочник магазинов</option><option value="service">Замена масла — OSTVIN</option><option value="f1">Интересное · Формула-1</option></select></label>
+<label>Ширина экрана<select id="width"><option>1440</option><option>1024</option><option>768</option><option>390</option></select></label></nav>
+<figure><figcaption aria-live="polite" id="caption"></figcaption><img id="shot" alt=""></figure></main><script>
+const images = {
+  "1440-hero": "1440/hero.jpg",
+  "1440-audiences": "1440/audiences.jpg",
+  "1440-brand": "1440/brand.jpg",
+  "1440-quality": "1440/quality.jpg",
+  "1440-labels": "1440/labels.jpg",
+  "1440-business": "1440/business.jpg",
+  "1440-steps": "1440/steps.jpg",
+  "1440-sales": "1440/sales.jpg",
+  "1440-stores": "1440/stores.jpg",
+  "1440-service": "1440/service.jpg",
+  "1440-f1": "1440/f1.jpg",
+  "1024-hero": "1024/hero.jpg",
+  "1024-audiences": "1024/audiences.jpg",
+  "1024-brand": "1024/brand.jpg",
+  "1024-quality": "1024/quality.jpg",
+  "1024-labels": "1024/labels.jpg",
+  "1024-business": "1024/business.jpg",
+  "1024-steps": "1024/steps.jpg",
+  "1024-sales": "1024/sales.jpg",
+  "1024-stores": "1024/stores.jpg",
+  "1024-service": "1024/service.jpg",
+  "1024-f1": "1024/f1.jpg",
+  "768-hero": "768/hero.jpg",
+  "768-audiences": "768/audiences.jpg",
+  "768-brand": "768/brand.jpg",
+  "768-quality": "768/quality.jpg",
+  "768-labels": "768/labels.jpg",
+  "768-business": "768/business.jpg",
+  "768-steps": "768/steps.jpg",
+  "768-sales": "768/sales.jpg",
+  "768-stores": "768/stores.jpg",
+  "768-service": "768/service.jpg",
+  "768-f1": "768/f1.jpg",
+  "390-hero": "390/hero.jpg",
+  "390-audiences": "390/audiences.jpg",
+  "390-brand": "390/brand.jpg",
+  "390-quality": "390/quality.jpg",
+  "390-labels": "390/labels.jpg",
+  "390-business": "390/business.jpg",
+  "390-steps": "390/steps.jpg",
+  "390-sales": "390/sales.jpg",
+  "390-stores": "390/stores.jpg",
+  "390-service": "390/service.jpg",
+  "390-f1": "390/f1.jpg"
+};
+const section = document.querySelector('#section'), width = document.querySelector('#width');
+const initial = new URLSearchParams(location.hash.slice(1));
+if ([...section.options].some(o=>o.value===initial.get('section'))) section.value=initial.get('section');
+if ([...width.options].some(o=>o.value===initial.get('width'))) width.value=initial.get('width');
+function show() {
+  const caption = section.selectedOptions[0].text + ' · ' + width.value + ' px';
+  document.querySelector('#caption').textContent=caption;
+  const shot=document.querySelector('#shot');
+  shot.alt=caption;
+  shot.src=images[width.value+'-'+section.value];
+}
+function selectShot() {
+  location.replace('#'+new URLSearchParams({section:section.value,width:width.value}));
+  show();
+}
+section.addEventListener('change',selectShot);
+width.addEventListener('change',selectShot);
+show();
+</script></body></html>

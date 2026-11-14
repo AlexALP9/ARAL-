@@ -1,0 +1,43 @@
+name: PR9 Hover Border Gradient preview
+on:
+  push:
+    branches:
+      - codex/aral-home-hero48-cards-r15-20261028
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  visual:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.57.0
+          npx playwright install --with-deps chromium
+      - name: Start preview server
+        run: |
+          python3 -m http.server 8123 --bind 127.0.0.1 >/tmp/aral-hbg.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8123/design/hero/prototypes/hero-4s-k-views/ARAL_home_hover_border_gradient_preview.html >/dev/null; then break; fi
+            sleep 1
+          done
+      - name: Visual tests and screenshots at 1440, 1024, 768, 390
+        run: node design/hero/prototypes/hero-4s-k-views/capture-hover-border.mjs
+      - name: Copy tested HTML for approval
+        if: always()
+        run: |
+          cp design/hero/prototypes/hero-4s-k-views/ARAL_home_hover_border_gradient_preview.html review-output/ARAL_home_hover_border_gradient_preview.html
+          printf '%s\n' 'Preview can be opened without downloading using raw.githack with the same branch/path.' 'Use a static server from the repository root for all relative assets.' > review-output/README.txt
+      - name: Upload screenshots and HTML
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ARAL-PR9-HoverBorder-7-Tiles-Approval
+          path: review-output/
+          if-no-files-found: warn
+          retention-days: 30

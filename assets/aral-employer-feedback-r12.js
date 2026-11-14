@@ -1,0 +1,304 @@
+/* ARAL R9 preview: shared navigation and original logo with a tight transparent SVG viewport. */
+(()=>{'use strict';
+ const script=document.currentScript;
+ const ROOT=new URL(script?.dataset.feedbackRoot||'./',document.baseURI);
+ const to=p=>new URL(p,ROOT).href;
+ const routes={
+  home:to('design/hero/prototypes/hero-4s-k-views/ARAL_home_employer_feedback_r12_preview.html'),
+  company:to('index-employer-feedback-r12-preview.html#company'),
+  products:to('pages/products-employer-feedback-r12-preview.html#/catalog'),
+  drivers:to('pages/drivers-employer-feedback-r12-preview.html'),
+  partners:to('pages/partners-employer-feedback-r12-preview.html'),
+  advantages:to('pages/advantages-employer-feedback-r12-preview.html'),
+  interesting:to('index-employer-feedback-r12-preview.html#interesting'),
+  contacts:to('pages/contacts-employer-feedback-r12-preview.html#contacts-stores')
+ };
+ const linkMapping=[
+ ['index-employer-feedback-r11-preview.html',to('index-employer-feedback-r12-preview.html')],
+ ['pages/products-employer-feedback-r11-preview.html',to('pages/products-employer-feedback-r12-preview.html')],
+ ['pages/partners-employer-feedback-r11-preview.html',to('pages/partners-employer-feedback-r12-preview.html')],
+ ['pages/contacts-employer-feedback-r11-preview.html',to('pages/contacts-employer-feedback-r12-preview.html')],
+ ['pages/drivers-employer-feedback-r11-preview.html',to('pages/drivers-employer-feedback-r12-preview.html')],
+ ['pages/advantages-employer-feedback-r11-preview.html',to('pages/advantages-employer-feedback-r12-preview.html')],
+
+ ['index-employer-feedback-r10-preview.html',to('index-employer-feedback-r12-preview.html')],
+ ['pages/products-employer-feedback-r10-preview.html',to('pages/products-employer-feedback-r12-preview.html')],
+ ['pages/partners-employer-feedback-r10-preview.html',to('pages/partners-employer-feedback-r12-preview.html')],
+ ['pages/contacts-employer-feedback-r10-preview.html',to('pages/contacts-employer-feedback-r12-preview.html')],
+ ['pages/drivers-employer-feedback-r10-preview.html',to('pages/drivers-employer-feedback-r12-preview.html')],
+ ['pages/advantages-employer-feedback-r10-preview.html',to('pages/advantages-employer-feedback-r12-preview.html')],
+
+ ['index-employer-feedback-r9-preview.html',to('index-employer-feedback-r12-preview.html')],
+ ['pages/products-employer-feedback-r9-preview.html',to('pages/products-employer-feedback-r12-preview.html')],
+ ['pages/partners-employer-feedback-r9-preview.html',to('pages/partners-employer-feedback-r12-preview.html')],
+ ['pages/contacts-employer-feedback-r9-preview.html',to('pages/contacts-employer-feedback-r12-preview.html')],
+ ['pages/drivers-employer-feedback-r9-preview.html',to('pages/drivers-employer-feedback-r12-preview.html')],
+ ['pages/advantages-employer-feedback-r9-preview.html',to('pages/advantages-employer-feedback-r12-preview.html')],
+
+ ['index-employer-feedback-r8-preview.html',to('index-employer-feedback-r12-preview.html')],
+ ['pages/products-employer-feedback-r8-preview.html',to('pages/products-employer-feedback-r12-preview.html')],
+ ['pages/contacts-employer-feedback-r8-preview.html',to('pages/contacts-employer-feedback-r12-preview.html')],
+ ['pages/partners-employer-feedback-r8-preview.html',to('pages/partners-employer-feedback-r12-preview.html')],
+ ['pages/drivers-employer-feedback-r8-preview.html',to('pages/drivers-employer-feedback-r12-preview.html')],
+ ['pages/advantages-employer-feedback-r8-preview.html',to('pages/advantages-employer-feedback-r12-preview.html')],
+ ['index-employer-feedback-r5-preview.html',to('index-employer-feedback-r12-preview.html')],
+ ['pages/products-employer-feedback-r5-preview.html',to('pages/products-employer-feedback-r12-preview.html')],
+ ['pages/contacts-employer-feedback-r5-preview.html',to('pages/contacts-employer-feedback-r12-preview.html')],
+ ['pages/drivers-employer-feedback-r5-preview.html',to('pages/drivers-employer-feedback-r12-preview.html')],
+ ['pages/partners-employer-feedback-r5-preview.html',to('pages/partners-employer-feedback-r12-preview.html')],
+ ['pages/advantages-employer-feedback-r5-preview.html',to('pages/advantages-employer-feedback-r12-preview.html')],
+ ['index-employer-feedback-r4-preview.html',to('index-employer-feedback-r12-preview.html')],
+ ['pages/products-employer-feedback-r4-preview.html',to('pages/products-employer-feedback-r12-preview.html')],
+ ['pages/contacts-employer-feedback-r4-preview.html',to('pages/contacts-employer-feedback-r12-preview.html')],
+ ['pages/drivers-employer-feedback-r4-preview.html',to('pages/drivers-employer-feedback-r12-preview.html')],
+ ['pages/partners-employer-feedback-r4-preview.html',to('pages/partners-employer-feedback-r12-preview.html')],
+ ['pages/advantages-employer-feedback-r4-preview.html',to('pages/advantages-employer-feedback-r12-preview.html')],
+ ['index-employer-feedback-r3-preview.html',to('index-employer-feedback-r12-preview.html')],
+ ['pages/products-employer-feedback-r3-preview.html',to('pages/products-employer-feedback-r12-preview.html')],
+ ['pages/contacts-employer-feedback-r3-preview.html',to('pages/contacts-employer-feedback-r12-preview.html')],
+ ['pages/drivers-employer-feedback-r3-preview.html',to('pages/drivers-employer-feedback-r12-preview.html')],
+ ['pages/partners-employer-feedback-r3-preview.html',to('pages/partners-employer-feedback-r12-preview.html')],
+ ['pages/advantages-employer-feedback-r3-preview.html',to('pages/advantages-employer-feedback-r12-preview.html')],
+ ['index-employer-feedback-r1-preview.html',to('index-employer-feedback-r12-preview.html')],
+ ['pages/products-employer-feedback-r1-preview.html',to('pages/products-employer-feedback-r12-preview.html')],
+ ['pages/drivers-employer-feedback-r1-preview.html',to('pages/drivers-employer-feedback-r12-preview.html')],
+ ['pages/partners-employer-feedback-r1-preview.html',to('pages/partners-employer-feedback-r12-preview.html')],
+ ['pages/advantages-employer-feedback-r1-preview.html',to('pages/advantages-employer-feedback-r12-preview.html')],
+ ['pages/contacts-employer-feedback-r1-preview.html',to('pages/contacts-employer-feedback-r12-preview.html')],
+ ['design/hero/prototypes/hero-4s-k-views/ARAL_home_contour_2A_footer_preview.html',routes.home],
+ ['design/hero/prototypes/hero-4s-k-views/ARAL_home_markup_preview.html',routes.home],
+ ['index-footer-preview.html',routes.company],
+ ['index-markup-preview.html',routes.company],
+ ['pages/products-r15-contour-2A-footer-preview.html',routes.products],
+ ['pages/products-r15-markup-preview.html',routes.products],
+ ['pages/drivers-08-footer-preview.html',routes.drivers],
+ ['pages/drivers-08-markup-preview.html',routes.drivers],
+ ['pages/partners-11-footer-preview.html',routes.partners],
+ ['pages/partners-11-markup-preview.html',routes.partners],
+ ['pages/advantages-04-footer-preview.html',routes.advantages],
+ ['pages/advantages-04-markup-preview.html',routes.advantages],
+ ['pages/contacts-03-footer-preview.html',routes.contacts],
+ ['pages/contacts-03-markup-preview.html',routes.contacts],
+ ];
+ const menu=[
+  ['Продукция',routes.products,'products'],
+  ['О бренде',routes.company,'company'],
+  ['Где купить',routes.contacts,'contacts'],
+  ['Сотрудничество',routes.partners,'partners'],
+  ['Преимущества ARAL',routes.advantages,'advantages']
+ ];
+ function rewriteInternalLinks(){
+  const rootPath=ROOT.pathname;
+  document.querySelectorAll('a[href]').forEach(a=>{
+   const raw=a.getAttribute('href');
+   if(!raw||raw.startsWith('#')||/^(?:mailto:|tel:|javascript:)/i.test(raw))return;
+   let old;try{old=new URL(raw,document.baseURI)}catch{return}
+   if(old.origin!==ROOT.origin||!old.pathname.startsWith(rootPath))return;
+   for(const [from,target] of linkMapping){
+    if(old.pathname.endsWith('/'+from)){
+     const u=new URL(target);
+     if(old.hash)u.hash=old.hash;
+     a.href=u.href;return;
+    }
+   }
+  });
+ }
+ function installHeader(){
+  const headers=[...document.querySelectorAll('header.home-nav,header.site-header,header.nav')];
+  headers.forEach(header=>{
+   const brand=header.querySelector('a.home-brand,a.brand');
+   if(brand){
+    brand.href=routes.home;brand.setAttribute('aria-label','ARAL — на главную с HERO-анимацией');
+    brand.classList.add('aral-preview-brand');
+    brand.innerHTML='<img src="'+to('assets/aral-logo-header-r9.svg')+'" alt="Логотип ARAL" width="64" height="64" decoding="async">';
+   }
+   const nav=header.querySelector('nav.home-menu,nav.navlinks,nav.menu');
+   if(!nav)return;
+   const path=location.pathname;
+   const current=path.includes('products-')?'products':path.includes('partners-')?'partners':path.includes('advantages-')?'advantages':path.includes('contacts-')?'contacts':path.includes('index-employer-')?'company':null;
+   nav.setAttribute('aria-label','Основные разделы ARAL');
+   nav.classList.add('aral-jelly-menu');
+   nav.innerHTML=menu.map(([name,url,key])=>'<a class="aral-jelly-chip" data-aral-nav="'+key+'" href="'+url+'"'+(current===key?' aria-current="page"':'')+'><span>'+name+'</span></a>').join('');
+   const links=[...nav.querySelectorAll('a')];
+   const active=links.findIndex(a=>a.hasAttribute('aria-current'));
+   const reduce=matchMedia('(prefers-reduced-motion:reduce)');
+   const mobile=matchMedia('(max-width:1200px)');
+   const states=links.map(()=>({x:0,sx:1,sy:1,vx:0,vxs:0,vys:0,tx:0,ts:1,start:0}));
+   let frame=0,last=0,selected=active;
+   function paint(i){const v=states[i];links[i].style.transform='translateX('+v.x.toFixed(3)+'px) scale('+v.sx.toFixed(4)+','+v.sy.toFixed(4)+')'}
+   function tick(now){
+    const dt=Math.min((now-last)/1000||1/60,1/32);last=now;let moving=false;
+    states.forEach((v,i)=>{
+     if(now<v.start){moving=true;return}
+     const k=580*(1-.12*Math.min(Math.abs(i-selected),3)),mass=.9;
+     const advance=(key,velocity,target,stiffness,bounce)=>{
+      const damping=2*Math.sqrt(stiffness*mass)*(1-bounce);
+      // Small integration steps keep the spring stable after a slow frame.
+      for(let n=0;n<3;n++){v[velocity]+=(stiffness*(target-v[key])-damping*v[velocity])/mass*dt/3;v[key]+=v[velocity]*dt/3}
+      if(Math.abs(target-v[key])<.001&&Math.abs(v[velocity])<.01){v[key]=target;v[velocity]=0}else moving=true;
+     };
+     advance('x','vx',v.tx,k,.25);
+     advance('sx','vxs',v.ts,k*1.24,.55);
+     advance('sy','vys',v.ts,k*.86,.25);paint(i);
+    });
+    frame=moving?requestAnimationFrame(tick):0;
+   }
+   function apply(index,instant=false){
+    selected=index;const now=performance.now();
+    const swell=mobile.matches ? .035 : .10;
+    const push=index<0||mobile.matches?0:links[index].offsetWidth*swell/2+3;
+    links.forEach((a,i)=>{
+     const on=i===index,v=states[i];a.dataset.jellyOn=String(on);
+     v.tx=Math.sign(i-index)*push;v.ts=index<0||reduce.matches?1:on?1+swell:.98;
+     if(reduce.matches)v.tx=0;
+     v.start=now+((frame||instant)?0:Math.abs(i-index)*32);
+     if(instant||reduce.matches){v.x=v.tx;v.sx=v.sy=v.ts;v.vx=v.vxs=v.vys=0;paint(i)}
+    });
+    if(!instant&&!reduce.matches&&!frame){last=now;frame=requestAnimationFrame(tick)}
+   }
+   links.forEach((a,i)=>{
+    a.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch')apply(i)});
+    a.addEventListener('focus',()=>apply(i));
+    a.addEventListener('keydown',e=>{
+     let next=null;
+     if(e.key==='ArrowRight'||e.key==='ArrowDown')next=(i+1)%links.length;
+     if(e.key==='ArrowLeft'||e.key==='ArrowUp')next=(i+links.length-1)%links.length;
+     if(e.key==='Home')next=0;if(e.key==='End')next=links.length-1;
+     if(next!==null){e.preventDefault();links[next].focus()}
+    });
+   });
+   nav.addEventListener('pointerleave',()=>apply(links.indexOf(document.activeElement)>=0?links.indexOf(document.activeElement):active));
+   nav.addEventListener('focusout',e=>{if(!nav.contains(e.relatedTarget))apply(active)});
+   new ResizeObserver(()=>apply(selected,true)).observe(nav);
+   reduce.addEventListener('change',()=>apply(selected,true));
+   mobile.addEventListener('change',()=>apply(active,true));
+   document.fonts?.ready.then(()=>apply(selected,true));
+   apply(active,true);
+  });
+ }
+ function hideCoolantPublicReferences(){
+  const obsolete=/Silikatfrei\s*G12|охлаждающ(?:ие|ая|их)\s+жидкост(?:и|ь|ей)|антифриз/iu;
+  document.querySelectorAll('.mini,.part-benefit').forEach(el=>{
+   if(obsolete.test(el.textContent||'')){
+    if(el.classList.contains('mini'))el.remove();
+    else{
+     const p=el.querySelector('p');
+     if(p) p.textContent='В каталоге представлены масла для легковых автомобилей и грузового транспорта. Ассортимент можно отфильтровать по типу транспорта и техническим характеристикам.';
+    }
+   }
+  });
+  document.querySelectorAll('p').forEach(p=>{
+    if(/Для Aral Silikatfrei G12/.test(p.textContent||''))p.remove();
+  });
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+  const textNodes=[];while(walker.nextNode())textNodes.push(walker.currentNode);
+  for(const t of textNodes){
+   if(!t.parentElement||['SCRIPT','STYLE','NOSCRIPT'].includes(t.parentElement.tagName))continue;
+   const old=t.nodeValue||'';
+   const next=old
+    .replace(/(?:,\s*)?и технические жидкости/giu,'')
+    .replace(/,\s*охлаждающие жидкости/giu,'')
+    .replace(/и одну охлаждающую жидкость/giu,'')
+    .replace(/17 продуктов для формирования закупочного перечня/giu,'16 моторных масел для формирования закупочного перечня');
+   if(next!==old)t.nodeValue=next;
+  }
+ }
+ function makeRouteInspection(){
+  const btn=document.createElement('button');
+  btn.className='aral-review-toggle';btn.type='button';btn.textContent='Показать пути к скрытым разделам';btn.setAttribute('aria-pressed','false');
+  document.body.appendChild(btn);
+  function mark(){
+   let n=0;
+   document.querySelectorAll('main a[href],.aral-global-footer a[href]').forEach(a=>{
+    if(a.classList.contains('aral-review-toggle'))return;
+    let u;try{u=new URL(a.href)}catch{return}
+    let category=u.pathname.includes('drivers-employer-feedback-')?'ДЛЯ ВОДИТЕЛЕЙ':u.hash==='#interesting'?'ИНТЕРЕСНОЕ':null;
+    if(!category)return;
+    n++;a.classList.add('aral-review-route');a.dataset.aralReviewTip=category+' · '+n;
+   });
+   return n;
+  }
+  mark();
+  function update(on){
+   document.body.classList.toggle('aral-review-links-on',on);
+   btn.setAttribute('aria-pressed',String(on));
+   btn.textContent=on?'Скрыть подсветку переходов':'Показать пути к скрытым разделам';
+  }
+  btn.addEventListener('click',()=>update(!document.body.classList.contains('aral-review-links-on')));
+  update(new URLSearchParams(location.search).get('review')==='links');
+ }
+ function setDotLink(el){
+  if(!el||el.classList.contains('aral-r3-dot-link'))return;
+  el.classList.add('aral-r3-dot-link');
+  el.querySelectorAll('[aria-hidden="true"]').forEach(n=>{if(n.textContent?.trim()==='↗')n.remove()});
+  const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);
+  const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
+  for(const n of nodes){if(n.nodeValue?.includes('↗'))n.nodeValue=n.nodeValue.replace(/\s*↗/g,'')}
+ }
+ function applyR9ContentReview(){
+  document.querySelectorAll('#audiences .card-link-label').forEach(setDotLink);
+  for(const foot of document.querySelectorAll('.aral-global-footer')){
+   const lead=foot.querySelector('.af-lead');
+   if(lead){const link=lead.querySelector('a');if(link){lead.replaceChildren(link);setDotLink(link)}}
+   // Retain all original editorial teasers: Интересное, Каталог, Техническая информация (PDS / SDS).
+   foot.querySelectorAll('.af-news .af-teaser').forEach(link=>link.classList.remove('aral-r3-dot-link'));
+   const contact=foot.querySelector('.af-contact');
+   const partner=contact?.querySelector('a.af-cta:not(.aral-r9-driver-cta)');
+   if(partner){
+    partner.classList.remove('aral-r3-dot-link');
+    partner.textContent='Для партнёров';
+    partner.classList.add('aral-r9-footer-cta');
+    partner.setAttribute('data-magnetic','footer-partners');
+    let driver=contact.querySelector('a.aral-r9-driver-cta');
+    if(!driver){
+     driver=document.createElement('a');
+     driver.className='af-cta aral-r9-driver-cta';
+     partner.insertAdjacentElement('afterend',driver);
+    }
+    driver.href=routes.drivers;
+    driver.classList.remove('aral-r3-dot-link');
+    driver.textContent='Для автомобилистов';
+    driver.classList.add('aral-r9-footer-cta');
+    driver.setAttribute('data-magnetic','footer-motorists');
+   }
+  }
+  document.querySelector('.aral-contour-compare')?.remove();
+ }
+
+ function installContactAndMenu(){
+  for(const layout of document.querySelectorAll('.aral-global-footer .af-layout')){
+   if(layout.querySelector('.af-column'))continue;
+   const [identity,nav,news,contact]=layout.children;
+   const left=document.createElement('div'),right=document.createElement('div');left.className=right.className='af-column';
+   left.append(identity,news);right.append(nav,contact);layout.append(left,right);
+  }
+
+  for(const button of document.querySelectorAll('.home-menu-toggle,.nav-toggle,.mobile-toggle')){
+   button.classList.add('aral-menu-toggle');
+   button.innerHTML='<span class="aral-menu-glyph" aria-hidden="true"><i></i><i></i><i></i></span>';
+   const label=()=>button.setAttribute('aria-label',button.getAttribute('aria-expanded')==='true'?'Закрыть меню':'Открыть меню');
+   label();new MutationObserver(label).observe(button,{attributes:true,attributeFilter:['aria-expanded']});
+  }
+  for(const b of document.querySelectorAll('[data-max-phone]')){
+   if(b.dataset.boundMax)return;b.dataset.boundMax='true';
+   b.addEventListener('click',async()=>{
+    const card=b.closest('.aral-approved-contact,.aral-contact-card,.af-contact');
+    let status=card.querySelector('.aral-copy-status');
+    if(!status){status=document.createElement('p');status.className='aral-copy-status';status.setAttribute('role','status');card.appendChild(status)}
+    try{await navigator.clipboard.writeText('+7 (964) 640-12-35');status.textContent='Номер MAX скопирован'}
+    catch{status.textContent='Номер для MAX: +7 (964) 640-12-35'}
+   });
+  }
+ }
+ function install(){
+  rewriteInternalLinks();
+  installHeader();
+  installContactAndMenu();
+  hideCoolantPublicReferences();
+  applyR9ContentReview();
+  if(new URLSearchParams(location.search).get('review')==='links')makeRouteInspection();
+  setTimeout(applyR9ContentReview,0);
+  document.body.dataset.feedbackPreview='r12';
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install,{once:true});else install();
+})();

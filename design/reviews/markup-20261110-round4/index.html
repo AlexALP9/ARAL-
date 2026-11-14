@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ARAL · Скриншоты правок</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f4f7fb;color:#0b2749;font-family:system-ui,sans-serif}
+main{max-width:1504px;margin:auto;padding:24px clamp(12px,3vw,42px)}
+h1{font-size:clamp(24px,3vw,38px);line-height:1.12;margin:0 0 24px}nav{display:flex;gap:16px;flex-wrap:wrap;align-items:end;margin-bottom:20px}
+label{display:grid;gap:5px;font-size:14px}select{font:inherit;color:inherit;max-width:100%;padding:9px;border:1px solid #afc1d2;background:white;border-radius:6px;min-height:44px}
+figure{margin:0}figcaption{margin-bottom:10px;color:#445a70}img{display:block;max-width:100%;height:auto;border:1px solid #d8e1e9}
+</style></head><body><main><h1>ARAL · Скриншоты правок</h1>
+<nav aria-label="Выбор снимка"><label>Раздел<select id="section"><option value="warehouse">Оптовый склад и магазины</option><option value="retail">Где купить и обслужить автомобиль</option><option value="featured">Продукция ARAL</option><option value="dates">Ключевые даты и специалисты</option><option value="benefits" selected>Продукция ARAL для бизнеса</option></select></label>
+<label>Ширина экрана<select id="width"><option>1440</option><option>1024</option><option>768</option><option>390</option></select></label></nav>
+<figure><figcaption aria-live="polite" id="caption"></figcaption><img id="shot" alt=""></figure></main><script>
+const images = {
+  "1440-warehouse": "1440/warehouse.jpg",
+  "1440-retail": "1440/retail.jpg",
+  "1440-featured": "1440/featured.jpg",
+  "1440-dates": "1440/dates.jpg",
+  "1440-benefits": "1440/benefits.jpg",
+  "1024-warehouse": "1024/warehouse.jpg",
+  "1024-retail": "1024/retail.jpg",
+  "1024-featured": "1024/featured.jpg",
+  "1024-dates": "1024/dates.jpg",
+  "1024-benefits": "1024/benefits.jpg",
+  "768-warehouse": "768/warehouse.jpg",
+  "768-retail": "768/retail.jpg",
+  "768-featured": "768/featured.jpg",
+  "768-dates": "768/dates.jpg",
+  "768-benefits": "768/benefits.jpg",
+  "390-warehouse": "390/warehouse.jpg",
+  "390-retail": "390/retail.jpg",
+  "390-featured": "390/featured.jpg",
+  "390-dates": "390/dates.jpg",
+  "390-benefits": "390/benefits.jpg"
+};
+const section = document.querySelector('#section'), width = document.querySelector('#width');
+const initial = new URLSearchParams(location.hash.slice(1));
+if ([...section.options].some(o=>o.value===initial.get('section'))) section.value=initial.get('section');
+if ([...width.options].some(o=>o.value===initial.get('width'))) width.value=initial.get('width');
+function show() {
+  const caption = section.selectedOptions[0].text + ' · ' + width.value + ' px';
+  document.querySelector('#caption').textContent=caption;
+  const shot=document.querySelector('#shot');
+  shot.alt=caption;
+  shot.src=images[width.value+'-'+section.value];
+}
+function selectShot() {
+  location.replace('#'+new URLSearchParams({section:section.value,width:width.value}));
+  show();
+}
+section.addEventListener('change',selectShot);
+width.addEventListener('change',selectShot);
+show();
+</script></body></html>

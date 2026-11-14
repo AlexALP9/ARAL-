@@ -1,0 +1,46 @@
+name: ARAL unified R6 full-site review
+on:
+  push:
+    branches:
+      - codex/aral-home-hero48-cards-r15-20261028
+    paths:
+      - "design/hero/prototypes/hero-4s-k-views/ARAL_home_employer_feedback_r6_preview.html"
+      - "index-employer-feedback-r6-preview.html"
+      - "pages/*-employer-feedback-r6-preview.html"
+      - "assets/aral-employer-feedback-r6.*"
+      - "assets/aral-logo-supplied-r6.png"
+      - "design/reviews/aral-unified-r6/**"
+      - ".github/workflows/aral-unified-r6.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  chromium:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.57.0
+          npx playwright install --with-deps chromium
+      - name: Start local review server
+        run: |
+          python3 -m http.server 8123 --bind 127.0.0.1 >/tmp/aral-r6-preview.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8123/design/hero/prototypes/hero-4s-k-views/ARAL_home_employer_feedback_r6_preview.html >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          exit 1
+      - name: Check full R4 site and footer on four viewport widths
+        run: node design/reviews/aral-unified-r6/check-site.mjs
+      - name: Upload responsive visual evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aral-unified-r6-review-screenshots
+          path: review-output/aral-r6/
+          if-no-files-found: warn
