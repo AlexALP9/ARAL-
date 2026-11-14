@@ -433,3 +433,10 @@ header nav.aral-jelly-menu a.aral-jelly-chip:focus-visible{outline:3px solid #98
 header nav.aral-jelly-menu a.aral-jelly-chip{height:36px!important}
 header nav.aral-jelly-menu a.aral-jelly-chip>span{display:block!important;min-height:0!important;height:auto!important;width:auto!important;padding:0!important;margin:0!important;color:inherit!important;font:inherit!important;line-height:inherit!important;letter-spacing:inherit!important;background:transparent!important}
 @media(max-width:1200px){header nav.aral-jelly-menu a.aral-jelly-chip{height:auto!important;min-height:44px!important}}
+
+/* R12.4 — backlight follows the original logo's own colours, without altering the artwork. */
+header a.aral-preview-brand{position:relative;isolation:isolate;overflow:visible!important}
+header a.aral-preview-brand::before{content:"";position:absolute;inset:5px;z-index:0;pointer-events:none;background:url("aral-logo-header-r9.svg") center/contain no-repeat;filter:blur(10px) saturate(1.7) brightness(1.45);opacity:.88;transition:opacity .2s,filter .2s}
+header a.aral-preview-brand img{position:relative;z-index:1;filter:drop-shadow(0 0 4px #b3e8ff99) drop-shadow(0 0 10px #39a8ff80)!important}
+header a.aral-preview-brand:is(:hover,:focus-visible)::before{opacity:1;filter:blur(12px) saturate(1.85) brightness(1.6)}
+@media(prefers-reduced-motion:reduce){header a.aral-preview-brand::before{transition:none}}
