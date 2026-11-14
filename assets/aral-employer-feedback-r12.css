@@ -383,7 +383,6 @@ body .aral-global-footer .aral-contact-channels :is(a,button):hover{background:#
 /* R12.1 — approved composition at the surrounding page's component scale. */
 .aral-approved-contact{display:grid;grid-template-columns:minmax(0,.38fr) minmax(0,.62fr);gap:36px;align-items:center;padding:28px 34px;border-radius:18px;background:linear-gradient(110deg,#073567 0%,#07488d 65%,#0864b4 100%);color:#fff}
 .aral-approved-identity{min-width:0;align-self:center;padding:0}
-.aral-approved-identity>img{display:block;width:72px;height:72px;object-fit:contain;margin:0 0 18px}
 body .aral-approved-identity h2{font-size:32px;font-weight:750;line-height:1.2;letter-spacing:-.025em;color:#fff;margin:0;white-space:nowrap}
 .aral-approved-details{min-width:0}
 .aral-approved-general{border-bottom:1px solid #9bcaf273;padding-bottom:16px;margin-bottom:16px}
@@ -401,15 +400,15 @@ body .aral-approved-identity h2{font-size:32px;font-weight:750;line-height:1.2;l
 body .aral-r12-wholesale{padding:44px 0}
 @media(max-width:900px){
  .aral-approved-contact{gap:28px;padding:26px;border-radius:16px}
- .aral-approved-identity>img{width:64px;height:64px;margin-bottom:16px}
  body .aral-approved-identity h2{font-size:28px}
  .aral-approved-general>a,.aral-approved-phone{font-size:27px}
 }
 @media(max-width:660px){
  .aral-approved-contact{grid-template-columns:1fr;gap:24px;padding:24px;border-radius:16px}
- .aral-approved-identity{display:flex;align-items:center;gap:14px}
- .aral-approved-identity>img{width:52px;height:52px;margin:0}
+ .aral-approved-identity{display:block}
  body .aral-approved-identity h2{font-size:24px;white-space:normal}
  .aral-approved-general>a,.aral-approved-phone{font-size:24px}
  body .aral-r12-wholesale{padding:32px 0}
 }
+
+body .aral-approved-identity .aral-approved-intro{max-width:320px;margin:12px 0 0;font-size:15px;line-height:1.65;font-weight:400;color:#cce3f7}
