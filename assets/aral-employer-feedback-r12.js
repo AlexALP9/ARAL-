@@ -117,26 +117,63 @@
    const path=location.pathname;
    const current=path.includes('products-')?'products':path.includes('partners-')?'partners':path.includes('advantages-')?'advantages':path.includes('contacts-')?'contacts':path.includes('index-employer-')?'company':null;
    nav.setAttribute('aria-label','Основные разделы ARAL');
-   nav.innerHTML='<span class="aral-preview-pill" aria-hidden="true"></span>'+menu.map(([name,url,key])=>'<a data-aral-nav="'+key+'" href="'+url+'"'+(current===key?' aria-current="page"':'')+'>'+name+'</a>').join('');
-   const pill=nav.querySelector('.aral-preview-pill');
+   nav.classList.add('aral-jelly-menu');
+   nav.innerHTML=menu.map(([name,url,key])=>'<a class="aral-jelly-chip" data-aral-nav="'+key+'" href="'+url+'"'+(current===key?' aria-current="page"':'')+'><span>'+name+'</span></a>').join('');
    const links=[...nav.querySelectorAll('a')];
-   const active=nav.querySelector('[aria-current="page"]');
-   const mobile=()=>matchMedia('(max-width:900px)').matches;
-   function move(el){
-    if(mobile()||!el){pill.style.opacity='0';return}
-    const nr=nav.getBoundingClientRect(),ar=el.getBoundingClientRect();
-    pill.style.width=ar.width+'px';
-    pill.style.transform='translate('+Math.round(ar.left-nr.left)+'px,-50%)';
-    pill.style.opacity='1';
+   const active=links.findIndex(a=>a.hasAttribute('aria-current'));
+   const reduce=matchMedia('(prefers-reduced-motion:reduce)');
+   const mobile=matchMedia('(max-width:1200px)');
+   const states=links.map(()=>({x:0,sx:1,sy:1,vx:0,vxs:0,vys:0,tx:0,ts:1,start:0}));
+   let frame=0,last=0,selected=active;
+   function paint(i){const v=states[i];links[i].style.transform='translateX('+v.x.toFixed(3)+'px) scale('+v.sx.toFixed(4)+','+v.sy.toFixed(4)+')'}
+   function tick(now){
+    const dt=Math.min((now-last)/1000||1/60,1/32);last=now;let moving=false;
+    states.forEach((v,i)=>{
+     if(now<v.start){moving=true;return}
+     const k=580*(1-.12*Math.min(Math.abs(i-selected),3)),mass=.9;
+     const advance=(key,velocity,target,stiffness,bounce)=>{
+      const damping=2*Math.sqrt(stiffness*mass)*(1-bounce);
+      // Small integration steps keep the spring stable after a slow frame.
+      for(let n=0;n<3;n++){v[velocity]+=(stiffness*(target-v[key])-damping*v[velocity])/mass*dt/3;v[key]+=v[velocity]*dt/3}
+      if(Math.abs(target-v[key])<.001&&Math.abs(v[velocity])<.01){v[key]=target;v[velocity]=0}else moving=true;
+     };
+     advance('x','vx',v.tx,k,.25);
+     advance('sx','vxs',v.ts,k*1.24,.55);
+     advance('sy','vys',v.ts,k*.86,.25);paint(i);
+    });
+    frame=moving?requestAnimationFrame(tick):0;
    }
-   links.forEach(a=>{
-    a.addEventListener('mouseenter',()=>move(a));
-    a.addEventListener('focus',()=>move(a));
+   function apply(index,instant=false){
+    selected=index;const now=performance.now();
+    const swell=mobile.matches ? .035 : .10;
+    const push=index<0||mobile.matches?0:links[index].offsetWidth*swell/2+3;
+    links.forEach((a,i)=>{
+     const on=i===index,v=states[i];a.dataset.jellyOn=String(on);
+     v.tx=Math.sign(i-index)*push;v.ts=index<0||reduce.matches?1:on?1+swell:.98;
+     if(reduce.matches)v.tx=0;
+     v.start=now+((frame||instant)?0:Math.abs(i-index)*32);
+     if(instant||reduce.matches){v.x=v.tx;v.sx=v.sy=v.ts;v.vx=v.vxs=v.vys=0;paint(i)}
+    });
+    if(!instant&&!reduce.matches&&!frame){last=now;frame=requestAnimationFrame(tick)}
+   }
+   links.forEach((a,i)=>{
+    a.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch')apply(i)});
+    a.addEventListener('focus',()=>apply(i));
+    a.addEventListener('keydown',e=>{
+     let next=null;
+     if(e.key==='ArrowRight'||e.key==='ArrowDown')next=(i+1)%links.length;
+     if(e.key==='ArrowLeft'||e.key==='ArrowUp')next=(i+links.length-1)%links.length;
+     if(e.key==='Home')next=0;if(e.key==='End')next=links.length-1;
+     if(next!==null){e.preventDefault();links[next].focus()}
+    });
    });
-   nav.addEventListener('mouseleave',()=>move(active));
-   nav.addEventListener('focusout',e=>{if(!nav.contains(e.relatedTarget))move(active)});
-   window.addEventListener('resize',()=>move(active));
-   requestAnimationFrame(()=>move(active));
+   nav.addEventListener('pointerleave',()=>apply(links.indexOf(document.activeElement)>=0?links.indexOf(document.activeElement):active));
+   nav.addEventListener('focusout',e=>{if(!nav.contains(e.relatedTarget))apply(active)});
+   new ResizeObserver(()=>apply(selected,true)).observe(nav);
+   reduce.addEventListener('change',()=>apply(selected,true));
+   mobile.addEventListener('change',()=>apply(active,true));
+   document.fonts?.ready.then(()=>apply(selected,true));
+   apply(active,true);
   });
  }
  function hideCoolantPublicReferences(){
