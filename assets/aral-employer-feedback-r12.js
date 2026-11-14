@@ -225,7 +225,6 @@
     driver.setAttribute('data-magnetic','footer-motorists');
    }
   }
-  document.querySelectorAll('.aral-global-footer .af-contact .aral-importer-label').forEach(el=>{el.classList.add('aral-r9-redmark');el.dataset.reviewChange='F01';});
   document.querySelector('.aral-contour-compare')?.remove();
  }
 
