@@ -380,45 +380,36 @@ body .aral-global-footer .aral-contact-channels :is(a,button):hover{background:#
  body:has(.aral-vehicle-chooser) .catalog-toolbar .searchbox{min-width:170px;flex:1 1 40%}
 }
 
-/* R12: user-approved contact design; live text and native controls. */
-.aral-approved-contact{display:grid;grid-template-columns:minmax(0,.38fr) minmax(0,.62fr);gap:clamp(36px,4.5vw,64px);align-items:center;padding:clamp(28px,3.4vw,48px) clamp(28px,4vw,56px);border-radius:34px;background:linear-gradient(110deg,#073567 0%,#07488d 65%,#0864b4 100%);color:#fff}
-.aral-approved-identity{min-width:0}
-.aral-approved-identity>img{display:block;width:clamp(85px,9vw,120px);height:clamp(85px,9vw,120px);object-fit:contain;margin:0 0 28px}
-body .aral-approved-identity h2{font-size:clamp(30px,3.6vw,52px);font-weight:760;line-height:1.15;letter-spacing:-.035em;color:#fff;margin:0;white-space:nowrap}
+/* R12.1 — approved composition at the surrounding page's component scale. */
+.aral-approved-contact{display:grid;grid-template-columns:minmax(0,.38fr) minmax(0,.62fr);gap:36px;align-items:center;padding:28px 34px;border-radius:18px;background:linear-gradient(110deg,#073567 0%,#07488d 65%,#0864b4 100%);color:#fff}
+.aral-approved-identity{min-width:0;align-self:center;padding:0}
+.aral-approved-identity>img{display:block;width:72px;height:72px;object-fit:contain;margin:0 0 18px}
+body .aral-approved-identity h2{font-size:32px;font-weight:750;line-height:1.2;letter-spacing:-.025em;color:#fff;margin:0;white-space:nowrap}
 .aral-approved-details{min-width:0}
-.aral-approved-general{border-bottom:1px solid #9bcaf273;padding-bottom:28px;margin-bottom:22px}
-.aral-approved-general>span,.aral-approved-manager>span{display:block;font-size:clamp(18px,2vw,28px);font-weight:650;line-height:1.3;color:#9bd1f8;margin:0 0 8px;letter-spacing:-.025em}
-.aral-approved-general>a,.aral-approved-phone{display:inline-block;font-size:clamp(24px,3.55vw,50px);font-weight:750;line-height:1.15;color:#fff!important;text-decoration:none;letter-spacing:-.035em;white-space:nowrap}
-.aral-approved-messengers{display:flex;align-items:center;gap:20px;margin-top:22px}
-.aral-approved-messengers :is(a,button){display:inline-flex;align-items:center;justify-content:center;flex:none;width:60px;height:60px;padding:0;border:2px solid #f2f8ff;border-radius:13px;background:transparent;color:#fff;cursor:pointer}
-.aral-approved-messengers img{display:block;width:30px;height:30px}
-.aral-approved-vk{display:inline-flex;align-items:center;gap:12px;min-height:60px;padding:12px 24px;margin-top:22px;border:2px solid #f2f8ff;border-radius:13px;color:#fff!important;text-decoration:none;font-size:22px;font-weight:750;line-height:1.3}
-.aral-approved-vk img{display:block;width:29px;height:29px}
+.aral-approved-general{border-bottom:1px solid #9bcaf273;padding-bottom:16px;margin-bottom:16px}
+.aral-approved-general>span,.aral-approved-manager>span{display:block;font-size:14px;font-weight:650;line-height:1.4;color:#9bd1f8;margin:0 0 5px;letter-spacing:0}
+.aral-approved-general>a,.aral-approved-phone{display:inline-block;font-size:30px;font-weight:750;line-height:1.2;color:#fff!important;text-decoration:none;letter-spacing:-.015em;white-space:nowrap}
+.aral-approved-messengers{display:flex;align-items:center;gap:12px;margin-top:14px}
+.aral-approved-messengers :is(a,button){display:inline-flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;padding:0;border:1px solid #edf6ff;border-radius:9px;background:transparent;color:#fff;cursor:pointer}
+.aral-approved-messengers img{display:block;width:23px;height:23px}
+.aral-approved-vk{display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:10px 16px;margin-top:18px;border:1px solid #edf6ff;border-radius:9px;color:#fff!important;text-decoration:none;font-size:14px;font-weight:750;line-height:1.4}
+.aral-approved-vk img{display:block;width:22px;height:22px}
 .aral-approved-contact :is(a,button):hover{background-color:#ffffff12;text-decoration:none}
-.aral-approved-contact :is(a,button):focus-visible{outline:3px solid #addfff;outline-offset:5px}
-.aral-approved-contact .aral-copy-status{color:#cceaff!important;font-size:12px!important;line-height:1.5!important;margin:12px 0 0!important}
+.aral-approved-contact :is(a,button):focus-visible{outline:3px solid #addfff;outline-offset:4px}
+.aral-approved-contact .aral-copy-status{color:#cceaff!important;font-size:12px!important;line-height:1.5!important;margin:10px 0 0!important}
 .aral-approved-contact .aral-copy-status:empty{display:none}
+body .aral-r12-wholesale{padding:44px 0}
 @media(max-width:900px){
- .aral-approved-contact{gap:28px;padding:30px;border-radius:24px;grid-template-columns:minmax(0,.38fr) minmax(0,.62fr)}
+ .aral-approved-contact{gap:28px;padding:26px;border-radius:16px}
+ .aral-approved-identity>img{width:64px;height:64px;margin-bottom:16px}
  body .aral-approved-identity h2{font-size:28px}
- .aral-approved-general>a,.aral-approved-phone{font-size:30px}
- .aral-approved-general>span,.aral-approved-manager>span{font-size:19px}
- .aral-approved-messengers :is(a,button){width:50px;height:50px;border-radius:10px}
- .aral-approved-messengers img{width:25px;height:25px}
- .aral-approved-vk{font-size:18px;min-height:50px;padding:10px 18px;border-radius:10px}
+ .aral-approved-general>a,.aral-approved-phone{font-size:27px}
 }
 @media(max-width:660px){
- .aral-approved-contact{grid-template-columns:1fr;gap:28px;padding:28px 24px;border-radius:22px}
- .aral-approved-identity{display:flex;align-items:center;gap:16px}
- .aral-approved-identity>img{width:60px;height:60px;margin:0}
- body .aral-approved-identity h2{font-size:28px;white-space:normal}
- .aral-approved-general>a,.aral-approved-phone{font-size:clamp(24px,6.7vw,34px)}
- .aral-approved-general{padding-bottom:24px;margin-bottom:20px}
- .aral-approved-messengers{gap:16px;margin-top:20px}
- .aral-approved-vk{margin-top:22px}
+ .aral-approved-contact{grid-template-columns:1fr;gap:24px;padding:24px;border-radius:16px}
+ .aral-approved-identity{display:flex;align-items:center;gap:14px}
+ .aral-approved-identity>img{width:52px;height:52px;margin:0}
+ body .aral-approved-identity h2{font-size:24px;white-space:normal}
+ .aral-approved-general>a,.aral-approved-phone{font-size:24px}
+ body .aral-r12-wholesale{padding:32px 0}
 }
-/* Match the approved identity's upper alignment rather than vertically centering it. */
-@media(min-width:661px){.aral-approved-identity{align-self:start;padding-top:16px}.aral-approved-identity>img{width:clamp(85px,8vw,110px);height:clamp(85px,8vw,110px);margin-bottom:22px}}
-@media(min-width:901px){.aral-approved-general>a,.aral-approved-phone{font-size:clamp(32px,3.95vw,56px)}}
-@media(min-width:901px){.aral-approved-contact{padding-block:36px}.aral-approved-identity{padding-top:26px}.aral-approved-general>a,.aral-approved-phone{font-size:clamp(32px,3.55vw,50px)}.aral-approved-general{padding-bottom:20px;margin-bottom:18px}}
-@media(min-width:901px){.aral-approved-general>a,.aral-approved-phone{font-size:clamp(32px,3.8vw,54px);letter-spacing:-.01em}.aral-approved-general>span,.aral-approved-manager>span{line-height:1.15;margin-bottom:6px}.aral-approved-identity h2{letter-spacing:-.01em}}
