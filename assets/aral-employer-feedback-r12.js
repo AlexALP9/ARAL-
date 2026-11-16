@@ -176,6 +176,25 @@
    apply(active,true);
   });
  }
+ function installHeaderActions(){
+  const compareUrl=new URL(routes.products);compareUrl.hash='/compare';
+  document.querySelectorAll('header.home-nav,header.site-header,header.nav').forEach(header=>{
+   let tools=header.querySelector('.home-nav-tools,.navtools');
+   if(!tools){tools=document.createElement('div');tools.className='aral-header-actions';header.querySelector('.home-nav-inner,.nav-row,.nav-wrap').appendChild(tools)}
+   let product=tools.querySelector('.home-catalog-cta,.primary-link');
+   if(!product){product=document.createElement('a');product.textContent='Продукция';tools.prepend(product)}
+   product.href=routes.products;product.classList.add('aral-header-control','aral-header-product');product.dataset.magnetic='header-products';
+   let compare=tools.querySelector('.home-compare-link,#headerCompare');
+   if(!compare){compare=document.createElement('a');compare.innerHTML='Сравнение <span class="aral-header-count">0</span>';tools.appendChild(compare)}
+   compare.href=compareUrl.href;compare.classList.add('aral-header-control','aral-header-compare');compare.dataset.magnetic='header-compare';
+   compare.querySelector('em,span')?.classList.add('aral-header-count');
+  });
+  const syncCounts=()=>{
+   let count=0;try{const values=JSON.parse(localStorage.getItem('aralProductsV13Compare')||'[]');if(Array.isArray(values))count=values.filter(v=>typeof v==='string').slice(0,4).length}catch{}
+   document.querySelectorAll('.aral-header-count').forEach(el=>el.textContent=String(count));
+  };
+  syncCounts();window.addEventListener('focus',syncCounts);window.addEventListener('storage',e=>{if(e.key==='aralProductsV13Compare')syncCounts()});
+ }
  function hideCoolantPublicReferences(){
   const obsolete=/Silikatfrei\s*G12|охлаждающ(?:ие|ая|их)\s+жидкост(?:и|ь|ей)|антифриз/iu;
   document.querySelectorAll('.mini,.part-benefit').forEach(el=>{
@@ -304,6 +323,7 @@
  function install(){
   rewriteInternalLinks();
   installHeader();
+  installHeaderActions();
   installContactAndMenu();
   hideCoolantPublicReferences();
   applyR9ContentReview();
