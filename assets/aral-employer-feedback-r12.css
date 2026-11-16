@@ -91,7 +91,6 @@ body:has(.aral-vehicle-chooser){overflow-x:clip}
 /* R3: keep the full desktop navigation within a 1024px laptop viewport. */
 @media(min-width:901px) and (max-width:1200px){
  header.site-header .nav-row{gap:12px!important}
- header.site-header .nav-row>a.brand{min-width:90px!important}
  header.site-header .navtools{gap:6px!important;flex-shrink:0}
  header.site-header .navtools .icon-btn{padding-inline:10px!important;font-size:12px!important}
 }
@@ -465,3 +464,33 @@ header a.aral-preview-brand:is(:hover,:focus-visible)::before{opacity:1;filter:b
 @media(max-width:360px){header.home-nav .home-nav-tools a.home-compare-link{padding-inline:8px!important;font-size:11px!important;gap:4px!important}}
 @media(max-width:360px){.part-hero-copy{min-width:0}.part-hero-copy h1{overflow-wrap:anywhere}}
 @media(max-width:360px){body:has(.part-hero-copy){overflow-x:clip}}
+
+/* R12.6 — contain text by content height; keep timeline and header controls aligned. */
+@media(min-width:901px){
+ body .aral-page[data-route="drivers"] .driver-lead-layout{aspect-ratio:auto;height:auto;min-height:clamp(420px,35vw,560px)}
+ body .aral-page[data-route="drivers"] .driver-lead-copy{flex-shrink:0}
+}
+body #timeline .years::before{z-index:0;pointer-events:none}
+body #timeline .year-btn{position:relative;z-index:1;background-color:#fff!important}
+body #timeline .year-btn[aria-expanded="true"]{background-color:#06346c!important}
+body #timeline .year-btn:not([aria-expanded="true"]):is(:hover,:focus-visible){background:linear-gradient(130deg,#f1f9ff,#e3f2ff)!important}
+header .aral-header-actions{display:flex;align-items:center;gap:10px;flex:none;margin-left:auto}
+body header a.aral-header-control{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:7px!important;min-height:44px;height:44px;padding:11px 14px!important;border:1px solid #d7eaff!important;border-radius:9px!important;background:#fff!important;color:#064786!important;font:800 13px/1.25 system-ui,-apple-system,"Segoe UI",Arial,sans-serif!important;text-align:center!important;white-space:nowrap!important;text-decoration:none!important;box-sizing:border-box}
+body header .aral-header-count{display:inline!important;min-width:0!important;min-height:0!important;width:auto!important;height:auto!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;color:inherit!important;font:inherit!important;line-height:inherit!important}
+@media(min-width:1201px){
+ body header nav.aral-jelly-menu{height:64px!important;min-height:64px!important;max-height:64px;align-items:center!important}
+ body header nav.aral-jelly-menu a.aral-jelly-chip{height:40px!important;min-height:40px!important;max-height:40px;align-items:center!important}
+ body header nav.aral-jelly-menu a.aral-jelly-chip>span{height:auto!important;min-height:0!important;max-height:none!important;border:0!important;line-height:1.25!important}
+}
+@media(max-width:1200px){header .aral-header-actions{margin-left:auto!important}body header a.aral-header-control{font-size:13px!important}}
+@media(max-width:540px){body header a.aral-header-product{display:none!important}body header a.aral-header-compare{font-size:12px!important;padding-inline:10px!important}}
+@media(max-width:360px){body header a.aral-header-compare{font-size:11px!important;padding-inline:8px!important}}
+main section[id]{scroll-margin-top:110px}
+/* Keep the curved tab hit area clear of the logo on narrow catalogue headers. */
+@media(min-width:641px) and (max-width:1200px){body header button.aral-menu-toggle{left:100px!important}}
+@media(max-width:640px){body header button.aral-menu-toggle{left:76px!important;width:112px!important;min-width:112px!important}}
+@media(max-width:360px){body header button.aral-menu-toggle{width:104px!important;min-width:104px!important}}
+/* Neutralise catalogue-only min-width inherited by the logo link on tablets. */
+body header:is(.home-nav,.site-header,.nav) a.aral-preview-brand{width:64px!important;min-width:64px!important;max-width:64px!important;flex:0 0 64px!important}
+@media(max-width:640px){body header:is(.home-nav,.site-header,.nav) a.aral-preview-brand{width:52px!important;min-width:52px!important;max-width:52px!important;flex:0 0 52px!important}}
+@media(max-width:360px){body header.nav button.aral-menu-toggle{left:64px!important}}
