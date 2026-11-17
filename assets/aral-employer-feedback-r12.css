@@ -503,8 +503,9 @@ body header:is(.home-nav,.site-header,.nav) a.aral-preview-brand{width:64px!impo
 }
 #routes .btn[data-magnetic]{max-width:100%;white-space:normal}
 body header:is(.home-nav,.site-header,.nav){
- background:radial-gradient(ellipse 180px 95px at 5% 45%,#8cdcff2b,transparent 75%),radial-gradient(ellipse 260px 105px at 93% 45%,#7ed2ff30,transparent 77%),linear-gradient(105deg,#0758b2 0%,#074b90 48%,#053c79 100%)!important;
- border-top:1px solid #a3ddff50!important;border-bottom:1px solid #a3ddff65!important;box-shadow:inset 0 1px 12px #87d6ff13,inset 0 -1px 14px #87d6ff13;
+ /* Approved option 1: matte blue centre with a feathered navy vignette. */
+ background:linear-gradient(180deg,rgba(2,22,53,.24) 0%,transparent 38%,transparent 65%,rgba(2,22,53,.28) 100%),radial-gradient(ellipse at 50% 48%,#087dac 0%,#08699d 30%,#075184 62%,#05264e 100%)!important;
+ border-top:1px solid #124d7a!important;border-bottom:1px solid #164e78!important;box-shadow:inset 0 5px 16px #021b3926,inset 0 -5px 16px #021b3926;
 }
 body header a.aral-header-control{border-color:#a8dcff!important;box-shadow:0 0 16px #96ddff2b,inset 0 1px 0 #fff!important;background:linear-gradient(135deg,#fff,#eaf6ff)!important}
 body header nav.aral-jelly-menu a.aral-jelly-chip{border-color:#8ccfff55!important}
