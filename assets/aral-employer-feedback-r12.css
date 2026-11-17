@@ -515,3 +515,19 @@ body header nav.aral-jelly-menu a.aral-jelly-chip{border-color:#8ccfff55!importa
 /* R12.8: remove reviewed decorative arrows and use a dash in the brand footnote. */
 .aral-global-footer .af-lead .aral-r3-dot-link::before{content:"—";width:auto!important;height:auto!important;min-width:0!important;min-height:0!important;border-radius:0!important;background:none!important;top:0!important}
 .aral-page[data-route="advantages"] .adv-summary .mini::after{content:none!important}
+
+/* R12.9: keep partner headings and navigation readable on narrow phones. */
+@media(max-width:360px){
+ body .part-hero-copy h1{font-size:28px;overflow-wrap:normal}
+ body .part-section-head h2{font-size:28px;line-height:1.2}
+ body .part-hero-nav{grid-template-columns:1fr!important}
+ body .part-hero-nav .mini{min-height:0}
+}
+
+/* R12.10: timeline lines exist only in the gaps; blue wheel category icons. */
+body #timeline .years::before{content:none!important;display:none!important}
+body #timeline .aral-year-connector{position:absolute;height:3px;background:#65a9d8;transform:translateY(-50%);pointer-events:none;z-index:0}
+body #timeline .aral-year-connector[hidden]{display:none!important}
+.aral-vehicle-chooser .vehicle-icon{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;flex:0 0 34px;color:#0756a1}
+.aral-vehicle-chooser .aral-wheel{display:block;width:22px;height:22px;flex:none}
+.aral-vehicle-chooser [data-vehicle="Truck"] .aral-wheel{width:30px;height:30px}
