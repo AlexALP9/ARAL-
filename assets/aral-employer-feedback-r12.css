@@ -494,3 +494,23 @@ main section[id]{scroll-margin-top:110px}
 body header:is(.home-nav,.site-header,.nav) a.aral-preview-brand{width:64px!important;min-width:64px!important;max-width:64px!important;flex:0 0 64px!important}
 @media(max-width:640px){body header:is(.home-nav,.site-header,.nav) a.aral-preview-brand{width:52px!important;min-width:52px!important;max-width:52px!important;flex:0 0 52px!important}}
 @media(max-width:360px){body header.nav button.aral-menu-toggle{left:64px!important}}
+
+/* R12.7 — independent phone filter scrolling, equal CTA motion, blue edge lighting. */
+@media(max-width:900px){
+ body:has(.aral-vehicle-chooser) #filtersPanel{height:100vh!important;height:100dvh!important;max-height:100vh!important;max-height:100dvh!important;min-height:0!important;align-self:stretch!important;overflow-x:hidden!important;overflow-y:auto!important;overscroll-behavior-y:contain;touch-action:pan-y;-webkit-overflow-scrolling:touch;padding-bottom:calc(24px + env(safe-area-inset-bottom,0px))!important;scroll-padding-bottom:90px}
+ body:has(.aral-vehicle-chooser) #filtersPanel .filter-head{position:sticky;top:-25px;z-index:3;background:#fff;padding:14px 0;margin-top:-14px;border-bottom:1px solid #dce8f3}
+ body:has(.aral-vehicle-chooser) #applyFilters{position:sticky!important;bottom:0!important;z-index:4;min-height:48px;background:#0755ad;color:#fff;border:1px solid #0755ad;box-shadow:0 -8px 12px #ffffffed;margin-top:22px}
+}
+#routes .btn[data-magnetic]{max-width:100%;white-space:normal}
+body header:is(.home-nav,.site-header,.nav){
+ background:radial-gradient(ellipse 180px 95px at 5% 45%,#8cdcff2b,transparent 75%),radial-gradient(ellipse 260px 105px at 93% 45%,#7ed2ff30,transparent 77%),linear-gradient(105deg,#0758b2 0%,#074b90 48%,#053c79 100%)!important;
+ border-top:1px solid #a3ddff50!important;border-bottom:1px solid #a3ddff65!important;box-shadow:inset 0 1px 12px #87d6ff13,inset 0 -1px 14px #87d6ff13;
+}
+body header a.aral-header-control{border-color:#a8dcff!important;box-shadow:0 0 16px #96ddff2b,inset 0 1px 0 #fff!important;background:linear-gradient(135deg,#fff,#eaf6ff)!important}
+body header nav.aral-jelly-menu a.aral-jelly-chip{border-color:#8ccfff55!important}
+@media(max-width:1200px){body header nav.aral-jelly-menu:is(.open,.is-open) a.aral-jelly-chip{border:0!important}}
+@media(max-width:900px){body.filters-locked>main{position:relative;z-index:1000!important}}
+
+/* R12.8: remove reviewed decorative arrows and use a dash in the brand footnote. */
+.aral-global-footer .af-lead .aral-r3-dot-link::before{content:"—";width:auto!important;height:auto!important;min-width:0!important;min-height:0!important;border-radius:0!important;background:none!important;top:0!important}
+.aral-page[data-route="advantages"] .adv-summary .mini::after{content:none!important}
