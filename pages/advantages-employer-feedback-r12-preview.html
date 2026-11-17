@@ -199,15 +199,15 @@
 @media(max-width:680px){.adv-choice-grid{grid-template-columns:1fr;gap:22px}.adv-choice-actions .adv-action{width:100%}}
 </style><style>
 /* Approved option 3: photograph directly below header; editorial row underneath. */
-#view-advantages .adv-race-hero{position:relative;isolation:isolate;overflow:hidden;background:#fff;color:#073469}
+#view-advantages .adv-race-hero{position:relative;isolation:isolate;overflow:hidden;background:#f1f7fc;color:#073469;border-bottom:1px solid #d6e5f2}
 #view-advantages .adv-race-hero::before,#view-advantages .adv-race-hero::after{content:none}
 #view-advantages .adv-race-media{position:relative;width:100%;height:clamp(300px,29vw,460px);overflow:hidden}
 #view-advantages .adv-race-media::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#010408 0%,#031628d9 5%,#06416a80 10%,transparent 16%,transparent 84%,#06416a80 90%,#031628d9 95%,#010408 100%)}
 #view-advantages .adv-race-media img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 49%}
-#view-advantages .adv-race-inner{position:relative;padding-block:28px}
+#view-advantages .adv-race-inner{position:relative;padding-block:38px}
 #view-advantages .adv-race-copy{display:grid;grid-template-columns:1.25fr 1fr auto;align-items:center;gap:28px;max-width:100%;text-shadow:none}
-#view-advantages .adv-race-copy h1{color:#073469;font-size:clamp(30px,2.9vw,42px);font-weight:750;line-height:1.1;letter-spacing:-.04em;margin:0;overflow-wrap:normal}
-#view-advantages .adv-race-copy p{color:#345574;font-size:16px;line-height:1.6;margin:0;padding-left:26px;border-left:1px solid #c8d9e9}
+#view-advantages .adv-race-copy h1{color:#073469;font-size:clamp(32px,3.2vw,46px);font-weight:750;line-height:1.1;letter-spacing:-.04em;margin:0;overflow-wrap:normal}
+#view-advantages .adv-race-copy p{color:#345574;font-size:18px;line-height:1.6;margin:0;padding-left:26px;border-left:1px solid #c8d9e9}
 #view-advantages .adv-race-action{display:inline-flex;align-items:center;justify-content:center;max-width:100%;min-height:48px;padding:12px 20px;border:1px solid #075394;border-radius:8px;background:#075394;color:#fff;font-size:14px;font-weight:750;line-height:1.4;text-align:center;text-decoration:none;box-sizing:border-box}
 #view-advantages .adv-race-action:hover{background:#063b70;color:#fff;border-color:#063b70}
 #view-advantages .adv-race-action:focus-visible{outline:3px solid #9cd6ff;outline-offset:4px}
@@ -216,10 +216,12 @@
  #view-advantages .adv-race-media{height:auto;aspect-ratio:16/10}
  #view-advantages .adv-race-inner{padding-block:26px}
  #view-advantages .adv-race-copy{grid-template-columns:1fr;gap:18px}
- #view-advantages .adv-race-copy h1{font-size:clamp(30px,8vw,38px)}
- #view-advantages .adv-race-copy p{padding:0;border:0}
+ #view-advantages .adv-race-copy h1{font-size:clamp(32px,8.5vw,40px)}
+ #view-advantages .adv-race-copy p{padding:0;border:0;font-size:17px}
  #view-advantages .adv-race-action{justify-self:start}
 }
+#view-advantages .adv-overview{padding-top:56px}
+@media(max-width:680px){#view-advantages .adv-overview{padding-top:36px}}
 @media(prefers-reduced-motion:reduce){#view-advantages .adv-race-action{transition:none}}
 </style></head>
 <body>
