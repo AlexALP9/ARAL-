@@ -199,10 +199,11 @@
 @media(max-width:680px){.adv-choice-grid{grid-template-columns:1fr;gap:22px}.adv-choice-actions .adv-action{width:100%}}
 </style><style>
 /* Approved hero option 2: original pit-stop photograph with a left navy overlay. */
-#view-advantages .adv-race-hero{position:relative;isolation:isolate;overflow:hidden;background:#062c50;color:#fff}
-#view-advantages .adv-race-media{position:absolute;inset:0 0 0 15%;z-index:0}
+#view-advantages .adv-race-hero{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(90deg,#010408 0%,#031628 5%,#06416a 10%,#08699d 16%,#08699d 84%,#06416a 90%,#031628 95%,#010408 100%);color:#fff}
+#view-advantages .adv-race-media{position:absolute;inset:0;z-index:0}
 #view-advantages .adv-race-media img{display:block;width:100%;height:100%;object-fit:cover;object-position:60% 49%}
-#view-advantages .adv-race-hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(2,25,51,.97) 0%,rgba(2,25,51,.87) 25%,rgba(2,25,51,.42) 49%,rgba(2,25,51,.04) 72%,rgba(2,25,51,.04) 100%)}
+#view-advantages .adv-race-hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,#010408 0%,#031628f2 5%,#06416aeb 10%,#08699de0 16%,#08699dc9 29%,#08699d80 45%,#08699d26 63%,#06416a1a 84%,#031628b3 95%,#010408ed 100%)}
+#view-advantages .adv-race-hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,#010408 0%,#031628 5%,#06416a 10%,#08699d 16%,#08699d 84%,#06416a 90%,#031628 95%,#010408 100%);-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 35%);mask-image:linear-gradient(180deg,#000 0%,transparent 35%)}
 #view-advantages .adv-race-inner{position:relative;z-index:2;display:flex;align-items:center;min-height:390px;padding-block:58px}
 #view-advantages .adv-race-copy{max-width:620px}
 #view-advantages .adv-race-copy h1{color:#fff;font-size:clamp(38px,3.5vw,54px);font-weight:750;line-height:1.08;letter-spacing:-.045em;margin:0 0 20px;overflow-wrap:normal}
@@ -211,7 +212,7 @@
 #view-advantages .adv-race-action:hover{background:#ffffff20;color:#fff;border-color:#fff}
 #view-advantages .adv-race-action:focus-visible{outline:3px solid #9cd6ff;outline-offset:4px}
 @media(min-width:1600px){#view-advantages .adv-race-inner{min-height:430px}}
-@media(min-width:681px) and (max-width:1000px){#view-advantages .adv-race-copy{max-width:430px}#view-advantages .adv-race-copy h1{font-size:44px}#view-advantages .adv-race-copy p{font-size:17px;max-width:370px}#view-advantages .adv-race-hero::before{background:linear-gradient(90deg,#021933f5 0%,#021933d9 34%,#02193355 67%,#02193310 100%)}}
+@media(min-width:681px) and (max-width:1000px){#view-advantages .adv-race-copy{max-width:430px}#view-advantages .adv-race-copy h1{font-size:44px}#view-advantages .adv-race-copy p{font-size:17px;max-width:370px}#view-advantages .adv-race-hero::before{background:linear-gradient(90deg,#010408 0%,#031628f5 5%,#06416af0 10%,#08699deb 16%,#08699dd9 34%,#08699d66 61%,#08699d26 80%,#031628b3 95%,#010408ed 100%)}}
 @media(max-width:680px){
  #view-advantages .adv-race-inner{min-height:580px;padding-block:34px 290px;align-items:flex-start}
  #view-advantages .adv-race-copy{max-width:100%}
@@ -219,7 +220,7 @@
  #view-advantages .adv-race-copy p{font-size:16px;line-height:1.6;max-width:390px;margin-bottom:22px}
  #view-advantages .adv-race-media{top:auto;left:0;height:64%}
  #view-advantages .adv-race-media img{object-position:56% 52%}
- #view-advantages .adv-race-hero::before{background:linear-gradient(180deg,#062c50 0%,#062c50 33%,#062c50e6 44%,#062c5033 65%,#062c5005 82%,#062c501a 100%)}
+ #view-advantages .adv-race-hero::before{background:linear-gradient(90deg,#010408e6 0%,#03162899 6%,transparent 20%,transparent 80%,#03162899 94%,#010408e6 100%),linear-gradient(180deg,#08699d 0%,#08699d 33%,#08699de6 44%,#08699d33 65%,#08699d05 82%,#08699d1a 100%)}
 }
 @media(prefers-reduced-motion:reduce){#view-advantages .adv-race-action{transition:none}}
 </style></head>
