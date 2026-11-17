@@ -195,6 +195,11 @@
   };
   syncCounts();window.addEventListener('focus',syncCounts);window.addEventListener('storage',e=>{if(e.key==='aralProductsV13Compare')syncCounts()});
  }
+ function installAudienceMotion(){
+  document.querySelectorAll('#audiences .audience-tile .card-link-label').forEach((label,i)=>{
+   label.dataset.magnetic=i===0?'audience-drivers':'audience-partners';
+  });
+ }
  function hideCoolantPublicReferences(){
   const obsolete=/Silikatfrei\s*G12|охлаждающ(?:ие|ая|их)\s+жидкост(?:и|ь|ей)|антифриз/iu;
   document.querySelectorAll('.mini,.part-benefit').forEach(el=>{
@@ -324,6 +329,7 @@
   rewriteInternalLinks();
   installHeader();
   installHeaderActions();
+  installAudienceMotion();
   installContactAndMenu();
   hideCoolantPublicReferences();
   applyR9ContentReview();
