@@ -325,11 +325,30 @@
    });
   }
  }
+ function installTimelineConnectors(){
+  document.querySelectorAll('#timeline .years').forEach(group=>{
+   if(group.dataset.segmentedTimeline)return;
+   group.dataset.segmentedTimeline='true';
+   const buttons=[...group.querySelectorAll('.year-btn')];
+   const segments=buttons.slice(1).map(()=>{
+    const line=document.createElement('span');line.className='aral-year-connector';line.setAttribute('aria-hidden','true');group.append(line);return line;
+   });
+   const measure=()=>segments.forEach((line,i)=>{
+    const a=buttons[i],b=buttons[i+1],left=a.offsetLeft+a.offsetWidth,gap=b.offsetLeft-left;
+    const sameRow=Math.abs(a.offsetTop-b.offsetTop)<2;
+    line.hidden=!sameRow||gap<=0;
+    if(!line.hidden){line.style.left=left+'px';line.style.top=(a.offsetTop+a.offsetHeight/2)+'px';line.style.width=gap+'px'}
+   });
+   const observer=new ResizeObserver(measure);observer.observe(group);buttons.forEach(b=>observer.observe(b));
+   measure();document.fonts?.ready.then(measure);
+  });
+ }
  function install(){
   rewriteInternalLinks();
   installHeader();
   installHeaderActions();
   installAudienceMotion();
+  installTimelineConnectors();
   installContactAndMenu();
   hideCoolantPublicReferences();
   applyR9ContentReview();
