@@ -1,0 +1,38 @@
+name: PR9 LineSidebar text-link preview
+on:
+  push:
+    branches:
+      - codex/aral-home-hero48-cards-r15-20261028
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  text-links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.57.0
+          npx playwright install --with-deps chromium
+      - name: Start static preview
+        run: |
+          python3 -m http.server 8123 --bind 127.0.0.1 >/tmp/line-sidebar-server.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8123/design/hero/prototypes/hero-4s-k-views/ARAL_home_line_sidebar_preview.html >/dev/null; then break; fi
+            sleep 1
+          done
+      - name: Test 24 links, footers, responsive motion and screenshot
+        run: node design/hero/prototypes/hero-4s-k-views/capture-line-sidebar.mjs
+      - name: Upload visual review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ARAL-PR9-LineSidebar-24-links
+          path: review-output/
+          if-no-files-found: warn
+          retention-days: 30

@@ -1,0 +1,161 @@
+/*
+ * ARAL — Тонкие контурные потоки · отдельный визуальный предпросмотр.
+ * Вдохновлено утверждённым макетом «Вариант 2A», но используется настоящая
+ * вёрстка и оригинальные фото репозитория. Фон не изменяет карточки/ссылки.
+ * Motion: 4–7 px за 42–56 с, только transform, без layout/reflow.
+ */
+body.aral-contour-preview {
+  --stream-ice:#f7fbff;
+  --stream-sky:#eff7ff;
+  --stream-light:#e8f4ff;
+  background:#fff!important;
+}
+body.aral-contour-preview #home-page {
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse 48% 11% at 96% 12%,rgba(195,225,253,.18),transparent 85%),
+    radial-gradient(ellipse 45% 9% at 3% 58%,rgba(210,235,255,.17),transparent 85%),
+    linear-gradient(180deg,#fff 0%,#fff 17%,#fafcff 39%,#fff 65%,#f9fcff 89%,#fff 100%);
+}
+body.aral-contour-preview #home-page :is(#audiences,#featured,#about,#b2b,#where){
+  position:relative;
+  isolation:isolate;
+}
+/* Place decoration behind content, never over photographs or readable text. */
+body.aral-contour-preview #home-page :is(#audiences,#featured,#b2b,#where)::before,
+body.aral-contour-preview #home-page #featured::after {
+  content:"";
+  position:absolute;
+  left:50%;
+  width:calc(100vw + 140px);
+  max-width:none;
+  transform:translate3d(-50%,0,0);
+  pointer-events:none;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:100% 100%;
+  opacity:.74;
+  z-index:-1;
+}
+body.aral-contour-preview #home-page #audiences::before {
+  top:-64px;
+  height:220px;
+  background-image:url("./aral-contour-stream-home.svg");
+  opacity:.39;
+  animation:aral-contour-audience 52s ease-in-out infinite alternate;
+}
+body.aral-contour-preview #home-page #featured {
+  /* The only slightly emphasized region: guide the eye toward 4 products. */
+  background:radial-gradient(ellipse 60% 61% at 50% 53%,rgba(220,241,255,.28),transparent 78%);
+}
+body.aral-contour-preview #home-page #featured::before {
+  top:-84px;
+  height:250px;
+  background-image:url("./aral-contour-stream-product.svg");
+  opacity:.83;
+  animation:aral-contour-featured 42s ease-in-out infinite alternate;
+}
+body.aral-contour-preview #home-page #featured::after {
+  bottom:-95px;
+  height:228px;
+  background-image:url("./aral-contour-stream-home.svg");
+  opacity:.52;
+  animation:aral-contour-featured-low 56s ease-in-out infinite alternate;
+}
+body.aral-contour-preview #home-page #b2b::before {
+  bottom:-105px;
+  height:208px;
+  background-image:url("./aral-contour-stream-home.svg");
+  opacity:.36;
+}
+body.aral-contour-preview #home-page #where::before {
+  top:-83px;
+  height:200px;
+  background-image:url("./aral-contour-stream-product.svg");
+  opacity:.47;
+}
+/* Make natural content layers sit above the decor; no changes to their styles. */
+body.aral-contour-preview #home-page :is(#audiences,#featured,#b2b,#where) > * {
+  position:relative;
+  z-index:1;
+}
+/* Catalog — faint echo of the homepage lines, not a second hero or new cards. */
+body.aral-contour-preview #main {
+  position:relative;
+  isolation:isolate;
+  overflow:clip;
+  background:
+    radial-gradient(ellipse 56% 15% at 95% 25%,rgba(207,233,253,.14),transparent 85%),
+    linear-gradient(180deg,#fff 0%,#fbfdff 42%,#fff 100%);
+}
+body.aral-contour-preview #main > .hero {
+  background-image:url("./aral-contour-stream-home.svg"),linear-gradient(115deg,#fff 0%,#fff 47%,#f4f8fd 100%);
+  background-size:cover,auto;
+  background-position:center bottom,center;
+  background-repeat:no-repeat;
+}
+body.aral-contour-preview #assortment {
+  position:relative;
+  isolation:isolate;
+}
+body.aral-contour-preview #assortment::before,
+body.aral-contour-preview #assortment::after {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  pointer-events:none;
+  left:50%;
+  width:calc(100vw + 110px);
+  max-width:none;
+  height:240px;
+  background:url("./aral-contour-stream-product.svg") center/100% 100% no-repeat;
+  transform:translate3d(-50%,0,0);
+}
+body.aral-contour-preview #assortment::before {
+  top:100px;
+  opacity:.59;
+  animation:aral-contour-catalog 54s ease-in-out infinite alternate;
+}
+body.aral-contour-preview #assortment::after {
+  top:720px;
+  opacity:.45;
+  background-image:url("./aral-contour-stream-home.svg");
+}
+body.aral-contour-preview #assortment > *{
+  position:relative;
+  z-index:1;
+}
+@keyframes aral-contour-audience {
+  from {transform:translate3d(calc(-50% - 5px),4px,0)}
+  to {transform:translate3d(calc(-50% + 5px),-5px,0)}
+}
+@keyframes aral-contour-featured {
+  from {transform:translate3d(calc(-50% - 7px),-3px,0)}
+  to {transform:translate3d(calc(-50% + 7px),5px,0)}
+}
+@keyframes aral-contour-featured-low {
+  from {transform:translate3d(calc(-50% + 4px),0px,0)}
+  to {transform:translate3d(calc(-50% - 4px),5px,0)}
+}
+@keyframes aral-contour-catalog {
+  from {transform:translate3d(calc(-50% - 5px),-3px,0)}
+  to {transform:translate3d(calc(-50% + 5px),4px,0)}
+}
+@media (hover:none),(pointer:coarse),(max-width:900px),(prefers-reduced-motion:reduce) {
+  body.aral-contour-preview #home-page :is(#audiences,#featured,#b2b,#where)::before,
+  body.aral-contour-preview #home-page #featured::after,
+  body.aral-contour-preview #assortment::before{
+    animation:none!important;
+    transform:translate3d(-50%,0,0)!important;
+  }
+}
+@media (max-width:640px){
+  body.aral-contour-preview #home-page #audiences::before {opacity:.22}
+  body.aral-contour-preview #home-page #featured::before {opacity:.55;top:-42px}
+  body.aral-contour-preview #home-page #featured::after {opacity:.34}
+  body.aral-contour-preview #home-page #where::before {opacity:.25}
+  body.aral-contour-preview #assortment::before,
+  body.aral-contour-preview #assortment::after {opacity:.24}
+}

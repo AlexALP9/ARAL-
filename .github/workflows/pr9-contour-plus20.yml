@@ -1,0 +1,38 @@
+name: PR9 contour 2A plus 20 percent
+on:
+  push:
+    branches:
+      - codex/aral-home-hero48-cards-r15-20261028
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.57.0
+          npx playwright install --with-deps chromium
+      - name: Serve both HTML previews
+        run: |
+          python3 -m http.server 8123 --bind 127.0.0.1 >/tmp/aral-plus20.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8123/design/hero/prototypes/hero-4s-k-views/ARAL_home_contour_2A_plus20_preview.html >/dev/null; then break; fi
+            sleep 1
+          done
+      - name: Compare brightness exactly and capture responsive screenshots
+        run: node design/hero/prototypes/hero-4s-k-views/capture-contour-plus20.mjs
+      - name: Upload visual review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ARAL-PR9-contour-2A-plus20
+          path: review-output/contour-plus20/
+          if-no-files-found: warn
+          retention-days: 30

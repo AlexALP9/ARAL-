@@ -1,0 +1,45 @@
+/* ARAL ambient five-orb background — isolated design preview; no frameworks. */
+html:has(body.aral-gradient-preview){background:#eaf4fd}
+body.aral-gradient-preview{
+ --bg0:#f6fbff;--bg1:#e5f1ff;
+ --g1:6,84,171;--g2:44,159,225;--g3:149,215,248;--g4:56,115,197;--g5:255,226,44;
+ --glow:.23;--gold:.08;
+ position:relative;isolation:isolate;background:transparent!important
+}
+body.aral-gradient-preview[data-aral-gradient-theme="frost"]{--bg0:#fbfdff;--bg1:#f0f7fe;--glow:.14;--gold:.05}
+body.aral-gradient-preview[data-aral-gradient-theme="blue"]{--bg0:#f6fbff;--bg1:#e5f1ff;--glow:.23;--gold:.08}
+body.aral-gradient-preview[data-aral-gradient-theme="vivid"]{--bg0:#f2f9ff;--bg1:#dcecfb;--glow:.38;--gold:.11}
+body.aral-gradient-preview>.aral-gradient-field{
+ position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;
+ background:linear-gradient(118deg,var(--bg0),var(--bg1));contain:strict
+}
+.aral-gradient-field .aral-orb{position:absolute;width:min(66vmax,1100px);height:min(66vmax,1100px);border-radius:50%;will-change:transform}
+.aral-orb.o1{left:5%;top:7%;background:radial-gradient(circle,rgba(var(--g1),var(--glow)),transparent 68%);animation:aral-vertical 30s ease infinite}
+.aral-orb.o2{left:45%;top:-13%;background:radial-gradient(circle,rgba(var(--g2),var(--glow)),transparent 68%);transform-origin:calc(50% - 140px) calc(50% + 100px);animation:aral-circle 20s linear infinite reverse}
+.aral-orb.o3{left:44%;top:42%;background:radial-gradient(circle,rgba(var(--g3),var(--glow)),transparent 68%);transform-origin:calc(50% + 110px) calc(50% - 160px);animation:aral-circle 40s linear infinite}
+.aral-orb.o4{left:-23%;top:36%;background:radial-gradient(circle,rgba(var(--g4),var(--glow)),transparent 68%);animation:aral-horizontal 40s ease infinite}
+.aral-orb.o5{right:-28%;top:25%;background:radial-gradient(circle,rgba(var(--g5),var(--gold)),transparent 64%);transform-origin:calc(50% - 80px) calc(50% + 90px);animation:aral-circle 20s ease infinite}
+.aral-gradient-field .aral-cursor{position:absolute;width:min(43vmax,700px);height:min(43vmax,700px);top:50%;left:50%;border-radius:50%;
+ background:radial-gradient(circle,rgba(40,122,211,.08),transparent 67%);
+ transform:translate3d(calc(-50% + var(--pointer-x,0px)),calc(-50% + var(--pointer-y,0px)),0);will-change:transform}
+@keyframes aral-horizontal{0%,100%{transform:translate3d(-50%,-10%,0)}50%{transform:translate3d(50%,10%,0)}}
+@keyframes aral-circle{0%{transform:rotate(0deg)}50%{transform:rotate(180deg)}100%{transform:rotate(360deg)}}
+@keyframes aral-vertical{0%,100%{transform:translate3d(0,-50%,0)}50%{transform:translate3d(0,50%,0)}}
+/* Keep all existing card/hero/nav colors. Show gradients only through neutral page sections. */
+body.aral-gradient-preview :is(.home-section,.page-empty,#assortment,#howto,.contacts-section:not(.alt)){background-color:transparent!important}
+body.aral-gradient-preview .section:not(.gray):not(.part-hero):not(.company-quality):not(.adv-overview){background-color:transparent!important}
+body.aral-gradient-preview :is(.section.gray,.contacts-section.alt){background-color:rgba(247,251,255,.72)!important}
+.aral-gradient-controls{position:fixed;right:16px;bottom:16px;z-index:99999;padding:8px 10px;max-width:calc(100vw - 32px);
+ background:rgba(255,255,255,.96);border:1px solid #a9c9e5;border-radius:12px;box-shadow:0 6px 24px #00275826;color:#183b62;
+ font:12px/1.4 system-ui,sans-serif;backdrop-filter:blur(12px)}
+.aral-gradient-controls summary{font-weight:800;cursor:pointer;min-height:30px;padding:5px}
+.aral-gradient-controls .choices{display:flex;gap:5px;flex-wrap:wrap;margin:6px 0}
+.aral-gradient-controls button{cursor:pointer;border:1px solid #cddfed;border-radius:8px;padding:8px 10px;background:#edf5fd;color:#124b8a;font:650 11px system-ui,sans-serif}
+.aral-gradient-controls button[aria-pressed="true"]{background:#0756a1;color:#fff;border-color:#0756a1}
+.aral-gradient-controls button:focus-visible{outline:3px solid #ffe425;outline-offset:2px}
+.aral-gradient-controls small{display:block;color:#56728d;max-width:290px}
+@media(hover:none),(pointer:coarse),(max-width:900px),(prefers-reduced-motion:reduce){
+ .aral-gradient-field .aral-orb{animation:none!important;will-change:auto}
+ .aral-gradient-field .aral-cursor{display:none}
+}
+@media(max-width:430px){.aral-gradient-controls{right:8px;bottom:8px;padding:5px 7px}}

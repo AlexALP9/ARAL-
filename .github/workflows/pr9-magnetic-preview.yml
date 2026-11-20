@@ -1,0 +1,55 @@
+name: PR9 Magnetic Buttons preview
+on:
+  push:
+    branches:
+      - codex/aral-home-hero48-cards-r15-20261028
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  magnetic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.57.0
+          npx playwright install --with-deps chromium
+      - name: Start static preview server
+        run: |
+          python3 -m http.server 8123 --bind 127.0.0.1 >/tmp/aral-magnetic.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8123/design/hero/prototypes/hero-4s-k-views/ARAL_home_magnetic_buttons_preview.html >/dev/null; then break; fi
+            sleep 1
+          done
+      - name: Test magnetic motion and capture 1440, 1024, 768, 390 px screenshots
+        run: node design/hero/prototypes/hero-4s-k-views/capture-magnetic.mjs
+      - name: Check softened attraction on product, partner and article buttons
+        run: node design/hero/prototypes/hero-4s-k-views/capture-magnetic-pages.mjs
+      - name: Package approval preview without modifying published site
+        if: always()
+        run: |
+          mkdir -p review-output/site/design/hero/prototypes/hero-4s-k-views review-output/site/media review-output/site/pages
+          cp design/hero/prototypes/hero-4s-k-views/ARAL_home_magnetic_buttons_preview.html review-output/site/design/hero/prototypes/hero-4s-k-views/
+          cp design/hero/prototypes/hero-4s-k-views/review.css design/hero/prototypes/hero-4s-k-views/review.js review-output/site/design/hero/prototypes/hero-4s-k-views/
+          cp -a design/hero/prototypes/hero-4s-k-views/assets review-output/site/design/hero/prototypes/hero-4s-k-views/
+          mkdir -p review-output/site/design/hero/ARAL_HERO_MOTION_01A1556A
+          cp -a design/hero/ARAL_HERO_MOTION_01A1556A/sources review-output/site/design/hero/ARAL_HERO_MOTION_01A1556A/
+          cp -a media/editorial media/production review-output/site/media/
+          cp pages/*.html review-output/site/pages/
+          mkdir -p review-output/site/assets
+          cp assets/aral-magnetic.css assets/aral-magnetic.js review-output/site/assets/
+          cp index.html review-output/site/
+          printf '%s\n' 'Run in site/ folder: python3 -m http.server 8000' 'Preview: http://localhost:8000/design/hero/prototypes/hero-4s-k-views/ARAL_home_magnetic_buttons_preview.html' > review-output/OPEN-MAGNETIC.txt
+      - name: Upload screenshots and complete HTML preview
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ARAL-PR9-Magnetic-Buttons-approval
+          path: review-output/
+          if-no-files-found: warn
+          retention-days: 30

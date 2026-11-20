@@ -1,0 +1,50 @@
+name: PR9 ARAL ambient gradient previews
+on:
+  push:
+    branches:
+      - codex/aral-home-hero48-cards-r15-20261028
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  visual:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install test browser
+        run: |
+          npm install --no-save --no-package-lock playwright@1.57.0
+          npx playwright install --with-deps chromium
+      - name: Start HTTP server
+        run: |
+          python3 -m http.server 8123 --bind 127.0.0.1 >/tmp/aral-ambient.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8123/design/hero/prototypes/hero-4s-k-views/ARAL_home_animated_background_preview.html >/dev/null; then break; fi
+            sleep 1
+          done
+      - name: Verify backgrounds, existing interactions and responsive screenshots
+        run: node design/hero/prototypes/hero-4s-k-views/capture-ambient-background.mjs
+      - name: Package preview files without changing main
+        if: always()
+        run: |
+          mkdir -p review-output/site/design/hero/prototypes/hero-4s-k-views review-output/site/pages review-output/site/assets review-output/site/media review-output/site/design/hero/ARAL_HERO_MOTION_01A1556A
+          cp design/hero/prototypes/hero-4s-k-views/ARAL_home_animated_background_preview.html review-output/site/design/hero/prototypes/hero-4s-k-views/
+          cp design/hero/prototypes/hero-4s-k-views/review.css design/hero/prototypes/hero-4s-k-views/review.js review-output/site/design/hero/prototypes/hero-4s-k-views/
+          cp -a design/hero/prototypes/hero-4s-k-views/assets review-output/site/design/hero/prototypes/hero-4s-k-views/
+          cp -a design/hero/ARAL_HERO_MOTION_01A1556A/sources review-output/site/design/hero/ARAL_HERO_MOTION_01A1556A/
+          cp pages/*animated-background-preview.html review-output/site/pages/
+          cp index-animated-background-preview.html review-output/site/
+          cp assets/aral-magnetic.js assets/aral-magnetic.css assets/aral-gradient-ambient-preview.css assets/aral-gradient-ambient-preview.js review-output/site/assets/
+          cp -a media/editorial media/production review-output/site/media/
+          printf '%s\n' 'From site/ run python3 -m http.server 8000' 'Home: http://localhost:8000/design/hero/prototypes/hero-4s-k-views/ARAL_home_animated_background_preview.html' 'Switch palettes using the floating lower-right control.' > review-output/OPEN-LOCALLY.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ARAL-PR9-Ambient-Background-7-pages
+          path: review-output/
+          if-no-files-found: warn
+          retention-days: 30

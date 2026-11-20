@@ -410,7 +410,7 @@
 #part-geography{padding-bottom:0}
 #part-contacts{padding-top:26px}
 @media(max-width:680px){#part-geography{padding-bottom:0}#part-contacts{padding-top:20px}}
-</style></head>
+</style><link rel="stylesheet" href="../assets/aral-magnetic.css"></head>
 <body>
 <div class="aral-page is-active" id="view-partners" data-route="partners">
 <header class="nav"><div class="container nav-wrap"><a class="brand" href="../index.html#company" style="text-decoration:none">ARAL</a><button aria-controls="site-menu" aria-expanded="false" class="nav-toggle" type="button">☰  Меню</button><nav aria-label="Главное меню" class="menu" id="site-menu">
@@ -423,7 +423,7 @@
           <h1>ARAL для профессиональных закупок</h1>
           <p class="part-lead">Оптовые закупки ARAL: удобные форматы отгрузки и прямое обсуждение заказа.</p>
           <p class="part-copy">Работаем с магазинами автозапчастей, СТО, оптовыми компаниями и автопарками. Подберите подходящие позиции ARAL и фасовки, выберите удобный способ получения заказа и обсудите детали сотрудничества с нашим отделом продаж.</p>
-          <div class="button-row"><a class="ghost-btn" href="https://skladspk.ru/contacts" target="_blank" rel="noopener noreferrer">Обсудить сотрудничество <span aria-hidden="true">↗</span></a></div>
+          <div class="button-row"><a class="ghost-btn" data-magnetic="partner-contact" href="https://skladspk.ru/contacts" target="_blank" rel="noopener noreferrer">Обсудить сотрудничество <span aria-hidden="true">↗</span></a></div>
         </div>
         <figure class="part-hero-image"><img src="../media/editorial/partners-0.png" width="399" height="269" alt="Промышленная площадка с синими резервуарами и фирменным знаком ARAL"></figure>
       </div>
@@ -485,7 +485,7 @@
       </article>
     </div>
     <div class="part-benefits-footer">
-      <a class="ghost-btn" href="https://skladspk.ru/contacts" target="_blank" rel="noopener noreferrer">Обсудить сотрудничество <span aria-hidden="true">↗</span></a>
+      <a class="ghost-btn" data-magnetic="partner-contact" href="https://skladspk.ru/contacts" target="_blank" rel="noopener noreferrer">Обсудить сотрудничество <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 </section>
@@ -577,4 +577,4 @@ if(typeof ResizeObserver!=='undefined'){new ResizeObserver(()=>declutterDetails(
 useView('moscow');
 })();
 </script>
-</body></html>
+<script src="../assets/aral-magnetic.js" defer></script></body></html>
