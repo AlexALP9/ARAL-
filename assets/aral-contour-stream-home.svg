@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 260" width="1536" height="260" fill="none" preserveAspectRatio="none">
+ <defs>
+ <linearGradient id="blue0" x1="0" y1="0" x2="1536" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#96c8f4" stop-opacity="0"/><stop offset=".22" stop-color="#9ad2ff" stop-opacity=".44"/><stop offset=".52" stop-color="#3d9be9" stop-opacity=".58"/><stop offset=".8" stop-color="#84c7f3" stop-opacity=".42"/><stop offset="1" stop-color="#a6d2ff" stop-opacity="0"/></linearGradient>
+ <linearGradient id="blue1" x1="0" y1="0" x2="1536" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#b9ddfa" stop-opacity="0"/><stop offset=".28" stop-color="#afd8f6" stop-opacity=".38"/><stop offset=".68" stop-color="#60adf5" stop-opacity=".48"/><stop offset="1" stop-color="#9acdf6" stop-opacity="0"/></linearGradient>
+ <linearGradient id="haze" x1="500" y1="40" x2="500" y2="250" gradientUnits="userSpaceOnUse"><stop stop-color="#ebf7ff" stop-opacity=".04"/><stop offset=".65" stop-color="#e6f4ff" stop-opacity=".26"/><stop offset="1" stop-color="#e5f5ff" stop-opacity="0"/></linearGradient>
+ </defs>
+ <path d="M-100 150 C280 65 380 213 650 143 S1035 104 1636 90 L1636 260 H-100 Z" fill="url(#haze)"/>
+ <path d="M -120 152 C 130 90,295 214,510 125 S 840 74,1060 144 S 1330 155,1650 76" transform="translate(0 0)" fill="none" stroke="url(#blue0)" stroke-width="1.25" opacity="0.66" vector-effect="non-scaling-stroke"/>
+ <path d="M -120 152 C 130 90,295 214,510 125 S 840 74,1060 144 S 1330 155,1650 76" transform="translate(0 5.8)" fill="none" stroke="url(#blue0)" stroke-width="0.72" opacity="0.60" vector-effect="non-scaling-stroke"/>
+ <path d="M -120 152 C 130 90,295 214,510 125 S 840 74,1060 144 S 1330 155,1650 76" transform="translate(0 11.6)" fill="none" stroke="url(#blue0)" stroke-width="0.72" opacity="0.54" vector-effect="non-scaling-stroke"/>
+ <path d="M -120 152 C 130 90,295 214,510 125 S 840 74,1060 144 S 1330 155,1650 76" transform="translate(0 17.4)" fill="none" stroke="url(#blue0)" stroke-width="0.72" opacity="0.48" vector-effect="non-scaling-stroke"/>
+ <path d="M -120 152 C 130 90,295 214,510 125 S 840 74,1060 144 S 1330 155,1650 76" transform="translate(0 23.2)" fill="none" stroke="url(#blue0)" stroke-width="0.72" opacity="0.42" vector-effect="non-scaling-stroke"/>
+ <path d="M -120 152 C 130 90,295 214,510 125 S 840 74,1060 144 S 1330 155,1650 76" transform="translate(0 29)" fill="none" stroke="url(#blue0)" stroke-width="0.72" opacity="0.36" vector-effect="non-scaling-stroke"/>
+ <path d="M -120 152 C 130 90,295 214,510 125 S 840 74,1060 144 S 1330 155,1650 76" transform="translate(0 34.8)" fill="none" stroke="url(#blue0)" stroke-width="0.72" opacity="0.30" vector-effect="non-scaling-stroke"/>
+ <path d="M -120 184 C 210 132,315 213,590 166 S 890 98,1135 167 S 1390 137,1630 113" transform="translate(0 0)" fill="none" stroke="url(#blue1)" stroke-width="1.25" opacity="0.66" vector-effect="non-scaling-stroke"/>
+ <path d="M -120 184 C 210 132,315 213,590 166 S 890 98,1135 167 S 1390 137,1630 113" transform="translate(0 5.8)" fill="none" stroke="url(#blue1)" stroke-width="0.72" opacity="0.60" vector-effect="non-scaling-stroke"/>
+ <path d="M -120 184 C 210 132,315 213,590 166 S 890 98,1135 167 S 1390 137,1630 113" transform="translate(0 11.6)" fill="none" stroke="url(#blue1)" stroke-width="0.72" opacity="0.54" vector-effect="non-scaling-stroke"/>
+ <path d="M -120 184 C 210 132,315 213,590 166 S 890 98,1135 167 S 1390 137,1630 113" transform="translate(0 17.4)" fill="none" stroke="url(#blue1)" stroke-width="0.72" opacity="0.48" vector-effect="non-scaling-stroke"/>
+ <path d="M -120 184 C 210 132,315 213,590 166 S 890 98,1135 167 S 1390 137,1630 113" transform="translate(0 23.2)" fill="none" stroke="url(#blue1)" stroke-width="0.72" opacity="0.42" vector-effect="non-scaling-stroke"/>
+ <path d="M -120 184 C 210 132,315 213,590 166 S 890 98,1135 167 S 1390 137,1630 113" transform="translate(0 29)" fill="none" stroke="url(#blue1)" stroke-width="0.72" opacity="0.36" vector-effect="non-scaling-stroke"/>
+ <path d="M -120 184 C 210 132,315 213,590 166 S 890 98,1135 167 S 1390 137,1630 113" transform="translate(0 34.8)" fill="none" stroke="url(#blue1)" stroke-width="0.72" opacity="0.30" vector-effect="non-scaling-stroke"/>
+ </svg>

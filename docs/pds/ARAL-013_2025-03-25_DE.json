@@ -1,0 +1,57 @@
+{
+  "asset": "assets/pds-r12/ARAL-013_2025-03-25_DE.pdf",
+  "document": "Aral MegaTurboral 10W-40",
+  "date": "2025-03-25",
+  "language": "DE",
+  "sha256": "09ca801a6782df9b75a1794e159c079917fa683d5126fe5d5e2dd74c0c6527e9",
+  "source_file": "wepp-d2wkke.pdf",
+  "approved_by_owner": true,
+  "approval_date": "2026-11-17",
+  "internal_id": "ARAL-013",
+  "replaces_pds": {
+    "target": "ARAL-013_PDS.pdf",
+    "source_name": "wepp-df4c8c.pdf",
+    "drive_id": "1T74YjQH2R4cUoqTlnjbFN4leG051uNNI",
+    "drive_url": "https://drive.google.com/file/d/1T74YjQH2R4cUoqTlnjbFN4leG051uNNI/view"
+  },
+  "sds_changed": false,
+  "same_as_upload": "wepp-d2wkke (1)(1).pdf",
+  "technical_rows": [
+    [
+      "Плотность при 15 °C",
+      "0,868 г/мл",
+      "ASTM D4052"
+    ],
+    [
+      "Кинематическая вязкость при 100 °C",
+      "14,8 мм²/с",
+      "ASTM D445"
+    ],
+    [
+      "Динамическая вязкость CCS при −25 °C",
+      "6100 мПа·с",
+      "ASTM D5293"
+    ],
+    [
+      "Кинематическая вязкость при 40 °C",
+      "98 мм²/с",
+      "ASTM D445"
+    ],
+    [
+      "Сульфатная зольность",
+      "1,83 % масс.",
+      "ASTM D874"
+    ],
+    [
+      "Щелочное число TBN",
+      "12,7 мг KOH/г",
+      "ASTM D2896"
+    ],
+    [
+      "Температура застывания",
+      "−42 °C",
+      "ASTM D97"
+    ]
+  ],
+  "publication_note": "Owner explicitly authorized this uploaded German edition. Applies only to ARAL-013, not ARAL-014 (LA). No Low SAPS claim, extended-drain distance or quantitative wear claim added to public copy."
+}

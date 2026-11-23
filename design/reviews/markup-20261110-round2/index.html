@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ARAL · Скриншоты правок</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f4f7fb;color:#0b2749;font-family:system-ui,sans-serif}
+main{max-width:1504px;margin:auto;padding:24px clamp(12px,3vw,42px)}
+h1{font-size:clamp(24px,3vw,38px);line-height:1.12;margin:0 0 24px}nav{display:flex;gap:16px;flex-wrap:wrap;align-items:end;margin-bottom:20px}
+label{display:grid;gap:5px;font-size:14px}select{font:inherit;color:inherit;max-width:100%;padding:9px;border:1px solid #afc1d2;background:white;border-radius:6px;min-height:44px}
+figure{margin:0}figcaption{margin-bottom:10px;color:#445a70}img{display:block;max-width:100%;height:auto;border:1px solid #d8e1e9}
+</style></head><body><main><h1>ARAL · Скриншоты правок</h1>
+<nav aria-label="Выбор снимка"><label>Раздел<select id="section"><option value="support">Поддержка партнёров</option><option value="use">Что важно во время эксплуатации</option><option value="assortment">Фильтры и ассортимент</option><option value="catalog">Каталог продукции ARAL</option><option value="network">Карта партнёров</option><option value="directions">Два маршрута</option><option value="contacts">Контакты</option><option value="sites">Основные сайты</option><option value="requirements">От требований к продукции</option><option value="technology" selected>Технологии для движения вперёд</option></select></label>
+<label>Ширина экрана<select id="width"><option>1440</option><option>1024</option><option>768</option><option>390</option></select></label></nav>
+<figure><figcaption aria-live="polite" id="caption"></figcaption><img id="shot" alt=""></figure></main><script>
+const images = {
+  "1440-support": "1440/support.jpg",
+  "1440-use": "1440/use.jpg",
+  "1440-assortment": "1440/assortment.jpg",
+  "1440-catalog": "1440/catalog.jpg",
+  "1440-network": "1440/network.jpg",
+  "1440-directions": "1440/directions.jpg",
+  "1440-contacts": "1440/contacts.jpg",
+  "1440-sites": "1440/sites.jpg",
+  "1440-requirements": "1440/requirements.jpg",
+  "1440-technology": "1440/technology.jpg",
+  "1024-support": "1024/support.jpg",
+  "1024-use": "1024/use.jpg",
+  "1024-assortment": "1024/assortment.jpg",
+  "1024-catalog": "1024/catalog.jpg",
+  "1024-network": "1024/network.jpg",
+  "1024-directions": "1024/directions.jpg",
+  "1024-contacts": "1024/contacts.jpg",
+  "1024-sites": "1024/sites.jpg",
+  "1024-requirements": "1024/requirements.jpg",
+  "1024-technology": "1024/technology.jpg",
+  "768-support": "768/support.jpg",
+  "768-use": "768/use.jpg",
+  "768-assortment": "768/assortment.jpg",
+  "768-catalog": "768/catalog.jpg",
+  "768-network": "768/network.jpg",
+  "768-directions": "768/directions.jpg",
+  "768-contacts": "768/contacts.jpg",
+  "768-sites": "768/sites.jpg",
+  "768-requirements": "768/requirements.jpg",
+  "768-technology": "768/technology.jpg",
+  "390-support": "390/support.jpg",
+  "390-use": "390/use.jpg",
+  "390-assortment": "390/assortment.jpg",
+  "390-catalog": "390/catalog.jpg",
+  "390-network": "390/network.jpg",
+  "390-directions": "390/directions.jpg",
+  "390-contacts": "390/contacts.jpg",
+  "390-sites": "390/sites.jpg",
+  "390-requirements": "390/requirements.jpg",
+  "390-technology": "390/technology.jpg"
+};
+const section = document.querySelector('#section'), width = document.querySelector('#width');
+const initial = new URLSearchParams(location.hash.slice(1));
+if ([...section.options].some(o=>o.value===initial.get('section'))) section.value=initial.get('section');
+if ([...width.options].some(o=>o.value===initial.get('width'))) width.value=initial.get('width');
+function show() {
+  const caption = section.selectedOptions[0].text + ' · ' + width.value + ' px';
+  document.querySelector('#caption').textContent=caption;
+  const shot=document.querySelector('#shot');
+  shot.alt=caption;
+  shot.src=images[width.value+'-'+section.value];
+}
+function selectShot() {
+  location.replace('#'+new URLSearchParams({section:section.value,width:width.value}));
+  show();
+}
+section.addEventListener('change',selectShot);
+width.addEventListener('change',selectShot);
+show();
+</script></body></html>

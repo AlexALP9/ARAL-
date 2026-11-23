@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ARAL · Скриншоты правок</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f4f7fb;color:#0b2749;font-family:system-ui,sans-serif}
+main{max-width:1504px;margin:auto;padding:24px clamp(12px,3vw,42px)}
+h1{font-size:clamp(24px,3vw,38px);line-height:1.12;margin:0 0 24px}nav{display:flex;gap:16px;flex-wrap:wrap;align-items:end;margin-bottom:20px}
+label{display:grid;gap:5px;font-size:14px}select{font:inherit;color:inherit;max-width:100%;padding:9px;border:1px solid #afc1d2;background:white;border-radius:6px;min-height:44px}
+figure{margin:0}figcaption{margin-bottom:10px;color:#445a70}img{display:block;max-width:100%;height:auto;border:1px solid #d8e1e9}
+</style></head><body><main><h1>ARAL · Скриншоты правок</h1>
+<nav aria-label="Выбор снимка"><label>Раздел<select id="section"><option value="wholesale">Профессиональные закупки</option><option value="selection">Требования двигателя</option><option value="steps">Как выбрать моторное масло</option><option value="xmf">Преимущества ARAL · XMF</option><option value="first">5W-30 или 5W-40 · открытая статья</option><option value="drivers" selected>Для водителей · первый экран</option><option value="stories">Карточки статей 2–5</option><option value="company">Компания · история производства</option><option value="documents">Документация PDS и SDS</option><option value="purchase">Каналы покупки</option></select></label>
+<label>Ширина экрана<select id="width"><option>1440</option><option>1024</option><option>768</option><option>390</option></select></label></nav>
+<figure><figcaption aria-live="polite" id="caption"></figcaption><img id="shot" alt=""></figure></main><script>
+const images = {
+  "1440-wholesale": "1440/wholesale.jpg",
+  "1440-selection": "1440/selection.jpg",
+  "1440-steps": "1440/steps.jpg",
+  "1440-xmf": "1440/xmf.jpg",
+  "1440-first": "1440/first.jpg",
+  "1440-drivers": "1440/drivers.jpg",
+  "1440-stories": "1440/stories.jpg",
+  "1440-company": "1440/company.jpg",
+  "1440-documents": "1440/documents.jpg",
+  "1440-purchase": "1440/purchase.jpg",
+  "1024-wholesale": "1024/wholesale.jpg",
+  "1024-selection": "1024/selection.jpg",
+  "1024-steps": "1024/steps.jpg",
+  "1024-xmf": "1024/xmf.jpg",
+  "1024-first": "1024/first.jpg",
+  "1024-drivers": "1024/drivers.jpg",
+  "1024-stories": "1024/stories.jpg",
+  "1024-company": "1024/company.jpg",
+  "1024-documents": "1024/documents.jpg",
+  "1024-purchase": "1024/purchase.jpg",
+  "768-wholesale": "768/wholesale.jpg",
+  "768-selection": "768/selection.jpg",
+  "768-steps": "768/steps.jpg",
+  "768-xmf": "768/xmf.jpg",
+  "768-first": "768/first.jpg",
+  "768-drivers": "768/drivers.jpg",
+  "768-stories": "768/stories.jpg",
+  "768-company": "768/company.jpg",
+  "768-documents": "768/documents.jpg",
+  "768-purchase": "768/purchase.jpg",
+  "390-wholesale": "390/wholesale.jpg",
+  "390-selection": "390/selection.jpg",
+  "390-steps": "390/steps.jpg",
+  "390-xmf": "390/xmf.jpg",
+  "390-first": "390/first.jpg",
+  "390-drivers": "390/drivers.jpg",
+  "390-stories": "390/stories.jpg",
+  "390-company": "390/company.jpg",
+  "390-documents": "390/documents.jpg",
+  "390-purchase": "390/purchase.jpg"
+};
+const section = document.querySelector('#section'), width = document.querySelector('#width');
+const initial = new URLSearchParams(location.hash.slice(1));
+if ([...section.options].some(o=>o.value===initial.get('section'))) section.value=initial.get('section');
+if ([...width.options].some(o=>o.value===initial.get('width'))) width.value=initial.get('width');
+function show() {
+  const caption = section.selectedOptions[0].text + ' · ' + width.value + ' px';
+  document.querySelector('#caption').textContent=caption;
+  const shot=document.querySelector('#shot');
+  shot.alt=caption;
+  shot.src=images[width.value+'-'+section.value];
+}
+function selectShot() {
+  location.replace('#'+new URLSearchParams({section:section.value,width:width.value}));
+  show();
+}
+section.addEventListener('change',selectShot);
+width.addEventListener('change',selectShot);
+show();
+</script></body></html>

@@ -1,0 +1,63 @@
+/* ARAL LineSidebar interactive text-link preview — motion-only, no React.
+   Adapts the user's distance/falloff/eased effect mechanism to existing <a> links.
+   Intentional: preserve every font size, label, href, parent dimensions and click area.
+ */
+.aral-line-link {
+  --aral-line-x:0px;
+  --aral-line-effect:0;
+  position:relative;
+}
+.aral-line-link>.aral-line-content {
+  display:inline-block;
+  position:relative;
+  transform:translate3d(var(--aral-line-x),0,0);
+  will-change:transform;
+  transition:none!important;
+  pointer-events:none;
+}
+.aral-line-link::before {
+  content:"";
+  position:absolute;
+  left:-15px;top:50%;
+  width:11px;height:2px;border-radius:4px;
+  background:#309cf4;
+  opacity:var(--aral-line-effect);
+  transform:translateY(-50%) scaleX(var(--aral-line-marker-scale,.55));
+  transform-origin:left center;
+  pointer-events:none;
+  box-shadow:0 0 5px rgba(45,147,232,.10);
+}
+.aral-line-link.aral-line-footer-link::before {background:#8fd0ff}
+.aral-line-link:focus-visible {outline:2px solid #55b9ff;outline-offset:5px}
+.aral-line-link.aral-line-indexed::after {
+  content:attr(data-aral-line-index);
+  position:absolute;
+  left:-32px;top:50%;transform:translateY(-50%);
+  color:#8fc6ed;font-size:9px;line-height:1;font-weight:700;
+  opacity:var(--aral-line-effect);
+  pointer-events:none;
+}
+.aral-line-link.aral-line-indexed::before{left:-14px}
+.aral-line-link .aral-line-content > * {
+  /* Preserve nested icons, existing descriptions and article metadata. */
+  pointer-events:none;
+}
+.aral-line-link:is(.navcta,.tech-link,.af-cta)>.aral-line-content{
+  display:inline-flex;align-items:center;gap:7px;
+}
+.aral-line-link.aral-line-article>.aral-line-content{
+  display:block;
+}
+.aral-line-link.aral-line-article .af-teaser small{
+  display:block;
+}
+/* Avoid CSS hover transforms on the link itself: stable clickable hit box. */
+@media (hover:none),(pointer:coarse),(prefers-reduced-motion:reduce) {
+  .aral-line-link>.aral-line-content{transform:none!important;will-change:auto!important}
+  .aral-line-link::before,.aral-line-link::after{opacity:0!important}
+}
+/* Do not allow the decorative index to touch the edge of the viewport. */
+@media(max-width:620px){
+ .aral-line-link.aral-line-indexed::after{left:-24px;font-size:8px}
+ .aral-line-link.aral-line-indexed::before{left:-11px;width:8px}
+}
