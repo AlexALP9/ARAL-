@@ -531,3 +531,22 @@ body #timeline .aral-year-connector[hidden]{display:none!important}
 .aral-vehicle-chooser .vehicle-icon{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;flex:0 0 34px;color:#0756a1}
 .aral-vehicle-chooser .aral-wheel{display:block;width:22px;height:22px;flex:none}
 .aral-vehicle-chooser [data-vehicle="Truck"] .aral-wheel{width:30px;height:30px}
+
+/* Brand booklet compromise — R12 draft, 2026-11-23.
+   Keep the approved header, photographs and outer card geometry intact. */
+body[data-feedback-preview="r12"] .product-photo::after {
+ content:none!important;
+ display:none!important;
+}
+/* Use the approved contour artwork at two anchors instead of every section. */
+body.aral-contour-preview[data-feedback-preview="r12"] #home-page #audiences::before,
+body.aral-contour-preview[data-feedback-preview="r12"] #home-page #where::before,
+body.aral-contour-preview[data-feedback-preview="r12"] #home-page #featured::after {
+ content:none!important;
+ display:none!important;
+}
+/* Shared interaction rhythm below the header; retain each selected visual effect. */
+body[data-feedback-preview="r12"] :is(main,.aral-global-footer) [data-magnetic] {
+ transition-duration:.22s!important;
+ transition-timing-function:ease-out!important;
+}

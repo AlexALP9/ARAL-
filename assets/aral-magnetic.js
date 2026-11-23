@@ -1,8 +1,12 @@
-/* ARAL shared Magnetic Button — no React. Active CTA only; 5px cap; spring return.
+/* ARAL shared Magnetic Button — no React. Active CTA only; bounded spring return.
    Stable, untransformed hit box prevents chasing the pointer. */
 (()=>{'use strict';
 if(window.ARALMagneticButtons?.initialized)return;
-const strength=.17,cap=5,radius=22,deadzone=6;
+// R12 keeps the selected magnetic effect, with quieter movement below the header.
+// Earlier drafts retain their original settings.
+const calmDraft=Array.from(document.scripts).some(s=>/\/aral-employer-feedback-r12\.js(?:[?#]|$)/.test(s.src));
+const strength=calmDraft ? .10 : .17,cap=calmDraft ? 3 : 5,radius=22,deadzone=6;
+const tuning=el=>calmDraft&&!el.closest('header')?{strength,cap,pull:.06,drag:.62,pressed:.99}:{strength:.17,cap:5,pull:.075,drag:.66,pressed:.986};
 const fine=matchMedia('(hover:hover) and (pointer:fine)');
 const reduced=matchMedia('(prefers-reduced-motion:reduce)');
 const allow=()=>fine.matches&&!reduced.matches;
@@ -28,12 +32,12 @@ function goal(s){
  if(s.el!==active||!mouse.valid)return [0,0];
  const r=rect(s.el),d=distance(r);
  if(d>=radius)return [0,0];
- const u=1-d/radius,k=u*u*(3-2*u);
- return [clamp((mouse.x-r.cx)*strength*k,-cap,cap),clamp((mouse.y-r.cy)*strength*k,-cap,cap)];
+ const u=1-d/radius,k=u*u*(3-2*u),motion=tuning(s.el);
+ return [clamp((mouse.x-r.cx)*motion.strength*k,-motion.cap,motion.cap),clamp((mouse.y-r.cy)*motion.strength*k,-motion.cap,motion.cap)];
 }
 function integrate(s,k,target,dt){
- const v=k==='scale'?'vs':'v'+k;
- s[v]=(s[v]+(target-s[k])*.075*dt)*Math.pow(.66,dt);
+ const v=k==='scale'?'vs':'v'+k,motion=tuning(s.el);
+ s[v]=(s[v]+(target-s[k])*motion.pull*dt)*Math.pow(motion.drag,dt);
  s[k]+=s[v]*dt;
  if(Math.abs(target-s[k])<.012&&Math.abs(s[v])<.012){s[k]=target;s[v]=0}
  return Math.abs(s[k]-target)>.012||Math.abs(s[v])>.012;
@@ -46,7 +50,7 @@ function tick(t){
  for(const [el,s] of states){
   if(!el.isConnected){states.delete(el);continue}
   const [gx,gy]=goal(s);
-  const x=integrate(s,'x',gx,dt),y=integrate(s,'y',gy,dt),scale=integrate(s,'scale',s.down?.986:1,dt);
+  const x=integrate(s,'x',gx,dt),y=integrate(s,'y',gy,dt),scale=integrate(s,'scale',s.down?tuning(s.el).pressed:1,dt);
   el.style.setProperty('--mag-x',s.x.toFixed(3)+'px');
   el.style.setProperty('--mag-y',s.y.toFixed(3)+'px');
   el.style.setProperty('--mag-scale',s.scale.toFixed(4));
